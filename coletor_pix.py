@@ -75,7 +75,7 @@ def coletar_unidade(nome, url, page):
         salvar_debug(page, "03_erro_menu")
         return []
 
-    # Filtro PIX
+    # Filtro Pix
     try:
         selects = page.locator("select")
         total = selects.count()
@@ -86,21 +86,21 @@ def coletar_unidade(nome, url, page):
             opcoes = selects.nth(i).locator("option").all_inner_texts()
             print(f"[DEBUG] Select {i} opções:", opcoes)
             for op in opcoes:
-                if "PIX Doutores" in op:
+                if "Pix Doutores" in op:
                     selects.nth(i).select_option(label=op)
                     encontrou = True
-                    print("[DEBUG] PIX Doutores selecionado")
+                    print("[DEBUG] Pix Doutores selecionado")
                     break
             if encontrou:
                 break
 
         if not encontrou:
-            print("[ERRO] Não encontrou opção PIX Doutores")
+            print("[ERRO] Não encontrou opção Pix Doutores")
             salvar_debug(page, "04_erro_pix")
             return []
 
     except Exception as e:
-        print("[ERRO] Falha no filtro PIX:", e)
+        print("[ERRO] Falha no filtro Pix:", e)
         salvar_debug(page, "04_erro_pix")
         return []
 
