@@ -1,0 +1,8 @@
+[
+  { "doutor": "Dr. Nelson", "credito": 3000, "ativo": true },
+  { "doutor": "Dr. Maria", "credito": 5000, "ativo": true },
+  { "doutor": "Dr. Paulo", "credito": 4500, "ativo": true },
+  { "doutor": "Dr. Camila", "credito": 2800, "ativo": true },
+  { "doutor": "Dr. Rafael", "credito": 3500, "ativo": true },
+  { "doutor": "Dr. Joana", "credito": 4000, "ativo": true }
+]
