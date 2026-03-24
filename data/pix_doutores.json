@@ -1,1 +1,62 @@
-[]
+[
+  {
+    "data": "2026-03-24",
+    "unidade": "Caxias",
+    "doutor": "Dinheiro",
+    "metodo": "PIX Doutores",
+    "origem": "Recebido de Evelyn Camili Lemes Izaguires (47587) (Parcela 20/48)",
+    "valor": 99.0,
+    "mes": 3,
+    "ano": 2026
+  },
+  {
+    "data": "2026-03-24",
+    "unidade": "Caxias",
+    "doutor": "Franciele Pedrotti",
+    "metodo": "PIX Doutores",
+    "origem": "Recebido de Vitoria Luis Da Silva (46362) (Parcela 27/48) Pago por: O paciente",
+    "valor": 99.0,
+    "mes": 3,
+    "ano": 2026
+  },
+  {
+    "data": "2026-03-24",
+    "unidade": "Caxias",
+    "doutor": "Franciele Pedrotti",
+    "metodo": "PIX Doutores",
+    "origem": "Recebido de Lindamar Delizia Hoffmann (48488) (Parcela 13/48) Pago por: O paciente",
+    "valor": 148.0,
+    "mes": 3,
+    "ano": 2026
+  },
+  {
+    "data": "2026-03-24",
+    "unidade": "Caxias",
+    "doutor": "Maquina 1 - TOP",
+    "metodo": "PIX Doutores",
+    "origem": "Recebido de Lucas Antunes Silveira NÃO DISPARAR MENSAGEM DE LIMPEZA (38489) (Parcela 12/48)",
+    "valor": 85.0,
+    "mes": 3,
+    "ano": 2026
+  },
+  {
+    "data": "2026-03-24",
+    "unidade": "Caxias",
+    "doutor": "Maquina 1 - TOP",
+    "metodo": "PIX Doutores",
+    "origem": "Recebido de Elisandra Regina Zemolin De Paulo (44390) (Parcela 23/48)",
+    "valor": 137.0,
+    "mes": 3,
+    "ano": 2026
+  },
+  {
+    "data": "2026-03-24",
+    "unidade": "Caxias",
+    "doutor": "Saldo Total",
+    "metodo": "PIX Doutores",
+    "origem": "R$ 568,00",
+    "valor": 565.23,
+    "mes": 3,
+    "ano": 2026
+  }
+]
