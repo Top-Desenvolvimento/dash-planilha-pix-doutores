@@ -102,9 +102,9 @@ def navegar_relatorio(page):
     page.wait_for_timeout(5000)
 
 def encontrar_select_responsavel(page):
-    selects = page.locator("select")
-    total = selects.count()
-    print("[DEBUG] Quantidade de selects:", total)
+    # Pelo log, sabemos que é o select 1
+    print("[DEBUG] Usando select fixo de Responsável Fiscal: índice 1")
+    return 1
 
     for i in range(total):
         try:
