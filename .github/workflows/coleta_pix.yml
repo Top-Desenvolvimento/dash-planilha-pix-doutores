@@ -2,8 +2,6 @@ name: Coleta PIX Doutores
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "*/15 * * * *"
 
 permissions:
   contents: write
@@ -23,7 +21,7 @@ jobs:
 
       - name: Instalar dependências
         run: |
-          pip install playwright python-dotenv unidecode
+          pip install playwright
           playwright install chromium
 
       - name: Rodar coletor
@@ -38,7 +36,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/pix_doutores.json
-          git diff --cached --quiet || git commit -m "Atualiza PIX Doutores"
+          git diff --cached --quiet || git commit -m "Atualiza pix_doutores.json"
           git push
 
       - name: Upload arquivos de debug
