@@ -1,0 +1,42 @@
+name: Coleta PIX Doutores
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/15 * * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  coletar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Instalar dependências
+        run: |
+          pip install playwright python-dotenv unidecode
+          playwright install chromium
+
+      - name: Rodar coletor
+        env:
+          TOP_USER: ${{ secrets.TOP_USER }}
+          TOP_PASS: ${{ secrets.TOP_PASS }}
+        run: |
+          python bot/coletor_pix.py
+
+      - name: Commit dos dados atualizados
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/pix_doutores.json
+          git diff --cached --quiet || git commit -m "Atualiza PIX Doutores"
+          git push
