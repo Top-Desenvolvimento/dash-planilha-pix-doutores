@@ -1,380 +1,189 @@
+from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError
 import json
 import os
-import re
-import sys
-import time
-from dataclasses import dataclass
-from datetime import date, datetime
-from pathlib import Path
-from typing import Dict, List, Optional
 
-from dotenv import load_dotenv
-from playwright.sync_api import sync_playwright, Page, TimeoutError as PlaywrightTimeoutError
-from unidecode import unidecode
-
-
-# =========================================================
-# CONFIG GERAL
-# =========================================================
-
-BASE_DIR = Path(__file__).resolve().parents[1]
-DATA_DIR = BASE_DIR / "data"
-CREDITOS_PATH = DATA_DIR / "doutores_credito.json"
-OUTPUT_PATH = DATA_DIR / "pix_doutores.json"
-
-load_dotenv(BASE_DIR / "bot" / ".env")
-
-TOP_USER = os.getenv("TOP_USER", "")
-TOP_PASS = os.getenv("TOP_PASS", "")
-
-if not TOP_USER or not TOP_PASS:
-    raise RuntimeError("Preencha TOP_USER e TOP_PASS no arquivo bot/.env")
-
-
-@dataclass
-class Unidade:
-    nome: str
-    url: str
-
+TOP_USER = os.getenv("TOP_USER")
+TOP_PASS = os.getenv("TOP_PASS")
 
 UNIDADES = [
-    Unidade("Caxias", "http://caxias.topesteticabucal.com.br/sistema"),
-    Unidade("Farroupilha", "http://farroupilha.topesteticabucal.com.br/sistema"),
-    Unidade("Bento", "http://bento.topesteticabucal.com.br/sistema"),
-    Unidade("Encantado", "http://encantado.topesteticabucal.com.br/sistema"),
-    Unidade("Soledade", "http://soledade.topesteticabucal.com.br/sistema"),
-    Unidade("Garibaldi", "http://garibaldi.topesteticabucal.com.br/sistema"),
-    Unidade("Veranópolis", "http://veranopolis.topesteticabucal.com.br/sistema"),
-    Unidade("Sobradinho", "http://ssdocai.topesteticabucal.com.br/sistema"),
+    ("Caxias", "http://caxias.topesteticabucal.com.br/sistema"),
 ]
 
-# Se existir uma 9ª unidade real, adicione aqui.
-# O seu prompt fala em 9, mas os links enviados eram 8.
+def salvar_debug(page, nome):
+    with open(f"debug_{nome}.html", "w", encoding="utf-8") as f:
+        f.write(page.content())
+    page.screenshot(path=f"debug_{nome}.png", full_page=True)
+    print(f"[DEBUG] Salvos: debug_{nome}.html e debug_{nome}.png")
 
+def clicar_login(page):
+    tentativas = [
+        'button[type="submit"]',
+        'input[type="submit"]',
+        'button',
+        'text=Entrar',
+        'text=Login',
+        'text=Acessar'
+    ]
 
-# =========================================================
-# SELETORES
-# AJUSTE ESTES CAMPOS UMA VEZ CONFORME O HTML REAL
-# =========================================================
-
-SELECTORS = {
-    # Login
-    "login_user": 'input[name="usuario"], input[name="login"], input[type="text"]',
-    "login_pass": 'input[name="senha"], input[type="password"]',
-    "login_button": 'button[type="submit"], input[type="submit"]',
-
-    # Navegação
-    "menu_financas": 'text="Finanças"',
-    "submenu_demonstrativo": 'text="Demonstrativo de Resultados"',
-
-    # Filtros
-    "metodo_pagamento_select": 'select',
-    "data_inicial": 'input[name*="data"], input[placeholder*="Data"], input[id*="data"]',
-    "data_final": 'input[name*="data"], input[placeholder*="Data"], input[id*="data"]',
-    "botao_buscar": 'button:has-text("Buscar"), input[value="Buscar"]',
-
-    # Resultado
-    "tabela_resultado": "table",
-    "linhas_resultado": "table tbody tr",
-
-    # Se a tabela tiver td fixos, ajuste estes índices no parse_linha
-}
-
-# Se houver 2 campos de data separados, o script usa os dois primeiros encontrados.
-# Se houver um datepicker customizado, me mande o HTML e eu adapto.
-
-
-# =========================================================
-# MAPEAMENTO DE NOMES
-# =========================================================
-
-def carregar_creditos() -> List[dict]:
-    with open(CREDITOS_PATH, "r", encoding="utf-8") as f:
-        return json.load(f)
-
-
-def normalizar(texto: str) -> str:
-    return re.sub(r"\s+", " ", unidecode((texto or "").strip().lower()))
-
-
-def montar_mapa_doutores(creditos: List[dict]) -> Dict[str, str]:
-    """
-    Cria um mapa com nome normalizado -> nome oficial.
-    """
-    mapa = {}
-    for item in creditos:
-        oficial = item["doutor"].strip()
-        chave = normalizar(oficial)
-        mapa[chave] = oficial
-
-    # Apelidos/variações conhecidas
-    aliases = {
-        "leticia cauzzi": "Letícia Cauzzi",
-        "jessica barreto": "Jéssica Barreto",
-        "joao augusto keler": "João Augusto Keler",
-        "leticia canabarro sol": "Leticia Canabarro (SOL)",
-        "nelson vaccari": "Nelson Vaccari",
-        "gustavo lourenco ongaratto": "Gustavo Lourenço Ongaratto",
-        "evalda baldissera": "Evalda Baldissera",
-    }
-
-    for alias, oficial in aliases.items():
-        mapa[normalizar(alias)] = oficial
-
-    return mapa
-
-
-def identificar_doutor(texto_metodo: str, mapa_doutores: Dict[str, str]) -> Optional[str]:
-    """
-    Procura o nome do doutor dentro do texto do método.
-    A lógica prioriza o maior nome encontrado.
-    """
-    texto_norm = normalizar(texto_metodo)
-
-    candidatos = []
-    for chave_norm, nome_oficial in mapa_doutores.items():
-        if chave_norm and chave_norm in texto_norm:
-            candidatos.append((len(chave_norm), nome_oficial))
-
-    if not candidatos:
-        return None
-
-    candidatos.sort(reverse=True)
-    return candidatos[0][1]
-
-
-# =========================================================
-# AUXILIARES DE DATA E VALOR
-# =========================================================
-
-def periodo_mes_atual() -> tuple[str, str]:
-    hoje = date.today()
-    inicio = hoje.replace(day=1)
-    if hoje.month == 12:
-        fim = hoje.replace(day=31)
-    else:
-        prox_mes = date(hoje.year + (1 if hoje.month == 12 else 0), 1 if hoje.month == 12 else hoje.month + 1, 1)
-        fim = prox_mes.fromordinal(prox_mes.toordinal() - 1)
-    return inicio.strftime("%d/%m/%Y"), fim.strftime("%d/%m/%Y")
-
-
-def parse_data_br(texto: str) -> str:
-    texto = texto.strip()
-    return datetime.strptime(texto, "%d/%m/%Y").strftime("%Y-%m-%d")
-
-
-def parse_valor_br(texto: str) -> float:
-    texto = texto.replace("R$", "").replace(".", "").replace(",", ".").strip()
-    return float(texto)
-
-
-# =========================================================
-# PLAYWRIGHT
-# =========================================================
-
-def fazer_login(page: Page, unidade: Unidade) -> None:
-    page.goto(unidade.url, wait_until="networkidle", timeout=60000)
-
-    page.locator(SELECTORS["login_user"]).first.fill(TOP_USER)
-    page.locator(SELECTORS["login_pass"]).first.fill(TOP_PASS)
-    page.locator(SELECTORS["login_button"]).first.click()
-
-    page.wait_for_load_state("networkidle", timeout=60000)
-
-
-def navegar_para_relatorio(page: Page) -> None:
-    page.locator(SELECTORS["menu_financas"]).first.click()
-    page.locator(SELECTORS["submenu_demonstrativo"]).first.click()
-    page.wait_for_load_state("networkidle", timeout=60000)
-
-
-def aplicar_filtros(page: Page) -> None:
-    data_ini, data_fim = periodo_mes_atual()
-
-    # Método de pagamento
-    selects = page.locator(SELECTORS["metodo_pagamento_select"])
-    total_selects = selects.count()
-
-    encontrou_pix = False
-    for i in range(total_selects):
+    for seletor in tentativas:
         try:
-            select = selects.nth(i)
-            opcoes = select.locator("option").all_inner_texts()
-            if any("pix doutores" in normalizar(op) for op in opcoes):
-                for op in opcoes:
-                    if "pix doutores" in normalizar(op):
-                        select.select_option(label=op)
-                        encontrou_pix = True
-                        break
-                if encontrou_pix:
-                    break
+            if page.locator(seletor).first.is_visible(timeout=3000):
+                page.locator(seletor).first.click(timeout=5000)
+                print(f"[DEBUG] Clique no login com seletor: {seletor}")
+                return
         except Exception:
             continue
 
-    if not encontrou_pix:
-        raise RuntimeError("Não encontrei o seletor/opção 'PIX Doutores'. Ajuste os seletores.")
-
-    # Datas
-    campos_data = page.locator(SELECTORS["data_inicial"])
-    qtd_datas = campos_data.count()
-
-    if qtd_datas >= 2:
-        campos_data.nth(0).fill(data_ini)
-        campos_data.nth(1).fill(data_fim)
-    else:
-        raise RuntimeError("Não encontrei dois campos de data. Ajuste os seletores.")
-
-    page.locator(SELECTORS["botao_buscar"]).first.click()
-    page.wait_for_load_state("networkidle", timeout=60000)
-    time.sleep(2)
-
-
-def parse_linha(page: Page, linha, unidade: str, mapa_doutores: Dict[str, str]) -> Optional[dict]:
-    """
-    Ajuste este parse conforme a ordem real das colunas.
-    Exemplo esperado:
-      col[0] = Data
-      col[1] = Mét. Pag.
-      col[2] = Origem
-      col[3] = Valor
-    """
-    colunas = linha.locator("td")
-    qtd = colunas.count()
-
-    if qtd < 4:
-        return None
-
-    textos = [colunas.nth(i).inner_text().strip() for i in range(qtd)]
-
-    data_txt = textos[0]
-    metodo_txt = textos[1]
-    origem_txt = textos[2]
-    valor_txt = textos[3]
-
-    # Se o nome estiver dentro de um span vermelho, tenta capturar o HTML inteiro
+    # fallback: Enter no campo senha
     try:
-        html_metodo = colunas.nth(1).inner_html()
-        texto_base = re.sub(r"<[^>]+>", " ", html_metodo)
-        metodo_para_identificar = re.sub(r"\s+", " ", texto_base).strip()
+        page.locator('input[type="password"]').first.press("Enter")
+        print("[DEBUG] Login via Enter no campo senha")
+        return
     except Exception:
-        metodo_para_identificar = metodo_txt
+        pass
 
-    doutor = identificar_doutor(metodo_para_identificar, mapa_doutores)
+    raise RuntimeError("Não encontrei um botão de login válido.")
 
-    if not doutor:
-        # Se não identificou, mantém ignorado por enquanto.
-        # Pode trocar para "Desconhecido" se quiser auditar.
-        return None
+def coletar_unidade(nome, url, page):
+    print(f"[INFO] Acessando {nome}")
+    page.goto(url, wait_until="domcontentloaded", timeout=60000)
+    page.wait_for_timeout(3000)
 
-    data_iso = parse_data_br(data_txt)
-    data_obj = datetime.strptime(data_iso, "%Y-%m-%d")
+    salvar_debug(page, "01_abertura")
 
-    return {
-        "data": data_iso,
-        "unidade": unidade,
-        "doutor": doutor,
-        "metodo": metodo_txt,
-        "origem": origem_txt,
-        "valor": parse_valor_br(valor_txt),
-        "mes": data_obj.month,
-        "ano": data_obj.year,
-    }
+    # Login
+    page.locator('input[type="text"], input[name="usuario"], input[name="login"]').first.fill(TOP_USER)
+    page.locator('input[type="password"], input[name="senha"]').first.fill(TOP_PASS)
+    print("[DEBUG] Usuário e senha preenchidos")
 
+    clicar_login(page)
+    page.wait_for_timeout(5000)
 
-def coletar_unidade(page: Page, unidade: Unidade, mapa_doutores: Dict[str, str]) -> List[dict]:
-    print(f"[INFO] Coletando unidade: {unidade.nome}")
+    print("[DEBUG] URL após login:", page.url)
+    print("[DEBUG] Título:", page.title())
+    salvar_debug(page, "02_pos_login")
 
-    fazer_login(page, unidade)
-    navegar_para_relatorio(page)
-    aplicar_filtros(page)
-
+    # Navegação
     try:
-        page.locator(SELECTORS["tabela_resultado"]).first.wait_for(timeout=20000)
-    except PlaywrightTimeoutError:
-        print(f"[WARN] Tabela não encontrada em {unidade.nome}")
+        page.locator("text=Finanças").first.click(timeout=10000)
+        page.wait_for_timeout(2000)
+        page.locator("text=Demonstrativo de Resultados").first.click(timeout=10000)
+        page.wait_for_timeout(4000)
+        print("[DEBUG] Navegação até relatório OK")
+    except Exception as e:
+        print("[ERRO] Não encontrou menus:", e)
+        salvar_debug(page, "03_erro_menu")
         return []
 
-    linhas = page.locator(SELECTORS["linhas_resultado"])
-    total_linhas = linhas.count()
+    # Filtro PIX
+    try:
+        selects = page.locator("select")
+        total = selects.count()
+        print("[DEBUG] Quantidade de selects:", total)
 
-    resultados = []
-    for i in range(total_linhas):
-        try:
-            item = parse_linha(page, linhas.nth(i), unidade.nome, mapa_doutores)
-            if item:
-                resultados.append(item)
-        except Exception as e:
-            print(f"[WARN] Erro ao ler linha {i+1} de {unidade.nome}: {e}")
+        encontrou = False
+        for i in range(total):
+            opcoes = selects.nth(i).locator("option").all_inner_texts()
+            print(f"[DEBUG] Select {i} opções:", opcoes)
+            for op in opcoes:
+                if "PIX Doutores" in op:
+                    selects.nth(i).select_option(label=op)
+                    encontrou = True
+                    print("[DEBUG] PIX Doutores selecionado")
+                    break
+            if encontrou:
+                break
 
-    print(f"[INFO] {unidade.nome}: {len(resultados)} lançamentos válidos")
-    return resultados
+        if not encontrou:
+            print("[ERRO] Não encontrou opção PIX Doutores")
+            salvar_debug(page, "04_erro_pix")
+            return []
 
+    except Exception as e:
+        print("[ERRO] Falha no filtro PIX:", e)
+        salvar_debug(page, "04_erro_pix")
+        return []
 
-# =========================================================
-# CONSOLIDAÇÃO
-# =========================================================
-
-def deduplicar(registros: List[dict]) -> List[dict]:
-    vistos = set()
-    saida = []
-
-    for r in registros:
-        chave = (
-            r["data"],
-            r["unidade"],
-            r["doutor"],
-            r["metodo"],
-            r["origem"],
-            round(float(r["valor"]), 2),
-        )
-        if chave not in vistos:
-            vistos.add(chave)
-            saida.append(r)
-
-    saida.sort(key=lambda x: (x["data"], x["unidade"], x["doutor"], x["valor"]))
-    return saida
-
-
-def salvar_saida(registros: List[dict]) -> None:
-    OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
-    with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
-        json.dump(registros, f, ensure_ascii=False, indent=2)
-    print(f"[OK] Arquivo salvo em: {OUTPUT_PATH}")
-
-
-# =========================================================
-# MAIN
-# =========================================================
-
-def main() -> None:
-    creditos = carregar_creditos()
-    mapa_doutores = montar_mapa_doutores(creditos)
-
-    todos = []
-
-    with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False)
-        context = browser.new_context(locale="pt-BR")
-        page = context.new_page()
-
-        for unidade in UNIDADES:
+    # Buscar
+    try:
+        possiveis_botoes = [
+            'button:has-text("Buscar")',
+            'input[value="Buscar"]',
+            'text=Buscar'
+        ]
+        clicou = False
+        for seletor in possiveis_botoes:
             try:
-                registros = coletar_unidade(page, unidade, mapa_doutores)
-                todos.extend(registros)
+                if page.locator(seletor).first.is_visible(timeout=3000):
+                    page.locator(seletor).first.click(timeout=5000)
+                    print(f"[DEBUG] Clique no Buscar com seletor: {seletor}")
+                    clicou = True
+                    break
+            except Exception:
+                continue
+
+        if not clicou:
+            print("[ERRO] Não encontrou botão Buscar")
+            salvar_debug(page, "05_erro_buscar")
+            return []
+
+        page.wait_for_timeout(6000)
+    except Exception as e:
+        print("[ERRO] Falha ao buscar:", e)
+        salvar_debug(page, "05_erro_buscar")
+        return []
+
+    salvar_debug(page, "06_resultado")
+
+    # Leitura da tabela
+    dados = []
+    try:
+        linhas = page.locator("table tr")
+        total_linhas = linhas.count()
+        print("[DEBUG] Linhas encontradas:", total_linhas)
+
+        for i in range(total_linhas):
+            try:
+                cols = linhas.nth(i).locator("td")
+                if cols.count() >= 4:
+                    dados.append({
+                        "data": cols.nth(0).inner_text().strip(),
+                        "unidade": nome,
+                        "doutor": cols.nth(1).inner_text().strip(),
+                        "metodo": "PIX Doutores",
+                        "origem": cols.nth(2).inner_text().strip(),
+                        "valor": cols.nth(3).inner_text().strip(),
+                        "mes": 3,
+                        "ano": 2026
+                    })
+            except Exception:
+                pass
+
+    except Exception as e:
+        print("[ERRO] Falha ao ler tabela:", e)
+        salvar_debug(page, "07_erro_tabela")
+
+    return dados
+
+def main():
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True)
+        page = browser.new_page()
+
+        todos = []
+        for nome, url in UNIDADES:
+            try:
+                dados = coletar_unidade(nome, url, page)
+                todos.extend(dados)
             except Exception as e:
-                print(f"[ERRO] Falha na unidade {unidade.nome}: {e}")
+                print(f"[ERRO] Unidade {nome}: {e}")
 
         browser.close()
 
-    consolidados = deduplicar(todos)
-    salvar_saida(consolidados)
+    with open("data/pix_doutores.json", "w", encoding="utf-8") as f:
+        json.dump(todos, f, indent=2, ensure_ascii=False)
 
-    print(f"[FIM] Total consolidado: {len(consolidados)} registros")
-
+    print("✅ Dados coletados:", len(todos))
 
 if __name__ == "__main__":
-    try:
-        main()
-    except KeyboardInterrupt:
-        print("Execução interrompida pelo usuário.")
-        sys.exit(1)
+    main()
