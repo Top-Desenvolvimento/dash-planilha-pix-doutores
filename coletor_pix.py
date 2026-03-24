@@ -262,7 +262,7 @@ def ler_tabela_resultado(page, unidade, doutores_oficiais):
                 "data": data_obj.strftime("%Y-%m-%d"),
                 "unidade": unidade,
                 "doutor": doutor,
-                "metodo": "PIX Doutores",
+                "metodo": "Pix Doutores",
                 "origem": origem_txt,
                 "valor": valor_num,
                 "mes": data_obj.month,
