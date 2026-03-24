@@ -1,10 +1,18 @@
 from playwright.sync_api import sync_playwright
 import json
 import os
+import re
 from datetime import datetime, date
+from pathlib import Path
+from unicodedata import normalize
 
 TOP_USER = os.getenv("TOP_USER")
 TOP_PASS = os.getenv("TOP_PASS")
+
+BASE_DIR = Path(__file__).resolve().parents[1]
+DATA_DIR = BASE_DIR / "data"
+CREDITOS_PATH = DATA_DIR / "doutores_credito.json"
+OUTPUT_PATH = DATA_DIR / "pix_doutores.json"
 
 UNIDADES = [
     ("Caxias", "http://caxias.topesteticabucal.com.br/sistema"),
@@ -18,40 +26,50 @@ UNIDADES = [
     # ("Sobradinho", "http://ssdocai.topesteticabucal.com.br/sistema"),
 ]
 
-def salvar_debug(page, nome):
-    with open(f"debug_{nome}.html", "w", encoding="utf-8") as f:
-        f.write(page.content())
-    page.screenshot(path=f"debug_{nome}.png", full_page=True)
-    print(f"[DEBUG] Salvos: debug_{nome}.html e debug_{nome}.png")
+# --------------------------------------------------
+# AUXILIARES
+# --------------------------------------------------
+def sem_acento(txt: str) -> str:
+    return normalize("NFKD", txt).encode("ASCII", "ignore").decode("ASCII")
 
-def clicar_login(page):
-    tentativas = [
-        'button[type="submit"]',
-        'input[type="submit"]',
-        'button',
-        'text=Entrar',
-        'text=Login',
-        'text=Acessar'
-    ]
+def normalizar_nome(txt: str) -> str:
+    txt = txt or ""
+    txt = sem_acento(txt).lower()
+    txt = re.sub(r"\b(dr|dra|cir)\.?\b", "", txt)
+    txt = re.sub(r"[^a-z0-9\s]", " ", txt)
+    txt = re.sub(r"\s+", " ", txt).strip()
+    return txt
 
-    for seletor in tentativas:
-        try:
-            loc = page.locator(seletor).first
-            if loc.count() > 0:
-                loc.click(timeout=5000)
-                print(f"[DEBUG] Clique no login com seletor: {seletor}")
-                return
-        except Exception:
-            continue
+def carregar_doutores_oficiais():
+    if not CREDITOS_PATH.exists():
+        return []
 
-    try:
-        page.locator('input[type="password"]').first.press("Enter")
-        print("[DEBUG] Login via Enter no campo senha")
-        return
-    except Exception:
-        pass
+    with open(CREDITOS_PATH, "r", encoding="utf-8") as f:
+        data = json.load(f)
 
-    raise RuntimeError("Não encontrou um botão de login válido.")
+    return [x["doutor"] for x in data if x.get("ativo", True)]
+
+def mapear_nome_doutor(nome_extraido: str, doutores_oficiais: list[str]) -> str:
+    bruto = nome_extraido.strip()
+    alvo = normalizar_nome(bruto)
+
+    # match exato normalizado
+    for oficial in doutores_oficiais:
+        if normalizar_nome(oficial) == alvo:
+            return oficial
+
+    # match por contenção
+    candidatos = []
+    for oficial in doutores_oficiais:
+        norm_oficial = normalizar_nome(oficial)
+        if norm_oficial and (norm_oficial in alvo or alvo in norm_oficial):
+            candidatos.append((len(norm_oficial), oficial))
+
+    if candidatos:
+        candidatos.sort(reverse=True)
+        return candidatos[0][1]
+
+    return ""
 
 def periodo_mes_atual():
     hoje = date.today()
@@ -65,150 +83,200 @@ def periodo_mes_atual():
     fim = date.fromordinal(prox.toordinal() - 1)
     return inicio.strftime("%d/%m/%Y"), fim.strftime("%d/%m/%Y")
 
-def navegar_relatorio(page):
-    print("[DEBUG] Tentando abrir Finanças")
-    opcoes_financas = [
-        'text=Finanças',
-        'text=Financas',
-        'a:has-text("Finanças")',
-        'a:has-text("Financas")'
+def parse_valor_brl(txt: str) -> float:
+    txt = txt.replace("R$", "").replace(".", "").replace(",", ".")
+    txt = txt.replace("C", "").replace("D", "").strip()
+    return float(txt)
+
+def salvar_debug(page, nome):
+    try:
+        with open(f"debug_{nome}.html", "w", encoding="utf-8") as f:
+            f.write(page.content())
+        page.screenshot(path=f"debug_{nome}.png", full_page=True)
+        print(f"[DEBUG] Salvos: debug_{nome}.html e debug_{nome}.png")
+    except Exception as e:
+        print(f"[WARN] Falha ao salvar debug {nome}: {e}")
+
+# --------------------------------------------------
+# LOGIN / NAVEGAÇÃO
+# --------------------------------------------------
+def fazer_login(page):
+    page.locator('input[type="text"], input[name="usuario"], input[name="login"]').first.fill(TOP_USER)
+    page.locator('input[type="password"], input[name="senha"]').first.fill(TOP_PASS)
+
+    botoes = [
+        'input[type="submit"]',
+        'button[type="submit"]',
+        'text=Entrar',
+        'text=Login',
+        'text=Acessar'
     ]
 
-    clicou_financas = False
-    for seletor in opcoes_financas:
+    clicou = False
+    for seletor in botoes:
         try:
             if page.locator(seletor).first.count() > 0:
                 page.locator(seletor).first.click(timeout=5000)
-                clicou_financas = True
-                print(f"[DEBUG] Finanças clicado com: {seletor}")
+                print(f"[DEBUG] Clique no login com seletor: {seletor}")
+                clicou = True
                 break
         except Exception:
             continue
 
-    if not clicou_financas:
-        raise RuntimeError("Não encontrou o menu Finanças")
-
-    page.wait_for_timeout(3000)
-
-    print("[DEBUG] Tentando abrir Demonstrativo de Resultados")
-    opcoes_demo = [
-        'text=Demonstrativo de Resultados',
-        'a:has-text("Demonstrativo de Resultados")',
-        'text=Demonstrativo'
-    ]
-
-    clicou_demo = False
-    for seletor in opcoes_demo:
-        try:
-            if page.locator(seletor).first.count() > 0:
-                page.locator(seletor).first.click(timeout=5000)
-                clicou_demo = True
-                print(f"[DEBUG] Demonstrativo clicado com: {seletor}")
-                break
-        except Exception:
-            continue
-
-    if not clicou_demo:
-        raise RuntimeError("Não encontrou Demonstrativo de Resultados")
+    if not clicou:
+        page.locator('input[type="password"]').first.press("Enter")
+        print("[DEBUG] Login via Enter")
 
     page.wait_for_timeout(5000)
 
-def encontrar_select_responsavel(page):
-    # Pelo seu log validado:
-    # Select 1 = Responsável Fiscal
-    print("[DEBUG] Usando select fixo de Responsável Fiscal: índice 1")
-    return 1
+def navegar_para_demonstrativo(page):
+    page.locator("text=FINANÇAS").first.click(timeout=10000)
+    print("[DEBUG] Clique em FINANÇAS")
+    page.wait_for_timeout(2000)
 
-def listar_responsaveis(page, idx_select):
-    select = page.locator("select").nth(idx_select)
-    opcoes = select.locator("option").all_inner_texts()
+    opcoes = [
+        "text=Demonstrativo de Resultado",
+        "text=Demonstrativo de Resultados",
+        "a:has-text('Demonstrativo de Resultado')",
+        "a:has-text('Demonstrativo de Resultados')"
+    ]
 
-    ignorar = {
-        "",
-        "todos",
-        "selecione",
-        "selecionar",
-        "responsável fiscal",
-        "responsavel fiscal"
-    }
+    abriu = False
+    for seletor in opcoes:
+        try:
+            if page.locator(seletor).first.count() > 0:
+                page.locator(seletor).first.click(timeout=10000)
+                print(f"[DEBUG] Clique no demonstrativo com: {seletor}")
+                abriu = True
+                break
+        except Exception:
+            continue
 
-    validas = []
-    for op in opcoes:
-        texto = op.strip()
-        if texto.lower() not in ignorar:
-            validas.append(texto)
+    if not abriu:
+        raise RuntimeError("Não encontrou 'Demonstrativo de Resultado'.")
 
-    print(f"[DEBUG] Responsáveis encontrados: {len(validas)}")
-    print("[DEBUG] Lista:", validas)
-    return validas
+    page.wait_for_timeout(4000)
 
-def preencher_datas_mes(page):
+# --------------------------------------------------
+# FILTROS
+# --------------------------------------------------
+def garantir_pix_doutores(page):
+    try:
+        texto_pagina = page.content().lower()
+        if "pix doutores" in texto_pagina:
+            print("[DEBUG] Método Pix Doutores encontrado na tela")
+            return
+    except Exception:
+        pass
+
+    raise RuntimeError("Não encontrei 'Pix Doutores' na tela do filtro.")
+
+def preencher_periodo(page):
     data_ini, data_fim = periodo_mes_atual()
-    inputs = page.locator('input[type="text"], input[type="date"]')
-    total_inputs = inputs.count()
-    print("[DEBUG] Quantidade de inputs:", total_inputs)
 
     preenchidos = 0
-    for i in range(total_inputs):
+    inputs = page.locator("input")
+    total = inputs.count()
+    print(f"[DEBUG] Quantidade de inputs: {total}")
+
+    for i in range(total):
         try:
-            name = (inputs.nth(i).get_attribute("name") or "").lower()
-            id_attr = (inputs.nth(i).get_attribute("id") or "").lower()
-            placeholder = (inputs.nth(i).get_attribute("placeholder") or "").lower()
+            loc = inputs.nth(i)
+            tipo = (loc.get_attribute("type") or "").lower()
+            valor = ""
+            try:
+                valor = loc.input_value(timeout=1000)
+            except Exception:
+                pass
 
-            ref = f"{name} {id_attr} {placeholder}"
-            print(f"[DEBUG] Input {i}: name={name} id={id_attr} placeholder={placeholder}")
-
-            if "data" in ref or "periodo" in ref or "período" in ref:
+            if tipo in ["text", "date"] or "/" in valor:
                 if preenchidos == 0:
-                    inputs.nth(i).fill(data_ini)
+                    loc.fill(data_ini)
                     preenchidos += 1
                     print(f"[DEBUG] Data inicial preenchida: {data_ini}")
                 elif preenchidos == 1:
-                    inputs.nth(i).fill(data_fim)
+                    loc.fill(data_fim)
                     preenchidos += 1
                     print(f"[DEBUG] Data final preenchida: {data_fim}")
                     break
         except Exception:
             continue
 
-    if preenchidos < 2 and total_inputs >= 2:
-        try:
-            inputs.nth(0).fill(data_ini)
-            inputs.nth(1).fill(data_fim)
-            preenchidos = 2
-            print("[DEBUG] Datas preenchidas por fallback")
-        except Exception:
-            pass
-
     if preenchidos < 2:
-        raise RuntimeError("Não conseguiu preencher as datas do período")
+        raise RuntimeError("Não conseguiu preencher as datas do período.")
 
 def clicar_buscar(page):
     botoes = [
-        'button:has-text("Buscar")',
-        'input[value="Buscar"]',
-        'text=Buscar'
+        "text=Buscar",
+        "button:has-text('Buscar')",
+        "input[value='Buscar']"
     ]
 
     for seletor in botoes:
         try:
             if page.locator(seletor).first.count() > 0:
-                page.locator(seletor).first.click(timeout=5000)
-                print(f"[DEBUG] Buscar clicado com: {seletor}")
+                page.locator(seletor).first.click(timeout=10000)
+                print(f"[DEBUG] Clique em Buscar com: {seletor}")
                 page.wait_for_timeout(5000)
                 return
         except Exception:
             continue
 
-    raise RuntimeError("Não encontrou o botão Buscar")
+    raise RuntimeError("Não encontrou o botão Buscar.")
 
-def parse_valor(valor_txt):
-    return float(
-        valor_txt.replace("R$", "")
-        .replace(".", "")
-        .replace(",", ".")
-        .strip()
-    )
+# --------------------------------------------------
+# LEITURA DA TABELA
+# --------------------------------------------------
+def extrair_nome_vermelho(col_metodo, doutores_oficiais):
+    """
+    Só aceita o texto em vermelho se ele bater com um doutor oficial.
+    Caso contrário, retorna vazio.
+    """
+    candidatos_css = [
+        'font[color="red"]',
+        'span[style*="red"]',
+        'span[style*="#f00"]',
+        'span[style*="rgb(255"]',
+        'small[style*="red"]',
+        'b[style*="red"]',
+    ]
+
+    textos = []
+
+    for css in candidatos_css:
+        try:
+            itens = col_metodo.locator(css)
+            for i in range(itens.count()):
+                t = itens.nth(i).inner_text().strip()
+                if t:
+                    textos.append(t)
+        except Exception:
+            continue
+
+    if not textos:
+        try:
+            bruto = col_metodo.inner_text().strip()
+            linhas = [x.strip() for x in bruto.splitlines() if x.strip()]
+            for linha in linhas:
+                if "pix doutores" not in linha.lower():
+                    textos.append(linha)
+        except Exception:
+            pass
+
+    vistos = set()
+    textos_unicos = []
+    for t in textos:
+        chave = t.lower().strip()
+        if chave not in vistos:
+            vistos.add(chave)
+            textos_unicos.append(t)
+
+    for t in textos_unicos:
+        nome_mapeado = mapear_nome_doutor(t, doutores_oficiais)
+        if nome_mapeado in doutores_oficiais:
+            return nome_mapeado
+
+    return ""
 
 def ler_tabela_resultado(page, unidade, doutores_oficiais):
     dados = []
@@ -223,7 +291,6 @@ def ler_tabela_resultado(page, unidade, doutores_oficiais):
             cols = linha.locator("td")
             qtd = cols.count()
 
-            # Esperado: Data | Mét. Pag. | Origem | Valor
             if qtd < 4:
                 continue
 
@@ -239,8 +306,14 @@ def ler_tabela_resultado(page, unidade, doutores_oficiais):
             origem_txt = col_origem.inner_text().strip()
             valor_txt = col_valor.inner_text().strip()
 
-            # FILTRO OBRIGATÓRIO: só aceita Pix Doutores
+            # Só considera Pix Doutores
             if "pix doutores" not in metodo_txt.lower():
+                continue
+
+            # Só considera se houver doutor válido em vermelho
+            doutor = extrair_nome_vermelho(col_metodo, doutores_oficiais)
+            if not doutor:
+                print(f"[DEBUG] Linha ignorada sem doutor válido: {metodo_txt}")
                 continue
 
             try:
@@ -253,51 +326,21 @@ def ler_tabela_resultado(page, unidade, doutores_oficiais):
             except Exception:
                 continue
 
-            doutor = extrair_nome_vermelho(col_metodo, doutores_oficiais)
-
-            if not doutor:
-                continue
-
             dados.append({
                 "data": data_obj.strftime("%Y-%m-%d"),
                 "unidade": unidade,
                 "doutor": doutor,
-                "metodo": "Pix Doutores",
+                "metodo": "PIX Doutores",
                 "origem": origem_txt,
                 "valor": valor_num,
                 "mes": data_obj.month,
                 "ano": data_obj.year
             })
+
         except Exception:
             continue
 
     return dados
-
-def coletar_por_responsavel(page, unidade):
-    preencher_datas_mes(page)
-
-    idx_select = encontrar_select_responsavel(page)
-    responsaveis = listar_responsaveis(page, idx_select)
-
-    todos = []
-    select = page.locator("select").nth(idx_select)
-
-    for nome_resp in responsaveis:
-        try:
-            print(f"[INFO] Coletando responsável: {nome_resp}")
-            select.select_option(label=nome_resp)
-            page.wait_for_timeout(1000)
-
-            clicar_buscar(page)
-            page.wait_for_timeout(3000)
-
-            dados_resp = ler_tabela(page, unidade, nome_resp)
-            print(f"[DEBUG] Registros coletados para {nome_resp}: {len(dados_resp)}")
-            todos.extend(dados_resp)
-        except Exception as e:
-            print(f"[ERRO] Falha ao coletar {nome_resp}: {e}")
-
-    return todos
 
 def deduplicar(registros):
     vistos = set()
@@ -308,7 +351,6 @@ def deduplicar(registros):
             r["data"],
             r["unidade"],
             r["doutor"],
-            r["metodo"],
             r["origem"],
             round(float(r["valor"]), 2),
         )
@@ -319,56 +361,60 @@ def deduplicar(registros):
     saida.sort(key=lambda x: (x["data"], x["unidade"], x["doutor"], x["valor"]))
     return saida
 
-def coletar_unidade(nome, url, page):
-    print(f"[INFO] Acessando {nome}")
+# --------------------------------------------------
+# FLUXO POR UNIDADE
+# --------------------------------------------------
+def coletar_unidade(page, nome_unidade, url, doutores_oficiais):
+    print(f"[INFO] Acessando {nome_unidade}")
     page.goto(url, wait_until="domcontentloaded", timeout=60000)
     page.wait_for_timeout(3000)
+    salvar_debug(page, f"{nome_unidade}_01_abertura")
 
-    salvar_debug(page, "01_abertura")
-
-    page.locator('input[type="text"], input[name="usuario"], input[name="login"]').first.fill(TOP_USER)
-    page.locator('input[type="password"], input[name="senha"]').first.fill(TOP_PASS)
-    print("[DEBUG] Usuário e senha preenchidos")
-
-    clicar_login(page)
-    page.wait_for_timeout(5000)
-
+    fazer_login(page)
     print("[DEBUG] URL após login:", page.url)
-    print("[DEBUG] Título:", page.title())
-    salvar_debug(page, "02_pos_login")
+    salvar_debug(page, f"{nome_unidade}_02_pos_login")
 
-    navegar_relatorio(page)
-    salvar_debug(page, "03_relatorio")
+    navegar_para_demonstrativo(page)
+    salvar_debug(page, f"{nome_unidade}_03_demonstrativo")
 
-    dados = coletar_por_responsavel(page, nome)
-    salvar_debug(page, "04_resultado_final")
+    garantir_pix_doutores(page)
+    preencher_periodo(page)
+    clicar_buscar(page)
+    salvar_debug(page, f"{nome_unidade}_04_resultado")
 
+    dados = ler_tabela_resultado(page, nome_unidade, doutores_oficiais)
+    print(f"[INFO] {nome_unidade}: {len(dados)} registros válidos")
     return dados
 
+# --------------------------------------------------
+# MAIN
+# --------------------------------------------------
 def main():
     if not TOP_USER or not TOP_PASS:
         raise RuntimeError("TOP_USER e TOP_PASS não definidos nos Secrets.")
+
+    doutores_oficiais = carregar_doutores_oficiais()
+    todos = []
 
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
         page = browser.new_page()
 
-        todos = []
-        for nome, url in UNIDADES:
+        for nome_unidade, url in UNIDADES:
             try:
-                dados = coletar_unidade(nome, url, page)
+                dados = coletar_unidade(page, nome_unidade, url, doutores_oficiais)
                 todos.extend(dados)
             except Exception as e:
-                print(f"[ERRO] Unidade {nome}: {e}")
+                print(f"[ERRO] Unidade {nome_unidade}: {e}")
 
         browser.close()
 
     consolidados = deduplicar(todos)
 
-    with open("data/pix_doutores.json", "w", encoding="utf-8") as f:
+    with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(consolidados, f, indent=2, ensure_ascii=False)
 
-    print("✅ Dados coletados:", len(consolidados))
+    print(f"✅ Dados coletados: {len(consolidados)}")
 
 if __name__ == "__main__":
     main()
