@@ -210,41 +210,59 @@ def parse_valor(valor_txt):
         .strip()
     )
 
-def ler_tabela(page, unidade, responsavel):
+def ler_tabela_resultado(page, unidade, doutores_oficiais):
     dados = []
+
     linhas = page.locator("table tr")
     total_linhas = linhas.count()
-    print(f"[DEBUG] Linhas encontradas para {responsavel}: {total_linhas}")
+    print(f"[DEBUG] Linhas encontradas: {total_linhas}")
 
     for i in range(total_linhas):
         try:
-            cols = linhas.nth(i).locator("td")
-            qtd_cols = cols.count()
+            linha = linhas.nth(i)
+            cols = linha.locator("td")
+            qtd = cols.count()
 
-            if qtd_cols < 4:
+            # Esperado: Data | Mét. Pag. | Origem | Valor
+            if qtd < 4:
                 continue
 
-            textos = [cols.nth(j).inner_text().strip() for j in range(qtd_cols)]
-
-            data_txt = textos[0]
-            metodo_txt = textos[1]
-            origem_txt = textos[2]
-            valor_txt = textos[3]
-
+            data_txt = cols.nth(0).inner_text().strip()
             if "/" not in data_txt:
+                continue
+
+            col_metodo = cols.nth(1)
+            col_origem = cols.nth(2)
+            col_valor = cols.nth(3)
+
+            metodo_txt = col_metodo.inner_text().strip()
+            origem_txt = col_origem.inner_text().strip()
+            valor_txt = col_valor.inner_text().strip()
+
+            # FILTRO OBRIGATÓRIO: só aceita Pix Doutores
+            if "pix doutores" not in metodo_txt.lower():
                 continue
 
             try:
                 data_obj = datetime.strptime(data_txt, "%d/%m/%Y")
-                valor_num = parse_valor(valor_txt)
             except Exception:
+                continue
+
+            try:
+                valor_num = parse_valor_brl(valor_txt)
+            except Exception:
+                continue
+
+            doutor = extrair_nome_vermelho(col_metodo, doutores_oficiais)
+
+            if not doutor:
                 continue
 
             dados.append({
                 "data": data_obj.strftime("%Y-%m-%d"),
                 "unidade": unidade,
-                "doutor": responsavel,
-                "metodo": metodo_txt,
+                "doutor": doutor,
+                "metodo": "PIX Doutores",
                 "origem": origem_txt,
                 "valor": valor_num,
                 "mes": data_obj.month,
