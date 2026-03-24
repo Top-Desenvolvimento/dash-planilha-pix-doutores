@@ -40,3 +40,12 @@ jobs:
           git add data/pix_doutores.json
           git diff --cached --quiet || git commit -m "Atualiza PIX Doutores"
           git push
+
+      - name: Upload arquivos de debug
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: debug-coletor
+          path: |
+            debug_*.html
+            debug_*.png
