@@ -1,6 +1,7 @@
-from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError
+from playwright.sync_api import sync_playwright
 import json
 import os
+from datetime import datetime, date
 
 TOP_USER = os.getenv("TOP_USER")
 TOP_PASS = os.getenv("TOP_PASS")
@@ -27,14 +28,14 @@ def clicar_login(page):
 
     for seletor in tentativas:
         try:
-            if page.locator(seletor).first.is_visible(timeout=3000):
-                page.locator(seletor).first.click(timeout=5000)
+            loc = page.locator(seletor).first
+            if loc.count() > 0:
+                loc.click(timeout=5000)
                 print(f"[DEBUG] Clique no login com seletor: {seletor}")
                 return
         except Exception:
             continue
 
-    # fallback: Enter no campo senha
     try:
         page.locator('input[type="password"]').first.press("Enter")
         print("[DEBUG] Login via Enter no campo senha")
@@ -44,6 +45,257 @@ def clicar_login(page):
 
     raise RuntimeError("Não encontrei um botão de login válido.")
 
+def periodo_mes_atual():
+    hoje = date.today()
+    inicio = hoje.replace(day=1)
+    if hoje.month == 12:
+        prox = date(hoje.year + 1, 1, 1)
+    else:
+        prox = date(hoje.year, hoje.month + 1, 1)
+    fim = date.fromordinal(prox.toordinal() - 1)
+    return inicio.strftime("%d/%m/%Y"), fim.strftime("%d/%m/%Y")
+
+def navegar_relatorio(page):
+    opcoes_financas = [
+        'text=Finanças',
+        'text=Financas',
+        'a:has-text("Finanças")',
+        'a:has-text("Financas")'
+    ]
+
+    clicou_financas = False
+    for seletor in opcoes_financas:
+        try:
+            if page.locator(seletor).first.count() > 0:
+                page.locator(seletor).first.click(timeout=5000)
+                clicou_financas = True
+                print(f"[DEBUG] Finanças clicado com: {seletor}")
+                break
+        except Exception:
+            continue
+
+    if not clicou_financas:
+        raise RuntimeError("Não encontrou o menu Finanças")
+
+    page.wait_for_timeout(3000)
+
+    opcoes_demo = [
+        'text=Demonstrativo de Resultados',
+        'a:has-text("Demonstrativo de Resultados")',
+        'text=Demonstrativo'
+    ]
+
+    clicou_demo = False
+    for seletor in opcoes_demo:
+        try:
+            if page.locator(seletor).first.count() > 0:
+                page.locator(seletor).first.click(timeout=5000)
+                clicou_demo = True
+                print(f"[DEBUG] Demonstrativo clicado com: {seletor}")
+                break
+        except Exception:
+            continue
+
+    if not clicou_demo:
+        raise RuntimeError("Não encontrou Demonstrativo de Resultados")
+
+    page.wait_for_timeout(5000)
+
+def encontrar_select_responsavel(page):
+    selects = page.locator("select")
+    total = selects.count()
+    print("[DEBUG] Quantidade de selects:", total)
+
+    for i in range(total):
+        try:
+            opcoes = selects.nth(i).locator("option").all_inner_texts()
+            texto_opcoes = " | ".join(opcoes).lower()
+
+            if "responsável fiscal" in texto_opcoes or "responsavel fiscal" in texto_opcoes:
+                print(f"[DEBUG] Select de Responsável Fiscal encontrado no índice {i}")
+                return i
+
+            # fallback: select com muitos nomes de pessoas
+            if len(opcoes) > 5 and not any("pix doutores" in op.lower() for op in opcoes):
+                print(f"[DEBUG] Possível select de Responsável Fiscal no índice {i}")
+                return i
+        except Exception:
+            continue
+
+    raise RuntimeError("Não encontrou o select de Responsável Fiscal")
+
+def listar_responsaveis(page, idx_select):
+    select = page.locator("select").nth(idx_select)
+    opcoes = select.locator("option").all_inner_texts()
+
+    ignorar = {
+        "",
+        "todos",
+        "selecione",
+        "selecionar",
+        "responsável fiscal",
+        "responsavel fiscal"
+    }
+
+    validas = []
+    for op in opcoes:
+        texto = op.strip()
+        if texto.lower() not in ignorar:
+            validas.append(texto)
+
+    print(f"[DEBUG] Responsáveis encontrados: {len(validas)}")
+    print("[DEBUG] Lista:", validas)
+    return validas
+
+def preencher_datas_mes(page):
+    data_ini, data_fim = periodo_mes_atual()
+    inputs = page.locator('input[type="text"], input[type="date"]')
+    total_inputs = inputs.count()
+    print("[DEBUG] Quantidade de inputs:", total_inputs)
+
+    preenchidos = 0
+    for i in range(total_inputs):
+        try:
+            name = (inputs.nth(i).get_attribute("name") or "").lower()
+            id_attr = (inputs.nth(i).get_attribute("id") or "").lower()
+            placeholder = (inputs.nth(i).get_attribute("placeholder") or "").lower()
+
+            ref = f"{name} {id_attr} {placeholder}"
+
+            if "data" in ref or "periodo" in ref or "período" in ref:
+                if preenchidos == 0:
+                    inputs.nth(i).fill(data_ini)
+                    preenchidos += 1
+                    print(f"[DEBUG] Data inicial preenchida: {data_ini}")
+                elif preenchidos == 1:
+                    inputs.nth(i).fill(data_fim)
+                    preenchidos += 1
+                    print(f"[DEBUG] Data final preenchida: {data_fim}")
+                    break
+        except Exception:
+            continue
+
+    # fallback: primeiros dois campos editáveis
+    if preenchidos < 2 and total_inputs >= 2:
+        try:
+            inputs.nth(0).fill(data_ini)
+            inputs.nth(1).fill(data_fim)
+            preenchidos = 2
+            print("[DEBUG] Datas preenchidas por fallback")
+        except Exception:
+            pass
+
+    if preenchidos < 2:
+        raise RuntimeError("Não conseguiu preencher as datas do período")
+
+def clicar_buscar(page):
+    botoes = [
+        'button:has-text("Buscar")',
+        'input[value="Buscar"]',
+        'text=Buscar'
+    ]
+
+    for seletor in botoes:
+        try:
+            if page.locator(seletor).first.count() > 0:
+                page.locator(seletor).first.click(timeout=5000)
+                print(f"[DEBUG] Buscar clicado com: {seletor}")
+                page.wait_for_timeout(5000)
+                return
+        except Exception:
+            continue
+
+    raise RuntimeError("Não encontrou o botão Buscar")
+
+def parse_valor(valor_txt):
+    return float(valor_txt.replace("R$", "").replace(".", "").replace(",", ".").strip())
+
+def ler_tabela(page, unidade, responsavel):
+    dados = []
+    linhas = page.locator("table tr")
+    total_linhas = linhas.count()
+    print(f"[DEBUG] Linhas encontradas para {responsavel}: {total_linhas}")
+
+    for i in range(total_linhas):
+        try:
+            cols = linhas.nth(i).locator("td")
+            if cols.count() < 4:
+                continue
+
+            textos = [cols.nth(j).inner_text().strip() for j in range(cols.count())]
+
+            data_txt = textos[0]
+            metodo_txt = textos[1]
+            origem_txt = textos[2]
+            valor_txt = textos[3]
+
+            if "/" not in data_txt:
+                continue
+
+            data_obj = datetime.strptime(data_txt, "%d/%m/%Y")
+            valor_num = parse_valor(valor_txt)
+
+            dados.append({
+                "data": data_obj.strftime("%Y-%m-%d"),
+                "unidade": unidade,
+                "doutor": responsavel,
+                "metodo": metodo_txt,
+                "origem": origem_txt,
+                "valor": valor_num,
+                "mes": data_obj.month,
+                "ano": data_obj.year
+            })
+        except Exception:
+            continue
+
+    return dados
+
+def coletar_por_responsavel(page, unidade):
+    preencher_datas_mes(page)
+
+    idx_select = encontrar_select_responsavel(page)
+    responsaveis = listar_responsaveis(page, idx_select)
+
+    todos = []
+    select = page.locator("select").nth(idx_select)
+
+    for nome_resp in responsaveis:
+        try:
+            print(f"[INFO] Coletando responsável: {nome_resp}")
+            select.select_option(label=nome_resp)
+            page.wait_for_timeout(1000)
+
+            clicar_buscar(page)
+            page.wait_for_timeout(3000)
+
+            dados_resp = ler_tabela(page, unidade, nome_resp)
+            print(f"[DEBUG] Registros coletados para {nome_resp}: {len(dados_resp)}")
+            todos.extend(dados_resp)
+        except Exception as e:
+            print(f"[ERRO] Falha ao coletar {nome_resp}: {e}")
+
+    return todos
+
+def deduplicar(registros):
+    vistos = set()
+    saida = []
+
+    for r in registros:
+        chave = (
+            r["data"],
+            r["unidade"],
+            r["doutor"],
+            r["metodo"],
+            r["origem"],
+            round(float(r["valor"]), 2),
+        )
+        if chave not in vistos:
+            vistos.add(chave)
+            saida.append(r)
+
+    saida.sort(key=lambda x: (x["data"], x["unidade"], x["doutor"], x["valor"]))
+    return saida
+
 def coletar_unidade(nome, url, page):
     print(f"[INFO] Acessando {nome}")
     page.goto(url, wait_until="domcontentloaded", timeout=60000)
@@ -51,7 +303,6 @@ def coletar_unidade(nome, url, page):
 
     salvar_debug(page, "01_abertura")
 
-    # Login
     page.locator('input[type="text"], input[name="usuario"], input[name="login"]').first.fill(TOP_USER)
     page.locator('input[type="password"], input[name="senha"]').first.fill(TOP_PASS)
     print("[DEBUG] Usuário e senha preenchidos")
@@ -63,105 +314,11 @@ def coletar_unidade(nome, url, page):
     print("[DEBUG] Título:", page.title())
     salvar_debug(page, "02_pos_login")
 
-    # Navegação
-    try:
-        page.locator("text=Finanças").first.click(timeout=10000)
-        page.wait_for_timeout(2000)
-        page.locator("text=Demonstrativo de Resultados").first.click(timeout=10000)
-        page.wait_for_timeout(4000)
-        print("[DEBUG] Navegação até relatório OK")
-    except Exception as e:
-        print("[ERRO] Não encontrou menus:", e)
-        salvar_debug(page, "03_erro_menu")
-        return []
+    navegar_relatorio(page)
+    salvar_debug(page, "03_relatorio")
 
-    # Filtro Pix
-    try:
-        selects = page.locator("select")
-        total = selects.count()
-        print("[DEBUG] Quantidade de selects:", total)
-
-        encontrou = False
-        for i in range(total):
-            opcoes = selects.nth(i).locator("option").all_inner_texts()
-            print(f"[DEBUG] Select {i} opções:", opcoes)
-            for op in opcoes:
-                if "Pix Doutores" in op:
-                    selects.nth(i).select_option(label=op)
-                    encontrou = True
-                    print("[DEBUG] Pix Doutores selecionado")
-                    break
-            if encontrou:
-                break
-
-        if not encontrou:
-            print("[ERRO] Não encontrou opção Pix Doutores")
-            salvar_debug(page, "04_erro_pix")
-            return []
-
-    except Exception as e:
-        print("[ERRO] Falha no filtro Pix:", e)
-        salvar_debug(page, "04_erro_pix")
-        return []
-
-    # Buscar
-    try:
-        possiveis_botoes = [
-            'button:has-text("Buscar")',
-            'input[value="Buscar"]',
-            'text=Buscar'
-        ]
-        clicou = False
-        for seletor in possiveis_botoes:
-            try:
-                if page.locator(seletor).first.is_visible(timeout=3000):
-                    page.locator(seletor).first.click(timeout=5000)
-                    print(f"[DEBUG] Clique no Buscar com seletor: {seletor}")
-                    clicou = True
-                    break
-            except Exception:
-                continue
-
-        if not clicou:
-            print("[ERRO] Não encontrou botão Buscar")
-            salvar_debug(page, "05_erro_buscar")
-            return []
-
-        page.wait_for_timeout(6000)
-    except Exception as e:
-        print("[ERRO] Falha ao buscar:", e)
-        salvar_debug(page, "05_erro_buscar")
-        return []
-
-    salvar_debug(page, "06_resultado")
-
-    # Leitura da tabela
-    dados = []
-    try:
-        linhas = page.locator("table tr")
-        total_linhas = linhas.count()
-        print("[DEBUG] Linhas encontradas:", total_linhas)
-
-        for i in range(total_linhas):
-            try:
-                cols = linhas.nth(i).locator("td")
-                if cols.count() >= 4:
-                    dados.append({
-                        "data": cols.nth(0).inner_text().strip(),
-                        "unidade": nome,
-                        "doutor": cols.nth(1).inner_text().strip(),
-                        "metodo": "PIX Doutores",
-                        "origem": cols.nth(2).inner_text().strip(),
-                        "valor": cols.nth(3).inner_text().strip(),
-                        "mes": 3,
-                        "ano": 2026
-                    })
-            except Exception:
-                pass
-
-    except Exception as e:
-        print("[ERRO] Falha ao ler tabela:", e)
-        salvar_debug(page, "07_erro_tabela")
+    dados = coletar_por_responsavel(page, nome)
+    salvar_debug(page, "04_resultado_final")
 
     return dados
 
@@ -180,10 +337,12 @@ def main():
 
         browser.close()
 
-    with open("data/pix_doutores.json", "w", encoding="utf-8") as f:
-        json.dump(todos, f, indent=2, ensure_ascii=False)
+    consolidados = deduplicar(todos)
 
-    print("✅ Dados coletados:", len(todos))
+    with open("data/pix_doutores.json", "w", encoding="utf-8") as f:
+        json.dump(consolidados, f, indent=2, ensure_ascii=False)
+
+    print("✅ Dados coletados:", len(consolidados))
 
 if __name__ == "__main__":
     main()
