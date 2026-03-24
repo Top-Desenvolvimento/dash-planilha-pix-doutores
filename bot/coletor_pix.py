@@ -1,11 +1,7 @@
 from playwright.sync_api import sync_playwright
 import json
-from datetime import datetime
-
-TOP_USER = ""
-TOP_PASS = ""
-
 import os
+
 TOP_USER = os.getenv("TOP_USER")
 TOP_PASS = os.getenv("TOP_PASS")
 
@@ -13,76 +9,61 @@ UNIDADES = [
     ("Caxias", "http://caxias.topesteticabucal.com.br/sistema"),
 ]
 
+def salvar_debug(page, nome):
+    with open(f"debug_{nome}.html", "w", encoding="utf-8") as f:
+        f.write(page.content())
+    page.screenshot(path=f"debug_{nome}.png", full_page=True)
+    print(f"[DEBUG] Salvos: debug_{nome}.html e debug_{nome}.png")
+
+def clicar_login(page):
+    tentativas = [
+        'button[type="submit"]',
+        'input[type="submit"]',
+        'button',
+        'text=Entrar',
+        'text=Login',
+        'text=Acessar'
+    ]
+
+    for seletor in tentativas:
+        try:
+            loc = page.locator(seletor).first
+            if loc.count() > 0:
+                loc.click(timeout=5000)
+                print(f"[DEBUG] Clique no login com seletor: {seletor}")
+                return
+        except Exception:
+            continue
+
+    try:
+        page.locator('input[type="password"]').first.press("Enter")
+        print("[DEBUG] Login via Enter no campo senha")
+        return
+    except Exception:
+        pass
+
+    raise RuntimeError("Não encontrei um botão de login válido.")
+
 def coletar_unidade(nome, url, page):
     print(f"[INFO] Acessando {nome}")
-
-    page.goto(url)
-
-    # LOGIN (AJUSTAR SE NECESSÁRIO)
-    page.fill('input[type="text"]', TOP_USER)
-    page.fill('input[type="password"]', TOP_PASS)
-    page.click('button')
-
+    page.goto(url, wait_until="domcontentloaded", timeout=60000)
     page.wait_for_timeout(3000)
 
-    print("[DEBUG] URL após login:", page.url)
+    salvar_debug(page, "01_abertura")
 
-    # TENTAR NAVEGAR
-    try:
-        page.click("text=Finanças")
-        page.click("text=Demonstrativo de Resultados")
-    except:
-        print("[ERRO] Não encontrou menus")
+    page.locator('input[type="text"], input[name="usuario"], input[name="login"]').first.fill(TOP_USER)
+    page.locator('input[type="password"], input[name="senha"]').first.fill(TOP_PASS)
+    print("[DEBUG] Usuário e senha preenchidos")
 
-    page.wait_for_timeout(3000)
-
-    # FILTRO PIX
-    try:
-        page.select_option("select", label="PIX Doutores")
-    except:
-        print("[ERRO] Não encontrou filtro PIX")
-
-    page.wait_for_timeout(2000)
-
-    try:
-        page.click("text=Buscar")
-    except:
-        print("[ERRO] Não encontrou botão buscar")
-
+    clicar_login(page)
     page.wait_for_timeout(5000)
 
-    # DEBUG: salvar HTML
-    html = page.content()
-    with open("debug.html", "w", encoding="utf-8") as f:
-        f.write(html)
-
-    print("[DEBUG] HTML salvo")
-
-    # TENTAR PEGAR LINHAS
-    linhas = page.locator("table tr")
-    print("[DEBUG] Linhas encontradas:", linhas.count())
+    print("[DEBUG] URL após login:", page.url)
+    print("[DEBUG] Título:", page.title())
+    salvar_debug(page, "02_pos_login")
 
     dados = []
-
-    for i in range(linhas.count()):
-        try:
-            cols = linhas.nth(i).locator("td")
-            if cols.count() >= 4:
-                dados.append({
-                    "data": cols.nth(0).inner_text(),
-                    "unidade": nome,
-                    "doutor": cols.nth(1).inner_text(),
-                    "metodo": "PIX Doutores",
-                    "origem": cols.nth(2).inner_text(),
-                    "valor": cols.nth(3).inner_text(),
-                    "mes": 3,
-                    "ano": 2026
-                })
-        except:
-            pass
-
     return dados
-
 
 def main():
     with sync_playwright() as p:
@@ -90,10 +71,12 @@ def main():
         page = browser.new_page()
 
         todos = []
-
         for nome, url in UNIDADES:
-            dados = coletar_unidade(nome, url, page)
-            todos.extend(dados)
+            try:
+                dados = coletar_unidade(nome, url, page)
+                todos.extend(dados)
+            except Exception as e:
+                print(f"[ERRO] Unidade {nome}: {e}")
 
         browser.close()
 
@@ -101,7 +84,6 @@ def main():
         json.dump(todos, f, indent=2, ensure_ascii=False)
 
     print("✅ Dados coletados:", len(todos))
-
 
 if __name__ == "__main__":
     main()
