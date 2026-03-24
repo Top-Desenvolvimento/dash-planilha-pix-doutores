@@ -8,6 +8,14 @@ TOP_PASS = os.getenv("TOP_PASS")
 
 UNIDADES = [
     ("Caxias", "http://caxias.topesteticabucal.com.br/sistema"),
+    # Depois que validar, adicione as demais:
+    # ("Farroupilha", "http://farroupilha.topesteticabucal.com.br/sistema"),
+    # ("Bento", "http://bento.topesteticabucal.com.br/sistema"),
+    # ("Encantado", "http://encantado.topesteticabucal.com.br/sistema"),
+    # ("Soledade", "http://soledade.topesteticabucal.com.br/sistema"),
+    # ("Garibaldi", "http://garibaldi.topesteticabucal.com.br/sistema"),
+    # ("Veranópolis", "http://veranopolis.topesteticabucal.com.br/sistema"),
+    # ("Sobradinho", "http://ssdocai.topesteticabucal.com.br/sistema"),
 ]
 
 def salvar_debug(page, nome):
@@ -43,19 +51,22 @@ def clicar_login(page):
     except Exception:
         pass
 
-    raise RuntimeError("Não encontrei um botão de login válido.")
+    raise RuntimeError("Não encontrou um botão de login válido.")
 
 def periodo_mes_atual():
     hoje = date.today()
     inicio = hoje.replace(day=1)
+
     if hoje.month == 12:
         prox = date(hoje.year + 1, 1, 1)
     else:
         prox = date(hoje.year, hoje.month + 1, 1)
+
     fim = date.fromordinal(prox.toordinal() - 1)
     return inicio.strftime("%d/%m/%Y"), fim.strftime("%d/%m/%Y")
 
 def navegar_relatorio(page):
+    print("[DEBUG] Tentando abrir Finanças")
     opcoes_financas = [
         'text=Finanças',
         'text=Financas',
@@ -79,6 +90,7 @@ def navegar_relatorio(page):
 
     page.wait_for_timeout(3000)
 
+    print("[DEBUG] Tentando abrir Demonstrativo de Resultados")
     opcoes_demo = [
         'text=Demonstrativo de Resultados',
         'a:has-text("Demonstrativo de Resultados")',
@@ -102,27 +114,10 @@ def navegar_relatorio(page):
     page.wait_for_timeout(5000)
 
 def encontrar_select_responsavel(page):
-    # Pelo log, sabemos que é o select 1
+    # Pelo seu log validado:
+    # Select 1 = Responsável Fiscal
     print("[DEBUG] Usando select fixo de Responsável Fiscal: índice 1")
     return 1
-
-    for i in range(total):
-        try:
-            opcoes = selects.nth(i).locator("option").all_inner_texts()
-            texto_opcoes = " | ".join(opcoes).lower()
-
-            if "responsável fiscal" in texto_opcoes or "responsavel fiscal" in texto_opcoes:
-                print(f"[DEBUG] Select de Responsável Fiscal encontrado no índice {i}")
-                return i
-
-            # fallback: select com muitos nomes de pessoas
-            if len(opcoes) > 5 and not any("pix doutores" in op.lower() for op in opcoes):
-                print(f"[DEBUG] Possível select de Responsável Fiscal no índice {i}")
-                return i
-        except Exception:
-            continue
-
-    raise RuntimeError("Não encontrou o select de Responsável Fiscal")
 
 def listar_responsaveis(page, idx_select):
     select = page.locator("select").nth(idx_select)
@@ -161,6 +156,7 @@ def preencher_datas_mes(page):
             placeholder = (inputs.nth(i).get_attribute("placeholder") or "").lower()
 
             ref = f"{name} {id_attr} {placeholder}"
+            print(f"[DEBUG] Input {i}: name={name} id={id_attr} placeholder={placeholder}")
 
             if "data" in ref or "periodo" in ref or "período" in ref:
                 if preenchidos == 0:
@@ -175,7 +171,6 @@ def preencher_datas_mes(page):
         except Exception:
             continue
 
-    # fallback: primeiros dois campos editáveis
     if preenchidos < 2 and total_inputs >= 2:
         try:
             inputs.nth(0).fill(data_ini)
@@ -208,7 +203,12 @@ def clicar_buscar(page):
     raise RuntimeError("Não encontrou o botão Buscar")
 
 def parse_valor(valor_txt):
-    return float(valor_txt.replace("R$", "").replace(".", "").replace(",", ".").strip())
+    return float(
+        valor_txt.replace("R$", "")
+        .replace(".", "")
+        .replace(",", ".")
+        .strip()
+    )
 
 def ler_tabela(page, unidade, responsavel):
     dados = []
@@ -219,10 +219,12 @@ def ler_tabela(page, unidade, responsavel):
     for i in range(total_linhas):
         try:
             cols = linhas.nth(i).locator("td")
-            if cols.count() < 4:
+            qtd_cols = cols.count()
+
+            if qtd_cols < 4:
                 continue
 
-            textos = [cols.nth(j).inner_text().strip() for j in range(cols.count())]
+            textos = [cols.nth(j).inner_text().strip() for j in range(qtd_cols)]
 
             data_txt = textos[0]
             metodo_txt = textos[1]
@@ -232,8 +234,11 @@ def ler_tabela(page, unidade, responsavel):
             if "/" not in data_txt:
                 continue
 
-            data_obj = datetime.strptime(data_txt, "%d/%m/%Y")
-            valor_num = parse_valor(valor_txt)
+            try:
+                data_obj = datetime.strptime(data_txt, "%d/%m/%Y")
+                valor_num = parse_valor(valor_txt)
+            except Exception:
+                continue
 
             dados.append({
                 "data": data_obj.strftime("%Y-%m-%d"),
@@ -323,6 +328,9 @@ def coletar_unidade(nome, url, page):
     return dados
 
 def main():
+    if not TOP_USER or not TOP_PASS:
+        raise RuntimeError("TOP_USER e TOP_PASS não definidos nos Secrets.")
+
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
         page = browser.new_page()
