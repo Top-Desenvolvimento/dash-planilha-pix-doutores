@@ -1,0 +1,22 @@
+[
+  { "data": "2026-03-05", "unidade": "Caxias", "doutor": "Dr. Nelson", "metodo": "PIX Doutores", "origem": "Sistema", "valor": 500, "mes": 3, "ano": 2026 },
+  { "data": "2026-03-12", "unidade": "Bento", "doutor": "Dr. Nelson", "metodo": "PIX Doutores", "origem": "Sistema", "valor": 700, "mes": 3, "ano": 2026 },
+  { "data": "2026-03-20", "unidade": "Farroupilha", "doutor": "Dr. Nelson", "metodo": "PIX Doutores", "origem": "Sistema", "valor": 1900, "mes": 3, "ano": 2026 },
+
+  { "data": "2026-03-03", "unidade": "Caxias", "doutor": "Dr. Maria", "metodo": "PIX Doutores", "origem": "Sistema", "valor": 1200, "mes": 3, "ano": 2026 },
+  { "data": "2026-03-10", "unidade": "Garibaldi", "doutor": "Dr. Maria", "metodo": "PIX Doutores", "origem": "Sistema", "valor": 1000, "mes": 3, "ano": 2026 },
+  { "data": "2026-03-23", "unidade": "Soledade", "doutor": "Dr. Maria", "metodo": "PIX Doutores", "origem": "Sistema", "valor": 900, "mes": 3, "ano": 2026 },
+
+  { "data": "2026-03-07", "unidade": "Encantado", "doutor": "Dr. Paulo", "metodo": "PIX Doutores", "origem": "Sistema", "valor": 2600, "mes": 3, "ano": 2026 },
+
+  { "data": "2026-03-11", "unidade": "Bento", "doutor": "Dr. Camila", "metodo": "PIX Doutores", "origem": "Sistema", "valor": 1500, "mes": 3, "ano": 2026 },
+  { "data": "2026-03-18", "unidade": "Veranópolis", "doutor": "Dr. Camila", "metodo": "PIX Doutores", "origem": "Sistema", "valor": 200, "mes": 3, "ano": 2026 },
+
+  { "data": "2026-03-09", "unidade": "Farroupilha", "doutor": "Dr. Rafael", "metodo": "PIX Doutores", "origem": "Sistema", "valor": 3500, "mes": 3, "ano": 2026 },
+
+  { "data": "2026-03-14", "unidade": "Caxias", "doutor": "Dr. Joana", "metodo": "PIX Doutores", "origem": "Sistema", "valor": 0, "mes": 3, "ano": 2026 },
+
+  { "data": "2026-02-04", "unidade": "Caxias", "doutor": "Dr. Nelson", "metodo": "PIX Doutores", "origem": "Sistema", "valor": 400, "mes": 2, "ano": 2026 },
+  { "data": "2026-02-16", "unidade": "Bento", "doutor": "Dr. Maria", "metodo": "PIX Doutores", "origem": "Sistema", "valor": 2100, "mes": 2, "ano": 2026 },
+  { "data": "2026-02-18", "unidade": "Garibaldi", "doutor": "Dr. Rafael", "metodo": "PIX Doutores", "origem": "Sistema", "valor": 1200, "mes": 2, "ano": 2026 }
+]
