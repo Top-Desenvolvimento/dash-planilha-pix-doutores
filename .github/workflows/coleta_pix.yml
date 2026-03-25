@@ -31,11 +31,20 @@ jobs:
         run: |
           python bot/coletor_pix.py
 
+      - name: Mostrar arquivo gerado
+        run: |
+          echo "---- LISTANDO DATA ----"
+          ls -la data
+          echo "---- CONTEUDO PIX_DOUTORES ----"
+          cat data/pix_doutores.json
+
       - name: Commit dos dados atualizados
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git status
           git add data/pix_doutores.json
+          git diff --cached
           git diff --cached --quiet || git commit -m "Atualiza pix_doutores.json"
           git push
 
