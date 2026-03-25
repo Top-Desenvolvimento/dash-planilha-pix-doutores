@@ -1,4 +1,4 @@
-name: Coleta PIX Doutores
+name: Coleta Pix Doutores
 
 on:
   workflow_dispatch:
