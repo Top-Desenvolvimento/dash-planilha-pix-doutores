@@ -106,6 +106,17 @@ def navegar_para_demonstrativo(page):
 
     page.wait_for_timeout(4000)
 
+def validar_pix_doutores_na_tela(page):
+    try:
+        html = page.content().lower()
+        if "pix doutores" in html:
+            print("[DEBUG] Filtro Pix Doutores encontrado na tela")
+            return
+    except Exception:
+        pass
+
+    print("[WARN] Não consegui confirmar visualmente 'Pix Doutores' na tela, mas vou seguir coletando o que aparecer.")
+
 def preencher_periodo(page):
     data_ini, data_fim = periodo_mes_atual()
 
@@ -159,24 +170,6 @@ def clicar_buscar(page):
 
     raise RuntimeError("Não encontrou o botão Buscar.")
 
-def classificar_metodo(metodo_raw: str) -> str:
-    txt = (metodo_raw or "").lower()
-
-    if "pix doutores" in txt:
-        return "PIX Doutores"
-    if "pix" in txt:
-        return "PIX"
-    if "cart" in txt or "credito" in txt or "crédito" in txt or "debito" in txt or "débito" in txt:
-        return "Cartão"
-    if "dinheiro" in txt:
-        return "Dinheiro"
-    if "boleto" in txt:
-        return "Boleto"
-    if "transfer" in txt or "depósito" in txt or "deposito" in txt:
-        return "Transferência/Depósito"
-
-    return "Outros"
-
 def ler_tabela_resultado(page, unidade):
     dados = []
 
@@ -189,6 +182,7 @@ def ler_tabela_resultado(page, unidade):
             linha = linhas.nth(i)
             cols = linha.locator("td")
 
+            # esperado: Data | Mét. Pag. | Origem | Valor
             if cols.count() < 4:
                 continue
 
@@ -206,7 +200,7 @@ def ler_tabela_resultado(page, unidade):
                 continue
 
             try:
-                valor = parse_valor_brl(valor_txt)
+                valor_num = parse_valor_brl(valor_txt)
             except Exception:
                 continue
 
@@ -214,9 +208,8 @@ def ler_tabela_resultado(page, unidade):
                 "data": data_obj.strftime("%Y-%m-%d"),
                 "unidade": unidade,
                 "metodo_raw": metodo_txt,
-                "metodo_categoria": classificar_metodo(metodo_txt),
                 "origem": origem_txt,
-                "valor": valor,
+                "valor": valor_num,
                 "mes": data_obj.month,
                 "ano": data_obj.year
             })
@@ -258,6 +251,7 @@ def coletar_unidade(page, nome_unidade, url):
     navegar_para_demonstrativo(page)
     salvar_debug(page, f"{nome_unidade}_03_demonstrativo")
 
+    validar_pix_doutores_na_tela()
     preencher_periodo(page)
     clicar_buscar(page)
     salvar_debug(page, f"{nome_unidade}_04_resultado")
