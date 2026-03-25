@@ -42,9 +42,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git status
           git add data/pix_doutores.json
-          git diff --cached
           git diff --cached --quiet || git commit -m "Atualiza pix_doutores.json"
           git push
 
