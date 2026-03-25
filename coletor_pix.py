@@ -1,7 +1,7 @@
 from playwright.sync_api import sync_playwright
 import json
 import os
-from datetime import datetime, date
+from datetime import datetime
 from pathlib import Path
 
 TOP_USER = os.getenv("TOP_USER")
@@ -23,6 +23,11 @@ UNIDADES = [
     # ("Sobradinho", "http://ssdocai.topesteticabucal.com.br/sistema"),
 ]
 
+# Período fixo solicitado
+DATA_INICIAL = "01/03/2026"
+DATA_FINAL = "31/03/2026"
+
+
 def salvar_debug(page, nome):
     try:
         with open(f"debug_{nome}.html", "w", encoding="utf-8") as f:
@@ -32,22 +37,31 @@ def salvar_debug(page, nome):
     except Exception as e:
         print(f"[WARN] Falha ao salvar debug {nome}: {e}")
 
-def periodo_mes_atual():
-    hoje = date.today()
-    inicio = hoje.replace(day=1)
-
-    if hoje.month == 12:
-        prox = date(hoje.year + 1, 1, 1)
-    else:
-        prox = date(hoje.year, hoje.month + 1, 1)
-
-    fim = date.fromordinal(prox.toordinal() - 1)
-    return inicio.strftime("%d/%m/%Y"), fim.strftime("%d/%m/%Y")
 
 def parse_valor_brl(txt: str) -> float:
     txt = txt.replace("R$", "").replace(".", "").replace(",", ".")
     txt = txt.replace("C", "").replace("D", "").strip()
     return float(txt)
+
+
+def classificar_metodo(metodo_raw: str) -> str:
+    txt = (metodo_raw or "").lower()
+
+    if "pix doutores" in txt:
+        return "PIX Doutores"
+    if "pix" in txt:
+        return "PIX"
+    if "cart" in txt or "credito" in txt or "crédito" in txt or "debito" in txt or "débito" in txt:
+        return "Cartão"
+    if "dinheiro" in txt:
+        return "Dinheiro"
+    if "boleto" in txt:
+        return "Boleto"
+    if "transfer" in txt or "deposito" in txt or "depósito" in txt:
+        return "Transferência/Depósito"
+
+    return "Outros"
+
 
 def fazer_login(page):
     page.locator('input[type="text"], input[name="usuario"], input[name="login"]').first.fill(TOP_USER)
@@ -78,6 +92,7 @@ def fazer_login(page):
 
     page.wait_for_timeout(5000)
 
+
 def navegar_para_demonstrativo(page):
     page.locator("text=FINANÇAS").first.click(timeout=10000)
     print("[DEBUG] Clique em FINANÇAS")
@@ -106,50 +121,94 @@ def navegar_para_demonstrativo(page):
 
     page.wait_for_timeout(4000)
 
-def validar_pix_doutores_na_tela(page):
-    try:
-        html = page.content().lower()
-        if "pix doutores" in html:
-            print("[DEBUG] Filtro Pix Doutores encontrado na tela")
-            return
-    except Exception:
-        pass
 
-    print("[WARN] Não consegui confirmar visualmente 'Pix Doutores' na tela, mas vou seguir coletando o que aparecer.")
+def selecionar_pix_doutores(page):
+    """
+    Tenta selecionar PIX Doutores no campo Método.
+    Como esse campo costuma ser multiselect custom, a estratégia é:
+    - abrir o campo
+    - digitar Pix Doutores
+    - Enter
+    """
+    print("[DEBUG] Tentando selecionar PIX Doutores no campo Método")
+
+    tentativas_abertura = [
+        'text=Selecione um ou mais métodos',
+        'text=Selecione um ou mais metodos',
+        'text=Método',
+        'text=Metodo',
+        'text=Pix Doutores'
+    ]
+
+    abriu = False
+    for seletor in tentativas_abertura:
+        try:
+            if page.locator(seletor).count() > 0:
+                page.locator(seletor).last.click(timeout=4000)
+                page.wait_for_timeout(800)
+                print(f"[DEBUG] Campo Método aberto com: {seletor}")
+                abriu = True
+                break
+        except Exception:
+            continue
+
+    if not abriu:
+        print("[WARN] Não consegui abrir claramente o campo Método; tentando digitação mesmo assim")
+
+    # tenta usar algum input visível do multiselect
+    inputs = page.locator("input")
+    total_inputs = inputs.count()
+
+    for i in range(total_inputs):
+        try:
+            campo = inputs.nth(i)
+            campo.click(timeout=2000)
+            page.wait_for_timeout(300)
+            campo.fill("Pix Doutores")
+            page.wait_for_timeout(800)
+            page.keyboard.press("Enter")
+            page.wait_for_timeout(1000)
+            print(f"[DEBUG] Tentativa de seleção PIX Doutores no input {i}")
+            return
+        except Exception:
+            continue
+
+    print("[WARN] Não consegui forçar a seleção de PIX Doutores. O robô vai seguir com o filtro visual atual da tela.")
+
 
 def preencher_periodo(page):
-    data_ini, data_fim = periodo_mes_atual()
-
-    preenchidos = 0
     inputs = page.locator("input")
     total = inputs.count()
     print(f"[DEBUG] Quantidade de inputs: {total}")
 
+    preenchidos = 0
     for i in range(total):
         try:
             loc = inputs.nth(i)
             tipo = (loc.get_attribute("type") or "").lower()
-            valor = ""
+
+            valor_atual = ""
             try:
-                valor = loc.input_value(timeout=1000)
+                valor_atual = loc.input_value(timeout=1000)
             except Exception:
                 pass
 
-            if tipo in ["text", "date"] or "/" in valor:
+            if tipo in ["text", "date"] or "/" in valor_atual:
                 if preenchidos == 0:
-                    loc.fill(data_ini)
+                    loc.fill(DATA_INICIAL)
                     preenchidos += 1
-                    print(f"[DEBUG] Data inicial preenchida: {data_ini}")
+                    print(f"[DEBUG] Data inicial preenchida: {DATA_INICIAL}")
                 elif preenchidos == 1:
-                    loc.fill(data_fim)
+                    loc.fill(DATA_FINAL)
                     preenchidos += 1
-                    print(f"[DEBUG] Data final preenchida: {data_fim}")
+                    print(f"[DEBUG] Data final preenchida: {DATA_FINAL}")
                     break
         except Exception:
             continue
 
     if preenchidos < 2:
         raise RuntimeError("Não conseguiu preencher as datas do período.")
+
 
 def clicar_buscar(page):
     botoes = [
@@ -170,6 +229,7 @@ def clicar_buscar(page):
 
     raise RuntimeError("Não encontrou o botão Buscar.")
 
+
 def ler_tabela_resultado(page, unidade):
     dados = []
 
@@ -182,7 +242,6 @@ def ler_tabela_resultado(page, unidade):
             linha = linhas.nth(i)
             cols = linha.locator("td")
 
-            # esperado: Data | Mét. Pag. | Origem | Valor
             if cols.count() < 4:
                 continue
 
@@ -208,16 +267,17 @@ def ler_tabela_resultado(page, unidade):
                 "data": data_obj.strftime("%Y-%m-%d"),
                 "unidade": unidade,
                 "metodo_raw": metodo_txt,
+                "metodo_categoria": classificar_metodo(metodo_txt),
                 "origem": origem_txt,
                 "valor": valor_num,
                 "mes": data_obj.month,
                 "ano": data_obj.year
             })
-
         except Exception:
             continue
 
     return dados
+
 
 def deduplicar(registros):
     vistos = set()
@@ -238,6 +298,7 @@ def deduplicar(registros):
     saida.sort(key=lambda x: (x["data"], x["unidade"], x["metodo_raw"], x["valor"]))
     return saida
 
+
 def coletar_unidade(page, nome_unidade, url):
     print(f"[INFO] Acessando {nome_unidade}")
     page.goto(url, wait_until="domcontentloaded", timeout=60000)
@@ -251,7 +312,7 @@ def coletar_unidade(page, nome_unidade, url):
     navegar_para_demonstrativo(page)
     salvar_debug(page, f"{nome_unidade}_03_demonstrativo")
 
-    validar_pix_doutores_na_tela()
+    selecionar_pix_doutores(page)
     preencher_periodo(page)
     clicar_buscar(page)
     salvar_debug(page, f"{nome_unidade}_04_resultado")
@@ -259,6 +320,7 @@ def coletar_unidade(page, nome_unidade, url):
     dados = ler_tabela_resultado(page, nome_unidade)
     print(f"[INFO] {nome_unidade}: {len(dados)} linhas coletadas")
     return dados
+
 
 def main():
     if not TOP_USER or not TOP_PASS:
@@ -294,6 +356,7 @@ def main():
 
     print("[DEBUG] Conteúdo do pix_doutores.json:")
     print(conteudo[:4000])
+
 
 if __name__ == "__main__":
     main()
