@@ -15,8 +15,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 async function carregarDados() {
   const [creditosRes, lancamentosRes] = await Promise.all([
-    fetch("data/doutores_credito.json"),
-    fetch("data/pix_doutores.json")
+    fetch(`data/doutores_credito.json?v=${Date.now()}`),
+    fetch(`data/pix_doutores.json?v=${Date.now()}`)
   ]);
 
   state.creditos = await creditosRes.json();
@@ -26,21 +26,98 @@ async function carregarDados() {
   state.mesSelecionado = meses[meses.length - 1] || null;
 }
 
+function normalizarNome(txt) {
+  return (txt || "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/\b(dr|dra|cir)\.?\b/g, "")
+    .replace(/[^a-z0-9\s]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function extrairDoutorDoMetodo(metodoRaw, creditos) {
+  if (!metodoRaw) return null;
+
+  const linhas = metodoRaw
+    .split("\n")
+    .map(x => x.trim())
+    .filter(Boolean);
+
+  const linhasSemPix = linhas.filter(l => !l.toLowerCase().includes("pix doutores"));
+
+  const invalidos = [
+    "dinheiro", "saldo total", "maquina", "máquina",
+    "cartao", "cartão", "pix", "debito", "débito",
+    "credito", "crédito", "boleto", "transferencia",
+    "transferência", "deposito", "depósito"
+  ];
+
+  for (let linha of linhasSemPix) {
+    linha = linha.replace(/^(cir\.?|dra\.?|dr\.?)/i, "").trim();
+
+    const linhaNorm = normalizarNome(linha);
+    if (!linhaNorm) continue;
+    if (invalidos.some(x => linhaNorm.includes(normalizarNome(x)))) continue;
+
+    for (const c of creditos) {
+      const oficial = c.doutor;
+      const oficialNorm = normalizarNome(oficial);
+
+      if (!oficialNorm) continue;
+
+      if (oficialNorm === linhaNorm) return oficial;
+
+      const tokensLinha = new Set(linhaNorm.split(" "));
+      const tokensOficial = oficialNorm.split(" ");
+      const todosContidos = tokensOficial.every(t => tokensLinha.has(t));
+      if (todosContidos) return oficial;
+
+      if (tokensOficial.length >= 2) {
+        const primeiro = tokensOficial[0];
+        const ultimo = tokensOficial[tokensOficial.length - 1];
+        if (tokensLinha.has(primeiro) && tokensLinha.has(ultimo)) {
+          return oficial;
+        }
+      }
+    }
+  }
+
+  return null;
+}
+
+function transformarLancamentosBrutos(lancamentos, creditos) {
+  return lancamentos
+    .filter(l => (l.metodo_raw || "").toLowerCase().includes("pix doutores"))
+    .map(l => {
+      const doutor = extrairDoutorDoMetodo(l.metodo_raw, creditos);
+      return {
+        ...l,
+        doutor,
+        metodo: "PIX Doutores"
+      };
+    })
+    .filter(l => l.doutor);
+}
+
 function montarFiltros() {
   const filtroMes = document.getElementById("filtroMes");
   const filtroUnidade = document.getElementById("filtroUnidade");
   const filtroDoutor = document.getElementById("filtroDoutor");
 
-  const meses = [...new Set(state.lancamentos.map(l => `${l.ano}-${String(l.mes).padStart(2, "0")}`))].sort();
+  const lancamentosTratados = transformarLancamentosBrutos(state.lancamentos, state.creditos);
+
+  const meses = [...new Set(lancamentosTratados.map(l => `${l.ano}-${String(l.mes).padStart(2, "0")}`))].sort();
   filtroMes.innerHTML = meses
     .map(m => `<option value="${m}" ${m === state.mesSelecionado ? "selected" : ""}>${formatarCompetencia(m)}</option>`)
     .join("");
 
-  const unidades = [...new Set(state.lancamentos.map(l => l.unidade))].sort();
-  filtroUnidade.innerHTML += unidades.map(u => `<option value="${u}">${u}</option>`).join("");
+  const unidades = [...new Set(lancamentosTratados.map(l => l.unidade))].sort();
+  filtroUnidade.innerHTML = `<option value="Todos">Todas</option>` + unidades.map(u => `<option value="${u}">${u}</option>`).join("");
 
   const doutores = [...new Set(state.creditos.filter(d => d.ativo).map(d => d.doutor))].sort();
-  filtroDoutor.innerHTML += doutores.map(d => `<option value="${d}">${d}</option>`).join("");
+  filtroDoutor.innerHTML = `<option value="Todos">Todos</option>` + doutores.map(d => `<option value="${d}">${d}</option>`).join("");
 }
 
 function registrarEventos() {
@@ -73,7 +150,9 @@ function registrarEventos() {
 }
 
 function aplicarFiltros() {
-  const dadosMes = state.lancamentos.filter(l => {
+  const lancamentosTratados = transformarLancamentosBrutos(state.lancamentos, state.creditos);
+
+  const dadosMes = lancamentosTratados.filter(l => {
     const comp = `${l.ano}-${String(l.mes).padStart(2, "0")}`;
     return comp === state.mesSelecionado;
   });
@@ -91,7 +170,8 @@ function aplicarFiltros() {
   renderTabelaLancamentos(filtrados);
   renderGrafico(resumo);
 
-  document.getElementById("periodoAtual").textContent = `Competência: ${formatarCompetencia(state.mesSelecionado)}`;
+  const periodo = state.mesSelecionado ? formatarCompetencia(state.mesSelecionado) : "Sem dados";
+  document.getElementById("periodoAtual").textContent = `Competência: ${periodo}`;
 }
 
 function calcularResumo(lancamentos, creditos) {
@@ -144,7 +224,7 @@ function renderCards(resumo) {
   const cards = [
     { label: "Doutores monitorados", value: totalMonitorados, mini: "Cadastro ativo no mês" },
     { label: "Total autorizado", value: formatarMoeda(totalAutorizado), mini: "Crédito mensal consolidado" },
-    { label: "Total utilizado", value: formatarMoeda(totalUtilizado), mini: "PIX lançados no mês" },
+    { label: "Total utilizado", value: formatarMoeda(totalUtilizado), mini: "PIX Doutores com doutor válido" },
     { label: "Saldo total", value: formatarMoeda(saldoTotal), mini: "Disponível remanescente" },
     { label: "Sem utilização", value: verdes, mini: "Status verde" },
     { label: "Em atenção", value: amarelos, mini: "50% ou mais" },
@@ -213,7 +293,6 @@ function renderTabelaResumo(resumo) {
 
 function renderTabelaLancamentos(lancamentos) {
   const tbody = document.querySelector("#tabelaLancamentos tbody");
-
   const ordenados = [...lancamentos].sort((a, b) => new Date(a.data) - new Date(b.data));
 
   tbody.innerHTML = ordenados.map(l => `
@@ -297,7 +376,9 @@ function renderGrafico(resumo) {
 }
 
 function exportarCSV() {
-  const dadosMes = state.lancamentos.filter(l => {
+  const lancamentosTratados = transformarLancamentosBrutos(state.lancamentos, state.creditos);
+
+  const dadosMes = lancamentosTratados.filter(l => {
     const comp = `${l.ano}-${String(l.mes).padStart(2, "0")}`;
     return comp === state.mesSelecionado;
   }).filter(l => {
