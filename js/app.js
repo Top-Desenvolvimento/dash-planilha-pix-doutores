@@ -3,11 +3,13 @@ const state = {
   lancamentos: [],
   mesSelecionado: null,
   unidadeSelecionada: "Todos",
-  doutorSelecionado: "Todos"
+  doutorSelecionado: "Todos",
+  metodoSelecionado: "Todos"
 };
 
 document.addEventListener("DOMContentLoaded", async () => {
   await carregarDados();
+  montarFiltrosExtras();
   montarFiltros();
   aplicarFiltros();
   registrarEventos();
@@ -35,6 +37,19 @@ function normalizarNome(txt) {
     .replace(/[^a-z0-9\s]/g, " ")
     .replace(/\s+/g, " ")
     .trim();
+}
+
+function classificarMetodo(metodoRaw) {
+  const txt = (metodoRaw || "").toLowerCase();
+
+  if (txt.includes("pix doutores")) return "PIX Doutores";
+  if (txt.includes("pix")) return "PIX";
+  if (txt.includes("cart") || txt.includes("credito") || txt.includes("crédito") || txt.includes("debito") || txt.includes("débito")) return "Cartão";
+  if (txt.includes("dinheiro")) return "Dinheiro";
+  if (txt.includes("boleto")) return "Boleto";
+  if (txt.includes("transfer") || txt.includes("deposito") || txt.includes("depósito")) return "Transferência/Depósito";
+
+  return "Outros";
 }
 
 function extrairDoutorDoMetodo(metodoRaw, creditos) {
@@ -66,7 +81,6 @@ function extrairDoutorDoMetodo(metodoRaw, creditos) {
       const oficialNorm = normalizarNome(oficial);
 
       if (!oficialNorm) continue;
-
       if (oficialNorm === linhaNorm) return oficial;
 
       const tokensLinha = new Set(linhaNorm.split(" "));
@@ -88,17 +102,48 @@ function extrairDoutorDoMetodo(metodoRaw, creditos) {
 }
 
 function transformarLancamentosBrutos(lancamentos, creditos) {
-  return lancamentos
-    .filter(l => (l.metodo_raw || "").toLowerCase().includes("pix doutores"))
-    .map(l => {
-      const doutor = extrairDoutorDoMetodo(l.metodo_raw, creditos);
-      return {
-        ...l,
-        doutor,
-        metodo: "PIX Doutores"
-      };
-    })
-    .filter(l => l.doutor);
+  return lancamentos.map(l => {
+    const metodoCategoria = l.metodo_categoria || classificarMetodo(l.metodo_raw || "");
+    const doutor = metodoCategoria === "PIX Doutores"
+      ? extrairDoutorDoMetodo(l.metodo_raw, creditos)
+      : null;
+
+    return {
+      ...l,
+      metodo: metodoCategoria,
+      doutor
+    };
+  });
+}
+
+function montarFiltrosExtras() {
+  const sidebar = document.querySelector(".side-card");
+  if (!sidebar || document.getElementById("filtroMetodo")) return;
+
+  const label = document.createElement("label");
+  label.textContent = "Método";
+
+  const select = document.createElement("select");
+  select.id = "filtroMetodo";
+  select.innerHTML = `
+    <option value="Todos">Todos</option>
+    <option value="PIX Doutores">PIX Doutores</option>
+    <option value="PIX">PIX</option>
+    <option value="Cartão">Cartão</option>
+    <option value="Dinheiro">Dinheiro</option>
+    <option value="Boleto">Boleto</option>
+    <option value="Transferência/Depósito">Transferência/Depósito</option>
+    <option value="Outros">Outros</option>
+  `;
+
+  const unidadeLabel = [...sidebar.querySelectorAll("label")].find(l => l.textContent.trim() === "Unidade");
+  if (unidadeLabel) {
+    sidebar.insertBefore(label, unidadeLabel);
+    sidebar.insertBefore(select, unidadeLabel);
+  } else {
+    sidebar.appendChild(label);
+    sidebar.appendChild(select);
+  }
 }
 
 function montarFiltros() {
@@ -136,12 +181,24 @@ function registrarEventos() {
     aplicarFiltros();
   });
 
+  const filtroMetodo = document.getElementById("filtroMetodo");
+  if (filtroMetodo) {
+    filtroMetodo.addEventListener("change", e => {
+      state.metodoSelecionado = e.target.value;
+      aplicarFiltros();
+    });
+  }
+
   document.getElementById("btnLimpar").addEventListener("click", () => {
     state.unidadeSelecionada = "Todos";
     state.doutorSelecionado = "Todos";
+    state.metodoSelecionado = "Todos";
 
     document.getElementById("filtroUnidade").value = "Todos";
     document.getElementById("filtroDoutor").value = "Todos";
+
+    const fm = document.getElementById("filtroMetodo");
+    if (fm) fm.value = "Todos";
 
     aplicarFiltros();
   });
@@ -159,12 +216,18 @@ function aplicarFiltros() {
 
   const filtrados = dadosMes.filter(l => {
     const okUnidade = state.unidadeSelecionada === "Todos" || l.unidade === state.unidadeSelecionada;
-    const okDoutor = state.doutorSelecionado === "Todos" || l.doutor === state.doutorSelecionado;
-    return okUnidade && okDoutor;
+    const okMetodo = state.metodoSelecionado === "Todos" || l.metodo === state.metodoSelecionado;
+    const okDoutor =
+      state.doutorSelecionado === "Todos" ||
+      l.doutor === state.doutorSelecionado;
+
+    return okUnidade && okMetodo && okDoutor;
   });
 
-  const resumo = calcularResumo(filtrados, state.creditos);
-  renderCards(resumo);
+  const apenasPixDoutoresValidos = filtrados.filter(l => l.metodo === "PIX Doutores" && l.doutor);
+  const resumo = calcularResumo(apenasPixDoutoresValidos, state.creditos);
+
+  renderCards(resumo, filtrados);
   renderAlerta(resumo);
   renderTabelaResumo(resumo);
   renderTabelaLancamentos(filtrados);
@@ -200,19 +263,15 @@ function calcularResumo(lancamentos, creditos) {
     item.saldo = item.credito - item.utilizado;
     item.percentual = item.credito > 0 ? (item.utilizado / item.credito) * 100 : 0;
 
-    if (item.percentual >= 100) {
-      item.status = "vermelho";
-    } else if (item.percentual >= 50) {
-      item.status = "amarelo";
-    } else {
-      item.status = "verde";
-    }
+    if (item.percentual >= 100) item.status = "vermelho";
+    else if (item.percentual >= 50) item.status = "amarelo";
+    else item.status = "verde";
   });
 
   return Object.values(mapa).sort((a, b) => b.percentual - a.percentual);
 }
 
-function renderCards(resumo) {
+function renderCards(resumo, lancamentosFiltrados) {
   const totalAutorizado = resumo.reduce((s, r) => s + r.credito, 0);
   const totalUtilizado = resumo.reduce((s, r) => s + r.utilizado, 0);
   const saldoTotal = resumo.reduce((s, r) => s + r.saldo, 0);
@@ -220,11 +279,13 @@ function renderCards(resumo) {
   const amarelos = resumo.filter(r => r.percentual >= 50 && r.percentual < 100).length;
   const vermelhos = resumo.filter(r => r.percentual >= 100).length;
   const totalMonitorados = resumo.length;
+  const qtdLancamentos = lancamentosFiltrados.length;
 
   const cards = [
     { label: "Doutores monitorados", value: totalMonitorados, mini: "Cadastro ativo no mês" },
+    { label: "Lançamentos filtrados", value: qtdLancamentos, mini: "Tabela inferior" },
     { label: "Total autorizado", value: formatarMoeda(totalAutorizado), mini: "Crédito mensal consolidado" },
-    { label: "Total utilizado", value: formatarMoeda(totalUtilizado), mini: "PIX Doutores com doutor válido" },
+    { label: "Total utilizado", value: formatarMoeda(totalUtilizado), mini: "Só PIX Doutores com doutor válido" },
     { label: "Saldo total", value: formatarMoeda(saldoTotal), mini: "Disponível remanescente" },
     { label: "Sem utilização", value: verdes, mini: "Status verde" },
     { label: "Em atenção", value: amarelos, mini: "50% ou mais" },
@@ -299,7 +360,7 @@ function renderTabelaLancamentos(lancamentos) {
     <tr>
       <td>${formatarData(l.data)}</td>
       <td>${l.unidade}</td>
-      <td>${l.doutor}</td>
+      <td>${l.doutor || "-"}</td>
       <td>${l.metodo}</td>
       <td>${l.origem}</td>
       <td>${formatarMoeda(l.valor)}</td>
@@ -383,18 +444,23 @@ function exportarCSV() {
     return comp === state.mesSelecionado;
   }).filter(l => {
     const okUnidade = state.unidadeSelecionada === "Todos" || l.unidade === state.unidadeSelecionada;
+    const okMetodo = state.metodoSelecionado === "Todos" || l.metodo === state.metodoSelecionado;
     const okDoutor = state.doutorSelecionado === "Todos" || l.doutor === state.doutorSelecionado;
-    return okUnidade && okDoutor;
+    return okUnidade && okMetodo && okDoutor;
   });
 
-  const resumo = calcularResumo(dadosMes, state.creditos);
+  const resumo = calcularResumo(
+    dadosMes.filter(l => l.metodo === "PIX Doutores" && l.doutor),
+    state.creditos
+  );
+
   const resumoMap = Object.fromEntries(resumo.map(r => [r.doutor, r]));
 
   const header = [
     "Data",
     "Unidade",
     "Doutor",
-    "Metodo de pagamento",
+    "Metodo",
     "Origem",
     "Valor",
     "Credito autorizado",
@@ -404,18 +470,18 @@ function exportarCSV() {
   ];
 
   const linhas = dadosMes.map(d => {
-    const r = resumoMap[d.doutor];
+    const r = d.doutor ? resumoMap[d.doutor] : null;
     return [
       formatarData(d.data),
       d.unidade,
-      d.doutor,
+      d.doutor || "",
       d.metodo,
       d.origem,
       d.valor,
-      r?.credito ?? 0,
-      r?.utilizado ?? 0,
-      r?.saldo ?? 0,
-      textoStatus(r?.status || "verde", r?.percentual || 0)
+      r?.credito ?? "",
+      r?.utilizado ?? "",
+      r?.saldo ?? "",
+      r ? textoStatus(r.status, r.percentual) : ""
     ];
   });
 
@@ -427,7 +493,7 @@ function exportarCSV() {
   const url = URL.createObjectURL(blob);
   const link = document.createElement("a");
   link.href = url;
-  link.download = `pix_doutores_${state.mesSelecionado}.csv`;
+  link.download = `lancamentos_${state.mesSelecionado}.csv`;
   link.click();
   URL.revokeObjectURL(url);
 }
