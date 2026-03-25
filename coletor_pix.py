@@ -228,10 +228,6 @@ def clicar_buscar(page):
 # LEITURA DA TABELA
 # --------------------------------------------------
 def extrair_nome_vermelho(col_metodo, doutores_oficiais):
-    """
-    Só aceita o texto em vermelho se ele bater com um doutor oficial.
-    Caso contrário, retorna vazio.
-    """
     candidatos_css = [
         'font[color="red"]',
         'span[style*="red"]',
@@ -250,9 +246,10 @@ def extrair_nome_vermelho(col_metodo, doutores_oficiais):
                 t = itens.nth(i).inner_text().strip()
                 if t:
                     textos.append(t)
-        except Exception:
+        except:
             continue
 
+    # fallback
     if not textos:
         try:
             bruto = col_metodo.inner_text().strip()
@@ -260,21 +257,22 @@ def extrair_nome_vermelho(col_metodo, doutores_oficiais):
             for linha in linhas:
                 if "pix doutores" not in linha.lower():
                     textos.append(linha)
-        except Exception:
+        except:
             pass
 
-    vistos = set()
-    textos_unicos = []
     for t in textos:
-        chave = t.lower().strip()
-        if chave not in vistos:
-            vistos.add(chave)
-            textos_unicos.append(t)
+        nome_limpo = re.sub(r"^(CIR\.?|DRA\.?|DR\.?)\s*", "", t, flags=re.I)
+        nome_limpo = re.sub(r"\s+", " ", nome_limpo).strip()
 
-    for t in textos_unicos:
-        nome_mapeado = mapear_nome_doutor(t, doutores_oficiais)
-        if nome_mapeado in doutores_oficiais:
+        nome_mapeado = mapear_nome_doutor(nome_limpo, doutores_oficiais)
+
+        # 🔥 prioridade: usar nome oficial se encontrar
+        if nome_mapeado:
             return nome_mapeado
+
+        # 🔥 fallback: usa o nome limpo mesmo
+        if len(nome_limpo) > 3:
+            return nome_limpo
 
     return ""
 
