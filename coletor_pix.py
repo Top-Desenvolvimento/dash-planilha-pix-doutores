@@ -181,40 +181,60 @@ def garantir_pix_doutores(page):
 
     raise RuntimeError("Não encontrei 'Pix Doutores' na tela do filtro.")
 
-def preencher_periodo(page):
+def configurar_filtros(page):
     data_ini, data_fim = periodo_mes_atual()
 
-    preenchidos = 0
-    inputs = page.locator("input")
-    total = inputs.count()
-    print(f"[DEBUG] Quantidade de inputs: {total}")
+    # =========================
+    # 1. LIMPAR MÉTODO
+    # =========================
+    try:
+        # clica no X do campo método
+        if page.locator("text=Pix Doutores >> xpath=.. >> button").count() > 0:
+            page.locator("text=Pix Doutores >> xpath=.. >> button").click()
+            print("[DEBUG] Método limpo")
+    except:
+        pass
 
-    for i in range(total):
+    # =========================
+    # 2. ABRIR SELECT DE MÉTODO
+    # =========================
+    try:
+        page.locator("text=Método").locator("..").click()
+        page.wait_for_timeout(1000)
+    except:
+        pass
+
+    # =========================
+    # 3. SELECIONAR PIX DOUTORES
+    # =========================
+    try:
+        page.locator("text=Pix Doutores").last.click()
+        print("[DEBUG] Pix Doutores selecionado")
+    except Exception as e:
+        print("[ERRO] Não conseguiu selecionar Pix Doutores:", e)
+
+    # =========================
+    # 4. PREENCHER DATAS
+    # =========================
+    inputs = page.locator("input")
+    preenchidos = 0
+
+    for i in range(inputs.count()):
         try:
             loc = inputs.nth(i)
-            tipo = (loc.get_attribute("type") or "").lower()
-            valor = ""
-            try:
-                valor = loc.input_value(timeout=1000)
-            except Exception:
-                pass
+            valor = loc.input_value(timeout=1000)
 
-            if tipo in ["text", "date"] or "/" in valor:
+            if "/" in valor or loc.get_attribute("type") in ["text", "date"]:
                 if preenchidos == 0:
                     loc.fill(data_ini)
                     preenchidos += 1
-                    print(f"[DEBUG] Data inicial preenchida: {data_ini}")
                 elif preenchidos == 1:
                     loc.fill(data_fim)
-                    preenchidos += 1
-                    print(f"[DEBUG] Data final preenchida: {data_fim}")
                     break
-        except Exception:
+        except:
             continue
 
-    if preenchidos < 2:
-        raise RuntimeError("Não conseguiu preencher as datas do período.")
-
+    print(f"[DEBUG] Período: {data_ini} até {data_fim}")
 def clicar_buscar(page):
     botoes = [
         "text=Buscar",
