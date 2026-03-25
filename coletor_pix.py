@@ -99,60 +99,26 @@ def navegar_para_demonstrativo(page):
     page.wait_for_timeout(4000)
 
 def selecionar_pix_doutores(page):
-    print("[DEBUG] Tentando selecionar Pix Doutores")
+    print("[DEBUG] Selecionando Pix Doutores via digitação")
 
-    # tenta remover seleção anterior do campo Método
     try:
-        limpar = page.locator('text=Pix Doutores').locator("xpath=..").locator("text=×")
-        if limpar.count() > 0:
-            limpar.first.click(timeout=3000)
-            page.wait_for_timeout(1000)
-            print("[DEBUG] Seleção anterior de método removida")
-    except Exception:
-        pass
+        # 1. Clica no campo (input do select2)
+        campo = page.locator("input").filter(has_text="").nth(0)
+        campo.click(timeout=5000)
+        page.wait_for_timeout(1000)
 
-    # tenta clicar no campo do método
-    clicou_campo = False
-    campos = [
-        'text=Selecione um ou mais métodos',
-        'text=Selecione um ou mais metodos',
-        'text=Método',
-        'text=Metodo'
-    ]
+        # 2. Digita Pix Doutores
+        page.keyboard.type("Pix Doutores")
+        page.wait_for_timeout(1000)
 
-    for seletor in campos:
-        try:
-            if page.locator(seletor).count() > 0:
-                page.locator(seletor).last.click(timeout=5000)
-                page.wait_for_timeout(1000)
-                print(f"[DEBUG] Campo método aberto com: {seletor}")
-                clicou_campo = True
-                break
-        except Exception:
-            continue
+        # 3. Pressiona ENTER
+        page.keyboard.press("Enter")
+        page.wait_for_timeout(1000)
 
-    if not clicou_campo:
-        print("[WARN] Não consegui abrir explicitamente o campo método")
+        print("[DEBUG] Pix Doutores selecionado via digitação")
 
-    # tenta clicar na opção Pix Doutores
-    opcoes = [
-        'text=Pix Doutores',
-        'text=PIX Doutores',
-        'text=PIX DOUTORES'
-    ]
-
-    for seletor in opcoes:
-        try:
-            if page.locator(seletor).count() > 0:
-                page.locator(seletor).last.click(timeout=5000)
-                page.wait_for_timeout(1000)
-                print(f"[DEBUG] Pix Doutores selecionado com: {seletor}")
-                return
-        except Exception:
-            continue
-
-    print("[WARN] Não consegui forçar a seleção de Pix Doutores; seguindo com a tela como está")
-
+    except Exception as e:
+        print("[ERRO] Falha ao selecionar Pix Doutores:", e)
 def configurar_filtros(page):
     data_ini, data_fim = periodo_mes_atual()
 
