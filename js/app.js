@@ -88,7 +88,7 @@ function aplicarFiltros() {
   const filtrados = dadosMes.filter(l => {
     const okUnidade = state.unidadeSelecionada === "Todos" || l.unidade === state.unidadeSelecionada;
 
-    let nomeExibicao = l.doutor || (l.doutor_bruto ? `${l.doutor_bruto} (não casado)` : "-");
+    const nomeExibicao = l.doutor || (l.doutor_bruto ? `${l.doutor_bruto} (não casado)` : "-");
     const okDoutor = state.doutorSelecionado === "Todos" || nomeExibicao === state.doutorSelecionado;
 
     return okUnidade && okDoutor;
@@ -145,7 +145,6 @@ function renderCards(resumo, lancamentosFiltrados) {
   const totalAutorizado = resumo.reduce((s, r) => s + r.credito, 0);
   const totalUtilizado = resumo.reduce((s, r) => s + r.utilizado, 0);
   const saldoTotal = resumo.reduce((s, r) => s + r.saldo, 0);
-  const verdes = resumo.filter(r => r.percentual === 0).length;
   const amarelos = resumo.filter(r => r.percentual >= 50 && r.percentual < 100).length;
   const vermelhos = resumo.filter(r => r.percentual >= 100).length;
   const totalMonitorados = resumo.length;
