@@ -411,10 +411,16 @@ def main():
 
     consolidados = deduplicar(todos)
 
+    OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
+
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(consolidados, f, indent=2, ensure_ascii=False)
 
     print(f"✅ Dados coletados: {len(consolidados)}")
+    print(f"[DEBUG] Arquivo salvo em: {OUTPUT_PATH}")
 
-if __name__ == "__main__":
-    main()
+    with open(OUTPUT_PATH, "r", encoding="utf-8") as f:
+        conteudo = f.read()
+
+    print("[DEBUG] Conteúdo do pix_doutores.json:")
+    print(conteudo[:4000])
