@@ -26,9 +26,6 @@ UNIDADES = [
     # ("Sobradinho", "http://ssdocai.topesteticabucal.com.br/sistema"),
 ]
 
-# --------------------------------------------------
-# AUXILIARES
-# --------------------------------------------------
 def sem_acento(txt: str) -> str:
     return normalize("NFKD", txt).encode("ASCII", "ignore").decode("ASCII")
 
@@ -50,20 +47,39 @@ def carregar_doutores_oficiais():
     return [x["doutor"] for x in data if x.get("ativo", True)]
 
 def mapear_nome_doutor(nome_extraido: str, doutores_oficiais: list[str]) -> str:
-    bruto = nome_extraido.strip()
-    alvo = normalizar_nome(bruto)
+    alvo = normalizar_nome(nome_extraido)
 
-    # match exato normalizado
+    if not alvo:
+        return ""
+
     for oficial in doutores_oficiais:
         if normalizar_nome(oficial) == alvo:
             return oficial
 
-    # match por contenção
+    candidatos = []
+    alvo_tokens = set(alvo.split())
+
+    for oficial in doutores_oficiais:
+        norm_oficial = normalizar_nome(oficial)
+        tokens_oficial = set(norm_oficial.split())
+
+        if tokens_oficial and tokens_oficial.issubset(alvo_tokens):
+            candidatos.append((len(tokens_oficial), oficial))
+
+    if candidatos:
+        candidatos.sort(reverse=True)
+        return candidatos[0][1]
+
     candidatos = []
     for oficial in doutores_oficiais:
         norm_oficial = normalizar_nome(oficial)
-        if norm_oficial and (norm_oficial in alvo or alvo in norm_oficial):
-            candidatos.append((len(norm_oficial), oficial))
+        partes = norm_oficial.split()
+
+        if len(partes) >= 2:
+            nome = partes[0]
+            sobrenome = partes[-1]
+            if nome in alvo_tokens and sobrenome in alvo_tokens:
+                candidatos.append((len(partes), oficial))
 
     if candidatos:
         candidatos.sort(reverse=True)
@@ -97,9 +113,6 @@ def salvar_debug(page, nome):
     except Exception as e:
         print(f"[WARN] Falha ao salvar debug {nome}: {e}")
 
-# --------------------------------------------------
-# LOGIN / NAVEGAÇÃO
-# --------------------------------------------------
 def fazer_login(page):
     page.locator('input[type="text"], input[name="usuario"], input[name="login"]').first.fill(TOP_USER)
     page.locator('input[type="password"], input[name="senha"]').first.fill(TOP_PASS)
@@ -157,9 +170,6 @@ def navegar_para_demonstrativo(page):
 
     page.wait_for_timeout(4000)
 
-# --------------------------------------------------
-# FILTROS
-# --------------------------------------------------
 def garantir_pix_doutores(page):
     try:
         texto_pagina = page.content().lower()
@@ -224,55 +234,42 @@ def clicar_buscar(page):
 
     raise RuntimeError("Não encontrou o botão Buscar.")
 
-# --------------------------------------------------
-# LEITURA DA TABELA
-# --------------------------------------------------
 def extrair_nome_vermelho(col_metodo, doutores_oficiais):
-    candidatos_css = [
-        'font[color="red"]',
-        'span[style*="red"]',
-        'span[style*="#f00"]',
-        'span[style*="rgb(255"]',
-        'small[style*="red"]',
-        'b[style*="red"]',
+    """
+    Usa as linhas da célula Mét. Pag.
+    Exemplo esperado:
+      Pix Doutores
+      CIR.Dionathan Paim Pohlmann
+    Só aceita se conseguir mapear para um doutor oficial.
+    """
+    try:
+        bruto = col_metodo.inner_text().strip()
+    except Exception:
+        return ""
+
+    linhas = [x.strip() for x in bruto.splitlines() if x.strip()]
+
+    linhas_sem_pix = [
+        linha for linha in linhas
+        if "pix doutores" not in linha.lower()
     ]
 
-    textos = []
-
-    for css in candidatos_css:
-        try:
-            itens = col_metodo.locator(css)
-            for i in range(itens.count()):
-                t = itens.nth(i).inner_text().strip()
-                if t:
-                    textos.append(t)
-        except:
-            continue
-
-    # fallback
-    if not textos:
-        try:
-            bruto = col_metodo.inner_text().strip()
-            linhas = [x.strip() for x in bruto.splitlines() if x.strip()]
-            for linha in linhas:
-                if "pix doutores" not in linha.lower():
-                    textos.append(linha)
-        except:
-            pass
-
-    for t in textos:
-        nome_limpo = re.sub(r"^(CIR\.?|DRA\.?|DR\.?)\s*", "", t, flags=re.I)
+    for linha in linhas_sem_pix:
+        nome_limpo = re.sub(r"^(CIR\.?|DRA\.?|DR\.?)\s*", "", linha, flags=re.I)
         nome_limpo = re.sub(r"\s+", " ", nome_limpo).strip()
 
-        nome_mapeado = mapear_nome_doutor(nome_limpo, doutores_oficiais)
+        invalido = [
+            "dinheiro", "saldo total", "maquina", "máquina",
+            "cartao", "cartão", "pix", "debito", "débito",
+            "credito", "crédito", "boleto", "transferencia",
+            "transferência", "deposito", "depósito"
+        ]
+        if any(p in nome_limpo.lower() for p in invalido):
+            continue
 
-        # 🔥 prioridade: usar nome oficial se encontrar
+        nome_mapeado = mapear_nome_doutor(nome_limpo, doutores_oficiais)
         if nome_mapeado:
             return nome_mapeado
-
-        # 🔥 fallback: usa o nome limpo mesmo
-        if len(nome_limpo) > 3:
-            return nome_limpo
 
     return ""
 
@@ -304,11 +301,9 @@ def ler_tabela_resultado(page, unidade, doutores_oficiais):
             origem_txt = col_origem.inner_text().strip()
             valor_txt = col_valor.inner_text().strip()
 
-            # Só considera Pix Doutores
             if "pix doutores" not in metodo_txt.lower():
                 continue
 
-            # Só considera se houver doutor válido em vermelho
             doutor = extrair_nome_vermelho(col_metodo, doutores_oficiais)
             if not doutor:
                 print(f"[DEBUG] Linha ignorada sem doutor válido: {metodo_txt}")
@@ -359,9 +354,6 @@ def deduplicar(registros):
     saida.sort(key=lambda x: (x["data"], x["unidade"], x["doutor"], x["valor"]))
     return saida
 
-# --------------------------------------------------
-# FLUXO POR UNIDADE
-# --------------------------------------------------
 def coletar_unidade(page, nome_unidade, url, doutores_oficiais):
     print(f"[INFO] Acessando {nome_unidade}")
     page.goto(url, wait_until="domcontentloaded", timeout=60000)
@@ -384,9 +376,6 @@ def coletar_unidade(page, nome_unidade, url, doutores_oficiais):
     print(f"[INFO] {nome_unidade}: {len(dados)} registros válidos")
     return dados
 
-# --------------------------------------------------
-# MAIN
-# --------------------------------------------------
 def main():
     if not TOP_USER or not TOP_PASS:
         raise RuntimeError("TOP_USER e TOP_PASS não definidos nos Secrets.")
@@ -422,3 +411,6 @@ def main():
 
     print("[DEBUG] Conteúdo do pix_doutores.json:")
     print(conteudo[:4000])
+
+if __name__ == "__main__":
+    main()
