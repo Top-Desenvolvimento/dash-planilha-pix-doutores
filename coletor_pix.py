@@ -13,6 +13,14 @@ OUTPUT_PATH = DATA_DIR / "pix_doutores.json"
 
 UNIDADES = [
     ("Caxias", "http://caxias.topesteticabucal.com.br/sistema"),
+    # Depois que validar, adicione as demais:
+    # ("Farroupilha", "http://farroupilha.topesteticabucal.com.br/sistema"),
+    # ("Bento", "http://bento.topesteticabucal.com.br/sistema"),
+    # ("Encantado", "http://encantado.topesteticabucal.com.br/sistema"),
+    # ("Soledade", "http://soledade.topesteticabucal.com.br/sistema"),
+    # ("Garibaldi", "http://garibaldi.topesteticabucal.com.br/sistema"),
+    # ("Veranópolis", "http://veranopolis.topesteticabucal.com.br/sistema"),
+    # ("Sobradinho", "http://ssdocai.topesteticabucal.com.br/sistema"),
 ]
 
 def salvar_debug(page, nome):
@@ -98,38 +106,11 @@ def navegar_para_demonstrativo(page):
 
     page.wait_for_timeout(4000)
 
-def selecionar_pix_doutores(page):
-    print("[DEBUG] Selecionando Pix Doutores (modo robusto)")
-
-    try:
-        # tenta clicar no campo de método pelo placeholder
-        campo = page.locator("input[placeholder*='método'], input[placeholder*='metodo']").first
-
-        if campo.count() == 0:
-            # fallback: pega qualquer input visível no meio da tela
-            campo = page.locator("input").nth(2)
-
-        campo.click(timeout=5000)
-        page.wait_for_timeout(1000)
-
-        campo.fill("Pix Doutores")
-        page.wait_for_timeout(1000)
-
-        page.keyboard.press("Enter")
-        page.wait_for_timeout(1500)
-
-        print("[DEBUG] Pix Doutores selecionado com sucesso")
-
-    except Exception as e:
-        print("[ERRO] Não conseguiu selecionar Pix Doutores:", e) 
-        
-def configurar_filtros(page):
+def preencher_periodo(page):
     data_ini, data_fim = periodo_mes_atual()
 
-    selecionar_pix_doutores(page)
-
-    inputs = page.locator("input")
     preenchidos = 0
+    inputs = page.locator("input")
     total = inputs.count()
     print(f"[DEBUG] Quantidade de inputs: {total}")
 
@@ -178,6 +159,24 @@ def clicar_buscar(page):
 
     raise RuntimeError("Não encontrou o botão Buscar.")
 
+def classificar_metodo(metodo_raw: str) -> str:
+    txt = (metodo_raw or "").lower()
+
+    if "pix doutores" in txt:
+        return "PIX Doutores"
+    if "pix" in txt:
+        return "PIX"
+    if "cart" in txt or "credito" in txt or "crédito" in txt or "debito" in txt or "débito" in txt:
+        return "Cartão"
+    if "dinheiro" in txt:
+        return "Dinheiro"
+    if "boleto" in txt:
+        return "Boleto"
+    if "transfer" in txt or "depósito" in txt or "deposito" in txt:
+        return "Transferência/Depósito"
+
+    return "Outros"
+
 def ler_tabela_resultado(page, unidade):
     dados = []
 
@@ -215,6 +214,7 @@ def ler_tabela_resultado(page, unidade):
                 "data": data_obj.strftime("%Y-%m-%d"),
                 "unidade": unidade,
                 "metodo_raw": metodo_txt,
+                "metodo_categoria": classificar_metodo(metodo_txt),
                 "origem": origem_txt,
                 "valor": valor,
                 "mes": data_obj.month,
@@ -258,7 +258,7 @@ def coletar_unidade(page, nome_unidade, url):
     navegar_para_demonstrativo(page)
     salvar_debug(page, f"{nome_unidade}_03_demonstrativo")
 
-    configurar_filtros(page)
+    preencher_periodo(page)
     clicar_buscar(page)
     salvar_debug(page, f"{nome_unidade}_04_resultado")
 
