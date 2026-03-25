@@ -103,14 +103,14 @@ function extrairDoutorDoMetodo(metodoRaw, creditos) {
 
 function transformarLancamentosBrutos(lancamentos, creditos) {
   return lancamentos.map(l => {
-    const metodoCategoria = l.metodo_categoria || classificarMetodo(l.metodo_raw || "");
-    const doutor = metodoCategoria === "PIX Doutores"
+    const metodo = l.metodo_categoria || classificarMetodo(l.metodo_raw || "");
+    const doutor = metodo === "PIX Doutores"
       ? extrairDoutorDoMetodo(l.metodo_raw, creditos)
       : null;
 
     return {
       ...l,
-      metodo: metodoCategoria,
+      metodo,
       doutor
     };
   });
@@ -196,7 +196,6 @@ function registrarEventos() {
 
     document.getElementById("filtroUnidade").value = "Todos";
     document.getElementById("filtroDoutor").value = "Todos";
-
     const fm = document.getElementById("filtroMetodo");
     if (fm) fm.value = "Todos";
 
@@ -217,10 +216,7 @@ function aplicarFiltros() {
   const filtrados = dadosMes.filter(l => {
     const okUnidade = state.unidadeSelecionada === "Todos" || l.unidade === state.unidadeSelecionada;
     const okMetodo = state.metodoSelecionado === "Todos" || l.metodo === state.metodoSelecionado;
-    const okDoutor =
-      state.doutorSelecionado === "Todos" ||
-      l.doutor === state.doutorSelecionado;
-
+    const okDoutor = state.doutorSelecionado === "Todos" || l.doutor === state.doutorSelecionado;
     return okUnidade && okMetodo && okDoutor;
   });
 
