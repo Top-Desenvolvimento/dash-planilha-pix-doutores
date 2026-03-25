@@ -99,26 +99,30 @@ def navegar_para_demonstrativo(page):
     page.wait_for_timeout(4000)
 
 def selecionar_pix_doutores(page):
-    print("[DEBUG] Selecionando Pix Doutores via digitação")
+    print("[DEBUG] Selecionando Pix Doutores (modo robusto)")
 
     try:
-        # 1. Clica no campo (input do select2)
-        campo = page.locator("input").filter(has_text="").nth(0)
+        # tenta clicar no campo de método pelo placeholder
+        campo = page.locator("input[placeholder*='método'], input[placeholder*='metodo']").first
+
+        if campo.count() == 0:
+            # fallback: pega qualquer input visível no meio da tela
+            campo = page.locator("input").nth(2)
+
         campo.click(timeout=5000)
         page.wait_for_timeout(1000)
 
-        # 2. Digita Pix Doutores
-        page.keyboard.type("Pix Doutores")
+        campo.fill("Pix Doutores")
         page.wait_for_timeout(1000)
 
-        # 3. Pressiona ENTER
         page.keyboard.press("Enter")
-        page.wait_for_timeout(1000)
+        page.wait_for_timeout(1500)
 
-        print("[DEBUG] Pix Doutores selecionado via digitação")
+        print("[DEBUG] Pix Doutores selecionado com sucesso")
 
     except Exception as e:
-        print("[ERRO] Falha ao selecionar Pix Doutores:", e)
+        print("[ERRO] Não conseguiu selecionar Pix Doutores:", e) 
+        
 def configurar_filtros(page):
     data_ini, data_fim = periodo_mes_atual()
 
