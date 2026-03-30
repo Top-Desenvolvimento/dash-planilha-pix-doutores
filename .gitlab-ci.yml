@@ -6,20 +6,16 @@ stages:
 
 before_script:
   - python --version
-  # Instala dependências se existir requirements.txt
-  - pip install -r requirements.txt || true
+  - pip install --upgrade pip
+  - pip install pandas openpyxl playwright
+  - python -m playwright install chromium
 
-build:
+build_dashboard:
   stage: build
   script:
-    # Executa scripts de geração de dados
-    - python generate_data.py || true
-    - python coletor_pix.py || true
-
-    # Cria pasta que o GitLab Pages publica
+    - python scripts/coletor_pix.py
+    - python generate_data.py
     - mkdir -p public
-
-    # Copia arquivos do dashboard
     - cp index.html public/
     - cp -r css public/ || true
     - cp -r js public/ || true
@@ -31,9 +27,12 @@ build:
 pages:
   stage: deploy
   script:
-    - echo "Deploy GitLab Pages"
+    - echo "Publicando dashboard"
   artifacts:
     paths:
+      - public
+  only:
+    - main
       - public
   only:
     - main
