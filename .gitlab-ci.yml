@@ -1,0 +1,39 @@
+image: python:3.11
+
+stages:
+  - build
+  - deploy
+
+before_script:
+  - python --version
+  # Instala dependências se existir requirements.txt
+  - pip install -r requirements.txt || true
+
+build:
+  stage: build
+  script:
+    # Executa scripts de geração de dados
+    - python generate_data.py || true
+    - python coletor_pix.py || true
+
+    # Cria pasta que o GitLab Pages publica
+    - mkdir -p public
+
+    # Copia arquivos do dashboard
+    - cp index.html public/
+    - cp -r css public/ || true
+    - cp -r js public/ || true
+    - cp -r data public/ || true
+  artifacts:
+    paths:
+      - public
+
+pages:
+  stage: deploy
+  script:
+    - echo "Deploy GitLab Pages"
+  artifacts:
+    paths:
+      - public
+  only:
+    - main
