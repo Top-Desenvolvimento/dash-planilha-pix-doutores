@@ -44,7 +44,7 @@ def salvar_debug(page, nome):
         with open(f"debug_{nome}.html", "w", encoding="utf-8") as f:
             f.write(page.content())
         page.screenshot(path=f"debug_{nome}.png", full_page=True)
-        print(f"[DEBUG] Salvos: debug_{nome}.html e debug_{nome}.png")
+        print(f"[DEBUG] Arquivos salvos: debug_{nome}.html e debug_{nome}.png")
     except Exception as e:
         print(f"[WARN] Falha ao salvar debug {nome}: {e}")
 
@@ -77,25 +77,19 @@ def carregar_doutores_credito():
 
 
 def mapear_nome_doutor(nome_extraido: str, creditos: list[dict]) -> str | None:
-    """
-    Recebe o nome bruto vindo da tela e tenta casar com o nome oficial
-    do arquivo doutores_credito.json.
-    """
     alvo = normalizar_nome(nome_extraido)
     if not alvo:
         return None
 
     nomes_oficiais = [c["doutor"] for c in creditos if c.get("ativo", True)]
 
-    # 1) Match exato normalizado
     for oficial in nomes_oficiais:
         if normalizar_nome(oficial) == alvo:
             return oficial
 
     alvo_tokens = set(alvo.split())
-
-    # 2) Todos os tokens do oficial contidos no nome extraído
     candidatos = []
+
     for oficial in nomes_oficiais:
         norm_oficial = normalizar_nome(oficial)
         tokens_oficial = set(norm_oficial.split())
@@ -106,7 +100,6 @@ def mapear_nome_doutor(nome_extraido: str, creditos: list[dict]) -> str | None:
         candidatos.sort(reverse=True)
         return candidatos[0][1]
 
-    # 3) Primeiro e último nome batendo
     candidatos = []
     for oficial in nomes_oficiais:
         norm_oficial = normalizar_nome(oficial)
@@ -144,9 +137,6 @@ def classificar_metodo(metodo_raw: str) -> str:
 
 
 def extrair_nome_doutor_do_metodo(metodo_raw: str, creditos: list[dict]) -> tuple[str | None, str | None]:
-    """
-    Procura dentro do texto do método a linha que contém o nome do doutor.
-    """
     if not metodo_raw:
         return None, None
 
@@ -197,7 +187,7 @@ def fazer_login(page):
         try:
             if page.locator(seletor).first.count() > 0:
                 page.locator(seletor).first.click(timeout=5000)
-                print(f"[DEBUG] Clique no login com seletor: {seletor}")
+                print(f"[DEBUG] Login clicado com seletor: {seletor}")
                 clicou = True
                 break
         except Exception:
@@ -216,10 +206,10 @@ def navegar_para_demonstrativo(page):
     page.wait_for_timeout(2000)
 
     opcoes = [
-        "text=Demonstrativo de ",
-        "text=Demonstrativo de s",
-        "a:has-text('Demonstrativo de ')",
-        "a:has-text('Demonstrativo de s')"
+        "text=Demonstrativo de Resultado",
+        "text=Demonstrativo de Resultados",
+        "a:has-text('Demonstrativo de Resultado')",
+        "a:has-text('Demonstrativo de Resultados')"
     ]
 
     abriu = False
@@ -227,16 +217,17 @@ def navegar_para_demonstrativo(page):
         try:
             if page.locator(seletor).first.count() > 0:
                 page.locator(seletor).first.click(timeout=10000)
-                print(f"[DEBUG] Clique no demonstrativo com: {seletor}")
+                print(f"[DEBUG] Clique em demonstrativo com: {seletor}")
                 abriu = True
                 break
         except Exception:
             continue
 
     if not abriu:
-        raise RuntimeError("Não encontrou 'Demonstrativo de '.")
+        raise RuntimeError("Não encontrou 'Demonstrativo de Resultado'.")
 
     page.wait_for_timeout(4000)
+    print(f"[DEBUG] URL no demonstrativo: {page.url}")
 
 
 def limpar_multiselect(page, rotulo):
@@ -277,7 +268,7 @@ def selecionar_pix_doutores(page):
             continue
 
     if linha_metodo is None:
-        print("[WARN] Não encontrei claramente a linha do campo Método. Vou seguir mesmo assim.")
+        print("[WARN] Não encontrei claramente a linha do campo Método.")
         return
 
     clicou = False
@@ -299,7 +290,7 @@ def selecionar_pix_doutores(page):
             continue
 
     if not clicou:
-        print("[WARN] Não consegui abrir o campo Método. Vou seguir mesmo assim.")
+        print("[WARN] Não consegui abrir o campo Método.")
         return
 
     digitou = False
@@ -334,7 +325,7 @@ def selecionar_pix_doutores(page):
         print("[WARN] Não consegui digitar Pix Doutores no campo Método.")
         return
 
-        page.wait_for_timeout(1500)
+    page.wait_for_timeout(1500)
 
     try:
         html_linha = linha_metodo.inner_text().lower()
@@ -346,7 +337,6 @@ def selecionar_pix_doutores(page):
             print("[WARN] Não consegui confirmar visualmente a seleção de Pix Doutores")
     except Exception as e:
         print(f"[WARN] Falha ao validar campo Método: {e}")
-        pass
 
 
 def preencher_periodo(page):
@@ -407,6 +397,29 @@ def preencher_periodo(page):
         raise RuntimeError(f"Período não confirmado. Inicial={val_ini} Final={val_fim}")
 
 
+def aguardar_resultado(page):
+    print("[DEBUG] Aguardando resultado da busca...")
+    page.wait_for_timeout(3000)
+
+    possiveis = [
+        "table",
+        "text=Data",
+        "text=Origem",
+        "text=Valor",
+        "text=Saldo"
+    ]
+
+    for seletor in possiveis:
+        try:
+            if page.locator(seletor).count() > 0:
+                print(f"[DEBUG] Resultado detectado com seletor: {seletor}")
+                return
+        except Exception:
+            continue
+
+    print("[WARN] Não consegui confirmar visualmente o carregamento do resultado.")
+
+
 def clicar_buscar(page):
     print("[DEBUG] Clicando em Buscar")
     botoes = [
@@ -431,7 +444,8 @@ def clicar_buscar(page):
     page.wait_for_timeout(2000)
     aguardar_resultado(page)
     print("[DEBUG] Busca executada")
-    
+
+
 def ler_tabela_resultado(page, unidade, creditos):
     dados = []
 
@@ -442,7 +456,6 @@ def ler_tabela_resultado(page, unidade, creditos):
     tabela_escolhida = None
     maior_qtd_linhas = 0
 
-    # Descobre qual tabela parece ser a de resultados
     for t in range(total_tabelas):
         try:
             tabela = tabelas.nth(t)
@@ -454,7 +467,6 @@ def ler_tabela_resultado(page, unidade, creditos):
             print(f"[DEBUG] Tabela {t}: {qtd_linhas} linhas")
             print(f"[DEBUG] Prévia tabela {t}: {texto_tabela[:300]}")
 
-            # Heurística: tabela com mais linhas e que tenha algo com data/valor
             if qtd_linhas > maior_qtd_linhas and (
                 "valor" in texto_tabela or
                 "data" in texto_tabela or
@@ -541,32 +553,7 @@ def ler_tabela_resultado(page, unidade, creditos):
 
     print(f"[DEBUG] Total de registros PIX Doutores extraídos: {len(dados)}")
     return dados
-    
-def aguardar_resultado(page):
-    """
-    Aguarda algum sinal de que a tela de resultados foi carregada.
-    """
-    print("[DEBUG] Aguardando resultado da busca...")
 
-    page.wait_for_timeout(3000)
-
-    possiveis = [
-        "table",
-        "text=Data",
-        "text=Origem",
-        "text=Valor",
-        "text=Saldo"
-    ]
-
-    for seletor in possiveis:
-        try:
-            if page.locator(seletor).count() > 0:
-                print(f"[DEBUG] Resultado detectado com seletor: {seletor}")
-                return
-        except Exception:
-            continue
-
-    print("[WARN] Não consegui confirmar visualmente o carregamento do resultado.")
 
 def deduplicar(registros):
     vistos = set()
@@ -589,10 +576,6 @@ def deduplicar(registros):
 
 
 def montar_resumo_por_doutor(registros, creditos):
-    """
-    Usa o crédito do doutores_credito.json como saldo atual/base
-    e desconta o total de PIX Doutores do mês.
-    """
     creditos_ativos = [c for c in creditos if c.get("ativo", True)]
 
     totais_pix = {}
@@ -658,7 +641,7 @@ def coletar_unidade(page, nome_unidade, url, creditos):
 
 def main():
     if not TOP_USER or not TOP_PASS:
-        raise RuntimeError("TOP_USER e TOP_PASS não definidos nos Secrets/Variables.")
+        raise RuntimeError("TOP_USER e TOP_PASS não definidos nas variáveis do GitLab.")
 
     creditos = carregar_doutores_credito()
     if not creditos:
