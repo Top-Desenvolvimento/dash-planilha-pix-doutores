@@ -5,37 +5,27 @@ stages:
   - deploy
 
 before_script:
-  - python --version
-  - pip install --upgrade pip
-  - pip install playwright pandas openpyxl
+  - pip install playwright
   - python -m playwright install chromium
 
-build_dashboard:
+build:
   stage: build
   script:
     - python bot/coletor_pix.py
     - python generate_data.py
-    - echo "---- LISTANDO DATA ----"
-    - ls -la data || true
-    - echo "---- CONTEUDO PIX_DOUTORES ----"
-    - cat data/pix_doutores.json || true
-    - echo "---- CONTEUDO DASHBOARD_DATA ----"
-    - cat data/dashboard_data.json || true
     - mkdir -p public
+    - cp -r data public/
     - cp index.html public/
     - cp -r css public/ || true
     - cp -r js public/ || true
-    - cp -r data public/ || true
   artifacts:
     paths:
       - public
-      - debug_*.html
-      - debug_*.png
 
 pages:
   stage: deploy
   script:
-    - echo "Publicando dashboard"
+    - echo deploy
   artifacts:
     paths:
       - public
