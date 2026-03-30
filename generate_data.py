@@ -1,49 +1,33 @@
 import json
 from pathlib import Path
 
-BASE_DIR = Path(__file__).resolve().parent
-DATA_DIR = BASE_DIR / "data"
+DATA_DIR = Path("data")
 
-ARQUIVO_PIX = DATA_DIR / "pix_doutores.json"
-ARQUIVO_CREDITOS = DATA_DIR / "doutores_credito.json"
-ARQUIVO_SAIDA = DATA_DIR / "dashboard_data.json"
+pix = json.load(open(DATA_DIR / "pix_doutores.json", encoding="utf-8"))
+creditos = json.load(open(DATA_DIR / "doutores_credito.json", encoding="utf-8"))
 
+totais = {}
 
-def carregar_json(caminho: Path):
-    if not caminho.exists():
-        return None
+for r in pix:
+    doutor = r["doutor"]
+    if not doutor:
+        continue
 
-    with open(caminho, "r", encoding="utf-8") as f:
-        return json.load(f)
+    totais[doutor] = totais.get(doutor, 0) + r["valor"]
 
+resultado = {}
 
-def main():
-    pix = carregar_json(ARQUIVO_PIX)
-    creditos = carregar_json(ARQUIVO_CREDITOS)
+for c in creditos:
+    doutor = c["doutor"]
+    credito = c["credito"]
+    total = totais.get(doutor, 0)
 
-    if pix is None:
-        raise FileNotFoundError(f"Arquivo não encontrado: {ARQUIVO_PIX}")
-
-    if creditos is None:
-        raise FileNotFoundError(f"Arquivo não encontrado: {ARQUIVO_CREDITOS}")
-
-    ativos = [d for d in creditos if d.get("ativo", True)]
-
-    dashboard_data = {
-        "periodo": pix.get("periodo", {}),
-        "resumo": pix.get("resumo", {}),
-        "totais_pix_por_doutor": pix.get("totais_pix_por_doutor", {}),
-        "saldos_ajustados": pix.get("saldos_ajustados", {}),
-        "nao_mapeados": pix.get("nao_mapeados", []),
-        "lancamentos": pix.get("lancamentos", []),
-        "doutores_ativos": ativos
+    resultado[doutor] = {
+        "credito": credito,
+        "pix_mes": total,
+        "saldo": credito - total
     }
 
-    with open(ARQUIVO_SAIDA, "w", encoding="utf-8") as f:
-        json.dump(dashboard_data, f, ensure_ascii=False, indent=2)
+json.dump(resultado, open(DATA_DIR / "dashboard_data.json", "w", encoding="utf-8"), indent=2, ensure_ascii=False)
 
-    print(f"✅ Arquivo gerado com sucesso: {ARQUIVO_SAIDA}")
-
-
-if __name__ == "__main__":
-    main()
+print("✅ Dashboard gerado")
