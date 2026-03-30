@@ -1,67 +1,49 @@
-import pandas as pd
 import json
-from datetime import datetime
+from pathlib import Path
 
-# =========================
-# CONFIG
-# =========================
+BASE_DIR = Path(__file__).resolve().parent
+DATA_DIR = BASE_DIR / "data"
 
-ARQUIVO_EXCEL = "entrada.xlsx"
-ABA = 0  # ou nome da aba
+ARQUIVO_PIX = DATA_DIR / "pix_doutores.json"
+ARQUIVO_CREDITOS = DATA_DIR / "doutores_credito.json"
+ARQUIVO_SAIDA = DATA_DIR / "dashboard_data.json"
 
-# =========================
-# LEITURA
-# =========================
 
-df = pd.read_excel(ARQUIVO_EXCEL, sheet_name=ABA)
+def carregar_json(caminho: Path):
+    if not caminho.exists():
+        return None
 
-# Ajuste os nomes conforme seu Excel
-df.columns = [c.strip() for c in df.columns]
+    with open(caminho, "r", encoding="utf-8") as f:
+        return json.load(f)
 
-# =========================
-# TRATAMENTO
-# =========================
 
-def extrair_doutor(texto):
-    if pd.isna(texto):
-        return "Desconhecido"
+def main():
+    pix = carregar_json(ARQUIVO_PIX)
+    creditos = carregar_json(ARQUIVO_CREDITOS)
 
-    texto = str(texto)
+    if pix is None:
+        raise FileNotFoundError(f"Arquivo não encontrado: {ARQUIVO_PIX}")
 
-    # Ajuste aqui conforme padrão real
-    if "Dr." in texto:
-        return texto.strip()
+    if creditos is None:
+        raise FileNotFoundError(f"Arquivo não encontrado: {ARQUIVO_CREDITOS}")
 
-    return texto.strip()
+    ativos = [d for d in creditos if d.get("ativo", True)]
 
-dados = []
+    dashboard_data = {
+        "periodo": pix.get("periodo", {}),
+        "resumo": pix.get("resumo", {}),
+        "totais_pix_por_doutor": pix.get("totais_pix_por_doutor", {}),
+        "saldos_ajustados": pix.get("saldos_ajustados", {}),
+        "nao_mapeados": pix.get("nao_mapeados", []),
+        "lancamentos": pix.get("lancamentos", []),
+        "doutores_ativos": ativos
+    }
 
-for _, row in df.iterrows():
-    try:
-        data = pd.to_datetime(row["Data"])
-        valor = float(row["Valor"])
+    with open(ARQUIVO_SAIDA, "w", encoding="utf-8") as f:
+        json.dump(dashboard_data, f, ensure_ascii=False, indent=2)
 
-        doutor = extrair_doutor(row["Mét. Pag."])
+    print(f"✅ Arquivo gerado com sucesso: {ARQUIVO_SAIDA}")
 
-        dados.append({
-            "data": data.strftime("%Y-%m-%d"),
-            "unidade": row.get("Unidade", "Não informado"),
-            "doutor": doutor,
-            "metodo": row.get("Mét. Pag.", ""),
-            "origem": row.get("Origem", ""),
-            "valor": valor,
-            "mes": data.month,
-            "ano": data.year
-        })
 
-    except Exception as e:
-        print("Erro na linha:", e)
-
-# =========================
-# SALVAR JSON
-# =========================
-
-with open("data/pix_doutores.json", "w", encoding="utf-8") as f:
-    json.dump(dados, f, ensure_ascii=False, indent=2)
-
-print("✅ JSON gerado com sucesso!")
+if __name__ == "__main__":
+    main()
