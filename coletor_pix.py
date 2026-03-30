@@ -216,10 +216,10 @@ def navegar_para_demonstrativo(page):
     page.wait_for_timeout(2000)
 
     opcoes = [
-        "text=Demonstrativo de Resultado",
-        "text=Demonstrativo de Resultados",
-        "a:has-text('Demonstrativo de Resultado')",
-        "a:has-text('Demonstrativo de Resultados')"
+        "text=Demonstrativo de ",
+        "text=Demonstrativo de s",
+        "a:has-text('Demonstrativo de ')",
+        "a:has-text('Demonstrativo de s')"
     ]
 
     abriu = False
@@ -234,7 +234,7 @@ def navegar_para_demonstrativo(page):
             continue
 
     if not abriu:
-        raise RuntimeError("Não encontrou 'Demonstrativo de Resultado'.")
+        raise RuntimeError("Não encontrou 'Demonstrativo de '.")
 
     page.wait_for_timeout(4000)
 
@@ -334,13 +334,18 @@ def selecionar_pix_doutores(page):
         print("[WARN] Não consegui digitar Pix Doutores no campo Método.")
         return
 
+        page.wait_for_timeout(1500)
+
     try:
         html_linha = linha_metodo.inner_text().lower()
+        print(f"[DEBUG] Conteúdo final do campo Método: {html_linha}")
+
         if "pix doutores" in html_linha:
             print("[DEBUG] Método Pix Doutores selecionado com sucesso")
         else:
             print("[WARN] Não consegui confirmar visualmente a seleção de Pix Doutores")
-    except Exception:
+    except Exception as e:
+        print(f"[WARN] Falha ao validar campo Método: {e}")
         pass
 
 
@@ -423,29 +428,79 @@ def clicar_buscar(page):
     if not clicou:
         raise RuntimeError("Não encontrei o botão Buscar.")
 
-    page.wait_for_timeout(5000)
+    page.wait_for_timeout(2000)
+    aguardar_resultado(page)
     print("[DEBUG] Busca executada")
-
-
+    
 def ler_tabela_resultado(page, unidade, creditos):
     dados = []
 
-    linhas = page.locator("table tr")
+    tabelas = page.locator("table")
+    total_tabelas = tabelas.count()
+    print(f"[DEBUG] Total de tabelas encontradas: {total_tabelas}")
+
+    tabela_escolhida = None
+    maior_qtd_linhas = 0
+
+    # Descobre qual tabela parece ser a de resultados
+    for t in range(total_tabelas):
+        try:
+            tabela = tabelas.nth(t)
+            linhas = tabela.locator("tr")
+            qtd_linhas = linhas.count()
+
+            texto_tabela = tabela.inner_text(timeout=3000).strip().lower()[:1500]
+
+            print(f"[DEBUG] Tabela {t}: {qtd_linhas} linhas")
+            print(f"[DEBUG] Prévia tabela {t}: {texto_tabela[:300]}")
+
+            # Heurística: tabela com mais linhas e que tenha algo com data/valor
+            if qtd_linhas > maior_qtd_linhas and (
+                "valor" in texto_tabela or
+                "data" in texto_tabela or
+                "/" in texto_tabela
+            ):
+                maior_qtd_linhas = qtd_linhas
+                tabela_escolhida = tabela
+
+        except Exception as e:
+            print(f"[WARN] Falha ao inspecionar tabela {t}: {e}")
+
+    if tabela_escolhida is None:
+        print("[WARN] Nenhuma tabela compatível encontrada.")
+        salvar_debug(page, f"{unidade}_sem_tabela_resultado")
+        return dados
+
+    linhas = tabela_escolhida.locator("tr")
     total_linhas = linhas.count()
-    print(f"[DEBUG] Linhas encontradas: {total_linhas}")
+    print(f"[DEBUG] Linhas encontradas na tabela escolhida: {total_linhas}")
 
     for i in range(total_linhas):
         try:
             linha = linhas.nth(i)
+            texto_linha = linha.inner_text().strip()
             cols = linha.locator("td")
+
+            if i < 10:
+                print(f"[DEBUG] Linha {i} texto bruto: {texto_linha}")
 
             if cols.count() < 4:
                 continue
 
-            data_txt = cols.nth(0).inner_text().strip()
-            metodo_txt = cols.nth(1).inner_text().strip()
-            origem_txt = cols.nth(2).inner_text().strip()
-            valor_txt = cols.nth(3).inner_text().strip()
+            valores_cols = []
+            for c in range(cols.count()):
+                try:
+                    valores_cols.append(cols.nth(c).inner_text().strip())
+                except Exception:
+                    valores_cols.append("")
+
+            if i < 10:
+                print(f"[DEBUG] Linha {i} colunas: {valores_cols}")
+
+            data_txt = valores_cols[0] if len(valores_cols) > 0 else ""
+            metodo_txt = valores_cols[1] if len(valores_cols) > 1 else ""
+            origem_txt = valores_cols[2] if len(valores_cols) > 2 else ""
+            valor_txt = valores_cols[3] if len(valores_cols) > 3 else ""
 
             if "/" not in data_txt:
                 continue
@@ -458,6 +513,7 @@ def ler_tabela_resultado(page, unidade, creditos):
             try:
                 valor_num = parse_valor_brl(valor_txt)
             except Exception:
+                print(f"[WARN] Não foi possível converter valor: {valor_txt}")
                 continue
 
             if "pix doutores" not in metodo_txt.lower():
@@ -478,11 +534,39 @@ def ler_tabela_resultado(page, unidade, creditos):
                 "doutor_bruto": doutor_bruto,
                 "casado_credito": bool(doutor_oficial)
             })
+
+        except Exception as e:
+            print(f"[WARN] Erro ao ler linha {i}: {e}")
+            continue
+
+    print(f"[DEBUG] Total de registros PIX Doutores extraídos: {len(dados)}")
+    return dados
+    
+def aguardar_resultado(page):
+    """
+    Aguarda algum sinal de que a tela de resultados foi carregada.
+    """
+    print("[DEBUG] Aguardando resultado da busca...")
+
+    page.wait_for_timeout(3000)
+
+    possiveis = [
+        "table",
+        "text=Data",
+        "text=Origem",
+        "text=Valor",
+        "text=Saldo"
+    ]
+
+    for seletor in possiveis:
+        try:
+            if page.locator(seletor).count() > 0:
+                print(f"[DEBUG] Resultado detectado com seletor: {seletor}")
+                return
         except Exception:
             continue
 
-    return dados
-
+    print("[WARN] Não consegui confirmar visualmente o carregamento do resultado.")
 
 def deduplicar(registros):
     vistos = set()
