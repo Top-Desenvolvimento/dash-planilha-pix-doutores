@@ -41,6 +41,3 @@ pages:
       - public
   only:
     - main
-      - public
-  only:
-    - main
