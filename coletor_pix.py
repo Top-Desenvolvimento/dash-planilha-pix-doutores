@@ -2,7 +2,8 @@ from playwright.sync_api import sync_playwright
 import json
 import os
 import re
-from datetime import datetime
+from datetime import datetime, date
+from calendar import monthrange
 from pathlib import Path
 from unicodedata import normalize
 
@@ -11,6 +12,7 @@ TOP_PASS = os.getenv("TOP_PASS")
 
 BASE_DIR = Path(__file__).resolve().parents[1]
 DATA_DIR = BASE_DIR / "data"
+
 CREDITOS_PATH = DATA_DIR / "doutores_credito.json"
 OUTPUT_PATH = DATA_DIR / "pix_doutores.json"
 
@@ -26,9 +28,15 @@ UNIDADES = [
     # ("Sobradinho", "http://ssdocai.topesteticabucal.com.br/sistema"),
 ]
 
-# período fixo solicitado
-DATA_INICIAL = "01/03/2026"
-DATA_FINAL = "31/03/2026"
+
+def obter_periodo_mes_atual():
+    hoje = date.today()
+    primeiro = hoje.replace(day=1)
+    ultimo = hoje.replace(day=monthrange(hoje.year, hoje.month)[1])
+    return primeiro.strftime("%d/%m/%Y"), ultimo.strftime("%d/%m/%Y")
+
+
+DATA_INICIAL, DATA_FINAL = obter_periodo_mes_atual()
 
 
 def salvar_debug(page, nome):
@@ -42,7 +50,7 @@ def salvar_debug(page, nome):
 
 
 def parse_valor_brl(txt: str) -> float:
-    txt = txt.replace("R$", "").replace(".", "").replace(",", ".")
+    txt = str(txt).replace("R$", "").replace(".", "").replace(",", ".")
     txt = txt.replace("C", "").replace("D", "").strip()
     return float(txt)
 
@@ -69,19 +77,25 @@ def carregar_doutores_credito():
 
 
 def mapear_nome_doutor(nome_extraido: str, creditos: list[dict]) -> str | None:
+    """
+    Recebe o nome bruto vindo da tela e tenta casar com o nome oficial
+    do arquivo doutores_credito.json.
+    """
     alvo = normalizar_nome(nome_extraido)
     if not alvo:
         return None
 
     nomes_oficiais = [c["doutor"] for c in creditos if c.get("ativo", True)]
 
+    # 1) Match exato normalizado
     for oficial in nomes_oficiais:
         if normalizar_nome(oficial) == alvo:
             return oficial
 
     alvo_tokens = set(alvo.split())
-    candidatos = []
 
+    # 2) Todos os tokens do oficial contidos no nome extraído
+    candidatos = []
     for oficial in nomes_oficiais:
         norm_oficial = normalizar_nome(oficial)
         tokens_oficial = set(norm_oficial.split())
@@ -92,6 +106,7 @@ def mapear_nome_doutor(nome_extraido: str, creditos: list[dict]) -> str | None:
         candidatos.sort(reverse=True)
         return candidatos[0][1]
 
+    # 3) Primeiro e último nome batendo
     candidatos = []
     for oficial in nomes_oficiais:
         norm_oficial = normalizar_nome(oficial)
@@ -129,6 +144,9 @@ def classificar_metodo(metodo_raw: str) -> str:
 
 
 def extrair_nome_doutor_do_metodo(metodo_raw: str, creditos: list[dict]) -> tuple[str | None, str | None]:
+    """
+    Procura dentro do texto do método a linha que contém o nome do doutor.
+    """
     if not metodo_raw:
         return None, None
 
@@ -486,6 +504,49 @@ def deduplicar(registros):
     return saida
 
 
+def montar_resumo_por_doutor(registros, creditos):
+    """
+    Usa o crédito do doutores_credito.json como saldo atual/base
+    e desconta o total de PIX Doutores do mês.
+    """
+    creditos_ativos = [c for c in creditos if c.get("ativo", True)]
+
+    totais_pix = {}
+    nao_mapeados = []
+
+    for r in registros:
+        doutor = r.get("doutor")
+        valor = float(r.get("valor", 0) or 0)
+
+        if not doutor:
+            nao_mapeados.append({
+                "data": r.get("data"),
+                "unidade": r.get("unidade"),
+                "doutor_bruto": r.get("doutor_bruto"),
+                "metodo_raw": r.get("metodo_raw"),
+                "origem": r.get("origem"),
+                "valor": round(valor, 2)
+            })
+            continue
+
+        totais_pix[doutor] = totais_pix.get(doutor, 0) + valor
+
+    saldos_ajustados = {}
+    for item in creditos_ativos:
+        doutor = item["doutor"]
+        credito_base = float(item.get("credito", 0) or 0)
+        total_pix_mes = float(totais_pix.get(doutor, 0) or 0)
+        saldo_ajustado = credito_base - total_pix_mes
+
+        saldos_ajustados[doutor] = {
+            "credito_base": round(credito_base, 2),
+            "total_pix_mes": round(total_pix_mes, 2),
+            "saldo_ajustado": round(saldo_ajustado, 2)
+        }
+
+    return totais_pix, saldos_ajustados, nao_mapeados
+
+
 def coletar_unidade(page, nome_unidade, url, creditos):
     print(f"[INFO] Acessando {nome_unidade}")
     page.goto(url, wait_until="domcontentloaded", timeout=60000)
@@ -513,9 +574,12 @@ def coletar_unidade(page, nome_unidade, url, creditos):
 
 def main():
     if not TOP_USER or not TOP_PASS:
-        raise RuntimeError("TOP_USER e TOP_PASS não definidos nos Secrets.")
+        raise RuntimeError("TOP_USER e TOP_PASS não definidos nos Secrets/Variables.")
 
     creditos = carregar_doutores_credito()
+    if not creditos:
+        raise RuntimeError(f"Arquivo não encontrado ou vazio: {CREDITOS_PATH}")
+
     todos = []
 
     with sync_playwright() as p:
@@ -532,20 +596,32 @@ def main():
         browser.close()
 
     consolidados = deduplicar(todos)
+    totais_pix, saldos_ajustados, nao_mapeados = montar_resumo_por_doutor(consolidados, creditos)
+
+    saida = {
+        "periodo": {
+            "data_inicial": DATA_INICIAL,
+            "data_final": DATA_FINAL
+        },
+        "resumo": {
+            "quantidade_lancamentos": len(consolidados),
+            "total_geral_pix_doutores": round(sum(float(r["valor"]) for r in consolidados), 2)
+        },
+        "totais_pix_por_doutor": {
+            doutor: round(valor, 2) for doutor, valor in sorted(totais_pix.items())
+        },
+        "saldos_ajustados": saldos_ajustados,
+        "nao_mapeados": nao_mapeados,
+        "lancamentos": consolidados
+    }
 
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
 
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
-        json.dump(consolidados, f, indent=2, ensure_ascii=False)
+        json.dump(saida, f, indent=2, ensure_ascii=False)
 
-    print(f"✅ Dados coletados: {len(consolidados)}")
+    print(f"✅ Dados coletados e resumidos: {len(consolidados)}")
     print(f"[DEBUG] Arquivo salvo em: {OUTPUT_PATH}")
-
-    with open(OUTPUT_PATH, "r", encoding="utf-8") as f:
-        conteudo = f.read()
-
-    print("[DEBUG] Conteúdo do pix_doutores.json:")
-    print(conteudo[:4000])
 
 
 if __name__ == "__main__":
