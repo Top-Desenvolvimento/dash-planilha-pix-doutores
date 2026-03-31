@@ -1,0 +1,361 @@
+{
+  "status": "ok",
+  "arquivo_origem": "pix_doutores.json",
+  "titulo_dashboard": "Dashboard PIX Doutores",
+  "resumo": {
+    "competencia": "2026-03",
+    "gerado_em": "2026-03-31T14:36:16.290119",
+    "quantidade_total": 4,
+    "valor_total": 753.0,
+    "valor_total_descontado": 0.0,
+    "valor_total_pendente": 753.0,
+    "por_unidade": [
+      {
+        "unidade": "Soledade",
+        "quantidade": 3,
+        "valor": 668.0,
+        "descontado": 0.0,
+        "pendente": 668.0
+      },
+      {
+        "unidade": "Ssdocai",
+        "quantidade": 1,
+        "valor": 85.0,
+        "descontado": 0.0,
+        "pendente": 85.0
+      }
+    ],
+    "por_doutor": [
+      {
+        "doutor": "",
+        "quantidade": 4,
+        "valor": 753.0,
+        "descontado": 0.0,
+        "pendente": 753.0
+      }
+    ]
+  },
+  "totais": {
+    "linhas_validas": 4,
+    "linhas_com_erro": 0
+  },
+  "registros": [
+    {
+      "unidade": "Soledade",
+      "data": "31/03/2026",
+      "competencia": "2026-03",
+      "metodo_pagamento": "Pix Doutores",
+      "doutor_lido": "",
+      "doutor_final": "",
+      "doutor_encontrado": false,
+      "paciente": "Recebido de Emanuelly Prates de Bairros (C) Pago por: Rodrigo Moraes Prates",
+      "codigo_origem": "7857",
+      "parcela": "20/48",
+      "origem": "Recebido de Emanuelly Prates de Bairros (C) (7857) (Parcela 20/48) Pago por: Rodrigo Moraes Prates",
+      "valor": 105.0,
+      "valor_com_descontos": 105.0,
+      "credito_antes": 0.0,
+      "valor_descontado": 0.0,
+      "credito_depois": 0.0,
+      "pendente": 105.0,
+      "linha_original": "31/03/2026\tPix Doutores\n\tRecebido de Emanuelly Prates de Bairros (C) (7857) (Parcela 20/48) Pago por: Rodrigo Moraes Prates\t105,00 C\t105,00 C\t1\t\t\t510,00\t503,29",
+      "coletado_em": "2026-03-31T14:35:45.688571"
+    },
+    {
+      "unidade": "Soledade",
+      "data": "31/03/2026",
+      "competencia": "2026-03",
+      "metodo_pagamento": "Pix Doutores",
+      "doutor_lido": "",
+      "doutor_final": "",
+      "doutor_encontrado": false,
+      "paciente": "Recebido de Mirângela Morais Prates (C) Pago por: Rodrigo Moraes Prates",
+      "codigo_origem": "2819",
+      "parcela": "20/48",
+      "origem": "Recebido de Mirângela Morais Prates (C) (2819) (Parcela 20/48) Pago por: Rodrigo Moraes Prates",
+      "valor": 105.0,
+      "valor_com_descontos": 105.0,
+      "credito_antes": 0.0,
+      "valor_descontado": 0.0,
+      "credito_depois": 0.0,
+      "pendente": 105.0,
+      "linha_original": "31/03/2026\tPix Doutores\n\tRecebido de Mirângela Morais Prates (C) (2819) (Parcela 20/48) Pago por: Rodrigo Moraes Prates\t105,00 C\t105,00 C\t1\t\t\t615,00\t608,29",
+      "coletado_em": "2026-03-31T14:35:45.701753"
+    },
+    {
+      "unidade": "Soledade",
+      "data": "31/03/2026",
+      "competencia": "2026-03",
+      "metodo_pagamento": "Pix Doutores",
+      "doutor_lido": "",
+      "doutor_final": "",
+      "doutor_encontrado": false,
+      "paciente": "Recebido de Jorge Luis Castro Perez Pago por: O paciente",
+      "codigo_origem": "11992",
+      "parcela": "1/1",
+      "origem": "Recebido de Jorge Luis Castro Perez (11992) (Parcela 1/1) Pago por: O paciente",
+      "valor": 458.0,
+      "valor_com_descontos": 458.0,
+      "credito_antes": 0.0,
+      "valor_descontado": 0.0,
+      "credito_depois": 0.0,
+      "pendente": 458.0,
+      "linha_original": "31/03/2026\tPix Doutores\n\tRecebido de Jorge Luis Castro Perez (11992) (Parcela 1/1) Pago por: O paciente\t458,00 C\t458,00 C\t1\t\t\t2.112,00\t2.018,84",
+      "coletado_em": "2026-03-31T14:35:45.806027"
+    },
+    {
+      "unidade": "Ssdocai",
+      "data": "31/03/2026",
+      "competencia": "2026-03",
+      "metodo_pagamento": "Pix Doutores",
+      "doutor_lido": "",
+      "doutor_final": "",
+      "doutor_encontrado": false,
+      "paciente": "Recebido de Djenifer Andrade De Vargas F Pago por: O paciente",
+      "codigo_origem": "41179",
+      "parcela": "12/48",
+      "origem": "Recebido de Djenifer Andrade De Vargas F (41179) (Parcela 12/48) Pago por: O paciente",
+      "valor": 85.0,
+      "valor_com_descontos": 85.0,
+      "credito_antes": 0.0,
+      "valor_descontado": 0.0,
+      "credito_depois": 0.0,
+      "pendente": 85.0,
+      "linha_original": "31/03/2026\tPix Doutores\n\tRecebido de Djenifer Andrade De Vargas F (41179) (Parcela 12/48) Pago por: O paciente\t85,00 C\t85,00 C\t1\t\tpix doutores\t85,00\t85,00",
+      "coletado_em": "2026-03-31T14:36:16.219048"
+    }
+  ],
+  "erros": [],
+  "saldos_doutores": [
+    {
+      "doutor": "Adriele da Silva",
+      "credito_inicial": 3000.0,
+      "credito_disponivel": 3000.0
+    },
+    {
+      "doutor": "Alan Sechin",
+      "credito_inicial": 0.0,
+      "credito_disponivel": 0.0
+    },
+    {
+      "doutor": "Alexandre Favero",
+      "credito_inicial": 1500.0,
+      "credito_disponivel": 1500.0
+    },
+    {
+      "doutor": "Ana Carolina Portes",
+      "credito_inicial": 1200.0,
+      "credito_disponivel": 1200.0
+    },
+    {
+      "doutor": "Ana Cristina Corso",
+      "credito_inicial": 1500.0,
+      "credito_disponivel": 1500.0
+    },
+    {
+      "doutor": "Andrielli Caxambu",
+      "credito_inicial": 0.0,
+      "credito_disponivel": 0.0
+    },
+    {
+      "doutor": "Bianca Hofman",
+      "credito_inicial": 0.0,
+      "credito_disponivel": 0.0
+    },
+    {
+      "doutor": "Bruno Castellan",
+      "credito_inicial": 600.0,
+      "credito_disponivel": 600.0
+    },
+    {
+      "doutor": "Bruno Lorenzoni",
+      "credito_inicial": 0.0,
+      "credito_disponivel": 0.0
+    },
+    {
+      "doutor": "CIR.Dionathan Paim Pohlmann",
+      "credito_inicial": 6000.0,
+      "credito_disponivel": 6000.0
+    },
+    {
+      "doutor": "Cristian Pressi",
+      "credito_inicial": 8000.0,
+      "credito_disponivel": 8000.0
+    },
+    {
+      "doutor": "Evalda Baldissera",
+      "credito_inicial": 5604.82,
+      "credito_disponivel": 5604.82
+    },
+    {
+      "doutor": "Everlize Cipriani",
+      "credito_inicial": 2000.0,
+      "credito_disponivel": 2000.0
+    },
+    {
+      "doutor": "Fernana Sozo",
+      "credito_inicial": 1500.0,
+      "credito_disponivel": 1500.0
+    },
+    {
+      "doutor": "Franciele Pedrotti",
+      "credito_inicial": 10000.0,
+      "credito_disponivel": 10000.0
+    },
+    {
+      "doutor": "Gabrielli Fabonato",
+      "credito_inicial": 4000.0,
+      "credito_disponivel": 4000.0
+    },
+    {
+      "doutor": "Giovana Gasparini",
+      "credito_inicial": 1000.0,
+      "credito_disponivel": 1000.0
+    },
+    {
+      "doutor": "Gislaine Santos",
+      "credito_inicial": 1000.0,
+      "credito_disponivel": 1000.0
+    },
+    {
+      "doutor": "Greici Matiello",
+      "credito_inicial": 500.0,
+      "credito_disponivel": 500.0
+    },
+    {
+      "doutor": "Gustavo Lourenço Ongaratto",
+      "credito_inicial": 3000.0,
+      "credito_disponivel": 3000.0
+    },
+    {
+      "doutor": "Indiamara Rech",
+      "credito_inicial": 0.0,
+      "credito_disponivel": 0.0
+    },
+    {
+      "doutor": "Joana Sganzerla",
+      "credito_inicial": 500.0,
+      "credito_disponivel": 500.0
+    },
+    {
+      "doutor": "João Augusto Keler",
+      "credito_inicial": 1000.0,
+      "credito_disponivel": 1000.0
+    },
+    {
+      "doutor": "Juana Billig",
+      "credito_inicial": 2500.0,
+      "credito_disponivel": 2500.0
+    },
+    {
+      "doutor": "Jéssica Barreto",
+      "credito_inicial": 1000.0,
+      "credito_disponivel": 1000.0
+    },
+    {
+      "doutor": "Keyla Daniele",
+      "credito_inicial": 500.0,
+      "credito_disponivel": 500.0
+    },
+    {
+      "doutor": "Laura Luiza Cimolin",
+      "credito_inicial": 0.0,
+      "credito_disponivel": 0.0
+    },
+    {
+      "doutor": "Leandro Diniz",
+      "credito_inicial": 400.0,
+      "credito_disponivel": 400.0
+    },
+    {
+      "doutor": "Leticia Canabarro (SOL)",
+      "credito_inicial": 900.0,
+      "credito_disponivel": 900.0
+    },
+    {
+      "doutor": "Letícia Cauzzi",
+      "credito_inicial": 4000.0,
+      "credito_disponivel": 4000.0
+    },
+    {
+      "doutor": "Luiz Henrique",
+      "credito_inicial": 2500.0,
+      "credito_disponivel": 2500.0
+    },
+    {
+      "doutor": "Marcella Zancanaro",
+      "credito_inicial": 1200.0,
+      "credito_disponivel": 1200.0
+    },
+    {
+      "doutor": "Matheus Strapasson",
+      "credito_inicial": 1000.0,
+      "credito_disponivel": 1000.0
+    },
+    {
+      "doutor": "Morgana Zambiasi",
+      "credito_inicial": 1500.0,
+      "credito_disponivel": 1500.0
+    },
+    {
+      "doutor": "Murilo Debortoli",
+      "credito_inicial": 500.0,
+      "credito_disponivel": 500.0
+    },
+    {
+      "doutor": "Naiane Pieta",
+      "credito_inicial": 1000.0,
+      "credito_disponivel": 1000.0
+    },
+    {
+      "doutor": "Nelson Vaccari",
+      "credito_inicial": 4000.0,
+      "credito_disponivel": 4000.0
+    },
+    {
+      "doutor": "Nicoli Weber",
+      "credito_inicial": 1000.0,
+      "credito_disponivel": 1000.0
+    },
+    {
+      "doutor": "Norberto Filipe",
+      "credito_inicial": 500.0,
+      "credito_disponivel": 500.0
+    },
+    {
+      "doutor": "Rodrigo Silveira",
+      "credito_inicial": 458.0,
+      "credito_disponivel": 458.0
+    },
+    {
+      "doutor": "Sara Trevisol",
+      "credito_inicial": 1000.0,
+      "credito_disponivel": 1000.0
+    },
+    {
+      "doutor": "Sofie Owens",
+      "credito_inicial": 3500.0,
+      "credito_disponivel": 3500.0
+    },
+    {
+      "doutor": "Tamara Macanan",
+      "credito_inicial": 5000.0,
+      "credito_disponivel": 5000.0
+    },
+    {
+      "doutor": "Thalia Tessaro",
+      "credito_inicial": 2700.0,
+      "credito_disponivel": 2700.0
+    },
+    {
+      "doutor": "Thalia Vezzosi",
+      "credito_inicial": 2500.0,
+      "credito_disponivel": 2500.0
+    },
+    {
+      "doutor": "Thiany Cristofoli",
+      "credito_inicial": 4000.0,
+      "credito_disponivel": 4000.0
+    }
+  ]
+}

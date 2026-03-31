@@ -1,0 +1,33 @@
+{
+  "competencia": "2026-03",
+  "gerado_em": "2026-03-31T14:36:16.290119",
+  "quantidade_total": 4,
+  "valor_total": 753.0,
+  "valor_total_descontado": 0.0,
+  "valor_total_pendente": 753.0,
+  "por_unidade": [
+    {
+      "unidade": "Soledade",
+      "quantidade": 3,
+      "valor": 668.0,
+      "descontado": 0.0,
+      "pendente": 668.0
+    },
+    {
+      "unidade": "Ssdocai",
+      "quantidade": 1,
+      "valor": 85.0,
+      "descontado": 0.0,
+      "pendente": 85.0
+    }
+  ],
+  "por_doutor": [
+    {
+      "doutor": "",
+      "quantidade": 4,
+      "valor": 753.0,
+      "descontado": 0.0,
+      "pendente": 753.0
+    }
+  ]
+}
