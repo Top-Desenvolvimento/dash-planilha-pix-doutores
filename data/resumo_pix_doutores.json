@@ -1,10 +1,131 @@
 {
   "competencia": "2026-03",
-  "gerado_em": "2026-03-31T17:22:50.023554",
-  "quantidade_total": 0,
-  "valor_total": 0,
-  "valor_total_descontado": 0,
-  "valor_total_pendente": 0,
-  "por_unidade": [],
-  "por_doutor": []
+  "gerado_em": "2026-03-31T17:52:49.548868",
+  "quantidade_total": 608,
+  "valor_total": 84294.51,
+  "valor_total_descontado": 4833.9,
+  "valor_total_pendente": 79460.61,
+  "por_unidade": [
+    {
+      "unidade": "Bento",
+      "quantidade": 48,
+      "valor": 6869.99,
+      "descontado": 0.0,
+      "pendente": 6869.99
+    },
+    {
+      "unidade": "Caxias",
+      "quantidade": 122,
+      "valor": 19269.45,
+      "descontado": 4833.9,
+      "pendente": 14435.55
+    },
+    {
+      "unidade": "Encantado",
+      "quantidade": 85,
+      "valor": 10941.0,
+      "descontado": 0.0,
+      "pendente": 10941.0
+    },
+    {
+      "unidade": "Farroupilha",
+      "quantidade": 66,
+      "valor": 8217.0,
+      "descontado": 0.0,
+      "pendente": 8217.0
+    },
+    {
+      "unidade": "Garibaldi",
+      "quantidade": 58,
+      "valor": 7877.0,
+      "descontado": 0.0,
+      "pendente": 7877.0
+    },
+    {
+      "unidade": "Soledade",
+      "quantidade": 144,
+      "valor": 18706.99,
+      "descontado": 0.0,
+      "pendente": 18706.99
+    },
+    {
+      "unidade": "Ssdocai",
+      "quantidade": 53,
+      "valor": 7160.0,
+      "descontado": 0.0,
+      "pendente": 7160.0
+    },
+    {
+      "unidade": "Veranopolis",
+      "quantidade": 32,
+      "valor": 5253.08,
+      "descontado": 0.0,
+      "pendente": 5253.08
+    }
+  ],
+  "por_doutor": [
+    {
+      "doutor": "",
+      "quantidade": 486,
+      "valor": 65025.06,
+      "descontado": 0.0,
+      "pendente": 65025.06
+    },
+    {
+      "doutor": "1.Franciele Pedrotti",
+      "quantidade": 32,
+      "valor": 5707.5,
+      "descontado": 0.0,
+      "pendente": 5707.5
+    },
+    {
+      "doutor": "2.Nelson Junior",
+      "quantidade": 2,
+      "valor": 488.0,
+      "descontado": 0.0,
+      "pendente": 488.0
+    },
+    {
+      "doutor": "5.Thalia Vezzosi",
+      "quantidade": 14,
+      "valor": 2091.5,
+      "descontado": 0.0,
+      "pendente": 2091.5
+    },
+    {
+      "doutor": "CIR.Dionathan Paim Pohlmann",
+      "quantidade": 38,
+      "valor": 4833.9,
+      "descontado": 4833.9,
+      "pendente": 0.0
+    },
+    {
+      "doutor": "Dra.Magda Machado",
+      "quantidade": 2,
+      "valor": 965.0,
+      "descontado": 0.0,
+      "pendente": 965.0
+    },
+    {
+      "doutor": "Dra.Thalia Tessaro",
+      "quantidade": 22,
+      "valor": 3209.55,
+      "descontado": 0.0,
+      "pendente": 3209.55
+    },
+    {
+      "doutor": "MEI",
+      "quantidade": 7,
+      "valor": 1446.0,
+      "descontado": 0.0,
+      "pendente": 1446.0
+    },
+    {
+      "doutor": "TOP",
+      "quantidade": 5,
+      "valor": 528.0,
+      "descontado": 0.0,
+      "pendente": 528.0
+    }
+  ]
 }
