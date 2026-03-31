@@ -3,105 +3,154 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dashboard PIX Doutores</title>
+  <title>PIX Doutores</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <div class="container">
-    <header class="topo">
-      <h1>Dashboard PIX Doutores</h1>
-      <p class="subtitulo">Relatório consolidado das unidades</p>
-    </header>
-
-    <section id="cardsResumo" class="cards"></section>
-
-    <section class="bloco">
-      <h2>Resumo por Unidade</h2>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>Unidade</th>
-              <th>Qtd.</th>
-              <th>Valor</th>
-              <th>Descontado</th>
-              <th>Pendente</th>
-            </tr>
-          </thead>
-          <tbody id="tabelaUnidades"></tbody>
-        </table>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-logo">T</div>
+        <div>
+          <h1>PIX Doutores</h1>
+          <p>Top Estética Bucal</p>
+        </div>
       </div>
-    </section>
 
-    <section class="bloco">
-      <h2>Resumo por Doutor</h2>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>Doutor</th>
-              <th>Qtd.</th>
-              <th>Valor</th>
-              <th>Descontado</th>
-              <th>Pendente</th>
-            </tr>
-          </thead>
-          <tbody id="tabelaDoutores"></tbody>
-        </table>
-      </div>
-    </section>
+      <div class="panel">
+        <h2>Filtros</h2>
 
-    <section class="bloco">
-      <h2>Saldos Finais dos Doutores</h2>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>Doutor</th>
-              <th>Crédito Inicial</th>
-              <th>Crédito Disponível</th>
-            </tr>
-          </thead>
-          <tbody id="tabelaSaldos"></tbody>
-        </table>
-      </div>
-    </section>
+        <label for="filtroMes">Mês</label>
+        <select id="filtroMes">
+          <option value="">Todos</option>
+        </select>
 
-    <section class="bloco">
-      <h2>Registros Detalhados</h2>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>Unidade</th>
-              <th>Data</th>
-              <th>Doutor</th>
-              <th>Paciente</th>
-              <th>Valor</th>
-              <th>Descontado</th>
-              <th>Pendente</th>
-            </tr>
-          </thead>
-          <tbody id="tabelaRegistros"></tbody>
-        </table>
-      </div>
-    </section>
+        <label for="filtroUnidade">Unidade</label>
+        <select id="filtroUnidade">
+          <option value="">Todas</option>
+        </select>
 
-    <section class="bloco">
-      <h2>Erros</h2>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>Unidade</th>
-              <th>Erro</th>
-              <th>Data/Hora</th>
-            </tr>
-          </thead>
-          <tbody id="tabelaErros"></tbody>
-        </table>
+        <label for="filtroDoutor">Doutor</label>
+        <select id="filtroDoutor">
+          <option value="">Todos</option>
+        </select>
+
+        <button id="btnLimpar" class="btn btn-secundario">Limpar filtros</button>
+        <button id="btnExportar" class="btn btn-primario">Exportar CSV</button>
       </div>
-    </section>
+
+      <div class="panel legenda">
+        <h2>Legenda</h2>
+        <div class="legenda-item">
+          <span class="dot verde"></span>
+          <span>Baixa utilização</span>
+        </div>
+        <div class="legenda-item">
+          <span class="dot amarelo"></span>
+          <span>50% ou mais</span>
+        </div>
+        <div class="legenda-item">
+          <span class="dot vermelho"></span>
+          <span>100% ou mais</span>
+        </div>
+      </div>
+    </aside>
+
+    <main class="content">
+      <header class="header">
+        <div>
+          <h2 id="tituloDashboard">Painel Gerencial</h2>
+          <p id="subtituloDashboard">Acompanhamento mensal de crédito PIX por doutor</p>
+        </div>
+        <div class="badge" id="badgeCompetencia">Competência</div>
+      </header>
+
+      <section class="card">
+        <div class="card-header">
+          <div>
+            <h3>Visão Geral</h3>
+            <p>Indicadores consolidados do período selecionado</p>
+          </div>
+        </div>
+
+        <div class="stats" id="cardsResumo"></div>
+      </section>
+
+      <section class="card">
+        <div class="card-header">
+          <div>
+            <h3>Resumo por Doutor</h3>
+            <p>Crédito, utilização, saldo, percentual e status</p>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Doutor</th>
+                <th>Crédito autorizado</th>
+                <th>Total utilizado</th>
+                <th>Saldo restante</th>
+                <th>% utilizado</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="tabelaResumoDoutor"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="card-header">
+          <div>
+            <h3>Resumo por Unidade</h3>
+            <p>Consolidação por clínica/unidade</p>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Unidade</th>
+                <th>Qtd.</th>
+                <th>Valor</th>
+                <th>Descontado</th>
+                <th>Pendente</th>
+              </tr>
+            </thead>
+            <tbody id="tabelaUnidades"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="card-header">
+          <div>
+            <h3>Lançamentos PIX do Mês</h3>
+            <p>Detalhamento dos registros coletados</p>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Data</th>
+                <th>Unidade</th>
+                <th>Doutor</th>
+                <th>Paciente</th>
+                <th>Valor</th>
+                <th>Descontado</th>
+                <th>Pendente</th>
+              </tr>
+            </thead>
+            <tbody id="tabelaRegistros"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
   </div>
 
   <script src="js/app.js"></script>
