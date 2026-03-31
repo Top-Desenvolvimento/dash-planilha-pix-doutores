@@ -1,0 +1,17 @@
+stages:
+  - run
+
+run_coletor:
+  stage: run
+  image: python:3.11
+  before_script:
+    - pip install -r requirements.txt
+    - playwright install chromium
+  script:
+    - python coletor_pix.py
+    - python generate_data.py
+  artifacts:
+    paths:
+      - data/
+  only:
+    - main
