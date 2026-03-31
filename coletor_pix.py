@@ -95,11 +95,72 @@ def clicar_primeiro_existente(page, seletores: List[str]) -> bool:
     return False
 
 
-def preencher_input(locator, valor: str) -> None:
-    locator.click()
-    locator.press("Control+A")
-    locator.press("Backspace")
-    locator.type(valor, delay=40)
+def setar_valor_input(locator, valor: str) -> None:
+    locator.scroll_into_view_if_needed()
+    locator.click(timeout=5000)
+
+    try:
+        locator.press("Control+A")
+        locator.press("Backspace")
+    except Exception:
+        pass
+
+    try:
+        locator.fill(valor)
+    except Exception:
+        pass
+
+    locator.evaluate(
+        """(el, value) => {
+            el.removeAttribute('readonly');
+            el.value = value;
+            el.dispatchEvent(new Event('input', { bubbles: true }));
+            el.dispatchEvent(new Event('change', { bubbles: true }));
+            el.dispatchEvent(new Event('blur', { bubbles: true }));
+        }""",
+        valor,
+    )
+
+
+def obter_inputs_visiveis_texto(page):
+    inputs = page.locator("input")
+    visiveis = []
+
+    for i in range(inputs.count()):
+        try:
+            loc = inputs.nth(i)
+            if not loc.is_visible():
+                continue
+
+            tipo = (loc.get_attribute("type") or "text").lower()
+            if tipo in ["hidden", "submit", "button", "checkbox", "radio", "file"]:
+                continue
+
+            visiveis.append(loc)
+        except Exception:
+            continue
+
+    return visiveis
+
+
+def preencher_periodo_mes(page) -> str:
+    data_inicio, data_fim, competencia = obter_periodo_mes_referencia()
+
+    visiveis = obter_inputs_visiveis_texto(page)
+
+    if len(visiveis) < 2:
+        raise RuntimeError("Campos de data do período não encontrados.")
+
+    # No layout desse sistema, os 2 últimos inputs visíveis do filtro são as datas
+    campo_inicio = visiveis[-2]
+    campo_fim = visiveis[-1]
+
+    setar_valor_input(campo_inicio, data_inicio)
+    setar_valor_input(campo_fim, data_fim)
+
+    page.wait_for_timeout(700)
+
+    return competencia
 
 
 def fazer_login(page, url: str) -> None:
@@ -137,6 +198,7 @@ def fazer_login(page, url: str) -> None:
         raise RuntimeError("Botão de login não encontrado.")
 
     page.wait_for_load_state("networkidle", timeout=60000)
+    page.wait_for_timeout(1500)
 
 
 def acessar_demonstrativo(page) -> str:
@@ -149,7 +211,7 @@ def acessar_demonstrativo(page) -> str:
     if not clicou_financas:
         raise RuntimeError("Menu Finanças não encontrado.")
 
-    page.wait_for_timeout(1000)
+    page.wait_for_timeout(1200)
 
     clicou_demonstrativo = clicar_primeiro_existente(page, [
         'text="Demonstrativo de Resultado"',
@@ -161,28 +223,9 @@ def acessar_demonstrativo(page) -> str:
         raise RuntimeError("Tela Demonstrativo de Resultado não encontrada.")
 
     page.wait_for_load_state("networkidle", timeout=60000)
-    page.wait_for_timeout(2000)
+    page.wait_for_timeout(2500)
 
-    data_inicio, data_fim, competencia = obter_periodo_mes_referencia()
-
-    inputs_data = page.locator('input[type="text"]')
-    indices_data = []
-
-    for i in range(inputs_data.count()):
-        try:
-            valor_atual = inputs_data.nth(i).input_value().strip()
-            if re.match(r"\d{2}/\d{2}/\d{4}", valor_atual):
-                indices_data.append(i)
-        except Exception:
-            continue
-
-    if len(indices_data) >= 2:
-        preencher_input(inputs_data.nth(indices_data[0]), data_inicio)
-        preencher_input(inputs_data.nth(indices_data[1]), data_fim)
-    else:
-        raise RuntimeError("Campos de data do período não encontrados.")
-
-    page.wait_for_timeout(500)
+    competencia = preencher_periodo_mes(page)
 
     clicou_buscar = clicar_primeiro_existente(page, [
         'button:has-text("Buscar")',
@@ -194,7 +237,7 @@ def acessar_demonstrativo(page) -> str:
         raise RuntimeError("Botão Buscar não encontrado.")
 
     page.wait_for_load_state("networkidle", timeout=60000)
-    page.wait_for_timeout(3000)
+    page.wait_for_timeout(4000)
 
     return competencia
 
