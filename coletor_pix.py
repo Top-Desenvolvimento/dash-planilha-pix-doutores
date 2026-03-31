@@ -24,6 +24,7 @@ SISTEMAS = [
     {"unidade": "Garibaldi", "url": "http://garibaldi.topesteticabucal.com.br/sistema"},
     {"unidade": "Veranopolis", "url": "http://veranopolis.topesteticabucal.com.br/sistema"},
     {"unidade": "Ssdocai", "url": "http://ssdocai.topesteticabucal.com.br/sistema"},
+    {"unidade": "FloresDaCunha", "url": "http://flores.topesteticabucal.com.br/sistema"},
 ]
 
 PASTA_DATA = Path("data")
@@ -151,7 +152,7 @@ def preencher_periodo_mes(page) -> str:
     if len(visiveis) < 2:
         raise RuntimeError("Campos de data do período não encontrados.")
 
-    # No layout desse sistema, os 2 últimos inputs visíveis do filtro são as datas
+    # no sistema, os dois últimos campos visíveis do filtro são o período
     campo_inicio = visiveis[-2]
     campo_fim = visiveis[-1]
 
@@ -246,7 +247,7 @@ def linha_eh_pix_doutores(metodo_raw: str) -> bool:
     return "pix doutores" in (metodo_raw or "").lower()
 
 
-def extrair_nome_doutor_do_metodo(metodo_raw: str) -> str:
+def extrair_responsavel_fiscal_do_metodo(metodo_raw: str) -> str:
     linhas = [l.strip() for l in (metodo_raw or "").split("\n") if l.strip()]
 
     if not linhas:
@@ -325,18 +326,19 @@ def interpretar_linha(
     if not linha_eh_pix_doutores(metodo_raw):
         return None
 
-    nome_doutor = extrair_nome_doutor_do_metodo(metodo_raw)
+    responsavel_fiscal = extrair_responsavel_fiscal_do_metodo(metodo_raw)
     valor = parse_valor(valor_texto)
     valor_com_descontos = parse_valor(valor_desc_texto)
     info_origem = extrair_info_origem(origem_raw)
-    desconto = aplicar_desconto(mapa_creditos, nome_doutor, valor)
+    desconto = aplicar_desconto(mapa_creditos, responsavel_fiscal, valor)
 
     return {
         "unidade": unidade,
         "data": data,
         "competencia": competencia,
         "metodo_pagamento": "Pix Doutores",
-        "doutor_lido": nome_doutor,
+        "responsavel_fiscal_lido": responsavel_fiscal,
+        "doutor_lido": responsavel_fiscal,
         "doutor_final": desconto["nome_padronizado"],
         "doutor_encontrado": desconto["doutor_encontrado"],
         "paciente": info_origem["paciente"],
