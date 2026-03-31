@@ -1,10 +1,11 @@
 from __future__ import annotations
 
+import calendar
 import json
 import re
 from datetime import datetime, date
 from pathlib import Path
-from typing import List, Dict, Any, Optional
+from typing import List, Dict, Any, Optional, Tuple
 
 from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError
 
@@ -52,19 +53,22 @@ def salvar_json(dados: Any, caminho: Path) -> None:
         json.dump(dados, f, ensure_ascii=False, indent=2)
 
 
-def primeiro_dia_mes_atual() -> str:
+def obter_periodo_mes_referencia() -> Tuple[str, str, str]:
     hoje = date.today()
-    return hoje.replace(day=1).strftime("%d/%m/%Y")
+    ano = hoje.year
+    mes = hoje.month
+
+    primeiro_dia = f"01/{mes:02d}/{ano}"
+    ultimo_dia_num = calendar.monthrange(ano, mes)[1]
+    ultimo_dia = f"{ultimo_dia_num:02d}/{mes:02d}/{ano}"
+    competencia = f"{ano}-{mes:02d}"
+
+    return primeiro_dia, ultimo_dia, competencia
 
 
-def ultimo_dia_mes_atual() -> str:
-    hoje = date.today()
-    if hoje.month == 12:
-        proximo_mes = hoje.replace(year=hoje.year + 1, month=1, day=1)
-    else:
-        proximo_mes = hoje.replace(month=hoje.month + 1, day=1)
-    ultimo = proximo_mes.fromordinal(proximo_mes.toordinal() - 1)
-    return ultimo.strftime("%d/%m/%Y")
+def obter_competencia() -> str:
+    _, _, competencia = obter_periodo_mes_referencia()
+    return competencia
 
 
 def preencher_primeiro_seletor_existente(page, seletores: List[str], valor: str) -> bool:
@@ -89,6 +93,71 @@ def clicar_primeiro_existente(page, seletores: List[str]) -> bool:
         except Exception:
             continue
     return False
+
+
+def preencher_input(locator, valor: str) -> None:
+    locator.click()
+    locator.press("Control+A")
+    locator.press("Backspace")
+    locator.type(valor, delay=40)
+
+
+def preencher_periodo_mes(page) -> str:
+    data_inicio, data_fim, competencia = obter_periodo_mes_referencia()
+
+    # primeiro tenta localizar campos com valor de data já presente
+    campos_data = []
+
+    inputs_text = page.locator('input[type="text"]')
+    total_inputs = inputs_text.count()
+
+    for i in range(total_inputs):
+        try:
+            locator = inputs_text.nth(i)
+            if not locator.is_visible():
+                continue
+
+            valor_atual = locator.input_value().strip()
+            placeholder = (locator.get_attribute("placeholder") or "").strip()
+            name = (locator.get_attribute("name") or "").strip().lower()
+            id_attr = (locator.get_attribute("id") or "").strip().lower()
+
+            parece_data = (
+                bool(re.match(r"\d{2}/\d{2}/\d{4}", valor_atual))
+                or "data" in placeholder.lower()
+                or "periodo" in placeholder.lower()
+                or "data" in name
+                or "periodo" in name
+                or "data" in id_attr
+                or "periodo" in id_attr
+            )
+
+            if parece_data:
+                campos_data.append(locator)
+        except Exception:
+            continue
+
+    # fallback: se não achou pelos indícios, pega os 2 últimos inputs de texto visíveis
+    if len(campos_data) < 2:
+        visiveis = []
+        for i in range(total_inputs):
+            try:
+                locator = inputs_text.nth(i)
+                if locator.is_visible():
+                    visiveis.append(locator)
+            except Exception:
+                continue
+
+        if len(visiveis) >= 2:
+            campos_data = visiveis[-2:]
+
+    if len(campos_data) < 2:
+        raise RuntimeError("Não foi possível localizar os dois campos de período.")
+
+    preencher_input(campos_data[0], data_inicio)
+    preencher_input(campos_data[1], data_fim)
+
+    return competencia
 
 
 def fazer_login(page, url: str) -> None:
@@ -128,7 +197,7 @@ def fazer_login(page, url: str) -> None:
     page.wait_for_load_state("networkidle", timeout=60000)
 
 
-def acessar_demonstrativo(page) -> None:
+def acessar_demonstrativo(page) -> str:
     clicou_financas = clicar_primeiro_existente(page, [
         'text="FINANÇAS"',
         'text="Finanças"',
@@ -152,25 +221,7 @@ def acessar_demonstrativo(page) -> None:
     page.wait_for_load_state("networkidle", timeout=60000)
     page.wait_for_timeout(1500)
 
-    data_inicio = primeiro_dia_mes_atual()
-    data_fim = ultimo_dia_mes_atual()
-
-    inputs_data = page.locator('input[type="text"]')
-    encontrados = 0
-
-    for i in range(inputs_data.count()):
-        try:
-            valor_atual = inputs_data.nth(i).input_value().strip()
-            if re.match(r"\d{2}/\d{2}/\d{4}", valor_atual):
-                if encontrados == 0:
-                    inputs_data.nth(i).fill(data_inicio)
-                    encontrados += 1
-                elif encontrados == 1:
-                    inputs_data.nth(i).fill(data_fim)
-                    encontrados += 1
-                    break
-        except Exception:
-            continue
+    competencia = preencher_periodo_mes(page)
 
     clicou_buscar = clicar_primeiro_existente(page, [
         'button:has-text("Buscar")',
@@ -183,6 +234,8 @@ def acessar_demonstrativo(page) -> None:
 
     page.wait_for_load_state("networkidle", timeout=60000)
     page.wait_for_timeout(3000)
+
+    return competencia
 
 
 def linha_eh_pix_doutores(metodo_raw: str) -> bool:
@@ -243,7 +296,12 @@ def extrair_info_origem(origem_raw: str) -> Dict[str, Any]:
     }
 
 
-def interpretar_linha(linha, unidade: str, mapa_creditos: Dict[str, Dict[str, Any]]) -> Optional[Dict[str, Any]]:
+def interpretar_linha(
+    linha,
+    unidade: str,
+    mapa_creditos: Dict[str, Dict[str, Any]],
+    competencia: str
+) -> Optional[Dict[str, Any]]:
     colunas = linha.locator("td")
     qtd_colunas = colunas.count()
 
@@ -272,7 +330,7 @@ def interpretar_linha(linha, unidade: str, mapa_creditos: Dict[str, Dict[str, An
     return {
         "unidade": unidade,
         "data": data,
-        "competencia": datetime.now().strftime("%Y-%m"),
+        "competencia": competencia,
         "metodo_pagamento": "Pix Doutores",
         "doutor_lido": nome_doutor,
         "doutor_final": desconto["nome_padronizado"],
@@ -292,7 +350,12 @@ def interpretar_linha(linha, unidade: str, mapa_creditos: Dict[str, Dict[str, An
     }
 
 
-def extrair_linhas_pix(page, unidade: str, mapa_creditos: Dict[str, Dict[str, Any]]) -> List[Dict[str, Any]]:
+def extrair_linhas_pix(
+    page,
+    unidade: str,
+    mapa_creditos: Dict[str, Dict[str, Any]],
+    competencia: str
+) -> List[Dict[str, Any]]:
     resultados: List[Dict[str, Any]] = []
     tabelas = page.locator("table")
 
@@ -307,14 +370,18 @@ def extrair_linhas_pix(page, unidade: str, mapa_creditos: Dict[str, Dict[str, An
 
         for j in range(qtd_linhas):
             linha = linhas.nth(j)
-            registro = interpretar_linha(linha, unidade, mapa_creditos)
+            registro = interpretar_linha(linha, unidade, mapa_creditos, competencia)
             if registro:
                 resultados.append(registro)
 
     return resultados
 
 
-def processar_unidade(browser, sistema: Dict[str, str], mapa_creditos: Dict[str, Dict[str, Any]]) -> List[Dict[str, Any]]:
+def processar_unidade(
+    browser,
+    sistema: Dict[str, str],
+    mapa_creditos: Dict[str, Dict[str, Any]]
+) -> List[Dict[str, Any]]:
     unidade = sistema["unidade"]
     url = sistema["url"]
     print(f"[INFO] Processando unidade: {unidade}")
@@ -324,8 +391,8 @@ def processar_unidade(browser, sistema: Dict[str, str], mapa_creditos: Dict[str,
 
     try:
         fazer_login(page, url)
-        acessar_demonstrativo(page)
-        resultados = extrair_linhas_pix(page, unidade, mapa_creditos)
+        competencia = acessar_demonstrativo(page)
+        resultados = extrair_linhas_pix(page, unidade, mapa_creditos, competencia)
         print(f"[INFO] {unidade}: {len(resultados)} linha(s) PIX DOUTORES encontrada(s).")
         return resultados
 
@@ -333,6 +400,7 @@ def processar_unidade(browser, sistema: Dict[str, str], mapa_creditos: Dict[str,
         print(f"[ERRO] Timeout na unidade {unidade}")
         return [{
             "unidade": unidade,
+            "competencia": obter_competencia(),
             "erro": "Timeout ao acessar sistema",
             "coletado_em": datetime.now().isoformat(),
         }]
@@ -340,6 +408,7 @@ def processar_unidade(browser, sistema: Dict[str, str], mapa_creditos: Dict[str,
         print(f"[ERRO] Falha na unidade {unidade}: {e}")
         return [{
             "unidade": unidade,
+            "competencia": obter_competencia(),
             "erro": str(e),
             "coletado_em": datetime.now().isoformat(),
         }]
@@ -349,6 +418,10 @@ def processar_unidade(browser, sistema: Dict[str, str], mapa_creditos: Dict[str,
 
 def gerar_resumo(dados: List[Dict[str, Any]]) -> Dict[str, Any]:
     validos = [d for d in dados if "erro" not in d]
+    competencia = obter_competencia()
+
+    if validos:
+        competencia = validos[0].get("competencia", competencia)
 
     total_valor = round(sum(float(d.get("valor", 0.0)) for d in validos), 2)
     total_descontado = round(sum(float(d.get("valor_descontado", 0.0)) for d in validos), 2)
@@ -369,9 +442,15 @@ def gerar_resumo(dados: List[Dict[str, Any]]) -> Dict[str, Any]:
             "pendente": 0.0,
         })
         por_unidade[unidade]["quantidade"] += 1
-        por_unidade[unidade]["valor"] = round(por_unidade[unidade]["valor"] + float(item["valor"]), 2)
-        por_unidade[unidade]["descontado"] = round(por_unidade[unidade]["descontado"] + float(item["valor_descontado"]), 2)
-        por_unidade[unidade]["pendente"] = round(por_unidade[unidade]["pendente"] + float(item["pendente"]), 2)
+        por_unidade[unidade]["valor"] = round(
+            por_unidade[unidade]["valor"] + float(item["valor"]), 2
+        )
+        por_unidade[unidade]["descontado"] = round(
+            por_unidade[unidade]["descontado"] + float(item["valor_descontado"]), 2
+        )
+        por_unidade[unidade]["pendente"] = round(
+            por_unidade[unidade]["pendente"] + float(item["pendente"]), 2
+        )
 
         por_doutor.setdefault(doutor, {
             "doutor": doutor,
@@ -381,12 +460,18 @@ def gerar_resumo(dados: List[Dict[str, Any]]) -> Dict[str, Any]:
             "pendente": 0.0,
         })
         por_doutor[doutor]["quantidade"] += 1
-        por_doutor[doutor]["valor"] = round(por_doutor[doutor]["valor"] + float(item["valor"]), 2)
-        por_doutor[doutor]["descontado"] = round(por_doutor[doutor]["descontado"] + float(item["valor_descontado"]), 2)
-        por_doutor[doutor]["pendente"] = round(por_doutor[doutor]["pendente"] + float(item["pendente"]), 2)
+        por_doutor[doutor]["valor"] = round(
+            por_doutor[doutor]["valor"] + float(item["valor"]), 2
+        )
+        por_doutor[doutor]["descontado"] = round(
+            por_doutor[doutor]["descontado"] + float(item["valor_descontado"]), 2
+        )
+        por_doutor[doutor]["pendente"] = round(
+            por_doutor[doutor]["pendente"] + float(item["pendente"]), 2
+        )
 
     return {
-        "competencia": datetime.now().strftime("%Y-%m"),
+        "competencia": competencia,
         "gerado_em": datetime.now().isoformat(),
         "quantidade_total": len(validos),
         "valor_total": total_valor,
@@ -395,6 +480,26 @@ def gerar_resumo(dados: List[Dict[str, Any]]) -> Dict[str, Any]:
         "por_unidade": sorted(por_unidade.values(), key=lambda x: x["unidade"].lower()),
         "por_doutor": sorted(por_doutor.values(), key=lambda x: x["doutor"].lower()),
     }
+
+
+def salvar_arquivos_mensais(
+    resultados: List[Dict[str, Any]],
+    saldos_finais: List[Dict[str, Any]],
+    resumo: Dict[str, Any]
+) -> None:
+    competencia = resumo.get("competencia", obter_competencia())
+
+    arquivo_pix_mes = PASTA_DATA / f"pix_doutores_{competencia}.json"
+    arquivo_saldos_mes = PASTA_DATA / f"saldos_doutores_{competencia}.json"
+    arquivo_resumo_mes = PASTA_DATA / f"resumo_pix_doutores_{competencia}.json"
+
+    salvar_json(resultados, arquivo_pix_mes)
+    salvar_json(saldos_finais, arquivo_saldos_mes)
+    salvar_json(resumo, arquivo_resumo_mes)
+
+    print(f"[OK] Arquivo mensal gerado: {arquivo_pix_mes}")
+    print(f"[OK] Arquivo mensal gerado: {arquivo_saldos_mes}")
+    print(f"[OK] Arquivo mensal gerado: {arquivo_resumo_mes}")
 
 
 def main() -> None:
@@ -416,6 +521,8 @@ def main() -> None:
     salvar_json(todos_resultados, ARQUIVO_PIX)
     salvar_json(saldos_finais, ARQUIVO_SALDOS)
     salvar_json(resumo, ARQUIVO_RESUMO)
+
+    salvar_arquivos_mensais(todos_resultados, saldos_finais, resumo)
 
     print(f"[OK] Arquivo gerado: {ARQUIVO_PIX}")
     print(f"[OK] Arquivo gerado: {ARQUIVO_SALDOS}")
