@@ -102,64 +102,6 @@ def preencher_input(locator, valor: str) -> None:
     locator.type(valor, delay=40)
 
 
-def preencher_periodo_mes(page) -> str:
-    data_inicio, data_fim, competencia = obter_periodo_mes_referencia()
-
-    # primeiro tenta localizar campos com valor de data já presente
-    campos_data = []
-
-    inputs_text = page.locator('input[type="text"]')
-    total_inputs = inputs_text.count()
-
-    for i in range(total_inputs):
-        try:
-            locator = inputs_text.nth(i)
-            if not locator.is_visible():
-                continue
-
-            valor_atual = locator.input_value().strip()
-            placeholder = (locator.get_attribute("placeholder") or "").strip()
-            name = (locator.get_attribute("name") or "").strip().lower()
-            id_attr = (locator.get_attribute("id") or "").strip().lower()
-
-            parece_data = (
-                bool(re.match(r"\d{2}/\d{2}/\d{4}", valor_atual))
-                or "data" in placeholder.lower()
-                or "periodo" in placeholder.lower()
-                or "data" in name
-                or "periodo" in name
-                or "data" in id_attr
-                or "periodo" in id_attr
-            )
-
-            if parece_data:
-                campos_data.append(locator)
-        except Exception:
-            continue
-
-    # fallback: se não achou pelos indícios, pega os 2 últimos inputs de texto visíveis
-    if len(campos_data) < 2:
-        visiveis = []
-        for i in range(total_inputs):
-            try:
-                locator = inputs_text.nth(i)
-                if locator.is_visible():
-                    visiveis.append(locator)
-            except Exception:
-                continue
-
-        if len(visiveis) >= 2:
-            campos_data = visiveis[-2:]
-
-    if len(campos_data) < 2:
-        raise RuntimeError("Não foi possível localizar os dois campos de período.")
-
-    preencher_input(campos_data[0], data_inicio)
-    preencher_input(campos_data[1], data_fim)
-
-    return competencia
-
-
 def fazer_login(page, url: str) -> None:
     page.goto(url, wait_until="domcontentloaded", timeout=60000)
 
@@ -219,9 +161,28 @@ def acessar_demonstrativo(page) -> str:
         raise RuntimeError("Tela Demonstrativo de Resultado não encontrada.")
 
     page.wait_for_load_state("networkidle", timeout=60000)
-    page.wait_for_timeout(1500)
+    page.wait_for_timeout(2000)
 
-    competencia = preencher_periodo_mes(page)
+    data_inicio, data_fim, competencia = obter_periodo_mes_referencia()
+
+    inputs_data = page.locator('input[type="text"]')
+    indices_data = []
+
+    for i in range(inputs_data.count()):
+        try:
+            valor_atual = inputs_data.nth(i).input_value().strip()
+            if re.match(r"\d{2}/\d{2}/\d{4}", valor_atual):
+                indices_data.append(i)
+        except Exception:
+            continue
+
+    if len(indices_data) >= 2:
+        preencher_input(inputs_data.nth(indices_data[0]), data_inicio)
+        preencher_input(inputs_data.nth(indices_data[1]), data_fim)
+    else:
+        raise RuntimeError("Campos de data do período não encontrados.")
+
+    page.wait_for_timeout(500)
 
     clicou_buscar = clicar_primeiro_existente(page, [
         'button:has-text("Buscar")',
@@ -388,6 +349,7 @@ def processar_unidade(
 
     context = browser.new_context()
     page = context.new_page()
+    page.set_default_timeout(30000)
 
     try:
         fazer_login(page, url)
@@ -442,15 +404,9 @@ def gerar_resumo(dados: List[Dict[str, Any]]) -> Dict[str, Any]:
             "pendente": 0.0,
         })
         por_unidade[unidade]["quantidade"] += 1
-        por_unidade[unidade]["valor"] = round(
-            por_unidade[unidade]["valor"] + float(item["valor"]), 2
-        )
-        por_unidade[unidade]["descontado"] = round(
-            por_unidade[unidade]["descontado"] + float(item["valor_descontado"]), 2
-        )
-        por_unidade[unidade]["pendente"] = round(
-            por_unidade[unidade]["pendente"] + float(item["pendente"]), 2
-        )
+        por_unidade[unidade]["valor"] = round(por_unidade[unidade]["valor"] + float(item["valor"]), 2)
+        por_unidade[unidade]["descontado"] = round(por_unidade[unidade]["descontado"] + float(item["valor_descontado"]), 2)
+        por_unidade[unidade]["pendente"] = round(por_unidade[unidade]["pendente"] + float(item["pendente"]), 2)
 
         por_doutor.setdefault(doutor, {
             "doutor": doutor,
@@ -460,15 +416,9 @@ def gerar_resumo(dados: List[Dict[str, Any]]) -> Dict[str, Any]:
             "pendente": 0.0,
         })
         por_doutor[doutor]["quantidade"] += 1
-        por_doutor[doutor]["valor"] = round(
-            por_doutor[doutor]["valor"] + float(item["valor"]), 2
-        )
-        por_doutor[doutor]["descontado"] = round(
-            por_doutor[doutor]["descontado"] + float(item["valor_descontado"]), 2
-        )
-        por_doutor[doutor]["pendente"] = round(
-            por_doutor[doutor]["pendente"] + float(item["pendente"]), 2
-        )
+        por_doutor[doutor]["valor"] = round(por_doutor[doutor]["valor"] + float(item["valor"]), 2)
+        por_doutor[doutor]["descontado"] = round(por_doutor[doutor]["descontado"] + float(item["valor_descontado"]), 2)
+        por_doutor[doutor]["pendente"] = round(por_doutor[doutor]["pendente"] + float(item["pendente"]), 2)
 
     return {
         "competencia": competencia,
