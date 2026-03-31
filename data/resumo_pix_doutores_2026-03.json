@@ -1,10 +1,10 @@
 {
   "competencia": "2026-03",
-  "gerado_em": "2026-03-31T20:45:31.196275",
-  "quantidade_total": 692,
-  "valor_total": 95078.51,
+  "gerado_em": "2026-03-31T21:22:40.792750",
+  "quantidade_total": 694,
+  "valor_total": 95263.51,
   "valor_total_descontado": 10212.98,
-  "valor_total_pendente": 84865.53,
+  "valor_total_pendente": 85050.53,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -29,10 +29,10 @@
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 70,
-      "valor": 8725.0,
+      "quantidade": 71,
+      "valor": 8825.0,
       "descontado": 0.0,
-      "pendente": 8725.0
+      "pendente": 8825.0
     },
     {
       "unidade": "FloresDaCunha",
@@ -57,10 +57,10 @@
     },
     {
       "unidade": "Ssdocai",
-      "quantidade": 55,
-      "valor": 7330.0,
+      "quantidade": 56,
+      "valor": 7415.0,
       "descontado": 0.0,
-      "pendente": 7330.0
+      "pendente": 7415.0
     },
     {
       "unidade": "Veranopolis",
@@ -80,10 +80,10 @@
     },
     {
       "doutor": "1.Laura Luiza Cimolin",
-      "quantidade": 11,
-      "valor": 1166.0,
+      "quantidade": 12,
+      "valor": 1251.0,
       "descontado": 0.0,
-      "pendente": 1166.0
+      "pendente": 1251.0
     },
     {
       "doutor": "1.Naiane Pieta",
@@ -234,10 +234,10 @@
     },
     {
       "doutor": "Dra.Everlize Cipriani",
-      "quantidade": 16,
-      "valor": 2173.0,
+      "quantidade": 17,
+      "valor": 2273.0,
       "descontado": 0.0,
-      "pendente": 2173.0
+      "pendente": 2273.0
     },
     {
       "doutor": "Dra.Fernanda Zanella Sozo",
