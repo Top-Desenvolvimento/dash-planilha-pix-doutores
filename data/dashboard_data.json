@@ -1,131 +1,72 @@
 {
   "status": "ok",
+  "titulo_dashboard": "Painel Gerencial",
   "arquivo_origem": "pix_doutores.json",
-  "titulo_dashboard": "Dashboard PIX Doutores",
   "resumo": {
     "competencia": "2026-03",
-    "gerado_em": "2026-03-31T14:36:16.290119",
-    "quantidade_total": 4,
-    "valor_total": 753.0,
-    "valor_total_descontado": 0.0,
-    "valor_total_pendente": 753.0,
-    "por_unidade": [
-      {
-        "unidade": "Soledade",
-        "quantidade": 3,
-        "valor": 668.0,
-        "descontado": 0.0,
-        "pendente": 668.0
-      },
-      {
-        "unidade": "Ssdocai",
-        "quantidade": 1,
-        "valor": 85.0,
-        "descontado": 0.0,
-        "pendente": 85.0
-      }
-    ],
-    "por_doutor": [
-      {
-        "doutor": "",
-        "quantidade": 4,
-        "valor": 753.0,
-        "descontado": 0.0,
-        "pendente": 753.0
-      }
-    ]
+    "gerado_em": "2026-03-31T17:22:50.023554",
+    "quantidade_total": 0,
+    "valor_total": 0,
+    "valor_total_descontado": 0,
+    "valor_total_pendente": 0,
+    "por_unidade": [],
+    "por_doutor": []
   },
   "totais": {
-    "linhas_validas": 4,
-    "linhas_com_erro": 0
+    "linhas_validas": 0,
+    "linhas_com_erro": 8
   },
-  "registros": [
+  "registros": [],
+  "erros": [
     {
-      "unidade": "Soledade",
-      "data": "31/03/2026",
+      "unidade": "Caxias",
       "competencia": "2026-03",
-      "metodo_pagamento": "Pix Doutores",
-      "doutor_lido": "",
-      "doutor_final": "",
-      "doutor_encontrado": false,
-      "paciente": "Recebido de Emanuelly Prates de Bairros (C) Pago por: Rodrigo Moraes Prates",
-      "codigo_origem": "7857",
-      "parcela": "20/48",
-      "origem": "Recebido de Emanuelly Prates de Bairros (C) (7857) (Parcela 20/48) Pago por: Rodrigo Moraes Prates",
-      "valor": 105.0,
-      "valor_com_descontos": 105.0,
-      "credito_antes": 0.0,
-      "valor_descontado": 0.0,
-      "credito_depois": 0.0,
-      "pendente": 105.0,
-      "linha_original": "31/03/2026\tPix Doutores\n\tRecebido de Emanuelly Prates de Bairros (C) (7857) (Parcela 20/48) Pago por: Rodrigo Moraes Prates\t105,00 C\t105,00 C\t1\t\t\t510,00\t503,29",
-      "coletado_em": "2026-03-31T14:35:45.688571"
+      "erro": "Campos de data do período não encontrados.",
+      "coletado_em": "2026-03-31T17:22:05.707669"
+    },
+    {
+      "unidade": "Farroupilha",
+      "competencia": "2026-03",
+      "erro": "Campos de data do período não encontrados.",
+      "coletado_em": "2026-03-31T17:22:11.699541"
+    },
+    {
+      "unidade": "Bento",
+      "competencia": "2026-03",
+      "erro": "Campos de data do período não encontrados.",
+      "coletado_em": "2026-03-31T17:22:18.090590"
+    },
+    {
+      "unidade": "Encantado",
+      "competencia": "2026-03",
+      "erro": "Campos de data do período não encontrados.",
+      "coletado_em": "2026-03-31T17:22:24.023015"
     },
     {
       "unidade": "Soledade",
-      "data": "31/03/2026",
       "competencia": "2026-03",
-      "metodo_pagamento": "Pix Doutores",
-      "doutor_lido": "",
-      "doutor_final": "",
-      "doutor_encontrado": false,
-      "paciente": "Recebido de Mirângela Morais Prates (C) Pago por: Rodrigo Moraes Prates",
-      "codigo_origem": "2819",
-      "parcela": "20/48",
-      "origem": "Recebido de Mirângela Morais Prates (C) (2819) (Parcela 20/48) Pago por: Rodrigo Moraes Prates",
-      "valor": 105.0,
-      "valor_com_descontos": 105.0,
-      "credito_antes": 0.0,
-      "valor_descontado": 0.0,
-      "credito_depois": 0.0,
-      "pendente": 105.0,
-      "linha_original": "31/03/2026\tPix Doutores\n\tRecebido de Mirângela Morais Prates (C) (2819) (Parcela 20/48) Pago por: Rodrigo Moraes Prates\t105,00 C\t105,00 C\t1\t\t\t615,00\t608,29",
-      "coletado_em": "2026-03-31T14:35:45.701753"
+      "erro": "Campos de data do período não encontrados.",
+      "coletado_em": "2026-03-31T17:22:30.435037"
     },
     {
-      "unidade": "Soledade",
-      "data": "31/03/2026",
+      "unidade": "Garibaldi",
       "competencia": "2026-03",
-      "metodo_pagamento": "Pix Doutores",
-      "doutor_lido": "",
-      "doutor_final": "",
-      "doutor_encontrado": false,
-      "paciente": "Recebido de Jorge Luis Castro Perez Pago por: O paciente",
-      "codigo_origem": "11992",
-      "parcela": "1/1",
-      "origem": "Recebido de Jorge Luis Castro Perez (11992) (Parcela 1/1) Pago por: O paciente",
-      "valor": 458.0,
-      "valor_com_descontos": 458.0,
-      "credito_antes": 0.0,
-      "valor_descontado": 0.0,
-      "credito_depois": 0.0,
-      "pendente": 458.0,
-      "linha_original": "31/03/2026\tPix Doutores\n\tRecebido de Jorge Luis Castro Perez (11992) (Parcela 1/1) Pago por: O paciente\t458,00 C\t458,00 C\t1\t\t\t2.112,00\t2.018,84",
-      "coletado_em": "2026-03-31T14:35:45.806027"
+      "erro": "Campos de data do período não encontrados.",
+      "coletado_em": "2026-03-31T17:22:36.788805"
+    },
+    {
+      "unidade": "Veranopolis",
+      "competencia": "2026-03",
+      "erro": "Campos de data do período não encontrados.",
+      "coletado_em": "2026-03-31T17:22:42.929079"
     },
     {
       "unidade": "Ssdocai",
-      "data": "31/03/2026",
       "competencia": "2026-03",
-      "metodo_pagamento": "Pix Doutores",
-      "doutor_lido": "",
-      "doutor_final": "",
-      "doutor_encontrado": false,
-      "paciente": "Recebido de Djenifer Andrade De Vargas F Pago por: O paciente",
-      "codigo_origem": "41179",
-      "parcela": "12/48",
-      "origem": "Recebido de Djenifer Andrade De Vargas F (41179) (Parcela 12/48) Pago por: O paciente",
-      "valor": 85.0,
-      "valor_com_descontos": 85.0,
-      "credito_antes": 0.0,
-      "valor_descontado": 0.0,
-      "credito_depois": 0.0,
-      "pendente": 85.0,
-      "linha_original": "31/03/2026\tPix Doutores\n\tRecebido de Djenifer Andrade De Vargas F (41179) (Parcela 12/48) Pago por: O paciente\t85,00 C\t85,00 C\t1\t\tpix doutores\t85,00\t85,00",
-      "coletado_em": "2026-03-31T14:36:16.219048"
+      "erro": "Campos de data do período não encontrados.",
+      "coletado_em": "2026-03-31T17:22:49.981399"
     }
   ],
-  "erros": [],
   "saldos_doutores": [
     {
       "doutor": "Adriele da Silva",
