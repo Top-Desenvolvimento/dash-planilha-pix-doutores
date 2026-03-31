@@ -1,0 +1,426 @@
+from __future__ import annotations
+
+import json
+import re
+from datetime import datetime, date
+from pathlib import Path
+from typing import List, Dict, Any, Optional
+
+from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError
+
+from regras_doutores import montar_mapa_creditos, aplicar_desconto, listar_saldos_finais
+
+
+USUARIO = "MANUS"
+SENHA = "MANUS2026"
+
+SISTEMAS = [
+    {"unidade": "Caxias", "url": "http://caxias.topesteticabucal.com.br/sistema"},
+    {"unidade": "Farroupilha", "url": "http://farroupilha.topesteticabucal.com.br/sistema"},
+    {"unidade": "Bento", "url": "http://bento.topesteticabucal.com.br/sistema"},
+    {"unidade": "Encantado", "url": "http://encantado.topesteticabucal.com.br/sistema"},
+    {"unidade": "Soledade", "url": "http://soledade.topesteticabucal.com.br/sistema"},
+    {"unidade": "Garibaldi", "url": "http://garibaldi.topesteticabucal.com.br/sistema"},
+    {"unidade": "Veranopolis", "url": "http://veranopolis.topesteticabucal.com.br/sistema"},
+    {"unidade": "Ssdocai", "url": "http://ssdocai.topesteticabucal.com.br/sistema"},
+]
+
+PASTA_DATA = Path("data")
+ARQUIVO_PIX = PASTA_DATA / "pix_doutores.json"
+ARQUIVO_SALDOS = PASTA_DATA / "saldos_doutores.json"
+ARQUIVO_RESUMO = PASTA_DATA / "resumo_pix_doutores.json"
+
+
+def parse_valor(texto: str) -> float:
+    texto = (texto or "").strip()
+
+    if not texto:
+        return 0.0
+
+    texto = texto.replace("R$", "").replace(".", "").replace(",", ".")
+    texto = re.sub(r"[^\d.\-]", "", texto)
+
+    try:
+        return round(float(texto), 2)
+    except ValueError:
+        return 0.0
+
+
+def salvar_json(dados: Any, caminho: Path) -> None:
+    caminho.parent.mkdir(parents=True, exist_ok=True)
+    with open(caminho, "w", encoding="utf-8") as f:
+        json.dump(dados, f, ensure_ascii=False, indent=2)
+
+
+def primeiro_dia_mes_atual() -> str:
+    hoje = date.today()
+    return hoje.replace(day=1).strftime("%d/%m/%Y")
+
+
+def ultimo_dia_mes_atual() -> str:
+    hoje = date.today()
+    if hoje.month == 12:
+        proximo_mes = hoje.replace(year=hoje.year + 1, month=1, day=1)
+    else:
+        proximo_mes = hoje.replace(month=hoje.month + 1, day=1)
+    ultimo = proximo_mes.fromordinal(proximo_mes.toordinal() - 1)
+    return ultimo.strftime("%d/%m/%Y")
+
+
+def preencher_primeiro_seletor_existente(page, seletores: List[str], valor: str) -> bool:
+    for seletor in seletores:
+        try:
+            locator = page.locator(seletor)
+            if locator.count() > 0 and locator.first.is_visible():
+                locator.first.fill(valor)
+                return True
+        except Exception:
+            continue
+    return False
+
+
+def clicar_primeiro_existente(page, seletores: List[str]) -> bool:
+    for seletor in seletores:
+        try:
+            locator = page.locator(seletor)
+            if locator.count() > 0 and locator.first.is_visible():
+                locator.first.click()
+                return True
+        except Exception:
+            continue
+    return False
+
+
+def fazer_login(page, url: str) -> None:
+    page.goto(url, wait_until="domcontentloaded", timeout=60000)
+
+    preenchido_usuario = preencher_primeiro_seletor_existente(page, [
+        'input[name="login"]',
+        'input[name="usuario"]',
+        '#login',
+        '#usuario',
+        'input[type="text"]',
+    ], USUARIO)
+
+    if not preenchido_usuario:
+        raise RuntimeError("Campo de usuário não encontrado.")
+
+    preenchido_senha = preencher_primeiro_seletor_existente(page, [
+        'input[name="senha"]',
+        '#senha',
+        'input[type="password"]',
+    ], SENHA)
+
+    if not preenchido_senha:
+        raise RuntimeError("Campo de senha não encontrado.")
+
+    clicou = clicar_primeiro_existente(page, [
+        'button[type="submit"]',
+        'input[type="submit"]',
+        'button:has-text("Entrar")',
+        'button:has-text("Login")',
+        'a:has-text("Entrar")',
+    ])
+
+    if not clicou:
+        raise RuntimeError("Botão de login não encontrado.")
+
+    page.wait_for_load_state("networkidle", timeout=60000)
+
+
+def acessar_demonstrativo(page) -> None:
+    clicou_financas = clicar_primeiro_existente(page, [
+        'text="FINANÇAS"',
+        'text="Finanças"',
+        'a:has-text("FINANÇAS")',
+        'a:has-text("Finanças")',
+    ])
+    if not clicou_financas:
+        raise RuntimeError("Menu Finanças não encontrado.")
+
+    page.wait_for_timeout(1000)
+
+    clicou_demonstrativo = clicar_primeiro_existente(page, [
+        'text="Demonstrativo de Resultado"',
+        'text="Demonstrativo de Resultados"',
+        'a:has-text("Demonstrativo de Resultado")',
+        'a:has-text("Demonstrativo de Resultados")',
+    ])
+    if not clicou_demonstrativo:
+        raise RuntimeError("Tela Demonstrativo de Resultado não encontrada.")
+
+    page.wait_for_load_state("networkidle", timeout=60000)
+    page.wait_for_timeout(1500)
+
+    data_inicio = primeiro_dia_mes_atual()
+    data_fim = ultimo_dia_mes_atual()
+
+    inputs_data = page.locator('input[type="text"]')
+    encontrados = 0
+
+    for i in range(inputs_data.count()):
+        try:
+            valor_atual = inputs_data.nth(i).input_value().strip()
+            if re.match(r"\d{2}/\d{2}/\d{4}", valor_atual):
+                if encontrados == 0:
+                    inputs_data.nth(i).fill(data_inicio)
+                    encontrados += 1
+                elif encontrados == 1:
+                    inputs_data.nth(i).fill(data_fim)
+                    encontrados += 1
+                    break
+        except Exception:
+            continue
+
+    clicou_buscar = clicar_primeiro_existente(page, [
+        'button:has-text("Buscar")',
+        'input[value="Buscar"]',
+        'text="Buscar"',
+    ])
+
+    if not clicou_buscar:
+        raise RuntimeError("Botão Buscar não encontrado.")
+
+    page.wait_for_load_state("networkidle", timeout=60000)
+    page.wait_for_timeout(3000)
+
+
+def linha_eh_pix_doutores(metodo_raw: str) -> bool:
+    return "pix doutores" in (metodo_raw or "").lower()
+
+
+def extrair_nome_doutor_do_metodo(metodo_raw: str) -> str:
+    linhas = [l.strip() for l in (metodo_raw or "").split("\n") if l.strip()]
+
+    if not linhas:
+        return ""
+
+    ignorar_prefixos = [
+        "pix doutores",
+        "maquina",
+    ]
+
+    candidatos = []
+    for linha in linhas:
+        linha_lower = linha.lower()
+        if any(linha_lower.startswith(prefixo) for prefixo in ignorar_prefixos):
+            continue
+        candidatos.append(linha)
+
+    if candidatos:
+        return candidatos[0]
+
+    if len(linhas) > 1:
+        return linhas[1]
+
+    return ""
+
+
+def extrair_info_origem(origem_raw: str) -> Dict[str, Any]:
+    texto = (origem_raw or "").strip()
+
+    paciente = texto
+    parcela = ""
+    codigo = ""
+
+    match_codigo = re.search(r"\((\d+)\)", texto)
+    if match_codigo:
+        codigo = match_codigo.group(1)
+
+    match_parcela = re.search(r"\(Parcela\s+([^)]+)\)", texto, flags=re.IGNORECASE)
+    if match_parcela:
+        parcela = match_parcela.group(1)
+
+    paciente = re.sub(r"\(\d+\)", "", paciente).strip()
+    paciente = re.sub(r"\(Parcela\s+[^)]+\)", "", paciente, flags=re.IGNORECASE).strip()
+    paciente = re.sub(r"\s+", " ", paciente).strip()
+
+    return {
+        "origem_completa": texto,
+        "paciente": paciente,
+        "codigo_origem": codigo,
+        "parcela": parcela,
+    }
+
+
+def interpretar_linha(linha, unidade: str, mapa_creditos: Dict[str, Dict[str, Any]]) -> Optional[Dict[str, Any]]:
+    colunas = linha.locator("td")
+    qtd_colunas = colunas.count()
+
+    if qtd_colunas < 5:
+        return None
+
+    try:
+        data = colunas.nth(0).inner_text().strip()
+        metodo_raw = colunas.nth(1).inner_text().strip()
+        origem_raw = colunas.nth(2).inner_text().strip()
+        valor_texto = colunas.nth(3).inner_text().strip()
+        valor_desc_texto = colunas.nth(4).inner_text().strip()
+        linha_original = linha.inner_text().strip()
+    except Exception:
+        return None
+
+    if not linha_eh_pix_doutores(metodo_raw):
+        return None
+
+    nome_doutor = extrair_nome_doutor_do_metodo(metodo_raw)
+    valor = parse_valor(valor_texto)
+    valor_com_descontos = parse_valor(valor_desc_texto)
+    info_origem = extrair_info_origem(origem_raw)
+    desconto = aplicar_desconto(mapa_creditos, nome_doutor, valor)
+
+    return {
+        "unidade": unidade,
+        "data": data,
+        "competencia": datetime.now().strftime("%Y-%m"),
+        "metodo_pagamento": "Pix Doutores",
+        "doutor_lido": nome_doutor,
+        "doutor_final": desconto["nome_padronizado"],
+        "doutor_encontrado": desconto["doutor_encontrado"],
+        "paciente": info_origem["paciente"],
+        "codigo_origem": info_origem["codigo_origem"],
+        "parcela": info_origem["parcela"],
+        "origem": info_origem["origem_completa"],
+        "valor": valor,
+        "valor_com_descontos": valor_com_descontos,
+        "credito_antes": desconto["credito_antes"],
+        "valor_descontado": desconto["valor_descontado"],
+        "credito_depois": desconto["credito_depois"],
+        "pendente": desconto["pendente"],
+        "linha_original": linha_original,
+        "coletado_em": datetime.now().isoformat(),
+    }
+
+
+def extrair_linhas_pix(page, unidade: str, mapa_creditos: Dict[str, Dict[str, Any]]) -> List[Dict[str, Any]]:
+    resultados: List[Dict[str, Any]] = []
+    tabelas = page.locator("table")
+
+    total_tabelas = tabelas.count()
+    if total_tabelas == 0:
+        raise RuntimeError("Nenhuma tabela encontrada na tela.")
+
+    for i in range(total_tabelas):
+        tabela = tabelas.nth(i)
+        linhas = tabela.locator("tr")
+        qtd_linhas = linhas.count()
+
+        for j in range(qtd_linhas):
+            linha = linhas.nth(j)
+            registro = interpretar_linha(linha, unidade, mapa_creditos)
+            if registro:
+                resultados.append(registro)
+
+    return resultados
+
+
+def processar_unidade(browser, sistema: Dict[str, str], mapa_creditos: Dict[str, Dict[str, Any]]) -> List[Dict[str, Any]]:
+    unidade = sistema["unidade"]
+    url = sistema["url"]
+    print(f"[INFO] Processando unidade: {unidade}")
+
+    context = browser.new_context()
+    page = context.new_page()
+
+    try:
+        fazer_login(page, url)
+        acessar_demonstrativo(page)
+        resultados = extrair_linhas_pix(page, unidade, mapa_creditos)
+        print(f"[INFO] {unidade}: {len(resultados)} linha(s) PIX DOUTORES encontrada(s).")
+        return resultados
+
+    except PlaywrightTimeoutError:
+        print(f"[ERRO] Timeout na unidade {unidade}")
+        return [{
+            "unidade": unidade,
+            "erro": "Timeout ao acessar sistema",
+            "coletado_em": datetime.now().isoformat(),
+        }]
+    except Exception as e:
+        print(f"[ERRO] Falha na unidade {unidade}: {e}")
+        return [{
+            "unidade": unidade,
+            "erro": str(e),
+            "coletado_em": datetime.now().isoformat(),
+        }]
+    finally:
+        context.close()
+
+
+def gerar_resumo(dados: List[Dict[str, Any]]) -> Dict[str, Any]:
+    validos = [d for d in dados if "erro" not in d]
+
+    total_valor = round(sum(float(d.get("valor", 0.0)) for d in validos), 2)
+    total_descontado = round(sum(float(d.get("valor_descontado", 0.0)) for d in validos), 2)
+    total_pendente = round(sum(float(d.get("pendente", 0.0)) for d in validos), 2)
+
+    por_unidade: Dict[str, Dict[str, Any]] = {}
+    por_doutor: Dict[str, Dict[str, Any]] = {}
+
+    for item in validos:
+        unidade = item["unidade"]
+        doutor = item["doutor_final"]
+
+        por_unidade.setdefault(unidade, {
+            "unidade": unidade,
+            "quantidade": 0,
+            "valor": 0.0,
+            "descontado": 0.0,
+            "pendente": 0.0,
+        })
+        por_unidade[unidade]["quantidade"] += 1
+        por_unidade[unidade]["valor"] = round(por_unidade[unidade]["valor"] + float(item["valor"]), 2)
+        por_unidade[unidade]["descontado"] = round(por_unidade[unidade]["descontado"] + float(item["valor_descontado"]), 2)
+        por_unidade[unidade]["pendente"] = round(por_unidade[unidade]["pendente"] + float(item["pendente"]), 2)
+
+        por_doutor.setdefault(doutor, {
+            "doutor": doutor,
+            "quantidade": 0,
+            "valor": 0.0,
+            "descontado": 0.0,
+            "pendente": 0.0,
+        })
+        por_doutor[doutor]["quantidade"] += 1
+        por_doutor[doutor]["valor"] = round(por_doutor[doutor]["valor"] + float(item["valor"]), 2)
+        por_doutor[doutor]["descontado"] = round(por_doutor[doutor]["descontado"] + float(item["valor_descontado"]), 2)
+        por_doutor[doutor]["pendente"] = round(por_doutor[doutor]["pendente"] + float(item["pendente"]), 2)
+
+    return {
+        "competencia": datetime.now().strftime("%Y-%m"),
+        "gerado_em": datetime.now().isoformat(),
+        "quantidade_total": len(validos),
+        "valor_total": total_valor,
+        "valor_total_descontado": total_descontado,
+        "valor_total_pendente": total_pendente,
+        "por_unidade": sorted(por_unidade.values(), key=lambda x: x["unidade"].lower()),
+        "por_doutor": sorted(por_doutor.values(), key=lambda x: x["doutor"].lower()),
+    }
+
+
+def main() -> None:
+    mapa_creditos = montar_mapa_creditos()
+    todos_resultados: List[Dict[str, Any]] = []
+
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True)
+
+        for sistema in SISTEMAS:
+            resultados = processar_unidade(browser, sistema, mapa_creditos)
+            todos_resultados.extend(resultados)
+
+        browser.close()
+
+    resumo = gerar_resumo(todos_resultados)
+    saldos_finais = listar_saldos_finais(mapa_creditos)
+
+    salvar_json(todos_resultados, ARQUIVO_PIX)
+    salvar_json(saldos_finais, ARQUIVO_SALDOS)
+    salvar_json(resumo, ARQUIVO_RESUMO)
+
+    print(f"[OK] Arquivo gerado: {ARQUIVO_PIX}")
+    print(f"[OK] Arquivo gerado: {ARQUIVO_SALDOS}")
+    print(f"[OK] Arquivo gerado: {ARQUIVO_RESUMO}")
+
+
+if __name__ == "__main__":
+    main()
