@@ -35,6 +35,8 @@ def main() -> None:
 
     dashboard = {
         "status": "ok",
+        "arquivo_origem": ARQUIVO_PIX.name,
+        "titulo_dashboard": "Dashboard PIX Doutores",
         "resumo": resumo,
         "totais": {
             "linhas_validas": len(registros_validos),
