@@ -7,17 +7,17 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <div class="app">
+  <div class="layout">
     <aside class="sidebar">
       <div class="brand">
-        <div class="brand-logo">T</div>
-        <div>
+        <div class="brand-icon">T</div>
+        <div class="brand-text">
           <h1>PIX Doutores</h1>
           <p>Top Estética Bucal</p>
         </div>
       </div>
 
-      <div class="panel">
+      <section class="sidebar-card">
         <h2>Filtros</h2>
 
         <label for="filtroMes">Mês</label>
@@ -35,52 +35,61 @@
           <option value="">Todos</option>
         </select>
 
-        <button id="btnLimpar" class="btn btn-secundario">Limpar filtros</button>
-        <button id="btnExportar" class="btn btn-primario">Exportar CSV</button>
-      </div>
+        <div class="sidebar-actions">
+          <button id="btnLimpar" class="btn btn-secondary">Limpar filtros</button>
+          <button id="btnExportar" class="btn btn-primary">Exportar CSV</button>
+        </div>
+      </section>
 
-      <div class="panel legenda">
+      <section class="sidebar-card">
         <h2>Legenda</h2>
-        <div class="legenda-item">
-          <span class="dot verde"></span>
+
+        <div class="legend-item">
+          <span class="legend-dot dot-green"></span>
           <span>Baixa utilização</span>
         </div>
-        <div class="legenda-item">
-          <span class="dot amarelo"></span>
+
+        <div class="legend-item">
+          <span class="legend-dot dot-yellow"></span>
           <span>50% ou mais</span>
         </div>
-        <div class="legenda-item">
-          <span class="dot vermelho"></span>
+
+        <div class="legend-item">
+          <span class="legend-dot dot-red"></span>
           <span>100% ou mais</span>
         </div>
-      </div>
+      </section>
     </aside>
 
-    <main class="content">
-      <header class="header">
+    <main class="main">
+      <header class="hero">
         <div>
           <h2 id="tituloDashboard">Painel Gerencial</h2>
           <p id="subtituloDashboard">Acompanhamento mensal de crédito PIX por doutor</p>
         </div>
-        <div class="badge" id="badgeCompetencia">Competência</div>
+
+        <div class="hero-badges">
+          <span class="badge" id="badgeCompetencia">Competência</span>
+          <span class="badge badge-muted" id="badgeArquivo">Arquivo</span>
+        </div>
       </header>
 
-      <section class="card">
-        <div class="card-header">
+      <section class="panel">
+        <div class="panel-head">
           <div>
             <h3>Visão Geral</h3>
             <p>Indicadores consolidados do período selecionado</p>
           </div>
         </div>
 
-        <div class="stats" id="cardsResumo"></div>
+        <div class="stats-grid" id="cardsResumo"></div>
       </section>
 
-      <section class="card">
-        <div class="card-header">
+      <section class="panel">
+        <div class="panel-head">
           <div>
             <h3>Resumo por Doutor</h3>
-            <p>Crédito, utilização, saldo, percentual e status</p>
+            <p>Crédito autorizado, uso, saldo, percentual e status</p>
           </div>
         </div>
 
@@ -89,7 +98,7 @@
             <thead>
               <tr>
                 <th>Doutor</th>
-                <th>Crédito autorizado</th>
+                <th>Crédito inicial</th>
                 <th>Total utilizado</th>
                 <th>Saldo restante</th>
                 <th>% utilizado</th>
@@ -101,11 +110,11 @@
         </div>
       </section>
 
-      <section class="card">
-        <div class="card-header">
+      <section class="panel">
+        <div class="panel-head">
           <div>
             <h3>Resumo por Unidade</h3>
-            <p>Consolidação por clínica/unidade</p>
+            <p>Consolidação de lançamentos por unidade</p>
           </div>
         </div>
 
@@ -125,11 +134,11 @@
         </div>
       </section>
 
-      <section class="card">
-        <div class="card-header">
+      <section class="panel">
+        <div class="panel-head">
           <div>
             <h3>Lançamentos PIX do Mês</h3>
-            <p>Detalhamento dos registros coletados</p>
+            <p>Detalhamento completo dos registros coletados</p>
           </div>
         </div>
 
@@ -147,6 +156,28 @@
               </tr>
             </thead>
             <tbody id="tabelaRegistros"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <div>
+            <h3>Erros de Coleta</h3>
+            <p>Somente unidades com falha aparecem aqui</p>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Unidade</th>
+                <th>Erro</th>
+                <th>Data/Hora</th>
+              </tr>
+            </thead>
+            <tbody id="tabelaErros"></tbody>
           </table>
         </div>
       </section>
