@@ -1,10 +1,10 @@
 {
   "competencia": "2026-03",
-  "gerado_em": "2026-03-31T17:52:49.548868",
-  "quantidade_total": 608,
-  "valor_total": 84294.51,
+  "gerado_em": "2026-03-31T19:34:01.538903",
+  "quantidade_total": 610,
+  "valor_total": 84464.51,
   "valor_total_descontado": 4833.9,
-  "valor_total_pendente": 79460.61,
+  "valor_total_pendente": 79630.61,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -15,10 +15,10 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 122,
-      "valor": 19269.45,
+      "quantidade": 123,
+      "valor": 19354.45,
       "descontado": 4833.9,
-      "pendente": 14435.55
+      "pendente": 14520.55
     },
     {
       "unidade": "Encantado",
@@ -50,10 +50,10 @@
     },
     {
       "unidade": "Ssdocai",
-      "quantidade": 53,
-      "valor": 7160.0,
+      "quantidade": 54,
+      "valor": 7245.0,
       "descontado": 0.0,
-      "pendente": 7160.0
+      "pendente": 7245.0
     },
     {
       "unidade": "Veranopolis",
@@ -66,10 +66,10 @@
   "por_doutor": [
     {
       "doutor": "",
-      "quantidade": 486,
-      "valor": 65025.06,
+      "quantidade": 487,
+      "valor": 65110.06,
       "descontado": 0.0,
-      "pendente": 65025.06
+      "pendente": 65110.06
     },
     {
       "doutor": "1.Franciele Pedrotti",
@@ -87,10 +87,10 @@
     },
     {
       "doutor": "5.Thalia Vezzosi",
-      "quantidade": 14,
-      "valor": 2091.5,
+      "quantidade": 15,
+      "valor": 2176.5,
       "descontado": 0.0,
-      "pendente": 2091.5
+      "pendente": 2176.5
     },
     {
       "doutor": "CIR.Dionathan Paim Pohlmann",
