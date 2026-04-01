@@ -73,8 +73,6 @@ def normalizar_resumos_por_competencia(
                 saida[chave] = resumo or {}
 
     elif isinstance(resumos_brutos, list):
-        # formato antigo não tem resumo por competência
-        # mantém vazio e a tela calcula pelo registro
         pass
 
     return saida
@@ -94,8 +92,6 @@ def normalizar_saldos_por_competencia(
                 saida[chave] = saldos
 
     elif isinstance(saldos_brutos, list):
-        # formato antigo: uma lista única de saldos
-        # joga no mês padrão/fallback para não quebrar a dashboard
         if competencia_padrao_fallback in saida:
             saida[competencia_padrao_fallback] = saldos_brutos
 
