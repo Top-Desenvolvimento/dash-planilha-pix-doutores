@@ -32,6 +32,7 @@ PASTA_DATA = Path("data")
 ARQUIVO_PIX = PASTA_DATA / "pix_doutores.json"
 ARQUIVO_SALDOS = PASTA_DATA / "saldos_doutores.json"
 ARQUIVO_RESUMO = PASTA_DATA / "resumo_pix_doutores.json"
+ARQUIVO_ERROS = PASTA_DATA / "erros_pix_doutores.json"
 
 
 def parse_valor(texto: str) -> float:
@@ -123,44 +124,6 @@ def setar_valor_input(locator, valor: str) -> None:
     )
 
 
-def obter_inputs_visiveis_texto(page):
-    inputs = page.locator("input")
-    visiveis = []
-
-    for i in range(inputs.count()):
-        try:
-            loc = inputs.nth(i)
-            if not loc.is_visible():
-                continue
-
-            tipo = (loc.get_attribute("type") or "text").lower()
-            if tipo in ["hidden", "submit", "button", "checkbox", "radio", "file"]:
-                continue
-
-            visiveis.append(loc)
-        except Exception:
-            continue
-
-    return visiveis
-
-
-def preencher_periodo_competencia(page, competencia: str) -> None:
-    data_inicio, data_fim = obter_datas_competencia(competencia)
-    visiveis = obter_inputs_visiveis_texto(page)
-
-    if len(visiveis) < 2:
-        raise RuntimeError("Campos de data do período não encontrados.")
-
-    # Conforme o layout do sistema, os 2 últimos inputs visíveis do filtro são as datas
-    campo_inicio = visiveis[-2]
-    campo_fim = visiveis[-1]
-
-    setar_valor_input(campo_inicio, data_inicio)
-    setar_valor_input(campo_fim, data_fim)
-
-    page.wait_for_timeout(800)
-
-
 def fazer_login(page, url: str) -> None:
     page.goto(url, wait_until="domcontentloaded", timeout=60000)
 
@@ -199,7 +162,7 @@ def fazer_login(page, url: str) -> None:
     page.wait_for_timeout(1500)
 
 
-def acessar_demonstrativo(page) -> None:
+def abrir_demonstrativo(page) -> None:
     clicou_financas = clicar_primeiro_existente(page, [
         'text="FINANÇAS"',
         'text="Finanças"',
@@ -224,8 +187,73 @@ def acessar_demonstrativo(page) -> None:
     page.wait_for_timeout(2500)
 
 
+def localizar_campos_periodo(page):
+    # estratégia 1: inputs com valor em formato de data
+    inputs = page.locator("input")
+    candidatos = []
+
+    for i in range(inputs.count()):
+        try:
+            loc = inputs.nth(i)
+            if not loc.is_visible():
+                continue
+
+            tipo = (loc.get_attribute("type") or "text").lower()
+            if tipo in ["hidden", "submit", "button", "checkbox", "radio", "file"]:
+                continue
+
+            value = (loc.input_value() or "").strip()
+            placeholder = (loc.get_attribute("placeholder") or "").lower()
+            name = (loc.get_attribute("name") or "").lower()
+            id_attr = (loc.get_attribute("id") or "").lower()
+
+            if (
+                re.match(r"\d{2}/\d{2}/\d{4}", value)
+                or "data" in placeholder
+                or "data" in name
+                or "data" in id_attr
+                or "periodo" in placeholder
+                or "periodo" in name
+                or "periodo" in id_attr
+            ):
+                candidatos.append(loc)
+        except Exception:
+            continue
+
+    if len(candidatos) >= 2:
+        return candidatos[0], candidatos[1]
+
+    # estratégia 2: pegar os 2 últimos inputs visíveis
+    visiveis = []
+    for i in range(inputs.count()):
+        try:
+            loc = inputs.nth(i)
+            if not loc.is_visible():
+                continue
+
+            tipo = (loc.get_attribute("type") or "text").lower()
+            if tipo in ["hidden", "submit", "button", "checkbox", "radio", "file"]:
+                continue
+
+            visiveis.append(loc)
+        except Exception:
+            continue
+
+    if len(visiveis) >= 2:
+        return visiveis[-2], visiveis[-1]
+
+    raise RuntimeError("Campos de data do período não encontrados.")
+
+
 def buscar_competencia(page, competencia: str) -> None:
-    preencher_periodo_competencia(page, competencia)
+    data_inicio, data_fim = obter_datas_competencia(competencia)
+
+    campo_inicio, campo_fim = localizar_campos_periodo(page)
+
+    setar_valor_input(campo_inicio, data_inicio)
+    setar_valor_input(campo_fim, data_fim)
+
+    page.wait_for_timeout(800)
 
     clicou_buscar = clicar_primeiro_existente(page, [
         'button:has-text("Buscar")',
@@ -398,14 +426,16 @@ def processar_unidade(
 
     try:
         fazer_login(page, url)
-        acessar_demonstrativo(page)
 
         for competencia in competencias:
             try:
-                print(f"[INFO] {unidade} > competência {competencia}")
+                # reabre a tela para cada competência
+                abrir_demonstrativo(page)
                 buscar_competencia(page, competencia)
+
                 resultados = extrair_linhas_pix(page, unidade, mapas_creditos[competencia], competencia)
                 resultados_por_competencia[competencia].extend(resultados)
+
                 print(f"[INFO] {unidade} {competencia}: {len(resultados)} linha(s) PIX DOUTORES encontrada(s).")
             except Exception as e:
                 print(f"[ERRO] {unidade} {competencia}: {e}")
@@ -495,20 +525,10 @@ def salvar_arquivos_mensais(
     resumo: Dict[str, Any],
     erros: List[Dict[str, Any]],
 ) -> None:
-    arquivo_pix_mes = PASTA_DATA / f"pix_doutores_{competencia}.json"
-    arquivo_saldos_mes = PASTA_DATA / f"saldos_doutores_{competencia}.json"
-    arquivo_resumo_mes = PASTA_DATA / f"resumo_pix_doutores_{competencia}.json"
-    arquivo_erros_mes = PASTA_DATA / f"erros_pix_doutores_{competencia}.json"
-
-    salvar_json(resultados, arquivo_pix_mes)
-    salvar_json(saldos_finais, arquivo_saldos_mes)
-    salvar_json(resumo, arquivo_resumo_mes)
-    salvar_json(erros, arquivo_erros_mes)
-
-    print(f"[OK] Arquivo mensal gerado: {arquivo_pix_mes}")
-    print(f"[OK] Arquivo mensal gerado: {arquivo_saldos_mes}")
-    print(f"[OK] Arquivo mensal gerado: {arquivo_resumo_mes}")
-    print(f"[OK] Arquivo mensal gerado: {arquivo_erros_mes}")
+    salvar_json(resultados, PASTA_DATA / f"pix_doutores_{competencia}.json")
+    salvar_json(saldos_finais, PASTA_DATA / f"saldos_doutores_{competencia}.json")
+    salvar_json(resumo, PASTA_DATA / f"resumo_pix_doutores_{competencia}.json")
+    salvar_json(erros, PASTA_DATA / f"erros_pix_doutores_{competencia}.json")
 
 
 def main() -> None:
@@ -570,9 +590,13 @@ def main() -> None:
     salvar_json(todos_resultados, ARQUIVO_PIX)
     salvar_json(saldos_por_competencia, ARQUIVO_SALDOS)
     salvar_json(resumos_por_competencia, ARQUIVO_RESUMO)
-    salvar_json(todos_erros, PASTA_DATA / "erros_pix_doutores.json")
+    salvar_json(todos_erros, ARQUIVO_ERROS)
 
     print(f"[OK] Arquivo gerado: {ARQUIVO_PIX}")
     print(f"[OK] Arquivo gerado: {ARQUIVO_SALDOS}")
     print(f"[OK] Arquivo gerado: {ARQUIVO_RESUMO}")
-    print(f"[OK] Arquivo gerado: {PASTA_DATA / 'erros_pix_doutores.json'}")
+    print(f"[OK] Arquivo gerado: {ARQUIVO_ERROS}")
+
+
+if __name__ == "__main__":
+    main()
