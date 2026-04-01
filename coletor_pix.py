@@ -14,6 +14,7 @@ from regras_doutores import montar_mapa_creditos, aplicar_desconto, listar_saldo
 
 USUARIO = "MANUS"
 SENHA = "MANUS2026"
+ANO_REFERENCIA = 2026
 
 SISTEMAS = [
     {"unidade": "Caxias", "url": "http://caxias.topesteticabucal.com.br/sistema"},
@@ -54,22 +55,21 @@ def salvar_json(dados: Any, caminho: Path) -> None:
         json.dump(dados, f, ensure_ascii=False, indent=2)
 
 
-def obter_periodo_mes_referencia() -> Tuple[str, str, str]:
+def gerar_competencias_ano(ano: int) -> List[str]:
+    return [f"{ano}-{mes:02d}" for mes in range(1, 13)]
+
+
+def obter_datas_competencia(competencia: str) -> Tuple[str, str]:
+    ano, mes = map(int, competencia.split("-"))
+    ultimo_dia = calendar.monthrange(ano, mes)[1]
+    return f"01/{mes:02d}/{ano}", f"{ultimo_dia:02d}/{mes:02d}/{ano}"
+
+
+def obter_competencia_padrao() -> str:
     hoje = date.today()
-    ano = hoje.year
-    mes = hoje.month
-
-    primeiro_dia = f"01/{mes:02d}/{ano}"
-    ultimo_dia_num = calendar.monthrange(ano, mes)[1]
-    ultimo_dia = f"{ultimo_dia_num:02d}/{mes:02d}/{ano}"
-    competencia = f"{ano}-{mes:02d}"
-
-    return primeiro_dia, ultimo_dia, competencia
-
-
-def obter_competencia() -> str:
-    _, _, competencia = obter_periodo_mes_referencia()
-    return competencia
+    if hoje.year == ANO_REFERENCIA:
+        return f"{ANO_REFERENCIA}-{hoje.month:02d}"
+    return f"{ANO_REFERENCIA}-12"
 
 
 def preencher_primeiro_seletor_existente(page, seletores: List[str], valor: str) -> bool:
@@ -144,24 +144,21 @@ def obter_inputs_visiveis_texto(page):
     return visiveis
 
 
-def preencher_periodo_mes(page) -> str:
-    data_inicio, data_fim, competencia = obter_periodo_mes_referencia()
-
+def preencher_periodo_competencia(page, competencia: str) -> None:
+    data_inicio, data_fim = obter_datas_competencia(competencia)
     visiveis = obter_inputs_visiveis_texto(page)
 
     if len(visiveis) < 2:
         raise RuntimeError("Campos de data do período não encontrados.")
 
-    # no sistema, os dois últimos campos visíveis do filtro são o período
+    # Conforme o layout do sistema, os 2 últimos inputs visíveis do filtro são as datas
     campo_inicio = visiveis[-2]
     campo_fim = visiveis[-1]
 
     setar_valor_input(campo_inicio, data_inicio)
     setar_valor_input(campo_fim, data_fim)
 
-    page.wait_for_timeout(700)
-
-    return competencia
+    page.wait_for_timeout(800)
 
 
 def fazer_login(page, url: str) -> None:
@@ -202,7 +199,7 @@ def fazer_login(page, url: str) -> None:
     page.wait_for_timeout(1500)
 
 
-def acessar_demonstrativo(page) -> str:
+def acessar_demonstrativo(page) -> None:
     clicou_financas = clicar_primeiro_existente(page, [
         'text="FINANÇAS"',
         'text="Finanças"',
@@ -226,7 +223,9 @@ def acessar_demonstrativo(page) -> str:
     page.wait_for_load_state("networkidle", timeout=60000)
     page.wait_for_timeout(2500)
 
-    competencia = preencher_periodo_mes(page)
+
+def buscar_competencia(page, competencia: str) -> None:
+    preencher_periodo_competencia(page, competencia)
 
     clicou_buscar = clicar_primeiro_existente(page, [
         'button:has-text("Buscar")',
@@ -238,9 +237,7 @@ def acessar_demonstrativo(page) -> str:
         raise RuntimeError("Botão Buscar não encontrado.")
 
     page.wait_for_load_state("networkidle", timeout=60000)
-    page.wait_for_timeout(4000)
-
-    return competencia
+    page.wait_for_timeout(3500)
 
 
 def linha_eh_pix_doutores(metodo_raw: str) -> bool:
@@ -386,8 +383,11 @@ def extrair_linhas_pix(
 def processar_unidade(
     browser,
     sistema: Dict[str, str],
-    mapa_creditos: Dict[str, Dict[str, Any]]
-) -> List[Dict[str, Any]]:
+    competencias: List[str],
+    mapas_creditos: Dict[str, Dict[str, Dict[str, Any]]],
+    resultados_por_competencia: Dict[str, List[Dict[str, Any]]],
+    erros_por_competencia: Dict[str, List[Dict[str, Any]]],
+) -> None:
     unidade = sistema["unidade"]
     url = sistema["url"]
     print(f"[INFO] Processando unidade: {unidade}")
@@ -398,37 +398,48 @@ def processar_unidade(
 
     try:
         fazer_login(page, url)
-        competencia = acessar_demonstrativo(page)
-        resultados = extrair_linhas_pix(page, unidade, mapa_creditos, competencia)
-        print(f"[INFO] {unidade}: {len(resultados)} linha(s) PIX DOUTORES encontrada(s).")
-        return resultados
+        acessar_demonstrativo(page)
+
+        for competencia in competencias:
+            try:
+                print(f"[INFO] {unidade} > competência {competencia}")
+                buscar_competencia(page, competencia)
+                resultados = extrair_linhas_pix(page, unidade, mapas_creditos[competencia], competencia)
+                resultados_por_competencia[competencia].extend(resultados)
+                print(f"[INFO] {unidade} {competencia}: {len(resultados)} linha(s) PIX DOUTORES encontrada(s).")
+            except Exception as e:
+                print(f"[ERRO] {unidade} {competencia}: {e}")
+                erros_por_competencia[competencia].append({
+                    "unidade": unidade,
+                    "competencia": competencia,
+                    "erro": str(e),
+                    "coletado_em": datetime.now().isoformat(),
+                })
 
     except PlaywrightTimeoutError:
         print(f"[ERRO] Timeout na unidade {unidade}")
-        return [{
-            "unidade": unidade,
-            "competencia": obter_competencia(),
-            "erro": "Timeout ao acessar sistema",
-            "coletado_em": datetime.now().isoformat(),
-        }]
+        for competencia in competencias:
+            erros_por_competencia[competencia].append({
+                "unidade": unidade,
+                "competencia": competencia,
+                "erro": "Timeout ao acessar sistema",
+                "coletado_em": datetime.now().isoformat(),
+            })
     except Exception as e:
         print(f"[ERRO] Falha na unidade {unidade}: {e}")
-        return [{
-            "unidade": unidade,
-            "competencia": obter_competencia(),
-            "erro": str(e),
-            "coletado_em": datetime.now().isoformat(),
-        }]
+        for competencia in competencias:
+            erros_por_competencia[competencia].append({
+                "unidade": unidade,
+                "competencia": competencia,
+                "erro": str(e),
+                "coletado_em": datetime.now().isoformat(),
+            })
     finally:
         context.close()
 
 
-def gerar_resumo(dados: List[Dict[str, Any]]) -> Dict[str, Any]:
+def gerar_resumo(dados: List[Dict[str, Any]], competencia: str) -> Dict[str, Any]:
     validos = [d for d in dados if "erro" not in d]
-    competencia = obter_competencia()
-
-    if validos:
-        competencia = validos[0].get("competencia", competencia)
 
     total_valor = round(sum(float(d.get("valor", 0.0)) for d in validos), 2)
     total_descontado = round(sum(float(d.get("valor_descontado", 0.0)) for d in validos), 2)
@@ -478,51 +489,90 @@ def gerar_resumo(dados: List[Dict[str, Any]]) -> Dict[str, Any]:
 
 
 def salvar_arquivos_mensais(
+    competencia: str,
     resultados: List[Dict[str, Any]],
     saldos_finais: List[Dict[str, Any]],
-    resumo: Dict[str, Any]
+    resumo: Dict[str, Any],
+    erros: List[Dict[str, Any]],
 ) -> None:
-    competencia = resumo.get("competencia", obter_competencia())
-
     arquivo_pix_mes = PASTA_DATA / f"pix_doutores_{competencia}.json"
     arquivo_saldos_mes = PASTA_DATA / f"saldos_doutores_{competencia}.json"
     arquivo_resumo_mes = PASTA_DATA / f"resumo_pix_doutores_{competencia}.json"
+    arquivo_erros_mes = PASTA_DATA / f"erros_pix_doutores_{competencia}.json"
 
     salvar_json(resultados, arquivo_pix_mes)
     salvar_json(saldos_finais, arquivo_saldos_mes)
     salvar_json(resumo, arquivo_resumo_mes)
+    salvar_json(erros, arquivo_erros_mes)
 
     print(f"[OK] Arquivo mensal gerado: {arquivo_pix_mes}")
     print(f"[OK] Arquivo mensal gerado: {arquivo_saldos_mes}")
     print(f"[OK] Arquivo mensal gerado: {arquivo_resumo_mes}")
+    print(f"[OK] Arquivo mensal gerado: {arquivo_erros_mes}")
 
 
 def main() -> None:
-    mapa_creditos = montar_mapa_creditos()
-    todos_resultados: List[Dict[str, Any]] = []
+    competencias = gerar_competencias_ano(ANO_REFERENCIA)
+
+    mapas_creditos = {
+        competencia: montar_mapa_creditos()
+        for competencia in competencias
+    }
+
+    resultados_por_competencia: Dict[str, List[Dict[str, Any]]] = {
+        competencia: [] for competencia in competencias
+    }
+
+    erros_por_competencia: Dict[str, List[Dict[str, Any]]] = {
+        competencia: [] for competencia in competencias
+    }
 
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
 
         for sistema in SISTEMAS:
-            resultados = processar_unidade(browser, sistema, mapa_creditos)
-            todos_resultados.extend(resultados)
+            processar_unidade(
+                browser=browser,
+                sistema=sistema,
+                competencias=competencias,
+                mapas_creditos=mapas_creditos,
+                resultados_por_competencia=resultados_por_competencia,
+                erros_por_competencia=erros_por_competencia,
+            )
 
         browser.close()
 
-    resumo = gerar_resumo(todos_resultados)
-    saldos_finais = listar_saldos_finais(mapa_creditos)
+    todos_resultados: List[Dict[str, Any]] = []
+    resumos_por_competencia: Dict[str, Any] = {}
+    saldos_por_competencia: Dict[str, Any] = {}
+    todos_erros: List[Dict[str, Any]] = []
+
+    for competencia in competencias:
+        resultados = resultados_por_competencia[competencia]
+        erros = erros_por_competencia[competencia]
+        resumo = gerar_resumo(resultados, competencia)
+        saldos_finais = listar_saldos_finais(mapas_creditos[competencia])
+
+        resumos_por_competencia[competencia] = resumo
+        saldos_por_competencia[competencia] = saldos_finais
+
+        todos_resultados.extend(resultados)
+        todos_erros.extend(erros)
+
+        salvar_arquivos_mensais(
+            competencia=competencia,
+            resultados=resultados,
+            saldos_finais=saldos_finais,
+            resumo=resumo,
+            erros=erros,
+        )
 
     salvar_json(todos_resultados, ARQUIVO_PIX)
-    salvar_json(saldos_finais, ARQUIVO_SALDOS)
-    salvar_json(resumo, ARQUIVO_RESUMO)
-
-    salvar_arquivos_mensais(todos_resultados, saldos_finais, resumo)
+    salvar_json(saldos_por_competencia, ARQUIVO_SALDOS)
+    salvar_json(resumos_por_competencia, ARQUIVO_RESUMO)
+    salvar_json(todos_erros, PASTA_DATA / "erros_pix_doutores.json")
 
     print(f"[OK] Arquivo gerado: {ARQUIVO_PIX}")
     print(f"[OK] Arquivo gerado: {ARQUIVO_SALDOS}")
     print(f"[OK] Arquivo gerado: {ARQUIVO_RESUMO}")
-
-
-if __name__ == "__main__":
-    main()
+    print(f"[OK] Arquivo gerado: {PASTA_DATA / 'erros_pix_doutores.json'}")
