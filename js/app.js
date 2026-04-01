@@ -16,6 +16,26 @@ function escapeHtml(valor) {
     .replace(/'/g, "&#39;");
 }
 
+function formatarCompetenciaLabel(competencia) {
+  const mapa = {
+    "01": "Jan",
+    "02": "Fev",
+    "03": "Mar",
+    "04": "Abr",
+    "05": "Mai",
+    "06": "Jun",
+    "07": "Jul",
+    "08": "Ago",
+    "09": "Set",
+    "10": "Out",
+    "11": "Nov",
+    "12": "Dez"
+  };
+
+  const [ano, mes] = String(competencia || "").split("-");
+  return `${mapa[mes] || mes}/${ano || ""}`;
+}
+
 function obterPercentual(utilizado, creditoInicial) {
   const credito = Number(creditoInicial || 0);
   if (credito <= 0) return 0;
@@ -39,11 +59,15 @@ function preencherFiltros(data) {
   const filtroUnidade = document.getElementById("filtroUnidade");
   const filtroDoutor = document.getElementById("filtroDoutor");
 
-  const competencia = data?.resumo?.competencia || "";
-  filtroMes.innerHTML = `<option value="">Todos</option>`;
-  if (competencia) {
-    filtroMes.innerHTML += `<option value="${escapeHtml(competencia)}">${escapeHtml(competencia)}</option>`;
-    filtroMes.value = competencia;
+  const meses = data?.meses_disponiveis || [];
+  const competenciaPadrao = data?.competencia_padrao || "";
+
+  filtroMes.innerHTML = meses
+    .map(item => `<option value="${escapeHtml(item)}">${escapeHtml(formatarCompetenciaLabel(item))}</option>`)
+    .join("");
+
+  if (competenciaPadrao) {
+    filtroMes.value = competenciaPadrao;
   }
 
   const unidades = [...new Set((data.registros || []).map(item => item.unidade).filter(Boolean))].sort();
@@ -59,17 +83,24 @@ function preencherFiltros(data) {
 }
 
 function obterDadosFiltrados() {
-  const filtroMes = document.getElementById("filtroMes").value;
+  const competencia = document.getElementById("filtroMes").value;
   const filtroUnidade = document.getElementById("filtroUnidade").value;
   const filtroDoutor = document.getElementById("filtroDoutor").value;
 
   let registros = [...(dashboardData?.registros || [])];
-  let saldos = [...(dashboardData?.saldos_doutores || [])];
   let erros = [...(dashboardData?.erros || [])];
+  let saldos = [...(dashboardData?.saldos_por_competencia?.[competencia] || [])];
+  const resumo = dashboardData?.resumos_por_competencia?.[competencia] || {
+    quantidade_total: 0,
+    valor_total: 0,
+    valor_total_descontado: 0,
+    valor_total_pendente: 0,
+    por_unidade: [],
+    por_doutor: []
+  };
 
-  if (filtroMes) {
-    registros = registros.filter(item => String(item.competencia || "") === filtroMes);
-  }
+  registros = registros.filter(item => String(item.competencia || "") === competencia);
+  erros = erros.filter(item => String(item.competencia || "") === competencia);
 
   if (filtroUnidade) {
     registros = registros.filter(item => String(item.unidade || "") === filtroUnidade);
@@ -84,10 +115,10 @@ function obterDadosFiltrados() {
     saldos = saldos.filter(item => doutoresVisiveis.has(item.doutor));
   }
 
-  return { registros, saldos, erros };
+  return { competencia, resumo, registros, erros, saldos };
 }
 
-function renderCards(registros) {
+function renderCards(registros, competencia) {
   const alvo = document.getElementById("cardsResumo");
 
   const totalLancamentos = registros.length;
@@ -98,6 +129,10 @@ function renderCards(registros) {
   const totalDoutores = new Set(registros.map(item => item.doutor_final).filter(Boolean)).size;
 
   alvo.innerHTML = `
+    <div class="stat-card">
+      <div class="stat-title">Competência</div>
+      <div class="stat-value">${escapeHtml(formatarCompetenciaLabel(competencia))}</div>
+    </div>
     <div class="stat-card">
       <div class="stat-title">Lançamentos</div>
       <div class="stat-value">${totalLancamentos}</div>
@@ -115,12 +150,8 @@ function renderCards(registros) {
       <div class="stat-value">${formatarMoeda(totalPendente)}</div>
     </div>
     <div class="stat-card">
-      <div class="stat-title">Unidades</div>
-      <div class="stat-value">${totalUnidades}</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-title">Doutores</div>
-      <div class="stat-value">${totalDoutores}</div>
+      <div class="stat-title">Unidades / Doutores</div>
+      <div class="stat-value">${totalUnidades} / ${totalDoutores}</div>
     </div>
   `;
 }
@@ -228,11 +259,7 @@ function renderRegistros(registros) {
 
   tbody.innerHTML = registros
     .slice()
-    .sort((a, b) => {
-      const da = String(a.data || "");
-      const db = String(b.data || "");
-      return db.localeCompare(da);
-    })
+    .sort((a, b) => String(b.data || "").localeCompare(String(a.data || "")))
     .map(item => `
       <tr>
         <td>${escapeHtml(item.data)}</td>
@@ -266,16 +293,19 @@ function renderErros(erros) {
 }
 
 function atualizarTela() {
-  const { registros, saldos, erros } = obterDadosFiltrados();
-  renderCards(registros);
+  const { competencia, registros, erros, saldos } = obterDadosFiltrados();
+
+  renderCards(registros, competencia);
   renderResumoDoutor(registros, saldos);
   renderUnidades(registros);
   renderRegistros(registros);
   renderErros(erros);
+
+  document.getElementById("badgeCompetencia").textContent = formatarCompetenciaLabel(competencia);
 }
 
 function exportarCSV() {
-  const { registros } = obterDadosFiltrados();
+  const { registros, competencia } = obterDadosFiltrados();
 
   if (!registros.length) {
     alert("Não há dados para exportar.");
@@ -283,9 +313,11 @@ function exportarCSV() {
   }
 
   const headers = [
+    "competencia",
     "data",
     "unidade",
-    "doutor",
+    "responsavel_fiscal",
+    "doutor_final",
     "paciente",
     "valor",
     "valor_descontado",
@@ -293,8 +325,10 @@ function exportarCSV() {
   ];
 
   const rows = registros.map(item => [
+    item.competencia ?? "",
     item.data ?? "",
     item.unidade ?? "",
+    item.responsavel_fiscal_lido ?? "",
     item.doutor_final ?? "",
     item.paciente ?? "",
     item.valor ?? 0,
@@ -310,7 +344,7 @@ function exportarCSV() {
   const url = URL.createObjectURL(blob);
   const link = document.createElement("a");
   link.href = url;
-  link.download = "pix_doutores.csv";
+  link.download = `pix_doutores_${competencia || "2026"}.csv`;
   link.click();
   URL.revokeObjectURL(url);
 }
@@ -329,10 +363,7 @@ async function carregarDashboard() {
       dashboardData.titulo_dashboard || "Painel Gerencial";
 
     document.getElementById("subtituloDashboard").textContent =
-      "Acompanhamento mensal de crédito PIX por doutor";
-
-    document.getElementById("badgeCompetencia").textContent =
-      dashboardData?.resumo?.competencia || "Competência";
+      `Acompanhamento mensal de crédito PIX por doutor - ano ${dashboardData.ano_referencia || 2026}`;
 
     document.getElementById("badgeArquivo").textContent =
       dashboardData?.arquivo_origem
@@ -347,7 +378,7 @@ async function carregarDashboard() {
     document.getElementById("filtroDoutor").addEventListener("change", atualizarTela);
 
     document.getElementById("btnLimpar").addEventListener("click", () => {
-      document.getElementById("filtroMes").selectedIndex = 0;
+      document.getElementById("filtroMes").value = dashboardData?.competencia_padrao || "2026-01";
       document.getElementById("filtroUnidade").selectedIndex = 0;
       document.getElementById("filtroDoutor").selectedIndex = 0;
       atualizarTela();
@@ -360,15 +391,10 @@ async function carregarDashboard() {
     document.getElementById("cardsResumo").innerHTML = `
       <div class="error-box">
         <strong>Erro ao carregar dados</strong><br />
-        Não foi possível carregar <code>data/dashboard_data.json</code>.<br />
-        Gere os arquivos com:
-        <br /><br />
-        <code>python coletor_pix.py</code><br />
-        <code>python generate_data.py</code>
-        <br /><br />
-        E abra o projeto via servidor local:
-        <br />
-        <code>python -m http.server 8000</code>
+        Não foi possível carregar <code>data/dashboard_data.json</code>.<br /><br />
+        Rode:
+        <br /><code>python coletor_pix.py</code>
+        <br /><code>python generate_data.py</code>
       </div>
     `;
   }
