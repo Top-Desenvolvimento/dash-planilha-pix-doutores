@@ -188,7 +188,6 @@ def abrir_demonstrativo(page) -> None:
 
 
 def localizar_campos_periodo(page):
-    # estratégia 1: inputs com valor em formato de data
     inputs = page.locator("input")
     candidatos = []
 
@@ -223,7 +222,6 @@ def localizar_campos_periodo(page):
     if len(candidatos) >= 2:
         return candidatos[0], candidatos[1]
 
-    # estratégia 2: pegar os 2 últimos inputs visíveis
     visiveis = []
     for i in range(inputs.count()):
         try:
@@ -272,6 +270,20 @@ def linha_eh_pix_doutores(metodo_raw: str) -> bool:
     return "pix doutores" in (metodo_raw or "").lower()
 
 
+def limpar_nome_responsavel(texto: str) -> str:
+    nome = (texto or "").strip()
+
+    if not nome:
+        return ""
+
+    nome = re.sub(r"\s+", " ", nome)
+    nome = re.sub(r"\b\d+\b", "", nome)
+    nome = re.sub(r"^(dr\.?|dra\.?|doutor|doutora)\s+", "", nome, flags=re.IGNORECASE)
+    nome = re.sub(r"\s+", " ", nome).strip(" -:")
+
+    return nome.strip()
+
+
 def extrair_responsavel_fiscal_do_metodo(metodo_raw: str) -> str:
     linhas = [l.strip() for l in (metodo_raw or "").split("\n") if l.strip()]
 
@@ -281,20 +293,26 @@ def extrair_responsavel_fiscal_do_metodo(metodo_raw: str) -> str:
     ignorar_prefixos = [
         "pix doutores",
         "maquina",
+        "máquina",
     ]
 
     candidatos = []
     for linha in linhas:
         linha_lower = linha.lower()
+
         if any(linha_lower.startswith(prefixo) for prefixo in ignorar_prefixos):
             continue
+
+        if re.fullmatch(r"[\d\s\-./]+", linha):
+            continue
+
         candidatos.append(linha)
 
     if candidatos:
-        return candidatos[0]
+        return limpar_nome_responsavel(candidatos[0])
 
     if len(linhas) > 1:
-        return linhas[1]
+        return limpar_nome_responsavel(linhas[1])
 
     return ""
 
@@ -326,6 +344,17 @@ def extrair_info_origem(origem_raw: str) -> Dict[str, Any]:
     }
 
 
+def montar_resultado_sem_desconto(nome_lido: str, valor: float) -> Dict[str, Any]:
+    return {
+        "doutor_encontrado": False,
+        "nome_padronizado": nome_lido or "Sem responsável fiscal",
+        "credito_antes": 0.0,
+        "valor_descontado": 0.0,
+        "credito_depois": 0.0,
+        "pendente": round(valor, 2),
+    }
+
+
 def interpretar_linha(
     linha,
     unidade: str,
@@ -351,11 +380,19 @@ def interpretar_linha(
     if not linha_eh_pix_doutores(metodo_raw):
         return None
 
-    responsavel_fiscal = extrair_responsavel_fiscal_do_metodo(metodo_raw)
+    responsavel_fiscal = limpar_nome_responsavel(extrair_responsavel_fiscal_do_metodo(metodo_raw))
     valor = parse_valor(valor_texto)
     valor_com_descontos = parse_valor(valor_desc_texto)
     info_origem = extrair_info_origem(origem_raw)
-    desconto = aplicar_desconto(mapa_creditos, responsavel_fiscal, valor)
+
+    if responsavel_fiscal:
+        desconto = aplicar_desconto(mapa_creditos, responsavel_fiscal, valor)
+    else:
+        desconto = montar_resultado_sem_desconto("", valor)
+
+    nome_final = desconto["nome_padronizado"]
+    if nome_final and nome_final != "Sem responsável fiscal":
+        nome_final = limpar_nome_responsavel(nome_final)
 
     return {
         "unidade": unidade,
@@ -364,8 +401,9 @@ def interpretar_linha(
         "metodo_pagamento": "Pix Doutores",
         "responsavel_fiscal_lido": responsavel_fiscal,
         "doutor_lido": responsavel_fiscal,
-        "doutor_final": desconto["nome_padronizado"],
+        "doutor_final": nome_final or "Sem responsável fiscal",
         "doutor_encontrado": desconto["doutor_encontrado"],
+        "possui_responsavel_fiscal": bool(responsavel_fiscal),
         "paciente": info_origem["paciente"],
         "codigo_origem": info_origem["codigo_origem"],
         "parcela": info_origem["parcela"],
@@ -429,7 +467,6 @@ def processar_unidade(
 
         for competencia in competencias:
             try:
-                # reabre a tela para cada competência
                 abrir_demonstrativo(page)
                 buscar_competencia(page, competencia)
 
