@@ -1,10 +1,10 @@
 {
   "competencia": "2026-03",
-  "gerado_em": "2026-03-31T21:22:40.792750",
-  "quantidade_total": 694,
-  "valor_total": 95263.51,
+  "gerado_em": "2026-04-01T19:24:18.169530",
+  "quantidade_total": 696,
+  "valor_total": 95585.51,
   "valor_total_descontado": 10212.98,
-  "valor_total_pendente": 85050.53,
+  "valor_total_pendente": 85372.53,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -29,10 +29,10 @@
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 71,
-      "valor": 8825.0,
+      "quantidade": 72,
+      "valor": 8952.0,
       "descontado": 0.0,
-      "pendente": 8825.0
+      "pendente": 8952.0
     },
     {
       "unidade": "FloresDaCunha",
@@ -50,10 +50,10 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 144,
-      "valor": 18706.99,
+      "quantidade": 145,
+      "valor": 18901.99,
       "descontado": 0.0,
-      "pendente": 18706.99
+      "pendente": 18901.99
     },
     {
       "unidade": "Ssdocai",
@@ -255,10 +255,10 @@
     },
     {
       "doutor": "Dra.Gabrielli Fabonato",
-      "quantidade": 1,
-      "valor": 458.0,
+      "quantidade": 2,
+      "valor": 653.0,
       "descontado": 0.0,
-      "pendente": 458.0
+      "pendente": 653.0
     },
     {
       "doutor": "Dra.Jennifer Dotti",
@@ -343,6 +343,13 @@
       "valor": 20812.99,
       "descontado": 0.0,
       "pendente": 20812.99
+    },
+    {
+      "doutor": "PEDI.Giovana Gasparini",
+      "quantidade": 1,
+      "valor": 127.0,
+      "descontado": 0.0,
+      "pendente": 127.0
     },
     {
       "doutor": "TOP",

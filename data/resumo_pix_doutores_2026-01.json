@@ -1,0 +1,362 @@
+{
+  "competencia": "2026-01",
+  "gerado_em": "2026-04-01T19:24:18.133529",
+  "quantidade_total": 745,
+  "valor_total": 96685.48,
+  "valor_total_descontado": 7711.35,
+  "valor_total_pendente": 88974.13,
+  "por_unidade": [
+    {
+      "unidade": "Bento",
+      "quantidade": 44,
+      "valor": 6209.0,
+      "descontado": 0.0,
+      "pendente": 6209.0
+    },
+    {
+      "unidade": "Caxias",
+      "quantidade": 145,
+      "valor": 17863.4,
+      "descontado": 4592.8,
+      "pendente": 13270.6
+    },
+    {
+      "unidade": "Encantado",
+      "quantidade": 85,
+      "valor": 9385.99,
+      "descontado": 0.0,
+      "pendente": 9385.99
+    },
+    {
+      "unidade": "Farroupilha",
+      "quantidade": 69,
+      "valor": 8603.0,
+      "descontado": 0.0,
+      "pendente": 8603.0
+    },
+    {
+      "unidade": "FloresDaCunha",
+      "quantidade": 72,
+      "valor": 10852.0,
+      "descontado": 1000.0,
+      "pendente": 9852.0
+    },
+    {
+      "unidade": "Garibaldi",
+      "quantidade": 57,
+      "valor": 7130.0,
+      "descontado": 0.0,
+      "pendente": 7130.0
+    },
+    {
+      "unidade": "Soledade",
+      "quantidade": 167,
+      "valor": 20011.0,
+      "descontado": 0.0,
+      "pendente": 20011.0
+    },
+    {
+      "unidade": "Ssdocai",
+      "quantidade": 57,
+      "valor": 9337.0,
+      "descontado": 0.0,
+      "pendente": 9337.0
+    },
+    {
+      "unidade": "Veranopolis",
+      "quantidade": 49,
+      "valor": 7294.09,
+      "descontado": 2118.55,
+      "pendente": 5175.54
+    }
+  ],
+  "por_doutor": [
+    {
+      "doutor": "1.Franciele Pedrotti",
+      "quantidade": 56,
+      "valor": 6952.1,
+      "descontado": 0.0,
+      "pendente": 6952.1
+    },
+    {
+      "doutor": "1.Laura Luiza Cimolin",
+      "quantidade": 9,
+      "valor": 1021.0,
+      "descontado": 0.0,
+      "pendente": 1021.0
+    },
+    {
+      "doutor": "1.Naiane Pieta",
+      "quantidade": 9,
+      "valor": 1121.0,
+      "descontado": 0.0,
+      "pendente": 1121.0
+    },
+    {
+      "doutor": "1.Nelson Vaccari",
+      "quantidade": 1,
+      "valor": 98.0,
+      "descontado": 0.0,
+      "pendente": 98.0
+    },
+    {
+      "doutor": "2.Dra.Nicoli Weber Goerch",
+      "quantidade": 10,
+      "valor": 1072.0,
+      "descontado": 0.0,
+      "pendente": 1072.0
+    },
+    {
+      "doutor": "2.Franciele Pedrotti",
+      "quantidade": 14,
+      "valor": 1721.0,
+      "descontado": 0.0,
+      "pendente": 1721.0
+    },
+    {
+      "doutor": "2.Jéssica Barreto",
+      "quantidade": 6,
+      "valor": 1098.0,
+      "descontado": 0.0,
+      "pendente": 1098.0
+    },
+    {
+      "doutor": "2.Nelson Junior",
+      "quantidade": 2,
+      "valor": 305.0,
+      "descontado": 0.0,
+      "pendente": 305.0
+    },
+    {
+      "doutor": "3.Dra.Sara Trevisol",
+      "quantidade": 12,
+      "valor": 1347.0,
+      "descontado": 0.0,
+      "pendente": 1347.0
+    },
+    {
+      "doutor": "3.Gislaine Santos Lima",
+      "quantidade": 17,
+      "valor": 1938.0,
+      "descontado": 0.0,
+      "pendente": 1938.0
+    },
+    {
+      "doutor": "3.Greici",
+      "quantidade": 5,
+      "valor": 601.0,
+      "descontado": 0.0,
+      "pendente": 601.0
+    },
+    {
+      "doutor": "3.Laura Luiza Cimolin",
+      "quantidade": 6,
+      "valor": 609.0,
+      "descontado": 0.0,
+      "pendente": 609.0
+    },
+    {
+      "doutor": "4.Dr.Bruno Victor Lorenzoni",
+      "quantidade": 19,
+      "valor": 1988.0,
+      "descontado": 0.0,
+      "pendente": 1988.0
+    },
+    {
+      "doutor": "4.Nelson Agostino Vaccari Junior",
+      "quantidade": 15,
+      "valor": 2455.0,
+      "descontado": 0.0,
+      "pendente": 2455.0
+    },
+    {
+      "doutor": "4.Thalia Vezzosi",
+      "quantidade": 18,
+      "valor": 2274.0,
+      "descontado": 0.0,
+      "pendente": 2274.0
+    },
+    {
+      "doutor": "5.Thalia Vezzosi",
+      "quantidade": 1,
+      "valor": 95.0,
+      "descontado": 0.0,
+      "pendente": 95.0
+    },
+    {
+      "doutor": "ADRI APARELHOS",
+      "quantidade": 27,
+      "valor": 3082.0,
+      "descontado": 0.0,
+      "pendente": 3082.0
+    },
+    {
+      "doutor": "CIR.Alexandre Favero",
+      "quantidade": 5,
+      "valor": 604.0,
+      "descontado": 0.0,
+      "pendente": 604.0
+    },
+    {
+      "doutor": "CIR.Dionathan Paim Pohlmann",
+      "quantidade": 37,
+      "valor": 4592.8,
+      "descontado": 4592.8,
+      "pendente": 0.0
+    },
+    {
+      "doutor": "Doutores não locais",
+      "quantidade": 44,
+      "valor": 5694.0,
+      "descontado": 0.0,
+      "pendente": 5694.0
+    },
+    {
+      "doutor": "Dr.Dionathan Paim Pohlmann",
+      "quantidade": 17,
+      "valor": 2833.0,
+      "descontado": 0.0,
+      "pendente": 2833.0
+    },
+    {
+      "doutor": "Dr.Luiz Henrique",
+      "quantidade": 7,
+      "valor": 826.0,
+      "descontado": 0.0,
+      "pendente": 826.0
+    },
+    {
+      "doutor": "Dr.Matheus Strapasson",
+      "quantidade": 1,
+      "valor": 206.0,
+      "descontado": 0.0,
+      "pendente": 206.0
+    },
+    {
+      "doutor": "Dr.Rodrigo Silveira",
+      "quantidade": 9,
+      "valor": 944.99,
+      "descontado": 0.0,
+      "pendente": 944.99
+    },
+    {
+      "doutor": "Dra.Ana Cristina Corso Scapinello",
+      "quantidade": 12,
+      "valor": 1365.0,
+      "descontado": 0.0,
+      "pendente": 1365.0
+    },
+    {
+      "doutor": "Dra.Everlize Cipriani",
+      "quantidade": 1,
+      "valor": 155.0,
+      "descontado": 0.0,
+      "pendente": 155.0
+    },
+    {
+      "doutor": "Dra.Fernanda Zanella Sozo",
+      "quantidade": 1,
+      "valor": 720.0,
+      "descontado": 0.0,
+      "pendente": 720.0
+    },
+    {
+      "doutor": "Dra.Franciele Pedrotti",
+      "quantidade": 5,
+      "valor": 759.0,
+      "descontado": 0.0,
+      "pendente": 759.0
+    },
+    {
+      "doutor": "Dra.Joana Pereira Sganzerla",
+      "quantidade": 6,
+      "valor": 702.0,
+      "descontado": 0.0,
+      "pendente": 702.0
+    },
+    {
+      "doutor": "Dra.Letícia Cauzzi Rodrigues",
+      "quantidade": 2,
+      "valor": 460.0,
+      "descontado": 0.0,
+      "pendente": 460.0
+    },
+    {
+      "doutor": "Dra.Marcella",
+      "quantidade": 10,
+      "valor": 1162.0,
+      "descontado": 0.0,
+      "pendente": 1162.0
+    },
+    {
+      "doutor": "Dra.Sofie",
+      "quantidade": 16,
+      "valor": 2583.0,
+      "descontado": 0.0,
+      "pendente": 2583.0
+    },
+    {
+      "doutor": "Dra.Sofie Owens",
+      "quantidade": 1,
+      "valor": 148.0,
+      "descontado": 0.0,
+      "pendente": 148.0
+    },
+    {
+      "doutor": "Dra.Tamara. Macanan de Mello",
+      "quantidade": 19,
+      "valor": 2926.0,
+      "descontado": 0.0,
+      "pendente": 2926.0
+    },
+    {
+      "doutor": "Dra.Thalia Tessaro",
+      "quantidade": 19,
+      "valor": 2168.5,
+      "descontado": 0.0,
+      "pendente": 2168.5
+    },
+    {
+      "doutor": "Dra.Thiany Cristofoli",
+      "quantidade": 20,
+      "valor": 2488.0,
+      "descontado": 0.0,
+      "pendente": 2488.0
+    },
+    {
+      "doutor": "Evalda Baldissera",
+      "quantidade": 15,
+      "valor": 2118.55,
+      "descontado": 2118.55,
+      "pendente": 0.0
+    },
+    {
+      "doutor": "Giovana Gasparini",
+      "quantidade": 10,
+      "valor": 1588.0,
+      "descontado": 1000.0,
+      "pendente": 588.0
+    },
+    {
+      "doutor": "MEI",
+      "quantidade": 174,
+      "valor": 20841.0,
+      "descontado": 0.0,
+      "pendente": 20841.0
+    },
+    {
+      "doutor": "PEDI.Giovana Gasparini",
+      "quantidade": 1,
+      "valor": 105.0,
+      "descontado": 0.0,
+      "pendente": 105.0
+    },
+    {
+      "doutor": "TOP",
+      "quantidade": 86,
+      "valor": 12918.54,
+      "descontado": 0.0,
+      "pendente": 12918.54
+    }
+  ]
+}
