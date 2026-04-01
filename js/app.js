@@ -87,10 +87,11 @@ function obterDadosFiltrados() {
   const filtroUnidade = document.getElementById("filtroUnidade").value;
   const filtroDoutor = document.getElementById("filtroDoutor").value;
 
-  let registros = [...(dashboardData?.registros || [])];
-  let erros = [...(dashboardData?.erros || [])];
+  let registros = [...(dashboardData?.registros_por_competencia?.[competencia] || [])];
+  let erros = [...(dashboardData?.erros_por_competencia?.[competencia] || [])];
   let saldos = [...(dashboardData?.saldos_por_competencia?.[competencia] || [])];
   const resumo = dashboardData?.resumos_por_competencia?.[competencia] || {
+    competencia,
     quantidade_total: 0,
     valor_total: 0,
     valor_total_descontado: 0,
@@ -98,9 +99,6 @@ function obterDadosFiltrados() {
     por_unidade: [],
     por_doutor: []
   };
-
-  registros = registros.filter(item => String(item.competencia || "") === competencia);
-  erros = erros.filter(item => String(item.competencia || "") === competencia);
 
   if (filtroUnidade) {
     registros = registros.filter(item => String(item.unidade || "") === filtroUnidade);
