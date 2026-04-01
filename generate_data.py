@@ -60,6 +60,48 @@ def agrupar_por_competencia(registros: List[Dict[str, Any]], meses_disponiveis: 
     return agrupado
 
 
+def normalizar_resumos_por_competencia(
+    resumos_brutos: Any,
+    meses_disponiveis: List[str]
+) -> Dict[str, Dict[str, Any]]:
+    saida: Dict[str, Dict[str, Any]] = {mes: {} for mes in meses_disponiveis}
+
+    if isinstance(resumos_brutos, dict):
+        for competencia, resumo in resumos_brutos.items():
+            chave = normalizar_competencia(competencia)
+            if chave in saida:
+                saida[chave] = resumo or {}
+
+    elif isinstance(resumos_brutos, list):
+        # formato antigo não tem resumo por competência
+        # mantém vazio e a tela calcula pelo registro
+        pass
+
+    return saida
+
+
+def normalizar_saldos_por_competencia(
+    saldos_brutos: Any,
+    meses_disponiveis: List[str],
+    competencia_padrao_fallback: str
+) -> Dict[str, List[Dict[str, Any]]]:
+    saida: Dict[str, List[Dict[str, Any]]] = {mes: [] for mes in meses_disponiveis}
+
+    if isinstance(saldos_brutos, dict):
+        for competencia, saldos in saldos_brutos.items():
+            chave = normalizar_competencia(competencia)
+            if chave in saida and isinstance(saldos, list):
+                saida[chave] = saldos
+
+    elif isinstance(saldos_brutos, list):
+        # formato antigo: uma lista única de saldos
+        # joga no mês padrão/fallback para não quebrar a dashboard
+        if competencia_padrao_fallback in saida:
+            saida[competencia_padrao_fallback] = saldos_brutos
+
+    return saida
+
+
 def obter_competencia_padrao(
     ano: int,
     meses_disponiveis: List[str],
@@ -69,11 +111,9 @@ def obter_competencia_padrao(
     competencia_atual = f"{ano}-{hoje.month:02d}"
 
     if hoje.year == ano and competencia_atual in meses_disponiveis:
-        # Se o mês atual tiver dados, usa ele
         if registros_por_competencia.get(competencia_atual):
             return competencia_atual
 
-    # senão usa o último mês com dados
     meses_com_dados = [
         mes for mes in meses_disponiveis
         if registros_por_competencia.get(mes)
@@ -82,7 +122,6 @@ def obter_competencia_padrao(
     if meses_com_dados:
         return meses_com_dados[-1]
 
-    # fallback
     if hoje.year == ano and competencia_atual in meses_disponiveis:
         return competencia_atual
 
@@ -91,25 +130,11 @@ def obter_competencia_padrao(
 
 def main() -> None:
     registros = carregar_json(ARQUIVO_PIX) or []
-    saldos_por_competencia = carregar_json(ARQUIVO_SALDOS) or {}
-    resumos_por_competencia = carregar_json(ARQUIVO_RESUMO) or {}
+    saldos_brutos = carregar_json(ARQUIVO_SALDOS) or {}
+    resumos_brutos = carregar_json(ARQUIVO_RESUMO) or {}
     erros = carregar_json(ARQUIVO_ERROS) or []
 
     meses_disponiveis = gerar_meses_ano(ANO_REFERENCIA)
-
-    # normaliza resumos
-    resumos_normalizados: Dict[str, Any] = {mes: {} for mes in meses_disponiveis}
-    for competencia, resumo in (resumos_por_competencia or {}).items():
-        chave = normalizar_competencia(competencia)
-        if chave in resumos_normalizados:
-            resumos_normalizados[chave] = resumo or {}
-
-    # normaliza saldos
-    saldos_normalizados: Dict[str, Any] = {mes: [] for mes in meses_disponiveis}
-    for competencia, saldos in (saldos_por_competencia or {}).items():
-        chave = normalizar_competencia(competencia)
-        if chave in saldos_normalizados:
-            saldos_normalizados[chave] = saldos or []
 
     registros_por_competencia = agrupar_por_competencia(registros, meses_disponiveis)
     erros_por_competencia = agrupar_por_competencia(erros, meses_disponiveis)
@@ -118,6 +143,17 @@ def main() -> None:
         ANO_REFERENCIA,
         meses_disponiveis,
         registros_por_competencia
+    )
+
+    resumos_por_competencia = normalizar_resumos_por_competencia(
+        resumos_brutos,
+        meses_disponiveis
+    )
+
+    saldos_por_competencia = normalizar_saldos_por_competencia(
+        saldos_brutos,
+        meses_disponiveis,
+        competencia_padrao
     )
 
     dashboard = {
@@ -131,8 +167,8 @@ def main() -> None:
         "erros": erros,
         "registros_por_competencia": registros_por_competencia,
         "erros_por_competencia": erros_por_competencia,
-        "resumos_por_competencia": resumos_normalizados,
-        "saldos_por_competencia": saldos_normalizados,
+        "resumos_por_competencia": resumos_por_competencia,
+        "saldos_por_competencia": saldos_por_competencia,
     }
 
     salvar_json(dashboard, ARQUIVO_DASH)
