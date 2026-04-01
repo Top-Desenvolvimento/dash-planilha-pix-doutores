@@ -34,23 +34,59 @@ def gerar_meses_ano(ano: int) -> List[str]:
     return [f"{ano}-{mes:02d}" for mes in range(1, 13)]
 
 
-def obter_competencia_padrao(ano: int, resumos_por_competencia: Dict[str, Any]) -> str:
+def normalizar_competencia(valor: str | None) -> str:
+    valor = str(valor or "").strip()
+
+    if not valor:
+        return ""
+
+    partes = valor.split("-")
+    if len(partes) == 2:
+        ano, mes = partes
+        if ano.isdigit() and mes.isdigit():
+            return f"{int(ano):04d}-{int(mes):02d}"
+
+    return valor
+
+
+def agrupar_por_competencia(registros: List[Dict[str, Any]], meses_disponiveis: List[str]) -> Dict[str, List[Dict[str, Any]]]:
+    agrupado: Dict[str, List[Dict[str, Any]]] = {mes: [] for mes in meses_disponiveis}
+
+    for item in registros:
+        competencia = normalizar_competencia(item.get("competencia"))
+        if competencia in agrupado:
+            agrupado[competencia].append(item)
+
+    return agrupado
+
+
+def obter_competencia_padrao(
+    ano: int,
+    meses_disponiveis: List[str],
+    registros_por_competencia: Dict[str, List[Dict[str, Any]]]
+) -> str:
     hoje = date.today()
+    competencia_atual = f"{ano}-{hoje.month:02d}"
 
-    if hoje.year == ano:
-        return f"{ano}-{hoje.month:02d}"
+    if hoje.year == ano and competencia_atual in meses_disponiveis:
+        # Se o mês atual tiver dados, usa ele
+        if registros_por_competencia.get(competencia_atual):
+            return competencia_atual
 
-    # pega a última competência com algum dado
-    competencias_com_dado = []
-    for competencia, resumo in (resumos_por_competencia or {}).items():
-        if resumo and resumo.get("quantidade_total", 0) > 0:
-            competencias_com_dado.append(competencia)
+    # senão usa o último mês com dados
+    meses_com_dados = [
+        mes for mes in meses_disponiveis
+        if registros_por_competencia.get(mes)
+    ]
 
-    if competencias_com_dado:
-        competencias_com_dado.sort()
-        return competencias_com_dado[-1]
+    if meses_com_dados:
+        return meses_com_dados[-1]
 
-    return f"{ano}-01"
+    # fallback
+    if hoje.year == ano and competencia_atual in meses_disponiveis:
+        return competencia_atual
+
+    return meses_disponiveis[0]
 
 
 def main() -> None:
@@ -60,7 +96,29 @@ def main() -> None:
     erros = carregar_json(ARQUIVO_ERROS) or []
 
     meses_disponiveis = gerar_meses_ano(ANO_REFERENCIA)
-    competencia_padrao = obter_competencia_padrao(ANO_REFERENCIA, resumos_por_competencia)
+
+    # normaliza resumos
+    resumos_normalizados: Dict[str, Any] = {mes: {} for mes in meses_disponiveis}
+    for competencia, resumo in (resumos_por_competencia or {}).items():
+        chave = normalizar_competencia(competencia)
+        if chave in resumos_normalizados:
+            resumos_normalizados[chave] = resumo or {}
+
+    # normaliza saldos
+    saldos_normalizados: Dict[str, Any] = {mes: [] for mes in meses_disponiveis}
+    for competencia, saldos in (saldos_por_competencia or {}).items():
+        chave = normalizar_competencia(competencia)
+        if chave in saldos_normalizados:
+            saldos_normalizados[chave] = saldos or []
+
+    registros_por_competencia = agrupar_por_competencia(registros, meses_disponiveis)
+    erros_por_competencia = agrupar_por_competencia(erros, meses_disponiveis)
+
+    competencia_padrao = obter_competencia_padrao(
+        ANO_REFERENCIA,
+        meses_disponiveis,
+        registros_por_competencia
+    )
 
     dashboard = {
         "status": "ok",
@@ -71,8 +129,10 @@ def main() -> None:
         "competencia_padrao": competencia_padrao,
         "registros": registros,
         "erros": erros,
-        "resumos_por_competencia": resumos_por_competencia,
-        "saldos_por_competencia": saldos_por_competencia,
+        "registros_por_competencia": registros_por_competencia,
+        "erros_por_competencia": erros_por_competencia,
+        "resumos_por_competencia": resumos_normalizados,
+        "saldos_por_competencia": saldos_normalizados,
     }
 
     salvar_json(dashboard, ARQUIVO_DASH)
