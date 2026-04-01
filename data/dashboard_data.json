@@ -2,7 +2,25 @@
   "status": "ok",
   "titulo_dashboard": "Painel Gerencial",
   "arquivo_origem": "pix_doutores.json",
-  "resumo": {
+  "ano_referencia": 2026,
+  "meses_disponiveis": [
+    "2026-01",
+    "2026-02",
+    "2026-03",
+    "2026-04",
+    "2026-05",
+    "2026-06",
+    "2026-07",
+    "2026-08",
+    "2026-09",
+    "2026-10",
+    "2026-11",
+    "2026-12"
+  ],
+  "competencia_padrao": "2026-04",
+  "registros": [],
+  "erros": [],
+  "resumos_por_competencia": {
     "competencia": "2026-04",
     "gerado_em": "2026-04-01T10:56:51.063363",
     "quantidade_total": 0,
@@ -12,13 +30,7 @@
     "por_unidade": [],
     "por_doutor": []
   },
-  "totais": {
-    "linhas_validas": 0,
-    "linhas_com_erro": 0
-  },
-  "registros": [],
-  "erros": [],
-  "saldos_doutores": [
+  "saldos_por_competencia": [
     {
       "doutor": "Adriele da Silva",
       "credito_inicial": 3000.0,
