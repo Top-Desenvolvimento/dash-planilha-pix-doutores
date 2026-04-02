@@ -1,4 +1,5 @@
 let dashboardData = null;
+let currentUser = null;
 
 function formatarMoeda(valor) {
   return Number(valor || 0).toLocaleString("pt-BR", {
@@ -54,6 +55,53 @@ function obterStatus(percentual) {
   return { classe: "status-green", texto: "Controlado", dot: "dot-green" };
 }
 
+function mostrarMensagemAuth(texto, erro = false) {
+  const el = document.getElementById("authMessage");
+  el.textContent = texto || "";
+  el.className = erro ? "auth-message error" : "auth-message";
+}
+
+function mostrarTelaLogin() {
+  document.getElementById("authScreen").classList.remove("hidden");
+  document.getElementById("appRoot").classList.add("hidden");
+}
+
+function mostrarApp() {
+  document.getElementById("authScreen").classList.add("hidden");
+  document.getElementById("appRoot").classList.remove("hidden");
+}
+
+async function loginSupabase(email, password) {
+  const { error } = await supabaseClient.auth.signInWithPassword({
+    email,
+    password
+  });
+
+  if (error) {
+    throw error;
+  }
+}
+
+async function logoutSupabase() {
+  await supabaseClient.auth.signOut();
+}
+
+async function obterSessaoAtual() {
+  const { data, error } = await supabaseClient.auth.getSession();
+
+  if (error) {
+    throw error;
+  }
+
+  return data?.session || null;
+}
+
+function preencherBadgeUsuario() {
+  const badge = document.getElementById("badgeUsuario");
+  const email = currentUser?.email || "Usuário";
+  badge.textContent = email;
+}
+
 function preencherFiltros(data) {
   const filtroMes = document.getElementById("filtroMes");
   const filtroUnidade = document.getElementById("filtroUnidade");
@@ -90,15 +138,6 @@ function obterDadosFiltrados() {
   let registros = [...(dashboardData?.registros_por_competencia?.[competencia] || [])];
   let erros = [...(dashboardData?.erros_por_competencia?.[competencia] || [])];
   let saldos = [...(dashboardData?.saldos_por_competencia?.[competencia] || [])];
-  const resumo = dashboardData?.resumos_por_competencia?.[competencia] || {
-    competencia,
-    quantidade_total: 0,
-    valor_total: 0,
-    valor_total_descontado: 0,
-    valor_total_pendente: 0,
-    por_unidade: [],
-    por_doutor: []
-  };
 
   if (filtroUnidade) {
     registros = registros.filter(item => String(item.unidade || "") === filtroUnidade);
@@ -113,7 +152,7 @@ function obterDadosFiltrados() {
     saldos = saldos.filter(item => doutoresVisiveis.has(item.doutor));
   }
 
-  return { competencia, resumo, registros, erros, saldos };
+  return { competencia, registros, erros, saldos };
 }
 
 function renderCards(registros, competencia) {
@@ -262,7 +301,7 @@ function renderRegistros(registros) {
       <tr>
         <td>${escapeHtml(item.data)}</td>
         <td>${escapeHtml(item.unidade)}</td>
-        <td>${escapeHtml(item.doutor_final)}</td>
+        <td>${escapeHtml(item.doutor_final || "Sem responsável fiscal")}</td>
         <td>${escapeHtml(item.paciente)}</td>
         <td>${formatarMoeda(item.valor)}</td>
         <td>${formatarMoeda(item.valor_descontado)}</td>
@@ -319,7 +358,8 @@ function exportarCSV() {
     "paciente",
     "valor",
     "valor_descontado",
-    "pendente"
+    "pendente",
+    "possui_responsavel_fiscal"
   ];
 
   const rows = registros.map(item => [
@@ -331,7 +371,8 @@ function exportarCSV() {
     item.paciente ?? "",
     item.valor ?? 0,
     item.valor_descontado ?? 0,
-    item.pendente ?? 0
+    item.pendente ?? 0,
+    item.possui_responsavel_fiscal ?? false
   ]);
 
   const csv = [headers, ...rows]
