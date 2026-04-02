@@ -1,6 +1,6 @@
 {
   "competencia": "2026-02",
-  "gerado_em": "2026-04-01T19:24:18.151679",
+  "gerado_em": "2026-04-02T00:03:17.622895",
   "quantidade_total": 728,
   "valor_total": 98105.59,
   "valor_total_descontado": 8052.82,
@@ -72,116 +72,102 @@
   ],
   "por_doutor": [
     {
-      "doutor": "1.Franciele Pedrotti",
-      "quantidade": 61,
-      "valor": 8093.5,
-      "descontado": 0.0,
-      "pendente": 8093.5
-    },
-    {
-      "doutor": "1.Laura Luiza Cimolin",
-      "quantidade": 6,
-      "valor": 640.0,
-      "descontado": 0.0,
-      "pendente": 640.0
-    },
-    {
-      "doutor": "1.Naiane Pieta",
-      "quantidade": 9,
-      "valor": 1024.0,
-      "descontado": 0.0,
-      "pendente": 1024.0
-    },
-    {
-      "doutor": "2.Dra.Nicoli Weber Goerch",
-      "quantidade": 13,
-      "valor": 1442.0,
-      "descontado": 0.0,
-      "pendente": 1442.0
-    },
-    {
-      "doutor": "2.Franciele Pedrotti",
-      "quantidade": 9,
-      "valor": 1142.0,
-      "descontado": 0.0,
-      "pendente": 1142.0
-    },
-    {
-      "doutor": "2.Jéssica Barreto",
-      "quantidade": 7,
-      "valor": 901.0,
-      "descontado": 0.0,
-      "pendente": 901.0
-    },
-    {
-      "doutor": "2.Nelson Junior",
-      "quantidade": 5,
-      "valor": 1758.0,
-      "descontado": 0.0,
-      "pendente": 1758.0
-    },
-    {
-      "doutor": "3.Dra.Sara Trevisol",
-      "quantidade": 1,
-      "valor": 120.0,
-      "descontado": 0.0,
-      "pendente": 120.0
-    },
-    {
-      "doutor": "3.Gislaine Santos Lima",
-      "quantidade": 28,
-      "valor": 4244.0,
-      "descontado": 0.0,
-      "pendente": 4244.0
-    },
-    {
-      "doutor": "3.Greici",
-      "quantidade": 5,
-      "valor": 414.0,
-      "descontado": 0.0,
-      "pendente": 414.0
-    },
-    {
-      "doutor": "3.Karen Ramona Kuwer",
-      "quantidade": 1,
-      "valor": 195.0,
-      "descontado": 0.0,
-      "pendente": 195.0
-    },
-    {
-      "doutor": "4.Dr.Bruno Victor Lorenzoni",
+      "doutor": ".Dr.Bruno Victor Lorenzoni",
       "quantidade": 11,
       "valor": 1545.0,
       "descontado": 0.0,
       "pendente": 1545.0
     },
     {
-      "doutor": "4.Keyla Daniele Ramos de Santana",
+      "doutor": ".Dra.Nicoli Weber Goerch",
+      "quantidade": 13,
+      "valor": 1442.0,
+      "descontado": 0.0,
+      "pendente": 1442.0
+    },
+    {
+      "doutor": ".Dra.Sara Trevisol",
+      "quantidade": 1,
+      "valor": 120.0,
+      "descontado": 0.0,
+      "pendente": 120.0
+    },
+    {
+      "doutor": ".Franciele Pedrotti",
+      "quantidade": 70,
+      "valor": 9235.5,
+      "descontado": 0.0,
+      "pendente": 9235.5
+    },
+    {
+      "doutor": ".Gislaine Santos Lima",
+      "quantidade": 28,
+      "valor": 4244.0,
+      "descontado": 0.0,
+      "pendente": 4244.0
+    },
+    {
+      "doutor": ".Greici",
+      "quantidade": 5,
+      "valor": 414.0,
+      "descontado": 0.0,
+      "pendente": 414.0
+    },
+    {
+      "doutor": ".Jéssica Barreto",
+      "quantidade": 7,
+      "valor": 901.0,
+      "descontado": 0.0,
+      "pendente": 901.0
+    },
+    {
+      "doutor": ".Karen Ramona Kuwer",
+      "quantidade": 1,
+      "valor": 195.0,
+      "descontado": 0.0,
+      "pendente": 195.0
+    },
+    {
+      "doutor": ".Keyla Daniele Ramos de Santana",
       "quantidade": 16,
       "valor": 1743.0,
       "descontado": 0.0,
       "pendente": 1743.0
     },
     {
-      "doutor": "4.Nelson Agostino Vaccari Junior",
+      "doutor": ".Laura Luiza Cimolin",
+      "quantidade": 6,
+      "valor": 640.0,
+      "descontado": 0.0,
+      "pendente": 640.0
+    },
+    {
+      "doutor": ".Naiane Pieta",
+      "quantidade": 9,
+      "valor": 1024.0,
+      "descontado": 0.0,
+      "pendente": 1024.0
+    },
+    {
+      "doutor": ".Nelson Agostino Vaccari Junior",
       "quantidade": 12,
       "valor": 1688.0,
       "descontado": 0.0,
       "pendente": 1688.0
     },
     {
-      "doutor": "4.Thalia Vezzosi",
-      "quantidade": 13,
-      "valor": 1766.0,
+      "doutor": ".Nelson Junior",
+      "quantidade": 5,
+      "valor": 1758.0,
       "descontado": 0.0,
-      "pendente": 1766.0
+      "pendente": 1758.0
     },
     {
-      "doutor": "5.Thalia Vezzosi",
-      "quantidade": 3,
-      "valor": 345.0,
+      "doutor": ".Thalia Vezzosi",
+      "quantidade": 16,
+      "valor": 2111.0,
       "descontado": 0.0,
-      "pendente": 345.0
+      "pendente": 2111.0
     },
     {
       "doutor": "ADRI APARELHOS",

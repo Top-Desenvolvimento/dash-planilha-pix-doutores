@@ -1,6 +1,6 @@
 {
   "competencia": "2026-03",
-  "gerado_em": "2026-04-01T19:24:18.169530",
+  "gerado_em": "2026-04-02T00:03:17.640517",
   "quantidade_total": 696,
   "valor_total": 95585.51,
   "valor_total_descontado": 10212.98,
@@ -72,105 +72,91 @@
   ],
   "por_doutor": [
     {
-      "doutor": "1.Franciele Pedrotti",
-      "quantidade": 52,
-      "valor": 8006.5,
-      "descontado": 0.0,
-      "pendente": 8006.5
-    },
-    {
-      "doutor": "1.Laura Luiza Cimolin",
-      "quantidade": 12,
-      "valor": 1251.0,
-      "descontado": 0.0,
-      "pendente": 1251.0
-    },
-    {
-      "doutor": "1.Naiane Pieta",
-      "quantidade": 8,
-      "valor": 919.0,
-      "descontado": 0.0,
-      "pendente": 919.0
-    },
-    {
-      "doutor": "2.Dra.Nicoli Weber Goerch",
-      "quantidade": 14,
-      "valor": 1659.0,
-      "descontado": 0.0,
-      "pendente": 1659.0
-    },
-    {
-      "doutor": "2.Franciele Pedrotti",
-      "quantidade": 14,
-      "valor": 2221.0,
-      "descontado": 0.0,
-      "pendente": 2221.0
-    },
-    {
-      "doutor": "2.Jéssica Barreto",
-      "quantidade": 6,
-      "valor": 968.0,
-      "descontado": 0.0,
-      "pendente": 968.0
-    },
-    {
-      "doutor": "2.Nelson Junior",
-      "quantidade": 2,
-      "valor": 488.0,
-      "descontado": 0.0,
-      "pendente": 488.0
-    },
-    {
-      "doutor": "3.Dra.Sara Trevisol",
-      "quantidade": 7,
-      "valor": 763.0,
-      "descontado": 0.0,
-      "pendente": 763.0
-    },
-    {
-      "doutor": "3.Gislaine Santos Lima",
-      "quantidade": 15,
-      "valor": 1749.0,
-      "descontado": 0.0,
-      "pendente": 1749.0
-    },
-    {
-      "doutor": "3.Greici",
-      "quantidade": 4,
-      "valor": 465.0,
-      "descontado": 0.0,
-      "pendente": 465.0
-    },
-    {
-      "doutor": "3.Laura Luiza Cimolin",
-      "quantidade": 3,
-      "valor": 290.0,
-      "descontado": 0.0,
-      "pendente": 290.0
-    },
-    {
-      "doutor": "4.Alexandre Orlandini",
+      "doutor": ".Alexandre Orlandini",
       "quantidade": 4,
       "valor": 463.0,
       "descontado": 0.0,
       "pendente": 463.0
     },
     {
-      "doutor": "4.Keyla Daniele Ramos de Santana",
+      "doutor": ".Dra.Nicoli Weber Goerch",
+      "quantidade": 14,
+      "valor": 1659.0,
+      "descontado": 0.0,
+      "pendente": 1659.0
+    },
+    {
+      "doutor": ".Dra.Sara Trevisol",
+      "quantidade": 7,
+      "valor": 763.0,
+      "descontado": 0.0,
+      "pendente": 763.0
+    },
+    {
+      "doutor": ".Franciele Pedrotti",
+      "quantidade": 66,
+      "valor": 10227.5,
+      "descontado": 0.0,
+      "pendente": 10227.5
+    },
+    {
+      "doutor": ".Gislaine Santos Lima",
+      "quantidade": 15,
+      "valor": 1749.0,
+      "descontado": 0.0,
+      "pendente": 1749.0
+    },
+    {
+      "doutor": ".Greici",
+      "quantidade": 4,
+      "valor": 465.0,
+      "descontado": 0.0,
+      "pendente": 465.0
+    },
+    {
+      "doutor": ".Jéssica Barreto",
+      "quantidade": 6,
+      "valor": 968.0,
+      "descontado": 0.0,
+      "pendente": 968.0
+    },
+    {
+      "doutor": ".Keyla Daniele Ramos de Santana",
       "quantidade": 12,
       "valor": 1610.0,
       "descontado": 0.0,
       "pendente": 1610.0
     },
     {
-      "doutor": "4.Nelson Agostino Vaccari Junior",
+      "doutor": ".Laura Luiza Cimolin",
+      "quantidade": 15,
+      "valor": 1541.0,
+      "descontado": 0.0,
+      "pendente": 1541.0
+    },
+    {
+      "doutor": ".Naiane Pieta",
+      "quantidade": 8,
+      "valor": 919.0,
+      "descontado": 0.0,
+      "pendente": 919.0
+    },
+    {
+      "doutor": ".Nelson Agostino Vaccari Junior",
       "quantidade": 17,
       "valor": 2911.99,
       "descontado": 0.0,
       "pendente": 2911.99
     },
     {
-      "doutor": "5.Thalia Vezzosi",
+      "doutor": ".Nelson Junior",
+      "quantidade": 2,
+      "valor": 488.0,
+      "descontado": 0.0,
+      "pendente": 488.0
+    },
+    {
+      "doutor": ".Thalia Vezzosi",
       "quantidade": 15,
       "valor": 2176.5,
       "descontado": 0.0,

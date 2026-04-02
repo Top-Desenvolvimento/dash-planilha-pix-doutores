@@ -1,40 +1,40 @@
 {
   "competencia": "2026-04",
-  "gerado_em": "2026-04-01T19:24:18.184287",
-  "quantidade_total": 6,
-  "valor_total": 665.0,
-  "valor_total_descontado": 0.0,
-  "valor_total_pendente": 665.0,
+  "gerado_em": "2026-04-02T00:03:17.654693",
+  "quantidade_total": 9,
+  "valor_total": 1069.0,
+  "valor_total_descontado": 120.0,
+  "valor_total_pendente": 949.0,
   "por_unidade": [
     {
       "unidade": "Farroupilha",
       "quantidade": 1,
       "valor": 120.0,
-      "descontado": 0.0,
-      "pendente": 120.0
+      "descontado": 120.0,
+      "pendente": 0.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 5,
-      "valor": 545.0,
+      "quantidade": 8,
+      "valor": 949.0,
       "descontado": 0.0,
-      "pendente": 545.0
+      "pendente": 949.0
     }
   ],
   "por_doutor": [
     {
-      "doutor": "2.Cristian Pressi",
-      "quantidade": 5,
-      "valor": 545.0,
+      "doutor": ".Cristian Pressi",
+      "quantidade": 8,
+      "valor": 949.0,
       "descontado": 0.0,
-      "pendente": 545.0
+      "pendente": 949.0
     },
     {
-      "doutor": "2.Franciele Pedrotti",
+      "doutor": "Franciele Pedrotti",
       "quantidade": 1,
       "valor": 120.0,
-      "descontado": 0.0,
-      "pendente": 120.0
+      "descontado": 120.0,
+      "pendente": 0.0
     }
   ]
 }
