@@ -1,11 +1,18 @@
 {
   "competencia": "2026-04",
-  "gerado_em": "2026-04-02T12:57:44.053328",
-  "quantidade_total": 9,
-  "valor_total": 1069.0,
-  "valor_total_descontado": 120.0,
-  "valor_total_pendente": 949.0,
+  "gerado_em": "2026-04-02T19:35:02.589938",
+  "quantidade_total": 11,
+  "valor_total": 1470.0,
+  "valor_total_descontado": 1470.0,
+  "valor_total_pendente": 0.0,
   "por_unidade": [
+    {
+      "unidade": "Caxias",
+      "quantidade": 1,
+      "valor": 195.0,
+      "descontado": 195.0,
+      "pendente": 0.0
+    },
     {
       "unidade": "Farroupilha",
       "quantidade": 1,
@@ -15,25 +22,32 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 8,
-      "valor": 949.0,
-      "descontado": 0.0,
-      "pendente": 949.0
+      "quantidade": 9,
+      "valor": 1155.0,
+      "descontado": 1155.0,
+      "pendente": 0.0
     }
   ],
   "por_doutor": [
     {
-      "doutor": ".Cristian Pressi",
-      "quantidade": 8,
-      "valor": 949.0,
-      "descontado": 0.0,
-      "pendente": 949.0
+      "doutor": "Cristian Pressi",
+      "quantidade": 9,
+      "valor": 1155.0,
+      "descontado": 1155.0,
+      "pendente": 0.0
     },
     {
       "doutor": "Franciele Pedrotti",
       "quantidade": 1,
       "valor": 120.0,
       "descontado": 120.0,
+      "pendente": 0.0
+    },
+    {
+      "doutor": "Nelson Vaccari",
+      "quantidade": 1,
+      "valor": 195.0,
+      "descontado": 195.0,
       "pendente": 0.0
     }
   ]

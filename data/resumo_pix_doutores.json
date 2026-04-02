@@ -1,7 +1,7 @@
 {
   "2026-01": {
     "competencia": "2026-01",
-    "gerado_em": "2026-04-02T12:57:44.007148",
+    "gerado_em": "2026-04-02T19:35:02.537179",
     "quantidade_total": 745,
     "valor_total": 96685.48,
     "valor_total_descontado": 7711.35,
@@ -342,7 +342,7 @@
   },
   "2026-02": {
     "competencia": "2026-02",
-    "gerado_em": "2026-04-02T12:57:44.024071",
+    "gerado_em": "2026-04-02T19:35:02.556408",
     "quantidade_total": 728,
     "valor_total": 98105.59,
     "valor_total_descontado": 8052.82,
@@ -676,11 +676,11 @@
   },
   "2026-03": {
     "competencia": "2026-03",
-    "gerado_em": "2026-04-02T12:57:44.040321",
-    "quantidade_total": 696,
-    "valor_total": 95585.51,
+    "gerado_em": "2026-04-02T19:35:02.574682",
+    "quantidade_total": 695,
+    "valor_total": 95490.51,
     "valor_total_descontado": 10212.98,
-    "valor_total_pendente": 85372.53,
+    "valor_total_pendente": 85277.53,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -698,10 +698,10 @@
       },
       {
         "unidade": "Encantado",
-        "quantidade": 85,
-        "valor": 10941.0,
+        "quantidade": 84,
+        "valor": 10846.0,
         "descontado": 0.0,
-        "pendente": 10941.0
+        "pendente": 10846.0
       },
       {
         "unidade": "Farroupilha",
@@ -1015,21 +1015,28 @@
       },
       {
         "doutor": "TOP",
-        "quantidade": 85,
-        "valor": 10371.0,
+        "quantidade": 84,
+        "valor": 10276.0,
         "descontado": 0.0,
-        "pendente": 10371.0
+        "pendente": 10276.0
       }
     ]
   },
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-02T12:57:44.053328",
-    "quantidade_total": 9,
-    "valor_total": 1069.0,
-    "valor_total_descontado": 120.0,
-    "valor_total_pendente": 949.0,
+    "gerado_em": "2026-04-02T19:35:02.589938",
+    "quantidade_total": 11,
+    "valor_total": 1470.0,
+    "valor_total_descontado": 1470.0,
+    "valor_total_pendente": 0.0,
     "por_unidade": [
+      {
+        "unidade": "Caxias",
+        "quantidade": 1,
+        "valor": 195.0,
+        "descontado": 195.0,
+        "pendente": 0.0
+      },
       {
         "unidade": "Farroupilha",
         "quantidade": 1,
@@ -1039,19 +1046,19 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 8,
-        "valor": 949.0,
-        "descontado": 0.0,
-        "pendente": 949.0
+        "quantidade": 9,
+        "valor": 1155.0,
+        "descontado": 1155.0,
+        "pendente": 0.0
       }
     ],
     "por_doutor": [
       {
-        "doutor": ".Cristian Pressi",
-        "quantidade": 8,
-        "valor": 949.0,
-        "descontado": 0.0,
-        "pendente": 949.0
+        "doutor": "Cristian Pressi",
+        "quantidade": 9,
+        "valor": 1155.0,
+        "descontado": 1155.0,
+        "pendente": 0.0
       },
       {
         "doutor": "Franciele Pedrotti",
@@ -1059,12 +1066,19 @@
         "valor": 120.0,
         "descontado": 120.0,
         "pendente": 0.0
+      },
+      {
+        "doutor": "Nelson Vaccari",
+        "quantidade": 1,
+        "valor": 195.0,
+        "descontado": 195.0,
+        "pendente": 0.0
       }
     ]
   },
   "2026-05": {
     "competencia": "2026-05",
-    "gerado_em": "2026-04-02T12:57:44.054089",
+    "gerado_em": "2026-04-02T19:35:02.591013",
     "quantidade_total": 0,
     "valor_total": 0,
     "valor_total_descontado": 0,
@@ -1074,7 +1088,7 @@
   },
   "2026-06": {
     "competencia": "2026-06",
-    "gerado_em": "2026-04-02T12:57:44.054621",
+    "gerado_em": "2026-04-02T19:35:02.591731",
     "quantidade_total": 0,
     "valor_total": 0,
     "valor_total_descontado": 0,
@@ -1084,7 +1098,7 @@
   },
   "2026-07": {
     "competencia": "2026-07",
-    "gerado_em": "2026-04-02T12:57:44.055280",
+    "gerado_em": "2026-04-02T19:35:02.592435",
     "quantidade_total": 0,
     "valor_total": 0,
     "valor_total_descontado": 0,
@@ -1094,7 +1108,7 @@
   },
   "2026-08": {
     "competencia": "2026-08",
-    "gerado_em": "2026-04-02T12:57:44.055826",
+    "gerado_em": "2026-04-02T19:35:02.593118",
     "quantidade_total": 0,
     "valor_total": 0,
     "valor_total_descontado": 0,
@@ -1104,7 +1118,7 @@
   },
   "2026-09": {
     "competencia": "2026-09",
-    "gerado_em": "2026-04-02T12:57:44.056358",
+    "gerado_em": "2026-04-02T19:35:02.593876",
     "quantidade_total": 0,
     "valor_total": 0,
     "valor_total_descontado": 0,
@@ -1114,7 +1128,7 @@
   },
   "2026-10": {
     "competencia": "2026-10",
-    "gerado_em": "2026-04-02T12:57:44.056911",
+    "gerado_em": "2026-04-02T19:35:02.594560",
     "quantidade_total": 0,
     "valor_total": 0,
     "valor_total_descontado": 0,
@@ -1124,7 +1138,7 @@
   },
   "2026-11": {
     "competencia": "2026-11",
-    "gerado_em": "2026-04-02T12:57:44.057543",
+    "gerado_em": "2026-04-02T19:35:02.595226",
     "quantidade_total": 0,
     "valor_total": 0,
     "valor_total_descontado": 0,
@@ -1134,7 +1148,7 @@
   },
   "2026-12": {
     "competencia": "2026-12",
-    "gerado_em": "2026-04-02T12:57:44.058104",
+    "gerado_em": "2026-04-02T19:35:02.595924",
     "quantidade_total": 0,
     "valor_total": 0,
     "valor_total_descontado": 0,
