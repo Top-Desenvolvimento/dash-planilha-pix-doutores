@@ -7,7 +7,26 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <div class="layout">
+  <div id="authScreen" class="auth-screen">
+    <div class="auth-card">
+      <h1>PIX Doutores</h1>
+      <p class="auth-subtitle">Acesse com seu login do Supabase</p>
+
+      <form id="loginForm" class="auth-form">
+        <label for="email">E-mail</label>
+        <input id="email" type="email" placeholder="seu@email.com" required />
+
+        <label for="password">Senha</label>
+        <input id="password" type="password" placeholder="Sua senha" required />
+
+        <button type="submit" class="btn btn-primary">Entrar</button>
+      </form>
+
+      <div id="authMessage" class="auth-message"></div>
+    </div>
+  </div>
+
+  <div id="appRoot" class="layout hidden">
     <aside class="sidebar">
       <div class="brand">
         <div class="brand-icon">T</div>
@@ -21,9 +40,7 @@
         <h2>Filtros</h2>
 
         <label for="filtroMes">Mês</label>
-        <select id="filtroMes">
-          <option value="">Todos</option>
-        </select>
+        <select id="filtroMes"></select>
 
         <label for="filtroUnidade">Unidade</label>
         <select id="filtroUnidade">
@@ -38,6 +55,7 @@
         <div class="sidebar-actions">
           <button id="btnLimpar" class="btn btn-secondary">Limpar filtros</button>
           <button id="btnExportar" class="btn btn-primary">Exportar CSV</button>
+          <button id="btnLogout" class="btn btn-secondary">Sair</button>
         </div>
       </section>
 
@@ -71,6 +89,7 @@
         <div class="hero-badges">
           <span class="badge" id="badgeCompetencia">Competência</span>
           <span class="badge badge-muted" id="badgeArquivo">Arquivo</span>
+          <span class="badge badge-muted" id="badgeUsuario">Usuário</span>
         </div>
       </header>
 
@@ -184,6 +203,8 @@
     </main>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-config.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>
