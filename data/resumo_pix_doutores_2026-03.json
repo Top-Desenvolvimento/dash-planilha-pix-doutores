@@ -1,17 +1,17 @@
 {
   "competencia": "2026-03",
-  "gerado_em": "2026-04-02T19:35:02.574682",
+  "gerado_em": "2026-04-03T12:49:13.596946",
   "quantidade_total": 695,
-  "valor_total": 95490.51,
-  "valor_total_descontado": 10212.98,
-  "valor_total_pendente": 85277.53,
+  "valor_total": 95463.51,
+  "valor_total_descontado": 10539.98,
+  "valor_total_pendente": 84923.53,
   "por_unidade": [
     {
       "unidade": "Bento",
       "quantidade": 48,
-      "valor": 6869.99,
-      "descontado": 0.0,
-      "pendente": 6869.99
+      "valor": 6842.99,
+      "descontado": 327.0,
+      "pendente": 6515.99
     },
     {
       "unidade": "Caxias",
@@ -143,10 +143,10 @@
     },
     {
       "doutor": ".Nelson Agostino Vaccari Junior",
-      "quantidade": 17,
-      "valor": 2911.99,
+      "quantidade": 15,
+      "valor": 2557.99,
       "descontado": 0.0,
-      "pendente": 2911.99
+      "pendente": 2557.99
     },
     {
       "doutor": ".Nelson Junior",
@@ -329,6 +329,13 @@
       "valor": 20812.99,
       "descontado": 0.0,
       "pendente": 20812.99
+    },
+    {
+      "doutor": "Nelson Vaccari",
+      "quantidade": 2,
+      "valor": 327.0,
+      "descontado": 327.0,
+      "pendente": 0.0
     },
     {
       "doutor": "PEDI.Giovana Gasparini",
