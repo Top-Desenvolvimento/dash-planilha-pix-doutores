@@ -1,10 +1,10 @@
 {
   "competencia": "2026-04",
-  "gerado_em": "2026-04-06T13:12:02.889325",
-  "quantidade_total": 13,
-  "valor_total": 1690.0,
-  "valor_total_descontado": 1690.0,
-  "valor_total_pendente": 0.0,
+  "gerado_em": "2026-04-06T13:50:13.749565",
+  "quantidade_total": 16,
+  "valor_total": 2329.0,
+  "valor_total_descontado": 2040.0,
+  "valor_total_pendente": 289.0,
   "por_unidade": [
     {
       "unidade": "Caxias",
@@ -21,20 +21,34 @@
       "pendente": 0.0
     },
     {
+      "unidade": "FloresDaCunha",
+      "quantidade": 1,
+      "valor": 289.0,
+      "descontado": 0.0,
+      "pendente": 289.0
+    },
+    {
       "unidade": "Soledade",
-      "quantidade": 10,
-      "valor": 1255.0,
-      "descontado": 1255.0,
+      "quantidade": 12,
+      "valor": 1605.0,
+      "descontado": 1605.0,
       "pendente": 0.0
     }
   ],
   "por_doutor": [
     {
       "doutor": "Cristian Pressi",
-      "quantidade": 10,
-      "valor": 1255.0,
-      "descontado": 1255.0,
+      "quantidade": 12,
+      "valor": 1605.0,
+      "descontado": 1605.0,
       "pendente": 0.0
+    },
+    {
+      "doutor": "Dionathan Pohlmann",
+      "quantidade": 1,
+      "valor": 289.0,
+      "descontado": 0.0,
+      "pendente": 289.0
     },
     {
       "doutor": "Franciele Pedrotti",
