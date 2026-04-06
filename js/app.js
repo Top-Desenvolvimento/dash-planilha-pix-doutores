@@ -95,15 +95,44 @@ async function validarUsuarioAdmin() {
   return data === true;
 }
 
+async function emailPodeCadastrar(email) {
+  const { data, error } = await supabaseClient.rpc("email_pode_cadastrar", {
+    p_email: email
+  });
+
+  if (error) throw error;
+  return data === true;
+}
+
 async function loginSupabase(email, password) {
-  const { error } = await supabaseClient.auth.signInWithPassword({ email, password });
+  const { error } = await supabaseClient.auth.signInWithPassword({
+    email,
+    password
+  });
+
   if (error) throw error;
 
   const autorizado = await validarUsuarioAutorizado();
+
   if (!autorizado) {
     await supabaseClient.auth.signOut();
     throw new Error("Seu usuário não está autorizado para acessar esta dashboard.");
   }
+}
+
+async function criarAcessoSupabase(email, password) {
+  const permitido = await emailPodeCadastrar(email);
+
+  if (!permitido) {
+    throw new Error("Este e-mail não está autorizado para criar acesso.");
+  }
+
+  const { error } = await supabaseClient.auth.signUp({
+    email,
+    password
+  });
+
+  if (error) throw error;
 }
 
 async function logoutSupabase() {
@@ -114,13 +143,18 @@ async function enviarRecuperacaoSenha(email) {
   const base = window.location.origin + window.location.pathname.replace(/\/index\.html$/, "");
   const redirectTo = `${base}/reset.html`;
 
-  const { error } = await supabaseClient.auth.resetPasswordForEmail(email, { redirectTo });
+  const { error } = await supabaseClient.auth.resetPasswordForEmail(email, {
+    redirectTo
+  });
+
   if (error) throw error;
 }
 
 function preencherBadgeUsuario() {
   const badge = document.getElementById("badgeUsuario");
-  if (badge) badge.textContent = currentUser?.email || "Usuário";
+  if (badge) {
+    badge.textContent = currentUser?.email || "Usuário";
+  }
 }
 
 function getCompetenciaAtual() {
@@ -207,8 +241,12 @@ function obterPercentual(utilizado, creditoInicial) {
 }
 
 function obterStatus(percentual) {
-  if (percentual >= 100) return { classe: "status-red", texto: "Bloqueado", dot: "dot-red" };
-  if (percentual >= 50) return { classe: "status-yellow", texto: "Atenção", dot: "dot-yellow" };
+  if (percentual >= 100) {
+    return { classe: "status-red", texto: "Bloqueado", dot: "dot-red" };
+  }
+  if (percentual >= 50) {
+    return { classe: "status-yellow", texto: "Atenção", dot: "dot-yellow" };
+  }
   return { classe: "status-green", texto: "Controlado", dot: "dot-green" };
 }
 
@@ -223,11 +261,26 @@ function renderCards(registros) {
   const totalCidades = new Set(registros.map(item => item.unidade).filter(Boolean)).size;
 
   alvo.innerHTML = `
-    <div class="stat-card"><div class="stat-title">Lançamentos</div><div class="stat-value">${totalLancamentos}</div></div>
-    <div class="stat-card"><div class="stat-title">Valor total</div><div class="stat-value">${formatarMoeda(totalValor)}</div></div>
-    <div class="stat-card"><div class="stat-title">Descontado</div><div class="stat-value">${formatarMoeda(totalDescontado)}</div></div>
-    <div class="stat-card"><div class="stat-title">Pendente</div><div class="stat-value">${formatarMoeda(totalPendente)}</div></div>
-    <div class="stat-card"><div class="stat-title">Cidades</div><div class="stat-value">${totalCidades}</div></div>
+    <div class="stat-card">
+      <div class="stat-title">Lançamentos</div>
+      <div class="stat-value">${totalLancamentos}</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-title">Valor total</div>
+      <div class="stat-value">${formatarMoeda(totalValor)}</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-title">Descontado</div>
+      <div class="stat-value">${formatarMoeda(totalDescontado)}</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-title">Pendente</div>
+      <div class="stat-value">${formatarMoeda(totalPendente)}</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-title">Cidades</div>
+      <div class="stat-value">${totalCidades}</div>
+    </div>
   `;
 }
 
@@ -276,7 +329,12 @@ function renderTabelaAtencao(registros, saldos) {
       <td>${formatarMoeda(item.utilizado)}</td>
       <td>${formatarMoeda(item.creditoDisponivel)}</td>
       <td>${item.percentual.toFixed(1)}%</td>
-      <td><span class="status-pill ${item.status.classe}"><span class="dot ${item.status.dot}"></span>${item.status.texto}</span></td>
+      <td>
+        <span class="status-pill ${item.status.classe}">
+          <span class="dot ${item.status.dot}"></span>
+          ${item.status.texto}
+        </span>
+      </td>
     </tr>
   `).join("");
 }
@@ -300,7 +358,12 @@ function renderTabelaBloqueados(registros, saldos) {
       <td>${formatarMoeda(item.utilizado)}</td>
       <td>${formatarMoeda(item.creditoDisponivel)}</td>
       <td>${item.percentual.toFixed(1)}%</td>
-      <td><span class="status-pill ${item.status.classe}"><span class="dot ${item.status.dot}"></span>${item.status.texto}</span></td>
+      <td>
+        <span class="status-pill ${item.status.classe}">
+          <span class="dot ${item.status.dot}"></span>
+          ${item.status.texto}
+        </span>
+      </td>
     </tr>
   `).join("");
 }
@@ -325,7 +388,9 @@ function renderTabelaPixMes(registros) {
         <td>${escapeHtml(item.paciente)}</td>
         <td>${formatarMoeda(item.valor)}</td>
         <td>${formatarMoeda(item.valor_descontado)}</td>
-        <td class="${Number(item.pendente || 0) > 0 ? 'text-warning' : 'text-success'}">${formatarMoeda(item.pendente)}</td>
+        <td class="${Number(item.pendente || 0) > 0 ? 'text-warning' : 'text-success'}">
+          ${formatarMoeda(item.pendente)}
+        </td>
       </tr>
     `).join("");
 }
@@ -340,7 +405,10 @@ function atualizarDashboard() {
   renderTabelaBloqueados(registros, saldos);
   renderTabelaPixMes(registros);
 
-  document.getElementById("badgeCompetencia").textContent = formatarCompetenciaLabel(competencia);
+  const badgeCompetencia = document.getElementById("badgeCompetencia");
+  if (badgeCompetencia) {
+    badgeCompetencia.textContent = formatarCompetenciaLabel(competencia);
+  }
 }
 
 function exportarCSV() {
@@ -391,18 +459,29 @@ function exportarCSV() {
 
 async function carregarDashboardInterno() {
   const resposta = await fetch("./data/dashboard_data.json", { cache: "no-store" });
-  if (!resposta.ok) throw new Error(`Arquivo não encontrado: ${resposta.status}`);
+  if (!resposta.ok) {
+    throw new Error(`Arquivo não encontrado: ${resposta.status}`);
+  }
 
   dashboardData = await resposta.json();
 
-  document.getElementById("tituloDashboard").textContent =
-    dashboardData.titulo_dashboard || "PIX Doutores";
+  const titulo = document.getElementById("tituloDashboard");
+  const subtitulo = document.getElementById("subtituloDashboard");
+  const badgeArquivo = document.getElementById("badgeArquivo");
 
-  document.getElementById("subtituloDashboard").textContent =
-    "Lista mensal de PIX Doutores com alertas de limite";
+  if (titulo) {
+    titulo.textContent = dashboardData.titulo_dashboard || "PIX Doutores";
+  }
 
-  document.getElementById("badgeArquivo").textContent =
-    dashboardData?.arquivo_origem ? `Base: ${dashboardData.arquivo_origem}` : "Base não informada";
+  if (subtitulo) {
+    subtitulo.textContent = "Lista mensal de PIX Doutores com alertas de limite";
+  }
+
+  if (badgeArquivo) {
+    badgeArquivo.textContent = dashboardData?.arquivo_origem
+      ? `Base: ${dashboardData.arquivo_origem}`
+      : "Base não informada";
+  }
 
   preencherBadgeUsuario();
   preencherFiltroMes();
@@ -457,10 +536,10 @@ async function salvarDoutor(id) {
   try {
     mostrarMensagemAdmin("");
 
-    const nome = document.querySelector(`[data-id="${id}"][data-field="nome"]`).value.trim();
-    const credito = parseFloat(document.querySelector(`[data-id="${id}"][data-field="credito"]`).value || "0");
-    const pixKey = document.querySelector(`[data-id="${id}"][data-field="pix_key"]`).value.trim();
-    const ativo = document.querySelector(`[data-id="${id}"][data-field="ativo"]`).value === "true";
+    const nome = document.querySelector(`[data-id="${id}"][data-field="nome"]`)?.value.trim() || "";
+    const credito = parseFloat(document.querySelector(`[data-id="${id}"][data-field="credito"]`)?.value || "0");
+    const pixKey = document.querySelector(`[data-id="${id}"][data-field="pix_key"]`)?.value.trim() || "";
+    const ativo = document.querySelector(`[data-id="${id}"][data-field="ativo"]`)?.value === "true";
 
     if (!nome) {
       mostrarMensagemAdmin("Nome é obrigatório.", true);
@@ -563,6 +642,7 @@ async function iniciarAplicacao() {
     }
 
     const autorizado = await validarUsuarioAutorizado();
+
     if (!autorizado) {
       await supabaseClient.auth.signOut();
       mostrarTelaLogin();
@@ -615,6 +695,26 @@ document.getElementById("loginForm")?.addEventListener("submit", async (e) => {
   }
 });
 
+document.getElementById("btnCriarAcesso")?.addEventListener("click", async () => {
+  const email = document.getElementById("email")?.value.trim() || "";
+  const password = document.getElementById("password")?.value.trim() || "";
+
+  mostrarMensagemAuth("");
+
+  if (!email || !password) {
+    mostrarMensagemAuth("Preencha e-mail e senha para criar o acesso.", true);
+    return;
+  }
+
+  try {
+    await criarAcessoSupabase(email, password);
+    mostrarMensagemAuth("Acesso criado com sucesso. Agora você já pode entrar.");
+  } catch (erro) {
+    console.error(erro);
+    mostrarMensagemAuth(erro.message || "Não foi possível criar o acesso.", true);
+  }
+});
+
 document.getElementById("btnForgotPassword")?.addEventListener("click", async () => {
   const email = document.getElementById("email")?.value.trim() || "";
 
@@ -660,9 +760,19 @@ document.getElementById("filtroMes")?.addEventListener("change", () => {
 document.getElementById("filtroCidade")?.addEventListener("change", atualizarDashboard);
 
 document.getElementById("btnLimpar")?.addEventListener("click", () => {
-  document.getElementById("filtroMes").value = dashboardData?.competencia_padrao || "2026-01";
+  const filtroMes = document.getElementById("filtroMes");
+  const filtroCidade = document.getElementById("filtroCidade");
+
+  if (filtroMes) {
+    filtroMes.value = dashboardData?.competencia_padrao || "2026-01";
+  }
+
   preencherFiltroCidade();
-  document.getElementById("filtroCidade").selectedIndex = 0;
+
+  if (filtroCidade) {
+    filtroCidade.selectedIndex = 0;
+  }
+
   atualizarDashboard();
 });
 
@@ -670,5 +780,16 @@ document.getElementById("btnExportar")?.addEventListener("click", exportarCSV);
 
 window.salvarDoutor = salvarDoutor;
 window.removerDoutor = removerDoutor;
+
+supabaseClient.auth.onAuthStateChange(async (_event, session) => {
+  if (!session) {
+    currentUser = null;
+    currentUserIsAdmin = false;
+    mostrarTelaLogin();
+    return;
+  }
+
+  currentUser = session.user;
+});
 
 iniciarAplicacao();
