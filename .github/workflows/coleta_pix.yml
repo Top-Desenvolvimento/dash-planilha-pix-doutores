@@ -44,6 +44,8 @@ jobs:
       - name: Rodar coleta
         env:
           MODO_COLETA: ${{ steps.modo.outputs.modo }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: |
           python coletor_pix.py
           python generate_data.py
