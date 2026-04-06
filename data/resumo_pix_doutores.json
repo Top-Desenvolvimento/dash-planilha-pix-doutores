@@ -1,9 +1,9 @@
 {
   "competencia": "2026-04",
-  "gerado_em": "2026-04-06T17:11:27.938669",
-  "quantidade_total": 6,
-  "valor_total": 585.0,
-  "valor_total_descontado": 585.0,
+  "gerado_em": "2026-04-06T17:57:14.500158",
+  "quantidade_total": 7,
+  "valor_total": 670.0,
+  "valor_total_descontado": 670.0,
   "valor_total_pendente": 0.0,
   "por_unidade": [
     {
@@ -12,9 +12,23 @@
       "valor": 585.0,
       "descontado": 585.0,
       "pendente": 0.0
+    },
+    {
+      "unidade": "Farroupilha",
+      "quantidade": 1,
+      "valor": 85.0,
+      "descontado": 85.0,
+      "pendente": 0.0
     }
   ],
   "por_doutor": [
+    {
+      "doutor": "Adriele da Silva",
+      "quantidade": 1,
+      "valor": 85.0,
+      "descontado": 85.0,
+      "pendente": 0.0
+    },
     {
       "doutor": "Franciele Pedrotti",
       "quantidade": 1,
