@@ -7,19 +7,22 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+  <!-- PRIMEIRA TELA: LOGIN -->
   <div id="authScreen" class="auth-screen">
     <div class="auth-card">
-      <h1>PIX Doutores</h1>
-      <p class="auth-subtitle">Acesse com seu login</p>
+      <h1>Entrar</h1>
+      <p class="auth-subtitle">Acesso restrito à dashboard.</p>
 
       <form id="loginForm" class="auth-form">
         <label for="email">E-mail</label>
-        <input id="email" type="email" placeholder="seu@email.com" required />
+        <input id="email" type="email" placeholder="Digite seu e-mail" required />
 
         <label for="password">Senha</label>
-        <input id="password" type="password" placeholder="Sua senha" required />
+        <input id="password" type="password" placeholder="Digite sua senha" required />
 
-        <button type="submit" class="btn btn-primary">Entrar</button>
+        <div class="auth-actions">
+          <button type="submit" class="btn btn-primary">Entrar</button>
+        </div>
       </form>
 
       <button id="btnForgotPassword" class="link-button" type="button">
@@ -27,9 +30,14 @@
       </button>
 
       <div id="authMessage" class="auth-message"></div>
+
+      <div class="auth-footer-info">
+        PIX Doutores
+      </div>
     </div>
   </div>
 
+  <!-- SEGUNDA TELA: DASH -->
   <div id="appRoot" class="layout hidden">
     <aside class="sidebar">
       <div class="brand">
@@ -41,6 +49,15 @@
       </div>
 
       <section class="sidebar-card">
+        <h2>Navegação</h2>
+        <div class="sidebar-actions">
+          <button id="btnTabDashboard" class="btn btn-primary">Dashboard</button>
+          <button id="btnTabAdmin" class="btn btn-secondary hidden">Admin</button>
+          <button id="btnLogout" class="btn btn-secondary">Sair</button>
+        </div>
+      </section>
+
+      <section id="filtrosSidebar" class="sidebar-card">
         <h2>Filtros</h2>
 
         <label for="filtroMes">Mês</label>
@@ -59,145 +76,185 @@
         <div class="sidebar-actions">
           <button id="btnLimpar" class="btn btn-secondary">Limpar filtros</button>
           <button id="btnExportar" class="btn btn-primary">Exportar CSV</button>
-          <button id="btnLogout" class="btn btn-secondary">Sair</button>
-        </div>
-      </section>
-
-      <section class="sidebar-card">
-        <h2>Legenda</h2>
-
-        <div class="legend-item">
-          <span class="legend-dot dot-green"></span>
-          <span>Baixa utilização</span>
-        </div>
-
-        <div class="legend-item">
-          <span class="legend-dot dot-yellow"></span>
-          <span>50% ou mais</span>
-        </div>
-
-        <div class="legend-item">
-          <span class="legend-dot dot-red"></span>
-          <span>100% ou mais</span>
         </div>
       </section>
     </aside>
 
     <main class="main">
-      <header class="hero">
-        <div>
-          <h2 id="tituloDashboard">Painel Gerencial</h2>
-          <p id="subtituloDashboard">Acompanhamento mensal de crédito PIX por doutor</p>
-        </div>
-
-        <div class="hero-badges">
-          <span class="badge" id="badgeCompetencia">Competência</span>
-          <span class="badge badge-muted" id="badgeArquivo">Arquivo</span>
-          <span class="badge badge-muted" id="badgeUsuario">Usuário</span>
-        </div>
-      </header>
-
-      <section class="panel">
-        <div class="panel-head">
+      <section id="dashboardView">
+        <header class="hero">
           <div>
-            <h3>Visão Geral</h3>
-            <p>Indicadores consolidados do período selecionado</p>
+            <h2 id="tituloDashboard">Painel Gerencial</h2>
+            <p id="subtituloDashboard">Acompanhamento mensal de crédito PIX por doutor</p>
           </div>
-        </div>
-        <div class="stats-grid" id="cardsResumo"></div>
+
+          <div class="hero-badges">
+            <span class="badge" id="badgeCompetencia">Competência</span>
+            <span class="badge badge-muted" id="badgeArquivo">Arquivo</span>
+            <span class="badge badge-muted" id="badgeUsuario">Usuário</span>
+          </div>
+        </header>
+
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <h3>Visão Geral</h3>
+              <p>Indicadores consolidados do período selecionado</p>
+            </div>
+          </div>
+          <div class="stats-grid" id="cardsResumo"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <h3>Resumo por Doutor</h3>
+              <p>Crédito autorizado, uso, saldo, percentual e status</p>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Doutor</th>
+                  <th>Crédito inicial</th>
+                  <th>Total utilizado</th>
+                  <th>Saldo restante</th>
+                  <th>% utilizado</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="tabelaResumoDoutor"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <h3>Resumo por Unidade</h3>
+              <p>Consolidação de lançamentos por unidade</p>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Unidade</th>
+                  <th>Qtd.</th>
+                  <th>Valor</th>
+                  <th>Descontado</th>
+                  <th>Pendente</th>
+                </tr>
+              </thead>
+              <tbody id="tabelaUnidades"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <h3>Lançamentos PIX do Mês</h3>
+              <p>Detalhamento completo dos registros coletados</p>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Data</th>
+                  <th>Unidade</th>
+                  <th>Doutor</th>
+                  <th>Paciente</th>
+                  <th>Valor</th>
+                  <th>Descontado</th>
+                  <th>Pendente</th>
+                </tr>
+              </thead>
+              <tbody id="tabelaRegistros"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <h3>Erros de Coleta</h3>
+              <p>Somente unidades com falha aparecem aqui</p>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Unidade</th>
+                  <th>Erro</th>
+                  <th>Data/Hora</th>
+                </tr>
+              </thead>
+              <tbody id="tabelaErros"></tbody>
+            </table>
+          </div>
+        </section>
       </section>
 
-      <section class="panel">
-        <div class="panel-head">
+      <section id="adminView" class="hidden">
+        <header class="hero">
           <div>
-            <h3>Resumo por Doutor</h3>
-            <p>Crédito autorizado, uso, saldo, percentual e status</p>
+            <h2>Administração de Doutores</h2>
+            <p>Edite limites, chave Pix e cadastro dos doutores</p>
           </div>
-        </div>
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>Doutor</th>
-                <th>Crédito inicial</th>
-                <th>Total utilizado</th>
-                <th>Saldo restante</th>
-                <th>% utilizado</th>
-                <th>Status</th>
-              </tr>
-            </thead>
-            <tbody id="tabelaResumoDoutor"></tbody>
-          </table>
-        </div>
-      </section>
+        </header>
 
-      <section class="panel">
-        <div class="panel-head">
-          <div>
-            <h3>Resumo por Unidade</h3>
-            <p>Consolidação de lançamentos por unidade</p>
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <h3>Novo Doutor</h3>
+            </div>
           </div>
-        </div>
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>Unidade</th>
-                <th>Qtd.</th>
-                <th>Valor</th>
-                <th>Descontado</th>
-                <th>Pendente</th>
-              </tr>
-            </thead>
-            <tbody id="tabelaUnidades"></tbody>
-          </table>
-        </div>
-      </section>
 
-      <section class="panel">
-        <div class="panel-head">
-          <div>
-            <h3>Lançamentos PIX do Mês</h3>
-            <p>Detalhamento completo dos registros coletados</p>
+          <div class="admin-form-grid">
+            <input id="novoNome" type="text" placeholder="Nome do doutor" />
+            <input id="novoCredito" type="number" step="0.01" placeholder="Crédito" />
+            <input id="novaPixKey" type="text" placeholder="Chave Pix" />
+            <select id="novoAtivo">
+              <option value="true">Ativo</option>
+              <option value="false">Inativo</option>
+            </select>
           </div>
-        </div>
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>Data</th>
-                <th>Unidade</th>
-                <th>Doutor</th>
-                <th>Paciente</th>
-                <th>Valor</th>
-                <th>Descontado</th>
-                <th>Pendente</th>
-              </tr>
-            </thead>
-            <tbody id="tabelaRegistros"></tbody>
-          </table>
-        </div>
-      </section>
 
-      <section class="panel">
-        <div class="panel-head">
-          <div>
-            <h3>Erros de Coleta</h3>
-            <p>Somente unidades com falha aparecem aqui</p>
+          <div class="sidebar-actions" style="margin-top:16px;">
+            <button id="btnAdicionarDoutor" class="btn btn-primary">Adicionar Doutor</button>
           </div>
-        </div>
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>Unidade</th>
-                <th>Erro</th>
-                <th>Data/Hora</th>
-              </tr>
-            </thead>
-            <tbody id="tabelaErros"></tbody>
-          </table>
-        </div>
+
+          <div id="adminMessage" class="auth-message"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <h3>Doutores Cadastrados</h3>
+            </div>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Nome</th>
+                  <th>Crédito</th>
+                  <th>Chave Pix</th>
+                  <th>Ativo</th>
+                  <th>Última edição</th>
+                  <th>E-mail que salvou</th>
+                  <th>Ações</th>
+                </tr>
+              </thead>
+              <tbody id="tabelaAdminDoutores"></tbody>
+            </table>
+          </div>
+        </section>
       </section>
     </main>
   </div>
