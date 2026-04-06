@@ -10,7 +10,7 @@
   <div id="authScreen" class="auth-screen">
     <div class="auth-card">
       <h1>PIX Doutores</h1>
-      <p class="auth-subtitle">Acesse com seu login do Supabase</p>
+      <p class="auth-subtitle">Acesse com seu login</p>
 
       <form id="loginForm" class="auth-form">
         <label for="email">E-mail</label>
@@ -21,6 +21,10 @@
 
         <button type="submit" class="btn btn-primary">Entrar</button>
       </form>
+
+      <button id="btnForgotPassword" class="link-button" type="button">
+        Esqueci minha senha
+      </button>
 
       <div id="authMessage" class="auth-message"></div>
     </div>
@@ -100,7 +104,6 @@
             <p>Indicadores consolidados do período selecionado</p>
           </div>
         </div>
-
         <div class="stats-grid" id="cardsResumo"></div>
       </section>
 
@@ -111,7 +114,6 @@
             <p>Crédito autorizado, uso, saldo, percentual e status</p>
           </div>
         </div>
-
         <div class="table-wrap">
           <table>
             <thead>
@@ -136,7 +138,6 @@
             <p>Consolidação de lançamentos por unidade</p>
           </div>
         </div>
-
         <div class="table-wrap">
           <table>
             <thead>
@@ -160,7 +161,6 @@
             <p>Detalhamento completo dos registros coletados</p>
           </div>
         </div>
-
         <div class="table-wrap">
           <table>
             <thead>
@@ -186,7 +186,6 @@
             <p>Somente unidades com falha aparecem aqui</p>
           </div>
         </div>
-
         <div class="table-wrap">
           <table>
             <thead>
