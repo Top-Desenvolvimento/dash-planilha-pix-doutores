@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <!-- PRIMEIRA TELA: LOGIN -->
   <div id="authScreen" class="auth-screen">
     <div class="auth-card">
       <h1>Entrar</h1>
@@ -30,14 +29,9 @@
       </button>
 
       <div id="authMessage" class="auth-message"></div>
-
-      <div class="auth-footer-info">
-        PIX Doutores
-      </div>
     </div>
   </div>
 
-  <!-- SEGUNDA TELA: DASH -->
   <div id="appRoot" class="layout hidden">
     <aside class="sidebar">
       <div class="brand">
@@ -51,8 +45,8 @@
       <section class="sidebar-card">
         <h2>Navegação</h2>
         <div class="sidebar-actions">
-          <button id="btnTabDashboard" class="btn btn-primary">Dashboard</button>
-          <button id="btnTabAdmin" class="btn btn-secondary hidden">Admin</button>
+          <button id="btnTabDashboard" class="btn btn-primary">Início</button>
+          <button id="btnTabAdmin" class="btn btn-secondary hidden">ADM</button>
           <button id="btnLogout" class="btn btn-secondary">Sair</button>
         </div>
       </section>
@@ -63,14 +57,9 @@
         <label for="filtroMes">Mês</label>
         <select id="filtroMes"></select>
 
-        <label for="filtroUnidade">Unidade</label>
-        <select id="filtroUnidade">
+        <label for="filtroCidade">Cidade</label>
+        <select id="filtroCidade">
           <option value="">Todas</option>
-        </select>
-
-        <label for="filtroDoutor">Doutor</label>
-        <select id="filtroDoutor">
-          <option value="">Todos</option>
         </select>
 
         <div class="sidebar-actions">
@@ -84,8 +73,8 @@
       <section id="dashboardView">
         <header class="hero">
           <div>
-            <h2 id="tituloDashboard">Painel Gerencial</h2>
-            <p id="subtituloDashboard">Acompanhamento mensal de crédito PIX por doutor</p>
+            <h2 id="tituloDashboard">PIX Doutores do Mês</h2>
+            <p id="subtituloDashboard">Lista de lançamentos do período selecionado</p>
           </div>
 
           <div class="hero-badges">
@@ -98,8 +87,8 @@
         <section class="panel">
           <div class="panel-head">
             <div>
-              <h3>Visão Geral</h3>
-              <p>Indicadores consolidados do período selecionado</p>
+              <h3>Resumo rápido</h3>
+              <p>Visão resumida do mês filtrado</p>
             </div>
           </div>
           <div class="stats-grid" id="cardsResumo"></div>
@@ -108,8 +97,8 @@
         <section class="panel">
           <div class="panel-head">
             <div>
-              <h3>Resumo por Doutor</h3>
-              <p>Crédito autorizado, uso, saldo, percentual e status</p>
+              <h3>Doutores em atenção</h3>
+              <p>Utilização igual ou acima de 50%</p>
             </div>
           </div>
           <div class="table-wrap">
@@ -118,13 +107,13 @@
                 <tr>
                   <th>Doutor</th>
                   <th>Crédito inicial</th>
-                  <th>Total utilizado</th>
-                  <th>Saldo restante</th>
+                  <th>Utilizado</th>
+                  <th>Saldo</th>
                   <th>% utilizado</th>
                   <th>Status</th>
                 </tr>
               </thead>
-              <tbody id="tabelaResumoDoutor"></tbody>
+              <tbody id="tabelaAtencao"></tbody>
             </table>
           </div>
         </section>
@@ -132,22 +121,23 @@
         <section class="panel">
           <div class="panel-head">
             <div>
-              <h3>Resumo por Unidade</h3>
-              <p>Consolidação de lançamentos por unidade</p>
+              <h3>Doutores bloqueados</h3>
+              <p>Utilização igual ou acima de 100%</p>
             </div>
           </div>
           <div class="table-wrap">
             <table>
               <thead>
                 <tr>
-                  <th>Unidade</th>
-                  <th>Qtd.</th>
-                  <th>Valor</th>
-                  <th>Descontado</th>
-                  <th>Pendente</th>
+                  <th>Doutor</th>
+                  <th>Crédito inicial</th>
+                  <th>Utilizado</th>
+                  <th>Saldo</th>
+                  <th>% utilizado</th>
+                  <th>Status</th>
                 </tr>
               </thead>
-              <tbody id="tabelaUnidades"></tbody>
+              <tbody id="tabelaBloqueados"></tbody>
             </table>
           </div>
         </section>
@@ -155,8 +145,8 @@
         <section class="panel">
           <div class="panel-head">
             <div>
-              <h3>Lançamentos PIX do Mês</h3>
-              <p>Detalhamento completo dos registros coletados</p>
+              <h3>PIX Doutores do mês</h3>
+              <p>Somente lançamentos do período e cidade selecionados</p>
             </div>
           </div>
           <div class="table-wrap">
@@ -164,7 +154,7 @@
               <thead>
                 <tr>
                   <th>Data</th>
-                  <th>Unidade</th>
+                  <th>Cidade</th>
                   <th>Doutor</th>
                   <th>Paciente</th>
                   <th>Valor</th>
@@ -172,28 +162,7 @@
                   <th>Pendente</th>
                 </tr>
               </thead>
-              <tbody id="tabelaRegistros"></tbody>
-            </table>
-          </div>
-        </section>
-
-        <section class="panel">
-          <div class="panel-head">
-            <div>
-              <h3>Erros de Coleta</h3>
-              <p>Somente unidades com falha aparecem aqui</p>
-            </div>
-          </div>
-          <div class="table-wrap">
-            <table>
-              <thead>
-                <tr>
-                  <th>Unidade</th>
-                  <th>Erro</th>
-                  <th>Data/Hora</th>
-                </tr>
-              </thead>
-              <tbody id="tabelaErros"></tbody>
+              <tbody id="tabelaPixMes"></tbody>
             </table>
           </div>
         </section>
@@ -202,8 +171,8 @@
       <section id="adminView" class="hidden">
         <header class="hero">
           <div>
-            <h2>Administração de Doutores</h2>
-            <p>Edite limites, chave Pix e cadastro dos doutores</p>
+            <h2>Administração</h2>
+            <p>Cadastro e manutenção dos doutores</p>
           </div>
         </header>
 
@@ -224,7 +193,7 @@
             </select>
           </div>
 
-          <div class="sidebar-actions" style="margin-top:16px;">
+          <div class="sidebar-actions" style="margin-top: 16px;">
             <button id="btnAdicionarDoutor" class="btn btn-primary">Adicionar Doutor</button>
           </div>
 
@@ -234,7 +203,7 @@
         <section class="panel">
           <div class="panel-head">
             <div>
-              <h3>Doutores Cadastrados</h3>
+              <h3>Doutores cadastrados</h3>
             </div>
           </div>
 
