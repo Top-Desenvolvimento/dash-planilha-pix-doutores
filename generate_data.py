@@ -32,13 +32,38 @@ def gerar_meses_ano(ano: int) -> List[str]:
     return [f"{ano}-{mes:02d}" for mes in range(1, 13)]
 
 
+def normalizar_competencia(valor: str | None) -> str:
+    valor = str(valor or "").strip()
+    if not valor:
+        return ""
+
+    partes = valor.split("-")
+    if len(partes) == 2 and partes[0].isdigit() and partes[1].isdigit():
+        return f"{int(partes[0]):04d}-{int(partes[1]):02d}"
+
+    return valor
+
+
 def agrupar_por_competencia(registros: List[Dict[str, Any]], meses_disponiveis: List[str]) -> Dict[str, List[Dict[str, Any]]]:
     agrupado = {mes: [] for mes in meses_disponiveis}
+
     for item in registros:
-        competencia = str(item.get("competencia", "")).strip()
+        competencia = normalizar_competencia(item.get("competencia"))
         if competencia in agrupado:
             agrupado[competencia].append(item)
+
     return agrupado
+
+
+def normalizar_dict_por_competencia(valor: Any, meses_disponiveis: List[str], padrao_valor: Any) -> Dict[str, Any]:
+    saida = {mes: (padrao_valor() if callable(padrao_valor) else padrao_valor) for mes in meses_disponiveis}
+
+    if isinstance(valor, dict):
+        for competencia, conteudo in valor.items():
+            chave = normalizar_competencia(competencia)
+            if chave in saida:
+                saida[chave] = conteudo
+    return saida
 
 
 def obter_competencia_padrao(ano: int, registros_por_competencia: Dict[str, List[Dict[str, Any]]]) -> str:
@@ -52,27 +77,32 @@ def obter_competencia_padrao(ano: int, registros_por_competencia: Dict[str, List
     if meses_com_dado:
         return meses_com_dado[-1]
 
-    return atual if hoje.year == ano else f"{ano}-12"
+    if hoje.year == ano:
+        return atual
+
+    return f"{ano}-12"
 
 
 def main() -> None:
     registros = carregar_json(ARQUIVO_PIX, [])
-    saldos_por_competencia = carregar_json(ARQUIVO_SALDOS, {})
-    resumos_por_competencia = carregar_json(ARQUIVO_RESUMO, {})
+    saldos_brutos = carregar_json(ARQUIVO_SALDOS, {})
+    resumos_brutos = carregar_json(ARQUIVO_RESUMO, {})
     erros = carregar_json(ARQUIVO_ERROS, [])
 
+    if not isinstance(registros, list):
+        registros = []
+    if not isinstance(erros, list):
+        erros = []
+
     meses_disponiveis = gerar_meses_ano(ANO_REFERENCIA)
+
     registros_por_competencia = agrupar_por_competencia(registros, meses_disponiveis)
     erros_por_competencia = agrupar_por_competencia(erros, meses_disponiveis)
-    competencia_padrao = obter_competencia_padrao(ANO_REFERENCIA, registros_por_competencia)
 
-    if not isinstance(saldos_por_competencia, dict):
-        saldos_por_competencia = {}
-    if not isinstance(resumos_por_competencia, dict):
-        resumos_por_competencia = {}
+    saldos_por_competencia = normalizar_dict_por_competencia(saldos_brutos, meses_disponiveis, list)
+    resumos_por_competencia = normalizar_dict_por_competencia(resumos_brutos, meses_disponiveis, dict)
 
     for mes in meses_disponiveis:
-        saldos_por_competencia.setdefault(mes, [])
         resumos_por_competencia.setdefault(mes, {
             "competencia": mes,
             "gerado_em": None,
@@ -83,6 +113,9 @@ def main() -> None:
             "por_unidade": [],
             "por_doutor": [],
         })
+        saldos_por_competencia.setdefault(mes, [])
+
+    competencia_padrao = obter_competencia_padrao(ANO_REFERENCIA, registros_por_competencia)
 
     dashboard = {
         "status": "ok",
