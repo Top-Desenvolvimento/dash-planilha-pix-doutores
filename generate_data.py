@@ -1,59 +1,159 @@
-name: Coleta PIX Doutores
+from __future__ import annotations
 
-on:
-  workflow_dispatch:
-    inputs:
-      modo_coleta:
-        description: "Modo de coleta: rapido ou historico"
-        required: false
-        default: "rapido"
-  schedule:
-    - cron: "*/5 * * * *"
+import json
+from datetime import date
+from pathlib import Path
+from typing import Any, Dict, List
 
-permissions:
-  contents: write
 
-jobs:
-  coletar:
-    runs-on: ubuntu-22.04
+ANO_REFERENCIA = 2026
 
-    steps:
-      - name: Checkout do código
-        uses: actions/checkout@v4
+ARQUIVO_PIX = Path("data/pix_doutores.json")
+ARQUIVO_SALDOS = Path("data/saldos_doutores.json")
+ARQUIVO_RESUMO = Path("data/resumo_pix_doutores.json")
+ARQUIVO_ERROS = Path("data/erros_pix_doutores.json")
+ARQUIVO_DASH = Path("data/dashboard_data.json")
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
 
-      - name: Instalar dependências
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-          python -m playwright install chromium
+def carregar_json(caminho: Path, padrao: Any) -> Any:
+    if not caminho.exists():
+        return padrao
+    with open(caminho, "r", encoding="utf-8") as f:
+        return json.load(f)
 
-      - name: Definir modo
-        id: modo
-        run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            echo "modo=${{ github.event.inputs.modo_coleta }}" >> $GITHUB_OUTPUT
-          else
-            echo "modo=rapido" >> $GITHUB_OUTPUT
-          fi
 
-      - name: Rodar coleta
-        env:
-          MODO_COLETA: ${{ steps.modo.outputs.modo }}
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
-        run: |
-          python coletor_pix.py
-          python generate_data.py
+def salvar_json(dados: Any, caminho: Path) -> None:
+    caminho.parent.mkdir(parents=True, exist_ok=True)
+    with open(caminho, "w", encoding="utf-8") as f:
+        json.dump(dados, f, ensure_ascii=False, indent=2)
 
-      - name: Commit dos arquivos
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/
-          git diff --cached --quiet || git commit -m "Atualiza dashboard PIX Doutores"
-          git push
+
+def gerar_meses_ano(ano: int) -> List[str]:
+    return [f"{ano}-{mes:02d}" for mes in range(1, 13)]
+
+
+def normalizar_competencia(valor: Any) -> str:
+    texto = str(valor or "").strip()
+    if not texto:
+        return ""
+
+    partes = texto.split("-")
+    if len(partes) == 2 and partes[0].isdigit() and partes[1].isdigit():
+        return f"{int(partes[0]):04d}-{int(partes[1]):02d}"
+
+    return texto
+
+
+def agrupar_por_competencia(registros: List[Dict[str, Any]], meses: List[str]) -> Dict[str, List[Dict[str, Any]]]:
+    agrupado = {mes: [] for mes in meses}
+
+    for item in registros:
+        competencia = normalizar_competencia(item.get("competencia"))
+        if competencia in agrupado:
+            agrupado[competencia].append(item)
+
+    return agrupado
+
+
+def garantir_dict_por_mes(valor: Any, meses: List[str], default_factory):
+    saida = {mes: default_factory() for mes in meses}
+
+    if isinstance(valor, dict):
+        for chave, conteudo in valor.items():
+            competencia = normalizar_competencia(chave)
+            if competencia in saida:
+                saida[competencia] = conteudo
+
+    return saida
+
+
+def montar_resumo_vazio(mes: str) -> Dict[str, Any]:
+    return {
+        "competencia": mes,
+        "gerado_em": None,
+        "quantidade_total": 0,
+        "valor_total": 0,
+        "valor_total_descontado": 0,
+        "valor_total_pendente": 0,
+        "por_unidade": [],
+        "por_doutor": [],
+    }
+
+
+def obter_competencia_padrao(
+    ano: int,
+    registros_por_competencia: Dict[str, List[Dict[str, Any]]]
+) -> str:
+    hoje = date.today()
+    competencia_atual = f"{ano}-{hoje.month:02d}"
+
+    if hoje.year == ano and registros_por_competencia.get(competencia_atual):
+        return competencia_atual
+
+    meses_com_dado = sorted([
+        mes for mes, itens in registros_por_competencia.items()
+        if itens
+    ])
+
+    if meses_com_dado:
+        return meses_com_dado[-1]
+
+    if hoje.year == ano:
+        return competencia_atual
+
+    return f"{ano}-12"
+
+
+def main() -> None:
+    registros = carregar_json(ARQUIVO_PIX, [])
+    erros = carregar_json(ARQUIVO_ERROS, [])
+    saldos_brutos = carregar_json(ARQUIVO_SALDOS, {})
+    resumos_brutos = carregar_json(ARQUIVO_RESUMO, {})
+
+    if not isinstance(registros, list):
+        registros = []
+
+    if not isinstance(erros, list):
+        erros = []
+
+    meses_disponiveis = gerar_meses_ano(ANO_REFERENCIA)
+
+    registros_por_competencia = agrupar_por_competencia(registros, meses_disponiveis)
+    erros_por_competencia = agrupar_por_competencia(erros, meses_disponiveis)
+
+    saldos_por_competencia = garantir_dict_por_mes(saldos_brutos, meses_disponiveis, list)
+    resumos_por_competencia = garantir_dict_por_mes(resumos_brutos, meses_disponiveis, dict)
+
+    for mes in meses_disponiveis:
+        if not isinstance(saldos_por_competencia[mes], list):
+            saldos_por_competencia[mes] = []
+
+        if not isinstance(resumos_por_competencia[mes], dict) or not resumos_por_competencia[mes]:
+            resumos_por_competencia[mes] = montar_resumo_vazio(mes)
+
+    competencia_padrao = obter_competencia_padrao(
+        ANO_REFERENCIA,
+        registros_por_competencia
+    )
+
+    dashboard = {
+        "status": "ok",
+        "titulo_dashboard": "Painel Gerencial",
+        "arquivo_origem": ARQUIVO_PIX.name,
+        "ano_referencia": ANO_REFERENCIA,
+        "meses_disponiveis": meses_disponiveis,
+        "competencia_padrao": competencia_padrao,
+        "registros": registros,
+        "erros": erros,
+        "registros_por_competencia": registros_por_competencia,
+        "erros_por_competencia": erros_por_competencia,
+        "saldos_por_competencia": saldos_por_competencia,
+        "resumos_por_competencia": resumos_por_competencia,
+    }
+
+    salvar_json(dashboard, ARQUIVO_DASH)
+    print(f"[OK] Dashboard gerado em: {ARQUIVO_DASH}")
+
+
+if __name__ == "__main__":
+    main()
