@@ -20,9 +20,18 @@ function escapeHtml(valor) {
 
 function formatarCompetenciaLabel(competencia) {
   const mapa = {
-    "01": "Jan", "02": "Fev", "03": "Mar", "04": "Abr",
-    "05": "Mai", "06": "Jun", "07": "Jul", "08": "Ago",
-    "09": "Set", "10": "Out", "11": "Nov", "12": "Dez"
+    "01": "Jan",
+    "02": "Fev",
+    "03": "Mar",
+    "04": "Abr",
+    "05": "Mai",
+    "06": "Jun",
+    "07": "Jul",
+    "08": "Ago",
+    "09": "Set",
+    "10": "Out",
+    "11": "Nov",
+    "12": "Dez"
   };
 
   const [ano, mes] = String(competencia || "").split("-");
@@ -53,34 +62,48 @@ function mostrarMensagemAdmin(texto, erro = false) {
 }
 
 function mostrarTelaLogin() {
-  document.getElementById("authScreen").classList.remove("hidden");
-  document.getElementById("appRoot").classList.add("hidden");
+  const auth = document.getElementById("authScreen");
+  const app = document.getElementById("appRoot");
+  if (auth) auth.classList.remove("hidden");
+  if (app) app.classList.add("hidden");
 }
 
 function mostrarApp() {
-  document.getElementById("authScreen").classList.add("hidden");
-  document.getElementById("appRoot").classList.remove("hidden");
+  const auth = document.getElementById("authScreen");
+  const app = document.getElementById("appRoot");
+  if (auth) auth.classList.add("hidden");
+  if (app) app.classList.remove("hidden");
 }
 
 function mostrarDashboard() {
-  document.getElementById("dashboardView").classList.remove("hidden");
-  document.getElementById("adminView").classList.add("hidden");
-  document.getElementById("filtrosSidebar").classList.remove("hidden");
+  const dashboard = document.getElementById("dashboardView");
+  const admin = document.getElementById("adminView");
+  const filtros = document.getElementById("filtrosSidebar");
+
+  if (dashboard) dashboard.classList.remove("hidden");
+  if (admin) admin.classList.add("hidden");
+  if (filtros) filtros.classList.remove("hidden");
 }
 
 function mostrarAdmin() {
-  document.getElementById("dashboardView").classList.add("hidden");
-  document.getElementById("adminView").classList.remove("hidden");
-  document.getElementById("filtrosSidebar").classList.add("hidden");
+  const dashboard = document.getElementById("dashboardView");
+  const admin = document.getElementById("adminView");
+  const filtros = document.getElementById("filtrosSidebar");
+
+  if (dashboard) dashboard.classList.add("hidden");
+  if (admin) admin.classList.remove("hidden");
+  if (filtros) filtros.classList.add("hidden");
 }
 
 async function validarUsuarioAutorizado() {
+  if (!window.supabaseClient) return true;
   const { data, error } = await supabaseClient.rpc("usuario_esta_autorizado");
   if (error) throw error;
   return data === true;
 }
 
 async function validarUsuarioAdmin() {
+  if (!window.supabaseClient) return false;
   const { data, error } = await supabaseClient.rpc("usuario_eh_admin");
   if (error) throw error;
   return data === true;
@@ -127,12 +150,40 @@ function obterStatus(percentual) {
   return { classe: "status-green", texto: "Controlado", dot: "dot-green" };
 }
 
-function obterRegistrosDaCompetencia(competencia) {
-  return [...(dashboardData?.registros_por_competencia?.[competencia] || [])];
+function getMesesDisponiveis() {
+  return dashboardData?.meses_disponiveis || [];
+}
+
+function getCompetenciaAtual() {
+  const filtroMes = document.getElementById("filtroMes");
+  return filtroMes?.value || dashboardData?.competencia_padrao || "2026-01";
+}
+
+function getRegistrosDaCompetencia(competencia) {
+  const porCompetencia = dashboardData?.registros_por_competencia?.[competencia];
+  if (Array.isArray(porCompetencia)) return [...porCompetencia];
+
+  const registros = Array.isArray(dashboardData?.registros) ? dashboardData.registros : [];
+  return registros.filter(item => String(item.competencia || "") === competencia);
+}
+
+function getErrosDaCompetencia(competencia) {
+  const porCompetencia = dashboardData?.erros_por_competencia?.[competencia];
+  if (Array.isArray(porCompetencia)) return [...porCompetencia];
+
+  const erros = Array.isArray(dashboardData?.erros) ? dashboardData.erros : [];
+  return erros.filter(item => String(item.competencia || "") === competencia);
+}
+
+function getSaldosDaCompetencia(competencia) {
+  const saldos = dashboardData?.saldos_por_competencia?.[competencia];
+  return Array.isArray(saldos) ? [...saldos] : [];
 }
 
 function preencherFiltroMes(data) {
   const filtroMes = document.getElementById("filtroMes");
+  if (!filtroMes) return;
+
   const meses = data?.meses_disponiveis || [];
   const competenciaPadrao = data?.competencia_padrao || "";
 
@@ -140,20 +191,24 @@ function preencherFiltroMes(data) {
     .map(item => `<option value="${escapeHtml(item)}">${escapeHtml(formatarCompetenciaLabel(item))}</option>`)
     .join("");
 
-  if (competenciaPadrao) {
+  if (competenciaPadrao && meses.includes(competenciaPadrao)) {
     filtroMes.value = competenciaPadrao;
+  } else if (meses.length) {
+    filtroMes.value = meses[0];
   }
 }
 
 function preencherFiltrosSecundarios() {
-  const competencia = document.getElementById("filtroMes").value;
+  const competencia = getCompetenciaAtual();
   const filtroUnidade = document.getElementById("filtroUnidade");
   const filtroDoutor = document.getElementById("filtroDoutor");
+
+  if (!filtroUnidade || !filtroDoutor) return;
 
   const unidadeSelecionada = filtroUnidade.value;
   const doutorSelecionado = filtroDoutor.value;
 
-  const registrosMes = obterRegistrosDaCompetencia(competencia);
+  const registrosMes = getRegistrosDaCompetencia(competencia);
 
   const unidades = [...new Set(registrosMes.map(item => item.unidade).filter(Boolean))].sort();
   const doutores = [...new Set(registrosMes.map(item => item.doutor_final).filter(Boolean))].sort();
@@ -176,13 +231,13 @@ function preencherFiltrosSecundarios() {
 }
 
 function obterDadosFiltrados() {
-  const competencia = document.getElementById("filtroMes").value;
-  const filtroUnidade = document.getElementById("filtroUnidade").value;
-  const filtroDoutor = document.getElementById("filtroDoutor").value;
+  const competencia = getCompetenciaAtual();
+  const filtroUnidade = document.getElementById("filtroUnidade")?.value || "";
+  const filtroDoutor = document.getElementById("filtroDoutor")?.value || "";
 
-  let registros = [...(dashboardData?.registros_por_competencia?.[competencia] || [])];
-  let erros = [...(dashboardData?.erros_por_competencia?.[competencia] || [])];
-  let saldos = [...(dashboardData?.saldos_por_competencia?.[competencia] || [])];
+  let registros = getRegistrosDaCompetencia(competencia);
+  let erros = getErrosDaCompetencia(competencia);
+  let saldos = getSaldosDaCompetencia(competencia);
 
   if (filtroUnidade) {
     registros = registros.filter(item => String(item.unidade || "") === filtroUnidade);
@@ -202,6 +257,7 @@ function obterDadosFiltrados() {
 
 function renderCards(registros, competencia) {
   const alvo = document.getElementById("cardsResumo");
+  if (!alvo) return;
 
   const totalLancamentos = registros.length;
   const totalValor = registros.reduce((acc, item) => acc + Number(item.valor || 0), 0);
@@ -222,6 +278,7 @@ function renderCards(registros, competencia) {
 
 function renderResumoDoutor(registros, saldos) {
   const tbody = document.getElementById("tabelaResumoDoutor");
+  if (!tbody) return;
 
   if (!saldos.length) {
     tbody.innerHTML = `<tr><td colspan="6" class="empty-state">Sem dados</td></tr>`;
@@ -260,6 +317,7 @@ function renderResumoDoutor(registros, saldos) {
 
 function renderUnidades(registros) {
   const tbody = document.getElementById("tabelaUnidades");
+  if (!tbody) return;
 
   if (!registros.length) {
     tbody.innerHTML = `<tr><td colspan="5" class="empty-state">Sem dados</td></tr>`;
@@ -294,6 +352,7 @@ function renderUnidades(registros) {
 
 function renderRegistros(registros) {
   const tbody = document.getElementById("tabelaRegistros");
+  if (!tbody) return;
 
   if (!registros.length) {
     tbody.innerHTML = `<tr><td colspan="7" class="empty-state">Sem dados</td></tr>`;
@@ -318,6 +377,7 @@ function renderRegistros(registros) {
 
 function renderErros(erros) {
   const tbody = document.getElementById("tabelaErros");
+  if (!tbody) return;
 
   if (!erros.length) {
     tbody.innerHTML = `<tr><td colspan="3" class="empty-state">Sem erros</td></tr>`;
@@ -335,12 +395,17 @@ function renderErros(erros) {
 
 function atualizarTela() {
   const { competencia, registros, erros, saldos } = obterDadosFiltrados();
+
   renderCards(registros, competencia);
   renderResumoDoutor(registros, saldos);
   renderUnidades(registros);
   renderRegistros(registros);
   renderErros(erros);
-  document.getElementById("badgeCompetencia").textContent = formatarCompetenciaLabel(competencia);
+
+  const badge = document.getElementById("badgeCompetencia");
+  if (badge) {
+    badge.textContent = formatarCompetenciaLabel(competencia);
+  }
 }
 
 function exportarCSV() {
@@ -352,9 +417,16 @@ function exportarCSV() {
   }
 
   const headers = [
-    "competencia", "data", "unidade", "responsavel_fiscal",
-    "doutor_final", "paciente", "valor", "valor_descontado",
-    "pendente", "possui_responsavel_fiscal"
+    "competencia",
+    "data",
+    "unidade",
+    "responsavel_fiscal",
+    "doutor_final",
+    "paciente",
+    "valor",
+    "valor_descontado",
+    "pendente",
+    "possui_responsavel_fiscal"
   ];
 
   const rows = registros.map(item => [
@@ -389,14 +461,13 @@ async function carregarDashboardInterno() {
 
   dashboardData = await resposta.json();
 
-  document.getElementById("tituloDashboard").textContent =
-    dashboardData.titulo_dashboard || "Painel Gerencial";
+  const titulo = document.getElementById("tituloDashboard");
+  const subtitulo = document.getElementById("subtituloDashboard");
+  const badgeArquivo = document.getElementById("badgeArquivo");
 
-  document.getElementById("subtituloDashboard").textContent =
-    `Acompanhamento mensal de crédito PIX por doutor - ano ${dashboardData.ano_referencia || 2026}`;
-
-  document.getElementById("badgeArquivo").textContent =
-    dashboardData?.arquivo_origem ? `Base: ${dashboardData.arquivo_origem}` : "Base não informada";
+  if (titulo) titulo.textContent = dashboardData.titulo_dashboard || "Painel Gerencial";
+  if (subtitulo) subtitulo.textContent = `Acompanhamento mensal de crédito PIX por doutor - ano ${dashboardData.ano_referencia || 2026}`;
+  if (badgeArquivo) badgeArquivo.textContent = dashboardData?.arquivo_origem ? `Base: ${dashboardData.arquivo_origem}` : "Base não informada";
 
   preencherBadgeUsuario();
   preencherFiltroMes(dashboardData);
@@ -406,6 +477,8 @@ async function carregarDashboardInterno() {
 
 async function carregarDoutoresAdmin() {
   const tbody = document.getElementById("tabelaAdminDoutores");
+  if (!tbody) return;
+
   tbody.innerHTML = `<tr><td colspan="7" class="empty-state">Carregando...</td></tr>`;
 
   const { data, error } = await supabaseClient
@@ -505,10 +578,10 @@ async function adicionarDoutor() {
   try {
     mostrarMensagemAdmin("");
 
-    const nome = document.getElementById("novoNome").value.trim();
-    const credito = parseFloat(document.getElementById("novoCredito").value || "0");
-    const pixKey = document.getElementById("novaPixKey").value.trim();
-    const ativo = document.getElementById("novoAtivo").value === "true";
+    const nome = document.getElementById("novoNome")?.value.trim() || "";
+    const credito = parseFloat(document.getElementById("novoCredito")?.value || "0");
+    const pixKey = document.getElementById("novaPixKey")?.value.trim() || "";
+    const ativo = document.getElementById("novoAtivo")?.value === "true";
 
     if (!nome) {
       mostrarMensagemAdmin("Informe o nome do doutor.", true);
@@ -565,8 +638,9 @@ async function iniciarAplicacao() {
     currentUser = session.user;
     currentUserIsAdmin = await validarUsuarioAdmin();
 
-    if (currentUserIsAdmin) {
-      document.getElementById("btnTabAdmin").classList.remove("hidden");
+    const btnAdmin = document.getElementById("btnTabAdmin");
+    if (btnAdmin && currentUserIsAdmin) {
+      btnAdmin.classList.remove("hidden");
     }
 
     mostrarApp();
@@ -582,8 +656,8 @@ async function iniciarAplicacao() {
 document.getElementById("loginForm")?.addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  const email = document.getElementById("email").value.trim();
-  const password = document.getElementById("password").value.trim();
+  const email = document.getElementById("email")?.value.trim() || "";
+  const password = document.getElementById("password")?.value.trim() || "";
 
   mostrarMensagemAuth("");
 
@@ -594,8 +668,9 @@ document.getElementById("loginForm")?.addEventListener("submit", async (e) => {
     currentUser = data?.user || null;
     currentUserIsAdmin = await validarUsuarioAdmin();
 
-    if (currentUserIsAdmin) {
-      document.getElementById("btnTabAdmin").classList.remove("hidden");
+    const btnAdmin = document.getElementById("btnTabAdmin");
+    if (btnAdmin && currentUserIsAdmin) {
+      btnAdmin.classList.remove("hidden");
     }
 
     mostrarApp();
@@ -608,7 +683,7 @@ document.getElementById("loginForm")?.addEventListener("submit", async (e) => {
 });
 
 document.getElementById("btnForgotPassword")?.addEventListener("click", async () => {
-  const email = document.getElementById("email").value.trim();
+  const email = document.getElementById("email")?.value.trim() || "";
 
   if (!email) {
     mostrarMensagemAuth("Digite seu e-mail para recuperar a senha.", true);
@@ -653,10 +728,18 @@ document.getElementById("filtroUnidade")?.addEventListener("change", atualizarTe
 document.getElementById("filtroDoutor")?.addEventListener("change", atualizarTela);
 
 document.getElementById("btnLimpar")?.addEventListener("click", () => {
-  document.getElementById("filtroMes").value = dashboardData?.competencia_padrao || "2026-01";
+  const filtroMes = document.getElementById("filtroMes");
+  if (filtroMes) {
+    filtroMes.value = dashboardData?.competencia_padrao || "2026-01";
+  }
   preencherFiltrosSecundarios();
-  document.getElementById("filtroUnidade").selectedIndex = 0;
-  document.getElementById("filtroDoutor").selectedIndex = 0;
+
+  const filtroUnidade = document.getElementById("filtroUnidade");
+  const filtroDoutor = document.getElementById("filtroDoutor");
+
+  if (filtroUnidade) filtroUnidade.selectedIndex = 0;
+  if (filtroDoutor) filtroDoutor.selectedIndex = 0;
+
   atualizarTela();
 });
 
