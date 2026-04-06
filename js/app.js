@@ -47,11 +47,9 @@ function obterStatus(percentual) {
   if (percentual >= 100) {
     return { classe: "status-red", texto: "Limite atingido", dot: "dot-red" };
   }
-
   if (percentual >= 50) {
     return { classe: "status-yellow", texto: "Atenção", dot: "dot-yellow" };
   }
-
   return { classe: "status-green", texto: "Controlado", dot: "dot-green" };
 }
 
@@ -71,14 +69,26 @@ function mostrarApp() {
   document.getElementById("appRoot").classList.remove("hidden");
 }
 
+async function validarUsuarioAutorizado() {
+  const { data, error } = await supabaseClient.rpc("usuario_esta_autorizado");
+
+  if (error) throw error;
+  return data === true;
+}
+
 async function loginSupabase(email, password) {
   const { error } = await supabaseClient.auth.signInWithPassword({
     email,
     password
   });
 
-  if (error) {
-    throw error;
+  if (error) throw error;
+
+  const autorizado = await validarUsuarioAutorizado();
+
+  if (!autorizado) {
+    await supabaseClient.auth.signOut();
+    throw new Error("Seu usuário não está autorizado para acessar esta dashboard.");
   }
 }
 
@@ -86,14 +96,15 @@ async function logoutSupabase() {
   await supabaseClient.auth.signOut();
 }
 
-async function obterSessaoAtual() {
-  const { data, error } = await supabaseClient.auth.getSession();
+async function enviarRecuperacaoSenha(email) {
+  const redirectBase = window.location.origin + window.location.pathname.replace(/\/index\.html$/, "");
+  const redirectTo = `${redirectBase}/reset.html`;
 
-  if (error) {
-    throw error;
-  }
+  const { error } = await supabaseClient.auth.resetPasswordForEmail(email, {
+    redirectTo
+  });
 
-  return data?.session || null;
+  if (error) throw error;
 }
 
 function preencherBadgeUsuario() {
@@ -388,55 +399,129 @@ function exportarCSV() {
   URL.revokeObjectURL(url);
 }
 
-async function carregarDashboard() {
-  try {
-    const resposta = await fetch("./data/dashboard_data.json", { cache: "no-store" });
+async function carregarDashboardInterno() {
+  const resposta = await fetch("./data/dashboard_data.json", { cache: "no-store" });
 
-    if (!resposta.ok) {
-      throw new Error(`Arquivo não encontrado: ${resposta.status}`);
+  if (!resposta.ok) {
+    throw new Error(`Arquivo não encontrado: ${resposta.status}`);
+  }
+
+  dashboardData = await resposta.json();
+
+  document.getElementById("tituloDashboard").textContent =
+    dashboardData.titulo_dashboard || "Painel Gerencial";
+
+  document.getElementById("subtituloDashboard").textContent =
+    `Acompanhamento mensal de crédito PIX por doutor - ano ${dashboardData.ano_referencia || 2026}`;
+
+  document.getElementById("badgeArquivo").textContent =
+    dashboardData?.arquivo_origem
+      ? `Base: ${dashboardData.arquivo_origem}`
+      : "Base não informada";
+
+  preencherBadgeUsuario();
+  preencherFiltros(dashboardData);
+  atualizarTela();
+}
+
+async function iniciarAplicacao() {
+  try {
+    const { data, error } = await supabaseClient.auth.getSession();
+    if (error) throw error;
+
+    const session = data?.session || null;
+
+    if (!session) {
+      mostrarTelaLogin();
+      return;
     }
 
-    dashboardData = await resposta.json();
+    const autorizado = await validarUsuarioAutorizado();
 
-    document.getElementById("tituloDashboard").textContent =
-      dashboardData.titulo_dashboard || "Painel Gerencial";
+    if (!autorizado) {
+      await supabaseClient.auth.signOut();
+      mostrarTelaLogin();
+      mostrarMensagemAuth("Usuário sem permissão de acesso.", true);
+      return;
+    }
 
-    document.getElementById("subtituloDashboard").textContent =
-      `Acompanhamento mensal de crédito PIX por doutor - ano ${dashboardData.ano_referencia || 2026}`;
-
-    document.getElementById("badgeArquivo").textContent =
-      dashboardData?.arquivo_origem
-        ? `Base: ${dashboardData.arquivo_origem}`
-        : "Base não informada";
-
-    preencherFiltros(dashboardData);
-    atualizarTela();
-
-    document.getElementById("filtroMes").addEventListener("change", atualizarTela);
-    document.getElementById("filtroUnidade").addEventListener("change", atualizarTela);
-    document.getElementById("filtroDoutor").addEventListener("change", atualizarTela);
-
-    document.getElementById("btnLimpar").addEventListener("click", () => {
-      document.getElementById("filtroMes").value = dashboardData?.competencia_padrao || "2026-01";
-      document.getElementById("filtroUnidade").selectedIndex = 0;
-      document.getElementById("filtroDoutor").selectedIndex = 0;
-      atualizarTela();
-    });
-
-    document.getElementById("btnExportar").addEventListener("click", exportarCSV);
+    currentUser = session.user;
+    mostrarApp();
+    await carregarDashboardInterno();
   } catch (erro) {
-    console.error("Erro ao carregar dashboard:", erro);
-
-    document.getElementById("cardsResumo").innerHTML = `
-      <div class="error-box">
-        <strong>Erro ao carregar dados</strong><br />
-        Não foi possível carregar <code>data/dashboard_data.json</code>.<br /><br />
-        Rode:
-        <br /><code>python coletor_pix.py</code>
-        <br /><code>python generate_data.py</code>
-      </div>
-    `;
+    console.error("Erro ao iniciar app:", erro);
+    mostrarTelaLogin();
+    mostrarMensagemAuth("Erro ao validar acesso.", true);
   }
 }
 
-carregarDashboard();
+document.getElementById("loginForm")?.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("password").value.trim();
+
+  mostrarMensagemAuth("");
+
+  try {
+    await loginSupabase(email, password);
+
+    const { data } = await supabaseClient.auth.getUser();
+    currentUser = data?.user || null;
+
+    mostrarApp();
+    await carregarDashboardInterno();
+  } catch (erro) {
+    console.error(erro);
+    mostrarMensagemAuth(erro.message || "Não foi possível entrar.", true);
+  }
+});
+
+document.getElementById("btnForgotPassword")?.addEventListener("click", async () => {
+  const email = document.getElementById("email").value.trim();
+
+  if (!email) {
+    mostrarMensagemAuth("Digite seu e-mail para recuperar a senha.", true);
+    return;
+  }
+
+  try {
+    await enviarRecuperacaoSenha(email);
+    mostrarMensagemAuth("Enviamos um link de recuperação para seu e-mail.");
+  } catch (erro) {
+    console.error(erro);
+    mostrarMensagemAuth("Não foi possível enviar o e-mail de recuperação.", true);
+  }
+});
+
+document.getElementById("btnLogout")?.addEventListener("click", async () => {
+  await logoutSupabase();
+  currentUser = null;
+  dashboardData = null;
+  mostrarTelaLogin();
+});
+
+document.getElementById("filtroMes")?.addEventListener("change", atualizarTela);
+document.getElementById("filtroUnidade")?.addEventListener("change", atualizarTela);
+document.getElementById("filtroDoutor")?.addEventListener("change", atualizarTela);
+
+document.getElementById("btnLimpar")?.addEventListener("click", () => {
+  document.getElementById("filtroMes").value = dashboardData?.competencia_padrao || "2026-01";
+  document.getElementById("filtroUnidade").selectedIndex = 0;
+  document.getElementById("filtroDoutor").selectedIndex = 0;
+  atualizarTela();
+});
+
+document.getElementById("btnExportar")?.addEventListener("click", exportarCSV);
+
+supabaseClient.auth.onAuthStateChange(async (_event, session) => {
+  if (!session) {
+    currentUser = null;
+    mostrarTelaLogin();
+    return;
+  }
+
+  currentUser = session.user;
+});
+
+iniciarAplicacao();
