@@ -1,25 +1,236 @@
-<div id="authScreen" class="auth-screen">
-  <div class="auth-card">
-    <h1>Entrar</h1>
-    <p class="auth-subtitle">Acesso restrito à dashboard.</p>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PIX Doutores</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="authScreen" class="auth-screen">
+    <div class="auth-card">
+      <h1>Entrar</h1>
+      <p class="auth-subtitle">Use seu e-mail autorizado. No primeiro acesso, clique em “Criar acesso”.</p>
 
-    <form id="loginForm" class="auth-form">
-      <label for="email">E-mail</label>
-      <input id="email" type="email" placeholder="Digite seu e-mail" required />
+      <form id="loginForm" class="auth-form">
+        <label for="email">E-mail</label>
+        <input id="email" type="email" placeholder="Digite seu e-mail" required />
 
-      <label for="password">Senha</label>
-      <input id="password" type="password" placeholder="Digite sua senha" required />
+        <label for="password">Senha</label>
+        <input id="password" type="password" placeholder="Digite sua senha" required />
 
-      <div class="auth-actions">
-        <button type="submit" class="btn btn-primary">Entrar</button>
-        <button type="button" id="btnCriarAcesso" class="btn btn-secondary">Criar acesso</button>
-      </div>
-    </form>
+        <div class="auth-actions">
+          <button type="submit" class="btn btn-primary">Entrar</button>
+          <button type="button" id="btnCriarAcesso" class="btn btn-secondary">Criar acesso</button>
+        </div>
+      </form>
 
-    <button id="btnForgotPassword" class="link-button" type="button">
-      Esqueci minha senha
-    </button>
+      <button id="btnForgotPassword" class="link-button" type="button">
+        Esqueci minha senha
+      </button>
 
-    <div id="authMessage" class="auth-message"></div>
+      <div id="authMessage" class="auth-message"></div>
+    </div>
   </div>
-</div>
+
+  <div id="appRoot" class="layout hidden">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon">T</div>
+        <div class="brand-text">
+          <h1>PIX Doutores</h1>
+          <p>Top Estética Bucal</p>
+        </div>
+      </div>
+
+      <section class="sidebar-card">
+        <h2>Navegação</h2>
+        <div class="sidebar-actions">
+          <button id="btnTabDashboard" class="btn btn-primary">Início</button>
+          <button id="btnTabAdmin" class="btn btn-secondary hidden">ADM</button>
+          <button id="btnLogout" class="btn btn-secondary">Sair</button>
+        </div>
+      </section>
+
+      <section id="filtrosSidebar" class="sidebar-card">
+        <h2>Filtros</h2>
+
+        <label for="filtroMes">Mês</label>
+        <select id="filtroMes"></select>
+
+        <label for="filtroCidade">Cidade</label>
+        <select id="filtroCidade">
+          <option value="">Todas</option>
+        </select>
+
+        <div class="sidebar-actions">
+          <button id="btnLimpar" class="btn btn-secondary">Limpar filtros</button>
+          <button id="btnExportar" class="btn btn-primary">Exportar CSV</button>
+        </div>
+      </section>
+    </aside>
+
+    <main class="main">
+      <section id="dashboardView">
+        <header class="hero">
+          <div>
+            <h2 id="tituloDashboard">PIX Doutores do Mês</h2>
+            <p id="subtituloDashboard">Lista de lançamentos do período selecionado</p>
+          </div>
+
+          <div class="hero-badges">
+            <span class="badge" id="badgeCompetencia">Competência</span>
+            <span class="badge badge-muted" id="badgeArquivo">Arquivo</span>
+            <span class="badge badge-muted" id="badgeUsuario">Usuário</span>
+          </div>
+        </header>
+
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <h3>Resumo rápido</h3>
+              <p>Visão resumida do mês filtrado</p>
+            </div>
+          </div>
+          <div class="stats-grid" id="cardsResumo"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <h3>Doutores em atenção</h3>
+              <p>Utilização igual ou acima de 50%</p>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Doutor</th>
+                  <th>Crédito inicial</th>
+                  <th>Utilizado</th>
+                  <th>Saldo</th>
+                  <th>% utilizado</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="tabelaAtencao"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <h3>Doutores bloqueados</h3>
+              <p>Utilização igual ou acima de 100%</p>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Doutor</th>
+                  <th>Crédito inicial</th>
+                  <th>Utilizado</th>
+                  <th>Saldo</th>
+                  <th>% utilizado</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="tabelaBloqueados"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <h3>PIX Doutores do mês</h3>
+              <p>Somente lançamentos do período e cidade selecionados</p>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Data</th>
+                  <th>Cidade</th>
+                  <th>Doutor</th>
+                  <th>Paciente</th>
+                  <th>Valor</th>
+                  <th>Descontado</th>
+                  <th>Pendente</th>
+                </tr>
+              </thead>
+              <tbody id="tabelaPixMes"></tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+
+      <section id="adminView" class="hidden">
+        <header class="hero">
+          <div>
+            <h2>Administração</h2>
+            <p>Cadastro e manutenção dos doutores</p>
+          </div>
+        </header>
+
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <h3>Novo Doutor</h3>
+            </div>
+          </div>
+
+          <div class="admin-form-grid">
+            <input id="novoNome" type="text" placeholder="Nome do doutor" />
+            <input id="novoCredito" type="number" step="0.01" placeholder="Crédito" />
+            <input id="novaPixKey" type="text" placeholder="Chave Pix" />
+            <select id="novoAtivo">
+              <option value="true">Ativo</option>
+              <option value="false">Inativo</option>
+            </select>
+          </div>
+
+          <div class="sidebar-actions" style="margin-top: 16px;">
+            <button id="btnAdicionarDoutor" class="btn btn-primary">Adicionar Doutor</button>
+          </div>
+
+          <div id="adminMessage" class="auth-message"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <h3>Doutores cadastrados</h3>
+            </div>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Nome</th>
+                  <th>Crédito</th>
+                  <th>Chave Pix</th>
+                  <th>Ativo</th>
+                  <th>Última edição</th>
+                  <th>E-mail que salvou</th>
+                  <th>Ações</th>
+                </tr>
+              </thead>
+              <tbody id="tabelaAdminDoutores"></tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
