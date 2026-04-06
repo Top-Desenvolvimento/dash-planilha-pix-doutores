@@ -17,9 +17,8 @@ USUARIO = "MANUS"
 SENHA = "MANUS2026"
 ANO_REFERENCIA = 2026
 
-# MODOS:
-# rapido     -> coleta só mês atual do ano de referência
-# historico  -> coleta janeiro até dezembro de 2026
+# rapido    -> atualiza só o mês atual e PRESERVA o histórico salvo
+# historico -> recarrega janeiro até dezembro/2026
 MODO_COLETA = os.getenv("MODO_COLETA", "rapido").strip().lower()
 
 SISTEMAS = [
@@ -41,6 +40,19 @@ ARQUIVO_RESUMO = PASTA_DATA / "resumo_pix_doutores.json"
 ARQUIVO_ERROS = PASTA_DATA / "erros_pix_doutores.json"
 
 
+def carregar_json(caminho: Path, padrao: Any) -> Any:
+    if not caminho.exists():
+        return padrao
+    with open(caminho, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+def salvar_json(dados: Any, caminho: Path) -> None:
+    caminho.parent.mkdir(parents=True, exist_ok=True)
+    with open(caminho, "w", encoding="utf-8") as f:
+        json.dump(dados, f, ensure_ascii=False, indent=2)
+
+
 def parse_valor(texto: str) -> float:
     texto = (texto or "").strip()
     if not texto:
@@ -53,19 +65,6 @@ def parse_valor(texto: str) -> float:
         return round(float(texto), 2)
     except ValueError:
         return 0.0
-
-
-def salvar_json(dados: Any, caminho: Path) -> None:
-    caminho.parent.mkdir(parents=True, exist_ok=True)
-    with open(caminho, "w", encoding="utf-8") as f:
-        json.dump(dados, f, ensure_ascii=False, indent=2)
-
-
-def carregar_json(caminho: Path, padrao: Any) -> Any:
-    if not caminho.exists():
-        return padrao
-    with open(caminho, "r", encoding="utf-8") as f:
-        return json.load(f)
 
 
 def obter_mes_atual_referencia() -> str:
@@ -173,7 +172,7 @@ def fazer_login(page, url: str) -> None:
         raise RuntimeError("Botão de login não encontrado.")
 
     page.wait_for_load_state("networkidle", timeout=45000)
-    page.wait_for_timeout(800)
+    page.wait_for_timeout(700)
 
 
 def abrir_demonstrativo(page) -> None:
@@ -264,7 +263,7 @@ def buscar_competencia(page, competencia: str) -> None:
     setar_valor_input(campo_inicio, data_inicio)
     setar_valor_input(campo_fim, data_fim)
 
-    page.wait_for_timeout(300)
+    page.wait_for_timeout(250)
 
     clicou_buscar = clicar_primeiro_existente(page, [
         'button:has-text("Buscar")',
@@ -297,7 +296,6 @@ def limpar_nome_responsavel(texto: str) -> str:
 
 def extrair_responsavel_fiscal_do_metodo(metodo_raw: str) -> str:
     linhas = [l.strip() for l in (metodo_raw or "").split("\n") if l.strip()]
-
     if not linhas:
         return ""
 
@@ -448,10 +446,14 @@ def extrair_linhas_pix(page, unidade: str, mapa_creditos: Dict[str, Dict[str, An
     return resultados
 
 
-def processar_unidade(browser, sistema: Dict[str, str], competencias: List[str],
-                     resultados_por_competencia: Dict[str, List[Dict[str, Any]]],
-                     erros_por_competencia: Dict[str, List[Dict[str, Any]]],
-                     mapas_creditos: Dict[str, Dict[str, Dict[str, Any]]]) -> None:
+def processar_unidade(
+    browser,
+    sistema: Dict[str, str],
+    competencias: List[str],
+    resultados_por_competencia: Dict[str, List[Dict[str, Any]]],
+    erros_por_competencia: Dict[str, List[Dict[str, Any]]],
+    mapas_creditos: Dict[str, Dict[str, Dict[str, Any]]]
+) -> None:
     unidade = sistema["unidade"]
     url = sistema["url"]
     print(f"[INFO] Processando unidade: {unidade}")
@@ -517,13 +519,25 @@ def gerar_resumo(dados: List[Dict[str, Any]], competencia: str) -> Dict[str, Any
         unidade = item["unidade"]
         doutor = item["doutor_final"]
 
-        por_unidade.setdefault(unidade, {"unidade": unidade, "quantidade": 0, "valor": 0.0, "descontado": 0.0, "pendente": 0.0})
+        por_unidade.setdefault(unidade, {
+            "unidade": unidade,
+            "quantidade": 0,
+            "valor": 0.0,
+            "descontado": 0.0,
+            "pendente": 0.0,
+        })
         por_unidade[unidade]["quantidade"] += 1
         por_unidade[unidade]["valor"] = round(por_unidade[unidade]["valor"] + float(item["valor"]), 2)
         por_unidade[unidade]["descontado"] = round(por_unidade[unidade]["descontado"] + float(item["valor_descontado"]), 2)
         por_unidade[unidade]["pendente"] = round(por_unidade[unidade]["pendente"] + float(item["pendente"]), 2)
 
-        por_doutor.setdefault(doutor, {"doutor": doutor, "quantidade": 0, "valor": 0.0, "descontado": 0.0, "pendente": 0.0})
+        por_doutor.setdefault(doutor, {
+            "doutor": doutor,
+            "quantidade": 0,
+            "valor": 0.0,
+            "descontado": 0.0,
+            "pendente": 0.0,
+        })
         por_doutor[doutor]["quantidade"] += 1
         por_doutor[doutor]["valor"] = round(por_doutor[doutor]["valor"] + float(item["valor"]), 2)
         por_doutor[doutor]["descontado"] = round(por_doutor[doutor]["descontado"] + float(item["valor_descontado"]), 2)
@@ -541,10 +555,24 @@ def gerar_resumo(dados: List[Dict[str, Any]], competencia: str) -> Dict[str, Any
     }
 
 
+def normalizar_estrutura_dict_por_competencia(valor: Any) -> Dict[str, Any]:
+    return valor if isinstance(valor, dict) else {}
+
+
+def normalizar_lista(valor: Any) -> List[Any]:
+    return valor if isinstance(valor, list) else []
+
+
+def remover_competencias_da_lista(lista: List[Dict[str, Any]], competencias: set[str]) -> List[Dict[str, Any]]:
+    return [item for item in lista if str(item.get("competencia", "")) not in competencias]
+
+
 def main() -> None:
     competencias = gerar_competencias()
+    competencias_set = set(competencias)
+
     print(f"[INFO] Modo de coleta: {MODO_COLETA}")
-    print(f"[INFO] Competências: {competencias}")
+    print(f"[INFO] Competências alvo: {competencias}")
 
     mapas_creditos = {competencia: montar_mapa_creditos() for competencia in competencias}
     resultados_por_competencia = {competencia: [] for competencia in competencias}
@@ -565,31 +593,20 @@ def main() -> None:
 
         browser.close()
 
-    # carrega dados antigos se estiver em modo rápido, preservando histórico
-    if MODO_COLETA == "rapido":
-        saldos_existentes = carregar_json(ARQUIVO_SALDOS, {})
-        resumos_existentes = carregar_json(ARQUIVO_RESUMO, {})
-        erros_existentes = carregar_json(ARQUIVO_ERROS, [])
-        registros_existentes = carregar_json(ARQUIVO_PIX, [])
+    # preserva histórico salvo
+    registros_existentes = normalizar_lista(carregar_json(ARQUIVO_PIX, []))
+    erros_existentes = normalizar_lista(carregar_json(ARQUIVO_ERROS, []))
+    saldos_existentes = normalizar_estrutura_dict_por_competencia(carregar_json(ARQUIVO_SALDOS, {}))
+    resumos_existentes = normalizar_estrutura_dict_por_competencia(carregar_json(ARQUIVO_RESUMO, {}))
 
-        if not isinstance(saldos_existentes, dict):
-            saldos_existentes = {}
-        if not isinstance(resumos_existentes, dict):
-            resumos_existentes = {}
-        if not isinstance(erros_existentes, list):
-            erros_existentes = []
-        if not isinstance(registros_existentes, list):
-            registros_existentes = []
-    else:
+    if MODO_COLETA == "historico":
+        registros_existentes = []
+        erros_existentes = []
         saldos_existentes = {}
         resumos_existentes = {}
-        erros_existentes = []
-        registros_existentes = []
-
-    # remove competências que serão recalculadas
-    competencias_set = set(competencias)
-    registros_existentes = [r for r in registros_existentes if r.get("competencia") not in competencias_set]
-    erros_existentes = [e for e in erros_existentes if e.get("competencia") not in competencias_set]
+    else:
+        registros_existentes = remover_competencias_da_lista(registros_existentes, competencias_set)
+        erros_existentes = remover_competencias_da_lista(erros_existentes, competencias_set)
 
     for competencia in competencias:
         resultados = resultados_por_competencia[competencia]
@@ -597,15 +614,18 @@ def main() -> None:
         resumo = gerar_resumo(resultados, competencia)
         saldos_finais = listar_saldos_finais(mapas_creditos[competencia])
 
-        saldos_existentes[competencia] = saldos_finais
-        resumos_existentes[competencia] = resumo
         registros_existentes.extend(resultados)
         erros_existentes.extend(erros)
+        saldos_existentes[competencia] = saldos_finais
+        resumos_existentes[competencia] = resumo
 
         salvar_json(resultados, PASTA_DATA / f"pix_doutores_{competencia}.json")
         salvar_json(saldos_finais, PASTA_DATA / f"saldos_doutores_{competencia}.json")
         salvar_json(resumo, PASTA_DATA / f"resumo_pix_doutores_{competencia}.json")
         salvar_json(erros, PASTA_DATA / f"erros_pix_doutores_{competencia}.json")
+
+    registros_existentes.sort(key=lambda x: (str(x.get("competencia", "")), str(x.get("unidade", "")), str(x.get("data", ""))))
+    erros_existentes.sort(key=lambda x: (str(x.get("competencia", "")), str(x.get("unidade", ""))))
 
     salvar_json(registros_existentes, ARQUIVO_PIX)
     salvar_json(saldos_existentes, ARQUIVO_SALDOS)
