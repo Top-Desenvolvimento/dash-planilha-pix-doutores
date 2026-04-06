@@ -469,14 +469,8 @@ async function carregarDashboardInterno() {
   const subtitulo = document.getElementById("subtituloDashboard");
   const badgeArquivo = document.getElementById("badgeArquivo");
 
-  if (titulo) {
-    titulo.textContent = dashboardData.titulo_dashboard || "PIX Doutores";
-  }
-
-  if (subtitulo) {
-    subtitulo.textContent = "Lista mensal de PIX Doutores com alertas de limite";
-  }
-
+  if (titulo) titulo.textContent = dashboardData.titulo_dashboard || "PIX Doutores";
+  if (subtitulo) subtitulo.textContent = "Lista mensal de PIX Doutores com alertas de limite";
   if (badgeArquivo) {
     badgeArquivo.textContent = dashboardData?.arquivo_origem
       ? `Base: ${dashboardData.arquivo_origem}`
