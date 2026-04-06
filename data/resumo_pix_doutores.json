@@ -1,16 +1,16 @@
 {
   "competencia": "2026-04",
-  "gerado_em": "2026-04-06T19:03:13.282791",
-  "quantidade_total": 9,
-  "valor_total": 996.0,
-  "valor_total_descontado": 996.0,
+  "gerado_em": "2026-04-06T19:43:48.586477",
+  "quantidade_total": 13,
+  "valor_total": 1405.0,
+  "valor_total_descontado": 1405.0,
   "valor_total_pendente": 0.0,
   "por_unidade": [
     {
       "unidade": "Caxias",
-      "quantidade": 8,
-      "valor": 911.0,
-      "descontado": 911.0,
+      "quantidade": 12,
+      "valor": 1320.0,
+      "descontado": 1320.0,
       "pendente": 0.0
     },
     {
@@ -38,9 +38,9 @@
     },
     {
       "doutor": "Tamara Macanan",
-      "quantidade": 5,
-      "valor": 465.0,
-      "descontado": 465.0,
+      "quantidade": 9,
+      "valor": 874.0,
+      "descontado": 874.0,
       "pendente": 0.0
     }
   ]
