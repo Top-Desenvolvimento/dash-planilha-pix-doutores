@@ -1,5 +1,6 @@
 let dashboardData = null;
 let currentUser = null;
+let currentUserIsAdmin = false;
 
 function formatarMoeda(valor) {
   return Number(valor || 0).toLocaleString("pt-BR", {
@@ -19,42 +20,34 @@ function escapeHtml(valor) {
 
 function formatarCompetenciaLabel(competencia) {
   const mapa = {
-    "01": "Jan",
-    "02": "Fev",
-    "03": "Mar",
-    "04": "Abr",
-    "05": "Mai",
-    "06": "Jun",
-    "07": "Jul",
-    "08": "Ago",
-    "09": "Set",
-    "10": "Out",
-    "11": "Nov",
-    "12": "Dez"
+    "01": "Jan", "02": "Fev", "03": "Mar", "04": "Abr",
+    "05": "Mai", "06": "Jun", "07": "Jul", "08": "Ago",
+    "09": "Set", "10": "Out", "11": "Nov", "12": "Dez"
   };
 
   const [ano, mes] = String(competencia || "").split("-");
   return `${mapa[mes] || mes}/${ano || ""}`;
 }
 
-function obterPercentual(utilizado, creditoInicial) {
-  const credito = Number(creditoInicial || 0);
-  if (credito <= 0) return 0;
-  return (Number(utilizado || 0) / credito) * 100;
-}
-
-function obterStatus(percentual) {
-  if (percentual >= 100) {
-    return { classe: "status-red", texto: "Limite atingido", dot: "dot-red" };
-  }
-  if (percentual >= 50) {
-    return { classe: "status-yellow", texto: "Atenção", dot: "dot-yellow" };
-  }
-  return { classe: "status-green", texto: "Controlado", dot: "dot-green" };
+function normalizarNome(nome) {
+  return String(nome || "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 function mostrarMensagemAuth(texto, erro = false) {
   const el = document.getElementById("authMessage");
+  if (!el) return;
+  el.textContent = texto || "";
+  el.className = erro ? "auth-message error" : "auth-message";
+}
+
+function mostrarMensagemAdmin(texto, erro = false) {
+  const el = document.getElementById("adminMessage");
+  if (!el) return;
   el.textContent = texto || "";
   el.className = erro ? "auth-message error" : "auth-message";
 }
@@ -69,23 +62,35 @@ function mostrarApp() {
   document.getElementById("appRoot").classList.remove("hidden");
 }
 
+function mostrarDashboard() {
+  document.getElementById("dashboardView").classList.remove("hidden");
+  document.getElementById("adminView").classList.add("hidden");
+  document.getElementById("filtrosSidebar").classList.remove("hidden");
+}
+
+function mostrarAdmin() {
+  document.getElementById("dashboardView").classList.add("hidden");
+  document.getElementById("adminView").classList.remove("hidden");
+  document.getElementById("filtrosSidebar").classList.add("hidden");
+}
+
 async function validarUsuarioAutorizado() {
   const { data, error } = await supabaseClient.rpc("usuario_esta_autorizado");
+  if (error) throw error;
+  return data === true;
+}
 
+async function validarUsuarioAdmin() {
+  const { data, error } = await supabaseClient.rpc("usuario_eh_admin");
   if (error) throw error;
   return data === true;
 }
 
 async function loginSupabase(email, password) {
-  const { error } = await supabaseClient.auth.signInWithPassword({
-    email,
-    password
-  });
-
+  const { error } = await supabaseClient.auth.signInWithPassword({ email, password });
   if (error) throw error;
 
   const autorizado = await validarUsuarioAutorizado();
-
   if (!autorizado) {
     await supabaseClient.auth.signOut();
     throw new Error("Seu usuário não está autorizado para acessar esta dashboard.");
@@ -97,27 +102,37 @@ async function logoutSupabase() {
 }
 
 async function enviarRecuperacaoSenha(email) {
-  const redirectBase = window.location.origin + window.location.pathname.replace(/\/index\.html$/, "");
-  const redirectTo = `${redirectBase}/reset.html`;
+  const base = window.location.origin + window.location.pathname.replace(/\/index\.html$/, "");
+  const redirectTo = `${base}/reset.html`;
 
-  const { error } = await supabaseClient.auth.resetPasswordForEmail(email, {
-    redirectTo
-  });
-
+  const { error } = await supabaseClient.auth.resetPasswordForEmail(email, { redirectTo });
   if (error) throw error;
 }
 
 function preencherBadgeUsuario() {
   const badge = document.getElementById("badgeUsuario");
-  const email = currentUser?.email || "Usuário";
-  badge.textContent = email;
+  if (!badge) return;
+  badge.textContent = currentUser?.email || "Usuário";
 }
 
-function preencherFiltros(data) {
-  const filtroMes = document.getElementById("filtroMes");
-  const filtroUnidade = document.getElementById("filtroUnidade");
-  const filtroDoutor = document.getElementById("filtroDoutor");
+function obterPercentual(utilizado, creditoInicial) {
+  const credito = Number(creditoInicial || 0);
+  if (credito <= 0) return 0;
+  return (Number(utilizado || 0) / credito) * 100;
+}
 
+function obterStatus(percentual) {
+  if (percentual >= 100) return { classe: "status-red", texto: "Limite atingido", dot: "dot-red" };
+  if (percentual >= 50) return { classe: "status-yellow", texto: "Atenção", dot: "dot-yellow" };
+  return { classe: "status-green", texto: "Controlado", dot: "dot-green" };
+}
+
+function obterRegistrosDaCompetencia(competencia) {
+  return [...(dashboardData?.registros_por_competencia?.[competencia] || [])];
+}
+
+function preencherFiltroMes(data) {
+  const filtroMes = document.getElementById("filtroMes");
   const meses = data?.meses_disponiveis || [];
   const competenciaPadrao = data?.competencia_padrao || "";
 
@@ -128,9 +143,20 @@ function preencherFiltros(data) {
   if (competenciaPadrao) {
     filtroMes.value = competenciaPadrao;
   }
+}
 
-  const unidades = [...new Set((data.registros || []).map(item => item.unidade).filter(Boolean))].sort();
-  const doutores = [...new Set((data.registros || []).map(item => item.doutor_final).filter(Boolean))].sort();
+function preencherFiltrosSecundarios() {
+  const competencia = document.getElementById("filtroMes").value;
+  const filtroUnidade = document.getElementById("filtroUnidade");
+  const filtroDoutor = document.getElementById("filtroDoutor");
+
+  const unidadeSelecionada = filtroUnidade.value;
+  const doutorSelecionado = filtroDoutor.value;
+
+  const registrosMes = obterRegistrosDaCompetencia(competencia);
+
+  const unidades = [...new Set(registrosMes.map(item => item.unidade).filter(Boolean))].sort();
+  const doutores = [...new Set(registrosMes.map(item => item.doutor_final).filter(Boolean))].sort();
 
   filtroUnidade.innerHTML =
     `<option value="">Todas</option>` +
@@ -139,6 +165,14 @@ function preencherFiltros(data) {
   filtroDoutor.innerHTML =
     `<option value="">Todos</option>` +
     doutores.map(item => `<option value="${escapeHtml(item)}">${escapeHtml(item)}</option>`).join("");
+
+  if (unidades.includes(unidadeSelecionada)) {
+    filtroUnidade.value = unidadeSelecionada;
+  }
+
+  if (doutores.includes(doutorSelecionado)) {
+    filtroDoutor.value = doutorSelecionado;
+  }
 }
 
 function obterDadosFiltrados() {
@@ -177,30 +211,12 @@ function renderCards(registros, competencia) {
   const totalDoutores = new Set(registros.map(item => item.doutor_final).filter(Boolean)).size;
 
   alvo.innerHTML = `
-    <div class="stat-card">
-      <div class="stat-title">Competência</div>
-      <div class="stat-value">${escapeHtml(formatarCompetenciaLabel(competencia))}</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-title">Lançamentos</div>
-      <div class="stat-value">${totalLancamentos}</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-title">Valor total</div>
-      <div class="stat-value">${formatarMoeda(totalValor)}</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-title">Total descontado</div>
-      <div class="stat-value">${formatarMoeda(totalDescontado)}</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-title">Total pendente</div>
-      <div class="stat-value">${formatarMoeda(totalPendente)}</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-title">Unidades / Doutores</div>
-      <div class="stat-value">${totalUnidades} / ${totalDoutores}</div>
-    </div>
+    <div class="stat-card"><div class="stat-title">Competência</div><div class="stat-value">${escapeHtml(formatarCompetenciaLabel(competencia))}</div></div>
+    <div class="stat-card"><div class="stat-title">Lançamentos</div><div class="stat-value">${totalLancamentos}</div></div>
+    <div class="stat-card"><div class="stat-title">Valor total</div><div class="stat-value">${formatarMoeda(totalValor)}</div></div>
+    <div class="stat-card"><div class="stat-title">Total descontado</div><div class="stat-value">${formatarMoeda(totalDescontado)}</div></div>
+    <div class="stat-card"><div class="stat-title">Total pendente</div><div class="stat-value">${formatarMoeda(totalPendente)}</div></div>
+    <div class="stat-card"><div class="stat-title">Unidades / Doutores</div><div class="stat-value">${totalUnidades} / ${totalDoutores}</div></div>
   `;
 }
 
@@ -213,7 +229,6 @@ function renderResumoDoutor(registros, saldos) {
   }
 
   const utilizadoPorDoutor = {};
-
   for (const item of registros) {
     const chave = item.doutor_final || "Não informado";
     utilizadoPorDoutor[chave] = (utilizadoPorDoutor[chave] || 0) + Number(item.valor_descontado || 0);
@@ -227,14 +242,7 @@ function renderResumoDoutor(registros, saldos) {
       const percentual = obterPercentual(utilizado, creditoInicial);
       const status = obterStatus(percentual);
 
-      return {
-        doutor: item.doutor,
-        creditoInicial,
-        utilizado,
-        creditoDisponivel,
-        percentual,
-        status
-      };
+      return { doutor: item.doutor, creditoInicial, utilizado, creditoDisponivel, percentual, status };
     })
     .sort((a, b) => b.percentual - a.percentual);
 
@@ -245,12 +253,7 @@ function renderResumoDoutor(registros, saldos) {
       <td>${formatarMoeda(item.utilizado)}</td>
       <td>${formatarMoeda(item.creditoDisponivel)}</td>
       <td>${item.percentual.toFixed(1)}%</td>
-      <td>
-        <span class="status-pill ${item.status.classe}">
-          <span class="dot ${item.status.dot}"></span>
-          ${item.status.texto}
-        </span>
-      </td>
+      <td><span class="status-pill ${item.status.classe}"><span class="dot ${item.status.dot}"></span>${item.status.texto}</span></td>
     </tr>
   `).join("");
 }
@@ -264,18 +267,10 @@ function renderUnidades(registros) {
   }
 
   const mapa = {};
-
   for (const item of registros) {
     const unidade = item.unidade || "Sem unidade";
-
     if (!mapa[unidade]) {
-      mapa[unidade] = {
-        unidade,
-        quantidade: 0,
-        valor: 0,
-        descontado: 0,
-        pendente: 0
-      };
+      mapa[unidade] = { unidade, quantidade: 0, valor: 0, descontado: 0, pendente: 0 };
     }
 
     mapa[unidade].quantidade += 1;
@@ -316,9 +311,7 @@ function renderRegistros(registros) {
         <td>${escapeHtml(item.paciente)}</td>
         <td>${formatarMoeda(item.valor)}</td>
         <td>${formatarMoeda(item.valor_descontado)}</td>
-        <td class="${Number(item.pendente || 0) > 0 ? 'text-warning' : 'text-success'}">
-          ${formatarMoeda(item.pendente)}
-        </td>
+        <td class="${Number(item.pendente || 0) > 0 ? 'text-warning' : 'text-success'}">${formatarMoeda(item.pendente)}</td>
       </tr>
     `).join("");
 }
@@ -342,13 +335,11 @@ function renderErros(erros) {
 
 function atualizarTela() {
   const { competencia, registros, erros, saldos } = obterDadosFiltrados();
-
   renderCards(registros, competencia);
   renderResumoDoutor(registros, saldos);
   renderUnidades(registros);
   renderRegistros(registros);
   renderErros(erros);
-
   document.getElementById("badgeCompetencia").textContent = formatarCompetenciaLabel(competencia);
 }
 
@@ -361,16 +352,9 @@ function exportarCSV() {
   }
 
   const headers = [
-    "competencia",
-    "data",
-    "unidade",
-    "responsavel_fiscal",
-    "doutor_final",
-    "paciente",
-    "valor",
-    "valor_descontado",
-    "pendente",
-    "possui_responsavel_fiscal"
+    "competencia", "data", "unidade", "responsavel_fiscal",
+    "doutor_final", "paciente", "valor", "valor_descontado",
+    "pendente", "possui_responsavel_fiscal"
   ];
 
   const rows = registros.map(item => [
@@ -401,10 +385,7 @@ function exportarCSV() {
 
 async function carregarDashboardInterno() {
   const resposta = await fetch("./data/dashboard_data.json", { cache: "no-store" });
-
-  if (!resposta.ok) {
-    throw new Error(`Arquivo não encontrado: ${resposta.status}`);
-  }
+  if (!resposta.ok) throw new Error(`Arquivo não encontrado: ${resposta.status}`);
 
   dashboardData = await resposta.json();
 
@@ -415,13 +396,150 @@ async function carregarDashboardInterno() {
     `Acompanhamento mensal de crédito PIX por doutor - ano ${dashboardData.ano_referencia || 2026}`;
 
   document.getElementById("badgeArquivo").textContent =
-    dashboardData?.arquivo_origem
-      ? `Base: ${dashboardData.arquivo_origem}`
-      : "Base não informada";
+    dashboardData?.arquivo_origem ? `Base: ${dashboardData.arquivo_origem}` : "Base não informada";
 
   preencherBadgeUsuario();
-  preencherFiltros(dashboardData);
+  preencherFiltroMes(dashboardData);
+  preencherFiltrosSecundarios();
   atualizarTela();
+}
+
+async function carregarDoutoresAdmin() {
+  const tbody = document.getElementById("tabelaAdminDoutores");
+  tbody.innerHTML = `<tr><td colspan="7" class="empty-state">Carregando...</td></tr>`;
+
+  const { data, error } = await supabaseClient
+    .from("doutores_config")
+    .select("*")
+    .order("nome", { ascending: true });
+
+  if (error) {
+    console.error(error);
+    tbody.innerHTML = `<tr><td colspan="7" class="empty-state">Erro ao carregar doutores</td></tr>`;
+    return;
+  }
+
+  if (!data.length) {
+    tbody.innerHTML = `<tr><td colspan="7" class="empty-state">Nenhum doutor cadastrado</td></tr>`;
+    return;
+  }
+
+  tbody.innerHTML = data.map(item => `
+    <tr>
+      <td><input data-id="${item.id}" data-field="nome" type="text" value="${escapeHtml(item.nome)}" /></td>
+      <td><input data-id="${item.id}" data-field="credito" type="number" step="0.01" value="${Number(item.credito || 0)}" /></td>
+      <td><input data-id="${item.id}" data-field="pix_key" type="text" value="${escapeHtml(item.pix_key || "")}" /></td>
+      <td>
+        <select data-id="${item.id}" data-field="ativo">
+          <option value="true" ${item.ativo ? "selected" : ""}>Ativo</option>
+          <option value="false" ${!item.ativo ? "selected" : ""}>Inativo</option>
+        </select>
+      </td>
+      <td>${escapeHtml(item.updated_at || "")}</td>
+      <td>${escapeHtml(item.updated_by_email || "")}</td>
+      <td>
+        <button class="btn btn-primary btn-small" onclick="salvarDoutor('${item.id}')">Salvar</button>
+        <button class="btn btn-secondary btn-small" onclick="removerDoutor('${item.id}')">Excluir</button>
+      </td>
+    </tr>
+  `).join("");
+}
+
+async function salvarDoutor(id) {
+  try {
+    mostrarMensagemAdmin("");
+
+    const nome = document.querySelector(`[data-id="${id}"][data-field="nome"]`).value.trim();
+    const credito = parseFloat(document.querySelector(`[data-id="${id}"][data-field="credito"]`).value || "0");
+    const pixKey = document.querySelector(`[data-id="${id}"][data-field="pix_key"]`).value.trim();
+    const ativo = document.querySelector(`[data-id="${id}"][data-field="ativo"]`).value === "true";
+
+    if (!nome) {
+      mostrarMensagemAdmin("Nome é obrigatório.", true);
+      return;
+    }
+
+    const payload = {
+      nome,
+      nome_normalizado: normalizarNome(nome),
+      credito,
+      pix_key: pixKey || null,
+      ativo
+    };
+
+    const { error } = await supabaseClient
+      .from("doutores_config")
+      .update(payload)
+      .eq("id", id);
+
+    if (error) throw error;
+
+    mostrarMensagemAdmin("Doutor salvo com sucesso.");
+    await carregarDoutoresAdmin();
+  } catch (err) {
+    console.error(err);
+    mostrarMensagemAdmin("Erro ao salvar doutor.", true);
+  }
+}
+
+async function removerDoutor(id) {
+  if (!confirm("Tem certeza que deseja excluir este doutor?")) return;
+
+  try {
+    const { error } = await supabaseClient
+      .from("doutores_config")
+      .delete()
+      .eq("id", id);
+
+    if (error) throw error;
+
+    mostrarMensagemAdmin("Doutor removido com sucesso.");
+    await carregarDoutoresAdmin();
+  } catch (err) {
+    console.error(err);
+    mostrarMensagemAdmin("Erro ao remover doutor.", true);
+  }
+}
+
+async function adicionarDoutor() {
+  try {
+    mostrarMensagemAdmin("");
+
+    const nome = document.getElementById("novoNome").value.trim();
+    const credito = parseFloat(document.getElementById("novoCredito").value || "0");
+    const pixKey = document.getElementById("novaPixKey").value.trim();
+    const ativo = document.getElementById("novoAtivo").value === "true";
+
+    if (!nome) {
+      mostrarMensagemAdmin("Informe o nome do doutor.", true);
+      return;
+    }
+
+    const payload = {
+      nome,
+      nome_normalizado: normalizarNome(nome),
+      credito,
+      pix_key: pixKey || null,
+      ativo
+    };
+
+    const { error } = await supabaseClient
+      .from("doutores_config")
+      .insert(payload);
+
+    if (error) throw error;
+
+    document.getElementById("novoNome").value = "";
+    document.getElementById("novoCredito").value = "";
+    document.getElementById("novaPixKey").value = "";
+    document.getElementById("novoAtivo").value = "true";
+
+    mostrarMensagemAdmin("Doutor adicionado com sucesso.");
+    await carregarDoutoresAdmin();
+  } catch (err) {
+    console.error(err);
+    mostrarMensagemAdmin("Erro ao adicionar doutor.", true);
+  }
 }
 
 async function iniciarAplicacao() {
@@ -437,7 +555,6 @@ async function iniciarAplicacao() {
     }
 
     const autorizado = await validarUsuarioAutorizado();
-
     if (!autorizado) {
       await supabaseClient.auth.signOut();
       mostrarTelaLogin();
@@ -446,7 +563,14 @@ async function iniciarAplicacao() {
     }
 
     currentUser = session.user;
+    currentUserIsAdmin = await validarUsuarioAdmin();
+
+    if (currentUserIsAdmin) {
+      document.getElementById("btnTabAdmin").classList.remove("hidden");
+    }
+
     mostrarApp();
+    mostrarDashboard();
     await carregarDashboardInterno();
   } catch (erro) {
     console.error("Erro ao iniciar app:", erro);
@@ -468,8 +592,14 @@ document.getElementById("loginForm")?.addEventListener("submit", async (e) => {
 
     const { data } = await supabaseClient.auth.getUser();
     currentUser = data?.user || null;
+    currentUserIsAdmin = await validarUsuarioAdmin();
+
+    if (currentUserIsAdmin) {
+      document.getElementById("btnTabAdmin").classList.remove("hidden");
+    }
 
     mostrarApp();
+    mostrarDashboard();
     await carregarDashboardInterno();
   } catch (erro) {
     console.error(erro);
@@ -497,16 +627,34 @@ document.getElementById("btnForgotPassword")?.addEventListener("click", async ()
 document.getElementById("btnLogout")?.addEventListener("click", async () => {
   await logoutSupabase();
   currentUser = null;
+  currentUserIsAdmin = false;
   dashboardData = null;
   mostrarTelaLogin();
 });
 
-document.getElementById("filtroMes")?.addEventListener("change", atualizarTela);
+document.getElementById("btnTabDashboard")?.addEventListener("click", () => {
+  mostrarDashboard();
+});
+
+document.getElementById("btnTabAdmin")?.addEventListener("click", async () => {
+  if (!currentUserIsAdmin) return;
+  mostrarAdmin();
+  await carregarDoutoresAdmin();
+});
+
+document.getElementById("btnAdicionarDoutor")?.addEventListener("click", adicionarDoutor);
+
+document.getElementById("filtroMes")?.addEventListener("change", () => {
+  preencherFiltrosSecundarios();
+  atualizarTela();
+});
+
 document.getElementById("filtroUnidade")?.addEventListener("change", atualizarTela);
 document.getElementById("filtroDoutor")?.addEventListener("change", atualizarTela);
 
 document.getElementById("btnLimpar")?.addEventListener("click", () => {
   document.getElementById("filtroMes").value = dashboardData?.competencia_padrao || "2026-01";
+  preencherFiltrosSecundarios();
   document.getElementById("filtroUnidade").selectedIndex = 0;
   document.getElementById("filtroDoutor").selectedIndex = 0;
   atualizarTela();
@@ -514,14 +662,7 @@ document.getElementById("btnLimpar")?.addEventListener("click", () => {
 
 document.getElementById("btnExportar")?.addEventListener("click", exportarCSV);
 
-supabaseClient.auth.onAuthStateChange(async (_event, session) => {
-  if (!session) {
-    currentUser = null;
-    mostrarTelaLogin();
-    return;
-  }
-
-  currentUser = session.user;
-});
+window.salvarDoutor = salvarDoutor;
+window.removerDoutor = removerDoutor;
 
 iniciarAplicacao();
