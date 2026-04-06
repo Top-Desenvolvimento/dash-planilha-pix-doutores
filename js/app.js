@@ -62,48 +62,34 @@ function mostrarMensagemAdmin(texto, erro = false) {
 }
 
 function mostrarTelaLogin() {
-  const auth = document.getElementById("authScreen");
-  const app = document.getElementById("appRoot");
-  if (auth) auth.classList.remove("hidden");
-  if (app) app.classList.add("hidden");
+  document.getElementById("authScreen")?.classList.remove("hidden");
+  document.getElementById("appRoot")?.classList.add("hidden");
 }
 
 function mostrarApp() {
-  const auth = document.getElementById("authScreen");
-  const app = document.getElementById("appRoot");
-  if (auth) auth.classList.add("hidden");
-  if (app) app.classList.remove("hidden");
+  document.getElementById("authScreen")?.classList.add("hidden");
+  document.getElementById("appRoot")?.classList.remove("hidden");
 }
 
 function mostrarDashboard() {
-  const dashboard = document.getElementById("dashboardView");
-  const admin = document.getElementById("adminView");
-  const filtros = document.getElementById("filtrosSidebar");
-
-  if (dashboard) dashboard.classList.remove("hidden");
-  if (admin) admin.classList.add("hidden");
-  if (filtros) filtros.classList.remove("hidden");
+  document.getElementById("dashboardView")?.classList.remove("hidden");
+  document.getElementById("adminView")?.classList.add("hidden");
+  document.getElementById("filtrosSidebar")?.classList.remove("hidden");
 }
 
 function mostrarAdmin() {
-  const dashboard = document.getElementById("dashboardView");
-  const admin = document.getElementById("adminView");
-  const filtros = document.getElementById("filtrosSidebar");
-
-  if (dashboard) dashboard.classList.add("hidden");
-  if (admin) admin.classList.remove("hidden");
-  if (filtros) filtros.classList.add("hidden");
+  document.getElementById("dashboardView")?.classList.add("hidden");
+  document.getElementById("adminView")?.classList.remove("hidden");
+  document.getElementById("filtrosSidebar")?.classList.add("hidden");
 }
 
 async function validarUsuarioAutorizado() {
-  if (!window.supabaseClient) return true;
   const { data, error } = await supabaseClient.rpc("usuario_esta_autorizado");
   if (error) throw error;
   return data === true;
 }
 
 async function validarUsuarioAdmin() {
-  if (!window.supabaseClient) return false;
   const { data, error } = await supabaseClient.rpc("usuario_eh_admin");
   if (error) throw error;
   return data === true;
@@ -138,38 +124,24 @@ function preencherBadgeUsuario() {
   badge.textContent = currentUser?.email || "Usuário";
 }
 
-function obterPercentual(utilizado, creditoInicial) {
-  const credito = Number(creditoInicial || 0);
-  if (credito <= 0) return 0;
-  return (Number(utilizado || 0) / credito) * 100;
-}
-
-function obterStatus(percentual) {
-  if (percentual >= 100) return { classe: "status-red", texto: "Limite atingido", dot: "dot-red" };
-  if (percentual >= 50) return { classe: "status-yellow", texto: "Atenção", dot: "dot-yellow" };
-  return { classe: "status-green", texto: "Controlado", dot: "dot-green" };
-}
-
-function getMesesDisponiveis() {
-  return dashboardData?.meses_disponiveis || [];
-}
-
 function getCompetenciaAtual() {
   const filtroMes = document.getElementById("filtroMes");
   return filtroMes?.value || dashboardData?.competencia_padrao || "2026-01";
 }
 
 function getRegistrosDaCompetencia(competencia) {
-  const porCompetencia = dashboardData?.registros_por_competencia?.[competencia];
-  if (Array.isArray(porCompetencia)) return [...porCompetencia];
+  if (dashboardData?.registros_por_competencia?.[competencia]) {
+    return [...dashboardData.registros_por_competencia[competencia]];
+  }
 
   const registros = Array.isArray(dashboardData?.registros) ? dashboardData.registros : [];
   return registros.filter(item => String(item.competencia || "") === competencia);
 }
 
 function getErrosDaCompetencia(competencia) {
-  const porCompetencia = dashboardData?.erros_por_competencia?.[competencia];
-  if (Array.isArray(porCompetencia)) return [...porCompetencia];
+  if (dashboardData?.erros_por_competencia?.[competencia]) {
+    return [...dashboardData.erros_por_competencia[competencia]];
+  }
 
   const erros = Array.isArray(dashboardData?.erros) ? dashboardData.erros : [];
   return erros.filter(item => String(item.competencia || "") === competencia);
@@ -180,12 +152,12 @@ function getSaldosDaCompetencia(competencia) {
   return Array.isArray(saldos) ? [...saldos] : [];
 }
 
-function preencherFiltroMes(data) {
+function preencherFiltroMes() {
   const filtroMes = document.getElementById("filtroMes");
   if (!filtroMes) return;
 
-  const meses = data?.meses_disponiveis || [];
-  const competenciaPadrao = data?.competencia_padrao || "";
+  const meses = dashboardData?.meses_disponiveis || [];
+  const competenciaPadrao = dashboardData?.competencia_padrao || "";
 
   filtroMes.innerHTML = meses
     .map(item => `<option value="${escapeHtml(item)}">${escapeHtml(formatarCompetenciaLabel(item))}</option>`)
@@ -199,15 +171,14 @@ function preencherFiltroMes(data) {
 }
 
 function preencherFiltrosSecundarios() {
-  const competencia = getCompetenciaAtual();
   const filtroUnidade = document.getElementById("filtroUnidade");
   const filtroDoutor = document.getElementById("filtroDoutor");
-
   if (!filtroUnidade || !filtroDoutor) return;
 
   const unidadeSelecionada = filtroUnidade.value;
   const doutorSelecionado = filtroDoutor.value;
 
+  const competencia = getCompetenciaAtual();
   const registrosMes = getRegistrosDaCompetencia(competencia);
 
   const unidades = [...new Set(registrosMes.map(item => item.unidade).filter(Boolean))].sort();
@@ -253,6 +224,18 @@ function obterDadosFiltrados() {
   }
 
   return { competencia, registros, erros, saldos };
+}
+
+function obterPercentual(utilizado, creditoInicial) {
+  const credito = Number(creditoInicial || 0);
+  if (credito <= 0) return 0;
+  return (Number(utilizado || 0) / credito) * 100;
+}
+
+function obterStatus(percentual) {
+  if (percentual >= 100) return { classe: "status-red", texto: "Limite atingido", dot: "dot-red" };
+  if (percentual >= 50) return { classe: "status-yellow", texto: "Atenção", dot: "dot-yellow" };
+  return { classe: "status-green", texto: "Controlado", dot: "dot-green" };
 }
 
 function renderCards(registros, competencia) {
@@ -327,9 +310,7 @@ function renderUnidades(registros) {
   const mapa = {};
   for (const item of registros) {
     const unidade = item.unidade || "Sem unidade";
-    if (!mapa[unidade]) {
-      mapa[unidade] = { unidade, quantidade: 0, valor: 0, descontado: 0, pendente: 0 };
-    }
+    if (!mapa[unidade]) mapa[unidade] = { unidade, quantidade: 0, valor: 0, descontado: 0, pendente: 0 };
 
     mapa[unidade].quantidade += 1;
     mapa[unidade].valor += Number(item.valor || 0);
@@ -403,9 +384,7 @@ function atualizarTela() {
   renderErros(erros);
 
   const badge = document.getElementById("badgeCompetencia");
-  if (badge) {
-    badge.textContent = formatarCompetenciaLabel(competencia);
-  }
+  if (badge) badge.textContent = formatarCompetenciaLabel(competencia);
 }
 
 function exportarCSV() {
@@ -461,16 +440,17 @@ async function carregarDashboardInterno() {
 
   dashboardData = await resposta.json();
 
-  const titulo = document.getElementById("tituloDashboard");
-  const subtitulo = document.getElementById("subtituloDashboard");
-  const badgeArquivo = document.getElementById("badgeArquivo");
+  document.getElementById("tituloDashboard").textContent =
+    dashboardData.titulo_dashboard || "Painel Gerencial";
 
-  if (titulo) titulo.textContent = dashboardData.titulo_dashboard || "Painel Gerencial";
-  if (subtitulo) subtitulo.textContent = `Acompanhamento mensal de crédito PIX por doutor - ano ${dashboardData.ano_referencia || 2026}`;
-  if (badgeArquivo) badgeArquivo.textContent = dashboardData?.arquivo_origem ? `Base: ${dashboardData.arquivo_origem}` : "Base não informada";
+  document.getElementById("subtituloDashboard").textContent =
+    `Acompanhamento mensal de crédito PIX por doutor - ano ${dashboardData.ano_referencia || 2026}`;
+
+  document.getElementById("badgeArquivo").textContent =
+    dashboardData?.arquivo_origem ? `Base: ${dashboardData.arquivo_origem}` : "Base não informada";
 
   preencherBadgeUsuario();
-  preencherFiltroMes(dashboardData);
+  preencherFiltroMes();
   preencherFiltrosSecundarios();
   atualizarTela();
 }
@@ -638,9 +618,8 @@ async function iniciarAplicacao() {
     currentUser = session.user;
     currentUserIsAdmin = await validarUsuarioAdmin();
 
-    const btnAdmin = document.getElementById("btnTabAdmin");
-    if (btnAdmin && currentUserIsAdmin) {
-      btnAdmin.classList.remove("hidden");
+    if (currentUserIsAdmin) {
+      document.getElementById("btnTabAdmin")?.classList.remove("hidden");
     }
 
     mostrarApp();
@@ -668,9 +647,8 @@ document.getElementById("loginForm")?.addEventListener("submit", async (e) => {
     currentUser = data?.user || null;
     currentUserIsAdmin = await validarUsuarioAdmin();
 
-    const btnAdmin = document.getElementById("btnTabAdmin");
-    if (btnAdmin && currentUserIsAdmin) {
-      btnAdmin.classList.remove("hidden");
+    if (currentUserIsAdmin) {
+      document.getElementById("btnTabAdmin")?.classList.remove("hidden");
     }
 
     mostrarApp();
@@ -732,6 +710,7 @@ document.getElementById("btnLimpar")?.addEventListener("click", () => {
   if (filtroMes) {
     filtroMes.value = dashboardData?.competencia_padrao || "2026-01";
   }
+
   preencherFiltrosSecundarios();
 
   const filtroUnidade = document.getElementById("filtroUnidade");
