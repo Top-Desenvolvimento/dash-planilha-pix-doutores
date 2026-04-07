@@ -20,10 +20,20 @@ function escapeHtml(valor) {
 
 function formatarCompetenciaLabel(competencia) {
   const mapa = {
-    "01": "Jan", "02": "Fev", "03": "Mar", "04": "Abr",
-    "05": "Mai", "06": "Jun", "07": "Jul", "08": "Ago",
-    "09": "Set", "10": "Out", "11": "Nov", "12": "Dez"
+    "01": "Jan",
+    "02": "Fev",
+    "03": "Mar",
+    "04": "Abr",
+    "05": "Mai",
+    "06": "Jun",
+    "07": "Jul",
+    "08": "Ago",
+    "09": "Set",
+    "10": "Out",
+    "11": "Nov",
+    "12": "Dez"
   };
+
   const [ano, mes] = String(competencia || "").split("-");
   return `${mapa[mes] || mes}/${ano || ""}`;
 }
@@ -73,6 +83,20 @@ function mostrarAdmin() {
   document.getElementById("filtrosSidebar")?.classList.add("hidden");
 }
 
+function getBaseAppUrl() {
+  const { origin, pathname } = window.location;
+
+  if (pathname.endsWith("/reset.html")) {
+    return `${origin}${pathname.replace(/reset\.html$/, "")}`;
+  }
+
+  if (pathname.endsWith("/index.html")) {
+    return `${origin}${pathname.replace(/index\.html$/, "")}`;
+  }
+
+  return `${origin}${pathname.endsWith("/") ? pathname : pathname + "/"}`;
+}
+
 async function validarUsuarioAutorizado() {
   const { data, error } = await supabaseClient.rpc("usuario_esta_autorizado");
   if (error) throw error;
@@ -89,15 +113,21 @@ async function emailPodeCadastrar(email) {
   const { data, error } = await supabaseClient.rpc("email_pode_cadastrar", {
     p_email: email
   });
+
   if (error) throw error;
   return data === true;
 }
 
 async function loginSupabase(email, password) {
-  const { error } = await supabaseClient.auth.signInWithPassword({ email, password });
+  const { error } = await supabaseClient.auth.signInWithPassword({
+    email,
+    password
+  });
+
   if (error) throw error;
 
   const autorizado = await validarUsuarioAutorizado();
+
   if (!autorizado) {
     await supabaseClient.auth.signOut();
     throw new Error("Seu usuário não está autorizado para acessar esta dashboard.");
@@ -106,9 +136,21 @@ async function loginSupabase(email, password) {
 
 async function criarAcessoSupabase(email, password) {
   const permitido = await emailPodeCadastrar(email);
-  if (!permitido) throw new Error("Este e-mail não está autorizado para criar acesso.");
 
-  const { error } = await supabaseClient.auth.signUp({ email, password });
+  if (!permitido) {
+    throw new Error("Este e-mail não está autorizado para criar acesso.");
+  }
+
+  const redirectTo = getBaseAppUrl();
+
+  const { error } = await supabaseClient.auth.signUp({
+    email,
+    password,
+    options: {
+      emailRedirectTo: redirectTo
+    }
+  });
+
   if (error) throw error;
 }
 
@@ -117,15 +159,20 @@ async function logoutSupabase() {
 }
 
 async function enviarRecuperacaoSenha(email) {
-  const base = window.location.origin + window.location.pathname.replace(/\/index\.html$/, "");
-  const redirectTo = `${base}/reset.html`;
-  const { error } = await supabaseClient.auth.resetPasswordForEmail(email, { redirectTo });
+  const redirectTo = `${getBaseAppUrl()}reset.html`;
+
+  const { error } = await supabaseClient.auth.resetPasswordForEmail(email, {
+    redirectTo
+  });
+
   if (error) throw error;
 }
 
 function preencherBadgeUsuario() {
   const badge = document.getElementById("badgeUsuario");
-  if (badge) badge.textContent = currentUser?.email || "Usuário";
+  if (badge) {
+    badge.textContent = currentUser?.email || "Usuário";
+  }
 }
 
 function getCompetenciaAtual() {
@@ -140,6 +187,7 @@ function getRegistrosCompetencia(competencia) {
   if (dashboardData?.registros_por_competencia?.[competencia]) {
     return [...dashboardData.registros_por_competencia[competencia]];
   }
+
   const registros = Array.isArray(dashboardData?.registros) ? dashboardData.registros : [];
   return registros.filter(item => String(item.competencia || "") === competencia);
 }
@@ -189,6 +237,7 @@ function preencherFiltroCidade() {
 function getRegistrosFiltrados() {
   const competencia = getCompetenciaAtual();
   const cidade = getCidadeAtual();
+
   let registros = getRegistrosCompetencia(competencia);
 
   if (cidade) {
@@ -209,8 +258,12 @@ function obterPercentual(utilizado, creditoInicial) {
 }
 
 function obterStatus(percentual) {
-  if (percentual >= 100) return { classe: "status-red", texto: "Bloqueado", dot: "dot-red" };
-  if (percentual >= 50) return { classe: "status-yellow", texto: "Atenção", dot: "dot-yellow" };
+  if (percentual >= 100) {
+    return { classe: "status-red", texto: "Bloqueado", dot: "dot-red" };
+  }
+  if (percentual >= 50) {
+    return { classe: "status-yellow", texto: "Atenção", dot: "dot-yellow" };
+  }
   return { classe: "status-green", texto: "Controlado", dot: "dot-green" };
 }
 
@@ -225,32 +278,49 @@ function renderCards(registros) {
   const totalCidades = new Set(registros.map(item => item.unidade).filter(Boolean)).size;
 
   alvo.innerHTML = `
-    <div class="stat-card"><div class="stat-title">Lançamentos</div><div class="stat-value">${totalLancamentos}</div></div>
-    <div class="stat-card"><div class="stat-title">Valor total</div><div class="stat-value">${formatarMoeda(totalValor)}</div></div>
-    <div class="stat-card"><div class="stat-title">Descontado</div><div class="stat-value">${formatarMoeda(totalDescontado)}</div></div>
-    <div class="stat-card"><div class="stat-title">Pendente</div><div class="stat-value">${formatarMoeda(totalPendente)}</div></div>
-    <div class="stat-card"><div class="stat-title">Cidades</div><div class="stat-value">${totalCidades}</div></div>
+    <div class="stat-card">
+      <div class="stat-title">Lançamentos</div>
+      <div class="stat-value">${totalLancamentos}</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-title">Valor total</div>
+      <div class="stat-value">${formatarMoeda(totalValor)}</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-title">Descontado</div>
+      <div class="stat-value">${formatarMoeda(totalDescontado)}</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-title">Pendente</div>
+      <div class="stat-value">${formatarMoeda(totalPendente)}</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-title">Cidades</div>
+      <div class="stat-value">${totalCidades}</div>
+    </div>
   `;
 }
 
-function montarResumoDoutores(registros, saldos) {
-  return saldos.map(item => {
-    const creditoInicial = Number(item.credito_inicial || 0);
-    const utilizado = Number(item.utilizado || 0);
-    const creditoDisponivel = Number(item.credito_disponivel || 0);
-    const percentual = obterPercentual(utilizado, creditoInicial);
-    const status = obterStatus(percentual);
+function montarResumoDoutores(_registros, saldos) {
+  return saldos
+    .map(item => {
+      const creditoInicial = Number(item.credito_inicial || 0);
+      const utilizado = Number(item.utilizado || 0);
+      const creditoDisponivel = Number(item.credito_disponivel || 0);
+      const percentual = obterPercentual(utilizado, creditoInicial);
+      const status = obterStatus(percentual);
 
-    return {
-      doutor_id: item.doutor_id,
-      doutor: item.doutor,
-      creditoInicial,
-      utilizado,
-      creditoDisponivel,
-      percentual,
-      status
-    };
-  }).sort((a, b) => b.percentual - a.percentual);
+      return {
+        doutor_id: item.doutor_id,
+        doutor: item.doutor,
+        creditoInicial,
+        utilizado,
+        creditoDisponivel,
+        percentual,
+        status
+      };
+    })
+    .sort((a, b) => b.percentual - a.percentual);
 }
 
 function renderTabelaAtencao(registros, saldos) {
@@ -272,7 +342,12 @@ function renderTabelaAtencao(registros, saldos) {
       <td>${formatarMoeda(item.utilizado)}</td>
       <td>${formatarMoeda(item.creditoDisponivel)}</td>
       <td>${item.percentual.toFixed(1)}%</td>
-      <td><span class="status-pill ${item.status.classe}"><span class="dot ${item.status.dot}"></span>${item.status.texto}</span></td>
+      <td>
+        <span class="status-pill ${item.status.classe}">
+          <span class="dot ${item.status.dot}"></span>
+          ${item.status.texto}
+        </span>
+      </td>
     </tr>
   `).join("");
 }
@@ -296,7 +371,12 @@ function renderTabelaBloqueados(registros, saldos) {
       <td>${formatarMoeda(item.utilizado)}</td>
       <td>${formatarMoeda(item.creditoDisponivel)}</td>
       <td>${item.percentual.toFixed(1)}%</td>
-      <td><span class="status-pill ${item.status.classe}"><span class="dot ${item.status.dot}"></span>${item.status.texto}</span></td>
+      <td>
+        <span class="status-pill ${item.status.classe}">
+          <span class="dot ${item.status.dot}"></span>
+          ${item.status.texto}
+        </span>
+      </td>
     </tr>
   `).join("");
 }
@@ -321,7 +401,9 @@ function renderTabelaPixMes(registros) {
         <td>${escapeHtml(item.paciente)}</td>
         <td>${formatarMoeda(item.valor)}</td>
         <td>${formatarMoeda(item.valor_descontado)}</td>
-        <td class="${Number(item.pendente || 0) > 0 ? 'text-warning' : 'text-success'}">${formatarMoeda(item.pendente)}</td>
+        <td class="${Number(item.pendente || 0) > 0 ? "text-warning" : "text-success"}">
+          ${formatarMoeda(item.pendente)}
+        </td>
       </tr>
     `).join("");
 }
@@ -336,8 +418,10 @@ function atualizarDashboard() {
   renderTabelaBloqueados(registros, saldos);
   renderTabelaPixMes(registros);
 
-  const badge = document.getElementById("badgeCompetencia");
-  if (badge) badge.textContent = formatarCompetenciaLabel(competencia);
+  const badgeCompetencia = document.getElementById("badgeCompetencia");
+  if (badgeCompetencia) {
+    badgeCompetencia.textContent = formatarCompetenciaLabel(competencia);
+  }
 }
 
 function exportarCSV() {
@@ -350,8 +434,15 @@ function exportarCSV() {
   }
 
   const headers = [
-    "competencia", "data", "cidade", "responsavel_fiscal",
-    "doutor_final", "paciente", "valor", "valor_descontado", "pendente"
+    "competencia",
+    "data",
+    "cidade",
+    "responsavel_fiscal",
+    "doutor_final",
+    "paciente",
+    "valor",
+    "valor_descontado",
+    "pendente"
   ];
 
   const rows = registros.map(item => [
@@ -381,15 +472,23 @@ function exportarCSV() {
 
 async function carregarDashboardInterno() {
   const resposta = await fetch("./data/dashboard_data.json", { cache: "no-store" });
-  if (!resposta.ok) throw new Error(`Arquivo não encontrado: ${resposta.status}`);
+  if (!resposta.ok) {
+    throw new Error(`Arquivo não encontrado: ${resposta.status}`);
+  }
 
   dashboardData = await resposta.json();
 
-  document.getElementById("tituloDashboard").textContent = dashboardData.titulo_dashboard || "PIX Doutores";
-  document.getElementById("subtituloDashboard").textContent = "Lista mensal de PIX Doutores com alertas de limite";
-  document.getElementById("badgeArquivo").textContent = dashboardData?.arquivo_origem
-    ? `Base: ${dashboardData.arquivo_origem}`
-    : "Base não informada";
+  const titulo = document.getElementById("tituloDashboard");
+  const subtitulo = document.getElementById("subtituloDashboard");
+  const badgeArquivo = document.getElementById("badgeArquivo");
+
+  if (titulo) titulo.textContent = dashboardData.titulo_dashboard || "PIX Doutores";
+  if (subtitulo) subtitulo.textContent = "Lista mensal de PIX Doutores com alertas de limite";
+  if (badgeArquivo) {
+    badgeArquivo.textContent = dashboardData?.arquivo_origem
+      ? `Base: ${dashboardData.arquivo_origem}`
+      : "Base não informada";
+  }
 
   preencherBadgeUsuario();
   preencherFiltroMes();
@@ -439,21 +538,30 @@ async function carregarDoutoresAdmin() {
 
   tbody.innerHTML = doutores.map(item => {
     const saldo = saldoPorDoutor[item.id] || {};
+
     return `
       <tr>
-        <td><input data-id="${item.id}" data-field="nome" type="text" value="${escapeHtml(item.nome)}" /></td>
-        <td><input data-id="${item.id}" data-field="credito" type="number" step="0.01" value="${Number(item.credito || 0)}" /></td>
+        <td>
+          <input data-id="${item.id}" data-field="nome" type="text" value="${escapeHtml(item.nome)}" />
+        </td>
+        <td>
+          <input data-id="${item.id}" data-field="credito" type="number" step="0.01" value="${Number(item.credito || 0)}" />
+        </td>
         <td>${formatarMoeda(saldo.credito_inicial || 0)}</td>
         <td>${formatarMoeda(saldo.utilizado || 0)}</td>
         <td>${formatarMoeda(saldo.credito_final || 0)}</td>
-        <td><input data-id="${item.id}" data-field="pix_key" type="text" value="${escapeHtml(item.pix_key || "")}" /></td>
+        <td>
+          <input data-id="${item.id}" data-field="pix_key" type="text" value="${escapeHtml(item.pix_key || "")}" />
+        </td>
         <td>
           <select data-id="${item.id}" data-field="ativo">
             <option value="true" ${item.ativo ? "selected" : ""}>Ativo</option>
             <option value="false" ${!item.ativo ? "selected" : ""}>Inativo</option>
           </select>
         </td>
-        <td><input data-id="${item.id}" data-field="observacao" type="text" value="${escapeHtml(saldo.observacao || "")}" /></td>
+        <td>
+          <input data-id="${item.id}" data-field="observacao" type="text" value="${escapeHtml(saldo.observacao || "")}" />
+        </td>
         <td>${escapeHtml(saldo.updated_by_email || item.updated_by_email || "")}</td>
         <td>
           <button class="btn btn-primary btn-small" onclick="salvarDoutor('${item.id}')">Salvar</button>
@@ -494,12 +602,14 @@ async function salvarDoutor(id) {
 
     if (errorDoutor) throw errorDoutor;
 
-    const { data: saldoExistente } = await supabaseClient
+    const { data: saldoExistente, error: errorBuscaSaldo } = await supabaseClient
       .from("doutores_saldos_mensais")
       .select("*")
       .eq("competencia", competencia)
       .eq("doutor_id", id)
       .maybeSingle();
+
+    if (errorBuscaSaldo) throw errorBuscaSaldo;
 
     if (saldoExistente) {
       const { error: errorSaldo } = await supabaseClient
@@ -582,12 +692,14 @@ async function iniciarAplicacao() {
     if (error) throw error;
 
     const session = data?.session || null;
+
     if (!session) {
       mostrarTelaLogin();
       return;
     }
 
     const autorizado = await validarUsuarioAutorizado();
+
     if (!autorizado) {
       await supabaseClient.auth.signOut();
       mostrarTelaLogin();
@@ -606,7 +718,7 @@ async function iniciarAplicacao() {
     mostrarDashboard();
     await carregarDashboardInterno();
   } catch (erro) {
-    console.error(erro);
+    console.error("Erro ao iniciar app:", erro);
     mostrarTelaLogin();
     mostrarMensagemAuth("Erro ao validar acesso.", true);
   }
@@ -700,6 +812,7 @@ document.getElementById("btnAdicionarDoutor")?.addEventListener("click", adicion
 document.getElementById("filtroMes")?.addEventListener("change", async () => {
   preencherFiltroCidade();
   atualizarDashboard();
+
   if (!document.getElementById("adminView")?.classList.contains("hidden")) {
     await carregarDoutoresAdmin();
   }
@@ -711,9 +824,15 @@ document.getElementById("btnLimpar")?.addEventListener("click", () => {
   const filtroMes = document.getElementById("filtroMes");
   const filtroCidade = document.getElementById("filtroCidade");
 
-  if (filtroMes) filtroMes.value = dashboardData?.competencia_padrao || "2026-01";
+  if (filtroMes) {
+    filtroMes.value = dashboardData?.competencia_padrao || "2026-01";
+  }
+
   preencherFiltroCidade();
-  if (filtroCidade) filtroCidade.selectedIndex = 0;
+
+  if (filtroCidade) {
+    filtroCidade.selectedIndex = 0;
+  }
 
   atualizarDashboard();
 });
@@ -730,6 +849,7 @@ supabaseClient.auth.onAuthStateChange(async (_event, session) => {
     mostrarTelaLogin();
     return;
   }
+
   currentUser = session.user;
 });
 
