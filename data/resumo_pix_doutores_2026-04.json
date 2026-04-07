@@ -1,15 +1,15 @@
 {
   "competencia": "2026-04",
-  "gerado_em": "2026-04-07T16:45:33.740575",
-  "quantidade_total": 42,
-  "valor_total": 5407.0,
-  "valor_total_descontado": 4275.0,
-  "valor_total_pendente": 1132.0,
+  "gerado_em": "2026-04-07T17:17:02.497437",
+  "quantidade_total": 44,
+  "valor_total": 5664.0,
+  "valor_total_descontado": 3888.0,
+  "valor_total_pendente": 1776.0,
   "por_unidade": [
     {
       "unidade": "Caxias",
-      "quantidade": 19,
-      "valor": 2240.0
+      "quantidade": 20,
+      "valor": 2339.0
     },
     {
       "unidade": "Farroupilha",
@@ -23,8 +23,8 @@
     },
     {
       "unidade": "Garibaldi",
-      "quantidade": 1,
-      "valor": 105.0
+      "quantidade": 2,
+      "valor": 263.0
     },
     {
       "unidade": "Soledade",
@@ -50,8 +50,8 @@
     },
     {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 5,
-      "valor_descontado": 651.0
+      "quantidade": 6,
+      "valor_descontado": 750.0
     },
     {
       "doutor": "MEI",
@@ -65,13 +65,13 @@
     },
     {
       "doutor": "Sofie Owens",
-      "quantidade": 1,
-      "valor_descontado": 105.0
+      "quantidade": 2,
+      "valor_descontado": 263.0
     },
     {
       "doutor": "Tamara Macanan",
       "quantidade": 14,
-      "valor_descontado": 1514.0
+      "valor_descontado": 870.0
     }
   ]
 }
