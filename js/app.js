@@ -2,6 +2,10 @@ let dashboardData = null;
 let currentUser = null;
 let currentUserIsAdmin = false;
 
+function byId(id) {
+  return document.getElementById(id);
+}
+
 function formatarMoeda(valor) {
   return Number(valor || 0).toLocaleString("pt-BR", {
     style: "currency",
@@ -48,39 +52,39 @@ function normalizarNome(nome) {
 }
 
 function mostrarMensagemAuth(texto, erro = false) {
-  const el = document.getElementById("authMessage");
+  const el = byId("authMessage");
   if (!el) return;
   el.textContent = texto || "";
   el.className = erro ? "auth-message error" : "auth-message";
 }
 
 function mostrarMensagemAdmin(texto, erro = false) {
-  const el = document.getElementById("adminMessage");
+  const el = byId("adminMessage");
   if (!el) return;
   el.textContent = texto || "";
   el.className = erro ? "auth-message error" : "auth-message";
 }
 
 function mostrarTelaLogin() {
-  document.getElementById("authScreen")?.classList.remove("hidden");
-  document.getElementById("appRoot")?.classList.add("hidden");
+  byId("authScreen")?.classList.remove("hidden");
+  byId("appRoot")?.classList.add("hidden");
 }
 
 function mostrarApp() {
-  document.getElementById("authScreen")?.classList.add("hidden");
-  document.getElementById("appRoot")?.classList.remove("hidden");
+  byId("authScreen")?.classList.add("hidden");
+  byId("appRoot")?.classList.remove("hidden");
 }
 
 function mostrarDashboard() {
-  document.getElementById("dashboardView")?.classList.remove("hidden");
-  document.getElementById("adminView")?.classList.add("hidden");
-  document.getElementById("filtrosSidebar")?.classList.remove("hidden");
+  byId("dashboardView")?.classList.remove("hidden");
+  byId("adminView")?.classList.add("hidden");
+  byId("filtrosSidebar")?.classList.remove("hidden");
 }
 
 function mostrarAdmin() {
-  document.getElementById("dashboardView")?.classList.add("hidden");
-  document.getElementById("adminView")?.classList.remove("hidden");
-  document.getElementById("filtrosSidebar")?.classList.add("hidden");
+  byId("dashboardView")?.classList.add("hidden");
+  byId("adminView")?.classList.remove("hidden");
+  byId("filtrosSidebar")?.classList.add("hidden");
 }
 
 function getBaseAppUrl() {
@@ -94,7 +98,7 @@ function getBaseAppUrl() {
     return `${origin}${pathname.replace(/index\.html$/, "")}`;
   }
 
-  return `${origin}${pathname.endsWith("/") ? pathname : pathname + "/"}`;
+  return `${origin}${pathname.endsWith("/") ? pathname : `${pathname}/`}`;
 }
 
 async function validarUsuarioAutorizado() {
@@ -123,9 +127,12 @@ async function loginSupabase(email, password) {
     password
   });
 
-  if (error) throw error;
+  if (error) {
+    throw error;
+  }
 
   const autorizado = await validarUsuarioAutorizado();
+
   if (!autorizado) {
     await supabaseClient.auth.signOut();
     throw new Error("Seu usuário não está autorizado para acessar esta dashboard.");
@@ -167,20 +174,22 @@ async function enviarRecuperacaoSenha(email) {
 }
 
 function preencherBadgeUsuario() {
-  const badge = document.getElementById("badgeUsuario");
-  if (badge) badge.textContent = currentUser?.email || "Usuário";
+  const badge = byId("badgeUsuario");
+  if (badge) {
+    badge.textContent = currentUser?.email || "Usuário";
+  }
 }
 
 function getCompetenciaAtual() {
-  return document.getElementById("filtroMes")?.value || dashboardData?.competencia_padrao || "2026-01";
+  return byId("filtroMes")?.value || dashboardData?.competencia_padrao || "2026-01";
 }
 
 function getCidadeAtual() {
-  return document.getElementById("filtroCidade")?.value || "";
+  return byId("filtroCidade")?.value || "";
 }
 
 function getDoutorAtual() {
-  return document.getElementById("filtroDoutor")?.value || "";
+  return byId("filtroDoutor")?.value || "";
 }
 
 function getRegistrosCompetencia(competencia) {
@@ -198,7 +207,7 @@ function getSaldosCompetencia(competencia) {
 }
 
 function preencherFiltroMes() {
-  const filtroMes = document.getElementById("filtroMes");
+  const filtroMes = byId("filtroMes");
   if (!filtroMes) return;
 
   const meses = dashboardData?.meses_disponiveis || [];
@@ -216,7 +225,7 @@ function preencherFiltroMes() {
 }
 
 function preencherFiltroCidade() {
-  const filtroCidade = document.getElementById("filtroCidade");
+  const filtroCidade = byId("filtroCidade");
   if (!filtroCidade) return;
 
   const cidadeSelecionada = filtroCidade.value;
@@ -235,10 +244,10 @@ function preencherFiltroCidade() {
 }
 
 function preencherFiltroDoutor() {
-  const filtroDoutor = document.getElementById("filtroDoutor");
+  const filtroDoutor = byId("filtroDoutor");
   if (!filtroDoutor) return;
 
-  const selecionado = filtroDoutor.value;
+  const doutorSelecionado = filtroDoutor.value;
   const competencia = getCompetenciaAtual();
 
   const registros = getRegistrosCompetencia(competencia);
@@ -255,8 +264,8 @@ function preencherFiltroDoutor() {
     `<option value="">Todos</option>` +
     doutores.map(item => `<option value="${escapeHtml(item)}">${escapeHtml(item)}</option>`).join("");
 
-  if (doutores.includes(selecionado)) {
-    filtroDoutor.value = selecionado;
+  if (doutores.includes(doutorSelecionado)) {
+    filtroDoutor.value = doutorSelecionado;
   }
 }
 
@@ -303,26 +312,7 @@ function obterStatus(percentual) {
   return { classe: "status-green", texto: "Controlado", dot: "dot-green" };
 }
 
-function renderCards(registros) {
-  const alvo = document.getElementById("cardsResumo");
-  if (!alvo) return;
-
-  const totalLancamentos = registros.length;
-  const totalValor = registros.reduce((acc, item) => acc + Number(item.valor || 0), 0);
-  const totalDescontado = registros.reduce((acc, item) => acc + Number(item.valor_descontado || 0), 0);
-  const totalPendente = registros.reduce((acc, item) => acc + Number(item.pendente || 0), 0);
-  const totalCidades = new Set(registros.map(item => item.unidade).filter(Boolean)).size;
-
-  alvo.innerHTML = `
-    <div class="stat-card"><div class="stat-title">Lançamentos</div><div class="stat-value">${totalLancamentos}</div></div>
-    <div class="stat-card"><div class="stat-title">Valor total</div><div class="stat-value">${formatarMoeda(totalValor)}</div></div>
-    <div class="stat-card"><div class="stat-title">Descontado</div><div class="stat-value">${formatarMoeda(totalDescontado)}</div></div>
-    <div class="stat-card"><div class="stat-title">Pendente</div><div class="stat-value">${formatarMoeda(totalPendente)}</div></div>
-    <div class="stat-card"><div class="stat-title">Cidades</div><div class="stat-value">${totalCidades}</div></div>
-  `;
-}
-
-function montarResumoDoutores(_registros, saldos) {
+function montarResumoDoutores(saldos) {
   return saldos
     .map(item => {
       const creditoInicial = Number(item.credito_inicial || 0);
@@ -344,11 +334,30 @@ function montarResumoDoutores(_registros, saldos) {
     .sort((a, b) => a.doutor.localeCompare(b.doutor, "pt-BR"));
 }
 
-function renderTabelaResumoDoutores(registros, saldos) {
-  const tbody = document.getElementById("tabelaResumoDoutores");
+function renderCards(registros) {
+  const alvo = byId("cardsResumo");
+  if (!alvo) return;
+
+  const totalLancamentos = registros.length;
+  const totalValor = registros.reduce((acc, item) => acc + Number(item.valor || 0), 0);
+  const totalDescontado = registros.reduce((acc, item) => acc + Number(item.valor_descontado || 0), 0);
+  const totalPendente = registros.reduce((acc, item) => acc + Number(item.pendente || 0), 0);
+  const totalCidades = new Set(registros.map(item => item.unidade).filter(Boolean)).size;
+
+  alvo.innerHTML = `
+    <div class="stat-card"><div class="stat-title">Lançamentos</div><div class="stat-value">${totalLancamentos}</div></div>
+    <div class="stat-card"><div class="stat-title">Valor total</div><div class="stat-value">${formatarMoeda(totalValor)}</div></div>
+    <div class="stat-card"><div class="stat-title">Descontado</div><div class="stat-value">${formatarMoeda(totalDescontado)}</div></div>
+    <div class="stat-card"><div class="stat-title">Pendente</div><div class="stat-value">${formatarMoeda(totalPendente)}</div></div>
+    <div class="stat-card"><div class="stat-title">Cidades</div><div class="stat-value">${totalCidades}</div></div>
+  `;
+}
+
+function renderTabelaResumoDoutores(saldos) {
+  const tbody = byId("tabelaResumoDoutores");
   if (!tbody) return;
 
-  const linhas = montarResumoDoutores(registros, saldos);
+  const linhas = montarResumoDoutores(saldos);
 
   if (!linhas.length) {
     tbody.innerHTML = `<tr><td colspan="6" class="empty-state">Sem doutores cadastrados para a competência</td></tr>`;
@@ -367,12 +376,11 @@ function renderTabelaResumoDoutores(registros, saldos) {
   `).join("");
 }
 
-function renderTabelaAtencao(registros, saldos) {
-  const tbody = document.getElementById("tabelaAtencao");
+function renderTabelaAtencao(saldos) {
+  const tbody = byId("tabelaAtencao");
   if (!tbody) return;
 
-  const linhas = montarResumoDoutores(registros, saldos)
-    .filter(item => item.percentual >= 50 && item.percentual < 100);
+  const linhas = montarResumoDoutores(saldos).filter(item => item.percentual >= 50 && item.percentual < 100);
 
   if (!linhas.length) {
     tbody.innerHTML = `<tr><td colspan="6" class="empty-state">Sem doutores em atenção</td></tr>`;
@@ -391,12 +399,11 @@ function renderTabelaAtencao(registros, saldos) {
   `).join("");
 }
 
-function renderTabelaBloqueados(registros, saldos) {
-  const tbody = document.getElementById("tabelaBloqueados");
+function renderTabelaBloqueados(saldos) {
+  const tbody = byId("tabelaBloqueados");
   if (!tbody) return;
 
-  const linhas = montarResumoDoutores(registros, saldos)
-    .filter(item => item.percentual >= 100);
+  const linhas = montarResumoDoutores(saldos).filter(item => item.percentual >= 100);
 
   if (!linhas.length) {
     tbody.innerHTML = `<tr><td colspan="6" class="empty-state">Sem doutores bloqueados</td></tr>`;
@@ -416,7 +423,7 @@ function renderTabelaBloqueados(registros, saldos) {
 }
 
 function renderTabelaPixMes(registros) {
-  const tbody = document.getElementById("tabelaPixMes");
+  const tbody = byId("tabelaPixMes");
   if (!tbody) return;
 
   if (!registros.length) {
@@ -446,13 +453,15 @@ function atualizarDashboard() {
   const saldos = getSaldosFiltrados();
 
   renderCards(registros);
-  renderTabelaResumoDoutores(registros, saldos);
-  renderTabelaAtencao(registros, saldos);
-  renderTabelaBloqueados(registros, saldos);
+  renderTabelaResumoDoutores(saldos);
+  renderTabelaAtencao(saldos);
+  renderTabelaBloqueados(saldos);
   renderTabelaPixMes(registros);
 
-  const badgeCompetencia = document.getElementById("badgeCompetencia");
-  if (badgeCompetencia) badgeCompetencia.textContent = formatarCompetenciaLabel(competencia);
+  const badgeCompetencia = byId("badgeCompetencia");
+  if (badgeCompetencia) {
+    badgeCompetencia.textContent = formatarCompetenciaLabel(competencia);
+  }
 }
 
 function exportarCSV() {
@@ -465,8 +474,15 @@ function exportarCSV() {
   }
 
   const headers = [
-    "competencia", "data", "cidade", "responsavel_fiscal",
-    "doutor_final", "paciente", "valor", "valor_descontado", "pendente"
+    "competencia",
+    "data",
+    "cidade",
+    "responsavel_fiscal",
+    "doutor_final",
+    "paciente",
+    "valor",
+    "valor_descontado",
+    "pendente"
   ];
 
   const rows = registros.map(item => [
@@ -500,11 +516,13 @@ async function carregarDashboardInterno() {
 
   dashboardData = await resposta.json();
 
-  document.getElementById("tituloDashboard").textContent = dashboardData.titulo_dashboard || "PIX Doutores";
-  document.getElementById("subtituloDashboard").textContent = "Lista mensal de PIX Doutores com alertas de limite";
-  document.getElementById("badgeArquivo").textContent = dashboardData?.arquivo_origem
-    ? `Base: ${dashboardData.arquivo_origem}`
-    : "Base não informada";
+  if (byId("tituloDashboard")) byId("tituloDashboard").textContent = dashboardData.titulo_dashboard || "PIX Doutores";
+  if (byId("subtituloDashboard")) byId("subtituloDashboard").textContent = "Lista mensal de PIX Doutores com alertas de limite";
+  if (byId("badgeArquivo")) {
+    byId("badgeArquivo").textContent = dashboardData?.arquivo_origem
+      ? `Base: ${dashboardData.arquivo_origem}`
+      : "Base não informada";
+  }
 
   preencherBadgeUsuario();
   preencherFiltroMes();
@@ -514,10 +532,11 @@ async function carregarDashboardInterno() {
 }
 
 async function carregarDoutoresAdmin() {
-  const tbody = document.getElementById("tabelaAdminDoutores");
+  const tbody = byId("tabelaAdminDoutores");
   if (!tbody) return;
 
   tbody.innerHTML = `<tr><td colspan="10" class="empty-state">Carregando...</td></tr>`;
+
   const competencia = getCompetenciaAtual();
 
   try {
@@ -677,10 +696,10 @@ async function adicionarDoutor() {
   try {
     mostrarMensagemAdmin("");
 
-    const nome = document.getElementById("novoNome")?.value.trim() || "";
-    const credito = parseFloat(document.getElementById("novoCredito")?.value || "0");
-    const pixKey = document.getElementById("novaPixKey")?.value.trim() || "";
-    const ativo = document.getElementById("novoAtivo")?.value === "true";
+    const nome = byId("novoNome")?.value.trim() || "";
+    const credito = parseFloat(byId("novoCredito")?.value || "0");
+    const pixKey = byId("novaPixKey")?.value.trim() || "";
+    const ativo = byId("novoAtivo")?.value === "true";
 
     if (!nome) {
       mostrarMensagemAdmin("Informe o nome do doutor.", true);
@@ -721,9 +740,188 @@ async function adicionarDoutor() {
 
     if (errorSaldo) throw errorSaldo;
 
-    document.getElementById("novoNome").value = "";
-    document.getElementById("novoCredito").value = "";
-    document.getElementById("novaPixKey").value = "";
-    document.getElementById("novoAtivo").value = "true";
+    byId("novoNome").value = "";
+    byId("novoCredito").value = "";
+    byId("novaPixKey").value = "";
+    byId("novoAtivo").value = "true";
 
-    mostrarMensagemAdmin
+    mostrarMensagemAdmin("Doutor adicionado com sucesso.");
+    await carregarDoutoresAdmin();
+    await carregarDashboardInterno();
+  } catch (err) {
+    console.error(err);
+    mostrarMensagemAdmin("Erro ao adicionar doutor.", true);
+  }
+}
+
+async function iniciarAplicacao() {
+  try {
+    const { data, error } = await supabaseClient.auth.getSession();
+    if (error) throw error;
+
+    const session = data?.session || null;
+
+    if (!session) {
+      mostrarTelaLogin();
+      return;
+    }
+
+    const autorizado = await validarUsuarioAutorizado();
+
+    if (!autorizado) {
+      await supabaseClient.auth.signOut();
+      mostrarTelaLogin();
+      mostrarMensagemAuth("Usuário sem permissão de acesso.", true);
+      return;
+    }
+
+    currentUser = session.user;
+    currentUserIsAdmin = await validarUsuarioAdmin();
+
+    if (currentUserIsAdmin) {
+      byId("btnTabAdmin")?.classList.remove("hidden");
+    }
+
+    mostrarApp();
+    mostrarDashboard();
+    await carregarDashboardInterno();
+  } catch (erro) {
+    console.error("Erro ao iniciar app:", erro);
+    mostrarTelaLogin();
+    mostrarMensagemAuth("Erro ao validar acesso.", true);
+  }
+}
+
+byId("loginForm")?.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const email = byId("email")?.value.trim() || "";
+  const password = byId("password")?.value.trim() || "";
+
+  mostrarMensagemAuth("");
+
+  try {
+    await loginSupabase(email, password);
+
+    const { data } = await supabaseClient.auth.getUser();
+    currentUser = data?.user || null;
+    currentUserIsAdmin = await validarUsuarioAdmin();
+
+    if (currentUserIsAdmin) {
+      byId("btnTabAdmin")?.classList.remove("hidden");
+    }
+
+    mostrarApp();
+    mostrarDashboard();
+    await carregarDashboardInterno();
+  } catch (erro) {
+    console.error(erro);
+    mostrarMensagemAuth(erro.message || "Não foi possível entrar.", true);
+  }
+});
+
+byId("btnCriarAcesso")?.addEventListener("click", async () => {
+  const email = byId("email")?.value.trim() || "";
+  const password = byId("password")?.value.trim() || "";
+
+  mostrarMensagemAuth("");
+
+  if (!email || !password) {
+    mostrarMensagemAuth("Preencha e-mail e senha para criar o acesso.", true);
+    return;
+  }
+
+  try {
+    await criarAcessoSupabase(email, password);
+    mostrarMensagemAuth("Acesso criado com sucesso. Agora você já pode entrar.");
+  } catch (erro) {
+    console.error(erro);
+    mostrarMensagemAuth(erro.message || "Não foi possível criar o acesso.", true);
+  }
+});
+
+byId("btnForgotPassword")?.addEventListener("click", async () => {
+  const email = byId("email")?.value.trim() || "";
+
+  if (!email) {
+    mostrarMensagemAuth("Digite seu e-mail para recuperar a senha.", true);
+    return;
+  }
+
+  try {
+    await enviarRecuperacaoSenha(email);
+    mostrarMensagemAuth("Enviamos um link de recuperação para seu e-mail.");
+  } catch (erro) {
+    console.error(erro);
+    mostrarMensagemAuth("Não foi possível enviar o e-mail de recuperação.", true);
+  }
+});
+
+byId("btnLogout")?.addEventListener("click", async () => {
+  await logoutSupabase();
+  currentUser = null;
+  currentUserIsAdmin = false;
+  dashboardData = null;
+  mostrarTelaLogin();
+});
+
+byId("btnTabDashboard")?.addEventListener("click", () => {
+  mostrarDashboard();
+});
+
+byId("btnTabAdmin")?.addEventListener("click", async () => {
+  if (!currentUserIsAdmin) return;
+  mostrarAdmin();
+  await carregarDoutoresAdmin();
+});
+
+byId("btnAdicionarDoutor")?.addEventListener("click", adicionarDoutor);
+
+byId("filtroMes")?.addEventListener("change", async () => {
+  preencherFiltroCidade();
+  preencherFiltroDoutor();
+  atualizarDashboard();
+
+  if (!byId("adminView")?.classList.contains("hidden")) {
+    await carregarDoutoresAdmin();
+  }
+});
+
+byId("filtroCidade")?.addEventListener("change", atualizarDashboard);
+byId("filtroDoutor")?.addEventListener("change", atualizarDashboard);
+
+byId("btnLimpar")?.addEventListener("click", () => {
+  const filtroMes = byId("filtroMes");
+  const filtroCidade = byId("filtroCidade");
+  const filtroDoutor = byId("filtroDoutor");
+
+  if (filtroMes) {
+    filtroMes.value = dashboardData?.competencia_padrao || "2026-01";
+  }
+
+  preencherFiltroCidade();
+  preencherFiltroDoutor();
+
+  if (filtroCidade) filtroCidade.selectedIndex = 0;
+  if (filtroDoutor) filtroDoutor.selectedIndex = 0;
+
+  atualizarDashboard();
+});
+
+byId("btnExportar")?.addEventListener("click", exportarCSV);
+
+window.salvarDoutor = salvarDoutor;
+window.removerDoutor = removerDoutor;
+
+supabaseClient.auth.onAuthStateChange(async (_event, session) => {
+  if (!session) {
+    currentUser = null;
+    currentUserIsAdmin = false;
+    mostrarTelaLogin();
+    return;
+  }
+
+  currentUser = session.user;
+});
+
+iniciarAplicacao();
