@@ -1,10 +1,10 @@
 {
   "competencia": "2026-04",
-  "gerado_em": "2026-04-07T20:31:36.894348",
-  "quantidade_total": 60,
-  "valor_total": 7616.0,
-  "valor_total_descontado": 2207.0,
-  "valor_total_pendente": 5409.0,
+  "gerado_em": "2026-04-07T21:15:49.203482",
+  "quantidade_total": 66,
+  "valor_total": 8339.0,
+  "valor_total_descontado": 2570.0,
+  "valor_total_pendente": 5769.0,
   "por_unidade": [
     {
       "unidade": "Caxias",
@@ -13,13 +13,13 @@
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 4,
-      "valor": 498.0
+      "quantidade": 7,
+      "valor": 861.0
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 9,
-      "valor": 1412.0
+      "quantidade": 11,
+      "valor": 1673.0
     },
     {
       "unidade": "Garibaldi",
@@ -28,30 +28,30 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 19,
-      "valor": 2398.0
+      "quantidade": 20,
+      "valor": 2497.0
     }
   ],
   "por_doutor": [
     {
       "doutor": "Adriele da Silva",
-      "quantidade": 2,
-      "valor_descontado": 220.0
+      "quantidade": 3,
+      "valor_descontado": 257.0
     },
     {
       "doutor": "Cristian Pressi",
-      "quantidade": 19,
+      "quantidade": 20,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Dionathan Pohlmann",
-      "quantidade": 9,
+      "quantidade": 11,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Everlize Cipriani",
-      "quantidade": 1,
-      "valor_descontado": 158.0
+      "quantidade": 3,
+      "valor_descontado": 484.0
     },
     {
       "doutor": "Franciele Pedrotti",
