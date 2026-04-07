@@ -113,7 +113,6 @@ async function emailPodeCadastrar(email) {
   const { data, error } = await supabaseClient.rpc("email_pode_cadastrar", {
     p_email: email
   });
-
   if (error) throw error;
   return data === true;
 }
@@ -127,7 +126,6 @@ async function loginSupabase(email, password) {
   if (error) throw error;
 
   const autorizado = await validarUsuarioAutorizado();
-
   if (!autorizado) {
     await supabaseClient.auth.signOut();
     throw new Error("Seu usuário não está autorizado para acessar esta dashboard.");
@@ -170,9 +168,7 @@ async function enviarRecuperacaoSenha(email) {
 
 function preencherBadgeUsuario() {
   const badge = document.getElementById("badgeUsuario");
-  if (badge) {
-    badge.textContent = currentUser?.email || "Usuário";
-  }
+  if (badge) badge.textContent = currentUser?.email || "Usuário";
 }
 
 function getCompetenciaAtual() {
@@ -258,12 +254,8 @@ function obterPercentual(utilizado, creditoInicial) {
 }
 
 function obterStatus(percentual) {
-  if (percentual >= 100) {
-    return { classe: "status-red", texto: "Bloqueado", dot: "dot-red" };
-  }
-  if (percentual >= 50) {
-    return { classe: "status-yellow", texto: "Atenção", dot: "dot-yellow" };
-  }
+  if (percentual >= 100) return { classe: "status-red", texto: "Bloqueado", dot: "dot-red" };
+  if (percentual >= 50) return { classe: "status-yellow", texto: "Atenção", dot: "dot-yellow" };
   return { classe: "status-green", texto: "Controlado", dot: "dot-green" };
 }
 
@@ -320,7 +312,35 @@ function montarResumoDoutores(_registros, saldos) {
         status
       };
     })
-    .sort((a, b) => b.percentual - a.percentual);
+    .sort((a, b) => a.doutor.localeCompare(b.doutor, "pt-BR"));
+}
+
+function renderTabelaResumoDoutores(registros, saldos) {
+  const tbody = document.getElementById("tabelaResumoDoutores");
+  if (!tbody) return;
+
+  const linhas = montarResumoDoutores(registros, saldos);
+
+  if (!linhas.length) {
+    tbody.innerHTML = `<tr><td colspan="6" class="empty-state">Sem doutores cadastrados para a competência</td></tr>`;
+    return;
+  }
+
+  tbody.innerHTML = linhas.map(item => `
+    <tr>
+      <td>${escapeHtml(item.doutor)}</td>
+      <td>${formatarMoeda(item.creditoInicial)}</td>
+      <td>${formatarMoeda(item.utilizado)}</td>
+      <td>${formatarMoeda(item.creditoDisponivel)}</td>
+      <td>${item.percentual.toFixed(1)}%</td>
+      <td>
+        <span class="status-pill ${item.status.classe}">
+          <span class="dot ${item.status.dot}"></span>
+          ${item.status.texto}
+        </span>
+      </td>
+    </tr>
+  `).join("");
 }
 
 function renderTabelaAtencao(registros, saldos) {
@@ -414,6 +434,7 @@ function atualizarDashboard() {
   const saldos = getSaldosFiltrados();
 
   renderCards(registros);
+  renderTabelaResumoDoutores(registros, saldos);
   renderTabelaAtencao(registros, saldos);
   renderTabelaBloqueados(registros, saldos);
   renderTabelaPixMes(registros);
@@ -504,78 +525,74 @@ async function carregarDoutoresAdmin() {
 
   const competencia = getCompetenciaAtual();
 
-  const { data: doutores, error: errorDoutores } = await supabaseClient
-    .from("doutores_config")
-    .select("*")
-    .order("nome", { ascending: true });
+  try {
+    const { data: doutores, error: errorDoutores } = await supabaseClient
+      .from("doutores_config")
+      .select("*")
+      .order("nome", { ascending: true });
 
-  if (errorDoutores) {
-    console.error(errorDoutores);
+    if (errorDoutores) throw errorDoutores;
+
+    const { data: saldos, error: errorSaldos } = await supabaseClient
+      .from("doutores_saldos_mensais")
+      .select("*")
+      .eq("competencia", competencia);
+
+    if (errorSaldos) throw errorSaldos;
+
+    const saldoPorDoutor = {};
+    for (const item of saldos || []) {
+      saldoPorDoutor[item.doutor_id] = item;
+    }
+
+    if (!doutores || !doutores.length) {
+      tbody.innerHTML = `<tr><td colspan="10" class="empty-state">Nenhum doutor cadastrado</td></tr>`;
+      return;
+    }
+
+    tbody.innerHTML = doutores.map(item => {
+      const saldo = saldoPorDoutor[item.id] || {};
+
+      return `
+        <tr>
+          <td>
+            <input data-id="${item.id}" data-field="nome" type="text" value="${escapeHtml(item.nome)}" />
+          </td>
+          <td>
+            <input data-id="${item.id}" data-field="credito" type="number" step="0.01" value="${Number(item.credito || 0)}" />
+          </td>
+          <td>${formatarMoeda(saldo.credito_inicial ?? item.credito ?? 0)}</td>
+          <td>${formatarMoeda(saldo.utilizado ?? 0)}</td>
+          <td>${formatarMoeda(saldo.credito_final ?? item.credito ?? 0)}</td>
+          <td>
+            <input data-id="${item.id}" data-field="pix_key" type="text" value="${escapeHtml(item.pix_key || "")}" />
+          </td>
+          <td>
+            <select data-id="${item.id}" data-field="ativo">
+              <option value="true" ${item.ativo ? "selected" : ""}>Ativo</option>
+              <option value="false" ${!item.ativo ? "selected" : ""}>Inativo</option>
+            </select>
+          </td>
+          <td>
+            <input data-id="${item.id}" data-field="observacao" type="text" value="${escapeHtml(saldo.observacao || "")}" />
+          </td>
+          <td>${escapeHtml(saldo.updated_by_email || item.updated_by_email || "")}</td>
+          <td>
+            <button class="btn btn-primary btn-small" onclick="salvarDoutor('${item.id}')">Salvar</button>
+            <button class="btn btn-secondary btn-small" onclick="removerDoutor('${item.id}')">Excluir</button>
+          </td>
+        </tr>
+      `;
+    }).join("");
+  } catch (err) {
+    console.error(err);
     tbody.innerHTML = `<tr><td colspan="10" class="empty-state">Erro ao carregar doutores</td></tr>`;
-    return;
   }
-
-  const { data: saldos, error: errorSaldos } = await supabaseClient
-    .from("doutores_saldos_mensais")
-    .select("*")
-    .eq("competencia", competencia);
-
-  if (errorSaldos) {
-    console.error(errorSaldos);
-    tbody.innerHTML = `<tr><td colspan="10" class="empty-state">Erro ao carregar saldos</td></tr>`;
-    return;
-  }
-
-  const saldoPorDoutor = {};
-  for (const item of saldos || []) {
-    saldoPorDoutor[item.doutor_id] = item;
-  }
-
-  if (!doutores || !doutores.length) {
-    tbody.innerHTML = `<tr><td colspan="10" class="empty-state">Nenhum doutor cadastrado</td></tr>`;
-    return;
-  }
-
-  tbody.innerHTML = doutores.map(item => {
-    const saldo = saldoPorDoutor[item.id] || {};
-
-    return `
-      <tr>
-        <td>
-          <input data-id="${item.id}" data-field="nome" type="text" value="${escapeHtml(item.nome)}" />
-        </td>
-        <td>
-          <input data-id="${item.id}" data-field="credito" type="number" step="0.01" value="${Number(item.credito || 0)}" />
-        </td>
-        <td>${formatarMoeda(saldo.credito_inicial || 0)}</td>
-        <td>${formatarMoeda(saldo.utilizado || 0)}</td>
-        <td>${formatarMoeda(saldo.credito_final || 0)}</td>
-        <td>
-          <input data-id="${item.id}" data-field="pix_key" type="text" value="${escapeHtml(item.pix_key || "")}" />
-        </td>
-        <td>
-          <select data-id="${item.id}" data-field="ativo">
-            <option value="true" ${item.ativo ? "selected" : ""}>Ativo</option>
-            <option value="false" ${!item.ativo ? "selected" : ""}>Inativo</option>
-          </select>
-        </td>
-        <td>
-          <input data-id="${item.id}" data-field="observacao" type="text" value="${escapeHtml(saldo.observacao || "")}" />
-        </td>
-        <td>${escapeHtml(saldo.updated_by_email || item.updated_by_email || "")}</td>
-        <td>
-          <button class="btn btn-primary btn-small" onclick="salvarDoutor('${item.id}')">Salvar</button>
-          <button class="btn btn-secondary btn-small" onclick="removerDoutor('${item.id}')">Excluir</button>
-        </td>
-      </tr>
-    `;
-  }).join("");
 }
 
 async function salvarDoutor(id) {
   try {
     mostrarMensagemAdmin("");
-
     const competencia = getCompetenciaAtual();
 
     const nome = document.querySelector(`[data-id="${id}"][data-field="nome"]`)?.value.trim() || "";
@@ -589,6 +606,9 @@ async function salvarDoutor(id) {
       return;
     }
 
+    const { data: userData } = await supabaseClient.auth.getUser();
+    const emailAtual = userData?.user?.email || null;
+
     const { error: errorDoutor } = await supabaseClient
       .from("doutores_config")
       .update({
@@ -596,7 +616,8 @@ async function salvarDoutor(id) {
         nome_normalizado: normalizarNome(nome),
         credito,
         pix_key: pixKey || null,
-        ativo
+        ativo,
+        updated_by_email: emailAtual
       })
       .eq("id", id);
 
@@ -614,14 +635,32 @@ async function salvarDoutor(id) {
     if (saldoExistente) {
       const { error: errorSaldo } = await supabaseClient
         .from("doutores_saldos_mensais")
-        .update({ observacao })
+        .update({
+          observacao,
+          updated_by_email: emailAtual
+        })
         .eq("id", saldoExistente.id);
 
       if (errorSaldo) throw errorSaldo;
+    } else {
+      const { error: errorInsertSaldo } = await supabaseClient
+        .from("doutores_saldos_mensais")
+        .insert({
+          competencia,
+          doutor_id: id,
+          credito_inicial: credito,
+          utilizado: 0,
+          credito_final: credito,
+          observacao,
+          updated_by_email: emailAtual
+        });
+
+      if (errorInsertSaldo) throw errorInsertSaldo;
     }
 
     mostrarMensagemAdmin("Doutor salvo com sucesso.");
     await carregarDoutoresAdmin();
+    await carregarDashboardInterno();
   } catch (err) {
     console.error(err);
     mostrarMensagemAdmin("Erro ao salvar doutor.", true);
@@ -661,17 +700,39 @@ async function adicionarDoutor() {
       return;
     }
 
-    const { error } = await supabaseClient
+    const { data: userData } = await supabaseClient.auth.getUser();
+    const emailAtual = userData?.user?.email || null;
+
+    const { data: novoDoutor, error } = await supabaseClient
       .from("doutores_config")
       .insert({
         nome,
         nome_normalizado: normalizarNome(nome),
         credito,
         pix_key: pixKey || null,
-        ativo
-      });
+        ativo,
+        updated_by_email: emailAtual
+      })
+      .select()
+      .single();
 
     if (error) throw error;
+
+    const competencia = getCompetenciaAtual();
+
+    const { error: errorSaldo } = await supabaseClient
+      .from("doutores_saldos_mensais")
+      .insert({
+        competencia,
+        doutor_id: novoDoutor.id,
+        credito_inicial: credito,
+        utilizado: 0,
+        credito_final: credito,
+        observacao: null,
+        updated_by_email: emailAtual
+      });
+
+    if (errorSaldo) throw errorSaldo;
 
     document.getElementById("novoNome").value = "";
     document.getElementById("novoCredito").value = "";
@@ -680,6 +741,7 @@ async function adicionarDoutor() {
 
     mostrarMensagemAdmin("Doutor adicionado com sucesso.");
     await carregarDoutoresAdmin();
+    await carregarDashboardInterno();
   } catch (err) {
     console.error(err);
     mostrarMensagemAdmin("Erro ao adicionar doutor.", true);
