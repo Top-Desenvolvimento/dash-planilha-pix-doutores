@@ -4,8 +4,8 @@
       "doutor_id": "1",
       "doutor": "Adriele da Silva",
       "credito_inicial": 3000.0,
-      "utilizado": 2155.0,
-      "credito_disponivel": 845.0,
+      "utilizado": 2613.0,
+      "credito_disponivel": 387.0,
       "pix_key": ""
     },
     {
@@ -100,8 +100,8 @@
       "doutor_id": "14",
       "doutor": "Everlize Cipriani",
       "credito_inicial": 2000.0,
-      "utilizado": 1284.0,
-      "credito_disponivel": 716.0,
+      "utilizado": 2000.0,
+      "credito_disponivel": 0.0,
       "pix_key": ""
     },
     {
@@ -116,16 +116,16 @@
       "doutor_id": "16",
       "doutor": "Franciele Pedrotti",
       "credito_inicial": 10000.0,
-      "utilizado": 8893.0,
-      "credito_disponivel": 1107.0,
+      "utilizado": 10000.0,
+      "credito_disponivel": 0.0,
       "pix_key": ""
     },
     {
       "doutor_id": "18",
       "doutor": "Gabrielli Fabonato",
       "credito_inicial": 4000.0,
-      "utilizado": 390.0,
-      "credito_disponivel": 3610.0,
+      "utilizado": 780.0,
+      "credito_disponivel": 3220.0,
       "pix_key": ""
     },
     {
@@ -292,8 +292,8 @@
       "doutor_id": "36",
       "doutor": "Nelson Vaccari",
       "credito_inicial": 4000.0,
-      "utilizado": 2145.0,
-      "credito_disponivel": 1855.0,
+      "utilizado": 2340.0,
+      "credito_disponivel": 1660.0,
       "pix_key": ""
     },
     {
