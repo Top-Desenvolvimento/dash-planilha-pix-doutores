@@ -179,6 +179,10 @@ function getCidadeAtual() {
   return document.getElementById("filtroCidade")?.value || "";
 }
 
+function getDoutorAtual() {
+  return document.getElementById("filtroDoutor")?.value || "";
+}
+
 function getRegistrosCompetencia(competencia) {
   if (dashboardData?.registros_por_competencia?.[competencia]) {
     return [...dashboardData.registros_por_competencia[competencia]];
@@ -230,9 +234,36 @@ function preencherFiltroCidade() {
   }
 }
 
+function preencherFiltroDoutor() {
+  const filtroDoutor = document.getElementById("filtroDoutor");
+  if (!filtroDoutor) return;
+
+  const selecionado = filtroDoutor.value;
+  const competencia = getCompetenciaAtual();
+
+  const registros = getRegistrosCompetencia(competencia);
+  const saldos = getSaldosCompetencia(competencia);
+
+  const nomesRegistros = registros.map(item => item.doutor_final).filter(Boolean);
+  const nomesSaldos = saldos.map(item => item.doutor).filter(Boolean);
+
+  const doutores = [...new Set([...nomesRegistros, ...nomesSaldos])].sort((a, b) =>
+    a.localeCompare(b, "pt-BR")
+  );
+
+  filtroDoutor.innerHTML =
+    `<option value="">Todos</option>` +
+    doutores.map(item => `<option value="${escapeHtml(item)}">${escapeHtml(item)}</option>`).join("");
+
+  if (doutores.includes(selecionado)) {
+    filtroDoutor.value = selecionado;
+  }
+}
+
 function getRegistrosFiltrados() {
   const competencia = getCompetenciaAtual();
   const cidade = getCidadeAtual();
+  const doutor = getDoutorAtual();
 
   let registros = getRegistrosCompetencia(competencia);
 
@@ -240,11 +271,24 @@ function getRegistrosFiltrados() {
     registros = registros.filter(item => String(item.unidade || "") === cidade);
   }
 
+  if (doutor) {
+    registros = registros.filter(item => String(item.doutor_final || "") === doutor);
+  }
+
   return registros;
 }
 
 function getSaldosFiltrados() {
-  return getSaldosCompetencia(getCompetenciaAtual());
+  const competencia = getCompetenciaAtual();
+  const doutor = getDoutorAtual();
+
+  let saldos = getSaldosCompetencia(competencia);
+
+  if (doutor) {
+    saldos = saldos.filter(item => String(item.doutor || "") === doutor);
+  }
+
+  return saldos;
 }
 
 function obterPercentual(utilizado, creditoInicial) {
@@ -270,26 +314,11 @@ function renderCards(registros) {
   const totalCidades = new Set(registros.map(item => item.unidade).filter(Boolean)).size;
 
   alvo.innerHTML = `
-    <div class="stat-card">
-      <div class="stat-title">Lançamentos</div>
-      <div class="stat-value">${totalLancamentos}</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-title">Valor total</div>
-      <div class="stat-value">${formatarMoeda(totalValor)}</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-title">Descontado</div>
-      <div class="stat-value">${formatarMoeda(totalDescontado)}</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-title">Pendente</div>
-      <div class="stat-value">${formatarMoeda(totalPendente)}</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-title">Cidades</div>
-      <div class="stat-value">${totalCidades}</div>
-    </div>
+    <div class="stat-card"><div class="stat-title">Lançamentos</div><div class="stat-value">${totalLancamentos}</div></div>
+    <div class="stat-card"><div class="stat-title">Valor total</div><div class="stat-value">${formatarMoeda(totalValor)}</div></div>
+    <div class="stat-card"><div class="stat-title">Descontado</div><div class="stat-value">${formatarMoeda(totalDescontado)}</div></div>
+    <div class="stat-card"><div class="stat-title">Pendente</div><div class="stat-value">${formatarMoeda(totalPendente)}</div></div>
+    <div class="stat-card"><div class="stat-title">Cidades</div><div class="stat-value">${totalCidades}</div></div>
   `;
 }
 
@@ -333,12 +362,7 @@ function renderTabelaResumoDoutores(registros, saldos) {
       <td>${formatarMoeda(item.utilizado)}</td>
       <td>${formatarMoeda(item.creditoDisponivel)}</td>
       <td>${item.percentual.toFixed(1)}%</td>
-      <td>
-        <span class="status-pill ${item.status.classe}">
-          <span class="dot ${item.status.dot}"></span>
-          ${item.status.texto}
-        </span>
-      </td>
+      <td><span class="status-pill ${item.status.classe}"><span class="dot ${item.status.dot}"></span>${item.status.texto}</span></td>
     </tr>
   `).join("");
 }
@@ -362,12 +386,7 @@ function renderTabelaAtencao(registros, saldos) {
       <td>${formatarMoeda(item.utilizado)}</td>
       <td>${formatarMoeda(item.creditoDisponivel)}</td>
       <td>${item.percentual.toFixed(1)}%</td>
-      <td>
-        <span class="status-pill ${item.status.classe}">
-          <span class="dot ${item.status.dot}"></span>
-          ${item.status.texto}
-        </span>
-      </td>
+      <td><span class="status-pill ${item.status.classe}"><span class="dot ${item.status.dot}"></span>${item.status.texto}</span></td>
     </tr>
   `).join("");
 }
@@ -391,12 +410,7 @@ function renderTabelaBloqueados(registros, saldos) {
       <td>${formatarMoeda(item.utilizado)}</td>
       <td>${formatarMoeda(item.creditoDisponivel)}</td>
       <td>${item.percentual.toFixed(1)}%</td>
-      <td>
-        <span class="status-pill ${item.status.classe}">
-          <span class="dot ${item.status.dot}"></span>
-          ${item.status.texto}
-        </span>
-      </td>
+      <td><span class="status-pill ${item.status.classe}"><span class="dot ${item.status.dot}"></span>${item.status.texto}</span></td>
     </tr>
   `).join("");
 }
@@ -421,9 +435,7 @@ function renderTabelaPixMes(registros) {
         <td>${escapeHtml(item.paciente)}</td>
         <td>${formatarMoeda(item.valor)}</td>
         <td>${formatarMoeda(item.valor_descontado)}</td>
-        <td class="${Number(item.pendente || 0) > 0 ? "text-warning" : "text-success"}">
-          ${formatarMoeda(item.pendente)}
-        </td>
+        <td class="${Number(item.pendente || 0) > 0 ? "text-warning" : "text-success"}">${formatarMoeda(item.pendente)}</td>
       </tr>
     `).join("");
 }
@@ -440,9 +452,7 @@ function atualizarDashboard() {
   renderTabelaPixMes(registros);
 
   const badgeCompetencia = document.getElementById("badgeCompetencia");
-  if (badgeCompetencia) {
-    badgeCompetencia.textContent = formatarCompetenciaLabel(competencia);
-  }
+  if (badgeCompetencia) badgeCompetencia.textContent = formatarCompetenciaLabel(competencia);
 }
 
 function exportarCSV() {
@@ -455,15 +465,8 @@ function exportarCSV() {
   }
 
   const headers = [
-    "competencia",
-    "data",
-    "cidade",
-    "responsavel_fiscal",
-    "doutor_final",
-    "paciente",
-    "valor",
-    "valor_descontado",
-    "pendente"
+    "competencia", "data", "cidade", "responsavel_fiscal",
+    "doutor_final", "paciente", "valor", "valor_descontado", "pendente"
   ];
 
   const rows = registros.map(item => [
@@ -493,27 +496,20 @@ function exportarCSV() {
 
 async function carregarDashboardInterno() {
   const resposta = await fetch("./data/dashboard_data.json", { cache: "no-store" });
-  if (!resposta.ok) {
-    throw new Error(`Arquivo não encontrado: ${resposta.status}`);
-  }
+  if (!resposta.ok) throw new Error(`Arquivo não encontrado: ${resposta.status}`);
 
   dashboardData = await resposta.json();
 
-  const titulo = document.getElementById("tituloDashboard");
-  const subtitulo = document.getElementById("subtituloDashboard");
-  const badgeArquivo = document.getElementById("badgeArquivo");
-
-  if (titulo) titulo.textContent = dashboardData.titulo_dashboard || "PIX Doutores";
-  if (subtitulo) subtitulo.textContent = "Lista mensal de PIX Doutores com alertas de limite";
-  if (badgeArquivo) {
-    badgeArquivo.textContent = dashboardData?.arquivo_origem
-      ? `Base: ${dashboardData.arquivo_origem}`
-      : "Base não informada";
-  }
+  document.getElementById("tituloDashboard").textContent = dashboardData.titulo_dashboard || "PIX Doutores";
+  document.getElementById("subtituloDashboard").textContent = "Lista mensal de PIX Doutores com alertas de limite";
+  document.getElementById("badgeArquivo").textContent = dashboardData?.arquivo_origem
+    ? `Base: ${dashboardData.arquivo_origem}`
+    : "Base não informada";
 
   preencherBadgeUsuario();
   preencherFiltroMes();
   preencherFiltroCidade();
+  preencherFiltroDoutor();
   atualizarDashboard();
 }
 
@@ -522,7 +518,6 @@ async function carregarDoutoresAdmin() {
   if (!tbody) return;
 
   tbody.innerHTML = `<tr><td colspan="10" class="empty-state">Carregando...</td></tr>`;
-
   const competencia = getCompetenciaAtual();
 
   try {
@@ -555,27 +550,19 @@ async function carregarDoutoresAdmin() {
 
       return `
         <tr>
-          <td>
-            <input data-id="${item.id}" data-field="nome" type="text" value="${escapeHtml(item.nome)}" />
-          </td>
-          <td>
-            <input data-id="${item.id}" data-field="credito" type="number" step="0.01" value="${Number(item.credito || 0)}" />
-          </td>
+          <td><input data-id="${item.id}" data-field="nome" type="text" value="${escapeHtml(item.nome)}" /></td>
+          <td><input data-id="${item.id}" data-field="credito" type="number" step="0.01" value="${Number(item.credito || 0)}" /></td>
           <td>${formatarMoeda(saldo.credito_inicial ?? item.credito ?? 0)}</td>
           <td>${formatarMoeda(saldo.utilizado ?? 0)}</td>
           <td>${formatarMoeda(saldo.credito_final ?? item.credito ?? 0)}</td>
-          <td>
-            <input data-id="${item.id}" data-field="pix_key" type="text" value="${escapeHtml(item.pix_key || "")}" />
-          </td>
+          <td><input data-id="${item.id}" data-field="pix_key" type="text" value="${escapeHtml(item.pix_key || "")}" /></td>
           <td>
             <select data-id="${item.id}" data-field="ativo">
               <option value="true" ${item.ativo ? "selected" : ""}>Ativo</option>
               <option value="false" ${!item.ativo ? "selected" : ""}>Inativo</option>
             </select>
           </td>
-          <td>
-            <input data-id="${item.id}" data-field="observacao" type="text" value="${escapeHtml(saldo.observacao || "")}" />
-          </td>
+          <td><input data-id="${item.id}" data-field="observacao" type="text" value="${escapeHtml(saldo.observacao || "")}" /></td>
           <td>${escapeHtml(saldo.updated_by_email || item.updated_by_email || "")}</td>
           <td>
             <button class="btn btn-primary btn-small" onclick="salvarDoutor('${item.id}')">Salvar</button>
@@ -739,180 +726,4 @@ async function adicionarDoutor() {
     document.getElementById("novaPixKey").value = "";
     document.getElementById("novoAtivo").value = "true";
 
-    mostrarMensagemAdmin("Doutor adicionado com sucesso.");
-    await carregarDoutoresAdmin();
-    await carregarDashboardInterno();
-  } catch (err) {
-    console.error(err);
-    mostrarMensagemAdmin("Erro ao adicionar doutor.", true);
-  }
-}
-
-async function iniciarAplicacao() {
-  try {
-    const { data, error } = await supabaseClient.auth.getSession();
-    if (error) throw error;
-
-    const session = data?.session || null;
-
-    if (!session) {
-      mostrarTelaLogin();
-      return;
-    }
-
-    const autorizado = await validarUsuarioAutorizado();
-
-    if (!autorizado) {
-      await supabaseClient.auth.signOut();
-      mostrarTelaLogin();
-      mostrarMensagemAuth("Usuário sem permissão de acesso.", true);
-      return;
-    }
-
-    currentUser = session.user;
-    currentUserIsAdmin = await validarUsuarioAdmin();
-
-    if (currentUserIsAdmin) {
-      document.getElementById("btnTabAdmin")?.classList.remove("hidden");
-    }
-
-    mostrarApp();
-    mostrarDashboard();
-    await carregarDashboardInterno();
-  } catch (erro) {
-    console.error("Erro ao iniciar app:", erro);
-    mostrarTelaLogin();
-    mostrarMensagemAuth("Erro ao validar acesso.", true);
-  }
-}
-
-document.getElementById("loginForm")?.addEventListener("submit", async (e) => {
-  e.preventDefault();
-
-  const email = document.getElementById("email")?.value.trim() || "";
-  const password = document.getElementById("password")?.value.trim() || "";
-
-  mostrarMensagemAuth("");
-
-  try {
-    await loginSupabase(email, password);
-
-    const { data } = await supabaseClient.auth.getUser();
-    currentUser = data?.user || null;
-    currentUserIsAdmin = await validarUsuarioAdmin();
-
-    if (currentUserIsAdmin) {
-      document.getElementById("btnTabAdmin")?.classList.remove("hidden");
-    }
-
-    mostrarApp();
-    mostrarDashboard();
-    await carregarDashboardInterno();
-  } catch (erro) {
-    console.error(erro);
-    mostrarMensagemAuth(erro.message || "Não foi possível entrar.", true);
-  }
-});
-
-document.getElementById("btnCriarAcesso")?.addEventListener("click", async () => {
-  const email = document.getElementById("email")?.value.trim() || "";
-  const password = document.getElementById("password")?.value.trim() || "";
-
-  mostrarMensagemAuth("");
-
-  if (!email || !password) {
-    mostrarMensagemAuth("Preencha e-mail e senha para criar o acesso.", true);
-    return;
-  }
-
-  try {
-    await criarAcessoSupabase(email, password);
-    mostrarMensagemAuth("Acesso criado com sucesso. Agora você já pode entrar.");
-  } catch (erro) {
-    console.error(erro);
-    mostrarMensagemAuth(erro.message || "Não foi possível criar o acesso.", true);
-  }
-});
-
-document.getElementById("btnForgotPassword")?.addEventListener("click", async () => {
-  const email = document.getElementById("email")?.value.trim() || "";
-
-  if (!email) {
-    mostrarMensagemAuth("Digite seu e-mail para recuperar a senha.", true);
-    return;
-  }
-
-  try {
-    await enviarRecuperacaoSenha(email);
-    mostrarMensagemAuth("Enviamos um link de recuperação para seu e-mail.");
-  } catch (erro) {
-    console.error(erro);
-    mostrarMensagemAuth("Não foi possível enviar o e-mail de recuperação.", true);
-  }
-});
-
-document.getElementById("btnLogout")?.addEventListener("click", async () => {
-  await logoutSupabase();
-  currentUser = null;
-  currentUserIsAdmin = false;
-  dashboardData = null;
-  mostrarTelaLogin();
-});
-
-document.getElementById("btnTabDashboard")?.addEventListener("click", () => {
-  mostrarDashboard();
-});
-
-document.getElementById("btnTabAdmin")?.addEventListener("click", async () => {
-  if (!currentUserIsAdmin) return;
-  mostrarAdmin();
-  await carregarDoutoresAdmin();
-});
-
-document.getElementById("btnAdicionarDoutor")?.addEventListener("click", adicionarDoutor);
-
-document.getElementById("filtroMes")?.addEventListener("change", async () => {
-  preencherFiltroCidade();
-  atualizarDashboard();
-
-  if (!document.getElementById("adminView")?.classList.contains("hidden")) {
-    await carregarDoutoresAdmin();
-  }
-});
-
-document.getElementById("filtroCidade")?.addEventListener("change", atualizarDashboard);
-
-document.getElementById("btnLimpar")?.addEventListener("click", () => {
-  const filtroMes = document.getElementById("filtroMes");
-  const filtroCidade = document.getElementById("filtroCidade");
-
-  if (filtroMes) {
-    filtroMes.value = dashboardData?.competencia_padrao || "2026-01";
-  }
-
-  preencherFiltroCidade();
-
-  if (filtroCidade) {
-    filtroCidade.selectedIndex = 0;
-  }
-
-  atualizarDashboard();
-});
-
-document.getElementById("btnExportar")?.addEventListener("click", exportarCSV);
-
-window.salvarDoutor = salvarDoutor;
-window.removerDoutor = removerDoutor;
-
-supabaseClient.auth.onAuthStateChange(async (_event, session) => {
-  if (!session) {
-    currentUser = null;
-    currentUserIsAdmin = false;
-    mostrarTelaLogin();
-    return;
-  }
-
-  currentUser = session.user;
-});
-
-iniciarAplicacao();
+    mostrarMensagemAdmin
