@@ -1,18 +1,27 @@
 from __future__ import annotations
 
+import calendar
 import json
+import os
 import re
 from datetime import datetime, date
 from pathlib import Path
-from typing import List, Dict, Any, Optional
+from typing import List, Dict, Any, Optional, Tuple
 
 from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError
 
-from regras_doutores import montar_mapa_creditos, aplicar_desconto, listar_saldos_finais
+from regras_doutores import (
+    montar_mapa_creditos,
+    aplicar_desconto,
+    listar_saldos_finais,
+    persistir_saldos_mensais,
+)
 
 
 USUARIO = "MANUS"
 SENHA = "MANUS2026"
+ANO_REFERENCIA = 2026
+MODO_COLETA = os.getenv("MODO_COLETA", "rapido").strip().lower()
 
 SISTEMAS = [
     {"unidade": "Caxias", "url": "http://caxias.topesteticabucal.com.br/sistema"},
@@ -23,17 +32,31 @@ SISTEMAS = [
     {"unidade": "Garibaldi", "url": "http://garibaldi.topesteticabucal.com.br/sistema"},
     {"unidade": "Veranopolis", "url": "http://veranopolis.topesteticabucal.com.br/sistema"},
     {"unidade": "Ssdocai", "url": "http://ssdocai.topesteticabucal.com.br/sistema"},
+    {"unidade": "FloresDaCunha", "url": "http://flores.topesteticabucal.com.br/sistema"},
 ]
 
 PASTA_DATA = Path("data")
 ARQUIVO_PIX = PASTA_DATA / "pix_doutores.json"
 ARQUIVO_SALDOS = PASTA_DATA / "saldos_doutores.json"
 ARQUIVO_RESUMO = PASTA_DATA / "resumo_pix_doutores.json"
+ARQUIVO_ERROS = PASTA_DATA / "erros_pix_doutores.json"
+
+
+def carregar_json(caminho: Path, padrao: Any) -> Any:
+    if not caminho.exists():
+        return padrao
+    with open(caminho, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+def salvar_json(dados: Any, caminho: Path) -> None:
+    caminho.parent.mkdir(parents=True, exist_ok=True)
+    with open(caminho, "w", encoding="utf-8") as f:
+        json.dump(dados, f, ensure_ascii=False, indent=2)
 
 
 def parse_valor(texto: str) -> float:
     texto = (texto or "").strip()
-
     if not texto:
         return 0.0
 
@@ -46,25 +69,33 @@ def parse_valor(texto: str) -> float:
         return 0.0
 
 
-def salvar_json(dados: Any, caminho: Path) -> None:
-    caminho.parent.mkdir(parents=True, exist_ok=True)
-    with open(caminho, "w", encoding="utf-8") as f:
-        json.dump(dados, f, ensure_ascii=False, indent=2)
+def competencia_anterior(competencia: str) -> Optional[str]:
+    ano, mes = map(int, competencia.split("-"))
+    if mes == 1:
+        return f"{ano - 1}-12"
+    return f"{ano}-{mes - 1:02d}"
 
 
-def primeiro_dia_mes_atual() -> str:
+def obter_mes_atual_referencia() -> str:
     hoje = date.today()
-    return hoje.replace(day=1).strftime("%d/%m/%Y")
+    if hoje.year == ANO_REFERENCIA:
+        return f"{ANO_REFERENCIA}-{hoje.month:02d}"
+    return f"{ANO_REFERENCIA}-12"
 
 
-def ultimo_dia_mes_atual() -> str:
-    hoje = date.today()
-    if hoje.month == 12:
-        proximo_mes = hoje.replace(year=hoje.year + 1, month=1, day=1)
-    else:
-        proximo_mes = hoje.replace(month=hoje.month + 1, day=1)
-    ultimo = proximo_mes.fromordinal(proximo_mes.toordinal() - 1)
-    return ultimo.strftime("%d/%m/%Y")
+def gerar_competencias() -> List[str]:
+    mes_atual = int(obter_mes_atual_referencia().split("-")[1])
+
+    if MODO_COLETA == "historico":
+        return [f"{ANO_REFERENCIA}-{mes:02d}" for mes in range(1, mes_atual + 1)]
+
+    return [obter_mes_atual_referencia()]
+
+
+def obter_datas_competencia(competencia: str) -> Tuple[str, str]:
+    ano, mes = map(int, competencia.split("-"))
+    ultimo_dia = calendar.monthrange(ano, mes)[1]
+    return f"01/{mes:02d}/{ano}", f"{ultimo_dia:02d}/{mes:02d}/{ano}"
 
 
 def preencher_primeiro_seletor_existente(page, seletores: List[str], valor: str) -> bool:
@@ -91,27 +122,48 @@ def clicar_primeiro_existente(page, seletores: List[str]) -> bool:
     return False
 
 
-def fazer_login(page, url: str) -> None:
-    page.goto(url, wait_until="domcontentloaded", timeout=60000)
+def setar_valor_input(locator, valor: str) -> None:
+    locator.scroll_into_view_if_needed()
+    locator.click(timeout=5000)
 
-    preenchido_usuario = preencher_primeiro_seletor_existente(page, [
-        'input[name="login"]',
-        'input[name="usuario"]',
-        '#login',
-        '#usuario',
-        'input[type="text"]',
+    try:
+        locator.press("Control+A")
+        locator.press("Backspace")
+    except Exception:
+        pass
+
+    try:
+        locator.fill(valor)
+    except Exception:
+        pass
+
+    locator.evaluate(
+        """(el, value) => {
+            el.removeAttribute('readonly');
+            el.value = value;
+            el.dispatchEvent(new Event('input', { bubbles: true }));
+            el.dispatchEvent(new Event('change', { bubbles: true }));
+            el.dispatchEvent(new Event('blur', { bubbles: true }));
+        }""",
+        valor,
+    )
+
+
+def fazer_login(page, url: str) -> None:
+    page.goto(url, wait_until="domcontentloaded", timeout=45000)
+
+    ok_user = preencher_primeiro_seletor_existente(page, [
+        'input[name="login"]', 'input[name="usuario"]', '#login', '#usuario', 'input[type="text"]'
     ], USUARIO)
 
-    if not preenchido_usuario:
+    if not ok_user:
         raise RuntimeError("Campo de usuário não encontrado.")
 
-    preenchido_senha = preencher_primeiro_seletor_existente(page, [
-        'input[name="senha"]',
-        '#senha',
-        'input[type="password"]',
+    ok_pass = preencher_primeiro_seletor_existente(page, [
+        'input[name="senha"]', '#senha', 'input[type="password"]'
     ], SENHA)
 
-    if not preenchido_senha:
+    if not ok_pass:
         raise RuntimeError("Campo de senha não encontrado.")
 
     clicou = clicar_primeiro_existente(page, [
@@ -125,20 +177,18 @@ def fazer_login(page, url: str) -> None:
     if not clicou:
         raise RuntimeError("Botão de login não encontrado.")
 
-    page.wait_for_load_state("networkidle", timeout=60000)
+    page.wait_for_load_state("networkidle", timeout=45000)
+    page.wait_for_timeout(800)
 
 
-def acessar_demonstrativo(page) -> None:
+def abrir_demonstrativo(page) -> None:
     clicou_financas = clicar_primeiro_existente(page, [
-        'text="FINANÇAS"',
-        'text="Finanças"',
-        'a:has-text("FINANÇAS")',
-        'a:has-text("Finanças")',
+        'text="FINANÇAS"', 'text="Finanças"', 'a:has-text("FINANÇAS")', 'a:has-text("Finanças")'
     ])
     if not clicou_financas:
         raise RuntimeError("Menu Finanças não encontrado.")
 
-    page.wait_for_timeout(1000)
+    page.wait_for_timeout(600)
 
     clicou_demonstrativo = clicar_primeiro_existente(page, [
         'text="Demonstrativo de Resultado"',
@@ -149,28 +199,56 @@ def acessar_demonstrativo(page) -> None:
     if not clicou_demonstrativo:
         raise RuntimeError("Tela Demonstrativo de Resultado não encontrada.")
 
-    page.wait_for_load_state("networkidle", timeout=60000)
-    page.wait_for_timeout(1500)
+    page.wait_for_load_state("networkidle", timeout=45000)
+    page.wait_for_timeout(1200)
 
-    data_inicio = primeiro_dia_mes_atual()
-    data_fim = ultimo_dia_mes_atual()
 
-    inputs_data = page.locator('input[type="text"]')
-    encontrados = 0
+def localizar_campos_periodo(page):
+    inputs = page.locator("input")
+    candidatos = []
 
-    for i in range(inputs_data.count()):
+    for i in range(inputs.count()):
         try:
-            valor_atual = inputs_data.nth(i).input_value().strip()
-            if re.match(r"\d{2}/\d{2}/\d{4}", valor_atual):
-                if encontrados == 0:
-                    inputs_data.nth(i).fill(data_inicio)
-                    encontrados += 1
-                elif encontrados == 1:
-                    inputs_data.nth(i).fill(data_fim)
-                    encontrados += 1
-                    break
+            loc = inputs.nth(i)
+            if not loc.is_visible():
+                continue
+
+            tipo = (loc.get_attribute("type") or "text").lower()
+            if tipo in ["hidden", "submit", "button", "checkbox", "radio", "file"]:
+                continue
+
+            value = (loc.input_value() or "").strip()
+            placeholder = (loc.get_attribute("placeholder") or "").lower()
+            name = (loc.get_attribute("name") or "").lower()
+            id_attr = (loc.get_attribute("id") or "").lower()
+
+            if (
+                re.match(r"\d{2}/\d{2}/\d{4}", value)
+                or "data" in placeholder
+                or "data" in name
+                or "data" in id_attr
+                or "periodo" in placeholder
+                or "periodo" in name
+                or "periodo" in id_attr
+            ):
+                candidatos.append(loc)
         except Exception:
             continue
+
+    if len(candidatos) >= 2:
+        return candidatos[0], candidatos[1]
+
+    raise RuntimeError("Campos de data do período não encontrados.")
+
+
+def buscar_competencia(page, competencia: str) -> None:
+    data_inicio, data_fim = obter_datas_competencia(competencia)
+
+    campo_inicio, campo_fim = localizar_campos_periodo(page)
+    setar_valor_input(campo_inicio, data_inicio)
+    setar_valor_input(campo_fim, data_fim)
+
+    page.wait_for_timeout(300)
 
     clicou_buscar = clicar_primeiro_existente(page, [
         'button:has-text("Buscar")',
@@ -181,37 +259,47 @@ def acessar_demonstrativo(page) -> None:
     if not clicou_buscar:
         raise RuntimeError("Botão Buscar não encontrado.")
 
-    page.wait_for_load_state("networkidle", timeout=60000)
-    page.wait_for_timeout(3000)
+    page.wait_for_load_state("networkidle", timeout=45000)
+    page.wait_for_timeout(1200)
 
 
 def linha_eh_pix_doutores(metodo_raw: str) -> bool:
     return "pix doutores" in (metodo_raw or "").lower()
 
 
-def extrair_nome_doutor_do_metodo(metodo_raw: str) -> str:
-    linhas = [l.strip() for l in (metodo_raw or "").split("\n") if l.strip()]
+def limpar_nome_responsavel(texto: str) -> str:
+    nome = (texto or "").strip()
+    if not nome:
+        return ""
 
+    nome = re.sub(r"\s+", " ", nome)
+    nome = re.sub(r"\b\d+\b", "", nome)
+    nome = re.sub(r"^(dr\.?|dra\.?|doutor|doutora)\s+", "", nome, flags=re.IGNORECASE)
+    nome = re.sub(r"\s+", " ", nome).strip(" -:")
+    return nome.strip()
+
+
+def extrair_responsavel_fiscal_do_metodo(metodo_raw: str) -> str:
+    linhas = [l.strip() for l in (metodo_raw or "").split("\n") if l.strip()]
     if not linhas:
         return ""
 
-    ignorar_prefixos = [
-        "pix doutores",
-        "maquina",
-    ]
+    ignorar_prefixos = ["pix doutores", "maquina", "máquina"]
 
     candidatos = []
     for linha in linhas:
-        linha_lower = linha.lower()
-        if any(linha_lower.startswith(prefixo) for prefixo in ignorar_prefixos):
+        ll = linha.lower()
+        if any(ll.startswith(prefixo) for prefixo in ignorar_prefixos):
+            continue
+        if re.fullmatch(r"[\d\s\-./]+", linha):
             continue
         candidatos.append(linha)
 
     if candidatos:
-        return candidatos[0]
+        return limpar_nome_responsavel(candidatos[0])
 
     if len(linhas) > 1:
-        return linhas[1]
+        return limpar_nome_responsavel(linhas[1])
 
     return ""
 
@@ -243,7 +331,12 @@ def extrair_info_origem(origem_raw: str) -> Dict[str, Any]:
     }
 
 
-def interpretar_linha(linha, unidade: str, mapa_creditos: Dict[str, Dict[str, Any]]) -> Optional[Dict[str, Any]]:
+def interpretar_linha(
+    linha,
+    unidade: str,
+    mapa_creditos: Dict[str, Dict[str, Any]],
+    competencia: str
+) -> Optional[Dict[str, Any]]:
     colunas = linha.locator("td")
     qtd_colunas = colunas.count()
 
@@ -263,19 +356,33 @@ def interpretar_linha(linha, unidade: str, mapa_creditos: Dict[str, Dict[str, An
     if not linha_eh_pix_doutores(metodo_raw):
         return None
 
-    nome_doutor = extrair_nome_doutor_do_metodo(metodo_raw)
+    responsavel_fiscal = limpar_nome_responsavel(extrair_responsavel_fiscal_do_metodo(metodo_raw))
     valor = parse_valor(valor_texto)
     valor_com_descontos = parse_valor(valor_desc_texto)
     info_origem = extrair_info_origem(origem_raw)
-    desconto = aplicar_desconto(mapa_creditos, nome_doutor, valor)
+
+    if responsavel_fiscal:
+        desconto = aplicar_desconto(mapa_creditos, responsavel_fiscal, valor)
+    else:
+        desconto = {
+            "doutor_encontrado": False,
+            "doutor_id": None,
+            "nome_padronizado": "Sem responsável fiscal",
+            "credito_antes": 0.0,
+            "valor_descontado": 0.0,
+            "credito_depois": 0.0,
+            "utilizado_depois": 0.0,
+            "pendente": valor,
+        }
 
     return {
         "unidade": unidade,
         "data": data,
-        "competencia": datetime.now().strftime("%Y-%m"),
+        "competencia": competencia,
         "metodo_pagamento": "Pix Doutores",
-        "doutor_lido": nome_doutor,
-        "doutor_final": desconto["nome_padronizado"],
+        "responsavel_fiscal_lido": responsavel_fiscal,
+        "doutor_id": desconto["doutor_id"],
+        "doutor_final": desconto["nome_padronizado"] or "Sem responsável fiscal",
         "doutor_encontrado": desconto["doutor_encontrado"],
         "paciente": info_origem["paciente"],
         "codigo_origem": info_origem["codigo_origem"],
@@ -286,13 +393,14 @@ def interpretar_linha(linha, unidade: str, mapa_creditos: Dict[str, Dict[str, An
         "credito_antes": desconto["credito_antes"],
         "valor_descontado": desconto["valor_descontado"],
         "credito_depois": desconto["credito_depois"],
+        "utilizado_depois": desconto["utilizado_depois"],
         "pendente": desconto["pendente"],
         "linha_original": linha_original,
         "coletado_em": datetime.now().isoformat(),
     }
 
 
-def extrair_linhas_pix(page, unidade: str, mapa_creditos: Dict[str, Dict[str, Any]]) -> List[Dict[str, Any]]:
+def extrair_linhas_pix(page, unidade: str, mapa_creditos: Dict[str, Dict[str, Any]], competencia: str) -> List[Dict[str, Any]]:
     resultados: List[Dict[str, Any]] = []
     tabelas = page.locator("table")
 
@@ -303,92 +411,101 @@ def extrair_linhas_pix(page, unidade: str, mapa_creditos: Dict[str, Dict[str, An
     for i in range(total_tabelas):
         tabela = tabelas.nth(i)
         linhas = tabela.locator("tr")
-        qtd_linhas = linhas.count()
 
-        for j in range(qtd_linhas):
+        for j in range(linhas.count()):
             linha = linhas.nth(j)
-            registro = interpretar_linha(linha, unidade, mapa_creditos)
+            registro = interpretar_linha(linha, unidade, mapa_creditos, competencia)
             if registro:
                 resultados.append(registro)
 
     return resultados
 
 
-def processar_unidade(browser, sistema: Dict[str, str], mapa_creditos: Dict[str, Dict[str, Any]]) -> List[Dict[str, Any]]:
+def processar_unidade(
+    browser,
+    sistema: Dict[str, str],
+    competencias: List[str],
+    resultados_por_competencia: Dict[str, List[Dict[str, Any]]],
+    erros_por_competencia: Dict[str, List[Dict[str, Any]]],
+    mapas_creditos: Dict[str, Dict[str, Dict[str, Any]]]
+) -> None:
     unidade = sistema["unidade"]
     url = sistema["url"]
     print(f"[INFO] Processando unidade: {unidade}")
 
     context = browser.new_context()
     page = context.new_page()
+    page.set_default_timeout(25000)
 
     try:
         fazer_login(page, url)
-        acessar_demonstrativo(page)
-        resultados = extrair_linhas_pix(page, unidade, mapa_creditos)
-        print(f"[INFO] {unidade}: {len(resultados)} linha(s) PIX DOUTORES encontrada(s).")
-        return resultados
+
+        for competencia in competencias:
+            try:
+                abrir_demonstrativo(page)
+                buscar_competencia(page, competencia)
+
+                resultados = extrair_linhas_pix(page, unidade, mapas_creditos[competencia], competencia)
+                resultados_por_competencia[competencia].extend(resultados)
+
+                print(f"[INFO] {unidade}: {len(resultados)} linha(s) PIX DOUTORES encontrada(s).")
+            except Exception as e:
+                print(f"[ERRO] {unidade} {competencia}: {e}")
+                erros_por_competencia[competencia].append({
+                    "unidade": unidade,
+                    "competencia": competencia,
+                    "erro": str(e),
+                    "coletado_em": datetime.now().isoformat(),
+                })
 
     except PlaywrightTimeoutError:
         print(f"[ERRO] Timeout na unidade {unidade}")
-        return [{
-            "unidade": unidade,
-            "erro": "Timeout ao acessar sistema",
-            "coletado_em": datetime.now().isoformat(),
-        }]
+        for competencia in competencias:
+            erros_por_competencia[competencia].append({
+                "unidade": unidade,
+                "competencia": competencia,
+                "erro": "Timeout ao acessar sistema",
+                "coletado_em": datetime.now().isoformat(),
+            })
     except Exception as e:
         print(f"[ERRO] Falha na unidade {unidade}: {e}")
-        return [{
-            "unidade": unidade,
-            "erro": str(e),
-            "coletado_em": datetime.now().isoformat(),
-        }]
+        for competencia in competencias:
+            erros_por_competencia[competencia].append({
+                "unidade": unidade,
+                "competencia": competencia,
+                "erro": str(e),
+                "coletado_em": datetime.now().isoformat(),
+            })
     finally:
         context.close()
 
 
-def gerar_resumo(dados: List[Dict[str, Any]]) -> Dict[str, Any]:
-    validos = [d for d in dados if "erro" not in d]
-
-    total_valor = round(sum(float(d.get("valor", 0.0)) for d in validos), 2)
-    total_descontado = round(sum(float(d.get("valor_descontado", 0.0)) for d in validos), 2)
-    total_pendente = round(sum(float(d.get("pendente", 0.0)) for d in validos), 2)
+def gerar_resumo(dados: List[Dict[str, Any]], competencia: str) -> Dict[str, Any]:
+    total_valor = round(sum(float(d.get("valor", 0.0)) for d in dados), 2)
+    total_descontado = round(sum(float(d.get("valor_descontado", 0.0)) for d in dados), 2)
+    total_pendente = round(sum(float(d.get("pendente", 0.0)) for d in dados), 2)
 
     por_unidade: Dict[str, Dict[str, Any]] = {}
     por_doutor: Dict[str, Dict[str, Any]] = {}
 
-    for item in validos:
+    for item in dados:
         unidade = item["unidade"]
         doutor = item["doutor_final"]
 
-        por_unidade.setdefault(unidade, {
-            "unidade": unidade,
-            "quantidade": 0,
-            "valor": 0.0,
-            "descontado": 0.0,
-            "pendente": 0.0,
-        })
+        por_unidade.setdefault(unidade, {"unidade": unidade, "quantidade": 0, "valor": 0.0})
         por_unidade[unidade]["quantidade"] += 1
         por_unidade[unidade]["valor"] = round(por_unidade[unidade]["valor"] + float(item["valor"]), 2)
-        por_unidade[unidade]["descontado"] = round(por_unidade[unidade]["descontado"] + float(item["valor_descontado"]), 2)
-        por_unidade[unidade]["pendente"] = round(por_unidade[unidade]["pendente"] + float(item["pendente"]), 2)
 
-        por_doutor.setdefault(doutor, {
-            "doutor": doutor,
-            "quantidade": 0,
-            "valor": 0.0,
-            "descontado": 0.0,
-            "pendente": 0.0,
-        })
+        por_doutor.setdefault(doutor, {"doutor": doutor, "quantidade": 0, "valor_descontado": 0.0})
         por_doutor[doutor]["quantidade"] += 1
-        por_doutor[doutor]["valor"] = round(por_doutor[doutor]["valor"] + float(item["valor"]), 2)
-        por_doutor[doutor]["descontado"] = round(por_doutor[doutor]["descontado"] + float(item["valor_descontado"]), 2)
-        por_doutor[doutor]["pendente"] = round(por_doutor[doutor]["pendente"] + float(item["pendente"]), 2)
+        por_doutor[doutor]["valor_descontado"] = round(
+            por_doutor[doutor]["valor_descontado"] + float(item["valor_descontado"]), 2
+        )
 
     return {
-        "competencia": datetime.now().strftime("%Y-%m"),
+        "competencia": competencia,
         "gerado_em": datetime.now().isoformat(),
-        "quantidade_total": len(validos),
+        "quantidade_total": len(dados),
         "valor_total": total_valor,
         "valor_total_descontado": total_descontado,
         "valor_total_pendente": total_pendente,
@@ -397,29 +514,91 @@ def gerar_resumo(dados: List[Dict[str, Any]]) -> Dict[str, Any]:
     }
 
 
+def normalizar_lista(valor: Any) -> List[Any]:
+    return valor if isinstance(valor, list) else []
+
+
+def normalizar_dict(valor: Any) -> Dict[str, Any]:
+    return valor if isinstance(valor, dict) else {}
+
+
+def remover_competencias_da_lista(lista: List[Dict[str, Any]], competencias: set[str]) -> List[Dict[str, Any]]:
+    return [item for item in lista if str(item.get("competencia", "")) not in competencias]
+
+
 def main() -> None:
-    mapa_creditos = montar_mapa_creditos()
-    todos_resultados: List[Dict[str, Any]] = []
+    competencias = gerar_competencias()
+    competencias_set = set(competencias)
+
+    print(f"[INFO] Modo de coleta: {MODO_COLETA}")
+    print(f"[INFO] Competências alvo: {competencias}")
+
+    mapas_creditos: Dict[str, Dict[str, Dict[str, Any]]] = {}
+    for competencia in competencias:
+        mapas_creditos[competencia] = montar_mapa_creditos(
+            competencia=competencia,
+            competencia_anterior=competencia_anterior(competencia),
+        )
+
+    resultados_por_competencia = {competencia: [] for competencia in competencias}
+    erros_por_competencia = {competencia: [] for competencia in competencias}
 
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
 
         for sistema in SISTEMAS:
-            resultados = processar_unidade(browser, sistema, mapa_creditos)
-            todos_resultados.extend(resultados)
+            processar_unidade(
+                browser=browser,
+                sistema=sistema,
+                competencias=competencias,
+                resultados_por_competencia=resultados_por_competencia,
+                erros_por_competencia=erros_por_competencia,
+                mapas_creditos=mapas_creditos,
+            )
 
         browser.close()
 
-    resumo = gerar_resumo(todos_resultados)
-    saldos_finais = listar_saldos_finais(mapa_creditos)
+    registros_existentes = normalizar_lista(carregar_json(ARQUIVO_PIX, []))
+    erros_existentes = normalizar_lista(carregar_json(ARQUIVO_ERROS, []))
+    saldos_existentes = normalizar_dict(carregar_json(ARQUIVO_SALDOS, {}))
+    resumos_existentes = normalizar_dict(carregar_json(ARQUIVO_RESUMO, {}))
 
-    salvar_json(todos_resultados, ARQUIVO_PIX)
-    salvar_json(saldos_finais, ARQUIVO_SALDOS)
-    salvar_json(resumo, ARQUIVO_RESUMO)
+    if MODO_COLETA == "historico":
+        registros_existentes = []
+        erros_existentes = []
+        saldos_existentes = {}
+        resumos_existentes = {}
+    else:
+        registros_existentes = remover_competencias_da_lista(registros_existentes, competencias_set)
+        erros_existentes = remover_competencias_da_lista(erros_existentes, competencias_set)
+
+    for competencia in competencias:
+        resultados = resultados_por_competencia[competencia]
+        erros = erros_por_competencia[competencia]
+        resumo = gerar_resumo(resultados, competencia)
+        saldos_finais = listar_saldos_finais(mapas_creditos[competencia])
+
+        persistir_saldos_mensais(competencia, mapas_creditos[competencia])
+
+        registros_existentes.extend(resultados)
+        erros_existentes.extend(erros)
+        saldos_existentes[competencia] = saldos_finais
+        resumos_existentes[competencia] = resumo
+
+        salvar_json(resultados, PASTA_DATA / f"pix_doutores_{competencia}.json")
+        salvar_json(saldos_finais, PASTA_DATA / f"saldos_doutores_{competencia}.json")
+        salvar_json(resumo, PASTA_DATA / f"resumo_pix_doutores_{competencia}.json")
+        salvar_json(erros, PASTA_DATA / f"erros_pix_doutores_{competencia}.json")
+
+    salvar_json(registros_existentes, ARQUIVO_PIX)
+    salvar_json(erros_existentes, ARQUIVO_ERROS)
+    salvar_json(saldos_existentes, ARQUIVO_SALDOS)
+    salvar_json(resumos_existentes, ARQUIVO_RESUMO)
 
     print(f"[OK] Arquivo gerado: {ARQUIVO_PIX}")
     print(f"[OK] Arquivo gerado: {ARQUIVO_SALDOS}")
     print(f"[OK] Arquivo gerado: {ARQUIVO_RESUMO}")
+    print(f"[OK] Arquivo gerado: {ARQUIVO_ERROS}")
 
 
 if __name__ == "__main__":
