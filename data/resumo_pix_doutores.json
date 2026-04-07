@@ -6,5 +6,67 @@
   "valor_total_descontado": 0,
   "valor_total_pendente": 0,
   "por_unidade": [],
-  "por_doutor": []
+  "por_doutor": [],
+  "2026-04": {
+    "competencia": "2026-04",
+    "gerado_em": "2026-04-07T15:33:16.627683",
+    "quantidade_total": 38,
+    "valor_total": 4877.0,
+    "valor_total_descontado": 3964.0,
+    "valor_total_pendente": 913.0,
+    "por_unidade": [
+      {
+        "unidade": "Caxias",
+        "quantidade": 18,
+        "valor": 2034.0
+      },
+      {
+        "unidade": "Farroupilha",
+        "quantidade": 2,
+        "valor": 205.0
+      },
+      {
+        "unidade": "FloresDaCunha",
+        "quantidade": 5,
+        "valor": 913.0
+      },
+      {
+        "unidade": "Soledade",
+        "quantidade": 13,
+        "valor": 1725.0
+      }
+    ],
+    "por_doutor": [
+      {
+        "doutor": "Adriele da Silva",
+        "quantidade": 1,
+        "valor_descontado": 85.0
+      },
+      {
+        "doutor": "Cristian Pressi",
+        "quantidade": 13,
+        "valor_descontado": 1725.0
+      },
+      {
+        "doutor": "Dionathan Pohlmann",
+        "quantidade": 5,
+        "valor_descontado": 0.0
+      },
+      {
+        "doutor": "Franciele Pedrotti",
+        "quantidade": 5,
+        "valor_descontado": 651.0
+      },
+      {
+        "doutor": "Nelson Vaccari",
+        "quantidade": 1,
+        "valor_descontado": 195.0
+      },
+      {
+        "doutor": "Tamara Macanan",
+        "quantidade": 13,
+        "valor_descontado": 1308.0
+      }
+    ]
+  }
 }
