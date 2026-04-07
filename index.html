@@ -7,10 +7,13 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+  <!-- LOGIN -->
   <div id="authScreen" class="auth-screen">
     <div class="auth-card">
       <h1>Entrar</h1>
-      <p class="auth-subtitle">Use seu e-mail autorizado. No primeiro acesso, clique em “Criar acesso”.</p>
+      <p class="auth-subtitle">
+        Use seu e-mail autorizado. No primeiro acesso, clique em “Criar acesso”.
+      </p>
 
       <form id="loginForm" class="auth-form">
         <label for="email">E-mail</label>
@@ -33,6 +36,7 @@
     </div>
   </div>
 
+  <!-- APP -->
   <div id="appRoot" class="layout hidden">
     <aside class="sidebar">
       <div class="brand">
@@ -71,11 +75,12 @@
     </aside>
 
     <main class="main">
+      <!-- DASHBOARD -->
       <section id="dashboardView">
         <header class="hero">
           <div>
-            <h2 id="tituloDashboard">PIX Doutores do Mês</h2>
-            <p id="subtituloDashboard">Lista de lançamentos do período selecionado</p>
+            <h2 id="tituloDashboard">PIX Doutores</h2>
+            <p id="subtituloDashboard">Lista mensal de PIX Doutores com alertas de limite</p>
           </div>
 
           <div class="hero-badges">
@@ -102,20 +107,18 @@
               <p>Utilização igual ou acima de 50%</p>
             </div>
           </div>
+
           <div class="table-wrap">
             <table>
-<tr>
-  <th>Nome</th>
-  <th>Crédito base</th>
-  <th>Crédito inicial</th>
-  <th>Utilizado</th>
-  <th>Saldo</th>
-  <th>Chave Pix</th>
-  <th>Ativo</th>
-  <th>Observação</th>
-  <th>E-mail que salvou</th>
-  <th>Ações</th>
-</tr>          
+              <thead>
+                <tr>
+                  <th>Doutor</th>
+                  <th>Crédito inicial</th>
+                  <th>Utilizado</th>
+                  <th>Saldo</th>
+                  <th>% utilizado</th>
+                  <th>Status</th>
+                </tr>
               </thead>
               <tbody id="tabelaAtencao"></tbody>
             </table>
@@ -129,6 +132,7 @@
               <p>Utilização igual ou acima de 100%</p>
             </div>
           </div>
+
           <div class="table-wrap">
             <table>
               <thead>
@@ -153,6 +157,7 @@
               <p>Somente lançamentos do período e cidade selecionados</p>
             </div>
           </div>
+
           <div class="table-wrap">
             <table>
               <thead>
@@ -172,11 +177,12 @@
         </section>
       </section>
 
+      <!-- ADMIN -->
       <section id="adminView" class="hidden">
         <header class="hero">
           <div>
             <h2>Administração</h2>
-            <p>Cadastro e manutenção dos doutores</p>
+            <p>Cadastro e manutenção dos doutores por competência</p>
           </div>
         </header>
 
@@ -184,12 +190,13 @@
           <div class="panel-head">
             <div>
               <h3>Novo Doutor</h3>
+              <p>Adicionar novo doutor na base</p>
             </div>
           </div>
 
           <div class="admin-form-grid">
             <input id="novoNome" type="text" placeholder="Nome do doutor" />
-            <input id="novoCredito" type="number" step="0.01" placeholder="Crédito" />
+            <input id="novoCredito" type="number" step="0.01" placeholder="Crédito base" />
             <input id="novaPixKey" type="text" placeholder="Chave Pix" />
             <select id="novoAtivo">
               <option value="true">Ativo</option>
@@ -208,6 +215,7 @@
           <div class="panel-head">
             <div>
               <h3>Doutores cadastrados</h3>
+              <p>Edição vinculada à competência selecionada no filtro</p>
             </div>
           </div>
 
@@ -216,10 +224,13 @@
               <thead>
                 <tr>
                   <th>Nome</th>
-                  <th>Crédito</th>
+                  <th>Crédito base</th>
+                  <th>Crédito inicial</th>
+                  <th>Utilizado</th>
+                  <th>Saldo</th>
                   <th>Chave Pix</th>
                   <th>Ativo</th>
-                  <th>Última edição</th>
+                  <th>Observação</th>
                   <th>E-mail que salvou</th>
                   <th>Ações</th>
                 </tr>
