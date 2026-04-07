@@ -29,18 +29,18 @@ def salvar_json(dados: Any, caminho: Path) -> None:
 
 
 def gerar_meses_ano(ano: int) -> List[str]:
-    return [f"{ano}-{mes:02d}" for mes in range(1, 13)]
+    hoje = date.today()
+    mes_final = hoje.month if hoje.year == ano else 12
+    return [f"{ano}-{mes:02d}" for mes in range(1, mes_final + 1)]
 
 
 def normalizar_competencia(valor: Any) -> str:
     texto = str(valor or "").strip()
     if not texto:
         return ""
-
     partes = texto.split("-")
     if len(partes) == 2 and partes[0].isdigit() and partes[1].isdigit():
         return f"{int(partes[0]):04d}-{int(partes[1]):02d}"
-
     return texto
 
 
@@ -55,13 +55,11 @@ def agrupar_por_competencia(registros: List[Dict[str, Any]], meses: List[str]) -
 
 def garantir_dict_por_mes(valor: Any, meses: List[str], default_factory):
     saida = {mes: default_factory() for mes in meses}
-
     if isinstance(valor, dict):
         for chave, conteudo in valor.items():
             competencia = normalizar_competencia(chave)
             if competencia in saida:
                 saida[competencia] = conteudo
-
     return saida
 
 
@@ -75,31 +73,11 @@ def obter_competencia_padrao(
     if hoje.year == ano and registros_por_competencia.get(atual):
         return atual
 
-    meses_com_dado = sorted([
-        mes for mes, itens in registros_por_competencia.items()
-        if itens
-    ])
-
+    meses_com_dado = sorted([mes for mes, itens in registros_por_competencia.items() if itens])
     if meses_com_dado:
         return meses_com_dado[-1]
 
-    if hoje.year == ano:
-        return atual
-
-    return f"{ano}-12"
-
-
-def resumo_vazio(mes: str) -> Dict[str, Any]:
-    return {
-        "competencia": mes,
-        "gerado_em": None,
-        "quantidade_total": 0,
-        "valor_total": 0,
-        "valor_total_descontado": 0,
-        "valor_total_pendente": 0,
-        "por_unidade": [],
-        "por_doutor": [],
-    }
+    return atual if hoje.year == ano else f"{ano}-12"
 
 
 def main() -> None:
@@ -110,7 +88,6 @@ def main() -> None:
 
     if not isinstance(registros, list):
         registros = []
-
     if not isinstance(erros, list):
         erros = []
 
@@ -121,17 +98,7 @@ def main() -> None:
     saldos_por_competencia = garantir_dict_por_mes(saldos_brutos, meses_disponiveis, list)
     resumos_por_competencia = garantir_dict_por_mes(resumos_brutos, meses_disponiveis, dict)
 
-    for mes in meses_disponiveis:
-        if not isinstance(saldos_por_competencia[mes], list):
-            saldos_por_competencia[mes] = []
-
-        if not isinstance(resumos_por_competencia[mes], dict) or not resumos_por_competencia[mes]:
-            resumos_por_competencia[mes] = resumo_vazio(mes)
-
-    competencia_padrao = obter_competencia_padrao(
-        ANO_REFERENCIA,
-        registros_por_competencia
-    )
+    competencia_padrao = obter_competencia_padrao(ANO_REFERENCIA, registros_por_competencia)
 
     dashboard = {
         "status": "ok",
