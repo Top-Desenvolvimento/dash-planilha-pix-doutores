@@ -18,7 +18,13 @@
     "2026-12"
   ],
   "competencia_padrao": "2026-04",
-  "registros": [],
+  "registros": [
+    {
+      "unidade": "Farroupilha",
+      "erro": "Menu Finanças não encontrado.",
+      "coletado_em": "2026-04-07T10:43:22.920274"
+    }
+  ],
   "erros": [],
   "registros_por_competencia": {
     "2026-01": [],
