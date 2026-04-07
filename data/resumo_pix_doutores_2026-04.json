@@ -1,10 +1,10 @@
 {
   "competencia": "2026-04",
-  "gerado_em": "2026-04-07T21:15:49.203482",
-  "quantidade_total": 66,
-  "valor_total": 8339.0,
-  "valor_total_descontado": 2570.0,
-  "valor_total_pendente": 5769.0,
+  "gerado_em": "2026-04-07T21:59:08.787664",
+  "quantidade_total": 76,
+  "valor_total": 9813.0,
+  "valor_total_descontado": 2698.0,
+  "valor_total_pendente": 7115.0,
   "por_unidade": [
     {
       "unidade": "Caxias",
@@ -13,8 +13,8 @@
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 7,
-      "valor": 861.0
+      "quantidade": 10,
+      "valor": 1372.0
     },
     {
       "unidade": "FloresDaCunha",
@@ -23,24 +23,24 @@
     },
     {
       "unidade": "Garibaldi",
-      "quantidade": 6,
-      "valor": 779.0
+      "quantidade": 9,
+      "valor": 1152.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 20,
-      "valor": 2497.0
+      "quantidade": 24,
+      "valor": 3087.0
     }
   ],
   "por_doutor": [
     {
       "doutor": "Adriele da Silva",
-      "quantidade": 3,
-      "valor_descontado": 257.0
+      "quantidade": 4,
+      "valor_descontado": 458.0
     },
     {
       "doutor": "Cristian Pressi",
-      "quantidade": 20,
+      "quantidade": 22,
       "valor_descontado": 0.0
     },
     {
@@ -55,8 +55,13 @@
     },
     {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 7,
-      "valor_descontado": 855.0
+      "quantidade": 9,
+      "valor_descontado": 1165.0
+    },
+    {
+      "doutor": "Gabrielli Fabonato",
+      "quantidade": 2,
+      "valor_descontado": 390.0
     },
     {
       "doutor": "Nelson Vaccari",
@@ -65,8 +70,8 @@
     },
     {
       "doutor": "Sofie Owens",
-      "quantidade": 6,
-      "valor_descontado": 779.0
+      "quantidade": 9,
+      "valor_descontado": 6.0
     },
     {
       "doutor": "Tamara Macanan",
