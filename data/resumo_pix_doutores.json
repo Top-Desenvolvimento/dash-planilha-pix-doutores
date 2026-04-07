@@ -9,11 +9,11 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-07T19:48:40.333638",
-    "quantidade_total": 57,
-    "valor_total": 7253.0,
+    "gerado_em": "2026-04-07T20:31:36.894348",
+    "quantidade_total": 60,
+    "valor_total": 7616.0,
     "valor_total_descontado": 2207.0,
-    "valor_total_pendente": 5046.0,
+    "valor_total_pendente": 5409.0,
     "por_unidade": [
       {
         "unidade": "Caxias",
@@ -37,8 +37,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 16,
-        "valor": 2035.0
+        "quantidade": 19,
+        "valor": 2398.0
       }
     ],
     "por_doutor": [
@@ -49,7 +49,7 @@
       },
       {
         "doutor": "Cristian Pressi",
-        "quantidade": 16,
+        "quantidade": 19,
         "valor_descontado": 0.0
       },
       {
