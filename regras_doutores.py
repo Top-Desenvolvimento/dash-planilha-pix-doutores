@@ -19,6 +19,11 @@ DATA_DIR = Path("data")
 ARQ_DOUTORES_LOCAL = DATA_DIR / "doutores_config_local.json"
 ARQ_SALDOS_LOCAL = DATA_DIR / "doutores_saldos_mensais_local.json"
 
+# Ajuste principal:
+# False = cada mês começa do crédito base cadastrado
+# True = herda o crédito final do mês anterior
+HERDAR_SALDO_MES_ANTERIOR = False
+
 
 def normalizar_nome(nome: str) -> str:
     nome = (nome or "").strip().lower()
@@ -30,7 +35,7 @@ def normalizar_nome(nome: str) -> str:
 
 def carregar_json(caminho: Path, padrao: Any) -> Any:
     if not caminho.exists():
-        return padrao
+      return padrao
     with open(caminho, "r", encoding="utf-8") as f:
         return json.load(f)
 
@@ -197,7 +202,7 @@ def inicializar_saldos_competencia(competencia: str, competencia_anterior: Optio
         anterior = saldo_anterior_por_doutor.get(doutor["id"])
         credito_inicial = float(doutor["credito"] or 0)
 
-        if anterior:
+        if HERDAR_SALDO_MES_ANTERIOR and anterior:
             credito_inicial = float(anterior.get("credito_final") or 0)
 
         payload.append({
