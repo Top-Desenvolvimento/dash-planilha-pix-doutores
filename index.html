@@ -56,27 +56,29 @@
         </div>
       </section>
 
-     <section id="filtrosSidebar" class="sidebar-card">
-  <h2>Filtros</h2>
+      <section id="filtrosSidebar" class="sidebar-card">
+        <h2>Filtros</h2>
 
-  <label for="filtroMes">Mês</label>
-  <select id="filtroMes"></select>
+        <label for="filtroMes">Mês</label>
+        <select id="filtroMes"></select>
 
-  <label for="filtroCidade">Cidade</label>
-  <select id="filtroCidade">
-    <option value="">Todas</option>
-  </select>
+        <label for="filtroCidade">Cidade</label>
+        <select id="filtroCidade">
+          <option value="">Todas</option>
+        </select>
 
-  <label for="filtroDoutor">Doutor</label>
-  <select id="filtroDoutor">
-    <option value="">Todos</option>
-  </select>
+        <label for="filtroDoutor">Doutor</label>
+        <select id="filtroDoutor">
+          <option value="">Todos</option>
+        </select>
 
-  <div class="sidebar-actions">
-    <button id="btnLimpar" class="btn btn-secondary">Limpar filtros</button>
-    <button id="btnExportar" class="btn btn-primary">Exportar CSV</button>
-  </div>
-</section>
+        <div class="sidebar-actions">
+          <button id="btnLimpar" class="btn btn-secondary">Limpar filtros</button>
+          <button id="btnExportar" class="btn btn-primary">Exportar CSV</button>
+        </div>
+      </section>
+    </aside>
+
     <main class="main">
       <!-- DASHBOARD -->
       <section id="dashboardView">
@@ -106,30 +108,31 @@
         <section class="panel">
           <div class="panel-head">
             <div>
-              <section class="panel">
-  <div class="panel-head">
-    <div>
-      <h3>Resumo dos doutores</h3>
-      <p>Todos os doutores da competência, mesmo sem desconto no mês</p>
-    </div>
-  </div>
+              <h3>Resumo dos doutores</h3>
+              <p>Todos os doutores da competência, mesmo sem desconto no mês</p>
+            </div>
+          </div>
 
-  <div class="table-wrap">
-    <table>
-      <thead>
-        <tr>
-          <th>Doutor</th>
-          <th>Crédito inicial</th>
-          <th>Utilizado</th>
-          <th>Saldo</th>
-          <th>% utilizado</th>
-          <th>Status</th>
-        </tr>
-      </thead>
-      <tbody id="tabelaResumoDoutores"></tbody>
-    </table>
-  </div>
-</section>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Doutor</th>
+                  <th>Crédito inicial</th>
+                  <th>Utilizado</th>
+                  <th>Saldo</th>
+                  <th>% utilizado</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="tabelaResumoDoutores"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <div>
               <h3>Doutores em atenção</h3>
               <p>Utilização igual ou acima de 50%</p>
             </div>
@@ -258,7 +261,7 @@
                   <th>Chave Pix</th>
                   <th>Ativo</th>
                   <th>Observação</th>
-                  <th>E-mail que salvou</th>
+                  <th>Atualizado por</th>
                   <th>Ações</th>
                 </tr>
               </thead>
@@ -270,8 +273,6 @@
     </main>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="js/supabase-config.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>
