@@ -94,7 +94,7 @@ def carregar_doutores_config_local() -> List[Dict[str, Any]]:
             {"id": "9", "nome": "Bruno Lorenzoni", "nome_normalizado": normalizar_nome("Bruno Lorenzoni"), "credito": 0.00, "pix_key": "", "ativo": True},
             {"id": "10", "nome": "Cristian Pressi", "nome_normalizado": normalizar_nome("Cristian Pressi"), "credito": 8000.00, "pix_key": "", "ativo": True},
             {"id": "11", "nome": "Murilo Debortoli", "nome_normalizado": normalizar_nome("Murilo Debortoli"), "credito": 500.00, "pix_key": "", "ativo": True},
-            {"id": "12", "nome": "CIR.Dionathan Paim Pohlmann", "nome_normalizado": normalizar_nome("CIR.Dionathan Paim Pohlmann"), "credito": 6000.00, "pix_key": "", "ativo": True},
+            {"id": "12", "nome": "Dionathan Paim Pohlmann", "nome_normalizado": normalizar_nome("Dionathan Paim Pohlmann"), "credito": 6000.00, "pix_key": "", "ativo": True},
             {"id": "13", "nome": "Keyla Daniele", "nome_normalizado": normalizar_nome("Keyla Daniele"), "credito": 500.00, "pix_key": "", "ativo": True},
             {"id": "14", "nome": "Everlize Cipriani", "nome_normalizado": normalizar_nome("Everlize Cipriani"), "credito": 2000.00, "pix_key": "", "ativo": True},
             {"id": "15", "nome": "Fernana Sozo", "nome_normalizado": normalizar_nome("Fernana Sozo"), "credito": 1500.00, "pix_key": "", "ativo": True},
@@ -226,36 +226,48 @@ def inicializar_saldos_competencia(competencia: str, competencia_anterior: Optio
     return payload
 
 
-def montar_mapa_creditos(competencia: str, competencia_anterior: Optional[str]) -> Dict[str, Dict[str, Any]]:
+def montar_mapa_creditos(
+    competencia: str,
+    competencia_anterior: Optional[str],
+    registros_pix: List[Dict[str, Any]]  # 🔥 NOVO
+) -> Dict[str, Dict[str, Any]]:
+
     doutores = carregar_doutores_config()
     saldos = inicializar_saldos_competencia(competencia, competencia_anterior)
 
-    saldos_por_doutor = {item["doutor_id"]: item for item in saldos}
+    # 🔥 soma REAL dos PIX por doutor
+    soma_por_doutor: Dict[str, float] = {}
+
+    for item in registros_pix:
+        nome = normalizar_nome(item.get("doutor_final"))
+        valor = float(item.get("valor", 0) or 0)
+
+        if not nome:
+            continue
+
+        soma_por_doutor[nome] = soma_por_doutor.get(nome, 0) + valor
+
     mapa: Dict[str, Dict[str, Any]] = {}
 
     for doutor in doutores:
-        saldo = saldos_por_doutor.get(doutor["id"])
+        nome_norm = doutor["nome_normalizado"]
+
         credito_inicial = float(doutor["credito"] or 0)
-        utilizado = 0.0
-        credito_final = credito_inicial
 
-        if saldo:
-            credito_inicial = float(saldo.get("credito_inicial") or 0)
-            utilizado = float(saldo.get("utilizado") or 0)
-            credito_final = float(saldo.get("credito_final") or 0)
+        utilizado = round(soma_por_doutor.get(nome_norm, 0), 2)
+        credito_disponivel = round(credito_inicial - utilizado, 2)
 
-        mapa[doutor["nome_normalizado"]] = {
+        mapa[nome_norm] = {
             "id": doutor["id"],
             "nome_original": doutor["nome"],
-            "nome_normalizado": doutor["nome_normalizado"],
-            "credito_inicial": round(credito_inicial, 2),
-            "utilizado": round(utilizado, 2),
-            "credito_disponivel": round(credito_final, 2),
+            "nome_normalizado": nome_norm,
+            "credito_inicial": credito_inicial,
+            "utilizado": utilizado,
+            "credito_disponivel": credito_disponivel,
             "pix_key": doutor.get("pix_key", ""),
         }
 
     return mapa
-
 
 def aplicar_desconto(
     mapa_creditos: Dict[str, Dict[str, Any]],
