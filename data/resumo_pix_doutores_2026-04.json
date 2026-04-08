@@ -1,10 +1,10 @@
 {
   "competencia": "2026-04",
-  "gerado_em": "2026-04-08T08:27:02.022881",
-  "quantidade_total": 85,
-  "valor_total": 10930.0,
-  "valor_total_descontado": 585.0,
-  "valor_total_pendente": 10345.0,
+  "gerado_em": "2026-04-08T09:44:58.972313",
+  "quantidade_total": 61,
+  "valor_total": 7843.0,
+  "valor_total_descontado": 195.0,
+  "valor_total_pendente": 7648.0,
   "por_unidade": [
     {
       "unidade": "Caxias",
@@ -25,22 +25,12 @@
       "unidade": "Garibaldi",
       "quantidade": 12,
       "valor": 1472.0
-    },
-    {
-      "unidade": "Soledade",
-      "quantidade": 24,
-      "valor": 3087.0
     }
   ],
   "por_doutor": [
     {
       "doutor": "Adriele da Silva",
       "quantidade": 4,
-      "valor_descontado": 0.0
-    },
-    {
-      "doutor": "Cristian Pressi",
-      "quantidade": 22,
       "valor_descontado": 0.0
     },
     {
@@ -57,11 +47,6 @@
       "doutor": "Franciele Pedrotti",
       "quantidade": 9,
       "valor_descontado": 0.0
-    },
-    {
-      "doutor": "Gabrielli Fabonato",
-      "quantidade": 2,
-      "valor_descontado": 390.0
     },
     {
       "doutor": "Nelson Vaccari",
