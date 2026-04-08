@@ -1,501 +1,1022 @@
-* {
-  box-sizing: border-box;
-}
-
-:root {
-  --bg-main: #071224;
-  --bg-secondary: #0d1830;
-  --panel: rgba(19, 31, 58, 0.92);
-  --panel-2: rgba(25, 39, 73, 0.92);
-  --line: rgba(255, 255, 255, 0.08);
-  --text: #f4f7ff;
-  --muted: #aeb9d2;
-  --primary: #5f82ff;
-  --primary-2: #7396ff;
-  --success: #2bd98f;
-  --warning: #f4c84d;
-  --danger: #ff5d78;
-  --shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
-  --radius-xl: 24px;
-}
-
-html,
-body {
-  margin: 0;
-  min-height: 100%;
-  font-family: Inter, Arial, sans-serif;
-  color: var(--text);
-  background:
-    radial-gradient(circle at top right, rgba(59, 111, 255, 0.22), transparent 20%),
-    radial-gradient(circle at bottom right, rgba(32, 210, 145, 0.14), transparent 18%),
-    linear-gradient(180deg, var(--bg-secondary), var(--bg-main));
-}
-
-body {
-  min-height: 100vh;
-}
-
-.hidden {
-  display: none !important;
-}
-
-/* LOGIN */
-.auth-screen {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-}
-
-.auth-card {
-  width: 100%;
-  max-width: 540px;
-  background: linear-gradient(180deg, rgba(14, 34, 63, 0.98) 0%, rgba(6, 21, 42, 0.98) 100%);
-  border: 1px solid rgba(55, 138, 255, 0.25);
-  border-radius: 28px;
-  padding: 42px 36px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
-}
-
-.auth-card h1 {
-  font-size: 56px;
-  line-height: 1;
-  margin: 0 0 18px;
-  font-weight: 800;
-}
-
-.auth-subtitle {
-  margin: 0 0 28px;
-  font-size: 18px;
-  color: #90a7cc;
-}
-
-.auth-form {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.auth-form label {
-  font-size: 16px;
-  font-weight: 700;
-  color: #ffffff;
-  margin-top: 4px;
-}
-
-.auth-form input {
-  width: 100%;
-  height: 58px;
-  border-radius: 18px;
-  border: none;
-  background: #d9e2ee;
-  color: #111827;
-  padding: 0 18px;
-  font-size: 20px;
-  outline: none;
-}
-
-.auth-actions {
-  display: flex;
-  gap: 14px;
-  margin-top: 18px;
-}
-
-.link-button {
-  background: transparent;
-  border: 0;
-  color: #74d7ff;
-  font-size: 16px;
-  font-weight: 700;
-  cursor: pointer;
-  padding: 0;
-  margin-top: 18px;
-}
-
-.auth-message {
-  margin-top: 18px;
-  min-height: 20px;
-  color: #82f7c2;
-  font-size: 14px;
-}
-
-.auth-message.error {
-  color: #ff9cae;
-}
-
-/* DASH */
-.layout {
-  display: flex;
-  min-height: 100vh;
-  width: 100%;
-}
-
-.sidebar {
-  width: 290px;
-  min-width: 290px;
-  background: rgba(5, 12, 26, 0.9);
-  border-right: 1px solid rgba(255, 255, 255, 0.05);
-  padding: 22px;
-  position: sticky;
-  top: 0;
-  height: 100vh;
-  overflow-y: auto;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 24px;
-}
-
-.brand-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #7f9cff, #5f82ff);
-  color: #fff;
-  font-size: 22px;
-  font-weight: 800;
-  box-shadow: 0 10px 24px rgba(95, 130, 255, 0.32);
-}
-
-.brand-text h1 {
-  margin: 0;
-  font-size: 17px;
-  font-weight: 800;
-}
-
-.brand-text p {
-  margin: 4px 0 0;
-  color: var(--muted);
-  font-size: 13px;
-}
-
-.sidebar-card {
-  background: rgba(32, 42, 72, 0.72);
-  border: 1px solid var(--line);
-  border-radius: 20px;
-  padding: 18px;
-  margin-bottom: 18px;
-  backdrop-filter: blur(12px);
-  box-shadow: var(--shadow);
-}
-
-.sidebar-card h2 {
-  margin: 0 0 14px;
-  font-size: 18px;
-}
-
-.sidebar-card label {
-  display: block;
-  margin: 14px 0 8px;
-  color: var(--muted);
-  font-size: 14px;
-}
-
-select,
-input[type="text"],
-input[type="number"] {
-  width: 100%;
-  height: 46px;
-  border-radius: 14px;
-  border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.08);
-  color: var(--text);
-  padding: 0 14px;
-  outline: none;
-}
-
-select option {
-  color: #111827;
-}
+let dashboardData = null;
+let currentUser = null;
+let currentUserIsAdmin = false;
 
-.sidebar-actions {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 16px;
+function byId(id) {
+  return document.getElementById(id);
 }
 
-.btn {
-  height: 44px;
-  border: 0;
-  border-radius: 14px;
-  cursor: pointer;
-  font-weight: 700;
-  font-size: 14px;
-  transition: transform 0.15s ease, opacity 0.15s ease;
+function formatarMoeda(valor) {
+  return Number(valor || 0).toLocaleString("pt-BR", {
+    style: "currency",
+    currency: "BRL"
+  });
 }
 
-.btn:hover {
-  transform: translateY(-1px);
-  opacity: 0.96;
+function escapeHtml(valor) {
+  return String(valor ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
 }
 
-.btn-primary {
-  background: linear-gradient(135deg, var(--primary-2), var(--primary));
-  color: #fff;
-  box-shadow: 0 10px 24px rgba(95, 130, 255, 0.28);
-}
-
-.btn-secondary {
-  background: rgba(255, 255, 255, 0.08);
-  color: var(--text);
-  border: 1px solid var(--line);
-}
-
-.btn-small {
-  height: 34px;
-  padding: 0 12px;
-  font-size: 12px;
-}
-
-.main {
-  flex: 1;
-  min-width: 0;
-  padding: 28px 24px 40px;
-}
-
-.hero {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  align-items: flex-start;
-  margin-bottom: 22px;
-}
-
-.hero h2 {
-  margin: 0;
-  font-size: 34px;
-  font-weight: 800;
-}
-
-.hero p {
-  margin: 8px 0 0;
-  color: var(--muted);
-  font-size: 16px;
-}
-
-.hero-badges {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.badge {
-  border-radius: 999px;
-  padding: 10px 16px;
-  font-weight: 700;
-  font-size: 13px;
-  color: #e6eeff;
-  background: rgba(95, 130, 255, 0.16);
-  border: 1px solid rgba(95, 130, 255, 0.26);
-}
-
-.badge-muted {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 255, 255, 0.08);
-}
-
-.panel {
-  background: linear-gradient(180deg, var(--panel-2), var(--panel));
-  border: 1px solid var(--line);
-  border-radius: var(--radius-xl);
-  padding: 18px;
-  margin-bottom: 18px;
-  box-shadow: var(--shadow);
-  backdrop-filter: blur(14px);
-}
-
-.panel-head {
-  margin-bottom: 16px;
-}
-
-.panel-head h3 {
-  margin: 0;
-  font-size: 22px;
-}
-
-.panel-head p {
-  margin: 6px 0 0;
-  color: var(--muted);
-  font-size: 14px;
-}
+function formatarCompetenciaLabel(competencia) {
+  const mapa = {
+    "01": "Jan",
+    "02": "Fev",
+    "03": "Mar",
+    "04": "Abr",
+    "05": "Mai",
+    "06": "Jun",
+    "07": "Jul",
+    "08": "Ago",
+    "09": "Set",
+    "10": "Out",
+    "11": "Nov",
+    "12": "Dez"
+  };
 
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 14px;
+  const [ano, mes] = String(competencia || "").split("-");
+  return `${mapa[mes] || mes}/${ano || ""}`;
 }
 
-.stat-card {
-  border-radius: 18px;
-  border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.04);
-  padding: 16px;
+function normalizarNome(nome) {
+  return String(nome || "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
-.stat-title {
-  color: var(--muted);
-  font-size: 13px;
-  margin-bottom: 8px;
+function mostrarMensagemAuth(texto, erro = false) {
+  const el = byId("authMessage");
+  if (!el) return;
+  el.textContent = texto || "";
+  el.className = erro ? "auth-message error" : "auth-message";
 }
 
-.stat-value {
-  font-size: 26px;
-  font-weight: 800;
-  line-height: 1.1;
+function mostrarMensagemAdmin(texto, erro = false) {
+  const el = byId("adminMessage");
+  if (!el) return;
+  el.textContent = texto || "";
+  el.className = erro ? "auth-message error" : "auth-message";
 }
 
-.table-wrap {
-  overflow-x: auto;
+function mostrarTelaLogin() {
+  byId("authScreen")?.classList.remove("hidden");
+  byId("appRoot")?.classList.add("hidden");
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  min-width: 980px;
+function mostrarApp() {
+  byId("authScreen")?.classList.add("hidden");
+  byId("appRoot")?.classList.remove("hidden");
 }
 
-thead th {
-  background: rgba(255, 255, 255, 0.06);
-  color: #eef3ff;
-  text-align: left;
-  padding: 14px 12px;
-  font-size: 14px;
-  font-weight: 700;
+function mostrarDashboard() {
+  byId("dashboardView")?.classList.remove("hidden");
+  byId("adminView")?.classList.add("hidden");
+  byId("filtrosSidebar")?.classList.remove("hidden");
 }
 
-tbody td {
-  padding: 14px 12px;
-  border-top: 1px solid var(--line);
-  color: #e8edff;
-  font-size: 14px;
-  vertical-align: top;
+function mostrarAdmin() {
+  byId("dashboardView")?.classList.add("hidden");
+  byId("adminView")?.classList.remove("hidden");
+  byId("filtrosSidebar")?.classList.add("hidden");
 }
 
-tbody tr:hover {
-  background: rgba(255, 255, 255, 0.03);
-}
-
-.text-success {
-  color: #8df3c7;
-  font-weight: 700;
-}
-
-.text-warning {
-  color: #ffe18c;
-  font-weight: 700;
-}
-
-.text-danger {
-  color: #ff9eb0;
-  font-weight: 700;
-}
-
-.status-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 7px 11px;
-  border-radius: 999px;
-  font-size: 12px;
-  font-weight: 800;
-}
-
-.status-green {
-  background: rgba(43, 217, 143, 0.14);
-  color: #99ffd6;
-}
-
-.status-yellow {
-  background: rgba(244, 200, 77, 0.16);
-  color: #ffe594;
-}
-
-.status-red {
-  background: rgba(255, 93, 120, 0.16);
-  color: #ffb4c1;
-}
-
-.dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 999px;
-  display: inline-block;
-}
-
-.dot-green {
-  background: var(--success);
-}
-
-.dot-yellow {
-  background: var(--warning);
-}
-
-.dot-red {
-  background: var(--danger);
-}
-
-.empty-state {
-  text-align: center;
-  color: var(--muted);
-  padding: 24px !important;
-}
-
-.admin-form-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(160px, 1fr));
-  gap: 12px;
-}
+function getBaseAppUrl() {
+  const { origin, pathname } = window.location;
 
-@media (max-width: 1100px) {
-  .layout {
-    flex-direction: column;
+  if (pathname.endsWith("/reset.html")) {
+    return `${origin}${pathname.replace(/reset\.html$/, "")}`;
   }
 
-  .sidebar {
-    width: 100%;
-    min-width: 100%;
-    position: relative;
-    height: auto;
-    border-right: 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  if (pathname.endsWith("/index.html")) {
+    return `${origin}${pathname.replace(/index\.html$/, "")}`;
   }
 
-  .main {
-    padding: 20px;
-  }
+  return `${origin}${pathname.endsWith("/") ? pathname : `${pathname}/`}`;
+}
 
-  .hero {
-    flex-direction: column;
-    align-items: flex-start;
+function validarSupabasePronto() {
+  if (!window.supabaseClient) {
+    throw new Error("Supabase não configurado. Verifique o arquivo js/supabase-config.js.");
+  }
+  return window.supabaseClient;
+}
+
+async function validarUsuarioAutorizado() {
+  const client = validarSupabasePronto();
+  const { data, error } = await client.rpc("usuario_esta_autorizado");
+  if (error) throw error;
+  return data === true;
+}
+
+async function validarUsuarioAdmin() {
+  const client = validarSupabasePronto();
+  const { data, error } = await client.rpc("usuario_eh_admin");
+  if (error) throw error;
+  return data === true;
+}
+
+async function emailPodeCadastrar(email) {
+  const client = validarSupabasePronto();
+  const { data, error } = await client.rpc("email_pode_cadastrar", {
+    p_email: email
+  });
+  if (error) throw error;
+  return data === true;
+}
+
+async function loginSupabase(email, password) {
+  const client = validarSupabasePronto();
+
+  const { error } = await client.auth.signInWithPassword({
+    email,
+    password
+  });
+
+  if (error) throw error;
+
+  const autorizado = await validarUsuarioAutorizado();
+
+  if (!autorizado) {
+    await client.auth.signOut();
+    throw new Error("Seu usuário não está autorizado para acessar esta dashboard.");
   }
 }
 
-@media (max-width: 640px) {
-  .auth-card {
-    padding: 28px 22px;
+async function criarAcessoSupabase(email, password) {
+  const permitido = await emailPodeCadastrar(email);
+
+  if (!permitido) {
+    throw new Error("Este e-mail não está autorizado para criar acesso.");
   }
 
-  .auth-card h1 {
-    font-size: 40px;
-  }
+  const client = validarSupabasePronto();
+  const redirectTo = getBaseAppUrl();
 
-  .auth-form input {
-    font-size: 17px;
-  }
+  const { error } = await client.auth.signUp({
+    email,
+    password,
+    options: {
+      emailRedirectTo: redirectTo
+    }
+  });
 
-  .auth-actions {
-    flex-direction: column;
-  }
+  if (error) throw error;
+}
 
-  .admin-form-grid {
-    grid-template-columns: 1fr;
+async function logoutSupabase() {
+  const client = validarSupabasePronto();
+  await client.auth.signOut();
+}
+
+async function enviarRecuperacaoSenha(email) {
+  const client = validarSupabasePronto();
+  const redirectTo = `${getBaseAppUrl()}reset.html`;
+
+  const { error } = await client.auth.resetPasswordForEmail(email, {
+    redirectTo
+  });
+
+  if (error) throw error;
+}
+
+function preencherBadgeUsuario() {
+  const badge = byId("badgeUsuario");
+  if (badge) {
+    badge.textContent = currentUser?.email || "Usuário";
   }
 }
+
+function getCompetenciaAtual() {
+  return byId("filtroMes")?.value || dashboardData?.competencia_padrao || "2026-01";
+}
+
+function getCidadeAtual() {
+  return byId("filtroCidade")?.value || "";
+}
+
+function getDoutorAtual() {
+  return byId("filtroDoutor")?.value || "";
+}
+
+function getRegistrosCompetencia(competencia) {
+  if (dashboardData?.registros_por_competencia?.[competencia]) {
+    return [...dashboardData.registros_por_competencia[competencia]];
+  }
+
+  const registros = Array.isArray(dashboardData?.registros) ? dashboardData.registros : [];
+  return registros.filter(item => String(item.competencia || "") === competencia);
+}
+
+function getSaldosCompetencia(competencia) {
+  const saldos = dashboardData?.saldos_por_competencia?.[competencia];
+  return Array.isArray(saldos) ? [...saldos] : [];
+}
+
+function preencherFiltroMes() {
+  const filtroMes = byId("filtroMes");
+  if (!filtroMes) return;
+
+  const meses = dashboardData?.meses_disponiveis || [];
+  const competenciaPadrao = dashboardData?.competencia_padrao || "";
+
+  filtroMes.innerHTML = meses
+    .map(item => `<option value="${escapeHtml(item)}">${escapeHtml(formatarCompetenciaLabel(item))}</option>`)
+    .join("");
+
+  if (competenciaPadrao && meses.includes(competenciaPadrao)) {
+    filtroMes.value = competenciaPadrao;
+  } else if (meses.length) {
+    filtroMes.value = meses[0];
+  }
+}
+
+function preencherFiltroCidade() {
+  const filtroCidade = byId("filtroCidade");
+  if (!filtroCidade) return;
+
+  const cidadeSelecionada = filtroCidade.value;
+  const competencia = getCompetenciaAtual();
+  const registros = getRegistrosCompetencia(competencia);
+
+  const cidades = [...new Set(registros.map(item => item.unidade).filter(Boolean))].sort();
+
+  filtroCidade.innerHTML =
+    `<option value="">Todas</option>` +
+    cidades.map(item => `<option value="${escapeHtml(item)}">${escapeHtml(item)}</option>`).join("");
+
+  if (cidades.includes(cidadeSelecionada)) {
+    filtroCidade.value = cidadeSelecionada;
+  }
+}
+
+function preencherFiltroDoutor() {
+  const filtroDoutor = byId("filtroDoutor");
+  if (!filtroDoutor) return;
+
+  const doutorSelecionado = filtroDoutor.value;
+  const competencia = getCompetenciaAtual();
+  const registros = getRegistrosCompetencia(competencia);
+  const saldos = getSaldosCompetencia(competencia);
+
+  const nomesRegistros = registros.map(item => item.doutor_final).filter(Boolean);
+  const nomesSaldos = saldos.map(item => item.doutor).filter(Boolean);
+
+  const doutores = [...new Set([...nomesRegistros, ...nomesSaldos])].sort((a, b) =>
+    a.localeCompare(b, "pt-BR")
+  );
+
+  filtroDoutor.innerHTML =
+    `<option value="">Todos</option>` +
+    doutores.map(item => `<option value="${escapeHtml(item)}">${escapeHtml(item)}</option>`).join("");
+
+  if (doutores.includes(doutorSelecionado)) {
+    filtroDoutor.value = doutorSelecionado;
+  }
+}
+
+function getRegistrosFiltrados() {
+  const competencia = getCompetenciaAtual();
+  const cidade = getCidadeAtual();
+  const doutor = getDoutorAtual();
+
+  let registros = getRegistrosCompetencia(competencia);
+
+  if (cidade) {
+    registros = registros.filter(item => String(item.unidade || "") === cidade);
+  }
+
+  if (doutor) {
+    registros = registros.filter(item => String(item.doutor_final || "") === doutor);
+  }
+
+  return registros;
+}
+
+function getSaldosFiltrados() {
+  const competencia = getCompetenciaAtual();
+  const doutor = getDoutorAtual();
+
+  let saldos = getSaldosCompetencia(competencia);
+
+  if (doutor) {
+    saldos = saldos.filter(item => String(item.doutor || "") === doutor);
+  }
+
+  return saldos;
+}
+
+function obterPercentual(utilizado, creditoInicial) {
+  const credito = Number(creditoInicial || 0);
+  if (credito <= 0) return 0;
+  return (Number(utilizado || 0) / credito) * 100;
+}
+
+function obterStatus(percentual) {
+  if (percentual >= 100) return { classe: "status-red", texto: "Bloqueado", dot: "dot-red" };
+  if (percentual >= 50) return { classe: "status-yellow", texto: "Atenção", dot: "dot-yellow" };
+  return { classe: "status-green", texto: "Controlado", dot: "dot-green" };
+}
+
+function montarResumoDoutores(saldos) {
+  return saldos
+    .map(item => {
+      const creditoInicial = Number(item.credito_inicial || 0);
+      const utilizado = Number(item.utilizado || 0);
+      const creditoDisponivel = Number(item.credito_disponivel ?? item.credito_final ?? 0);
+      const percentual = obterPercentual(utilizado, creditoInicial);
+      const status = obterStatus(percentual);
+
+      return {
+        doutor_id: item.doutor_id,
+        doutor: item.doutor,
+        creditoInicial,
+        utilizado,
+        creditoDisponivel,
+        percentual,
+        status
+      };
+    })
+    .sort((a, b) => a.doutor.localeCompare(b.doutor, "pt-BR"));
+}
+
+function renderCards(registros) {
+  const alvo = byId("cardsResumo");
+  if (!alvo) return;
+
+  const totalLancamentos = registros.length;
+  const totalValor = registros.reduce((acc, item) => acc + Number(item.valor || 0), 0);
+  const totalDescontado = registros.reduce((acc, item) => acc + Number(item.valor_descontado || 0), 0);
+  const totalPendente = registros.reduce((acc, item) => acc + Number(item.pendente || 0), 0);
+  const totalCidades = new Set(registros.map(item => item.unidade).filter(Boolean)).size;
+
+  alvo.innerHTML = `
+    <div class="stat-card"><div class="stat-title">Lançamentos</div><div class="stat-value">${totalLancamentos}</div></div>
+    <div class="stat-card"><div class="stat-title">Valor total</div><div class="stat-value">${formatarMoeda(totalValor)}</div></div>
+    <div class="stat-card"><div class="stat-title">Descontado</div><div class="stat-value">${formatarMoeda(totalDescontado)}</div></div>
+    <div class="stat-card"><div class="stat-title">Pendente</div><div class="stat-value">${formatarMoeda(totalPendente)}</div></div>
+    <div class="stat-card"><div class="stat-title">Cidades</div><div class="stat-value">${totalCidades}</div></div>
+  `;
+}
+
+function renderTabelaResumoDoutores(saldos) {
+  const tbody = byId("tabelaResumoDoutores");
+  if (!tbody) return;
+
+  const linhas = montarResumoDoutores(saldos);
+
+  if (!linhas.length) {
+    tbody.innerHTML = `<tr><td colspan="6" class="empty-state">Sem doutores cadastrados para a competência</td></tr>`;
+    return;
+  }
+
+  tbody.innerHTML = linhas.map(item => `
+    <tr>
+      <td>${escapeHtml(item.doutor)}</td>
+      <td>${formatarMoeda(item.creditoInicial)}</td>
+      <td>${formatarMoeda(item.utilizado)}</td>
+      <td>${formatarMoeda(item.creditoDisponivel)}</td>
+      <td>${item.percentual.toFixed(1)}%</td>
+      <td><span class="status-pill ${item.status.classe}"><span class="dot ${item.status.dot}"></span>${item.status.texto}</span></td>
+    </tr>
+  `).join("");
+}
+
+function renderTabelaAtencao(saldos) {
+  const tbody = byId("tabelaAtencao");
+  if (!tbody) return;
+
+  const linhas = montarResumoDoutores(saldos).filter(item => item.percentual >= 50 && item.percentual < 100);
+
+  if (!linhas.length) {
+    tbody.innerHTML = `<tr><td colspan="6" class="empty-state">Sem doutores em atenção</td></tr>`;
+    return;
+  }
+
+  tbody.innerHTML = linhas.map(item => `
+    <tr>
+      <td>${escapeHtml(item.doutor)}</td>
+      <td>${formatarMoeda(item.creditoInicial)}</td>
+      <td>${formatarMoeda(item.utilizado)}</td>
+      <td>${formatarMoeda(item.creditoDisponivel)}</td>
+      <td>${item.percentual.toFixed(1)}%</td>
+      <td><span class="status-pill ${item.status.classe}"><span class="dot ${item.status.dot}"></span>${item.status.texto}</span></td>
+    </tr>
+  `).join("");
+}
+
+function renderTabelaBloqueados(saldos) {
+  const tbody = byId("tabelaBloqueados");
+  if (!tbody) return;
+
+  const linhas = montarResumoDoutores(saldos).filter(item => item.percentual >= 100);
+
+  if (!linhas.length) {
+    tbody.innerHTML = `<tr><td colspan="6" class="empty-state">Sem doutores bloqueados</td></tr>`;
+    return;
+  }
+
+  tbody.innerHTML = linhas.map(item => `
+    <tr>
+      <td>${escapeHtml(item.doutor)}</td>
+      <td>${formatarMoeda(item.creditoInicial)}</td>
+      <td>${formatarMoeda(item.utilizado)}</td>
+      <td>${formatarMoeda(item.creditoDisponivel)}</td>
+      <td>${item.percentual.toFixed(1)}%</td>
+      <td><span class="status-pill ${item.status.classe}"><span class="dot ${item.status.dot}"></span>${item.status.texto}</span></td>
+    </tr>
+  `).join("");
+}
+
+function renderTabelaPixMes(registros) {
+  const tbody = byId("tabelaPixMes");
+  if (!tbody) return;
+
+  if (!registros.length) {
+    tbody.innerHTML = `<tr><td colspan="7" class="empty-state">Sem dados</td></tr>`;
+    return;
+  }
+
+  tbody.innerHTML = registros
+    .slice()
+    .sort((a, b) => String(b.data || "").localeCompare(String(a.data || "")))
+    .map(item => `
+      <tr>
+        <td>${escapeHtml(item.data)}</td>
+        <td>${escapeHtml(item.unidade)}</td>
+        <td>${escapeHtml(item.doutor_final || "Sem responsável fiscal")}</td>
+        <td>${escapeHtml(item.paciente)}</td>
+        <td>${formatarMoeda(item.valor)}</td>
+        <td>${formatarMoeda(item.valor_descontado)}</td>
+        <td class="${Number(item.pendente || 0) > 0 ? "text-warning" : "text-success"}">${formatarMoeda(item.pendente)}</td>
+      </tr>
+    `).join("");
+}
+
+function atualizarDashboard() {
+  const competencia = getCompetenciaAtual();
+  const registros = getRegistrosFiltrados();
+  const saldos = getSaldosFiltrados();
+
+  renderCards(registros);
+  renderTabelaResumoDoutores(saldos);
+  renderTabelaAtencao(saldos);
+  renderTabelaBloqueados(saldos);
+  renderTabelaPixMes(registros);
+
+  const badgeCompetencia = byId("badgeCompetencia");
+  if (badgeCompetencia) {
+    badgeCompetencia.textContent = formatarCompetenciaLabel(competencia);
+  }
+}
+
+function exportarCSV() {
+  const competencia = getCompetenciaAtual();
+  const registros = getRegistrosFiltrados();
+
+  if (!registros.length) {
+    alert("Não há dados para exportar.");
+    return;
+  }
+
+  const headers = [
+    "competencia",
+    "data",
+    "cidade",
+    "responsavel_fiscal",
+    "doutor_final",
+    "paciente",
+    "valor",
+    "valor_descontado",
+    "pendente"
+  ];
+
+  const rows = registros.map(item => [
+    item.competencia ?? "",
+    item.data ?? "",
+    item.unidade ?? "",
+    item.responsavel_fiscal_lido ?? "",
+    item.doutor_final ?? "",
+    item.paciente ?? "",
+    item.valor ?? 0,
+    item.valor_descontado ?? 0,
+    item.pendente ?? 0
+  ]);
+
+  const csv = [headers, ...rows]
+    .map(row => row.map(value => `"${String(value).replace(/"/g, '""')}"`).join(";"))
+    .join("\n");
+
+  const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = `pix_doutores_${competencia}.csv`;
+  link.click();
+  URL.revokeObjectURL(url);
+}
+
+async function carregarDashboardInterno() {
+  const resposta = await fetch("./data/dashboard_data.json", { cache: "no-store" });
+
+  if (!resposta.ok) {
+    throw new Error(`Arquivo não encontrado: ${resposta.status}`);
+  }
+
+  dashboardData = await resposta.json();
+
+  if (!dashboardData || typeof dashboardData !== "object") {
+    throw new Error("dashboard_data.json inválido.");
+  }
+
+  if (byId("tituloDashboard")) {
+    byId("tituloDashboard").textContent = dashboardData.titulo_dashboard || "PIX Doutores";
+  }
+
+  if (byId("subtituloDashboard")) {
+    byId("subtituloDashboard").textContent = "Lista mensal de PIX Doutores com alertas de limite";
+  }
+
+  if (byId("badgeArquivo")) {
+    byId("badgeArquivo").textContent = dashboardData?.arquivo_origem
+      ? `Base: ${dashboardData.arquivo_origem}`
+      : "Base não informada";
+  }
+
+  preencherBadgeUsuario();
+  preencherFiltroMes();
+  preencherFiltroCidade();
+  preencherFiltroDoutor();
+  atualizarDashboard();
+}
+
+async function carregarDoutoresAdmin() {
+  const tbody = byId("tabelaAdminDoutores");
+  if (!tbody) return;
+
+  tbody.innerHTML = `<tr><td colspan="10" class="empty-state">Carregando...</td></tr>`;
+
+  const competencia = getCompetenciaAtual();
+  const client = validarSupabasePronto();
+
+  try {
+    const { data: doutores, error: errorDoutores } = await client
+      .from("doutores_config")
+      .select("*")
+      .order("nome", { ascending: true });
+
+    if (errorDoutores) throw errorDoutores;
+
+    const { data: saldos, error: errorSaldos } = await client
+      .from("doutores_saldos_mensais")
+      .select("*")
+      .eq("competencia", competencia);
+
+    if (errorSaldos) throw errorSaldos;
+
+    const saldoPorDoutor = {};
+    for (const item of saldos || []) {
+      saldoPorDoutor[item.doutor_id] = item;
+    }
+
+    if (!doutores || !doutores.length) {
+      tbody.innerHTML = `<tr><td colspan="10" class="empty-state">Nenhum doutor cadastrado</td></tr>`;
+      return;
+    }
+
+    tbody.innerHTML = doutores.map(item => {
+      const saldo = saldoPorDoutor[item.id] || {};
+
+      return `
+        <tr>
+          <td><input data-id="${item.id}" data-field="nome" type="text" value="${escapeHtml(item.nome)}" /></td>
+          <td><input data-id="${item.id}" data-field="credito" type="number" step="0.01" value="${Number(item.credito || 0)}" /></td>
+          <td>${formatarMoeda(saldo.credito_inicial ?? item.credito ?? 0)}</td>
+          <td>${formatarMoeda(saldo.utilizado ?? 0)}</td>
+          <td>${formatarMoeda(saldo.credito_final ?? item.credito ?? 0)}</td>
+          <td><input data-id="${item.id}" data-field="pix_key" type="text" value="${escapeHtml(item.pix_key || "")}" /></td>
+          <td>
+            <select data-id="${item.id}" data-field="ativo">
+              <option value="true" ${item.ativo ? "selected" : ""}>Ativo</option>
+              <option value="false" ${!item.ativo ? "selected" : ""}>Inativo</option>
+            </select>
+          </td>
+          <td><input data-id="${item.id}" data-field="observacao" type="text" value="${escapeHtml(saldo.observacao || "")}" /></td>
+          <td>${escapeHtml(saldo.updated_by_email || item.updated_by_email || "")}</td>
+          <td>
+            <button class="btn btn-primary btn-small" onclick="salvarDoutor('${item.id}')">Salvar</button>
+            <button class="btn btn-secondary btn-small" onclick="removerDoutor('${item.id}')">Excluir</button>
+          </td>
+        </tr>
+      `;
+    }).join("");
+  } catch (err) {
+    console.error(err);
+    tbody.innerHTML = `<tr><td colspan="10" class="empty-state">Erro ao carregar doutores</td></tr>`;
+  }
+}
+
+async function salvarDoutor(id) {
+  try {
+    mostrarMensagemAdmin("");
+    const competencia = getCompetenciaAtual();
+    const client = validarSupabasePronto();
+
+    const nome = document.querySelector(`[data-id="${id}"][data-field="nome"]`)?.value.trim() || "";
+    const credito = parseFloat(document.querySelector(`[data-id="${id}"][data-field="credito"]`)?.value || "0");
+    const pixKey = document.querySelector(`[data-id="${id}"][data-field="pix_key"]`)?.value.trim() || "";
+    const ativo = document.querySelector(`[data-id="${id}"][data-field="ativo"]`)?.value === "true";
+    const observacao = document.querySelector(`[data-id="${id}"][data-field="observacao"]`)?.value.trim() || null;
+
+    if (!nome) {
+      mostrarMensagemAdmin("Nome é obrigatório.", true);
+      return;
+    }
+
+    const { data: userData } = await client.auth.getUser();
+    const emailAtual = userData?.user?.email || null;
+
+    const { error: errorDoutor } = await client
+      .from("doutores_config")
+      .update({
+        nome,
+        nome_normalizado: normalizarNome(nome),
+        credito,
+        pix_key: pixKey || null,
+        ativo,
+        updated_by_email: emailAtual
+      })
+      .eq("id", id);
+
+    if (errorDoutor) throw errorDoutor;
+
+    const { data: saldoExistente, error: errorBuscaSaldo } = await client
+      .from("doutores_saldos_mensais")
+      .select("*")
+      .eq("competencia", competencia)
+      .eq("doutor_id", id)
+      .maybeSingle();
+
+    if (errorBuscaSaldo) throw errorBuscaSaldo;
+
+    if (saldoExistente) {
+      const { error: errorSaldo } = await client
+        .from("doutores_saldos_mensais")
+        .update({
+          observacao,
+          updated_by_email: emailAtual
+        })
+        .eq("id", saldoExistente.id);
+
+      if (errorSaldo) throw errorSaldo;
+    } else {
+      const { error: errorInsertSaldo } = await client
+        .from("doutores_saldos_mensais")
+        .insert({
+          competencia,
+          doutor_id: id,
+          credito_inicial: credito,
+          utilizado: 0,
+          credito_final: credito,
+          observacao,
+          updated_by_email: emailAtual
+        });
+
+      if (errorInsertSaldo) throw errorInsertSaldo;
+    }
+
+    mostrarMensagemAdmin("Doutor salvo com sucesso.");
+    await carregarDoutoresAdmin();
+    await carregarDashboardInterno();
+  } catch (err) {
+    console.error(err);
+    mostrarMensagemAdmin("Erro ao salvar doutor.", true);
+  }
+}
+
+async function removerDoutor(id) {
+  if (!confirm("Tem certeza que deseja excluir este doutor?")) return;
+
+  try {
+    const client = validarSupabasePronto();
+
+    const { error } = await client
+      .from("doutores_config")
+      .delete()
+      .eq("id", id);
+
+    if (error) throw error;
+
+    mostrarMensagemAdmin("Doutor removido com sucesso.");
+    await carregarDoutoresAdmin();
+  } catch (err) {
+    console.error(err);
+    mostrarMensagemAdmin("Erro ao remover doutor.", true);
+  }
+}
+
+async function adicionarDoutor() {
+  try {
+    mostrarMensagemAdmin("");
+    const client = validarSupabasePronto();
+
+    const nome = byId("novoNome")?.value.trim() || "";
+    const credito = parseFloat(byId("novoCredito")?.value || "0");
+    const pixKey = byId("novaPixKey")?.value.trim() || "";
+    const ativo = byId("novoAtivo")?.value === "true";
+
+    if (!nome) {
+      mostrarMensagemAdmin("Informe o nome do doutor.", true);
+      return;
+    }
+
+    const { data: userData } = await client.auth.getUser();
+    const emailAtual = userData?.user?.email || null;
+
+    const { data: novoDoutor, error } = await client
+      .from("doutores_config")
+      .insert({
+        nome,
+        nome_normalizado: normalizarNome(nome),
+        credito,
+        pix_key: pixKey || null,
+        ativo,
+        updated_by_email: emailAtual
+      })
+      .select()
+      .single();
+
+    if (error) throw error;
+
+    const competencia = getCompetenciaAtual();
+
+    const { error: errorSaldo } = await client
+      .from("doutores_saldos_mensais")
+      .insert({
+        competencia,
+        doutor_id: novoDoutor.id,
+        credito_inicial: credito,
+        utilizado: 0,
+        credito_final: credito,
+        observacao: null,
+        updated_by_email: emailAtual
+      });
+
+    if (errorSaldo) throw errorSaldo;
+
+    byId("novoNome").value = "";
+    byId("novoCredito").value = "";
+    byId("novaPixKey").value = "";
+    byId("novoAtivo").value = "true";
+
+    mostrarMensagemAdmin("Doutor adicionado com sucesso.");
+    await carregarDoutoresAdmin();
+    await carregarDashboardInterno();
+  } catch (err) {
+    console.error(err);
+    mostrarMensagemAdmin("Erro ao adicionar doutor.", true);
+  }
+}
+
+async function iniciarAplicacao() {
+  try {
+    if (!window.supabaseClient) {
+      mostrarTelaLogin();
+      mostrarMensagemAuth("Supabase não configurado. Verifique js/supabase-config.js.", true);
+      return;
+    }
+
+    const client = validarSupabasePronto();
+    const { data, error } = await client.auth.getSession();
+
+    if (error) throw error;
+
+    const session = data?.session || null;
+
+    if (!session) {
+      mostrarTelaLogin();
+      return;
+    }
+
+    const autorizado = await validarUsuarioAutorizado();
+
+    if (!autorizado) {
+      await client.auth.signOut();
+      mostrarTelaLogin();
+      mostrarMensagemAuth("Usuário sem permissão de acesso.", true);
+      return;
+    }
+
+    currentUser = session.user;
+    currentUserIsAdmin = await validarUsuarioAdmin();
+
+    if (currentUserIsAdmin) {
+      byId("btnTabAdmin")?.classList.remove("hidden");
+    } else {
+      byId("btnTabAdmin")?.classList.add("hidden");
+    }
+
+    mostrarApp();
+    mostrarDashboard();
+    preencherBadgeUsuario();
+
+    try {
+      await carregarDashboardInterno();
+    } catch (errDashboard) {
+      console.error("Erro ao carregar dashboard:", errDashboard);
+
+      const titulo = byId("tituloDashboard");
+      const subtitulo = byId("subtituloDashboard");
+      const cards = byId("cardsResumo");
+      const tabelaResumo = byId("tabelaResumoDoutores");
+      const tabelaAtencao = byId("tabelaAtencao");
+      const tabelaBloqueados = byId("tabelaBloqueados");
+      const tabelaPixMes = byId("tabelaPixMes");
+
+      if (titulo) titulo.textContent = "PIX Doutores";
+      if (subtitulo) subtitulo.textContent = "Erro ao carregar os dados da dashboard.";
+
+      if (cards) {
+        cards.innerHTML = `
+          <div class="stat-card">
+            <div class="stat-title">Status</div>
+            <div class="stat-value">Falha ao carregar data/dashboard_data.json</div>
+          </div>
+        `;
+      }
+
+      if (tabelaResumo) tabelaResumo.innerHTML = `<tr><td colspan="6" class="empty-state">Erro ao carregar dados</td></tr>`;
+      if (tabelaAtencao) tabelaAtencao.innerHTML = `<tr><td colspan="6" class="empty-state">Erro ao carregar dados</td></tr>`;
+      if (tabelaBloqueados) tabelaBloqueados.innerHTML = `<tr><td colspan="6" class="empty-state">Erro ao carregar dados</td></tr>`;
+      if (tabelaPixMes) tabelaPixMes.innerHTML = `<tr><td colspan="7" class="empty-state">Erro ao carregar dados</td></tr>`;
+    }
+  } catch (erro) {
+    console.error("Erro ao iniciar app:", erro);
+    mostrarTelaLogin();
+    mostrarMensagemAuth(erro.message || "Erro ao validar acesso.", true);
+  }
+}
+
+byId("loginForm")?.addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+  const email = byId("email")?.value.trim() || "";
+  const password = byId("password")?.value.trim() || "";
+
+  mostrarMensagemAuth("");
+
+  if (!email || !password) {
+    mostrarMensagemAuth("Preencha e-mail e senha.", true);
+    return;
+  }
+
+  try {
+    await loginSupabase(email, password);
+
+    const client = validarSupabasePronto();
+    const { data } = await client.auth.getUser();
+    currentUser = data?.user || null;
+    currentUserIsAdmin = await validarUsuarioAdmin();
+
+    if (currentUserIsAdmin) {
+      byId("btnTabAdmin")?.classList.remove("hidden");
+    } else {
+      byId("btnTabAdmin")?.classList.add("hidden");
+    }
+
+    mostrarApp();
+    mostrarDashboard();
+    preencherBadgeUsuario();
+
+    try {
+      await carregarDashboardInterno();
+    } catch (errDashboard) {
+      console.error("Erro ao carregar dashboard após login:", errDashboard);
+      mostrarApp();
+      mostrarDashboard();
+      mostrarMensagemAuth("");
+    }
+  } catch (erro) {
+    console.error(erro);
+    mostrarMensagemAuth(erro.message || "Não foi possível entrar.", true);
+  }
+});
+
+byId("btnCriarAcesso")?.addEventListener("click", async () => {
+  const email = byId("email")?.value.trim() || "";
+  const password = byId("password")?.value.trim() || "";
+
+  mostrarMensagemAuth("");
+
+  if (!email || !password) {
+    mostrarMensagemAuth("Preencha e-mail e senha para criar o acesso.", true);
+    return;
+  }
+
+  try {
+    await criarAcessoSupabase(email, password);
+    mostrarMensagemAuth("Acesso criado com sucesso. Confira seu e-mail.");
+  } catch (erro) {
+    console.error(erro);
+    mostrarMensagemAuth(erro.message || "Não foi possível criar o acesso.", true);
+  }
+});
+
+byId("btnForgotPassword")?.addEventListener("click", async () => {
+  const email = byId("email")?.value.trim() || "";
+
+  if (!email) {
+    mostrarMensagemAuth("Digite seu e-mail para recuperar a senha.", true);
+    return;
+  }
+
+  try {
+    await enviarRecuperacaoSenha(email);
+    mostrarMensagemAuth("Enviamos um link de recuperação para seu e-mail.");
+  } catch (erro) {
+    console.error(erro);
+    mostrarMensagemAuth("Não foi possível enviar o e-mail de recuperação.", true);
+  }
+});
+
+byId("btnLogout")?.addEventListener("click", async () => {
+  try {
+    await logoutSupabase();
+  } catch (err) {
+    console.error(err);
+  }
+
+  currentUser = null;
+  currentUserIsAdmin = false;
+  dashboardData = null;
+  mostrarTelaLogin();
+});
+
+byId("btnTabDashboard")?.addEventListener("click", () => {
+  mostrarDashboard();
+});
+
+byId("btnTabAdmin")?.addEventListener("click", async () => {
+  if (!currentUserIsAdmin) return;
+  mostrarAdmin();
+  await carregarDoutoresAdmin();
+});
+
+byId("btnAdicionarDoutor")?.addEventListener("click", adicionarDoutor);
+
+byId("filtroMes")?.addEventListener("change", async () => {
+  preencherFiltroCidade();
+  preencherFiltroDoutor();
+  atualizarDashboard();
+
+  if (!byId("adminView")?.classList.contains("hidden")) {
+    await carregarDoutoresAdmin();
+  }
+});
+
+byId("filtroCidade")?.addEventListener("change", atualizarDashboard);
+byId("filtroDoutor")?.addEventListener("change", atualizarDashboard);
+
+byId("btnLimpar")?.addEventListener("click", () => {
+  const filtroMes = byId("filtroMes");
+  const filtroCidade = byId("filtroCidade");
+  const filtroDoutor = byId("filtroDoutor");
+
+  if (filtroMes) {
+    filtroMes.value = dashboardData?.competencia_padrao || "2026-01";
+  }
+
+  preencherFiltroCidade();
+  preencherFiltroDoutor();
+
+  if (filtroCidade) filtroCidade.selectedIndex = 0;
+  if (filtroDoutor) filtroDoutor.selectedIndex = 0;
+
+  atualizarDashboard();
+});
+
+byId("btnExportar")?.addEventListener("click", exportarCSV);
+
+window.salvarDoutor = salvarDoutor;
+window.removerDoutor = removerDoutor;
+
+if (window.supabaseClient) {
+  window.supabaseClient.auth.onAuthStateChange(async (_event, session) => {
+    if (!session) {
+      currentUser = null;
+      currentUserIsAdmin = false;
+      mostrarTelaLogin();
+      return;
+    }
+
+    currentUser = session.user;
+  });
+}
+
+iniciarAplicacao();
