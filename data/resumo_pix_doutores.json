@@ -9,16 +9,16 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-08T11:46:27.340843",
-    "quantidade_total": 85,
-    "valor_total": 10930.0,
-    "valor_total_descontado": 100.0,
-    "valor_total_pendente": 10830.0,
+    "gerado_em": "2026-04-08T12:48:35.785185",
+    "quantidade_total": 87,
+    "valor_total": 11399.0,
+    "valor_total_descontado": 0.0,
+    "valor_total_pendente": 11399.0,
     "por_unidade": [
       {
         "unidade": "Caxias",
-        "quantidade": 22,
-        "valor": 2529.0
+        "quantidade": 24,
+        "valor": 2998.0
       },
       {
         "unidade": "Farroupilha",
@@ -70,7 +70,7 @@
       {
         "doutor": "Gabrielli Fabonato",
         "quantidade": 2,
-        "valor_descontado": 100.0
+        "valor_descontado": 0.0
       },
       {
         "doutor": "Nelson Vaccari",
@@ -84,7 +84,7 @@
       },
       {
         "doutor": "Tamara Macanan",
-        "quantidade": 15,
+        "quantidade": 17,
         "valor_descontado": 0.0
       }
     ]
