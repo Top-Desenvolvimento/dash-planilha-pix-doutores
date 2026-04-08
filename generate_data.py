@@ -5,14 +5,14 @@ from datetime import date
 from pathlib import Path
 from typing import Any, Dict, List
 
+from regras_doutores import carregar_doutores_config, normalizar_nome
+
 
 ANO_REFERENCIA = 2026
 
 DATA_DIR = Path("data")
 
 ARQUIVO_PIX = DATA_DIR / "pix_doutores.json"
-ARQUIVO_SALDOS = DATA_DIR / "saldos_doutores.json"
-ARQUIVO_RESUMO = DATA_DIR / "resumo_pix_doutores.json"
 ARQUIVO_ERROS = DATA_DIR / "erros_pix_doutores.json"
 ARQUIVO_DASH = DATA_DIR / "dashboard_data.json"
 
@@ -54,12 +54,6 @@ def garantir_lista(valor: Any) -> List[Any]:
     return []
 
 
-def garantir_dict(valor: Any) -> Dict[str, Any]:
-    if isinstance(valor, dict):
-        return valor
-    return {}
-
-
 def extrair_competencia_do_item(item: Dict[str, Any]) -> str:
     if not isinstance(item, dict):
         return ""
@@ -69,7 +63,7 @@ def extrair_competencia_do_item(item: Dict[str, Any]) -> str:
         return competencia
 
     data_item = str(item.get("data") or "").strip()
-    if len(data_item) >= 7 and data_item[4] == "-" and data_item[7:8] in {"", "-"}:
+    if len(data_item) >= 7:
         try:
             ano = int(data_item[0:4])
             mes = int(data_item[5:7])
@@ -89,7 +83,10 @@ def agrupar_por_competencia(registros: List[Dict[str, Any]], meses: List[str]) -
 
         competencia = extrair_competencia_do_item(item)
         if competencia in agrupado:
-            agrupado[competencia].append(item)
+            registro = dict(item)
+            if not registro.get("competencia"):
+                registro["competencia"] = competencia
+            agrupado[competencia].append(registro)
 
     return agrupado
 
@@ -112,7 +109,15 @@ def carregar_registros_por_mes(meses: List[str]) -> Dict[str, List[Dict[str, Any
         if arquivo_mensal.exists():
             conteudo = carregar_json(arquivo_mensal, [])
             if isinstance(conteudo, list):
-                resultado[mes] = conteudo
+                saida = []
+                for item in conteudo:
+                    if not isinstance(item, dict):
+                        continue
+                    registro = dict(item)
+                    if not registro.get("competencia"):
+                        registro["competencia"] = mes
+                    saida.append(registro)
+                resultado[mes] = saida
 
     return resultado
 
@@ -131,59 +136,118 @@ def carregar_erros_por_mes(meses: List[str]) -> Dict[str, List[Dict[str, Any]]]:
         if arquivo_mensal.exists():
             conteudo = carregar_json(arquivo_mensal, [])
             if isinstance(conteudo, list):
-                resultado[mes] = conteudo
+                saida = []
+                for item in conteudo:
+                    if not isinstance(item, dict):
+                        continue
+                    registro = dict(item)
+                    if not registro.get("competencia"):
+                        registro["competencia"] = mes
+                    saida.append(registro)
+                resultado[mes] = saida
 
     return resultado
 
 
-def carregar_saldos_por_mes(meses: List[str]) -> Dict[str, List[Dict[str, Any]]]:
-    resultado: Dict[str, List[Dict[str, Any]]] = {mes: [] for mes in meses}
+def somar_pix_por_doutor(registros: List[Dict[str, Any]]) -> Dict[str, float]:
+    totais: Dict[str, float] = {}
 
-    saldos_gerais = carregar_json(ARQUIVO_SALDOS, {})
-    if isinstance(saldos_gerais, dict):
-        for chave, conteudo in saldos_gerais.items():
-            competencia = normalizar_competencia(chave)
-            if competencia in resultado and isinstance(conteudo, list):
-                resultado[competencia] = conteudo
-    elif isinstance(saldos_gerais, list):
-        # caso raro: arquivo genérico seja uma lista única de um mês
-        # nesse caso deixamos como fallback só no mês atual/default depois
-        pass
+    for item in registros:
+        if not isinstance(item, dict):
+            continue
 
-    for mes in meses:
-        arquivo_mensal = obter_arquivo_mensal("saldos_doutores", mes)
-        if arquivo_mensal.exists():
-            conteudo = carregar_json(arquivo_mensal, [])
-            if isinstance(conteudo, list):
-                resultado[mes] = conteudo
+        nome_doutor = item.get("doutor_final") or ""
+        nome_norm = normalizar_nome(nome_doutor)
+        if not nome_norm:
+            continue
 
-    return resultado
+        # regra do mês: soma o PIX do mês
+        valor = float(item.get("valor", 0) or 0)
+
+        totais[nome_norm] = round(totais.get(nome_norm, 0.0) + valor, 2)
+
+    return totais
 
 
-def carregar_resumos_por_mes(meses: List[str]) -> Dict[str, Dict[str, Any]]:
-    resultado: Dict[str, Dict[str, Any]] = {mes: {} for mes in meses}
+def montar_saldos_do_mes(registros_mes: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    doutores = carregar_doutores_config()
+    totais_pix = somar_pix_por_doutor(registros_mes)
 
-    resumos_gerais = carregar_json(ARQUIVO_RESUMO, {})
-    if isinstance(resumos_gerais, dict):
-        # se já for dict por competência
-        for chave, conteudo in resumos_gerais.items():
-            competencia = normalizar_competencia(chave)
-            if competencia in resultado and isinstance(conteudo, dict):
-                resultado[competencia] = conteudo
+    saldos: List[Dict[str, Any]] = []
 
-        # se o arquivo genérico for um resumo único do mês atual
-        competencia_unica = normalizar_competencia(resumos_gerais.get("competencia"))
-        if competencia_unica in resultado and "quantidade_total" in resumos_gerais:
-            resultado[competencia_unica] = resumos_gerais
+    for doutor in doutores:
+        nome_norm = doutor.get("nome_normalizado") or normalizar_nome(doutor.get("nome"))
+        credito_inicial = round(float(doutor.get("credito") or 0), 2)
+        utilizado = round(float(totais_pix.get(nome_norm, 0.0)), 2)
+        credito_disponivel = round(max(0.0, credito_inicial - utilizado), 2)
 
-    for mes in meses:
-        arquivo_mensal = obter_arquivo_mensal("resumo_pix_doutores", mes)
-        if arquivo_mensal.exists():
-            conteudo = carregar_json(arquivo_mensal, {})
-            if isinstance(conteudo, dict):
-                resultado[mes] = conteudo
+        saldos.append({
+            "doutor_id": doutor.get("id"),
+            "doutor": doutor.get("nome"),
+            "credito_inicial": credito_inicial,
+            "utilizado": utilizado,
+            "credito_disponivel": credito_disponivel,
+            "pix_key": doutor.get("pix_key", ""),
+        })
 
-    return resultado
+    saldos.sort(key=lambda x: str(x.get("doutor") or "").lower())
+    return saldos
+
+
+def montar_resumo_do_mes(competencia: str, registros_mes: List[Dict[str, Any]]) -> Dict[str, Any]:
+    quantidade_total = len(registros_mes)
+    valor_total = round(sum(float(item.get("valor", 0) or 0) for item in registros_mes), 2)
+    valor_total_descontado = round(sum(float(item.get("valor_descontado", 0) or 0) for item in registros_mes), 2)
+    valor_total_pendente = round(sum(float(item.get("pendente", 0) or 0) for item in registros_mes), 2)
+
+    por_unidade: Dict[str, Dict[str, Any]] = {}
+    por_doutor: Dict[str, Dict[str, Any]] = {}
+
+    for item in registros_mes:
+        unidade = str(item.get("unidade") or "Não informado")
+        doutor = str(item.get("doutor_final") or "Sem responsável fiscal")
+
+        valor = float(item.get("valor", 0) or 0)
+        descontado = float(item.get("valor_descontado", 0) or 0)
+        pendente = float(item.get("pendente", 0) or 0)
+
+        if unidade not in por_unidade:
+            por_unidade[unidade] = {
+                "unidade": unidade,
+                "quantidade": 0,
+                "valor": 0.0,
+                "descontado": 0.0,
+                "pendente": 0.0,
+            }
+
+        por_unidade[unidade]["quantidade"] += 1
+        por_unidade[unidade]["valor"] += valor
+        por_unidade[unidade]["descontado"] += descontado
+        por_unidade[unidade]["pendente"] += pendente
+
+        if doutor not in por_doutor:
+            por_doutor[doutor] = {
+                "doutor": doutor,
+                "quantidade": 0,
+                "valor": 0.0,
+                "descontado": 0.0,
+                "pendente": 0.0,
+            }
+
+        por_doutor[doutor]["quantidade"] += 1
+        por_doutor[doutor]["valor"] += valor
+        por_doutor[doutor]["descontado"] += descontado
+        por_doutor[doutor]["pendente"] += pendente
+
+    return {
+        "competencia": competencia,
+        "quantidade_total": quantidade_total,
+        "valor_total": round(valor_total, 2),
+        "valor_total_descontado": round(valor_total_descontado, 2),
+        "valor_total_pendente": round(valor_total_pendente, 2),
+        "por_unidade": sorted(por_unidade.values(), key=lambda x: x["unidade"]),
+        "por_doutor": sorted(por_doutor.values(), key=lambda x: x["doutor"]),
+    }
 
 
 def achatar_registros_por_mes(registros_por_competencia: Dict[str, List[Dict[str, Any]]]) -> List[Dict[str, Any]]:
@@ -251,8 +315,14 @@ def main() -> None:
 
     registros_por_competencia = carregar_registros_por_mes(meses_disponiveis)
     erros_por_competencia = carregar_erros_por_mes(meses_disponiveis)
-    saldos_por_competencia = carregar_saldos_por_mes(meses_disponiveis)
-    resumos_por_competencia = carregar_resumos_por_mes(meses_disponiveis)
+
+    saldos_por_competencia: Dict[str, List[Dict[str, Any]]] = {}
+    resumos_por_competencia: Dict[str, Dict[str, Any]] = {}
+
+    for mes in meses_disponiveis:
+        registros_mes = registros_por_competencia.get(mes, [])
+        saldos_por_competencia[mes] = montar_saldos_do_mes(registros_mes)
+        resumos_por_competencia[mes] = montar_resumo_do_mes(mes, registros_mes)
 
     registros = achatar_registros_por_mes(registros_por_competencia)
     erros = achatar_erros_por_mes(erros_por_competencia)
@@ -283,21 +353,11 @@ def main() -> None:
 
     print(f"[OK] Dashboard gerado em: {ARQUIVO_DASH}")
     print(f"[OK] Competência padrão: {competencia_padrao}")
-    print(f"[OK] Meses disponíveis: {', '.join(meses_disponiveis)}")
 
     for mes in meses_disponiveis:
         qtd_registros = len(registros_por_competencia.get(mes, []))
-        qtd_erros = len(erros_por_competencia.get(mes, []))
         qtd_saldos = len(saldos_por_competencia.get(mes, []))
-        tem_resumo = bool(resumos_por_competencia.get(mes))
-
-        print(
-            f"[OK] {mes} -> "
-            f"registros={qtd_registros}, "
-            f"erros={qtd_erros}, "
-            f"saldos={qtd_saldos}, "
-            f"resumo={'sim' if tem_resumo else 'nao'}"
-        )
+        print(f"[OK] {mes} -> registros={qtd_registros}, saldos={qtd_saldos}")
 
 
 if __name__ == "__main__":
