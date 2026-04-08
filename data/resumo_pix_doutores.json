@@ -9,11 +9,11 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-08T10:48:39.266898",
+    "gerado_em": "2026-04-08T11:46:27.340843",
     "quantidade_total": 85,
     "valor_total": 10930.0,
-    "valor_total_descontado": 490.0,
-    "valor_total_pendente": 10440.0,
+    "valor_total_descontado": 100.0,
+    "valor_total_pendente": 10830.0,
     "por_unidade": [
       {
         "unidade": "Caxias",
@@ -70,12 +70,12 @@
       {
         "doutor": "Gabrielli Fabonato",
         "quantidade": 2,
-        "valor_descontado": 390.0
+        "valor_descontado": 100.0
       },
       {
         "doutor": "Nelson Vaccari",
         "quantidade": 1,
-        "valor_descontado": 100.0
+        "valor_descontado": 0.0
       },
       {
         "doutor": "Sofie Owens",
