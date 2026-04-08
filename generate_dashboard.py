@@ -19,8 +19,13 @@ def carregar_json(caminho: Path, padrao: Any) -> Any:
         return json.load(f)
 
 
-def formatar_moeda(valor: float) -> str:
-    texto = f"{float(valor):,.2f}"
+def formatar_moeda(valor: Any) -> str:
+    try:
+        numero = float(valor or 0)
+    except Exception:
+        numero = 0.0
+
+    texto = f"{numero:,.2f}"
     texto = texto.replace(",", "X").replace(".", ",").replace("X", ".")
     return f"R$ {texto}"
 
@@ -34,6 +39,115 @@ def escape_html(texto: Any) -> str:
         .replace('"', "&quot;")
         .replace("'", "&#39;")
     )
+
+
+def garantir_lista(valor: Any) -> List[Any]:
+    if isinstance(valor, list):
+        return valor
+    if isinstance(valor, dict):
+        return list(valor.values())
+    return []
+
+
+def garantir_dict(valor: Any) -> Dict[str, Any]:
+    if isinstance(valor, dict):
+        return valor
+    return {}
+
+
+def normalizar_saldos(saldos: Any) -> List[Dict[str, Any]]:
+    """
+    Normaliza o conteúdo de saldos_doutores.json para evitar quebra quando:
+    - vier lista de dicionários
+    - vier lista de strings
+    - vier dict
+    - vier dict com chave 'saldos'
+    """
+    if isinstance(saldos, dict):
+        if isinstance(saldos.get("saldos"), list):
+            origem = saldos.get("saldos", [])
+        else:
+            origem = list(saldos.values())
+    elif isinstance(saldos, list):
+        origem = saldos
+    else:
+        origem = []
+
+    saida: List[Dict[str, Any]] = []
+
+    for item in origem:
+        if isinstance(item, dict):
+            doutor = item.get("doutor") or item.get("nome") or item.get("doutor_final") or "Não informado"
+            credito_inicial = item.get("credito_inicial", item.get("credito", 0.0))
+            credito_disponivel = item.get("credito_disponivel", item.get("credito_final", 0.0))
+            utilizado = item.get("utilizado", 0.0)
+
+            try:
+                credito_inicial = float(credito_inicial or 0)
+            except Exception:
+                credito_inicial = 0.0
+
+            try:
+                credito_disponivel = float(credito_disponivel or 0)
+            except Exception:
+                credito_disponivel = 0.0
+
+            try:
+                utilizado = float(utilizado or 0)
+            except Exception:
+                utilizado = 0.0
+
+            saida.append({
+                "doutor": doutor,
+                "credito_inicial": credito_inicial,
+                "credito_disponivel": credito_disponivel,
+                "utilizado": utilizado,
+            })
+
+        elif isinstance(item, str):
+            saida.append({
+                "doutor": item,
+                "credito_inicial": 0.0,
+                "credito_disponivel": 0.0,
+                "utilizado": 0.0,
+            })
+
+    return saida
+
+
+def normalizar_registros(registros: Any) -> List[Dict[str, Any]]:
+    origem = garantir_lista(registros)
+    saida: List[Dict[str, Any]] = []
+
+    for item in origem:
+        if isinstance(item, dict):
+            saida.append(item)
+        elif isinstance(item, str):
+            saida.append({
+                "unidade": "",
+                "data": "",
+                "doutor_final": "",
+                "paciente": item,
+                "valor": 0.0,
+                "valor_descontado": 0.0,
+                "pendente": 0.0,
+            })
+
+    return saida
+
+
+def normalizar_resumo(resumo: Any) -> Dict[str, Any]:
+    resumo = garantir_dict(resumo)
+    return {
+        "quantidade_total": resumo.get("quantidade_total", 0),
+        "valor_total": resumo.get("valor_total", 0.0),
+        "valor_total_descontado": resumo.get("valor_total_descontado", 0.0),
+        "valor_total_pendente": resumo.get("valor_total_pendente", 0.0),
+        "competencia": resumo.get("competencia", "-"),
+        "gerado_em": resumo.get("gerado_em", "-"),
+        "por_unidade": garantir_lista(resumo.get("por_unidade", [])),
+        "por_doutor": garantir_lista(resumo.get("por_doutor", [])),
+    }
 
 
 def montar_cards_resumo(resumo: Dict[str, Any]) -> str:
@@ -75,10 +189,13 @@ def montar_cards_resumo(resumo: Dict[str, Any]) -> str:
 
 
 def montar_tabela_unidades(resumo: Dict[str, Any]) -> str:
-    linhas = resumo.get("por_unidade", [])
+    linhas = garantir_lista(resumo.get("por_unidade", []))
     trs = []
 
     for item in linhas:
+        if not isinstance(item, dict):
+            continue
+
         trs.append(f"""
         <tr>
           <td>{escape_html(item.get("unidade", ""))}</td>
@@ -113,10 +230,13 @@ def montar_tabela_unidades(resumo: Dict[str, Any]) -> str:
 
 
 def montar_tabela_doutores(resumo: Dict[str, Any]) -> str:
-    linhas = resumo.get("por_doutor", [])
+    linhas = garantir_lista(resumo.get("por_doutor", []))
     trs = []
 
     for item in linhas:
+        if not isinstance(item, dict):
+            continue
+
         trs.append(f"""
         <tr>
           <td>{escape_html(item.get("doutor", ""))}</td>
@@ -150,10 +270,11 @@ def montar_tabela_doutores(resumo: Dict[str, Any]) -> str:
     """
 
 
-def montar_tabela_saldos(saldos: List[Dict[str, Any]]) -> str:
+def montar_tabela_saldos(saldos: Any) -> str:
+    linhas = normalizar_saldos(saldos)
     trs = []
 
-    for item in saldos:
+    for item in linhas:
         credito_disponivel = float(item.get("credito_disponivel", 0.0))
         classe = "zerado" if credito_disponivel <= 0 else "normal"
 
@@ -161,6 +282,7 @@ def montar_tabela_saldos(saldos: List[Dict[str, Any]]) -> str:
         <tr>
           <td>{escape_html(item.get("doutor", ""))}</td>
           <td>{formatar_moeda(item.get("credito_inicial", 0.0))}</td>
+          <td>{formatar_moeda(item.get("utilizado", 0.0))}</td>
           <td class="{classe}">{formatar_moeda(credito_disponivel)}</td>
         </tr>
         """)
@@ -174,11 +296,12 @@ def montar_tabela_saldos(saldos: List[Dict[str, Any]]) -> str:
             <tr>
               <th>Doutor</th>
               <th>Crédito inicial</th>
+              <th>Utilizado</th>
               <th>Crédito disponível</th>
             </tr>
           </thead>
           <tbody>
-            {''.join(trs) if trs else '<tr><td colspan="3">Sem dados</td></tr>'}
+            {''.join(trs) if trs else '<tr><td colspan="4">Sem dados</td></tr>'}
           </tbody>
         </table>
       </div>
@@ -190,7 +313,10 @@ def montar_tabela_registros(registros: List[Dict[str, Any]]) -> str:
     trs = []
 
     for item in registros:
-        pendente = float(item.get("pendente", 0.0))
+        if not isinstance(item, dict):
+            continue
+
+        pendente = float(item.get("pendente", 0.0) or 0.0)
         classe_pendente = "alerta" if pendente > 0 else "ok"
 
         trs.append(f"""
@@ -231,7 +357,7 @@ def montar_tabela_registros(registros: List[Dict[str, Any]]) -> str:
 
 
 def montar_tabela_erros(registros: List[Dict[str, Any]]) -> str:
-    erros = [r for r in registros if "erro" in r]
+    erros = [r for r in registros if isinstance(r, dict) and "erro" in r]
 
     trs = []
     for item in erros:
@@ -264,8 +390,8 @@ def montar_tabela_erros(registros: List[Dict[str, Any]]) -> str:
     """
 
 
-def gerar_html(resumo: Dict[str, Any], saldos: List[Dict[str, Any]], registros: List[Dict[str, Any]]) -> str:
-    registros_validos = [r for r in registros if "erro" not in r]
+def gerar_html(resumo: Dict[str, Any], saldos: Any, registros: List[Dict[str, Any]]) -> str:
+    registros_validos = [r for r in registros if isinstance(r, dict) and "erro" not in r]
 
     return f"""<!DOCTYPE html>
 <html lang="pt-BR">
@@ -351,6 +477,11 @@ def gerar_html(resumo: Dict[str, Any], saldos: List[Dict[str, Any]], registros: 
       font-weight: bold;
     }}
 
+    .normal {{
+      color: #111827;
+      font-weight: bold;
+    }}
+
     .bloco {{
       background: #fff;
       border-radius: 12px;
@@ -411,9 +542,13 @@ def gerar_html(resumo: Dict[str, Any], saldos: List[Dict[str, Any]], registros: 
 
 
 def main() -> None:
-    registros = carregar_json(ARQUIVO_PIX, [])
-    saldos = carregar_json(ARQUIVO_SALDOS, [])
-    resumo = carregar_json(ARQUIVO_RESUMO, {})
+    registros_brutos = carregar_json(ARQUIVO_PIX, [])
+    saldos_brutos = carregar_json(ARQUIVO_SALDOS, [])
+    resumo_bruto = carregar_json(ARQUIVO_RESUMO, {})
+
+    registros = normalizar_registros(registros_brutos)
+    saldos = normalizar_saldos(saldos_brutos)
+    resumo = normalizar_resumo(resumo_bruto)
 
     html = gerar_html(resumo, saldos, registros)
 
