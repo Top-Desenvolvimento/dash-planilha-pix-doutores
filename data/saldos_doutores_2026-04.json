@@ -123,8 +123,8 @@
     "doutor_id": "18",
     "doutor": "Gabrielli Fabonato",
     "credito_inicial": 4000.0,
-    "utilizado": 1560.0,
-    "credito_disponivel": 2440.0,
+    "utilizado": 1950.0,
+    "credito_disponivel": 2050.0,
     "pix_key": ""
   },
   {
@@ -291,8 +291,8 @@
     "doutor_id": "36",
     "doutor": "Nelson Vaccari",
     "credito_inicial": 4000.0,
-    "utilizado": 2730.0,
-    "credito_disponivel": 1270.0,
+    "utilizado": 2925.0,
+    "credito_disponivel": 1075.0,
     "pix_key": ""
   },
   {
