@@ -128,16 +128,19 @@ body {
 .layout {
   display: flex;
   min-height: 100vh;
+  width: 100%;
 }
 
 .sidebar {
   width: 290px;
+  min-width: 290px;
   background: rgba(5, 12, 26, 0.9);
   border-right: 1px solid rgba(255, 255, 255, 0.05);
   padding: 22px;
   position: sticky;
   top: 0;
   height: 100vh;
+  overflow-y: auto;
 }
 
 .brand {
@@ -254,6 +257,7 @@ select option {
 
 .main {
   flex: 1;
+  min-width: 0;
   padding: 28px 24px 40px;
 }
 
@@ -457,6 +461,7 @@ tbody tr:hover {
 
   .sidebar {
     width: 100%;
+    min-width: 100%;
     position: relative;
     height: auto;
     border-right: 0;
