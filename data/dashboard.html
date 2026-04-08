@@ -1,0 +1,1498 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard PIX Doutores</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      color: #1f2937;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 30px;
+    }
+
+    .sub {
+      margin-bottom: 24px;
+      color: #6b7280;
+    }
+
+    .info {
+      margin-bottom: 24px;
+      padding: 12px 14px;
+      background: #eef2ff;
+      border: 1px solid #c7d2fe;
+      border-radius: 10px;
+      color: #3730a3;
+      font-size: 14px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 18px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    }
+
+    .card-title {
+      color: #6b7280;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .card-value {
+      font-size: 24px;
+      font-weight: bold;
+      color: #111827;
+    }
+
+    .card-value.small {
+      font-size: 16px;
+      word-break: break-word;
+    }
+
+    .positivo {
+      color: #047857;
+    }
+
+    .alerta {
+      color: #b45309;
+      font-weight: bold;
+    }
+
+    .ok {
+      color: #047857;
+      font-weight: bold;
+    }
+
+    .zerado {
+      color: #b91c1c;
+      font-weight: bold;
+    }
+
+    .normal {
+      color: #111827;
+      font-weight: bold;
+    }
+
+    .bloco {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 24px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    }
+
+    .bloco h2 {
+      margin-top: 0;
+      margin-bottom: 16px;
+      font-size: 20px;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 900px;
+    }
+
+    thead {
+      background: #111827;
+      color: #fff;
+    }
+
+    th, td {
+      padding: 12px 10px;
+      border-bottom: 1px solid #e5e7eb;
+      text-align: left;
+      font-size: 14px;
+      vertical-align: top;
+    }
+
+    tbody tr:hover {
+      background: #f9fafb;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Dashboard PIX Doutores</h1>
+    <div class="sub">Relatório gerado automaticamente com base nos arquivos da pasta data.</div>
+    <div class="info">
+      Competência detectada: <strong>2026-04</strong><br />
+      Arquivo PIX usado: <strong>pix_doutores_2026-04.json</strong><br />
+      Arquivo de saldos usado: <strong>saldos_doutores_2026-04.json</strong>
+    </div>
+
+    
+    <div class="cards">
+      <div class="card">
+        <div class="card-title">Competência</div>
+        <div class="card-value">2026-04</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Linhas coletadas</div>
+        <div class="card-value">0</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Valor total</div>
+        <div class="card-value">R$ 0,00</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Total descontado</div>
+        <div class="card-value positivo">R$ 0,00</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Total pendente</div>
+        <div class="card-value alerta">R$ 0,00</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Gerado em</div>
+        <div class="card-value small">2026-04-07T10:44:17.559341</div>
+      </div>
+    </div>
+    
+    
+    <section class="bloco">
+      <h2>Resumo por unidade</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Unidade</th>
+              <th>Qtd.</th>
+              <th>Valor</th>
+              <th>Descontado</th>
+              <th>Pendente</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td colspan="5">Sem dados</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    
+    
+    <section class="bloco">
+      <h2>Resumo por doutor</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Doutor</th>
+              <th>Qtd.</th>
+              <th>Valor</th>
+              <th>Descontado</th>
+              <th>Pendente</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td colspan="5">Sem dados</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    
+    
+    <section class="bloco">
+      <h2>Saldos finais dos doutores</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Doutor</th>
+              <th>Crédito inicial</th>
+              <th>Utilizado</th>
+              <th>Crédito disponível</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td>Adriele da Silva</td>
+          <td>R$ 3.000,00</td>
+          <td>R$ 3.000,00</td>
+          <td class="zerado">R$ 0,00</td>
+        </tr>
+        
+        <tr>
+          <td>Alan Sechin</td>
+          <td>R$ 0,00</td>
+          <td>R$ 0,00</td>
+          <td class="zerado">R$ 0,00</td>
+        </tr>
+        
+        <tr>
+          <td>Alexandre Favero</td>
+          <td>R$ 1.500,00</td>
+          <td>R$ 0,00</td>
+          <td class="normal">R$ 1.500,00</td>
+        </tr>
+        
+        <tr>
+          <td>Ana Carolina Portes</td>
+          <td>R$ 1.200,00</td>
+          <td>R$ 0,00</td>
+          <td class="normal">R$ 1.200,00</td>
+        </tr>
+        
+        <tr>
+          <td>Ana Cristina Corso</td>
+          <td>R$ 1.500,00</td>
+          <td>R$ 0,00</td>
+          <td class="normal">R$ 1.500,00</td>
+        </tr>
+        
+        <tr>
+          <td>Andrielli Caxambu</td>
+          <td>R$ 0,00</td>
+          <td>R$ 0,00</td>
+          <td class="zerado">R$ 0,00</td>
+        </tr>
+        
+        <tr>
+          <td>Bianca Hofman</td>
+          <td>R$ 0,00</td>
+          <td>R$ 0,00</td>
+          <td class="zerado">R$ 0,00</td>
+        </tr>
+        
+        <tr>
+          <td>Bruno Castellan</td>
+          <td>R$ 600,00</td>
+          <td>R$ 0,00</td>
+          <td class="normal">R$ 600,00</td>
+        </tr>
+        
+        <tr>
+          <td>Bruno Lorenzoni</td>
+          <td>R$ 0,00</td>
+          <td>R$ 0,00</td>
+          <td class="zerado">R$ 0,00</td>
+        </tr>
+        
+        <tr>
+          <td>CIR.Dionathan Paim Pohlmann</td>
+          <td>R$ 6.000,00</td>
+          <td>R$ 0,00</td>
+          <td class="normal">R$ 6.000,00</td>
+        </tr>
+        
+        <tr>
+          <td>Cristian Pressi</td>
+          <td>R$ 8.000,00</td>
+          <td>R$ 8.000,00</td>
+          <td class="zerado">R$ 0,00</td>
+        </tr>
+        
+        <tr>
+          <td>Evalda Baldissera</td>
+          <td>R$ 5.604,82</td>
+          <td>R$ 0,00</td>
+          <td class="normal">R$ 5.604,82</td>
+        </tr>
+        
+        <tr>
+          <td>Everlize Cipriani</td>
+          <td>R$ 2.000,00</td>
+          <td>R$ 2.000,00</td>
+          <td class="zerado">R$ 0,00</td>
+        </tr>
+        
+        <tr>
+          <td>Fernana Sozo</td>
+          <td>R$ 1.500,00</td>
+          <td>R$ 0,00</td>
+          <td class="normal">R$ 1.500,00</td>
+        </tr>
+        
+        <tr>
+          <td>Franciele Pedrotti</td>
+          <td>R$ 10.000,00</td>
+          <td>R$ 10.000,00</td>
+          <td class="zerado">R$ 0,00</td>
+        </tr>
+        
+        <tr>
+          <td>Gabrielli Fabonato</td>
+          <td>R$ 4.000,00</td>
+          <td>R$ 4.000,00</td>
+          <td class="zerado">R$ 0,00</td>
+        </tr>
+        
+        <tr>
+          <td>Giovana Gasparini</td>
+          <td>R$ 1.000,00</td>
+          <td>R$ 0,00</td>
+          <td class="normal">R$ 1.000,00</td>
+        </tr>
+        
+        <tr>
+          <td>Gislaine Santos</td>
+          <td>R$ 1.000,00</td>
+          <td>R$ 0,00</td>
+          <td class="normal">R$ 1.000,00</td>
+        </tr>
+        
+        <tr>
+          <td>Greici Matiello</td>
+          <td>R$ 500,00</td>
+          <td>R$ 0,00</td>
+          <td class="normal">R$ 500,00</td>
+        </tr>
+        
+        <tr>
+          <td>Gustavo Lourenço Ongaratto</td>
+          <td>R$ 3.000,00</td>
+          <td>R$ 0,00</td>
+          <td class="normal">R$ 3.000,00</td>
+        </tr>
+        
+        <tr>
+          <td>Indiamara Rech</td>
+          <td>R$ 0,00</td>
+          <td>R$ 0,00</td>
+          <td class="zerado">R$ 0,00</td>
+        </tr>
+        
+        <tr>
+          <td>Joana Sganzerla</td>
+          <td>R$ 500,00</td>
+          <td>R$ 0,00</td>
+          <td class="normal">R$ 500,00</td>
+        </tr>
+        
+        <tr>
+          <td>João Augusto Keler</td>
+          <td>R$ 1.000,00</td>
+          <td>R$ 0,00</td>
+          <td class="normal">R$ 1.000,00</td>
+        </tr>
+        
+        <tr>
+          <td>Juana Billig</td>
+          <td>R$ 2.500,00</td>
+          <td>R$ 0,00</td>
+          <td class="normal">R$ 2.500,00</td>
+        </tr>
+        
+        <tr>
+          <td>Jéssica Barreto</td>
+          <td>R$ 1.000,00</td>
+          <td>R$ 0,00</td>
+          <td class="normal">R$ 1.000,00</td>
+        </tr>
+        
+        <tr>
+          <td>Keyla Daniele</td>
+          <td>R$ 500,00</td>
+          <td>R$ 0,00</td>
+          <td class="normal">R$ 500,00</td>
+        </tr>
+        
+        <tr>
+          <td>Laura Luiza Cimolin</td>
+          <td>R$ 0,00</td>
+          <td>R$ 0,00</td>
+          <td class="zerado">R$ 0,00</td>
+        </tr>
+        
+        <tr>
+          <td>Leandro Diniz</td>
+          <td>R$ 400,00</td>
+          <td>R$ 0,00</td>
+          <td class="normal">R$ 400,00</td>
+        </tr>
+        
+        <tr>
+          <td>Leticia Canabarro (SOL)</td>
+          <td>R$ 900,00</td>
+          <td>R$ 0,00</td>
+          <td class="normal">R$ 900,00</td>
+        </tr>
+        
+        <tr>
+          <td>Letícia Cauzzi</td>
+          <td>R$ 4.000,00</td>
+          <td>R$ 0,00</td>
+          <td class="normal">R$ 4.000,00</td>
+        </tr>
+        
+        <tr>
+          <td>Luiz Henrique</td>
+          <td>R$ 2.500,00</td>
+          <td>R$ 0,00</td>
+          <td class="normal">R$ 2.500,00</td>
+        </tr>
+        
+        <tr>
+          <td>Marcella Zancanaro</td>
+          <td>R$ 1.200,00</td>
+          <td>R$ 0,00</td>
+          <td class="normal">R$ 1.200,00</td>
+        </tr>
+        
+        <tr>
+          <td>Matheus Strapasson</td>
+          <td>R$ 1.000,00</td>
+          <td>R$ 0,00</td>
+          <td class="normal">R$ 1.000,00</td>
+        </tr>
+        
+        <tr>
+          <td>Morgana Zambiasi</td>
+          <td>R$ 1.500,00</td>
+          <td>R$ 0,00</td>
+          <td class="normal">R$ 1.500,00</td>
+        </tr>
+        
+        <tr>
+          <td>Murilo Debortoli</td>
+          <td>R$ 500,00</td>
+          <td>R$ 0,00</td>
+          <td class="normal">R$ 500,00</td>
+        </tr>
+        
+        <tr>
+          <td>Naiane Pieta</td>
+          <td>R$ 1.000,00</td>
+          <td>R$ 0,00</td>
+          <td class="normal">R$ 1.000,00</td>
+        </tr>
+        
+        <tr>
+          <td>Nelson Vaccari</td>
+          <td>R$ 4.000,00</td>
+          <td>R$ 4.000,00</td>
+          <td class="zerado">R$ 0,00</td>
+        </tr>
+        
+        <tr>
+          <td>Nicoli Weber</td>
+          <td>R$ 1.000,00</td>
+          <td>R$ 0,00</td>
+          <td class="normal">R$ 1.000,00</td>
+        </tr>
+        
+        <tr>
+          <td>Norberto Filipe</td>
+          <td>R$ 500,00</td>
+          <td>R$ 0,00</td>
+          <td class="normal">R$ 500,00</td>
+        </tr>
+        
+        <tr>
+          <td>Rodrigo Silveira</td>
+          <td>R$ 458,00</td>
+          <td>R$ 0,00</td>
+          <td class="normal">R$ 458,00</td>
+        </tr>
+        
+        <tr>
+          <td>Sara Trevisol</td>
+          <td>R$ 1.000,00</td>
+          <td>R$ 0,00</td>
+          <td class="normal">R$ 1.000,00</td>
+        </tr>
+        
+        <tr>
+          <td>Sofie Owens</td>
+          <td>R$ 3.500,00</td>
+          <td>R$ 3.500,00</td>
+          <td class="zerado">R$ 0,00</td>
+        </tr>
+        
+        <tr>
+          <td>Tamara Macanan</td>
+          <td>R$ 5.000,00</td>
+          <td>R$ 5.000,00</td>
+          <td class="zerado">R$ 0,00</td>
+        </tr>
+        
+        <tr>
+          <td>Thalia Tessaro</td>
+          <td>R$ 2.700,00</td>
+          <td>R$ 0,00</td>
+          <td class="normal">R$ 2.700,00</td>
+        </tr>
+        
+        <tr>
+          <td>Thalia Vezzosi</td>
+          <td>R$ 2.500,00</td>
+          <td>R$ 0,00</td>
+          <td class="normal">R$ 2.500,00</td>
+        </tr>
+        
+        <tr>
+          <td>Thiany Cristofoli</td>
+          <td>R$ 4.000,00</td>
+          <td>R$ 0,00</td>
+          <td class="normal">R$ 4.000,00</td>
+        </tr>
+        
+          </tbody>
+        </table>
+      </div>
+    </section>
+    
+    
+    <section class="bloco">
+      <h2>Registros detalhados</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Unidade</th>
+              <th>Data</th>
+              <th>Doutor</th>
+              <th>Paciente</th>
+              <th>Valor</th>
+              <th>Descontado</th>
+              <th>Pendente</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td>Caxias</td>
+          <td>06/04/2026</td>
+          <td>Franciele Pedrotti</td>
+          <td>Recebido de Brunela Borf Pago por: O paciente</td>
+          <td>R$ 120,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 120,00</td>
+        </tr>
+        
+        <tr>
+          <td>Caxias</td>
+          <td>01/04/2026</td>
+          <td>Nelson Vaccari</td>
+          <td>Recebido de Maqueila Da Silva Pinto Pago por: O paciente</td>
+          <td>R$ 195,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 195,00</td>
+        </tr>
+        
+        <tr>
+          <td>Caxias</td>
+          <td>06/04/2026</td>
+          <td>Tamara Macanan</td>
+          <td>Recebido de Natiele De Oliveira Pago por: O paciente</td>
+          <td>R$ 85,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 85,00</td>
+        </tr>
+        
+        <tr>
+          <td>Caxias</td>
+          <td>06/04/2026</td>
+          <td>Tamara Macanan</td>
+          <td>Recebido de Stefani Gantes de Souza Pago por: O paciente</td>
+          <td>R$ 100,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 100,00</td>
+        </tr>
+        
+        <tr>
+          <td>Caxias</td>
+          <td>06/04/2026</td>
+          <td>Tamara Macanan</td>
+          <td>Recebido de Stefani Gantes de Souza Pago por: O paciente</td>
+          <td>R$ 90,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 90,00</td>
+        </tr>
+        
+        <tr>
+          <td>Caxias</td>
+          <td>06/04/2026</td>
+          <td>Tamara Macanan</td>
+          <td>Recebido de Vilson Jonas Taminski Pago por: O paciente</td>
+          <td>R$ 85,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 85,00</td>
+        </tr>
+        
+        <tr>
+          <td>Caxias</td>
+          <td>06/04/2026</td>
+          <td>Tamara Macanan</td>
+          <td>Recebido de Carlos Eduardo da Silva Carvalho Pago por: O paciente</td>
+          <td>R$ 105,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 105,00</td>
+        </tr>
+        
+        <tr>
+          <td>Caxias</td>
+          <td>06/04/2026</td>
+          <td>Franciele Pedrotti</td>
+          <td>Recebido de Mikael Elias Paz Mendonça Pago por: O paciente</td>
+          <td>R$ 206,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 206,00</td>
+        </tr>
+        
+        <tr>
+          <td>Caxias</td>
+          <td>06/04/2026</td>
+          <td>Franciele Pedrotti</td>
+          <td>Recebido de Mikael Elias Paz Mendonça Pago por: O paciente</td>
+          <td>R$ 120,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 120,00</td>
+        </tr>
+        
+        <tr>
+          <td>Caxias</td>
+          <td>06/04/2026</td>
+          <td>Tamara Macanan</td>
+          <td>Recebido de Julia Charrao Ferras Pago por: Eunice Marques Charrao</td>
+          <td>R$ 120,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 120,00</td>
+        </tr>
+        
+        <tr>
+          <td>Caxias</td>
+          <td>06/04/2026</td>
+          <td>Tamara Macanan</td>
+          <td>Recebido de Bruno Antonio Mendes Pessota Pago por: O paciente</td>
+          <td>R$ 95,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 95,00</td>
+        </tr>
+        
+        <tr>
+          <td>Caxias</td>
+          <td>06/04/2026</td>
+          <td>Tamara Macanan</td>
+          <td>Recebido de Jaderson Souza Maia Pago por: O paciente</td>
+          <td>R$ 95,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 95,00</td>
+        </tr>
+        
+        <tr>
+          <td>Caxias</td>
+          <td>06/04/2026</td>
+          <td>Tamara Macanan</td>
+          <td>Recebido de Gabriele da Silva de Camargo Pago por: Adiles Teixeira da Silva</td>
+          <td>R$ 99,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 99,00</td>
+        </tr>
+        
+        <tr>
+          <td>Caxias</td>
+          <td>06/04/2026</td>
+          <td>Franciele Pedrotti</td>
+          <td>Recebido de Emanuelle Sitnievski Pago por: O paciente</td>
+          <td>R$ 85,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 85,00</td>
+        </tr>
+        
+        <tr>
+          <td>Caxias</td>
+          <td>07/04/2026</td>
+          <td>Tamara Macanan</td>
+          <td>Recebido de Emily Del Carmen Guerrero Hernandez Pago por: Lina Del Carmen Hernandez Yepez</td>
+          <td>R$ 99,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 99,00</td>
+        </tr>
+        
+        <tr>
+          <td>Caxias</td>
+          <td>07/04/2026</td>
+          <td>Tamara Macanan</td>
+          <td>Recebido de Crislaine Da Silva Pago por: O paciente</td>
+          <td>R$ 115,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 115,00</td>
+        </tr>
+        
+        <tr>
+          <td>Caxias</td>
+          <td>06/04/2026</td>
+          <td>Tamara Macanan</td>
+          <td>Recebido de Ryan Vítor Castilhos da Silva Pago por: Clara Elizabete Castilhos</td>
+          <td>R$ 100,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 100,00</td>
+        </tr>
+        
+        <tr>
+          <td>Caxias</td>
+          <td>07/04/2026</td>
+          <td>Tamara Macanan</td>
+          <td>Recebido de Dilkari Sarai Linares Cabrera Pago por: O paciente</td>
+          <td>R$ 120,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 120,00</td>
+        </tr>
+        
+        <tr>
+          <td>Caxias</td>
+          <td>07/04/2026</td>
+          <td>Tamara Macanan</td>
+          <td>Recebido de Lucilene da Silva Borges Pago por: O paciente</td>
+          <td>R$ 206,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 206,00</td>
+        </tr>
+        
+        <tr>
+          <td>Caxias</td>
+          <td>07/04/2026</td>
+          <td>Franciele Pedrotti</td>
+          <td>Recebido de Adão Lucio Pereira Junior Pago por: O paciente</td>
+          <td>R$ 99,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 99,00</td>
+        </tr>
+        
+        <tr>
+          <td>Caxias</td>
+          <td>07/04/2026</td>
+          <td>Franciele Pedrotti</td>
+          <td>Recebido de Josiane Da Silva Gomes Pago por: O paciente</td>
+          <td>R$ 105,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 105,00</td>
+        </tr>
+        
+        <tr>
+          <td>Caxias</td>
+          <td>07/04/2026</td>
+          <td>Tamara Macanan</td>
+          <td>Recebido de Marielena Muchacho Pago por: O paciente</td>
+          <td>R$ 85,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 85,00</td>
+        </tr>
+        
+        <tr>
+          <td>Caxias</td>
+          <td>07/04/2026</td>
+          <td>Tamara Macanan</td>
+          <td>Recebido de Silvana Lemos da Silva Pago por: O paciente</td>
+          <td>R$ 374,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 374,00</td>
+        </tr>
+        
+        <tr>
+          <td>Caxias</td>
+          <td>07/04/2026</td>
+          <td>Tamara Macanan</td>
+          <td>Recebido de Silvana Lemos da Silva Pago por: O paciente</td>
+          <td>R$ 95,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 95,00</td>
+        </tr>
+        
+        <tr>
+          <td>Farroupilha</td>
+          <td>01/04/2026</td>
+          <td>Franciele Pedrotti</td>
+          <td>Recebido de Jussara da Silva- ALERGIA A LATEX Pago por: O paciente</td>
+          <td>R$ 120,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 120,00</td>
+        </tr>
+        
+        <tr>
+          <td>Farroupilha</td>
+          <td>06/04/2026</td>
+          <td>Adriele da Silva</td>
+          <td>Recebido de Kerolin Mayana da Silva - T Pago por: O paciente</td>
+          <td>R$ 85,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 85,00</td>
+        </tr>
+        
+        <tr>
+          <td>Farroupilha</td>
+          <td>07/04/2026</td>
+          <td>Adriele da Silva</td>
+          <td>Recebido de Gabriel Souza da Silva Pago por: O paciente</td>
+          <td>R$ 135,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 135,00</td>
+        </tr>
+        
+        <tr>
+          <td>Farroupilha</td>
+          <td>07/04/2026</td>
+          <td>Everlize Cipriani</td>
+          <td>Recebido de Anny Stefania Rodriguez Palmares Pago por: O paciente</td>
+          <td>R$ 158,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 158,00</td>
+        </tr>
+        
+        <tr>
+          <td>Farroupilha</td>
+          <td>07/04/2026</td>
+          <td>Adriele da Silva</td>
+          <td>Recebido de Marijane De Menezes Teixeira Pago por: O paciente</td>
+          <td>R$ 37,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 37,00</td>
+        </tr>
+        
+        <tr>
+          <td>Farroupilha</td>
+          <td>07/04/2026</td>
+          <td>Everlize Cipriani</td>
+          <td>Recebido de Vitor De Almeida Pago por: O paciente</td>
+          <td>R$ 120,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 120,00</td>
+        </tr>
+        
+        <tr>
+          <td>Farroupilha</td>
+          <td>07/04/2026</td>
+          <td>Everlize Cipriani</td>
+          <td>Recebido de Keila da Silva Padilha Pago por: O paciente</td>
+          <td>R$ 206,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 206,00</td>
+        </tr>
+        
+        <tr>
+          <td>Farroupilha</td>
+          <td>07/04/2026</td>
+          <td>Adriele da Silva</td>
+          <td>Recebido de Eduarda Zinn Lara Pago por: O paciente</td>
+          <td>R$ 201,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 201,00</td>
+        </tr>
+        
+        <tr>
+          <td>Farroupilha</td>
+          <td>07/04/2026</td>
+          <td>Franciele Pedrotti</td>
+          <td>Recebido de Janaina da Silva Alves Pago por: Rodrigo wulff</td>
+          <td>R$ 155,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 155,00</td>
+        </tr>
+        
+        <tr>
+          <td>Farroupilha</td>
+          <td>07/04/2026</td>
+          <td>Franciele Pedrotti</td>
+          <td>Recebido de Rodrigo Wulff Pago por: O paciente</td>
+          <td>R$ 155,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 155,00</td>
+        </tr>
+        
+        <tr>
+          <td>Farroupilha</td>
+          <td>07/04/2026</td>
+          <td>Everlize Cipriani</td>
+          <td>Recebido de Dieiny Ariele Santos Pago por: O paciente</td>
+          <td>R$ 247,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 247,00</td>
+        </tr>
+        
+        <tr>
+          <td>Farroupilha</td>
+          <td>07/04/2026</td>
+          <td>Everlize Cipriani</td>
+          <td>Recebido de Dieiny Ariele Santos Pago por: O paciente</td>
+          <td>R$ 120,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 120,00</td>
+        </tr>
+        
+        <tr>
+          <td>Farroupilha</td>
+          <td>07/04/2026</td>
+          <td>Everlize Cipriani</td>
+          <td>Recebido de Fernanda Mello Zacarias Pago por: O paciente</td>
+          <td>R$ 125,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 125,00</td>
+        </tr>
+        
+        <tr>
+          <td>Soledade</td>
+          <td>01/04/2026</td>
+          <td>Cristian Pressi</td>
+          <td>Recebido de Ana Rosa (L) Pago por: O paciente</td>
+          <td>R$ 150,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 150,00</td>
+        </tr>
+        
+        <tr>
+          <td>Soledade</td>
+          <td>01/04/2026</td>
+          <td>Cristian Pressi</td>
+          <td>Recebido de Kauane Ferreira De Oliveira Vans (C) Pago por: O paciente</td>
+          <td>R$ 85,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 85,00</td>
+        </tr>
+        
+        <tr>
+          <td>Soledade</td>
+          <td>01/04/2026</td>
+          <td>Cristian Pressi</td>
+          <td>Recebido de Raissa Machado dos Santos (L) Pago por: O paciente</td>
+          <td>R$ 120,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 120,00</td>
+        </tr>
+        
+        <tr>
+          <td>Soledade</td>
+          <td>01/04/2026</td>
+          <td>Cristian Pressi</td>
+          <td>Recebido de Bianca de Moraes (L) Pago por: O paciente</td>
+          <td>R$ 95,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 95,00</td>
+        </tr>
+        
+        <tr>
+          <td>Soledade</td>
+          <td>01/04/2026</td>
+          <td>Cristian Pressi</td>
+          <td>Recebido de Iago Jesus Salles (L) Pago por: O paciente</td>
+          <td>R$ 206,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 206,00</td>
+        </tr>
+        
+        <tr>
+          <td>Soledade</td>
+          <td>01/04/2026</td>
+          <td>Cristian Pressi</td>
+          <td>Recebido de Iago Jesus Salles (L) Pago por: O paciente</td>
+          <td>R$ 95,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 95,00</td>
+        </tr>
+        
+        <tr>
+          <td>Soledade</td>
+          <td>01/04/2026</td>
+          <td>Cristian Pressi</td>
+          <td>Recebido de Cassiane dos Santos da Silva Pago por: O paciente</td>
+          <td>R$ 206,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 206,00</td>
+        </tr>
+        
+        <tr>
+          <td>Soledade</td>
+          <td>01/04/2026</td>
+          <td>Cristian Pressi</td>
+          <td>Recebido de Cassiane dos Santos da Silva Pago por: O paciente</td>
+          <td>R$ 99,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 99,00</td>
+        </tr>
+        
+        <tr>
+          <td>Soledade</td>
+          <td>01/04/2026</td>
+          <td>Cristian Pressi</td>
+          <td>Recebido de José Carlos Dos Santos Padilha (C) Pago por: O paciente</td>
+          <td>R$ 99,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 99,00</td>
+        </tr>
+        
+        <tr>
+          <td>Soledade</td>
+          <td>02/04/2026</td>
+          <td>Cristian Pressi</td>
+          <td>Recebido de Ana Rosa (L) Pago por: O paciente</td>
+          <td>R$ 100,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 100,00</td>
+        </tr>
+        
+        <tr>
+          <td>Soledade</td>
+          <td>02/04/2026</td>
+          <td>Cristian Pressi</td>
+          <td>Recebido de Ana Julia dos Santos Ferreira Rodrigues (L) Pago por: TERESA DOS SANTOS FERREIRA</td>
+          <td>R$ 250,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 250,00</td>
+        </tr>
+        
+        <tr>
+          <td>Soledade</td>
+          <td>03/04/2026</td>
+          <td>Cristian Pressi</td>
+          <td>Recebido de Ana Rosa (L) Pago por: O paciente</td>
+          <td>R$ 100,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 100,00</td>
+        </tr>
+        
+        <tr>
+          <td>Soledade</td>
+          <td>06/04/2026</td>
+          <td>Cristian Pressi</td>
+          <td>Recebido de Emerson da Silva Miranda (C) Pago por: O paciente</td>
+          <td>R$ 120,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 120,00</td>
+        </tr>
+        
+        <tr>
+          <td>Soledade</td>
+          <td>07/04/2026</td>
+          <td>Cristian Pressi</td>
+          <td>Recebido de Diovana Justus Maciel (C) Pago por: O paciente</td>
+          <td>R$ 85,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 85,00</td>
+        </tr>
+        
+        <tr>
+          <td>Soledade</td>
+          <td>07/04/2026</td>
+          <td>Cristian Pressi</td>
+          <td>Recebido de Alexandre dos Santos Pago por: O paciente</td>
+          <td>R$ 125,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 125,00</td>
+        </tr>
+        
+        <tr>
+          <td>Soledade</td>
+          <td>07/04/2026</td>
+          <td>Cristian Pressi</td>
+          <td>Recebido de Jair Henrique Borges da Silva (C) Pago por: JOSIANE BORGES</td>
+          <td>R$ 100,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 100,00</td>
+        </tr>
+        
+        <tr>
+          <td>Soledade</td>
+          <td>07/04/2026</td>
+          <td>Cristian Pressi</td>
+          <td>Recebido de Alice Aparecida Souza De Moraes (C) Pago por: O paciente</td>
+          <td>R$ 95,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 95,00</td>
+        </tr>
+        
+        <tr>
+          <td>Soledade</td>
+          <td>07/04/2026</td>
+          <td>Cristian Pressi</td>
+          <td>Recebido de Thalia Muniz (C) Pago por: Dionatã Farias Moraes</td>
+          <td>R$ 148,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 148,00</td>
+        </tr>
+        
+        <tr>
+          <td>Soledade</td>
+          <td>07/04/2026</td>
+          <td>Cristian Pressi</td>
+          <td>Recebido de Veronica Quevedo Pena (C) Pago por: O paciente</td>
+          <td>R$ 120,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 120,00</td>
+        </tr>
+        
+        <tr>
+          <td>Soledade</td>
+          <td>07/04/2026</td>
+          <td>Cristian Pressi</td>
+          <td>Recebido de Micaele Costa dos Reis (C) Pago por: O paciente</td>
+          <td>R$ 99,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 99,00</td>
+        </tr>
+        
+        <tr>
+          <td>Soledade</td>
+          <td>07/04/2026</td>
+          <td>Gabrielli Fabonato</td>
+          <td>Recebido de Alexandre dos Santos Pago por: O paciente</td>
+          <td>R$ 195,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 195,00</td>
+        </tr>
+        
+        <tr>
+          <td>Soledade</td>
+          <td>07/04/2026</td>
+          <td>Gabrielli Fabonato</td>
+          <td>Recebido de Schaiane Ribeiro (C) Pago por: O paciente</td>
+          <td>R$ 195,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 195,00</td>
+        </tr>
+        
+        <tr>
+          <td>Soledade</td>
+          <td>07/04/2026</td>
+          <td>Cristian Pressi</td>
+          <td>Recebido de Guilherme dos Santos (C) Pago por: O paciente</td>
+          <td>R$ 105,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 105,00</td>
+        </tr>
+        
+        <tr>
+          <td>Soledade</td>
+          <td>07/04/2026</td>
+          <td>Cristian Pressi</td>
+          <td>Recebido de Robson Soares De Oliveira (C) Pago por: O paciente</td>
+          <td>R$ 95,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 95,00</td>
+        </tr>
+        
+        <tr>
+          <td>Soledade</td>
+          <td>08/04/2026</td>
+          <td>Cristian Pressi</td>
+          <td>Recebido de Wagner Moraes Carvalho (L) Pago por: O paciente</td>
+          <td>R$ 95,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 95,00</td>
+        </tr>
+        
+        <tr>
+          <td>Soledade</td>
+          <td>08/04/2026</td>
+          <td>Cristian Pressi</td>
+          <td>Recebido de Jesus David Castro Perez Pago por: O paciente</td>
+          <td>R$ 120,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 120,00</td>
+        </tr>
+        
+        <tr>
+          <td>Garibaldi</td>
+          <td>07/04/2026</td>
+          <td>Sofie Owens</td>
+          <td>Recebido de Helena da Silva Rumpel Pago por: Wellington Francisco Marques Varel</td>
+          <td>R$ 105,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 105,00</td>
+        </tr>
+        
+        <tr>
+          <td>Garibaldi</td>
+          <td>07/04/2026</td>
+          <td>Sofie Owens</td>
+          <td>Recebido de Liandra Rafaela Da Silva Pago por: O paciente</td>
+          <td>R$ 158,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 158,00</td>
+        </tr>
+        
+        <tr>
+          <td>Garibaldi</td>
+          <td>07/04/2026</td>
+          <td>Sofie Owens</td>
+          <td>Recebido de Gilderlan Enzo Fernandes da Silva Pago por: O paciente</td>
+          <td>R$ 95,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 95,00</td>
+        </tr>
+        
+        <tr>
+          <td>Garibaldi</td>
+          <td>07/04/2026</td>
+          <td>Sofie Owens</td>
+          <td>Recebido de Edna Regina Fernandes de Andrade Pago por: Gilderlan e F SILVA</td>
+          <td>R$ 95,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 95,00</td>
+        </tr>
+        
+        <tr>
+          <td>Garibaldi</td>
+          <td>07/04/2026</td>
+          <td>Sofie Owens</td>
+          <td>Recebido de Keliane Machado Correia Pago por: O paciente</td>
+          <td>R$ 206,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 206,00</td>
+        </tr>
+        
+        <tr>
+          <td>Garibaldi</td>
+          <td>07/04/2026</td>
+          <td>Sofie Owens</td>
+          <td>Recebido de Keliane Machado Correia Pago por: O paciente</td>
+          <td>R$ 120,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 120,00</td>
+        </tr>
+        
+        <tr>
+          <td>Garibaldi</td>
+          <td>07/04/2026</td>
+          <td>Sofie Owens</td>
+          <td>Recebido de Douglas de Azevedo dos Santos Pago por: O paciente</td>
+          <td>R$ 98,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 98,00</td>
+        </tr>
+        
+        <tr>
+          <td>Garibaldi</td>
+          <td>07/04/2026</td>
+          <td>Sofie Owens</td>
+          <td>Recebido de Rickzander Isaac Antonio Pago por: O paciente</td>
+          <td>R$ 155,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 155,00</td>
+        </tr>
+        
+        <tr>
+          <td>Garibaldi</td>
+          <td>07/04/2026</td>
+          <td>Sofie Owens</td>
+          <td>Recebido de Emyly Hadassa Winkelnann da Mota Pago por: Eliliane winkelnann da mota (mãe)</td>
+          <td>R$ 120,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 120,00</td>
+        </tr>
+        
+        <tr>
+          <td>Garibaldi</td>
+          <td>07/04/2026</td>
+          <td>Sofie Owens</td>
+          <td>Recebido de Maiquel Michelli Pago por: O paciente</td>
+          <td>R$ 120,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 120,00</td>
+        </tr>
+        
+        <tr>
+          <td>Garibaldi</td>
+          <td>07/04/2026</td>
+          <td>Sofie Owens</td>
+          <td>Recebido de Cristian José Solano Pago por: O paciente</td>
+          <td>R$ 105,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 105,00</td>
+        </tr>
+        
+        <tr>
+          <td>Garibaldi</td>
+          <td>07/04/2026</td>
+          <td>Sofie Owens</td>
+          <td>Recebido de Eduarda Couto Da Silva Pago por: Cristian José Solano</td>
+          <td>R$ 95,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 95,00</td>
+        </tr>
+        
+        <tr>
+          <td>FloresDaCunha</td>
+          <td>06/04/2026</td>
+          <td>Dionathan Pohlmann</td>
+          <td>Recebido de Luan Rodrigues Sarges Pago por: O paciente</td>
+          <td>R$ 289,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 289,00</td>
+        </tr>
+        
+        <tr>
+          <td>FloresDaCunha</td>
+          <td>06/04/2026</td>
+          <td>Dionathan Pohlmann</td>
+          <td>Recebido de Vanderlei dos Santos Araujo Pago por: O paciente</td>
+          <td>R$ 97,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 97,00</td>
+        </tr>
+        
+        <tr>
+          <td>FloresDaCunha</td>
+          <td>06/04/2026</td>
+          <td>Dionathan Pohlmann</td>
+          <td>Recebido de Ricardo Cavagnoli Pago por: O paciente</td>
+          <td>R$ 247,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 247,00</td>
+        </tr>
+        
+        <tr>
+          <td>FloresDaCunha</td>
+          <td>07/04/2026</td>
+          <td>Dionathan Pohlmann</td>
+          <td>Recebido de Laura Vitoria de Camargo Tabaczinski Pago por: O paciente</td>
+          <td>R$ 195,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 195,00</td>
+        </tr>
+        
+        <tr>
+          <td>FloresDaCunha</td>
+          <td>07/04/2026</td>
+          <td>Dionathan Pohlmann</td>
+          <td>Recebido de Laura Vitoria de Camargo Tabaczinski Pago por: O paciente</td>
+          <td>R$ 85,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 85,00</td>
+        </tr>
+        
+        <tr>
+          <td>FloresDaCunha</td>
+          <td>07/04/2026</td>
+          <td>Dionathan Pohlmann</td>
+          <td>Recebido de Bryan Rodrigues Back Pago por: O paciente</td>
+          <td>R$ 99,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 99,00</td>
+        </tr>
+        
+        <tr>
+          <td>FloresDaCunha</td>
+          <td>07/04/2026</td>
+          <td>Dionathan Pohlmann</td>
+          <td>Recebido de João Pedro Lazzaron Da Silva Pago por: O paciente</td>
+          <td>R$ 195,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 195,00</td>
+        </tr>
+        
+        <tr>
+          <td>FloresDaCunha</td>
+          <td>07/04/2026</td>
+          <td>Dionathan Pohlmann</td>
+          <td>Recebido de João Pedro Lazzaron Da Silva Pago por: O paciente</td>
+          <td>R$ 85,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 85,00</td>
+        </tr>
+        
+        <tr>
+          <td>FloresDaCunha</td>
+          <td>07/04/2026</td>
+          <td>Dionathan Pohlmann</td>
+          <td>Recebido de Alessandra dos Santos Mabilia Pago por: O paciente</td>
+          <td>R$ 120,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 120,00</td>
+        </tr>
+        
+        <tr>
+          <td>FloresDaCunha</td>
+          <td>07/04/2026</td>
+          <td>Dionathan Pohlmann</td>
+          <td>Recebido de Manuela Pauletti Pago por: O paciente</td>
+          <td>R$ 156,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 156,00</td>
+        </tr>
+        
+        <tr>
+          <td>FloresDaCunha</td>
+          <td>07/04/2026</td>
+          <td>Dionathan Pohlmann</td>
+          <td>Recebido de Manuela Pauletti Pago por: O paciente</td>
+          <td>R$ 105,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 105,00</td>
+        </tr>
+        
+        <tr>
+          <td>FloresDaCunha</td>
+          <td>07/04/2026</td>
+          <td>Dionathan Pohlmann</td>
+          <td>Recebido de Mirian Cabo Alves DIAGNÓSTICO Pago por: O paciente</td>
+          <td>R$ 95,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 95,00</td>
+        </tr>
+        
+        <tr>
+          <td>FloresDaCunha</td>
+          <td>07/04/2026</td>
+          <td>Dionathan Pohlmann</td>
+          <td>Recebido de Eliza Kessner Pedroso Pacheco Pago por: Norma Lucia Ribeiro Pedroso</td>
+          <td>R$ 105,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 105,00</td>
+        </tr>
+        
+        <tr>
+          <td>FloresDaCunha</td>
+          <td>07/04/2026</td>
+          <td>Dionathan Pohlmann</td>
+          <td>Recebido de Eduarda Pedroso Kessner Pacheco Pago por: Norma Lucia Ribeiro Pedroso</td>
+          <td>R$ 105,00</td>
+          <td>R$ 0,00</td>
+          <td class="alerta">R$ 105,00</td>
+        </tr>
+        
+          </tbody>
+        </table>
+      </div>
+    </section>
+    
+    
+    <section class="bloco">
+      <h2>Erros</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Unidade</th>
+              <th>Erro</th>
+              <th>Data/Hora</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td colspan="3">Sem erros</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    
+  </div>
+</body>
+</html>
