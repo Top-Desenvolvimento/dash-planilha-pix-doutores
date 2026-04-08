@@ -2,13 +2,14 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Optional
 
 
-ARQUIVO_PIX = Path("data/pix_doutores.json")
-ARQUIVO_SALDOS = Path("data/saldos_doutores.json")
-ARQUIVO_RESUMO = Path("data/resumo_pix_doutores.json")
-ARQUIVO_HTML = Path("data/dashboard.html")
+DATA_DIR = Path("data")
+ARQUIVO_PIX = DATA_DIR / "pix_doutores.json"
+ARQUIVO_SALDOS = DATA_DIR / "saldos_doutores.json"
+ARQUIVO_RESUMO = DATA_DIR / "resumo_pix_doutores.json"
+ARQUIVO_HTML = DATA_DIR / "dashboard.html"
 
 
 def carregar_json(caminho: Path, padrao: Any) -> Any:
@@ -17,6 +18,12 @@ def carregar_json(caminho: Path, padrao: Any) -> Any:
 
     with open(caminho, "r", encoding="utf-8") as f:
         return json.load(f)
+
+
+def salvar_texto(caminho: Path, conteudo: str) -> None:
+    caminho.parent.mkdir(parents=True, exist_ok=True)
+    with open(caminho, "w", encoding="utf-8") as f:
+        f.write(conteudo)
 
 
 def formatar_moeda(valor: Any) -> str:
@@ -55,64 +62,41 @@ def garantir_dict(valor: Any) -> Dict[str, Any]:
     return {}
 
 
-def normalizar_saldos(saldos: Any) -> List[Dict[str, Any]]:
-    """
-    Normaliza o conteúdo de saldos_doutores.json para evitar quebra quando:
-    - vier lista de dicionários
-    - vier lista de strings
-    - vier dict
-    - vier dict com chave 'saldos'
-    """
-    if isinstance(saldos, dict):
-        if isinstance(saldos.get("saldos"), list):
-            origem = saldos.get("saldos", [])
-        else:
-            origem = list(saldos.values())
-    elif isinstance(saldos, list):
-        origem = saldos
-    else:
-        origem = []
+def obter_competencia_do_resumo(resumo: Dict[str, Any]) -> Optional[str]:
+    competencia = str(resumo.get("competencia") or "").strip()
+    if competencia:
+        return competencia
+    return None
 
-    saida: List[Dict[str, Any]] = []
 
-    for item in origem:
-        if isinstance(item, dict):
-            doutor = item.get("doutor") or item.get("nome") or item.get("doutor_final") or "Não informado"
-            credito_inicial = item.get("credito_inicial", item.get("credito", 0.0))
-            credito_disponivel = item.get("credito_disponivel", item.get("credito_final", 0.0))
-            utilizado = item.get("utilizado", 0.0)
+def obter_arquivo_saldos_por_competencia(competencia: Optional[str]) -> Path:
+    if competencia:
+        candidato = DATA_DIR / f"saldos_doutores_{competencia}.json"
+        if candidato.exists():
+            return candidato
+    return ARQUIVO_SALDOS
 
-            try:
-                credito_inicial = float(credito_inicial or 0)
-            except Exception:
-                credito_inicial = 0.0
 
-            try:
-                credito_disponivel = float(credito_disponivel or 0)
-            except Exception:
-                credito_disponivel = 0.0
+def obter_arquivo_pix_por_competencia(competencia: Optional[str]) -> Path:
+    if competencia:
+        candidato = DATA_DIR / f"pix_doutores_{competencia}.json"
+        if candidato.exists():
+            return candidato
+    return ARQUIVO_PIX
 
-            try:
-                utilizado = float(utilizado or 0)
-            except Exception:
-                utilizado = 0.0
 
-            saida.append({
-                "doutor": doutor,
-                "credito_inicial": credito_inicial,
-                "credito_disponivel": credito_disponivel,
-                "utilizado": utilizado,
-            })
-
-        elif isinstance(item, str):
-            saida.append({
-                "doutor": item,
-                "credito_inicial": 0.0,
-                "credito_disponivel": 0.0,
-                "utilizado": 0.0,
-            })
-
-    return saida
+def normalizar_resumo(resumo: Any) -> Dict[str, Any]:
+    resumo = garantir_dict(resumo)
+    return {
+        "quantidade_total": resumo.get("quantidade_total", 0),
+        "valor_total": resumo.get("valor_total", 0.0),
+        "valor_total_descontado": resumo.get("valor_total_descontado", 0.0),
+        "valor_total_pendente": resumo.get("valor_total_pendente", 0.0),
+        "competencia": resumo.get("competencia", "-"),
+        "gerado_em": resumo.get("gerado_em", "-"),
+        "por_unidade": garantir_lista(resumo.get("por_unidade", [])),
+        "por_doutor": garantir_lista(resumo.get("por_doutor", [])),
+    }
 
 
 def normalizar_registros(registros: Any) -> List[Dict[str, Any]]:
@@ -136,18 +120,58 @@ def normalizar_registros(registros: Any) -> List[Dict[str, Any]]:
     return saida
 
 
-def normalizar_resumo(resumo: Any) -> Dict[str, Any]:
-    resumo = garantir_dict(resumo)
-    return {
-        "quantidade_total": resumo.get("quantidade_total", 0),
-        "valor_total": resumo.get("valor_total", 0.0),
-        "valor_total_descontado": resumo.get("valor_total_descontado", 0.0),
-        "valor_total_pendente": resumo.get("valor_total_pendente", 0.0),
-        "competencia": resumo.get("competencia", "-"),
-        "gerado_em": resumo.get("gerado_em", "-"),
-        "por_unidade": garantir_lista(resumo.get("por_unidade", [])),
-        "por_doutor": garantir_lista(resumo.get("por_doutor", [])),
-    }
+def normalizar_saldos(saldos: Any) -> List[Dict[str, Any]]:
+    if isinstance(saldos, dict):
+        if isinstance(saldos.get("saldos"), list):
+            origem = saldos["saldos"]
+        else:
+            origem = list(saldos.values())
+    elif isinstance(saldos, list):
+        origem = saldos
+    else:
+        origem = []
+
+    saida: List[Dict[str, Any]] = []
+
+    for item in origem:
+        if isinstance(item, dict):
+            doutor = item.get("doutor") or item.get("nome") or item.get("doutor_final") or "Não informado"
+
+            try:
+                credito_inicial = float(item.get("credito_inicial", item.get("credito", 0.0)) or 0.0)
+            except Exception:
+                credito_inicial = 0.0
+
+            try:
+                utilizado = float(item.get("utilizado", 0.0) or 0.0)
+            except Exception:
+                utilizado = 0.0
+
+            try:
+                credito_disponivel = float(
+                    item.get("credito_disponivel", item.get("credito_final", 0.0)) or 0.0
+                )
+            except Exception:
+                credito_disponivel = 0.0
+
+            saida.append({
+                "doutor": doutor,
+                "credito_inicial": credito_inicial,
+                "utilizado": utilizado,
+                "credito_disponivel": credito_disponivel,
+                "pix_key": item.get("pix_key", ""),
+            })
+
+        elif isinstance(item, str):
+            saida.append({
+                "doutor": item,
+                "credito_inicial": 0.0,
+                "utilizado": 0.0,
+                "credito_disponivel": 0.0,
+                "pix_key": "",
+            })
+
+    return saida
 
 
 def montar_cards_resumo(resumo: Dict[str, Any]) -> str:
@@ -316,7 +340,11 @@ def montar_tabela_registros(registros: List[Dict[str, Any]]) -> str:
         if not isinstance(item, dict):
             continue
 
-        pendente = float(item.get("pendente", 0.0) or 0.0)
+        try:
+            pendente = float(item.get("pendente", 0.0) or 0.0)
+        except Exception:
+            pendente = 0.0
+
         classe_pendente = "alerta" if pendente > 0 else "ok"
 
         trs.append(f"""
@@ -390,7 +418,13 @@ def montar_tabela_erros(registros: List[Dict[str, Any]]) -> str:
     """
 
 
-def gerar_html(resumo: Dict[str, Any], saldos: Any, registros: List[Dict[str, Any]]) -> str:
+def gerar_html(
+    resumo: Dict[str, Any],
+    saldos: List[Dict[str, Any]],
+    registros: List[Dict[str, Any]],
+    arquivo_saldos_usado: Path,
+    arquivo_pix_usado: Path,
+) -> str:
     registros_validos = [r for r in registros if isinstance(r, dict) and "erro" not in r]
 
     return f"""<!DOCTYPE html>
@@ -425,6 +459,16 @@ def gerar_html(resumo: Dict[str, Any], saldos: Any, registros: List[Dict[str, An
     .sub {{
       margin-bottom: 24px;
       color: #6b7280;
+    }}
+
+    .info {{
+      margin-bottom: 24px;
+      padding: 12px 14px;
+      background: #eef2ff;
+      border: 1px solid #c7d2fe;
+      border-radius: 10px;
+      color: #3730a3;
+      font-size: 14px;
     }}
 
     .cards {{
@@ -528,6 +572,11 @@ def gerar_html(resumo: Dict[str, Any], saldos: Any, registros: List[Dict[str, An
   <div class="container">
     <h1>Dashboard PIX Doutores</h1>
     <div class="sub">Relatório gerado automaticamente com base nos arquivos da pasta data.</div>
+    <div class="info">
+      Competência detectada: <strong>{escape_html(resumo.get("competencia", "-"))}</strong><br />
+      Arquivo PIX usado: <strong>{escape_html(arquivo_pix_usado.name)}</strong><br />
+      Arquivo de saldos usado: <strong>{escape_html(arquivo_saldos_usado.name)}</strong>
+    </div>
 
     {montar_cards_resumo(resumo)}
     {montar_tabela_unidades(resumo)}
@@ -542,21 +591,33 @@ def gerar_html(resumo: Dict[str, Any], saldos: Any, registros: List[Dict[str, An
 
 
 def main() -> None:
-    registros_brutos = carregar_json(ARQUIVO_PIX, [])
-    saldos_brutos = carregar_json(ARQUIVO_SALDOS, [])
     resumo_bruto = carregar_json(ARQUIVO_RESUMO, {})
-
-    registros = normalizar_registros(registros_brutos)
-    saldos = normalizar_saldos(saldos_brutos)
     resumo = normalizar_resumo(resumo_bruto)
 
-    html = gerar_html(resumo, saldos, registros)
+    competencia = obter_competencia_do_resumo(resumo)
 
-    ARQUIVO_HTML.parent.mkdir(parents=True, exist_ok=True)
-    with open(ARQUIVO_HTML, "w", encoding="utf-8") as f:
-        f.write(html)
+    arquivo_saldos_usado = obter_arquivo_saldos_por_competencia(competencia)
+    arquivo_pix_usado = obter_arquivo_pix_por_competencia(competencia)
 
+    saldos_brutos = carregar_json(arquivo_saldos_usado, [])
+    registros_brutos = carregar_json(arquivo_pix_usado, [])
+
+    saldos = normalizar_saldos(saldos_brutos)
+    registros = normalizar_registros(registros_brutos)
+
+    html = gerar_html(
+        resumo=resumo,
+        saldos=saldos,
+        registros=registros,
+        arquivo_saldos_usado=arquivo_saldos_usado,
+        arquivo_pix_usado=arquivo_pix_usado,
+    )
+
+    salvar_texto(ARQUIVO_HTML, html)
     print(f"[OK] Dashboard gerado em: {ARQUIVO_HTML}")
+    print(f"[OK] Competência detectada: {competencia}")
+    print(f"[OK] Arquivo PIX usado: {arquivo_pix_usado}")
+    print(f"[OK] Arquivo saldos usado: {arquivo_saldos_usado}")
 
 
 if __name__ == "__main__":
