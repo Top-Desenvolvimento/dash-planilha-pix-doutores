@@ -593,13 +593,19 @@ async function carregarDoutoresAdmin() {
     tbody.innerHTML = doutores.map(item => {
       const saldo = saldoPorDoutor[item.id] || {};
 
+      const creditoBase = Number(item.credito || 0);
+      const creditoInicial = Number(saldo.credito_inicial ?? creditoBase);
+      const utilizado = Number(saldo.utilizado ?? 0);
+      const saldoFinal = Number(saldo.credito_final ?? creditoInicial);
+      const responsavelUltimo = saldo.updated_by_nome || saldo.updated_by_email || item.updated_by_nome || item.updated_by_email || "";
+
       return `
         <tr>
           <td><input data-id="${item.id}" data-field="nome" type="text" value="${escapeHtml(item.nome)}" /></td>
-          <td><input data-id="${item.id}" data-field="credito" type="number" step="0.01" value="${Number(item.credito || 0)}" /></td>
-          <td>${formatarMoeda(saldo.credito_inicial ?? item.credito ?? 0)}</td>
-          <td>${formatarMoeda(saldo.utilizado ?? 0)}</td>
-          <td>${formatarMoeda(saldo.credito_final ?? item.credito ?? 0)}</td>
+          <td><input data-id="${item.id}" data-field="credito" type="number" step="0.01" value="${creditoBase}" /></td>
+          <td><input data-id="${item.id}" data-field="credito_inicial" type="number" step="0.01" value="${creditoInicial}" /></td>
+          <td><input data-id="${item.id}" data-field="utilizado" type="number" step="0.01" value="${utilizado}" /></td>
+          <td><input data-id="${item.id}" data-field="credito_final" type="number" step="0.01" value="${saldoFinal}" /></td>
           <td><input data-id="${item.id}" data-field="pix_key" type="text" value="${escapeHtml(item.pix_key || "")}" /></td>
           <td>
             <select data-id="${item.id}" data-field="ativo">
@@ -608,7 +614,7 @@ async function carregarDoutoresAdmin() {
             </select>
           </td>
           <td><input data-id="${item.id}" data-field="observacao" type="text" value="${escapeHtml(saldo.observacao || "")}" /></td>
-          <td>${escapeHtml(saldo.updated_by_email || item.updated_by_email || "")}</td>
+          <td>${escapeHtml(responsavelUltimo)}</td>
           <td>
             <button class="btn btn-primary btn-small" onclick="salvarDoutor('${item.id}')">Salvar</button>
             <button class="btn btn-secondary btn-small" onclick="removerDoutor('${item.id}')">Excluir</button>
@@ -622,84 +628,77 @@ async function carregarDoutoresAdmin() {
   }
 }
 
-async function salvarDoutor(id) {
+async function carregarDoutoresAdmin() {
+  const tbody = byId("tabelaAdminDoutores");
+  if (!tbody) return;
+
+  tbody.innerHTML = `<tr><td colspan="10" class="empty-state">Carregando...</td></tr>`;
+
+  const competencia = getCompetenciaAtual();
+  const client = validarSupabasePronto();
+
   try {
-    mostrarMensagemAdmin("");
-    const competencia = getCompetenciaAtual();
-    const client = validarSupabasePronto();
+    const { data: doutores, error: errorDoutores } = await client
+      .from("doutores_config")
+      .select("*")
+      .order("nome", { ascending: true });
 
-    const nome = document.querySelector(`[data-id="${id}"][data-field="nome"]`)?.value.trim() || "";
-    const credito = parseFloat(document.querySelector(`[data-id="${id}"][data-field="credito"]`)?.value || "0");
-    const pixKey = document.querySelector(`[data-id="${id}"][data-field="pix_key"]`)?.value.trim() || "";
-    const ativo = document.querySelector(`[data-id="${id}"][data-field="ativo"]`)?.value === "true";
-    const observacao = document.querySelector(`[data-id="${id}"][data-field="observacao"]`)?.value.trim() || null;
+    if (errorDoutores) throw errorDoutores;
 
-    if (!nome) {
-      mostrarMensagemAdmin("Nome é obrigatório.", true);
+    const { data: saldos, error: errorSaldos } = await client
+      .from("doutores_saldos_mensais")
+      .select("*")
+      .eq("competencia", competencia);
+
+    if (errorSaldos) throw errorSaldos;
+
+    const saldoPorDoutor = {};
+    for (const item of saldos || []) {
+      saldoPorDoutor[item.doutor_id] = item;
+    }
+
+    if (!doutores || !doutores.length) {
+      tbody.innerHTML = `<tr><td colspan="10" class="empty-state">Nenhum doutor cadastrado</td></tr>`;
       return;
     }
 
-    const { data: userData } = await client.auth.getUser();
-    const emailAtual = userData?.user?.email || null;
+    tbody.innerHTML = doutores.map(item => {
+      const saldo = saldoPorDoutor[item.id] || {};
 
-    const { error: errorDoutor } = await client
-      .from("doutores_config")
-      .update({
-        nome,
-        nome_normalizado: normalizarNome(nome),
-        credito,
-        pix_key: pixKey || null,
-        ativo,
-        updated_by_email: emailAtual
-      })
-      .eq("id", id);
+      const creditoBase = Number(item.credito || 0);
+      const creditoInicial = Number(saldo.credito_inicial ?? creditoBase);
+      const utilizado = Number(saldo.utilizado ?? 0);
+      const saldoFinal = Number(saldo.credito_final ?? creditoInicial);
+      const responsavelUltimo = saldo.updated_by_nome || saldo.updated_by_email || item.updated_by_nome || item.updated_by_email || "";
 
-    if (errorDoutor) throw errorDoutor;
-
-    const { data: saldoExistente, error: errorBuscaSaldo } = await client
-      .from("doutores_saldos_mensais")
-      .select("*")
-      .eq("competencia", competencia)
-      .eq("doutor_id", id)
-      .maybeSingle();
-
-    if (errorBuscaSaldo) throw errorBuscaSaldo;
-
-    if (saldoExistente) {
-      const { error: errorSaldo } = await client
-        .from("doutores_saldos_mensais")
-        .update({
-          observacao,
-          updated_by_email: emailAtual
-        })
-        .eq("id", saldoExistente.id);
-
-      if (errorSaldo) throw errorSaldo;
-    } else {
-      const { error: errorInsertSaldo } = await client
-        .from("doutores_saldos_mensais")
-        .insert({
-          competencia,
-          doutor_id: id,
-          credito_inicial: credito,
-          utilizado: 0,
-          credito_final: credito,
-          observacao,
-          updated_by_email: emailAtual
-        });
-
-      if (errorInsertSaldo) throw errorInsertSaldo;
-    }
-
-    mostrarMensagemAdmin("Doutor salvo com sucesso.");
-    await carregarDoutoresAdmin();
-    await carregarDashboardInterno();
+      return `
+        <tr>
+          <td><input data-id="${item.id}" data-field="nome" type="text" value="${escapeHtml(item.nome)}" /></td>
+          <td><input data-id="${item.id}" data-field="credito" type="number" step="0.01" value="${creditoBase}" /></td>
+          <td><input data-id="${item.id}" data-field="credito_inicial" type="number" step="0.01" value="${creditoInicial}" /></td>
+          <td><input data-id="${item.id}" data-field="utilizado" type="number" step="0.01" value="${utilizado}" /></td>
+          <td><input data-id="${item.id}" data-field="credito_final" type="number" step="0.01" value="${saldoFinal}" /></td>
+          <td><input data-id="${item.id}" data-field="pix_key" type="text" value="${escapeHtml(item.pix_key || "")}" /></td>
+          <td>
+            <select data-id="${item.id}" data-field="ativo">
+              <option value="true" ${item.ativo ? "selected" : ""}>Ativo</option>
+              <option value="false" ${!item.ativo ? "selected" : ""}>Inativo</option>
+            </select>
+          </td>
+          <td><input data-id="${item.id}" data-field="observacao" type="text" value="${escapeHtml(saldo.observacao || "")}" /></td>
+          <td>${escapeHtml(responsavelUltimo)}</td>
+          <td>
+            <button class="btn btn-primary btn-small" onclick="salvarDoutor('${item.id}')">Salvar</button>
+            <button class="btn btn-secondary btn-small" onclick="removerDoutor('${item.id}')">Excluir</button>
+          </td>
+        </tr>
+      `;
+    }).join("");
   } catch (err) {
     console.error(err);
-    mostrarMensagemAdmin("Erro ao salvar doutor.", true);
+    tbody.innerHTML = `<tr><td colspan="10" class="empty-state">Erro ao carregar doutores</td></tr>`;
   }
 }
-
 async function removerDoutor(id) {
   if (!confirm("Tem certeza que deseja excluir este doutor?")) return;
 
@@ -737,7 +736,9 @@ async function adicionarDoutor() {
     }
 
     const { data: userData } = await client.auth.getUser();
-    const emailAtual = userData?.user?.email || null;
+    const userAtual = userData?.user || null;
+    const emailAtual = userAtual?.email || null;
+    const nomeResponsavel = obterNomeResponsavelAtual(userAtual);
 
     const { data: novoDoutor, error } = await client
       .from("doutores_config")
@@ -747,7 +748,8 @@ async function adicionarDoutor() {
         credito,
         pix_key: pixKey || null,
         ativo,
-        updated_by_email: emailAtual
+        updated_by_email: emailAtual,
+        updated_by_nome: nomeResponsavel
       })
       .select()
       .single();
@@ -764,8 +766,10 @@ async function adicionarDoutor() {
         credito_inicial: credito,
         utilizado: 0,
         credito_final: credito,
+        ajuste_manual: 0,
         observacao: null,
-        updated_by_email: emailAtual
+        updated_by_email: emailAtual,
+        updated_by_nome: nomeResponsavel
       });
 
     if (errorSaldo) throw errorSaldo;
