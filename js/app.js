@@ -50,7 +50,95 @@ function normalizarNome(nome) {
     .replace(/\s+/g, " ")
     .trim();
 }
+function byId(id) {
+  return document.getElementById(id);
+}
 
+function formatarMoeda(valor) {
+  return Number(valor || 0).toLocaleString("pt-BR", {
+    style: "currency",
+    currency: "BRL"
+  });
+}
+
+function escapeHtml(valor) {
+  return String(valor ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+function formatarCompetenciaLabel(competencia) {
+  const mapa = {
+    "01": "Jan",
+    "02": "Fev",
+    "03": "Mar",
+    "04": "Abr",
+    "05": "Mai",
+    "06": "Jun",
+    "07": "Jul",
+    "08": "Ago",
+    "09": "Set",
+    "10": "Out",
+    "11": "Nov",
+    "12": "Dez"
+  };
+
+  const [ano, mes] = String(competencia || "").split("-");
+  return `${mapa[mes] || mes}/${ano || ""}`;
+}
+
+function normalizarNome(nome) {
+  return String(nome || "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+/* COLE AS 2 FUNÇÕES NOVAS AQUI */
+function obterNomeResponsavelAtual(user) {
+  const meta = user?.user_metadata || {};
+  const nome =
+    meta.nome ||
+    meta.name ||
+    meta.full_name ||
+    meta.display_name ||
+    "";
+
+  if (String(nome).trim()) {
+    return String(nome).trim();
+  }
+
+  const email = user?.email || "";
+  if (email.includes("@")) {
+    return email.split("@")[0];
+  }
+
+  return "Não informado";
+}
+
+function calcularSaldoMensalAdmin(creditoInicial, utilizado, saldoDigitado = null) {
+  const credito = Number(creditoInicial || 0);
+  const uso = Number(utilizado || 0);
+
+  if (saldoDigitado !== null && saldoDigitado !== undefined && saldoDigitado !== "") {
+    return Number(saldoDigitado || 0);
+  }
+
+  return Number((credito - uso).toFixed(2));
+}
+/* FIM DAS FUNÇÕES NOVAS */
+
+function mostrarMensagemAuth(texto, erro = false) {
+  const el = byId("authMessage");
+  if (!el) return;
+  el.textContent = texto || "";
+  el.className = erro ? "auth-message error" : "auth-message";
+}
 function mostrarMensagemAuth(texto, erro = false) {
   const el = byId("authMessage");
   if (!el) return;
