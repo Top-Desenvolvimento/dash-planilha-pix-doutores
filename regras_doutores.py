@@ -21,7 +21,6 @@ ARQ_SALDOS_LOCAL = DATA_DIR / "doutores_saldos_mensais_local.json"
 
 HERDAR_SALDO_MES_ANTERIOR = False
 
-# aliases seguros para casar o nome do Dionathan sem quebrar o restante
 ALIASES_NOME_NORMALIZADO = {
     "cir.dionathan paim pohlmann": "dionathan pohlmann",
     "cir dionathan paim pohlmann": "dionathan pohlmann",
@@ -136,6 +135,7 @@ def carregar_doutores_config_local() -> List[Dict[str, Any]]:
             {"id": "28", "nome": "Leandro Diniz", "nome_normalizado": normalizar_nome("Leandro Diniz"), "credito": 400.00, "pix_key": "", "ativo": True},
             {"id": "29", "nome": "Letícia Cauzzi", "nome_normalizado": normalizar_nome("Letícia Cauzzi"), "credito": 4000.00, "pix_key": "", "ativo": True},
             {"id": "30", "nome": "Luiz Henrique", "nome_normalizado": normalizar_nome("Luiz Henrique"), "credito": 2500.00, "pix_key": "", "ativo": True},
+            {"id": "30", "nome": "Luisa Moraes Lucas", "nome_normalizado": normalizar_nome("Luisa Moraes Lucas"), "credito": 1500.00, "pix_key": "", "ativo": True},
             {"id": "31", "nome": "Leticia Canabarro (SOL)", "nome_normalizado": normalizar_nome("Leticia Canabarro (SOL)"), "credito": 900.00, "pix_key": "", "ativo": True},
             {"id": "32", "nome": "Marcella Zancanaro", "nome_normalizado": normalizar_nome("Marcella Zancanaro"), "credito": 1200.00, "pix_key": "", "ativo": True},
             {"id": "33", "nome": "Matheus Strapasson", "nome_normalizado": normalizar_nome("Matheus Strapasson"), "credito": 1000.00, "pix_key": "", "ativo": True},
