@@ -19,13 +19,24 @@ DATA_DIR = Path("data")
 ARQ_DOUTORES_LOCAL = DATA_DIR / "doutores_config_local.json"
 ARQ_SALDOS_LOCAL = DATA_DIR / "doutores_saldos_mensais_local.json"
 
-# Ajuste principal:
-# False = cada mês começa do crédito base cadastrado
-# True = herda o crédito final do mês anterior
 HERDAR_SALDO_MES_ANTERIOR = False
 
+# aliases seguros para casar o nome do Dionathan sem quebrar o restante
+ALIASES_NOME_NORMALIZADO = {
+    "cir.dionathan paim pohlmann": "dionathan pohlmann",
+    "cir dionathan paim pohlmann": "dionathan pohlmann",
+    "dionathan paim pohlmann": "dionathan pohlmann",
+    "cir.dionathan pohlmann": "dionathan pohlmann",
+    "cir dionathan pohlmann": "dionathan pohlmann",
+    "dionathan pohlmann": "dionathan pohlmann",
+}
 
-def normalizar_nome(nome: str) -> str:
+NOME_EXIBICAO_CANONICO = {
+    "dionathan pohlmann": "Dionathan Pohlmann",
+}
+
+
+def _normalizar_texto_base(nome: str) -> str:
     nome = (nome or "").strip().lower()
     nome = unicodedata.normalize("NFKD", nome)
     nome = "".join(c for c in nome if not unicodedata.combining(c))
@@ -33,9 +44,21 @@ def normalizar_nome(nome: str) -> str:
     return nome
 
 
+def normalizar_nome(nome: str) -> str:
+    base = _normalizar_texto_base(nome)
+    return ALIASES_NOME_NORMALIZADO.get(base, base)
+
+
+def ajustar_nome_exibicao(nome: str) -> str:
+    chave = normalizar_nome(nome)
+    if chave in NOME_EXIBICAO_CANONICO:
+        return NOME_EXIBICAO_CANONICO[chave]
+    return (nome or "").strip()
+
+
 def carregar_json(caminho: Path, padrao: Any) -> Any:
     if not caminho.exists():
-      return padrao
+        return padrao
     with open(caminho, "r", encoding="utf-8") as f:
         return json.load(f)
 
@@ -94,7 +117,7 @@ def carregar_doutores_config_local() -> List[Dict[str, Any]]:
             {"id": "9", "nome": "Bruno Lorenzoni", "nome_normalizado": normalizar_nome("Bruno Lorenzoni"), "credito": 0.00, "pix_key": "", "ativo": True},
             {"id": "10", "nome": "Cristian Pressi", "nome_normalizado": normalizar_nome("Cristian Pressi"), "credito": 8000.00, "pix_key": "", "ativo": True},
             {"id": "11", "nome": "Murilo Debortoli", "nome_normalizado": normalizar_nome("Murilo Debortoli"), "credito": 500.00, "pix_key": "", "ativo": True},
-            {"id": "12", "nome": "Dionathan Paim Pohlmann", "nome_normalizado": normalizar_nome("Dionathan Paim Pohlmann"), "credito": 6000.00, "pix_key": "", "ativo": True},
+            {"id": "12", "nome": "Dionathan Pohlmann", "nome_normalizado": normalizar_nome("Dionathan Pohlmann"), "credito": 6000.00, "pix_key": "", "ativo": True},
             {"id": "13", "nome": "Keyla Daniele", "nome_normalizado": normalizar_nome("Keyla Daniele"), "credito": 500.00, "pix_key": "", "ativo": True},
             {"id": "14", "nome": "Everlize Cipriani", "nome_normalizado": normalizar_nome("Everlize Cipriani"), "credito": 2000.00, "pix_key": "", "ativo": True},
             {"id": "15", "nome": "Fernana Sozo", "nome_normalizado": normalizar_nome("Fernana Sozo"), "credito": 1500.00, "pix_key": "", "ativo": True},
@@ -131,7 +154,21 @@ def carregar_doutores_config_local() -> List[Dict[str, Any]]:
             {"id": "46", "nome": "Thalia Vezzosi", "nome_normalizado": normalizar_nome("Thalia Vezzosi"), "credito": 2500.00, "pix_key": "", "ativo": True},
         ]
         salvar_json(dados, ARQ_DOUTORES_LOCAL)
-    return [d for d in dados if d.get("ativo", True)]
+
+    saida = []
+    for d in dados:
+        if not d.get("ativo", True):
+            continue
+        nome_exibicao = ajustar_nome_exibicao(d.get("nome", ""))
+        saida.append({
+            "id": d["id"],
+            "nome": nome_exibicao,
+            "nome_normalizado": normalizar_nome(nome_exibicao),
+            "credito": float(d.get("credito") or 0),
+            "pix_key": d.get("pix_key") or "",
+            "ativo": bool(d.get("ativo", True)),
+        })
+    return saida
 
 
 def carregar_doutores_config() -> List[Dict[str, Any]]:
@@ -153,10 +190,13 @@ def carregar_doutores_config() -> List[Dict[str, Any]]:
     for item in data:
         if not item.get("ativo", True):
             continue
+
+        nome_exibicao = ajustar_nome_exibicao(item["nome"])
+
         saida.append({
             "id": item["id"],
-            "nome": item["nome"],
-            "nome_normalizado": item.get("nome_normalizado") or normalizar_nome(item["nome"]),
+            "nome": nome_exibicao,
+            "nome_normalizado": normalizar_nome(nome_exibicao),
             "credito": float(item.get("credito") or 0),
             "pix_key": item.get("pix_key") or "",
             "ativo": bool(item.get("ativo", True)),
@@ -178,7 +218,7 @@ def carregar_saldos_mensais(competencia: str) -> List[Dict[str, Any]]:
 
     url = f"{SUPABASE_URL}/rest/v1/doutores_saldos_mensais"
     params = {
-        "select": "id,competencia,doutor_id,credito_inicial,utilizado,credito_final,ajuste_manual,observacao,updated_by_email",
+        "select": "id,competencia,doutor_id,credito_inicial,utilizado,credito_final,ajuste_manual,observacao,updated_by_email,updated_by_nome",
         "competencia": f"eq.{competencia}",
     }
     data = get_supabase(url, params)
@@ -214,6 +254,7 @@ def inicializar_saldos_competencia(competencia: str, competencia_anterior: Optio
             "ajuste_manual": 0.0,
             "observacao": None,
             "updated_by_email": None,
+            "updated_by_nome": None,
         })
 
     if usando_supabase():
@@ -226,48 +267,36 @@ def inicializar_saldos_competencia(competencia: str, competencia_anterior: Optio
     return payload
 
 
-def montar_mapa_creditos(
-    competencia: str,
-    competencia_anterior: Optional[str],
-    registros_pix: List[Dict[str, Any]]  # 🔥 NOVO
-) -> Dict[str, Dict[str, Any]]:
-
+def montar_mapa_creditos(competencia: str, competencia_anterior: Optional[str]) -> Dict[str, Dict[str, Any]]:
     doutores = carregar_doutores_config()
     saldos = inicializar_saldos_competencia(competencia, competencia_anterior)
 
-    # 🔥 soma REAL dos PIX por doutor
-    soma_por_doutor: Dict[str, float] = {}
-
-    for item in registros_pix:
-        nome = normalizar_nome(item.get("doutor_final"))
-        valor = float(item.get("valor", 0) or 0)
-
-        if not nome:
-            continue
-
-        soma_por_doutor[nome] = soma_por_doutor.get(nome, 0) + valor
-
+    saldos_por_doutor = {item["doutor_id"]: item for item in saldos}
     mapa: Dict[str, Dict[str, Any]] = {}
 
     for doutor in doutores:
-        nome_norm = doutor["nome_normalizado"]
-
+        saldo = saldos_por_doutor.get(doutor["id"])
         credito_inicial = float(doutor["credito"] or 0)
+        utilizado = 0.0
+        credito_final = credito_inicial
 
-        utilizado = round(soma_por_doutor.get(nome_norm, 0), 2)
-        credito_disponivel = round(credito_inicial - utilizado, 2)
+        if saldo:
+            credito_inicial = float(saldo.get("credito_inicial") or 0)
+            utilizado = float(saldo.get("utilizado") or 0)
+            credito_final = float(saldo.get("credito_final") or 0)
 
-        mapa[nome_norm] = {
+        mapa[doutor["nome_normalizado"]] = {
             "id": doutor["id"],
             "nome_original": doutor["nome"],
-            "nome_normalizado": nome_norm,
-            "credito_inicial": credito_inicial,
-            "utilizado": utilizado,
-            "credito_disponivel": credito_disponivel,
+            "nome_normalizado": doutor["nome_normalizado"],
+            "credito_inicial": round(credito_inicial, 2),
+            "utilizado": round(utilizado, 2),
+            "credito_disponivel": round(credito_final, 2),
             "pix_key": doutor.get("pix_key", ""),
         }
 
     return mapa
+
 
 def aplicar_desconto(
     mapa_creditos: Dict[str, Dict[str, Any]],
@@ -281,7 +310,7 @@ def aplicar_desconto(
         return {
             "doutor_encontrado": False,
             "doutor_id": None,
-            "nome_padronizado": nome_doutor,
+            "nome_padronizado": ajustar_nome_exibicao(nome_doutor),
             "credito_antes": 0.0,
             "valor_descontado": 0.0,
             "credito_depois": 0.0,
@@ -323,6 +352,7 @@ def persistir_saldos_mensais(competencia: str, mapa_creditos: Dict[str, Dict[str
             "utilizado": round(float(item["utilizado"]), 2),
             "credito_final": round(float(item["credito_disponivel"]), 2),
             "updated_by_email": None,
+            "updated_by_nome": None,
         })
 
     if usando_supabase():
