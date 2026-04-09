@@ -828,8 +828,6 @@ async function adicionarDoutor() {
     const emailAtual = userAtual?.email || null;
     const nomeResponsavel = obterNomeResponsavelAtual(userAtual);
 
-    let novoDoutor = null;
-
     const payloadDoutor = {
       nome,
       nome_normalizado: normalizarNome(nome),
@@ -850,7 +848,7 @@ async function adicionarDoutor() {
       throw insertDoutor.error;
     }
 
-    novoDoutor = insertDoutor.data;
+    const novoDoutor = insertDoutor.data;
 
     const payloadSaldo = {
       competencia,
@@ -1097,3 +1095,37 @@ byId("filtroDoutor")?.addEventListener("change", atualizarDashboard);
 byId("btnLimpar")?.addEventListener("click", () => {
   const filtroMes = byId("filtroMes");
   const filtroCidade = byId("filtroCidade");
+  const filtroDoutor = byId("filtroDoutor");
+
+  if (filtroMes) {
+    filtroMes.value = dashboardData?.competencia_padrao || "2026-01";
+  }
+
+  preencherFiltroCidade();
+  preencherFiltroDoutor();
+
+  if (filtroCidade) filtroCidade.selectedIndex = 0;
+  if (filtroDoutor) filtroDoutor.selectedIndex = 0;
+
+  atualizarDashboard();
+});
+
+byId("btnExportar")?.addEventListener("click", exportarCSV);
+
+window.salvarDoutor = salvarDoutor;
+window.removerDoutor = removerDoutor;
+
+if (window.supabaseClient) {
+  window.supabaseClient.auth.onAuthStateChange(async (_event, session) => {
+    if (!session) {
+      currentUser = null;
+      currentUserIsAdmin = false;
+      mostrarTelaLogin();
+      return;
+    }
+
+    currentUser = session.user;
+  });
+}
+
+iniciarAplicacao();
