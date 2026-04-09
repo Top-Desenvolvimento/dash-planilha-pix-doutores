@@ -43,94 +43,25 @@ function formatarCompetenciaLabel(competencia) {
 }
 
 function normalizarNome(nome) {
-  return String(nome || "")
+  const base = String(nome || "")
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase()
     .replace(/\s+/g, " ")
     .trim();
-}
-function obterNomeResponsavelAtual(user) {
-  const meta = user?.user_metadata || {};
-  const nome =
-    meta.nome ||
-    meta.name ||
-    meta.full_name ||
-    meta.display_name ||
-    "";
 
-  if (String(nome).trim()) {
-    return String(nome).trim();
-  }
-
-  const email = user?.email || "";
-  if (email.includes("@")) {
-    return email.split("@")[0];
-  }
-
-  return "Não informado";
-}
-
-function calcularSaldoMensalAdmin(creditoInicial, utilizado, saldoDigitado = null) {
-  const credito = Number(creditoInicial || 0);
-  const uso = Number(utilizado || 0);
-
-  if (saldoDigitado !== null && saldoDigitado !== undefined && saldoDigitado !== "") {
-    return Number(saldoDigitado || 0);
-  }
-
-  return Number((credito - uso).toFixed(2));
-}
-function byId(id) {
-  return document.getElementById(id);
-}
-
-function formatarMoeda(valor) {
-  return Number(valor || 0).toLocaleString("pt-BR", {
-    style: "currency",
-    currency: "BRL"
-  });
-}
-
-function escapeHtml(valor) {
-  return String(valor ?? "")
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#39;");
-}
-
-function formatarCompetenciaLabel(competencia) {
-  const mapa = {
-    "01": "Jan",
-    "02": "Fev",
-    "03": "Mar",
-    "04": "Abr",
-    "05": "Mai",
-    "06": "Jun",
-    "07": "Jul",
-    "08": "Ago",
-    "09": "Set",
-    "10": "Out",
-    "11": "Nov",
-    "12": "Dez"
+  const aliases = {
+    "cir.dionathan paim pohlmann": "dionathan pohlmann",
+    "cir dionathan paim pohlmann": "dionathan pohlmann",
+    "dionathan paim pohlmann": "dionathan pohlmann",
+    "cir.dionathan pohlmann": "dionathan pohlmann",
+    "cir dionathan pohlmann": "dionathan pohlmann",
+    "dionathan pohlmann": "dionathan pohlmann"
   };
 
-  const [ano, mes] = String(competencia || "").split("-");
-  return `${mapa[mes] || mes}/${ano || ""}`;
+  return aliases[base] || base;
 }
 
-function normalizarNome(nome) {
-  return String(nome || "")
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .toLowerCase()
-    .replace(/\s+/g, " ")
-    .trim();
-}
-
-/* COLE AS 2 FUNÇÕES NOVAS AQUI */
 function obterNomeResponsavelAtual(user) {
   const meta = user?.user_metadata || {};
   const nome =
@@ -162,14 +93,7 @@ function calcularSaldoMensalAdmin(creditoInicial, utilizado, saldoDigitado = nul
 
   return Number((credito - uso).toFixed(2));
 }
-/* FIM DAS FUNÇÕES NOVAS */
 
-function mostrarMensagemAuth(texto, erro = false) {
-  const el = byId("authMessage");
-  if (!el) return;
-  el.textContent = texto || "";
-  el.className = erro ? "auth-message error" : "auth-message";
-}
 function mostrarMensagemAuth(texto, erro = false) {
   const el = byId("authMessage");
   if (!el) return;
@@ -222,7 +146,7 @@ function getBaseAppUrl() {
 
 function validarSupabasePronto() {
   if (!window.supabaseClient) {
-    throw new Error("Supabase não configurado. Verifique o arquivo js/supabase-config.js.");
+    throw new Error("Supabase não configurado. Verifique js/supabase-config.js.");
   }
   return window.supabaseClient;
 }
@@ -716,7 +640,12 @@ async function carregarDoutoresAdmin() {
       const creditoInicial = Number(saldo.credito_inicial ?? creditoBase);
       const utilizado = Number(saldo.utilizado ?? 0);
       const saldoFinal = Number(saldo.credito_final ?? creditoInicial);
-      const responsavelUltimo = saldo.updated_by_nome || saldo.updated_by_email || item.updated_by_nome || item.updated_by_email || "";
+      const responsavelUltimo =
+        saldo.updated_by_nome ||
+        saldo.updated_by_email ||
+        item.updated_by_nome ||
+        item.updated_by_email ||
+        "";
 
       return `
         <tr>
@@ -742,100 +671,132 @@ async function carregarDoutoresAdmin() {
       `;
     }).join("");
   } catch (err) {
-    console.error(err);
+    console.error("Erro ao carregar doutores:", err);
     tbody.innerHTML = `<tr><td colspan="10" class="empty-state">Erro ao carregar doutores</td></tr>`;
   }
 }
 
-async function carregarDoutoresAdmin() {
-  const tbody = byId("tabelaAdminDoutores");
-  if (!tbody) return;
-
-  tbody.innerHTML = `<tr><td colspan="10" class="empty-state">Carregando...</td></tr>`;
-
-  const competencia = getCompetenciaAtual();
-  const client = validarSupabasePronto();
-
+async function salvarDoutor(id) {
   try {
-    const { data: doutores, error: errorDoutores } = await client
-      .from("doutores_config")
-      .select("*")
-      .order("nome", { ascending: true });
+    mostrarMensagemAdmin("");
+    const competencia = getCompetenciaAtual();
+    const client = validarSupabasePronto();
 
-    if (errorDoutores) throw errorDoutores;
+    const nome = document.querySelector(`[data-id="${id}"][data-field="nome"]`)?.value.trim() || "";
+    const credito = parseFloat(document.querySelector(`[data-id="${id}"][data-field="credito"]`)?.value || "0");
+    const creditoInicial = parseFloat(document.querySelector(`[data-id="${id}"][data-field="credito_inicial"]`)?.value || "0");
+    const utilizado = parseFloat(document.querySelector(`[data-id="${id}"][data-field="utilizado"]`)?.value || "0");
+    const creditoFinalDigitado = document.querySelector(`[data-id="${id}"][data-field="credito_final"]`)?.value ?? "";
+    const creditoFinal = calcularSaldoMensalAdmin(creditoInicial, utilizado, creditoFinalDigitado);
+    const pixKey = document.querySelector(`[data-id="${id}"][data-field="pix_key"]`)?.value.trim() || "";
+    const ativo = document.querySelector(`[data-id="${id}"][data-field="ativo"]`)?.value === "true";
+    const observacao = document.querySelector(`[data-id="${id}"][data-field="observacao"]`)?.value.trim() || null;
 
-    const { data: saldos, error: errorSaldos } = await client
-      .from("doutores_saldos_mensais")
-      .select("*")
-      .eq("competencia", competencia);
-
-    if (errorSaldos) throw errorSaldos;
-
-    const saldoPorDoutor = {};
-    for (const item of saldos || []) {
-      saldoPorDoutor[item.doutor_id] = item;
-    }
-
-    if (!doutores || !doutores.length) {
-      tbody.innerHTML = `<tr><td colspan="10" class="empty-state">Nenhum doutor cadastrado</td></tr>`;
+    if (!nome) {
+      mostrarMensagemAdmin("Nome é obrigatório.", true);
       return;
     }
 
-    tbody.innerHTML = doutores.map(item => {
-      const saldo = saldoPorDoutor[item.id] || {};
+    const { data: userData } = await client.auth.getUser();
+    const userAtual = userData?.user || null;
+    const emailAtual = userAtual?.email || null;
+    const nomeResponsavel = obterNomeResponsavelAtual(userAtual);
 
-      const creditoBase = Number(item.credito || 0);
-      const creditoInicial = Number(saldo.credito_inicial ?? creditoBase);
-      const utilizado = Number(saldo.utilizado ?? 0);
-      const saldoFinal = Number(saldo.credito_final ?? creditoInicial);
-      const responsavelUltimo = saldo.updated_by_nome || saldo.updated_by_email || item.updated_by_nome || item.updated_by_email || "";
+    const { error: errorDoutor } = await client
+      .from("doutores_config")
+      .update({
+        nome,
+        nome_normalizado: normalizarNome(nome),
+        credito,
+        pix_key: pixKey || null,
+        ativo,
+        updated_by_email: emailAtual,
+        updated_by_nome: nomeResponsavel
+      })
+      .eq("id", id);
 
-      return `
-        <tr>
-          <td><input data-id="${item.id}" data-field="nome" type="text" value="${escapeHtml(item.nome)}" /></td>
-          <td><input data-id="${item.id}" data-field="credito" type="number" step="0.01" value="${creditoBase}" /></td>
-          <td><input data-id="${item.id}" data-field="credito_inicial" type="number" step="0.01" value="${creditoInicial}" /></td>
-          <td><input data-id="${item.id}" data-field="utilizado" type="number" step="0.01" value="${utilizado}" /></td>
-          <td><input data-id="${item.id}" data-field="credito_final" type="number" step="0.01" value="${saldoFinal}" /></td>
-          <td><input data-id="${item.id}" data-field="pix_key" type="text" value="${escapeHtml(item.pix_key || "")}" /></td>
-          <td>
-            <select data-id="${item.id}" data-field="ativo">
-              <option value="true" ${item.ativo ? "selected" : ""}>Ativo</option>
-              <option value="false" ${!item.ativo ? "selected" : ""}>Inativo</option>
-            </select>
-          </td>
-          <td><input data-id="${item.id}" data-field="observacao" type="text" value="${escapeHtml(saldo.observacao || "")}" /></td>
-          <td>${escapeHtml(responsavelUltimo)}</td>
-          <td>
-            <button class="btn btn-primary btn-small" onclick="salvarDoutor('${item.id}')">Salvar</button>
-            <button class="btn btn-secondary btn-small" onclick="removerDoutor('${item.id}')">Excluir</button>
-          </td>
-        </tr>
-      `;
-    }).join("");
+    if (errorDoutor) throw errorDoutor;
+
+    const ajusteManual = Number((creditoFinal - (creditoInicial - utilizado)).toFixed(2));
+
+    const { data: saldoExistente, error: errorBuscaSaldo } = await client
+      .from("doutores_saldos_mensais")
+      .select("*")
+      .eq("competencia", competencia)
+      .eq("doutor_id", id)
+      .maybeSingle();
+
+    if (errorBuscaSaldo) throw errorBuscaSaldo;
+
+    if (saldoExistente) {
+      const { error: errorSaldo } = await client
+        .from("doutores_saldos_mensais")
+        .update({
+          credito_inicial: creditoInicial,
+          utilizado,
+          credito_final: creditoFinal,
+          ajuste_manual: ajusteManual,
+          observacao,
+          updated_by_email: emailAtual,
+          updated_by_nome: nomeResponsavel
+        })
+        .eq("id", saldoExistente.id);
+
+      if (errorSaldo) throw errorSaldo;
+    } else {
+      const { error: errorInsertSaldo } = await client
+        .from("doutores_saldos_mensais")
+        .insert({
+          competencia,
+          doutor_id: id,
+          credito_inicial: creditoInicial,
+          utilizado,
+          credito_final: creditoFinal,
+          ajuste_manual: ajusteManual,
+          observacao,
+          updated_by_email: emailAtual,
+          updated_by_nome: nomeResponsavel
+        });
+
+      if (errorInsertSaldo) throw errorInsertSaldo;
+    }
+
+    mostrarMensagemAdmin("Doutor salvo com sucesso.");
+    await carregarDoutoresAdmin();
+    await carregarDashboardInterno();
   } catch (err) {
-    console.error(err);
-    tbody.innerHTML = `<tr><td colspan="10" class="empty-state">Erro ao carregar doutores</td></tr>`;
+    console.error("Erro detalhado ao salvar doutor:", err);
+    mostrarMensagemAdmin(`Erro ao salvar doutor: ${err.message || "falha no banco de dados"}`, true);
   }
 }
+
 async function removerDoutor(id) {
   if (!confirm("Tem certeza que deseja excluir este doutor?")) return;
 
   try {
+    mostrarMensagemAdmin("");
     const client = validarSupabasePronto();
 
-    const { error } = await client
+    const { error: errorSaldo } = await client
+      .from("doutores_saldos_mensais")
+      .delete()
+      .eq("doutor_id", id);
+
+    if (errorSaldo) throw errorSaldo;
+
+    const { error: errorDoutor } = await client
       .from("doutores_config")
       .delete()
       .eq("id", id);
 
-    if (error) throw error;
+    if (errorDoutor) throw errorDoutor;
 
     mostrarMensagemAdmin("Doutor removido com sucesso.");
     await carregarDoutoresAdmin();
+    await carregarDashboardInterno();
   } catch (err) {
-    console.error(err);
-    mostrarMensagemAdmin("Erro ao remover doutor.", true);
+    console.error("Erro detalhado ao remover doutor:", err);
+    mostrarMensagemAdmin(`Erro ao remover doutor: ${err.message || "falha no banco de dados"}`, true);
   }
 }
 
@@ -848,62 +809,89 @@ async function adicionarDoutor() {
     const credito = parseFloat(byId("novoCredito")?.value || "0");
     const pixKey = byId("novaPixKey")?.value.trim() || "";
     const ativo = byId("novoAtivo")?.value === "true";
+    const competencia = getCompetenciaAtual();
 
     if (!nome) {
       mostrarMensagemAdmin("Informe o nome do doutor.", true);
       return;
     }
 
-    const { data: userData } = await client.auth.getUser();
+    if (Number.isNaN(credito) || credito < 0) {
+      mostrarMensagemAdmin("Informe um crédito válido.", true);
+      return;
+    }
+
+    const { data: userData, error: errorUser } = await client.auth.getUser();
+    if (errorUser) throw errorUser;
+
     const userAtual = userData?.user || null;
     const emailAtual = userAtual?.email || null;
     const nomeResponsavel = obterNomeResponsavelAtual(userAtual);
 
-    const { data: novoDoutor, error } = await client
+    let novoDoutor = null;
+
+    const payloadDoutor = {
+      nome,
+      nome_normalizado: normalizarNome(nome),
+      credito,
+      pix_key: pixKey || null,
+      ativo,
+      updated_by_email: emailAtual,
+      updated_by_nome: nomeResponsavel
+    };
+
+    const insertDoutor = await client
       .from("doutores_config")
-      .insert({
-        nome,
-        nome_normalizado: normalizarNome(nome),
-        credito,
-        pix_key: pixKey || null,
-        ativo,
-        updated_by_email: emailAtual,
-        updated_by_nome: nomeResponsavel
-      })
+      .insert(payloadDoutor)
       .select()
       .single();
 
-    if (error) throw error;
+    if (insertDoutor.error) {
+      throw insertDoutor.error;
+    }
 
-    const competencia = getCompetenciaAtual();
+    novoDoutor = insertDoutor.data;
 
-    const { error: errorSaldo } = await client
+    const payloadSaldo = {
+      competencia,
+      doutor_id: novoDoutor.id,
+      credito_inicial: credito,
+      utilizado: 0,
+      credito_final: credito,
+      ajuste_manual: 0,
+      observacao: null,
+      updated_by_email: emailAtual,
+      updated_by_nome: nomeResponsavel
+    };
+
+    const insertSaldo = await client
       .from("doutores_saldos_mensais")
-      .insert({
-        competencia,
-        doutor_id: novoDoutor.id,
-        credito_inicial: credito,
-        utilizado: 0,
-        credito_final: credito,
-        ajuste_manual: 0,
-        observacao: null,
-        updated_by_email: emailAtual,
-        updated_by_nome: nomeResponsavel
-      });
+      .insert(payloadSaldo);
 
-    if (errorSaldo) throw errorSaldo;
+    if (insertSaldo.error) {
+      await client.from("doutores_config").delete().eq("id", novoDoutor.id);
+      throw insertSaldo.error;
+    }
 
-    byId("novoNome").value = "";
-    byId("novoCredito").value = "";
-    byId("novaPixKey").value = "";
-    byId("novoAtivo").value = "true";
+    if (byId("novoNome")) byId("novoNome").value = "";
+    if (byId("novoCredito")) byId("novoCredito").value = "";
+    if (byId("novaPixKey")) byId("novaPixKey").value = "";
+    if (byId("novoAtivo")) byId("novoAtivo").value = "true";
 
     mostrarMensagemAdmin("Doutor adicionado com sucesso.");
     await carregarDoutoresAdmin();
     await carregarDashboardInterno();
   } catch (err) {
-    console.error(err);
-    mostrarMensagemAdmin("Erro ao adicionar doutor.", true);
+    console.error("Erro detalhado ao adicionar doutor:", err);
+
+    const mensagem = [
+      err?.message || "Erro desconhecido",
+      err?.details ? `Detalhes: ${err.details}` : "",
+      err?.hint ? `Dica: ${err.hint}` : "",
+      err?.code ? `Código: ${err.code}` : ""
+    ].filter(Boolean).join(" | ");
+
+    mostrarMensagemAdmin(mensagem, true);
   }
 }
 
@@ -1109,37 +1097,3 @@ byId("filtroDoutor")?.addEventListener("change", atualizarDashboard);
 byId("btnLimpar")?.addEventListener("click", () => {
   const filtroMes = byId("filtroMes");
   const filtroCidade = byId("filtroCidade");
-  const filtroDoutor = byId("filtroDoutor");
-
-  if (filtroMes) {
-    filtroMes.value = dashboardData?.competencia_padrao || "2026-01";
-  }
-
-  preencherFiltroCidade();
-  preencherFiltroDoutor();
-
-  if (filtroCidade) filtroCidade.selectedIndex = 0;
-  if (filtroDoutor) filtroDoutor.selectedIndex = 0;
-
-  atualizarDashboard();
-});
-
-byId("btnExportar")?.addEventListener("click", exportarCSV);
-
-window.salvarDoutor = salvarDoutor;
-window.removerDoutor = removerDoutor;
-
-if (window.supabaseClient) {
-  window.supabaseClient.auth.onAuthStateChange(async (_event, session) => {
-    if (!session) {
-      currentUser = null;
-      currentUserIsAdmin = false;
-      mostrarTelaLogin();
-      return;
-    }
-
-    currentUser = session.user;
-  });
-}
-
-iniciarAplicacao();
