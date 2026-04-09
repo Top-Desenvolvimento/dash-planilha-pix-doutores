@@ -50,6 +50,37 @@ function normalizarNome(nome) {
     .replace(/\s+/g, " ")
     .trim();
 }
+function obterNomeResponsavelAtual(user) {
+  const meta = user?.user_metadata || {};
+  const nome =
+    meta.nome ||
+    meta.name ||
+    meta.full_name ||
+    meta.display_name ||
+    "";
+
+  if (String(nome).trim()) {
+    return String(nome).trim();
+  }
+
+  const email = user?.email || "";
+  if (email.includes("@")) {
+    return email.split("@")[0];
+  }
+
+  return "Não informado";
+}
+
+function calcularSaldoMensalAdmin(creditoInicial, utilizado, saldoDigitado = null) {
+  const credito = Number(creditoInicial || 0);
+  const uso = Number(utilizado || 0);
+
+  if (saldoDigitado !== null && saldoDigitado !== undefined && saldoDigitado !== "") {
+    return Number(saldoDigitado || 0);
+  }
+
+  return Number((credito - uso).toFixed(2));
+}
 function byId(id) {
   return document.getElementById(id);
 }
