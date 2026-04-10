@@ -1,9 +1,9 @@
 {
   "competencia": "2026-04",
-  "gerado_em": "2026-04-10T19:19:05.978693",
-  "quantidade_total": 162,
-  "valor_total": 20573.0,
-  "valor_total_descontado": 285.0,
+  "gerado_em": "2026-04-10T20:05:31.046794",
+  "quantidade_total": 163,
+  "valor_total": 20693.0,
+  "valor_total_descontado": 405.0,
   "valor_total_pendente": 20288.0,
   "por_unidade": [
     {
@@ -18,8 +18,8 @@
     },
     {
       "unidade": "Encantado",
-      "quantidade": 3,
-      "valor": 285.0
+      "quantidade": 4,
+      "valor": 405.0
     },
     {
       "unidade": "Farroupilha",
@@ -125,8 +125,8 @@
     },
     {
       "doutor": "Thiany Cristofoli",
-      "quantidade": 3,
-      "valor_descontado": 285.0
+      "quantidade": 4,
+      "valor_descontado": 405.0
     },
     {
       "doutor": "TOP",
