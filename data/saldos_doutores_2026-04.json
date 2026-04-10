@@ -195,8 +195,8 @@
     "doutor_id": "23",
     "doutor": "Jéssica Barreto",
     "credito_inicial": 1000.0,
-    "utilizado": 750.0,
-    "credito_disponivel": 250.0,
+    "utilizado": 1000.0,
+    "credito_disponivel": 0.0,
     "pix_key": ""
   },
   {
@@ -363,8 +363,8 @@
     "doutor_id": "44",
     "doutor": "Thiany Cristofoli",
     "credito_inicial": 4000.0,
-    "utilizado": 600.0,
-    "credito_disponivel": 3400.0,
+    "utilizado": 800.0,
+    "credito_disponivel": 3200.0,
     "pix_key": ""
   }
 ]
