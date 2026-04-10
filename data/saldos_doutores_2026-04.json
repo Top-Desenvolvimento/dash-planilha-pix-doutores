@@ -283,8 +283,8 @@
     "doutor_id": "35",
     "doutor": "Naiane Pieta",
     "credito_inicial": 1000.0,
-    "utilizado": 225.0,
-    "credito_disponivel": 775.0,
+    "utilizado": 450.0,
+    "credito_disponivel": 550.0,
     "pix_key": ""
   },
   {
@@ -363,8 +363,8 @@
     "doutor_id": "44",
     "doutor": "Thiany Cristofoli",
     "credito_inicial": 4000.0,
-    "utilizado": 2999.0,
-    "credito_disponivel": 1001.0,
+    "utilizado": 3608.0,
+    "credito_disponivel": 392.0,
     "pix_key": ""
   }
 ]

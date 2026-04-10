@@ -9,11 +9,11 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-10T21:43:14.988366",
-    "quantidade_total": 174,
-    "valor_total": 21787.0,
+    "gerado_em": "2026-04-10T22:17:00.378637",
+    "quantidade_total": 175,
+    "valor_total": 21892.0,
     "valor_total_descontado": 834.0,
-    "valor_total_pendente": 20953.0,
+    "valor_total_pendente": 21058.0,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -27,8 +27,8 @@
       },
       {
         "unidade": "Encantado",
-        "quantidade": 7,
-        "valor": 609.0
+        "quantidade": 8,
+        "valor": 714.0
       },
       {
         "unidade": "Farroupilha",
@@ -144,7 +144,7 @@
       },
       {
         "doutor": "TOP",
-        "quantidade": 3,
+        "quantidade": 4,
         "valor_descontado": 0.0
       }
     ]
