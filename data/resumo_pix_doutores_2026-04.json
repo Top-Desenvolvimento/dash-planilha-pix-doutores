@@ -1,15 +1,15 @@
 {
   "competencia": "2026-04",
-  "gerado_em": "2026-04-10T20:59:55.983048",
-  "quantidade_total": 166,
-  "valor_total": 21023.0,
-  "valor_total_descontado": 500.0,
-  "valor_total_pendente": 20523.0,
+  "gerado_em": "2026-04-10T21:43:14.988366",
+  "quantidade_total": 174,
+  "valor_total": 21787.0,
+  "valor_total_descontado": 834.0,
+  "valor_total_pendente": 20953.0,
   "por_unidade": [
     {
       "unidade": "Bento",
-      "quantidade": 9,
-      "valor": 1000.0
+      "quantidade": 11,
+      "valor": 1225.0
     },
     {
       "unidade": "Caxias",
@@ -18,8 +18,8 @@
     },
     {
       "unidade": "Encantado",
-      "quantidade": 5,
-      "valor": 500.0
+      "quantidade": 7,
+      "valor": 609.0
     },
     {
       "unidade": "Farroupilha",
@@ -28,8 +28,8 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 15,
-      "valor": 2113.0
+      "quantidade": 19,
+      "valor": 2543.0
     },
     {
       "unidade": "Garibaldi",
@@ -60,7 +60,7 @@
     },
     {
       "doutor": "Dionathan Pohlmann",
-      "quantidade": 17,
+      "quantidade": 21,
       "valor_descontado": 0.0
     },
     {
@@ -109,6 +109,11 @@
       "valor_descontado": 0.0
     },
     {
+      "doutor": "Naiane Pieta",
+      "quantidade": 2,
+      "valor_descontado": 225.0
+    },
+    {
       "doutor": "Nelson Vaccari",
       "quantidade": 1,
       "valor_descontado": 0.0
@@ -125,8 +130,8 @@
     },
     {
       "doutor": "Thiany Cristofoli",
-      "quantidade": 5,
-      "valor_descontado": 500.0
+      "quantidade": 7,
+      "valor_descontado": 609.0
     },
     {
       "doutor": "TOP",
