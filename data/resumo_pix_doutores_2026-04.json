@@ -1,10 +1,10 @@
 {
   "competencia": "2026-04",
-  "gerado_em": "2026-04-10T14:10:26.972412",
+  "gerado_em": "2026-04-10T15:16:21.187411",
   "quantidade_total": 152,
   "valor_total": 19358.0,
-  "valor_total_descontado": 3700.0,
-  "valor_total_pendente": 15658.0,
+  "valor_total_descontado": 2124.0,
+  "valor_total_pendente": 17234.0,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -61,7 +61,7 @@
     {
       "doutor": "Dionathan Pohlmann",
       "quantidade": 16,
-      "valor_descontado": 2188.0
+      "valor_descontado": 1624.0
     },
     {
       "doutor": "Everlize Cipriani",
@@ -81,7 +81,7 @@
     {
       "doutor": "Gislaine Santos",
       "quantidade": 5,
-      "valor_descontado": 487.0
+      "valor_descontado": 0.0
     },
     {
       "doutor": "Jéssica Barreto",
@@ -101,7 +101,7 @@
     {
       "doutor": "Marcella Zancanaro",
       "quantidade": 5,
-      "valor_descontado": 575.0
+      "valor_descontado": 50.0
     },
     {
       "doutor": "Nelson Vaccari",
