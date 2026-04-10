@@ -1,10 +1,10 @@
 {
   "competencia": "2026-04",
-  "gerado_em": "2026-04-10T13:28:27.455576",
+  "gerado_em": "2026-04-10T14:10:26.972412",
   "quantidade_total": 152,
   "valor_total": 19358.0,
-  "valor_total_descontado": 4126.0,
-  "valor_total_pendente": 15232.0,
+  "valor_total_descontado": 3700.0,
+  "valor_total_pendente": 15658.0,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -81,7 +81,7 @@
     {
       "doutor": "Gislaine Santos",
       "quantidade": 5,
-      "valor_descontado": 513.0
+      "valor_descontado": 487.0
     },
     {
       "doutor": "Jéssica Barreto",
@@ -91,7 +91,7 @@
     {
       "doutor": "Leandro Diniz",
       "quantidade": 3,
-      "valor_descontado": 400.0
+      "valor_descontado": 0.0
     },
     {
       "doutor": "Luisa Moraes Lucas",
