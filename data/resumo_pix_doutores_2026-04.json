@@ -1,10 +1,10 @@
 {
   "competencia": "2026-04",
-  "gerado_em": "2026-04-10T17:17:01.227973",
-  "quantidade_total": 154,
-  "valor_total": 19598.0,
-  "valor_total_descontado": 440.0,
-  "valor_total_pendente": 19158.0,
+  "gerado_em": "2026-04-10T18:11:24.951089",
+  "quantidade_total": 156,
+  "valor_total": 19838.0,
+  "valor_total_descontado": 460.0,
+  "valor_total_pendente": 19378.0,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -43,8 +43,8 @@
     },
     {
       "unidade": "Ssdocai",
-      "quantidade": 10,
-      "valor": 1179.0
+      "quantidade": 12,
+      "valor": 1419.0
     }
   ],
   "por_doutor": [
@@ -90,8 +90,8 @@
     },
     {
       "doutor": "Keyla Daniele",
-      "quantidade": 2,
-      "valor_descontado": 240.0
+      "quantidade": 4,
+      "valor_descontado": 260.0
     },
     {
       "doutor": "Leandro Diniz",

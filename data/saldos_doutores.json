@@ -204,8 +204,8 @@
       "doutor_id": "13",
       "doutor": "Keyla Daniele",
       "credito_inicial": 500.0,
-      "utilizado": 240.0,
-      "credito_disponivel": 260.0,
+      "utilizado": 500.0,
+      "credito_disponivel": 0.0,
       "pix_key": ""
     },
     {
@@ -364,8 +364,8 @@
       "doutor_id": "44",
       "doutor": "Thiany Cristofoli",
       "credito_inicial": 4000.0,
-      "utilizado": 1000.0,
-      "credito_disponivel": 3000.0,
+      "utilizado": 1200.0,
+      "credito_disponivel": 2800.0,
       "pix_key": ""
     }
   ]
