@@ -46,44 +46,25 @@ jobs:
           git reset --hard origin/main
           git clean -fd
 
-      - name: Validar secrets
-        run: |
-          if [ -z "${{ secrets.SUPABASE_URL }}" ]; then
-            echo "ERRO: secret SUPABASE_URL não configurado"
-            exit 1
-          fi
-
-          if [ -z "${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}" ]; then
-            echo "ERRO: secret SUPABASE_SERVICE_ROLE_KEY não configurado"
-            exit 1
-          fi
-
-          if [ -z "${{ secrets.SUPABASE_ANON_KEY }}" ]; then
-            echo "ERRO: secret SUPABASE_ANON_KEY não configurado"
-            exit 1
-          fi
-
       - name: Executar coleta dos dados
-        env:
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
-          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
         run: |
           python coletor_pix.py
 
       - name: Gerar dashboard_data e dashboard.html
-        env:
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
-          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
         run: |
           python generate_data.py
           python generate_dashboard.py
 
+      - name: Exibir arquivos atualizados
+        run: |
+          echo "Arquivos em data/:"
+          ls -lah data || true
+          echo "Status do git:"
+          git status --short
+
       - name: Verificar alterações
         id: changes
         run: |
-          git status --short
           if git diff --quiet && git diff --cached --quiet; then
             echo "has_changes=false" >> $GITHUB_OUTPUT
           else
