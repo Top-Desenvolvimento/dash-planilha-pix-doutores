@@ -72,19 +72,19 @@
     "pix_key": ""
   },
   {
-    "doutor_id": "12",
-    "doutor": "Dionathan Paim Pohlmann",
-    "credito_inicial": 6000.0,
-    "utilizado": 0.0,
-    "credito_disponivel": 6000.0,
-    "pix_key": ""
-  },
-  {
     "doutor_id": "10",
     "doutor": "Cristian Pressi",
     "credito_inicial": 8000.0,
     "utilizado": 8000.0,
     "credito_disponivel": 0.0,
+    "pix_key": ""
+  },
+  {
+    "doutor_id": "12",
+    "doutor": "Dionathan Pohlmann",
+    "credito_inicial": 6000.0,
+    "utilizado": 2188.0,
+    "credito_disponivel": 3812.0,
     "pix_key": ""
   },
   {
@@ -139,8 +139,8 @@
     "doutor_id": "20",
     "doutor": "Gislaine Santos",
     "credito_inicial": 1000.0,
-    "utilizado": 0.0,
-    "credito_disponivel": 1000.0,
+    "utilizado": 513.0,
+    "credito_disponivel": 487.0,
     "pix_key": ""
   },
   {
@@ -195,8 +195,8 @@
     "doutor_id": "23",
     "doutor": "Jéssica Barreto",
     "credito_inicial": 1000.0,
-    "utilizado": 0.0,
-    "credito_disponivel": 1000.0,
+    "utilizado": 250.0,
+    "credito_disponivel": 750.0,
     "pix_key": ""
   },
   {
@@ -219,8 +219,8 @@
     "doutor_id": "28",
     "doutor": "Leandro Diniz",
     "credito_inicial": 400.0,
-    "utilizado": 0.0,
-    "credito_disponivel": 400.0,
+    "utilizado": 400.0,
+    "credito_disponivel": 0.0,
     "pix_key": ""
   },
   {
@@ -251,8 +251,8 @@
     "doutor_id": "32",
     "doutor": "Marcella Zancanaro",
     "credito_inicial": 1200.0,
-    "utilizado": 0.0,
-    "credito_disponivel": 1200.0,
+    "utilizado": 575.0,
+    "credito_disponivel": 625.0,
     "pix_key": ""
   },
   {
@@ -363,8 +363,8 @@
     "doutor_id": "44",
     "doutor": "Thiany Cristofoli",
     "credito_inicial": 4000.0,
-    "utilizado": 0.0,
-    "credito_disponivel": 4000.0,
+    "utilizado": 200.0,
+    "credito_disponivel": 3800.0,
     "pix_key": ""
   }
 ]
