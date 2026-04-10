@@ -9,16 +9,16 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-10T18:11:24.951089",
-    "quantidade_total": 156,
-    "valor_total": 19838.0,
-    "valor_total_descontado": 460.0,
-    "valor_total_pendente": 19378.0,
+    "gerado_em": "2026-04-10T19:19:05.978693",
+    "quantidade_total": 162,
+    "valor_total": 20573.0,
+    "valor_total_descontado": 285.0,
+    "valor_total_pendente": 20288.0,
     "por_unidade": [
       {
         "unidade": "Bento",
-        "quantidade": 3,
-        "valor": 250.0
+        "quantidade": 8,
+        "valor": 900.0
       },
       {
         "unidade": "Caxias",
@@ -27,8 +27,8 @@
       },
       {
         "unidade": "Encantado",
-        "quantidade": 2,
-        "valor": 200.0
+        "quantidade": 3,
+        "valor": 285.0
       },
       {
         "unidade": "Farroupilha",
@@ -94,13 +94,13 @@
       },
       {
         "doutor": "Jéssica Barreto",
-        "quantidade": 3,
+        "quantidade": 8,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Keyla Daniele",
         "quantidade": 4,
-        "valor_descontado": 260.0
+        "valor_descontado": 0.0
       },
       {
         "doutor": "Leandro Diniz",
@@ -134,8 +134,8 @@
       },
       {
         "doutor": "Thiany Cristofoli",
-        "quantidade": 2,
-        "valor_descontado": 200.0
+        "quantidade": 3,
+        "valor_descontado": 285.0
       },
       {
         "doutor": "TOP",
