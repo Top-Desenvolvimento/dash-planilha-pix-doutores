@@ -9,11 +9,11 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-11T14:15:02.018087",
-    "quantidade_total": 200,
-    "valor_total": 25226.0,
+    "gerado_em": "2026-04-11T15:04:54.104325",
+    "quantidade_total": 208,
+    "valor_total": 26287.0,
     "valor_total_descontado": 345.0,
-    "valor_total_pendente": 24881.0,
+    "valor_total_pendente": 25942.0,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -22,8 +22,8 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 41,
-        "valor": 5525.0
+        "quantidade": 42,
+        "valor": 5644.0
       },
       {
         "unidade": "Encantado",
@@ -32,8 +32,8 @@
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 16,
-        "valor": 2345.0
+        "quantidade": 22,
+        "valor": 3262.0
       },
       {
         "unidade": "FloresDaCunha",
@@ -42,8 +42,8 @@
       },
       {
         "unidade": "Garibaldi",
-        "quantidade": 29,
-        "valor": 3417.0
+        "quantidade": 30,
+        "valor": 3442.0
       },
       {
         "unidade": "Soledade",
@@ -74,12 +74,12 @@
       },
       {
         "doutor": "Everlize Cipriani",
-        "quantidade": 8,
+        "quantidade": 11,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Franciele Pedrotti",
-        "quantidade": 12,
+        "quantidade": 13,
         "valor_descontado": 0.0
       },
       {
@@ -124,7 +124,7 @@
       },
       {
         "doutor": "Marcella Zancanaro",
-        "quantidade": 7,
+        "quantidade": 8,
         "valor_descontado": 0.0
       },
       {
@@ -144,7 +144,7 @@
       },
       {
         "doutor": "Tamara Macanan",
-        "quantidade": 29,
+        "quantidade": 30,
         "valor_descontado": 0.0
       },
       {
@@ -154,7 +154,7 @@
       },
       {
         "doutor": "TOP",
-        "quantidade": 4,
+        "quantidade": 6,
         "valor_descontado": 0.0
       }
     ]
