@@ -9,11 +9,11 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-11T10:08:58.743407",
-    "quantidade_total": 175,
-    "valor_total": 21892.0,
+    "gerado_em": "2026-04-11T11:01:43.647289",
+    "quantidade_total": 176,
+    "valor_total": 21977.0,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 21892.0,
+    "valor_total_pendente": 21977.0,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -47,8 +47,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 46,
-        "valor": 5754.0
+        "quantidade": 47,
+        "valor": 5839.0
       },
       {
         "unidade": "Ssdocai",
@@ -105,6 +105,11 @@
       {
         "doutor": "Leandro Diniz",
         "quantidade": 3,
+        "valor_descontado": 0.0
+      },
+      {
+        "doutor": "Leticia Canabarro",
+        "quantidade": 1,
         "valor_descontado": 0.0
       },
       {
