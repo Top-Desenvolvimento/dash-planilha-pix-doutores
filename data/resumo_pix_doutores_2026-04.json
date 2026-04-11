@@ -1,10 +1,10 @@
 {
   "competencia": "2026-04",
-  "gerado_em": "2026-04-11T11:01:43.647289",
-  "quantidade_total": 176,
-  "valor_total": 21977.0,
+  "gerado_em": "2026-04-11T11:40:31.153907",
+  "quantidade_total": 182,
+  "valor_total": 23063.0,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 21977.0,
+  "valor_total_pendente": 23063.0,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,13 +13,13 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 37,
-      "valor": 4827.0
+      "quantidade": 38,
+      "valor": 5136.0
     },
     {
       "unidade": "Encantado",
-      "quantidade": 8,
-      "valor": 714.0
+      "quantidade": 9,
+      "valor": 834.0
     },
     {
       "unidade": "Farroupilha",
@@ -28,8 +28,8 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 19,
-      "valor": 2543.0
+      "quantidade": 21,
+      "valor": 2874.0
     },
     {
       "unidade": "Garibaldi",
@@ -38,8 +38,8 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 47,
-      "valor": 5839.0
+      "quantidade": 49,
+      "valor": 6165.0
     },
     {
       "unidade": "Ssdocai",
@@ -60,7 +60,7 @@
     },
     {
       "doutor": "Dionathan Pohlmann",
-      "quantidade": 21,
+      "quantidade": 23,
       "valor_descontado": 0.0
     },
     {
@@ -100,7 +100,7 @@
     },
     {
       "doutor": "Leticia Canabarro",
-      "quantidade": 1,
+      "quantidade": 3,
       "valor_descontado": 0.0
     },
     {
@@ -130,12 +130,12 @@
     },
     {
       "doutor": "Tamara Macanan",
-      "quantidade": 27,
+      "quantidade": 28,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Thiany Cristofoli",
-      "quantidade": 7,
+      "quantidade": 8,
       "valor_descontado": 0.0
     },
     {
