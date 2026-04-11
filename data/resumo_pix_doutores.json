@@ -9,11 +9,11 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-11T17:10:00.251151",
+    "gerado_em": "2026-04-11T17:56:51.505398",
     "quantidade_total": 210,
     "valor_total": 26551.0,
-    "valor_total_descontado": 345.0,
-    "valor_total_pendente": 26206.0,
+    "valor_total_descontado": 310.0,
+    "valor_total_pendente": 26241.0,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -120,7 +120,7 @@
       {
         "doutor": "Luiz Henrique",
         "quantidade": 3,
-        "valor_descontado": 345.0
+        "valor_descontado": 310.0
       },
       {
         "doutor": "Marcella Zancanaro",
