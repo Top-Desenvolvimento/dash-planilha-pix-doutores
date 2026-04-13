@@ -262,6 +262,73 @@ function getSaldosCompetencia(competencia) {
   return Array.isArray(saldos) ? [...saldos] : [];
 }
 
+async function sincronizarSaldosAdminNoDashboard() {
+  if (!dashboardData) return;
+  if (!currentUserIsAdmin) return;
+
+  try {
+    const client = validarSupabasePronto();
+
+    const { data: doutores, error: errorDoutores } = await client
+      .from("doutores_config")
+      .select("id, nome, credito, pix_key, ativo, updated_by_email, updated_by_nome")
+      .order("nome", { ascending: true });
+
+    if (errorDoutores) throw errorDoutores;
+
+    const meses = dashboardData?.meses_disponiveis || [];
+    if (!meses.length) return;
+
+    const { data: saldos, error: errorSaldos } = await client
+      .from("doutores_saldos_mensais")
+      .select("*")
+      .in("competencia", meses);
+
+    if (errorSaldos) throw errorSaldos;
+
+    const saldoPorMesEDoutor = {};
+    for (const item of saldos || []) {
+      if (!saldoPorMesEDoutor[item.competencia]) {
+        saldoPorMesEDoutor[item.competencia] = {};
+      }
+      saldoPorMesEDoutor[item.competencia][item.doutor_id] = item;
+    }
+
+    for (const competencia of meses) {
+      const baseMes = [];
+      const saldosDoMes = saldoPorMesEDoutor[competencia] || {};
+
+      for (const doutor of doutores || []) {
+        if (doutor.ativo === false) continue;
+
+        const saldo = saldosDoMes[doutor.id] || {};
+        const creditoBase = Number(doutor.credito || 0);
+        const creditoInicial = Number(saldo.credito_inicial ?? creditoBase);
+        const utilizado = Number(saldo.utilizado ?? 0);
+        const creditoFinal = Number(saldo.credito_final ?? (creditoInicial - utilizado));
+
+        baseMes.push({
+          doutor_id: doutor.id,
+          doutor: doutor.nome,
+          credito_inicial: creditoInicial,
+          utilizado,
+          credito_disponivel: creditoFinal,
+          credito_final: creditoFinal,
+          pix_key: doutor.pix_key || "",
+          updated_by_email: saldo.updated_by_email || doutor.updated_by_email || null,
+          updated_by_nome: saldo.updated_by_nome || doutor.updated_by_nome || null
+        });
+      }
+
+      dashboardData.saldos_por_competencia[competencia] = baseMes.sort((a, b) =>
+        String(a.doutor || "").localeCompare(String(b.doutor || ""), "pt-BR")
+      );
+    }
+  } catch (err) {
+    console.error("Erro ao sincronizar saldos da ADM no dashboard:", err);
+  }
+}
+
 function preencherFiltroMes() {
   const filtroMes = byId("filtroMes");
   if (!filtroMes) return;
@@ -596,6 +663,8 @@ async function carregarDashboardInterno() {
   preencherFiltroMes();
   preencherFiltroCidade();
   preencherFiltroDoutor();
+
+  await sincronizarSaldosAdminNoDashboard();
   atualizarDashboard();
 }
 
@@ -761,9 +830,10 @@ async function salvarDoutor(id) {
       if (errorInsertSaldo) throw errorInsertSaldo;
     }
 
-    mostrarMensagemAdmin("Doutor salvo com sucesso.");
+    await sincronizarSaldosAdminNoDashboard();
+    atualizarDashboard();
     await carregarDoutoresAdmin();
-    await carregarDashboardInterno();
+    mostrarMensagemAdmin("Doutor salvo com sucesso.");
   } catch (err) {
     console.error("Erro detalhado ao salvar doutor:", err);
     mostrarMensagemAdmin(`Erro ao salvar doutor: ${err.message || "falha no banco de dados"}`, true);
@@ -791,9 +861,10 @@ async function removerDoutor(id) {
 
     if (errorDoutor) throw errorDoutor;
 
-    mostrarMensagemAdmin("Doutor removido com sucesso.");
+    await sincronizarSaldosAdminNoDashboard();
+    atualizarDashboard();
     await carregarDoutoresAdmin();
-    await carregarDashboardInterno();
+    mostrarMensagemAdmin("Doutor removido com sucesso.");
   } catch (err) {
     console.error("Erro detalhado ao remover doutor:", err);
     mostrarMensagemAdmin(`Erro ao remover doutor: ${err.message || "falha no banco de dados"}`, true);
@@ -876,9 +947,10 @@ async function adicionarDoutor() {
     if (byId("novaPixKey")) byId("novaPixKey").value = "";
     if (byId("novoAtivo")) byId("novoAtivo").value = "true";
 
-    mostrarMensagemAdmin("Doutor adicionado com sucesso.");
+    await sincronizarSaldosAdminNoDashboard();
+    atualizarDashboard();
     await carregarDoutoresAdmin();
-    await carregarDashboardInterno();
+    mostrarMensagemAdmin("Doutor adicionado com sucesso.");
   } catch (err) {
     console.error("Erro detalhado ao adicionar doutor:", err);
 
@@ -1082,6 +1154,7 @@ byId("btnAdicionarDoutor")?.addEventListener("click", adicionarDoutor);
 byId("filtroMes")?.addEventListener("change", async () => {
   preencherFiltroCidade();
   preencherFiltroDoutor();
+  await sincronizarSaldosAdminNoDashboard();
   atualizarDashboard();
 
   if (!byId("adminView")?.classList.contains("hidden")) {
@@ -1092,7 +1165,7 @@ byId("filtroMes")?.addEventListener("change", async () => {
 byId("filtroCidade")?.addEventListener("change", atualizarDashboard);
 byId("filtroDoutor")?.addEventListener("change", atualizarDashboard);
 
-byId("btnLimpar")?.addEventListener("click", () => {
+byId("btnLimpar")?.addEventListener("click", async () => {
   const filtroMes = byId("filtroMes");
   const filtroCidade = byId("filtroCidade");
   const filtroDoutor = byId("filtroDoutor");
@@ -1107,6 +1180,7 @@ byId("btnLimpar")?.addEventListener("click", () => {
   if (filtroCidade) filtroCidade.selectedIndex = 0;
   if (filtroDoutor) filtroDoutor.selectedIndex = 0;
 
+  await sincronizarSaldosAdminNoDashboard();
   atualizarDashboard();
 });
 
