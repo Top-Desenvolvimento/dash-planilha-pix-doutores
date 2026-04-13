@@ -9,12 +9,17 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-13T08:43:19.626860",
-    "quantidade_total": 199,
-    "valor_total": 25326.0,
+    "gerado_em": "2026-04-13T10:31:39.957027",
+    "quantidade_total": 210,
+    "valor_total": 26551.0,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 25326.0,
+    "valor_total_pendente": 26551.0,
     "por_unidade": [
+      {
+        "unidade": "Bento",
+        "quantidade": 11,
+        "valor": 1225.0
+      },
       {
         "unidade": "Caxias",
         "quantidade": 43,
@@ -88,6 +93,11 @@
         "valor_descontado": 0.0
       },
       {
+        "doutor": "Jéssica Barreto",
+        "quantidade": 9,
+        "valor_descontado": 0.0
+      },
+      {
         "doutor": "Keyla Daniele",
         "quantidade": 4,
         "valor_descontado": 0.0
@@ -115,6 +125,11 @@
       {
         "doutor": "Marcella Zancanaro",
         "quantidade": 8,
+        "valor_descontado": 0.0
+      },
+      {
+        "doutor": "Naiane Pieta",
+        "quantidade": 2,
         "valor_descontado": 0.0
       },
       {
