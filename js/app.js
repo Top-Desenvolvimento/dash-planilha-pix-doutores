@@ -94,6 +94,12 @@ function calcularSaldoMensalAdmin(creditoInicial, utilizado, saldoDigitado = nul
   return Number((credito - uso).toFixed(2));
 }
 
+function isUuid(valor) {
+  return /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(
+    String(valor || "").trim()
+  );
+}
+
 function mostrarMensagemAuth(texto, erro = false) {
   const el = byId("authMessage");
   if (!el) return;
@@ -257,6 +263,11 @@ function getRegistrosCompetencia(competencia) {
   return registros.filter(item => String(item.competencia || "") === competencia);
 }
 
+function getSaldosCompetencia(competencia) {
+  const saldos = dashboardData?.saldos_por_competencia?.[competencia];
+  return Array.isArray(saldos) ? [...saldos] : [];
+}
+
 function obterDoutoresFallbackDoDashboard() {
   const mapa = new Map();
   const meses = dashboardData?.meses_disponiveis || [];
@@ -286,9 +297,34 @@ function obterDoutoresFallbackDoDashboard() {
   );
 }
 
-function getSaldosCompetencia(competencia) {
-  const saldos = dashboardData?.saldos_por_competencia?.[competencia];
-  return Array.isArray(saldos) ? [...saldos] : [];
+async function garantirDoutorNoSupabase(idOriginal, payloadBase) {
+  const client = validarSupabasePronto();
+
+  if (isUuid(idOriginal)) {
+    return idOriginal;
+  }
+
+  const { data: existente, error: errorBusca } = await client
+    .from("doutores_config")
+    .select("id, nome, nome_normalizado")
+    .eq("nome_normalizado", payloadBase.nome_normalizado)
+    .maybeSingle();
+
+  if (errorBusca) throw errorBusca;
+
+  if (existente?.id) {
+    return existente.id;
+  }
+
+  const { data: novo, error: errorInsert } = await client
+    .from("doutores_config")
+    .insert(payloadBase)
+    .select("id")
+    .single();
+
+  if (errorInsert) throw errorInsert;
+
+  return novo.id;
 }
 
 async function sincronizarSaldosAdminNoDashboard() {
@@ -308,8 +344,6 @@ async function sincronizarSaldosAdminNoDashboard() {
       return;
     }
 
-    // MUITO IMPORTANTE:
-    // se não houver doutores cadastrados no Supabase, não apaga os créditos da dashboard
     if (!Array.isArray(doutores) || doutores.length === 0) {
       console.warn("ADM sem doutores cadastrados no Supabase. Mantendo dados originais da dashboard.");
       return;
@@ -376,7 +410,6 @@ async function sincronizarSaldosAdminNoDashboard() {
         });
       }
 
-      // só substitui se realmente montou alguma coisa
       if (baseMes.length > 0) {
         dashboardData.saldos_por_competencia[competencia] = baseMes.sort((a, b) =>
           String(a.doutor || "").localeCompare(String(b.doutor || ""), "pt-BR")
@@ -387,6 +420,7 @@ async function sincronizarSaldosAdminNoDashboard() {
     console.error("Erro ao sincronizar saldos da ADM no dashboard:", err);
   }
 }
+
 function preencherFiltroMes() {
   const filtroMes = byId("filtroMes");
   if (!filtroMes) return;
@@ -812,6 +846,7 @@ async function carregarDoutoresAdmin() {
     tbody.innerHTML = `<tr><td colspan="10" class="empty-state">Erro ao carregar doutores</td></tr>`;
   }
 }
+
 async function salvarDoutor(id) {
   try {
     mostrarMensagemAdmin("");
@@ -838,18 +873,22 @@ async function salvarDoutor(id) {
     const emailAtual = userAtual?.email || null;
     const nomeResponsavel = obterNomeResponsavelAtual(userAtual);
 
+    const payloadDoutor = {
+      nome,
+      nome_normalizado: normalizarNome(nome),
+      credito,
+      pix_key: pixKey || null,
+      ativo,
+      updated_by_email: emailAtual,
+      updated_by_nome: nomeResponsavel
+    };
+
+    const doutorIdReal = await garantirDoutorNoSupabase(id, payloadDoutor);
+
     const { error: errorDoutor } = await client
       .from("doutores_config")
-      .update({
-        nome,
-        nome_normalizado: normalizarNome(nome),
-        credito,
-        pix_key: pixKey || null,
-        ativo,
-        updated_by_email: emailAtual,
-        updated_by_nome: nomeResponsavel
-      })
-      .eq("id", id);
+      .update(payloadDoutor)
+      .eq("id", doutorIdReal);
 
     if (errorDoutor) throw errorDoutor;
 
@@ -859,7 +898,7 @@ async function salvarDoutor(id) {
       .from("doutores_saldos_mensais")
       .select("*")
       .eq("competencia", competencia)
-      .eq("doutor_id", id)
+      .eq("doutor_id", doutorIdReal)
       .maybeSingle();
 
     if (errorBuscaSaldo) throw errorBuscaSaldo;
@@ -884,7 +923,7 @@ async function salvarDoutor(id) {
         .from("doutores_saldos_mensais")
         .insert({
           competencia,
-          doutor_id: id,
+          doutor_id: doutorIdReal,
           credito_inicial: creditoInicial,
           utilizado,
           credito_final: creditoFinal,
@@ -912,6 +951,12 @@ async function removerDoutor(id) {
 
   try {
     mostrarMensagemAdmin("");
+
+    if (!isUuid(id)) {
+      mostrarMensagemAdmin("Este doutor ainda não existe no Supabase. Nada para excluir no banco.", true);
+      return;
+    }
+
     const client = validarSupabasePronto();
 
     const { error: errorSaldo } = await client
