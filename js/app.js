@@ -303,7 +303,17 @@ async function sincronizarSaldosAdminNoDashboard() {
       .select("id, nome, credito, pix_key, ativo, updated_by_email, updated_by_nome")
       .order("nome", { ascending: true });
 
-    if (errorDoutores) throw errorDoutores;
+    if (errorDoutores) {
+      console.warn("Não foi possível carregar doutores da ADM. Mantendo dashboard original.", errorDoutores);
+      return;
+    }
+
+    // MUITO IMPORTANTE:
+    // se não houver doutores cadastrados no Supabase, não apaga os créditos da dashboard
+    if (!Array.isArray(doutores) || doutores.length === 0) {
+      console.warn("ADM sem doutores cadastrados no Supabase. Mantendo dados originais da dashboard.");
+      return;
+    }
 
     const meses = dashboardData?.meses_disponiveis || [];
     if (!meses.length) return;
@@ -313,7 +323,10 @@ async function sincronizarSaldosAdminNoDashboard() {
       .select("*")
       .in("competencia", meses);
 
-    if (errorSaldos) throw errorSaldos;
+    if (errorSaldos) {
+      console.warn("Não foi possível carregar saldos da ADM. Mantendo dashboard original.", errorSaldos);
+      return;
+    }
 
     const saldoPorMesEDoutor = {};
     for (const item of saldos || []) {
@@ -324,17 +337,31 @@ async function sincronizarSaldosAdminNoDashboard() {
     }
 
     for (const competencia of meses) {
-      const baseMes = [];
-      const saldosDoMes = saldoPorMesEDoutor[competencia] || {};
+      const saldosOriginais = Array.isArray(dashboardData?.saldos_por_competencia?.[competencia])
+        ? dashboardData.saldos_por_competencia[competencia]
+        : [];
 
-      for (const doutor of doutores || []) {
+      const originalPorNome = {};
+      for (const item of saldosOriginais) {
+        originalPorNome[normalizarNome(item.doutor || "")] = item;
+      }
+
+      const baseMes = [];
+
+      for (const doutor of doutores) {
         if (doutor.ativo === false) continue;
 
-        const saldo = saldosDoMes[doutor.id] || {};
-        const creditoBase = Number(doutor.credito || 0);
-        const creditoInicial = Number(saldo.credito_inicial ?? creditoBase);
-        const utilizado = Number(saldo.utilizado ?? 0);
-        const creditoFinal = Number(saldo.credito_final ?? (creditoInicial - utilizado));
+        const saldo = saldoPorMesEDoutor[competencia]?.[doutor.id] || null;
+        const original = originalPorNome[normalizarNome(doutor.nome || "")] || null;
+
+        const creditoBase = Number(doutor.credito ?? original?.credito_inicial ?? 0);
+        const creditoInicial = Number(saldo?.credito_inicial ?? original?.credito_inicial ?? creditoBase);
+        const utilizado = Number(saldo?.utilizado ?? original?.utilizado ?? 0);
+        const creditoFinal = Number(
+          saldo?.credito_final ??
+          original?.credito_disponivel ??
+          Math.max(0, creditoInicial - utilizado)
+        );
 
         baseMes.push({
           doutor_id: doutor.id,
@@ -343,21 +370,23 @@ async function sincronizarSaldosAdminNoDashboard() {
           utilizado,
           credito_disponivel: creditoFinal,
           credito_final: creditoFinal,
-          pix_key: doutor.pix_key || "",
-          updated_by_email: saldo.updated_by_email || doutor.updated_by_email || null,
-          updated_by_nome: saldo.updated_by_nome || doutor.updated_by_nome || null
+          pix_key: doutor.pix_key || original?.pix_key || "",
+          updated_by_email: saldo?.updated_by_email || doutor.updated_by_email || null,
+          updated_by_nome: saldo?.updated_by_nome || doutor.updated_by_nome || null
         });
       }
 
-      dashboardData.saldos_por_competencia[competencia] = baseMes.sort((a, b) =>
-        String(a.doutor || "").localeCompare(String(b.doutor || ""), "pt-BR")
-      );
+      // só substitui se realmente montou alguma coisa
+      if (baseMes.length > 0) {
+        dashboardData.saldos_por_competencia[competencia] = baseMes.sort((a, b) =>
+          String(a.doutor || "").localeCompare(String(b.doutor || ""), "pt-BR")
+        );
+      }
     }
   } catch (err) {
     console.error("Erro ao sincronizar saldos da ADM no dashboard:", err);
   }
 }
-
 function preencherFiltroMes() {
   const filtroMes = byId("filtroMes");
   if (!filtroMes) return;
