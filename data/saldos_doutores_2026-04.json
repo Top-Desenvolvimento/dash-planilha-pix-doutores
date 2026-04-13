@@ -2,8 +2,8 @@
   {
     "doutor_id": "1",
     "doutor": "Adriele da Silva",
-    "credito_inicial": 2000.0,
-    "utilizado": 2000.0,
+    "credito_inicial": 3000.0,
+    "utilizado": 3000.0,
     "credito_disponivel": 0.0,
     "pix_key": ""
   },
