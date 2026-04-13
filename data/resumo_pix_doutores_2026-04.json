@@ -1,15 +1,15 @@
 {
   "competencia": "2026-04",
-  "gerado_em": "2026-04-13T21:17:15.115288",
-  "quantidade_total": 223,
-  "valor_total": 27848.0,
-  "valor_total_descontado": 105.0,
-  "valor_total_pendente": 27743.0,
+  "gerado_em": "2026-04-13T22:12:39.377880",
+  "quantidade_total": 225,
+  "valor_total": 28193.0,
+  "valor_total_descontado": 193.0,
+  "valor_total_pendente": 28000.0,
   "por_unidade": [
     {
       "unidade": "Bento",
-      "quantidade": 12,
-      "valor": 1324.0
+      "quantidade": 13,
+      "valor": 1581.0
     },
     {
       "unidade": "Caxias",
@@ -45,6 +45,11 @@
       "unidade": "Ssdocai",
       "quantidade": 15,
       "valor": 1764.0
+    },
+    {
+      "unidade": "Veranopolis",
+      "quantidade": 1,
+      "valor": 88.0
     }
   ],
   "por_doutor": [
@@ -67,6 +72,11 @@
       "doutor": "Dionathan Pohlmann",
       "quantidade": 24,
       "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Evalda Baldissera",
+      "quantidade": 1,
+      "valor_descontado": 88.0
     },
     {
       "doutor": "Everlize Cipriani",
@@ -125,7 +135,7 @@
     },
     {
       "doutor": "Naiane Pieta",
-      "quantidade": 3,
+      "quantidade": 4,
       "valor_descontado": 0.0
     },
     {

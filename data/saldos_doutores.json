@@ -20,8 +20,8 @@
       "doutor_id": "3",
       "doutor": "Alexandre Favero",
       "credito_inicial": 1500.0,
-      "utilizado": 105.0,
-      "credito_disponivel": 1395.0,
+      "utilizado": 210.0,
+      "credito_disponivel": 1290.0,
       "pix_key": ""
     },
     {
@@ -92,8 +92,8 @@
       "doutor_id": "38",
       "doutor": "Evalda Baldissera",
       "credito_inicial": 5604.82,
-      "utilizado": 0.0,
-      "credito_disponivel": 5604.82,
+      "utilizado": 88.0,
+      "credito_disponivel": 5516.82,
       "pix_key": ""
     },
     {
