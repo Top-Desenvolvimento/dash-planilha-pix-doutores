@@ -257,6 +257,35 @@ function getRegistrosCompetencia(competencia) {
   return registros.filter(item => String(item.competencia || "") === competencia);
 }
 
+function obterDoutoresFallbackDoDashboard() {
+  const mapa = new Map();
+  const meses = dashboardData?.meses_disponiveis || [];
+
+  for (const competencia of meses) {
+    const saldos = dashboardData?.saldos_por_competencia?.[competencia] || [];
+    for (const item of saldos) {
+      const id = item.doutor_id || normalizarNome(item.doutor || "");
+      if (!id) continue;
+
+      if (!mapa.has(id)) {
+        mapa.set(id, {
+          id,
+          nome: item.doutor || "",
+          credito: Number(item.credito_inicial || 0),
+          pix_key: item.pix_key || "",
+          ativo: true,
+          updated_by_email: item.updated_by_email || null,
+          updated_by_nome: item.updated_by_nome || null
+        });
+      }
+    }
+  }
+
+  return Array.from(mapa.values()).sort((a, b) =>
+    String(a.nome || "").localeCompare(String(b.nome || ""), "pt-BR")
+  );
+}
+
 function getSaldosCompetencia(competencia) {
   const saldos = dashboardData?.saldos_por_competencia?.[competencia];
   return Array.isArray(saldos) ? [...saldos] : [];
