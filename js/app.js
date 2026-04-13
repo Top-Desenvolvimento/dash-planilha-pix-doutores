@@ -274,14 +274,16 @@ function obterDoutoresFallbackDoDashboard() {
 
   for (const competencia of meses) {
     const saldos = dashboardData?.saldos_por_competencia?.[competencia] || [];
-    for (const item of saldos) {
-      const id = item.doutor_id || normalizarNome(item.doutor || "");
-      if (!id) continue;
 
-      if (!mapa.has(id)) {
-        mapa.set(id, {
-          id,
+    for (const item of saldos) {
+      const chave = normalizarNome(item.doutor || "");
+      if (!chave) continue;
+
+      if (!mapa.has(chave)) {
+        mapa.set(chave, {
+          id: item.doutor_id || chave,
           nome: item.doutor || "",
+          nome_normalizado: chave,
           credito: Number(item.credito_inicial || 0),
           pix_key: item.pix_key || "",
           ativo: true,
@@ -295,6 +297,19 @@ function obterDoutoresFallbackDoDashboard() {
   return Array.from(mapa.values()).sort((a, b) =>
     String(a.nome || "").localeCompare(String(b.nome || ""), "pt-BR")
   );
+}
+
+function obterSaldosFallbackDaCompetencia(competencia) {
+  const saldos = dashboardData?.saldos_por_competencia?.[competencia] || [];
+  const mapa = {};
+
+  for (const item of saldos) {
+    const chave = normalizarNome(item.doutor || "");
+    if (!chave) continue;
+    mapa[chave] = item;
+  }
+
+  return mapa;
 }
 
 async function garantirDoutorNoSupabase(idOriginal, payloadBase) {
@@ -334,9 +349,9 @@ async function sincronizarSaldosAdminNoDashboard() {
   try {
     const client = validarSupabasePronto();
 
-    const { data: doutores, error: errorDoutores } = await client
+    const { data: doutoresSupabase, error: errorDoutores } = await client
       .from("doutores_config")
-      .select("id, nome, credito, pix_key, ativo, updated_by_email, updated_by_nome")
+      .select("id, nome, nome_normalizado, credito, pix_key, ativo, updated_by_email, updated_by_nome")
       .order("nome", { ascending: true });
 
     if (errorDoutores) {
@@ -344,15 +359,10 @@ async function sincronizarSaldosAdminNoDashboard() {
       return;
     }
 
-    if (!Array.isArray(doutores) || doutores.length === 0) {
-      console.warn("ADM sem doutores cadastrados no Supabase. Mantendo dados originais da dashboard.");
-      return;
-    }
-
     const meses = dashboardData?.meses_disponiveis || [];
     if (!meses.length) return;
 
-    const { data: saldos, error: errorSaldos } = await client
+    const { data: saldosSupabase, error: errorSaldos } = await client
       .from("doutores_saldos_mensais")
       .select("*")
       .in("competencia", meses);
@@ -362,35 +372,80 @@ async function sincronizarSaldosAdminNoDashboard() {
       return;
     }
 
-    const saldoPorMesEDoutor = {};
-    for (const item of saldos || []) {
-      if (!saldoPorMesEDoutor[item.competencia]) {
-        saldoPorMesEDoutor[item.competencia] = {};
+    const fallbackDoutores = obterDoutoresFallbackDoDashboard();
+    const todosPorNome = new Map();
+
+    for (const item of fallbackDoutores) {
+      const chave = normalizarNome(item.nome || item.nome_normalizado || "");
+      if (!chave) continue;
+      todosPorNome.set(chave, {
+        id: item.id,
+        nome: item.nome,
+        nome_normalizado: chave,
+        credito: Number(item.credito || 0),
+        pix_key: item.pix_key || "",
+        ativo: item.ativo !== false,
+        updated_by_email: item.updated_by_email || null,
+        updated_by_nome: item.updated_by_nome || null,
+        origem: "dashboard"
+      });
+    }
+
+    for (const item of doutoresSupabase || []) {
+      const chave = normalizarNome(item.nome || item.nome_normalizado || "");
+      if (!chave) continue;
+
+      const existente = todosPorNome.get(chave) || {};
+      todosPorNome.set(chave, {
+        id: item.id || existente.id || chave,
+        nome: item.nome || existente.nome || "",
+        nome_normalizado: chave,
+        credito: Number(item.credito ?? existente.credito ?? 0),
+        pix_key: item.pix_key || existente.pix_key || "",
+        ativo: item.ativo !== false,
+        updated_by_email: item.updated_by_email || existente.updated_by_email || null,
+        updated_by_nome: item.updated_by_nome || existente.updated_by_nome || null,
+        origem: "supabase"
+      });
+    }
+
+    const saldosPorMesENome = {};
+    for (const item of saldosSupabase || []) {
+      const competencia = item.competencia;
+      if (!saldosPorMesENome[competencia]) {
+        saldosPorMesENome[competencia] = {};
       }
-      saldoPorMesEDoutor[item.competencia][item.doutor_id] = item;
+      saldosPorMesENome[competencia][item.doutor_id] = item;
     }
 
     for (const competencia of meses) {
-      const saldosOriginais = Array.isArray(dashboardData?.saldos_por_competencia?.[competencia])
-        ? dashboardData.saldos_por_competencia[competencia]
-        : [];
-
-      const originalPorNome = {};
-      for (const item of saldosOriginais) {
-        originalPorNome[normalizarNome(item.doutor || "")] = item;
-      }
-
+      const fallbackSaldos = obterSaldosFallbackDaCompetencia(competencia);
       const baseMes = [];
 
-      for (const doutor of doutores) {
+      for (const doutor of todosPorNome.values()) {
         if (doutor.ativo === false) continue;
 
-        const saldo = saldoPorMesEDoutor[competencia]?.[doutor.id] || null;
-        const original = originalPorNome[normalizarNome(doutor.nome || "")] || null;
+        const chaveNome = normalizarNome(doutor.nome || "");
+        const original = fallbackSaldos[chaveNome] || null;
+        const saldo = isUuid(doutor.id) ? (saldosPorMesENome[competencia]?.[doutor.id] || null) : null;
 
-        const creditoBase = Number(doutor.credito ?? original?.credito_inicial ?? 0);
-        const creditoInicial = Number(saldo?.credito_inicial ?? original?.credito_inicial ?? creditoBase);
-        const utilizado = Number(saldo?.utilizado ?? original?.utilizado ?? 0);
+        const creditoBase = Number(
+          doutor.origem === "supabase"
+            ? (doutor.credito ?? original?.credito_inicial ?? 0)
+            : (original?.credito_inicial ?? doutor.credito ?? 0)
+        );
+
+        const creditoInicial = Number(
+          saldo?.credito_inicial ??
+          (doutor.origem === "supabase" ? creditoBase : (original?.credito_inicial ?? creditoBase))
+        );
+
+        const utilizado = Number(
+          saldo?.utilizado ??
+          original?.utilizado ??
+          0
+        );
+
         const creditoFinal = Number(
           saldo?.credito_final ??
           original?.credito_disponivel ??
@@ -410,11 +465,9 @@ async function sincronizarSaldosAdminNoDashboard() {
         });
       }
 
-      if (baseMes.length > 0) {
-        dashboardData.saldos_por_competencia[competencia] = baseMes.sort((a, b) =>
-          String(a.doutor || "").localeCompare(String(b.doutor || ""), "pt-BR")
-        );
-      }
+      dashboardData.saldos_por_competencia[competencia] = baseMes.sort((a, b) =>
+        String(a.doutor || "").localeCompare(String(b.doutor || ""), "pt-BR")
+      );
     }
   } catch (err) {
     console.error("Erro ao sincronizar saldos da ADM no dashboard:", err);
@@ -770,19 +823,13 @@ async function carregarDoutoresAdmin() {
   const client = validarSupabasePronto();
 
   try {
-    let doutores = [];
-    let saldos = [];
-
     const { data: doutoresSupabase, error: errorDoutores } = await client
       .from("doutores_config")
       .select("*")
       .order("nome", { ascending: true });
 
-    if (!errorDoutores && Array.isArray(doutoresSupabase) && doutoresSupabase.length > 0) {
-      doutores = doutoresSupabase;
-    } else {
-      console.warn("Usando fallback do dashboard para listar doutores na ADM.", errorDoutores);
-      doutores = obterDoutoresFallbackDoDashboard();
+    if (errorDoutores) {
+      console.warn("Erro ao buscar doutores do Supabase:", errorDoutores);
     }
 
     const { data: saldosSupabase, error: errorSaldos } = await client
@@ -790,30 +837,96 @@ async function carregarDoutoresAdmin() {
       .select("*")
       .eq("competencia", competencia);
 
-    if (!errorSaldos && Array.isArray(saldosSupabase)) {
-      saldos = saldosSupabase;
+    if (errorSaldos) {
+      console.warn("Erro ao buscar saldos do Supabase:", errorSaldos);
     }
 
-    const saldoPorDoutor = {};
-    for (const item of saldos || []) {
-      saldoPorDoutor[item.doutor_id] = item;
+    const fallbackDoutores = obterDoutoresFallbackDoDashboard();
+    const fallbackSaldos = obterSaldosFallbackDaCompetencia(competencia);
+
+    const todosPorNome = new Map();
+
+    for (const item of fallbackDoutores) {
+      const chave = normalizarNome(item.nome || "");
+      if (!chave) continue;
+
+      todosPorNome.set(chave, {
+        id: item.id,
+        nome: item.nome,
+        nome_normalizado: chave,
+        credito: Number(item.credito || 0),
+        pix_key: item.pix_key || "",
+        ativo: item.ativo !== false,
+        updated_by_email: item.updated_by_email || null,
+        updated_by_nome: item.updated_by_nome || null,
+        origem: "dashboard"
+      });
     }
 
-    if (!doutores || !doutores.length) {
+    for (const item of doutoresSupabase || []) {
+      const chave = normalizarNome(item.nome || item.nome_normalizado || "");
+      if (!chave) continue;
+
+      const existente = todosPorNome.get(chave) || {};
+      todosPorNome.set(chave, {
+        id: item.id || existente.id || chave,
+        nome: item.nome || existente.nome || "",
+        nome_normalizado: chave,
+        credito: Number(item.credito ?? existente.credito ?? 0),
+        pix_key: item.pix_key || existente.pix_key || "",
+        ativo: item.ativo !== false,
+        updated_by_email: item.updated_by_email || existente.updated_by_email || null,
+        updated_by_nome: item.updated_by_nome || existente.updated_by_nome || null,
+        origem: "supabase"
+      });
+    }
+
+    const saldoPorDoutorId = {};
+    for (const item of saldosSupabase || []) {
+      saldoPorDoutorId[item.doutor_id] = item;
+    }
+
+    const doutores = Array.from(todosPorNome.values()).sort((a, b) =>
+      String(a.nome || "").localeCompare(String(b.nome || ""), "pt-BR")
+    );
+
+    if (!doutores.length) {
       tbody.innerHTML = `<tr><td colspan="10" class="empty-state">Nenhum doutor cadastrado</td></tr>`;
       return;
     }
 
     tbody.innerHTML = doutores.map(item => {
-      const saldo = saldoPorDoutor[item.id] || {};
+      const chaveNome = normalizarNome(item.nome || "");
+      const saldoFallback = fallbackSaldos[chaveNome] || {};
+      const saldoSupabase = isUuid(item.id) ? (saldoPorDoutorId[item.id] || {}) : {};
 
-      const creditoBase = Number(item.credito || 0);
-      const creditoInicial = Number(saldo.credito_inicial ?? creditoBase);
-      const utilizado = Number(saldo.utilizado ?? 0);
-      const saldoFinal = Number(saldo.credito_final ?? Math.max(0, creditoInicial - utilizado));
+      const creditoBase = Number(
+        item.origem === "supabase"
+          ? (item.credito ?? saldoFallback.credito_inicial ?? 0)
+          : (saldoFallback.credito_inicial ?? item.credito ?? 0)
+      );
+
+      const creditoInicial = Number(
+        saldoSupabase.credito_inicial ??
+        saldoFallback.credito_inicial ??
+        creditoBase
+      );
+
+      const utilizado = Number(
+        saldoSupabase.utilizado ??
+        saldoFallback.utilizado ??
+        0
+      );
+
+      const saldoFinal = Number(
+        saldoSupabase.credito_final ??
+        saldoFallback.credito_disponivel ??
+        Math.max(0, creditoInicial - utilizado)
+      );
+
       const responsavelUltimo =
-        saldo.updated_by_nome ||
-        saldo.updated_by_email ||
+        saldoSupabase.updated_by_nome ||
+        saldoSupabase.updated_by_email ||
         item.updated_by_nome ||
         item.updated_by_email ||
         "";
@@ -832,7 +945,7 @@ async function carregarDoutoresAdmin() {
               <option value="false" ${item.ativo === false ? "selected" : ""}>Inativo</option>
             </select>
           </td>
-          <td><input data-id="${item.id}" data-field="observacao" type="text" value="${escapeHtml(saldo.observacao || "")}" /></td>
+          <td><input data-id="${item.id}" data-field="observacao" type="text" value="${escapeHtml(saldoSupabase.observacao || "")}" /></td>
           <td>${escapeHtml(responsavelUltimo)}</td>
           <td>
             <button class="btn btn-primary btn-small" onclick="salvarDoutor('${item.id}')">Salvar</button>
