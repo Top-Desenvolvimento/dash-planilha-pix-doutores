@@ -10,7 +10,7 @@ permissions:
 
 concurrency:
   group: atualizar-dashboard-pix-doutores
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   atualizar-dashboard:
