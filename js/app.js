@@ -56,7 +56,11 @@ function normalizarNome(nome) {
     "dionathan paim pohlmann": "dionathan pohlmann",
     "cir.dionathan pohlmann": "dionathan pohlmann",
     "cir dionathan pohlmann": "dionathan pohlmann",
-    "dionathan pohlmann": "dionathan pohlmann"
+    "dionathan pohlmann": "dionathan pohlmann",
+    "andriele da silva": "adriele da silva",
+    "dra adriele da silva": "adriele da silva",
+    "dra andriele da silva": "adriele da silva",
+    "adriele da silva": "adriele da silva"
   };
 
   return aliases[base] || base;
@@ -409,13 +413,13 @@ async function sincronizarSaldosAdminNoDashboard() {
       });
     }
 
-    const saldosPorMesENome = {};
+    const saldosPorMesEId = {};
     for (const item of saldosSupabase || []) {
-      const competencia = item.competencia;
-      if (!saldosPorMesENome[competencia]) {
-        saldosPorMesENome[competencia] = {};
+      const comp = item.competencia;
+      if (!saldosPorMesEId[comp]) {
+        saldosPorMesEId[comp] = {};
       }
-      saldosPorMesENome[competencia][item.doutor_id] = item;
+      saldosPorMesEId[comp][item.doutor_id] = item;
     }
 
     for (const competencia of meses) {
@@ -427,30 +431,26 @@ async function sincronizarSaldosAdminNoDashboard() {
 
         const chaveNome = normalizarNome(doutor.nome || "");
         const original = fallbackSaldos[chaveNome] || null;
-        const saldo = isUuid(doutor.id) ? (saldosPorMesENome[competencia]?.[doutor.id] || null) : null;
+        const saldo = isUuid(doutor.id) ? (saldosPorMesEId[competencia]?.[doutor.id] || null) : null;
 
-        const creditoBase = Number(
-          doutor.origem === "supabase"
-            ? (doutor.credito ?? original?.credito_inicial ?? 0)
-            : (original?.credito_inicial ?? doutor.credito ?? 0)
-        );
-
+        // REGRA CORRETA:
+        // - crédito vem da ADM/Supabase
+        // - utilizado vem do sistema/dashboard
+        // - saldo recalcula com base nisso
         const creditoInicial = Number(
           saldo?.credito_inicial ??
-          (doutor.origem === "supabase" ? creditoBase : (original?.credito_inicial ?? creditoBase))
-        );
-
-        const utilizado = Number(
-          saldo?.utilizado ??
-          original?.utilizado ??
+          doutor.credito ??
+          original?.credito_inicial ??
           0
         );
 
-        const creditoFinal = Number(
-          saldo?.credito_final ??
-          original?.credito_disponivel ??
-          Math.max(0, creditoInicial - utilizado)
-        );
+        const utilizadoSistema = Number(original?.utilizado ?? 0);
+        const utilizadoManual = Number(saldo?.utilizado ?? 0);
+
+        const utilizado = utilizadoSistema > 0 ? utilizadoSistema : utilizadoManual;
+
+        const creditoFinalCalculado = Number((creditoInicial - utilizado).toFixed(2));
+        const creditoFinal = Math.max(0, creditoFinalCalculado);
 
         baseMes.push({
           doutor_id: doutor.id,
@@ -901,28 +901,24 @@ async function carregarDoutoresAdmin() {
       const saldoSupabase = isUuid(item.id) ? (saldoPorDoutorId[item.id] || {}) : {};
 
       const creditoBase = Number(
-        item.origem === "supabase"
-          ? (item.credito ?? saldoFallback.credito_inicial ?? 0)
-          : (saldoFallback.credito_inicial ?? item.credito ?? 0)
+        item.credito ??
+        saldoFallback.credito_inicial ??
+        0
       );
 
       const creditoInicial = Number(
         saldoSupabase.credito_inicial ??
+        item.credito ??
         saldoFallback.credito_inicial ??
-        creditoBase
-      );
-
-      const utilizado = Number(
-        saldoSupabase.utilizado ??
-        saldoFallback.utilizado ??
         0
       );
 
-      const saldoFinal = Number(
-        saldoSupabase.credito_final ??
-        saldoFallback.credito_disponivel ??
-        Math.max(0, creditoInicial - utilizado)
-      );
+      // Na ADM, utilizado deve refletir o sistema por padrão
+      const utilizadoSistema = Number(saldoFallback.utilizado ?? 0);
+      const utilizadoManual = Number(saldoSupabase.utilizado ?? 0);
+      const utilizado = utilizadoSistema > 0 ? utilizadoSistema : utilizadoManual;
+
+      const saldoFinal = Math.max(0, Number((creditoInicial - utilizado).toFixed(2)));
 
       const responsavelUltimo =
         saldoSupabase.updated_by_nome ||
@@ -970,8 +966,6 @@ async function salvarDoutor(id) {
     const credito = parseFloat(document.querySelector(`[data-id="${id}"][data-field="credito"]`)?.value || "0");
     const creditoInicial = parseFloat(document.querySelector(`[data-id="${id}"][data-field="credito_inicial"]`)?.value || "0");
     const utilizado = parseFloat(document.querySelector(`[data-id="${id}"][data-field="utilizado"]`)?.value || "0");
-    const creditoFinalDigitado = document.querySelector(`[data-id="${id}"][data-field="credito_final"]`)?.value ?? "";
-    const creditoFinal = calcularSaldoMensalAdmin(creditoInicial, utilizado, creditoFinalDigitado);
     const pixKey = document.querySelector(`[data-id="${id}"][data-field="pix_key"]`)?.value.trim() || "";
     const ativo = document.querySelector(`[data-id="${id}"][data-field="ativo"]`)?.value === "true";
     const observacao = document.querySelector(`[data-id="${id}"][data-field="observacao"]`)?.value.trim() || null;
@@ -1005,7 +999,10 @@ async function salvarDoutor(id) {
 
     if (errorDoutor) throw errorDoutor;
 
-    const ajusteManual = Number((creditoFinal - (creditoInicial - utilizado)).toFixed(2));
+    // salva o limite e o valor visualizado da ADM,
+    // mas a Home sempre recalcula usando o utilizado do sistema
+    const creditoFinal = Math.max(0, Number((creditoInicial - utilizado).toFixed(2)));
+    const ajusteManual = 0;
 
     const { data: saldoExistente, error: errorBuscaSaldo } = await client
       .from("doutores_saldos_mensais")
@@ -1016,18 +1013,20 @@ async function salvarDoutor(id) {
 
     if (errorBuscaSaldo) throw errorBuscaSaldo;
 
+    const payloadSaldo = {
+      credito_inicial: creditoInicial,
+      utilizado,
+      credito_final: creditoFinal,
+      ajuste_manual: ajusteManual,
+      observacao,
+      updated_by_email: emailAtual,
+      updated_by_nome: nomeResponsavel
+    };
+
     if (saldoExistente) {
       const { error: errorSaldo } = await client
         .from("doutores_saldos_mensais")
-        .update({
-          credito_inicial: creditoInicial,
-          utilizado,
-          credito_final: creditoFinal,
-          ajuste_manual: ajusteManual,
-          observacao,
-          updated_by_email: emailAtual,
-          updated_by_nome: nomeResponsavel
-        })
+        .update(payloadSaldo)
         .eq("id", saldoExistente.id);
 
       if (errorSaldo) throw errorSaldo;
@@ -1037,13 +1036,7 @@ async function salvarDoutor(id) {
         .insert({
           competencia,
           doutor_id: doutorIdReal,
-          credito_inicial: creditoInicial,
-          utilizado,
-          credito_final: creditoFinal,
-          ajuste_manual: ajusteManual,
-          observacao,
-          updated_by_email: emailAtual,
-          updated_by_nome: nomeResponsavel
+          ...payloadSaldo
         });
 
       if (errorInsertSaldo) throw errorInsertSaldo;
