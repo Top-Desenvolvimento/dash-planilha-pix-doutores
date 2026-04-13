@@ -736,19 +736,29 @@ async function carregarDoutoresAdmin() {
   const client = validarSupabasePronto();
 
   try {
-    const { data: doutores, error: errorDoutores } = await client
+    let doutores = [];
+    let saldos = [];
+
+    const { data: doutoresSupabase, error: errorDoutores } = await client
       .from("doutores_config")
       .select("*")
       .order("nome", { ascending: true });
 
-    if (errorDoutores) throw errorDoutores;
+    if (!errorDoutores && Array.isArray(doutoresSupabase) && doutoresSupabase.length > 0) {
+      doutores = doutoresSupabase;
+    } else {
+      console.warn("Usando fallback do dashboard para listar doutores na ADM.", errorDoutores);
+      doutores = obterDoutoresFallbackDoDashboard();
+    }
 
-    const { data: saldos, error: errorSaldos } = await client
+    const { data: saldosSupabase, error: errorSaldos } = await client
       .from("doutores_saldos_mensais")
       .select("*")
       .eq("competencia", competencia);
 
-    if (errorSaldos) throw errorSaldos;
+    if (!errorSaldos && Array.isArray(saldosSupabase)) {
+      saldos = saldosSupabase;
+    }
 
     const saldoPorDoutor = {};
     for (const item of saldos || []) {
@@ -766,7 +776,7 @@ async function carregarDoutoresAdmin() {
       const creditoBase = Number(item.credito || 0);
       const creditoInicial = Number(saldo.credito_inicial ?? creditoBase);
       const utilizado = Number(saldo.utilizado ?? 0);
-      const saldoFinal = Number(saldo.credito_final ?? creditoInicial);
+      const saldoFinal = Number(saldo.credito_final ?? Math.max(0, creditoInicial - utilizado));
       const responsavelUltimo =
         saldo.updated_by_nome ||
         saldo.updated_by_email ||
@@ -784,8 +794,8 @@ async function carregarDoutoresAdmin() {
           <td><input data-id="${item.id}" data-field="pix_key" type="text" value="${escapeHtml(item.pix_key || "")}" /></td>
           <td>
             <select data-id="${item.id}" data-field="ativo">
-              <option value="true" ${item.ativo ? "selected" : ""}>Ativo</option>
-              <option value="false" ${!item.ativo ? "selected" : ""}>Inativo</option>
+              <option value="true" ${item.ativo !== false ? "selected" : ""}>Ativo</option>
+              <option value="false" ${item.ativo === false ? "selected" : ""}>Inativo</option>
             </select>
           </td>
           <td><input data-id="${item.id}" data-field="observacao" type="text" value="${escapeHtml(saldo.observacao || "")}" /></td>
@@ -802,7 +812,6 @@ async function carregarDoutoresAdmin() {
     tbody.innerHTML = `<tr><td colspan="10" class="empty-state">Erro ao carregar doutores</td></tr>`;
   }
 }
-
 async function salvarDoutor(id) {
   try {
     mostrarMensagemAdmin("");
