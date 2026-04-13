@@ -182,6 +182,7 @@ def montar_saldos_do_mes(registros_mes: List[Dict[str, Any]]) -> List[Dict[str, 
             "credito_inicial": credito_inicial,
             "utilizado": utilizado,
             "credito_disponivel": credito_disponivel,
+            "credito_final": credito_disponivel,
             "pix_key": doutor.get("pix_key", ""),
         })
 
