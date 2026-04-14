@@ -1,10 +1,10 @@
 {
   "competencia": "2026-04",
-  "gerado_em": "2026-04-14T20:04:50.764246",
-  "quantidade_total": 247,
-  "valor_total": 30963.0,
-  "valor_total_descontado": 233.0,
-  "valor_total_pendente": 30730.0,
+  "gerado_em": "2026-04-14T21:12:44.882544",
+  "quantidade_total": 254,
+  "valor_total": 31824.0,
+  "valor_total_descontado": 328.0,
+  "valor_total_pendente": 31496.0,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,8 +13,8 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 59,
-      "valor": 7513.0
+      "quantidade": 61,
+      "valor": 7876.0
     },
     {
       "unidade": "Encantado",
@@ -23,23 +23,23 @@
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 26,
-      "valor": 3875.0
+      "quantidade": 27,
+      "valor": 3995.0
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 23,
-      "valor": 3236.0
+      "quantidade": 24,
+      "valor": 3334.0
     },
     {
       "unidade": "Garibaldi",
-      "quantidade": 34,
-      "valor": 3851.0
+      "quantidade": 35,
+      "valor": 3946.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 59,
-      "valor": 7358.0
+      "quantidade": 61,
+      "valor": 7543.0
     },
     {
       "unidade": "Ssdocai",
@@ -55,7 +55,7 @@
   "por_doutor": [
     {
       "doutor": "Adriele da Silva",
-      "quantidade": 7,
+      "quantidade": 8,
       "valor_descontado": 0.0
     },
     {
@@ -70,7 +70,7 @@
     },
     {
       "doutor": "Dionathan Pohlmann",
-      "quantidade": 26,
+      "quantidade": 27,
       "valor_descontado": 0.0
     },
     {
@@ -85,7 +85,7 @@
     },
     {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 28,
+      "quantidade": 29,
       "valor_descontado": 0.0
     },
     {
@@ -97,6 +97,11 @@
       "doutor": "Gislaine Santos",
       "quantidade": 5,
       "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Greici Matiello",
+      "quantidade": 1,
+      "valor_descontado": 95.0
     },
     {
       "doutor": "Jéssica Barreto",
@@ -115,7 +120,7 @@
     },
     {
       "doutor": "Leticia Canabarro",
-      "quantidade": 12,
+      "quantidade": 14,
       "valor_descontado": 0.0
     },
     {
@@ -150,7 +155,7 @@
     },
     {
       "doutor": "Tamara Macanan",
-      "quantidade": 33,
+      "quantidade": 34,
       "valor_descontado": 0.0
     },
     {
