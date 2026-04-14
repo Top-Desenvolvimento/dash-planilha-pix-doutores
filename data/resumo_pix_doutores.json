@@ -9,11 +9,11 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-14T16:07:21.518316",
-    "quantidade_total": 234,
-    "valor_total": 29328.0,
+    "gerado_em": "2026-04-14T17:29:38.733991",
+    "quantidade_total": 240,
+    "valor_total": 30127.0,
     "valor_total_descontado": 233.0,
-    "valor_total_pendente": 29095.0,
+    "valor_total_pendente": 29894.0,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -22,8 +22,8 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 56,
-        "valor": 7269.0
+        "quantidade": 57,
+        "valor": 7435.0
       },
       {
         "unidade": "Encantado",
@@ -32,13 +32,13 @@
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 23,
-        "valor": 3421.0
+        "quantidade": 25,
+        "valor": 3736.0
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 22,
-        "valor": 3121.0
+        "quantidade": 23,
+        "valor": 3236.0
       },
       {
         "unidade": "Garibaldi",
@@ -47,13 +47,13 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 55,
-        "valor": 6754.0
+        "quantidade": 56,
+        "valor": 6859.0
       },
       {
         "unidade": "Ssdocai",
-        "quantidade": 15,
-        "valor": 1764.0
+        "quantidade": 16,
+        "valor": 1862.0
       },
       {
         "unidade": "Veranopolis",
@@ -64,7 +64,7 @@
     "por_doutor": [
       {
         "doutor": "Adriele da Silva",
-        "quantidade": 5,
+        "quantidade": 6,
         "valor_descontado": 0.0
       },
       {
@@ -79,7 +79,7 @@
       },
       {
         "doutor": "Dionathan Pohlmann",
-        "quantidade": 24,
+        "quantidade": 25,
         "valor_descontado": 0.0
       },
       {
@@ -94,7 +94,7 @@
       },
       {
         "doutor": "Franciele Pedrotti",
-        "quantidade": 25,
+        "quantidade": 27,
         "valor_descontado": 0.0
       },
       {
@@ -124,7 +124,7 @@
       },
       {
         "doutor": "Leticia Canabarro",
-        "quantidade": 9,
+        "quantidade": 10,
         "valor_descontado": 0.0
       },
       {
@@ -134,7 +134,7 @@
       },
       {
         "doutor": "Luiz Henrique",
-        "quantidade": 3,
+        "quantidade": 4,
         "valor_descontado": 0.0
       },
       {
