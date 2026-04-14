@@ -1,10 +1,10 @@
 {
   "competencia": "2026-04",
-  "gerado_em": "2026-04-14T17:29:38.733991",
-  "quantidade_total": 240,
-  "valor_total": 30127.0,
+  "gerado_em": "2026-04-14T18:52:43.237240",
+  "quantidade_total": 245,
+  "valor_total": 30887.0,
   "valor_total_descontado": 233.0,
-  "valor_total_pendente": 29894.0,
+  "valor_total_pendente": 30654.0,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,8 +13,8 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 57,
-      "valor": 7435.0
+      "quantidade": 59,
+      "valor": 7681.0
     },
     {
       "unidade": "Encantado",
@@ -33,13 +33,13 @@
     },
     {
       "unidade": "Garibaldi",
-      "quantidade": 33,
-      "valor": 3731.0
+      "quantidade": 34,
+      "valor": 3851.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 56,
-      "valor": 6859.0
+      "quantidade": 58,
+      "valor": 7253.0
     },
     {
       "unidade": "Ssdocai",
@@ -70,7 +70,7 @@
     },
     {
       "doutor": "Dionathan Pohlmann",
-      "quantidade": 25,
+      "quantidade": 26,
       "valor_descontado": 0.0
     },
     {
@@ -85,12 +85,12 @@
     },
     {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 27,
+      "quantidade": 28,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Gabrielli Fabonato",
-      "quantidade": 2,
+      "quantidade": 3,
       "valor_descontado": 0.0
     },
     {
@@ -115,7 +115,7 @@
     },
     {
       "doutor": "Leticia Canabarro",
-      "quantidade": 10,
+      "quantidade": 11,
       "valor_descontado": 0.0
     },
     {
@@ -145,7 +145,7 @@
     },
     {
       "doutor": "Sofie Owens",
-      "quantidade": 19,
+      "quantidade": 20,
       "valor_descontado": 0.0
     },
     {
