@@ -433,10 +433,6 @@ async function sincronizarSaldosAdminNoDashboard() {
         const original = fallbackSaldos[chaveNome] || null;
         const saldo = isUuid(doutor.id) ? (saldosPorMesEId[competencia]?.[doutor.id] || null) : null;
 
-        // REGRA CORRETA:
-        // - crédito vem da ADM/Supabase
-        // - utilizado vem do sistema/dashboard
-        // - saldo recalcula com base nisso
         const creditoInicial = Number(
           saldo?.credito_inicial ??
           doutor.credito ??
@@ -446,11 +442,9 @@ async function sincronizarSaldosAdminNoDashboard() {
 
         const utilizadoSistema = Number(original?.utilizado ?? 0);
         const utilizadoManual = Number(saldo?.utilizado ?? 0);
-
         const utilizado = utilizadoSistema > 0 ? utilizadoSistema : utilizadoManual;
 
-        const creditoFinalCalculado = Number((creditoInicial - utilizado).toFixed(2));
-        const creditoFinal = Math.max(0, creditoFinalCalculado);
+        const creditoFinal = Number((creditoInicial - utilizado).toFixed(2));
 
         baseMes.push({
           doutor_id: doutor.id,
@@ -636,7 +630,7 @@ function renderTabelaResumoDoutores(saldos) {
       <td>${escapeHtml(item.doutor)}</td>
       <td>${formatarMoeda(item.creditoInicial)}</td>
       <td>${formatarMoeda(item.utilizado)}</td>
-      <td>${formatarMoeda(item.creditoDisponivel)}</td>
+      <td class="${item.creditoDisponivel < 0 ? "text-danger" : ""}">${formatarMoeda(item.creditoDisponivel)}</td>
       <td>${item.percentual.toFixed(1)}%</td>
       <td><span class="status-pill ${item.status.classe}"><span class="dot ${item.status.dot}"></span>${item.status.texto}</span></td>
     </tr>
@@ -659,7 +653,7 @@ function renderTabelaAtencao(saldos) {
       <td>${escapeHtml(item.doutor)}</td>
       <td>${formatarMoeda(item.creditoInicial)}</td>
       <td>${formatarMoeda(item.utilizado)}</td>
-      <td>${formatarMoeda(item.creditoDisponivel)}</td>
+      <td class="${item.creditoDisponivel < 0 ? "text-danger" : ""}">${formatarMoeda(item.creditoDisponivel)}</td>
       <td>${item.percentual.toFixed(1)}%</td>
       <td><span class="status-pill ${item.status.classe}"><span class="dot ${item.status.dot}"></span>${item.status.texto}</span></td>
     </tr>
@@ -682,7 +676,7 @@ function renderTabelaBloqueados(saldos) {
       <td>${escapeHtml(item.doutor)}</td>
       <td>${formatarMoeda(item.creditoInicial)}</td>
       <td>${formatarMoeda(item.utilizado)}</td>
-      <td>${formatarMoeda(item.creditoDisponivel)}</td>
+      <td class="${item.creditoDisponivel < 0 ? "text-danger" : ""}">${formatarMoeda(item.creditoDisponivel)}</td>
       <td>${item.percentual.toFixed(1)}%</td>
       <td><span class="status-pill ${item.status.classe}"><span class="dot ${item.status.dot}"></span>${item.status.texto}</span></td>
     </tr>
@@ -913,12 +907,11 @@ async function carregarDoutoresAdmin() {
         0
       );
 
-      // Na ADM, utilizado deve refletir o sistema por padrão
       const utilizadoSistema = Number(saldoFallback.utilizado ?? 0);
       const utilizadoManual = Number(saldoSupabase.utilizado ?? 0);
       const utilizado = utilizadoSistema > 0 ? utilizadoSistema : utilizadoManual;
 
-      const saldoFinal = Math.max(0, Number((creditoInicial - utilizado).toFixed(2)));
+      const saldoFinal = Number((creditoInicial - utilizado).toFixed(2));
 
       const responsavelUltimo =
         saldoSupabase.updated_by_nome ||
@@ -999,9 +992,7 @@ async function salvarDoutor(id) {
 
     if (errorDoutor) throw errorDoutor;
 
-    // salva o limite e o valor visualizado da ADM,
-    // mas a Home sempre recalcula usando o utilizado do sistema
-    const creditoFinal = Math.max(0, Number((creditoInicial - utilizado).toFixed(2)));
+    const creditoFinal = Number((creditoInicial - utilizado).toFixed(2));
     const ajusteManual = 0;
 
     const { data: saldoExistente, error: errorBuscaSaldo } = await client
