@@ -9,11 +9,11 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-14T09:10:20.096746",
+    "gerado_em": "2026-04-14T10:34:31.552345",
     "quantidade_total": 231,
     "valor_total": 28924.0,
-    "valor_total_descontado": 433.0,
-    "valor_total_pendente": 28491.0,
+    "valor_total_descontado": 323.0,
+    "valor_total_pendente": 28601.0,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -70,7 +70,7 @@
       {
         "doutor": "Alexandre Favero",
         "quantidade": 2,
-        "valor_descontado": 200.0
+        "valor_descontado": 90.0
       },
       {
         "doutor": "Cristian Pressi",
