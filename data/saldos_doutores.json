@@ -92,8 +92,8 @@
       "doutor_id": "38",
       "doutor": "Evalda Baldissera",
       "credito_inicial": 5604.82,
-      "utilizado": 4282.0,
-      "credito_disponivel": 1322.82,
+      "utilizado": 4515.0,
+      "credito_disponivel": 1089.82,
       "pix_key": ""
     },
     {
@@ -148,8 +148,8 @@
       "doutor_id": "21",
       "doutor": "Greici Matiello",
       "credito_inicial": 500.0,
-      "utilizado": 380.0,
-      "credito_disponivel": 120.0,
+      "utilizado": 475.0,
+      "credito_disponivel": 25.0,
       "pix_key": ""
     },
     {
@@ -356,8 +356,8 @@
       "doutor_id": "46",
       "doutor": "Thalia Vezzosi",
       "credito_inicial": 2500.0,
-      "utilizado": 610.0,
-      "credito_disponivel": 1890.0,
+      "utilizado": 915.0,
+      "credito_disponivel": 1585.0,
       "pix_key": ""
     },
     {
