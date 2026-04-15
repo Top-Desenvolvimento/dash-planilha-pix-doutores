@@ -9,11 +9,11 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-15T05:58:45.449465",
+    "gerado_em": "2026-04-15T07:29:56.682104",
     "quantidade_total": 265,
     "valor_total": 33154.0,
-    "valor_total_descontado": 563.0,
-    "valor_total_pendente": 32591.0,
+    "valor_total_descontado": 538.0,
+    "valor_total_pendente": 32616.0,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -110,7 +110,7 @@
       {
         "doutor": "Greici Matiello",
         "quantidade": 1,
-        "valor_descontado": 25.0
+        "valor_descontado": 0.0
       },
       {
         "doutor": "Jéssica Barreto",
