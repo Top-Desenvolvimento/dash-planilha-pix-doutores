@@ -9,16 +9,16 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-15T19:55:44.334791",
-    "quantidade_total": 286,
-    "valor_total": 35432.0,
+    "gerado_em": "2026-04-15T20:19:12.586956",
+    "quantidade_total": 293,
+    "valor_total": 36487.0,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 35432.0,
+    "valor_total_pendente": 36487.0,
     "por_unidade": [
       {
         "unidade": "Bento",
-        "quantidade": 13,
-        "valor": 1581.0
+        "quantidade": 14,
+        "valor": 1686.0
       },
       {
         "unidade": "Caxias",
@@ -32,13 +32,13 @@
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 30,
-        "valor": 4409.0
+        "quantidade": 31,
+        "valor": 4536.0
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 28,
-        "valor": 3764.0
+        "quantidade": 31,
+        "valor": 4048.0
       },
       {
         "unidade": "Garibaldi",
@@ -57,8 +57,8 @@
       },
       {
         "unidade": "Veranopolis",
-        "quantidade": 4,
-        "valor": 303.0
+        "quantidade": 6,
+        "valor": 842.0
       }
     ],
     "por_doutor": [
@@ -84,7 +84,7 @@
       },
       {
         "doutor": "Evalda Baldissera",
-        "quantidade": 4,
+        "quantidade": 6,
         "valor_descontado": 0.0
       },
       {
@@ -94,7 +94,7 @@
       },
       {
         "doutor": "Franciele Pedrotti",
-        "quantidade": 37,
+        "quantidade": 41,
         "valor_descontado": 0.0
       },
       {
@@ -154,7 +154,7 @@
       },
       {
         "doutor": "Naiane Pieta",
-        "quantidade": 4,
+        "quantidade": 5,
         "valor_descontado": 0.0
       },
       {
