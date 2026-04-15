@@ -1,10 +1,10 @@
 {
   "competencia": "2026-04",
-  "gerado_em": "2026-04-15T21:45:00.853806",
-  "quantidade_total": 306,
-  "valor_total": 38752.0,
-  "valor_total_descontado": 0.0,
-  "valor_total_pendente": 38752.0,
+  "gerado_em": "2026-04-15T22:36:19.081336",
+  "quantidade_total": 314,
+  "valor_total": 40984.0,
+  "valor_total_descontado": 120.0,
+  "valor_total_pendente": 40864.0,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -23,13 +23,13 @@
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 32,
-      "valor": 4656.0
+      "quantidade": 35,
+      "valor": 5965.0
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 34,
-      "valor": 4505.0
+      "quantidade": 35,
+      "valor": 4815.0
     },
     {
       "unidade": "Garibaldi",
@@ -48,8 +48,8 @@
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 11,
-      "valor": 2105.0
+      "quantidade": 15,
+      "valor": 2718.0
     }
   ],
   "por_doutor": [
@@ -75,17 +75,17 @@
     },
     {
       "doutor": "Evalda Baldissera",
-      "quantidade": 11,
+      "quantidade": 13,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Everlize Cipriani",
-      "quantidade": 11,
+      "quantidade": 13,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 45,
+      "quantidade": 46,
       "valor_descontado": 0.0
     },
     {
@@ -144,6 +144,11 @@
       "valor_descontado": 0.0
     },
     {
+      "doutor": "Morgana Zambiasi",
+      "quantidade": 1,
+      "valor_descontado": 120.0
+    },
+    {
       "doutor": "Naiane Pieta",
       "quantidade": 5,
       "valor_descontado": 0.0
@@ -170,7 +175,7 @@
     },
     {
       "doutor": "Thalia Vezzosi",
-      "quantidade": 2,
+      "quantidade": 3,
       "valor_descontado": 0.0
     },
     {
@@ -180,7 +185,7 @@
     },
     {
       "doutor": "TOP",
-      "quantidade": 7,
+      "quantidade": 8,
       "valor_descontado": 0.0
     }
   ]
