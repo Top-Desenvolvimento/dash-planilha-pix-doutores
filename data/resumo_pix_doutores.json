@@ -9,11 +9,11 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-15T18:20:46.543898",
-    "quantidade_total": 277,
-    "valor_total": 34602.0,
+    "gerado_em": "2026-04-15T19:55:44.334791",
+    "quantidade_total": 286,
+    "valor_total": 35432.0,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 34602.0,
+    "valor_total_pendente": 35432.0,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -33,12 +33,12 @@
       {
         "unidade": "Farroupilha",
         "quantidade": 30,
-        "valor": 4404.0
+        "valor": 4409.0
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 24,
-        "valor": 3334.0
+        "quantidade": 28,
+        "valor": 3764.0
       },
       {
         "unidade": "Garibaldi",
@@ -47,24 +47,24 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 70,
-        "valor": 8674.0
+        "quantidade": 72,
+        "valor": 8879.0
       },
       {
         "unidade": "Ssdocai",
-        "quantidade": 22,
-        "valor": 2497.0
+        "quantidade": 23,
+        "valor": 2617.0
       },
       {
         "unidade": "Veranopolis",
-        "quantidade": 2,
-        "valor": 233.0
+        "quantidade": 4,
+        "valor": 303.0
       }
     ],
     "por_doutor": [
       {
         "doutor": "Adriele da Silva",
-        "quantidade": 9,
+        "quantidade": 8,
         "valor_descontado": 0.0
       },
       {
@@ -84,7 +84,7 @@
       },
       {
         "doutor": "Evalda Baldissera",
-        "quantidade": 2,
+        "quantidade": 4,
         "valor_descontado": 0.0
       },
       {
@@ -94,7 +94,7 @@
       },
       {
         "doutor": "Franciele Pedrotti",
-        "quantidade": 32,
+        "quantidade": 37,
         "valor_descontado": 0.0
       },
       {
@@ -139,7 +139,7 @@
       },
       {
         "doutor": "Luiz Henrique",
-        "quantidade": 10,
+        "quantidade": 11,
         "valor_descontado": 0.0
       },
       {
@@ -164,7 +164,7 @@
       },
       {
         "doutor": "Norberto Filipe",
-        "quantidade": 3,
+        "quantidade": 5,
         "valor_descontado": 0.0
       },
       {
