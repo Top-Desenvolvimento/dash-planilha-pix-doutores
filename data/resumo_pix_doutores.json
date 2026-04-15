@@ -9,11 +9,11 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-15T15:59:39.055744",
-    "quantidade_total": 273,
-    "valor_total": 34195.0,
-    "valor_total_descontado": 88.0,
-    "valor_total_pendente": 34107.0,
+    "gerado_em": "2026-04-15T17:05:47.957740",
+    "quantidade_total": 274,
+    "valor_total": 34293.0,
+    "valor_total_descontado": 0.0,
+    "valor_total_pendente": 34293.0,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -47,8 +47,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 67,
-        "valor": 8372.0
+        "quantidade": 68,
+        "valor": 8470.0
       },
       {
         "unidade": "Ssdocai",
@@ -164,8 +164,8 @@
       },
       {
         "doutor": "Norberto Filipe",
-        "quantidade": 1,
-        "valor_descontado": 88.0
+        "quantidade": 2,
+        "valor_descontado": 0.0
       },
       {
         "doutor": "Sofie Owens",
