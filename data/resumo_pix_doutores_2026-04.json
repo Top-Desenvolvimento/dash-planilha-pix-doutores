@@ -1,10 +1,10 @@
 {
   "competencia": "2026-04",
-  "gerado_em": "2026-04-15T20:19:12.586956",
-  "quantidade_total": 293,
-  "valor_total": 36487.0,
+  "gerado_em": "2026-04-15T20:43:40.085882",
+  "quantidade_total": 295,
+  "valor_total": 36752.0,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 36487.0,
+  "valor_total_pendente": 36752.0,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -38,18 +38,18 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 72,
-      "valor": 8879.0
+      "quantidade": 74,
+      "valor": 9059.0
     },
     {
       "unidade": "Ssdocai",
-      "quantidade": 23,
-      "valor": 2617.0
+      "quantidade": 24,
+      "valor": 2737.0
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 6,
-      "valor": 842.0
+      "quantidade": 5,
+      "valor": 807.0
     }
   ],
   "por_doutor": [
@@ -75,7 +75,7 @@
     },
     {
       "doutor": "Evalda Baldissera",
-      "quantidade": 6,
+      "quantidade": 5,
       "valor_descontado": 0.0
     },
     {
@@ -130,7 +130,7 @@
     },
     {
       "doutor": "Luiz Henrique",
-      "quantidade": 11,
+      "quantidade": 12,
       "valor_descontado": 0.0
     },
     {
@@ -140,7 +140,7 @@
     },
     {
       "doutor": "Marina Alievi",
-      "quantidade": 1,
+      "quantidade": 3,
       "valor_descontado": 0.0
     },
     {
