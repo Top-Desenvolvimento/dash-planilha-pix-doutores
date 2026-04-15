@@ -6,8 +6,13 @@ function byId(id) {
   return document.getElementById(id);
 }
 
+function toNumber(valor, fallback = 0) {
+  const n = Number(valor);
+  return Number.isFinite(n) ? n : fallback;
+}
+
 function formatarMoeda(valor) {
-  return Number(valor || 0).toLocaleString("pt-BR", {
+  return toNumber(valor, 0).toLocaleString("pt-BR", {
     style: "currency",
     currency: "BRL"
   });
@@ -57,9 +62,10 @@ function normalizarNome(nome) {
     "cir.dionathan pohlmann": "dionathan pohlmann",
     "cir dionathan pohlmann": "dionathan pohlmann",
     "dionathan pohlmann": "dionathan pohlmann",
+
     "andriele da silva": "adriele da silva",
-    "dra adriele da silva": "adriele da silva",
     "dra andriele da silva": "adriele da silva",
+    "dra adriele da silva": "adriele da silva",
     "adriele da silva": "adriele da silva"
   };
 
@@ -88,11 +94,11 @@ function obterNomeResponsavelAtual(user) {
 }
 
 function calcularSaldoMensalAdmin(creditoInicial, utilizado, saldoDigitado = null) {
-  const credito = Number(creditoInicial || 0);
-  const uso = Number(utilizado || 0);
+  const credito = toNumber(creditoInicial, 0);
+  const uso = toNumber(utilizado, 0);
 
-  if (saldoDigitado !== null && saldoDigitado !== undefined && saldoDigitado !== "") {
-    return Number(saldoDigitado || 0);
+  if (saldoDigitado !== null && saldoDigitado !== undefined && String(saldoDigitado) !== "") {
+    return toNumber(saldoDigitado, 0);
   }
 
   return Number((credito - uso).toFixed(2));
@@ -102,6 +108,58 @@ function isUuid(valor) {
   return /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(
     String(valor || "").trim()
   );
+}
+
+/**
+ * Regra do negócio:
+ * - crédito base = limite mensal padrão
+ * - crédito inicial = valor efetivo do mês após ajustes
+ * - se existir registro antigo bugado com crédito_inicial negativo (-6),
+ *   interpretar como ajuste sobre o crédito base => 2000 + (-6) = 1994
+ * - se existir ajuste_manual, ele entra sobre o crédito base
+ */
+function calcularCreditoInicialDoMes(creditoBase, saldoSupabase = null, saldoOriginal = null) {
+  const base = toNumber(creditoBase, 0);
+
+  if (saldoSupabase) {
+    const creditoInicialSalvo = saldoSupabase.credito_inicial;
+
+    if (creditoInicialSalvo !== null && creditoInicialSalvo !== undefined && String(creditoInicialSalvo) !== "") {
+      const valorSalvo = toNumber(creditoInicialSalvo, 0);
+
+      // Corrige caso antigo bugado: campo salvo como -6
+      if (valorSalvo < 0 && base > 0) {
+        return Number((base + valorSalvo).toFixed(2));
+      }
+
+      return Number(valorSalvo.toFixed(2));
+    }
+
+    const ajusteManual = toNumber(saldoSupabase.ajuste_manual, 0);
+    if (ajusteManual !== 0) {
+      return Number((base + ajusteManual).toFixed(2));
+    }
+  }
+
+  if (saldoOriginal && saldoOriginal.credito_inicial !== undefined && saldoOriginal.credito_inicial !== null) {
+    return Number(toNumber(saldoOriginal.credito_inicial, base).toFixed(2));
+  }
+
+  return Number(base.toFixed(2));
+}
+
+function calcularUtilizadoDoMes(saldoSupabase = null, saldoOriginal = null) {
+  const utilizadoSistema = toNumber(saldoOriginal?.utilizado, 0);
+  if (utilizadoSistema > 0) {
+    return Number(utilizadoSistema.toFixed(2));
+  }
+
+  const utilizadoSupabase = toNumber(saldoSupabase?.utilizado, 0);
+  return Number(utilizadoSupabase.toFixed(2));
+}
+
+function calcularSaldoFinalDoMes(creditoInicial, utilizado) {
+  return Number((toNumber(creditoInicial, 0) - toNumber(utilizado, 0)).toFixed(2));
 }
 
 function mostrarMensagemAuth(texto, erro = false) {
@@ -288,7 +346,7 @@ function obterDoutoresFallbackDoDashboard() {
           id: item.doutor_id || chave,
           nome: item.doutor || "",
           nome_normalizado: chave,
-          credito: Number(item.credito_inicial || 0),
+          credito: toNumber(item.credito_inicial, 0),
           pix_key: item.pix_key || "",
           ativo: true,
           updated_by_email: item.updated_by_email || null,
@@ -382,11 +440,12 @@ async function sincronizarSaldosAdminNoDashboard() {
     for (const item of fallbackDoutores) {
       const chave = normalizarNome(item.nome || item.nome_normalizado || "");
       if (!chave) continue;
+
       todosPorNome.set(chave, {
         id: item.id,
         nome: item.nome,
         nome_normalizado: chave,
-        credito: Number(item.credito || 0),
+        credito: toNumber(item.credito, 0),
         pix_key: item.pix_key || "",
         ativo: item.ativo !== false,
         updated_by_email: item.updated_by_email || null,
@@ -404,7 +463,7 @@ async function sincronizarSaldosAdminNoDashboard() {
         id: item.id || existente.id || chave,
         nome: item.nome || existente.nome || "",
         nome_normalizado: chave,
-        credito: Number(item.credito ?? existente.credito ?? 0),
+        credito: toNumber(item.credito ?? existente.credito, 0),
         pix_key: item.pix_key || existente.pix_key || "",
         ativo: item.ativo !== false,
         updated_by_email: item.updated_by_email || existente.updated_by_email || null,
@@ -431,20 +490,12 @@ async function sincronizarSaldosAdminNoDashboard() {
 
         const chaveNome = normalizarNome(doutor.nome || "");
         const original = fallbackSaldos[chaveNome] || null;
-        const saldo = isUuid(doutor.id) ? (saldosPorMesEId[competencia]?.[doutor.id] || null) : null;
+        const saldoSupabase = isUuid(doutor.id) ? (saldosPorMesEId[competencia]?.[doutor.id] || null) : null;
 
-        const creditoInicial = Number(
-          saldo?.credito_inicial ??
-          doutor.credito ??
-          original?.credito_inicial ??
-          0
-        );
-
-        const utilizadoSistema = Number(original?.utilizado ?? 0);
-        const utilizadoManual = Number(saldo?.utilizado ?? 0);
-        const utilizado = utilizadoSistema > 0 ? utilizadoSistema : utilizadoManual;
-
-        const creditoFinal = Number((creditoInicial - utilizado).toFixed(2));
+        const creditoBase = toNumber(doutor.credito, 0);
+        const creditoInicial = calcularCreditoInicialDoMes(creditoBase, saldoSupabase, original);
+        const utilizado = calcularUtilizadoDoMes(saldoSupabase, original);
+        const creditoFinal = calcularSaldoFinalDoMes(creditoInicial, utilizado);
 
         baseMes.push({
           doutor_id: doutor.id,
@@ -454,8 +505,8 @@ async function sincronizarSaldosAdminNoDashboard() {
           credito_disponivel: creditoFinal,
           credito_final: creditoFinal,
           pix_key: doutor.pix_key || original?.pix_key || "",
-          updated_by_email: saldo?.updated_by_email || doutor.updated_by_email || null,
-          updated_by_nome: saldo?.updated_by_nome || doutor.updated_by_nome || null
+          updated_by_email: saldoSupabase?.updated_by_email || doutor.updated_by_email || null,
+          updated_by_nome: saldoSupabase?.updated_by_nome || doutor.updated_by_nome || null
         });
       }
 
@@ -562,9 +613,9 @@ function getSaldosFiltrados() {
 }
 
 function obterPercentual(utilizado, creditoInicial) {
-  const credito = Number(creditoInicial || 0);
+  const credito = toNumber(creditoInicial, 0);
   if (credito <= 0) return 0;
-  return (Number(utilizado || 0) / credito) * 100;
+  return (toNumber(utilizado, 0) / credito) * 100;
 }
 
 function obterStatus(percentual) {
@@ -576,9 +627,9 @@ function obterStatus(percentual) {
 function montarResumoDoutores(saldos) {
   return saldos
     .map(item => {
-      const creditoInicial = Number(item.credito_inicial || 0);
-      const utilizado = Number(item.utilizado || 0);
-      const creditoDisponivel = Number(item.credito_disponivel ?? item.credito_final ?? 0);
+      const creditoInicial = toNumber(item.credito_inicial, 0);
+      const utilizado = toNumber(item.utilizado, 0);
+      const creditoDisponivel = toNumber(item.credito_disponivel ?? item.credito_final, 0);
       const percentual = obterPercentual(utilizado, creditoInicial);
       const status = obterStatus(percentual);
 
@@ -600,9 +651,9 @@ function renderCards(registros) {
   if (!alvo) return;
 
   const totalLancamentos = registros.length;
-  const totalValor = registros.reduce((acc, item) => acc + Number(item.valor || 0), 0);
-  const totalDescontado = registros.reduce((acc, item) => acc + Number(item.valor_descontado || 0), 0);
-  const totalPendente = registros.reduce((acc, item) => acc + Number(item.pendente || 0), 0);
+  const totalValor = registros.reduce((acc, item) => acc + toNumber(item.valor, 0), 0);
+  const totalDescontado = registros.reduce((acc, item) => acc + toNumber(item.valor_descontado, 0), 0);
+  const totalPendente = registros.reduce((acc, item) => acc + toNumber(item.pendente, 0), 0);
   const totalCidades = new Set(registros.map(item => item.unidade).filter(Boolean)).size;
 
   alvo.innerHTML = `
@@ -703,7 +754,7 @@ function renderTabelaPixMes(registros) {
         <td>${escapeHtml(item.paciente)}</td>
         <td>${formatarMoeda(item.valor)}</td>
         <td>${formatarMoeda(item.valor_descontado)}</td>
-        <td class="${Number(item.pendente || 0) > 0 ? "text-warning" : "text-success"}">${formatarMoeda(item.pendente)}</td>
+        <td class="${toNumber(item.pendente, 0) > 0 ? "text-warning" : "text-success"}">${formatarMoeda(item.pendente)}</td>
       </tr>
     `).join("");
 }
@@ -848,7 +899,7 @@ async function carregarDoutoresAdmin() {
         id: item.id,
         nome: item.nome,
         nome_normalizado: chave,
-        credito: Number(item.credito || 0),
+        credito: toNumber(item.credito, 0),
         pix_key: item.pix_key || "",
         ativo: item.ativo !== false,
         updated_by_email: item.updated_by_email || null,
@@ -866,7 +917,7 @@ async function carregarDoutoresAdmin() {
         id: item.id || existente.id || chave,
         nome: item.nome || existente.nome || "",
         nome_normalizado: chave,
-        credito: Number(item.credito ?? existente.credito ?? 0),
+        credito: toNumber(item.credito ?? existente.credito, 0),
         pix_key: item.pix_key || existente.pix_key || "",
         ativo: item.ativo !== false,
         updated_by_email: item.updated_by_email || existente.updated_by_email || null,
@@ -891,27 +942,13 @@ async function carregarDoutoresAdmin() {
 
     tbody.innerHTML = doutores.map(item => {
       const chaveNome = normalizarNome(item.nome || "");
-      const saldoFallback = fallbackSaldos[chaveNome] || {};
+      const saldoOriginal = fallbackSaldos[chaveNome] || {};
       const saldoSupabase = isUuid(item.id) ? (saldoPorDoutorId[item.id] || {}) : {};
 
-      const creditoBase = Number(
-        item.credito ??
-        saldoFallback.credito_inicial ??
-        0
-      );
-
-      const creditoInicial = Number(
-        saldoSupabase.credito_inicial ??
-        item.credito ??
-        saldoFallback.credito_inicial ??
-        0
-      );
-
-      const utilizadoSistema = Number(saldoFallback.utilizado ?? 0);
-      const utilizadoManual = Number(saldoSupabase.utilizado ?? 0);
-      const utilizado = utilizadoSistema > 0 ? utilizadoSistema : utilizadoManual;
-
-      const saldoFinal = Number((creditoInicial - utilizado).toFixed(2));
+      const creditoBase = toNumber(item.credito, 0);
+      const creditoInicial = calcularCreditoInicialDoMes(creditoBase, saldoSupabase, saldoOriginal);
+      const utilizado = calcularUtilizadoDoMes(saldoSupabase, saldoOriginal);
+      const saldoFinal = calcularSaldoFinalDoMes(creditoInicial, utilizado);
 
       const responsavelUltimo =
         saldoSupabase.updated_by_nome ||
@@ -956,9 +993,9 @@ async function salvarDoutor(id) {
     const client = validarSupabasePronto();
 
     const nome = document.querySelector(`[data-id="${id}"][data-field="nome"]`)?.value.trim() || "";
-    const credito = parseFloat(document.querySelector(`[data-id="${id}"][data-field="credito"]`)?.value || "0");
-    const creditoInicial = parseFloat(document.querySelector(`[data-id="${id}"][data-field="credito_inicial"]`)?.value || "0");
-    const utilizado = parseFloat(document.querySelector(`[data-id="${id}"][data-field="utilizado"]`)?.value || "0");
+    const creditoBase = toNumber(document.querySelector(`[data-id="${id}"][data-field="credito"]`)?.value, 0);
+    const creditoInicial = toNumber(document.querySelector(`[data-id="${id}"][data-field="credito_inicial"]`)?.value, 0);
+    const utilizado = toNumber(document.querySelector(`[data-id="${id}"][data-field="utilizado"]`)?.value, 0);
     const pixKey = document.querySelector(`[data-id="${id}"][data-field="pix_key"]`)?.value.trim() || "";
     const ativo = document.querySelector(`[data-id="${id}"][data-field="ativo"]`)?.value === "true";
     const observacao = document.querySelector(`[data-id="${id}"][data-field="observacao"]`)?.value.trim() || null;
@@ -976,7 +1013,7 @@ async function salvarDoutor(id) {
     const payloadDoutor = {
       nome,
       nome_normalizado: normalizarNome(nome),
-      credito,
+      credito: creditoBase,
       pix_key: pixKey || null,
       ativo,
       updated_by_email: emailAtual,
@@ -992,8 +1029,8 @@ async function salvarDoutor(id) {
 
     if (errorDoutor) throw errorDoutor;
 
-    const creditoFinal = Number((creditoInicial - utilizado).toFixed(2));
-    const ajusteManual = 0;
+    const creditoFinal = calcularSaldoFinalDoMes(creditoInicial, utilizado);
+    const ajusteManual = Number((creditoInicial - creditoBase).toFixed(2));
 
     const { data: saldoExistente, error: errorBuscaSaldo } = await client
       .from("doutores_saldos_mensais")
@@ -1086,7 +1123,7 @@ async function adicionarDoutor() {
     const client = validarSupabasePronto();
 
     const nome = byId("novoNome")?.value.trim() || "";
-    const credito = parseFloat(byId("novoCredito")?.value || "0");
+    const credito = toNumber(byId("novoCredito")?.value, 0);
     const pixKey = byId("novaPixKey")?.value.trim() || "";
     const ativo = byId("novoAtivo")?.value === "true";
     const competencia = getCompetenciaAtual();
