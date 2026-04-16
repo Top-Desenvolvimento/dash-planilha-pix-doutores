@@ -9,11 +9,11 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-16T16:06:10.718787",
-    "quantidade_total": 330,
-    "valor_total": 42805.0,
-    "valor_total_descontado": 60.0,
-    "valor_total_pendente": 42745.0,
+    "gerado_em": "2026-04-16T17:35:18.986086",
+    "quantidade_total": 347,
+    "valor_total": 44647.0,
+    "valor_total_descontado": 155.0,
+    "valor_total_pendente": 44492.0,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -22,33 +22,33 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 65,
-        "valor": 8379.0
+        "quantidade": 68,
+        "valor": 8739.0
       },
       {
         "unidade": "Encantado",
-        "quantidade": 16,
-        "valor": 1474.0
+        "quantidade": 20,
+        "valor": 1888.0
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 38,
-        "valor": 6320.0
+        "quantidade": 40,
+        "valor": 6530.0
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 35,
-        "valor": 4815.0
+        "quantidade": 36,
+        "valor": 4900.0
       },
       {
         "unidade": "Garibaldi",
-        "quantidade": 37,
-        "valor": 4151.0
+        "quantidade": 38,
+        "valor": 4306.0
       },
       {
         "unidade": "Soledade",
-        "quantidade": 78,
-        "valor": 9393.0
+        "quantidade": 84,
+        "valor": 10011.0
       },
       {
         "unidade": "Ssdocai",
@@ -69,7 +69,7 @@
       },
       {
         "doutor": "Alexandre Favero",
-        "quantidade": 3,
+        "quantidade": 7,
         "valor_descontado": 0.0
       },
       {
@@ -94,7 +94,7 @@
       },
       {
         "doutor": "Franciele Pedrotti",
-        "quantidade": 48,
+        "quantidade": 53,
         "valor_descontado": 0.0
       },
       {
@@ -111,6 +111,11 @@
         "doutor": "Greici Matiello",
         "quantidade": 1,
         "valor_descontado": 0.0
+      },
+      {
+        "doutor": "Joana Sganzerla",
+        "quantidade": 1,
+        "valor_descontado": 155.0
       },
       {
         "doutor": "Jéssica Barreto",
@@ -149,13 +154,13 @@
       },
       {
         "doutor": "Marina Alievi",
-        "quantidade": 5,
+        "quantidade": 11,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Morgana Zambiasi",
         "quantidade": 1,
-        "valor_descontado": 60.0
+        "valor_descontado": 0.0
       },
       {
         "doutor": "Naiane Pieta",
@@ -184,7 +189,7 @@
       },
       {
         "doutor": "Thalia Vezzosi",
-        "quantidade": 3,
+        "quantidade": 4,
         "valor_descontado": 0.0
       },
       {
