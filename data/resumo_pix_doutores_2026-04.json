@@ -1,10 +1,10 @@
 {
   "competencia": "2026-04",
-  "gerado_em": "2026-04-16T17:35:18.986086",
-  "quantidade_total": 347,
-  "valor_total": 44647.0,
-  "valor_total_descontado": 155.0,
-  "valor_total_pendente": 44492.0,
+  "gerado_em": "2026-04-16T18:54:25.860366",
+  "quantidade_total": 357,
+  "valor_total": 47759.0,
+  "valor_total_descontado": 254.0,
+  "valor_total_pendente": 47505.0,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,13 +13,13 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 68,
-      "valor": 8739.0
+      "quantidade": 70,
+      "valor": 10324.0
     },
     {
       "unidade": "Encantado",
-      "quantidade": 20,
-      "valor": 1888.0
+      "quantidade": 21,
+      "valor": 1983.0
     },
     {
       "unidade": "Farroupilha",
@@ -28,18 +28,18 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 36,
-      "valor": 4900.0
+      "quantidade": 38,
+      "valor": 5829.0
     },
     {
       "unidade": "Garibaldi",
-      "quantidade": 38,
-      "valor": 4306.0
+      "quantidade": 39,
+      "valor": 4405.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 84,
-      "valor": 10011.0
+      "quantidade": 88,
+      "valor": 10415.0
     },
     {
       "unidade": "Ssdocai",
@@ -60,7 +60,7 @@
     },
     {
       "doutor": "Alexandre Favero",
-      "quantidade": 7,
+      "quantidade": 8,
       "valor_descontado": 0.0
     },
     {
@@ -85,12 +85,12 @@
     },
     {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 53,
+      "quantidade": 57,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Gabrielli Fabonato",
-      "quantidade": 5,
+      "quantidade": 6,
       "valor_descontado": 0.0
     },
     {
@@ -105,8 +105,8 @@
     },
     {
       "doutor": "Joana Sganzerla",
-      "quantidade": 1,
-      "valor_descontado": 155.0
+      "quantidade": 2,
+      "valor_descontado": 254.0
     },
     {
       "doutor": "Jéssica Barreto",
@@ -145,7 +145,7 @@
     },
     {
       "doutor": "Marina Alievi",
-      "quantidade": 11,
+      "quantidade": 14,
       "valor_descontado": 0.0
     },
     {
