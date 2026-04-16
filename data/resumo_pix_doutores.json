@@ -9,11 +9,11 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-16T19:31:06.072223",
-    "quantidade_total": 358,
-    "valor_total": 47854.0,
-    "valor_total_descontado": 91.0,
-    "valor_total_pendente": 47763.0,
+    "gerado_em": "2026-04-16T20:02:28.345190",
+    "quantidade_total": 359,
+    "valor_total": 49222.0,
+    "valor_total_descontado": 0.0,
+    "valor_total_pendente": 49222.0,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -22,8 +22,8 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 70,
-        "valor": 10324.0
+        "quantidade": 71,
+        "valor": 11692.0
       },
       {
         "unidade": "Encantado",
@@ -94,7 +94,7 @@
       },
       {
         "doutor": "Franciele Pedrotti",
-        "quantidade": 57,
+        "quantidade": 58,
         "valor_descontado": 0.0
       },
       {
@@ -115,7 +115,7 @@
       {
         "doutor": "Joana Sganzerla",
         "quantidade": 2,
-        "valor_descontado": 91.0
+        "valor_descontado": 0.0
       },
       {
         "doutor": "Jéssica Barreto",
