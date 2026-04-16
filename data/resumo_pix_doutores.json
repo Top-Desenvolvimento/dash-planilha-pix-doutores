@@ -9,11 +9,11 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-16T20:48:10.425482",
-    "quantidade_total": 362,
-    "valor_total": 49638.0,
-    "valor_total_descontado": 206.0,
-    "valor_total_pendente": 49432.0,
+    "gerado_em": "2026-04-16T21:00:00.197852",
+    "quantidade_total": 365,
+    "valor_total": 49945.0,
+    "valor_total_descontado": 305.0,
+    "valor_total_pendente": 49640.0,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -32,13 +32,13 @@
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 40,
-        "valor": 6530.0
+        "quantidade": 41,
+        "valor": 6640.0
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 38,
-        "valor": 5829.0
+        "quantidade": 39,
+        "valor": 5928.0
       },
       {
         "unidade": "Garibaldi",
@@ -47,8 +47,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 88,
-        "valor": 10415.0
+        "quantidade": 89,
+        "valor": 10513.0
       },
       {
         "unidade": "Ssdocai",
@@ -138,6 +138,11 @@
         "valor_descontado": 0.0
       },
       {
+        "doutor": "Letícia Cauzzi",
+        "quantidade": 1,
+        "valor_descontado": 99.0
+      },
+      {
         "doutor": "Luisa Moraes Lucas",
         "quantidade": 15,
         "valor_descontado": 0.0
@@ -154,7 +159,7 @@
       },
       {
         "doutor": "Marina Alievi",
-        "quantidade": 14,
+        "quantidade": 15,
         "valor_descontado": 0.0
       },
       {
@@ -194,7 +199,7 @@
       },
       {
         "doutor": "Thalia Vezzosi",
-        "quantidade": 4,
+        "quantidade": 5,
         "valor_descontado": 0.0
       },
       {
