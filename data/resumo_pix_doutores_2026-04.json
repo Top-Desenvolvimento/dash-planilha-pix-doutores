@@ -1,10 +1,10 @@
 {
   "competencia": "2026-04",
-  "gerado_em": "2026-04-16T20:02:28.345190",
-  "quantidade_total": 359,
-  "valor_total": 49222.0,
-  "valor_total_descontado": 0.0,
-  "valor_total_pendente": 49222.0,
+  "gerado_em": "2026-04-16T20:48:10.425482",
+  "quantidade_total": 362,
+  "valor_total": 49638.0,
+  "valor_total_descontado": 206.0,
+  "valor_total_pendente": 49432.0,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,8 +13,8 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 71,
-      "valor": 11692.0
+      "quantidade": 72,
+      "valor": 11898.0
     },
     {
       "unidade": "Encantado",
@@ -43,8 +43,8 @@
     },
     {
       "unidade": "Ssdocai",
-      "quantidade": 27,
-      "valor": 3097.0
+      "quantidade": 29,
+      "valor": 3307.0
     },
     {
       "unidade": "Veranopolis",
@@ -115,7 +115,7 @@
     },
     {
       "doutor": "Keyla Daniele",
-      "quantidade": 4,
+      "quantidade": 6,
       "valor_descontado": 0.0
     },
     {
@@ -177,6 +177,11 @@
       "doutor": "Tamara Macanan",
       "quantidade": 34,
       "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Thalia Tessaro",
+      "quantidade": 1,
+      "valor_descontado": 206.0
     },
     {
       "doutor": "Thalia Vezzosi",
