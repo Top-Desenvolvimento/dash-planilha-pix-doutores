@@ -1,10 +1,10 @@
 {
   "competencia": "2026-04",
-  "gerado_em": "2026-04-16T21:47:41.573849",
-  "quantidade_total": 376,
-  "valor_total": 51268.0,
+  "gerado_em": "2026-04-16T22:34:50.659420",
+  "quantidade_total": 381,
+  "valor_total": 51888.0,
   "valor_total_descontado": 390.0,
-  "valor_total_pendente": 50878.0,
+  "valor_total_pendente": 51498.0,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -23,8 +23,8 @@
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 43,
-      "valor": 6827.0
+      "quantidade": 44,
+      "valor": 6925.0
     },
     {
       "unidade": "FloresDaCunha",
@@ -43,8 +43,8 @@
     },
     {
       "unidade": "Ssdocai",
-      "quantidade": 31,
-      "valor": 3585.0
+      "quantidade": 35,
+      "valor": 4107.0
     },
     {
       "unidade": "Veranopolis",
@@ -115,7 +115,7 @@
     },
     {
       "doutor": "Keyla Daniele",
-      "quantidade": 8,
+      "quantidade": 12,
       "valor_descontado": 0.0
     },
     {
@@ -190,7 +190,7 @@
     },
     {
       "doutor": "Thalia Vezzosi",
-      "quantidade": 7,
+      "quantidade": 8,
       "valor_descontado": 0.0
     },
     {
