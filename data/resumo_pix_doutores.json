@@ -9,11 +9,11 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-16T12:07:44.811642",
-    "quantidade_total": 318,
-    "valor_total": 41615.0,
+    "gerado_em": "2026-04-16T13:07:04.086192",
+    "quantidade_total": 322,
+    "valor_total": 42085.0,
     "valor_total_descontado": 120.0,
-    "valor_total_pendente": 41495.0,
+    "valor_total_pendente": 41965.0,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -32,8 +32,8 @@
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 35,
-        "valor": 5965.0
+        "quantidade": 38,
+        "valor": 6320.0
       },
       {
         "unidade": "FloresDaCunha",
@@ -52,8 +52,8 @@
       },
       {
         "unidade": "Ssdocai",
-        "quantidade": 25,
-        "valor": 2862.0
+        "quantidade": 26,
+        "valor": 2977.0
       },
       {
         "unidade": "Veranopolis",
@@ -64,7 +64,7 @@
     "por_doutor": [
       {
         "doutor": "Adriele da Silva",
-        "quantidade": 8,
+        "quantidade": 10,
         "valor_descontado": 0.0
       },
       {
@@ -94,7 +94,7 @@
       },
       {
         "doutor": "Franciele Pedrotti",
-        "quantidade": 46,
+        "quantidade": 47,
         "valor_descontado": 0.0
       },
       {
@@ -139,7 +139,7 @@
       },
       {
         "doutor": "Luiz Henrique",
-        "quantidade": 13,
+        "quantidade": 14,
         "valor_descontado": 0.0
       },
       {
