@@ -235,8 +235,8 @@
     "doutor_id": "29",
     "doutor": "Letícia Cauzzi",
     "credito_inicial": 4000.0,
-    "utilizado": 99.0,
-    "credito_disponivel": 3901.0,
+    "utilizado": 283.0,
+    "credito_disponivel": 3717.0,
     "pix_key": ""
   },
   {
@@ -347,8 +347,8 @@
     "doutor_id": "45",
     "doutor": "Thalia Tessaro",
     "credito_inicial": 2700.0,
-    "utilizado": 412.0,
-    "credito_disponivel": 2288.0,
+    "utilizado": 618.0,
+    "credito_disponivel": 2082.0,
     "pix_key": ""
   },
   {

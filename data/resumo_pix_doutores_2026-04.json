@@ -1,10 +1,10 @@
 {
   "competencia": "2026-04",
-  "gerado_em": "2026-04-16T21:00:00.197852",
-  "quantidade_total": 365,
-  "valor_total": 49945.0,
-  "valor_total_descontado": 305.0,
-  "valor_total_pendente": 49640.0,
+  "gerado_em": "2026-04-16T21:47:41.573849",
+  "quantidade_total": 376,
+  "valor_total": 51268.0,
+  "valor_total_descontado": 390.0,
+  "valor_total_pendente": 50878.0,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -18,18 +18,18 @@
     },
     {
       "unidade": "Encantado",
-      "quantidade": 21,
-      "valor": 1983.0
+      "quantidade": 25,
+      "valor": 2531.0
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 41,
-      "valor": 6640.0
+      "quantidade": 43,
+      "valor": 6827.0
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 39,
-      "valor": 5928.0
+      "quantidade": 40,
+      "valor": 6013.0
     },
     {
       "unidade": "Garibaldi",
@@ -38,18 +38,18 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 89,
-      "valor": 10513.0
+      "quantidade": 90,
+      "valor": 10618.0
     },
     {
       "unidade": "Ssdocai",
-      "quantidade": 29,
-      "valor": 3307.0
+      "quantidade": 31,
+      "valor": 3585.0
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 21,
-      "valor": 3585.0
+      "quantidade": 22,
+      "valor": 3705.0
     }
   ],
   "por_doutor": [
@@ -60,7 +60,7 @@
     },
     {
       "doutor": "Alexandre Favero",
-      "quantidade": 8,
+      "quantidade": 12,
       "valor_descontado": 0.0
     },
     {
@@ -75,7 +75,7 @@
     },
     {
       "doutor": "Evalda Baldissera",
-      "quantidade": 19,
+      "quantidade": 20,
       "valor_descontado": 0.0
     },
     {
@@ -115,7 +115,7 @@
     },
     {
       "doutor": "Keyla Daniele",
-      "quantidade": 6,
+      "quantidade": 8,
       "valor_descontado": 0.0
     },
     {
@@ -130,12 +130,12 @@
     },
     {
       "doutor": "Letícia Cauzzi",
-      "quantidade": 1,
-      "valor_descontado": 99.0
+      "quantidade": 2,
+      "valor_descontado": 184.0
     },
     {
       "doutor": "Luisa Moraes Lucas",
-      "quantidade": 15,
+      "quantidade": 16,
       "valor_descontado": 0.0
     },
     {
@@ -190,7 +190,7 @@
     },
     {
       "doutor": "Thalia Vezzosi",
-      "quantidade": 5,
+      "quantidade": 7,
       "valor_descontado": 0.0
     },
     {
