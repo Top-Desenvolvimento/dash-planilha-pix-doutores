@@ -110,14 +110,6 @@ function isUuid(valor) {
   );
 }
 
-/**
- * Regra do negócio:
- * - crédito base = limite mensal padrão
- * - crédito inicial = valor efetivo do mês após ajustes
- * - se existir registro antigo bugado com crédito_inicial negativo (-6),
- *   interpretar como ajuste sobre o crédito base => 2000 + (-6) = 1994
- * - se existir ajuste_manual, ele entra sobre o crédito base
- */
 function calcularCreditoInicialDoMes(creditoBase, saldoSupabase = null, saldoOriginal = null) {
   const base = toNumber(creditoBase, 0);
 
@@ -127,7 +119,6 @@ function calcularCreditoInicialDoMes(creditoBase, saldoSupabase = null, saldoOri
     if (creditoInicialSalvo !== null && creditoInicialSalvo !== undefined && String(creditoInicialSalvo) !== "") {
       const valorSalvo = toNumber(creditoInicialSalvo, 0);
 
-      // Corrige caso antigo bugado: campo salvo como -6
       if (valorSalvo < 0 && base > 0) {
         return Number((base + valorSalvo).toFixed(2));
       }
@@ -688,6 +679,29 @@ function renderTabelaResumoDoutores(saldos) {
   `).join("");
 }
 
+function renderTabelaControlados(saldos) {
+  const tbody = byId("tabelaControlados");
+  if (!tbody) return;
+
+  const linhas = montarResumoDoutores(saldos).filter(item => item.percentual < 50);
+
+  if (!linhas.length) {
+    tbody.innerHTML = `<tr><td colspan="6" class="empty-state">Sem doutores controlados</td></tr>`;
+    return;
+  }
+
+  tbody.innerHTML = linhas.map(item => `
+    <tr>
+      <td>${escapeHtml(item.doutor)}</td>
+      <td>${formatarMoeda(item.creditoInicial)}</td>
+      <td>${formatarMoeda(item.utilizado)}</td>
+      <td class="${item.creditoDisponivel < 0 ? "text-danger" : ""}">${formatarMoeda(item.creditoDisponivel)}</td>
+      <td>${item.percentual.toFixed(1)}%</td>
+      <td><span class="status-pill ${item.status.classe}"><span class="dot ${item.status.dot}"></span>${item.status.texto}</span></td>
+    </tr>
+  `).join("");
+}
+
 function renderTabelaAtencao(saldos) {
   const tbody = byId("tabelaAtencao");
   if (!tbody) return;
@@ -734,6 +748,91 @@ function renderTabelaBloqueados(saldos) {
   `).join("");
 }
 
+function reordenarSecoesDashboard() {
+  const dashboardView = byId("dashboardView");
+  const cardsSection = byId("secaoResumoRapido");
+  const bloqueadosSection = byId("secaoBloqueados");
+  const atencaoSection = byId("secaoAtencao");
+  const controladosSection = byId("secaoControlados");
+  const todosSection = byId("secaoTodos");
+  const pixMesSection = byId("secaoPixMes");
+
+  if (!dashboardView) return;
+
+  const ordem = [
+    cardsSection,
+    bloqueadosSection,
+    atencaoSection,
+    controladosSection,
+    todosSection,
+    pixMesSection
+  ].filter(Boolean);
+
+  ordem.forEach(secao => dashboardView.appendChild(secao));
+}
+
+function garantirSecaoControlados() {
+  const dashboardView = byId("dashboardView");
+  if (!dashboardView) return;
+
+  let secao = byId("secaoControlados");
+  if (secao) return;
+
+  secao = document.createElement("section");
+  secao.id = "secaoControlados";
+  secao.className = "card card-large";
+  secao.innerHTML = `
+    <div class="card-header">
+      <div>
+        <h2>Doutores controlados</h2>
+        <p>Utilização abaixo de 50%</p>
+      </div>
+    </div>
+    <div class="table-wrapper">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Doutor</th>
+            <th>Crédito inicial</th>
+            <th>Utilizado</th>
+            <th>Saldo</th>
+            <th>% utilizado</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="tabelaControlados">
+          <tr><td colspan="6" class="empty-state">Carregando...</td></tr>
+        </tbody>
+      </table>
+    </div>
+  `;
+
+  dashboardView.appendChild(secao);
+}
+
+function garantirIdsSecoesDashboard() {
+  const dashboardView = byId("dashboardView");
+  if (!dashboardView) return;
+
+  const cards = byId("cardsResumo")?.closest(".card");
+  if (cards) cards.id = "secaoResumoRapido";
+
+  const tabelaResumo = byId("tabelaResumoDoutores")?.closest(".card");
+  if (tabelaResumo) tabelaResumo.id = "secaoTodos";
+
+  const tabelaAtencao = byId("tabelaAtencao")?.closest(".card");
+  if (tabelaAtencao) tabelaAtencao.id = "secaoAtencao";
+
+  const tabelaBloqueados = byId("tabelaBloqueados")?.closest(".card");
+  if (tabelaBloqueados) tabelaBloqueados.id = "secaoBloqueados";
+
+  const tabelaPixMes = byId("tabelaPixMes")?.closest(".card");
+  if (tabelaPixMes) tabelaPixMes.id = "secaoPixMes";
+
+  garantirSecaoControlados();
+  reordenarSecoesDashboard();
+}
+
 function renderTabelaPixMes(registros) {
   const tbody = byId("tabelaPixMes");
   if (!tbody) return;
@@ -764,10 +863,18 @@ function atualizarDashboard() {
   const registros = getRegistrosFiltrados();
   const saldos = getSaldosFiltrados();
 
+  garantirIdsSecoesDashboard();
   renderCards(registros);
-  renderTabelaResumoDoutores(saldos);
-  renderTabelaAtencao(saldos);
+
+  // Ordem solicitada:
+  // 1. bloqueados
+  // 2. atenção
+  // 3. controlados
+  // 4. todos
   renderTabelaBloqueados(saldos);
+  renderTabelaAtencao(saldos);
+  renderTabelaControlados(saldos);
+  renderTabelaResumoDoutores(saldos);
   renderTabelaPixMes(registros);
 
   const badgeCompetencia = byId("badgeCompetencia");
@@ -853,6 +960,7 @@ async function carregarDashboardInterno() {
   preencherFiltroMes();
   preencherFiltroCidade();
   preencherFiltroDoutor();
+  garantirIdsSecoesDashboard();
 
   await sincronizarSaldosAdminNoDashboard();
   atualizarDashboard();
