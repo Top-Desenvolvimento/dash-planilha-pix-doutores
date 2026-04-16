@@ -1,10 +1,10 @@
 {
   "competencia": "2026-04",
-  "gerado_em": "2026-04-16T22:34:50.659420",
-  "quantidade_total": 381,
-  "valor_total": 51888.0,
+  "gerado_em": "2026-04-16T23:21:54.324483",
+  "quantidade_total": 383,
+  "valor_total": 52182.0,
   "valor_total_descontado": 390.0,
-  "valor_total_pendente": 51498.0,
+  "valor_total_pendente": 51792.0,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -28,8 +28,8 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 40,
-      "valor": 6013.0
+      "quantidade": 42,
+      "valor": 6307.0
     },
     {
       "unidade": "Garibaldi",
@@ -125,7 +125,7 @@
     },
     {
       "doutor": "Leticia Canabarro",
-      "quantidade": 18,
+      "quantidade": 20,
       "valor_descontado": 0.0
     },
     {
