@@ -1,10 +1,10 @@
 {
   "competencia": "2026-04",
-  "gerado_em": "2026-04-17T21:34:41.146190",
-  "quantidade_total": 414,
-  "valor_total": 55843.0,
+  "gerado_em": "2026-04-17T22:18:01.266885",
+  "quantidade_total": 417,
+  "valor_total": 56188.0,
   "valor_total_descontado": 185.0,
-  "valor_total_pendente": 55658.0,
+  "valor_total_pendente": 56003.0,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -18,8 +18,8 @@
     },
     {
       "unidade": "Encantado",
-      "quantidade": 36,
-      "valor": 3725.0
+      "quantidade": 39,
+      "valor": 4070.0
     },
     {
       "unidade": "Farroupilha",
@@ -65,7 +65,12 @@
     },
     {
       "doutor": "Alexandre Favero",
-      "quantidade": 22,
+      "quantidade": 21,
+      "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Alexandre Orlandini",
+      "quantidade": 4,
       "valor_descontado": 0.0
     },
     {
