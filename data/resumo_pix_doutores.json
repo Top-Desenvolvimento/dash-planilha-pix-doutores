@@ -9,16 +9,16 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-17T18:41:43.988055",
-    "quantidade_total": 398,
-    "valor_total": 54019.0,
+    "gerado_em": "2026-04-17T19:52:39.742463",
+    "quantidade_total": 405,
+    "valor_total": 54832.0,
     "valor_total_descontado": 185.0,
-    "valor_total_pendente": 53834.0,
+    "valor_total_pendente": 54647.0,
     "por_unidade": [
       {
         "unidade": "Bento",
-        "quantidade": 14,
-        "valor": 1686.0
+        "quantidade": 15,
+        "valor": 1842.0
       },
       {
         "unidade": "Caxias",
@@ -27,8 +27,8 @@
       },
       {
         "unidade": "Encantado",
-        "quantidade": 29,
-        "valor": 2961.0
+        "quantidade": 31,
+        "valor": 3158.0
       },
       {
         "unidade": "Farroupilha",
@@ -47,8 +47,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 90,
-        "valor": 10693.0
+        "quantidade": 94,
+        "valor": 11153.0
       },
       {
         "unidade": "Ssdocai",
@@ -69,7 +69,7 @@
       },
       {
         "doutor": "Alexandre Favero",
-        "quantidade": 16,
+        "quantidade": 18,
         "valor_descontado": 0.0
       },
       {
@@ -169,7 +169,7 @@
       },
       {
         "doutor": "Naiane Pieta",
-        "quantidade": 5,
+        "quantidade": 6,
         "valor_descontado": 0.0
       },
       {
@@ -179,7 +179,7 @@
       },
       {
         "doutor": "Norberto Filipe",
-        "quantidade": 8,
+        "quantidade": 12,
         "valor_descontado": 0.0
       },
       {
