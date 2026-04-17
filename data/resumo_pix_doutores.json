@@ -9,16 +9,16 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-17T20:40:24.203680",
-    "quantidade_total": 409,
-    "valor_total": 55266.0,
+    "gerado_em": "2026-04-17T21:34:41.146190",
+    "quantidade_total": 414,
+    "valor_total": 55843.0,
     "valor_total_descontado": 185.0,
-    "valor_total_pendente": 55081.0,
+    "valor_total_pendente": 55658.0,
     "por_unidade": [
       {
         "unidade": "Bento",
-        "quantidade": 15,
-        "valor": 1842.0
+        "quantidade": 17,
+        "valor": 2067.0
       },
       {
         "unidade": "Caxias",
@@ -27,8 +27,8 @@
       },
       {
         "unidade": "Encantado",
-        "quantidade": 33,
-        "valor": 3373.0
+        "quantidade": 36,
+        "valor": 3725.0
       },
       {
         "unidade": "Farroupilha",
@@ -63,13 +63,18 @@
     ],
     "por_doutor": [
       {
+        "doutor": ".Nelson Agostino Vaccari Junior",
+        "quantidade": 1,
+        "valor_descontado": 0.0
+      },
+      {
         "doutor": "Adriele da Silva",
         "quantidade": 10,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Alexandre Favero",
-        "quantidade": 20,
+        "quantidade": 22,
         "valor_descontado": 0.0
       },
       {
@@ -174,7 +179,7 @@
       },
       {
         "doutor": "Nelson Vaccari",
-        "quantidade": 1,
+        "quantidade": 2,
         "valor_descontado": 0.0
       },
       {
@@ -204,7 +209,7 @@
       },
       {
         "doutor": "Thiany Cristofoli",
-        "quantidade": 11,
+        "quantidade": 12,
         "valor_descontado": 0.0
       },
       {
