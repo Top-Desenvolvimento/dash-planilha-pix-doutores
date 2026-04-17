@@ -9,11 +9,11 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-17T14:23:33.496620",
-    "quantidade_total": 383,
-    "valor_total": 52199.0,
-    "valor_total_descontado": 207.0,
-    "valor_total_pendente": 51992.0,
+    "gerado_em": "2026-04-17T15:42:02.900494",
+    "quantidade_total": 387,
+    "valor_total": 52851.0,
+    "valor_total_descontado": 185.0,
+    "valor_total_pendente": 52666.0,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -22,8 +22,8 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 72,
-        "valor": 11898.0
+        "quantidade": 73,
+        "valor": 12104.0
       },
       {
         "unidade": "Encantado",
@@ -32,8 +32,8 @@
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 44,
-        "valor": 6925.0
+        "quantidade": 46,
+        "valor": 7251.0
       },
       {
         "unidade": "FloresDaCunha",
@@ -47,8 +47,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 89,
-        "valor": 10529.0
+        "quantidade": 90,
+        "valor": 10649.0
       },
       {
         "unidade": "Ssdocai",
@@ -179,7 +179,7 @@
       },
       {
         "doutor": "Norberto Filipe",
-        "quantidade": 6,
+        "quantidade": 7,
         "valor_descontado": 0.0
       },
       {
@@ -194,12 +194,12 @@
       },
       {
         "doutor": "Thalia Tessaro",
-        "quantidade": 1,
-        "valor_descontado": 22.0
+        "quantidade": 2,
+        "valor_descontado": 0.0
       },
       {
         "doutor": "Thalia Vezzosi",
-        "quantidade": 8,
+        "quantidade": 10,
         "valor_descontado": 0.0
       },
       {
