@@ -1,10 +1,10 @@
 {
   "competencia": "2026-04",
-  "gerado_em": "2026-04-17T16:41:37.641544",
-  "quantidade_total": 387,
-  "valor_total": 52895.0,
+  "gerado_em": "2026-04-17T17:40:01.251284",
+  "quantidade_total": 389,
+  "valor_total": 53094.0,
   "valor_total_descontado": 185.0,
-  "valor_total_pendente": 52710.0,
+  "valor_total_pendente": 52909.0,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,13 +13,13 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 73,
-      "valor": 12104.0
+      "quantidade": 74,
+      "valor": 12203.0
     },
     {
       "unidade": "Encantado",
-      "quantidade": 25,
-      "valor": 2531.0
+      "quantidade": 26,
+      "valor": 2631.0
     },
     {
       "unidade": "Farroupilha",
@@ -60,7 +60,7 @@
     },
     {
       "doutor": "Alexandre Favero",
-      "quantidade": 12,
+      "quantidade": 13,
       "valor_descontado": 0.0
     },
     {
@@ -185,7 +185,7 @@
     },
     {
       "doutor": "Thalia Tessaro",
-      "quantidade": 2,
+      "quantidade": 3,
       "valor_descontado": 0.0
     },
     {
