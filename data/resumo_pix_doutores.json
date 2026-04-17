@@ -9,11 +9,11 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-17T12:55:09.664292",
+    "gerado_em": "2026-04-17T14:23:33.496620",
     "quantidade_total": 383,
-    "valor_total": 52182.0,
-    "valor_total_descontado": 390.0,
-    "valor_total_pendente": 51792.0,
+    "valor_total": 52199.0,
+    "valor_total_descontado": 207.0,
+    "valor_total_pendente": 51992.0,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -37,8 +37,8 @@
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 42,
-        "valor": 6307.0
+        "quantidade": 43,
+        "valor": 6413.0
       },
       {
         "unidade": "Garibaldi",
@@ -47,8 +47,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 90,
-        "valor": 10618.0
+        "quantidade": 89,
+        "valor": 10529.0
       },
       {
         "unidade": "Ssdocai",
@@ -94,7 +94,7 @@
       },
       {
         "doutor": "Franciele Pedrotti",
-        "quantidade": 58,
+        "quantidade": 59,
         "valor_descontado": 0.0
       },
       {
@@ -140,7 +140,7 @@
       {
         "doutor": "Letícia Cauzzi",
         "quantidade": 2,
-        "valor_descontado": 184.0
+        "valor_descontado": 185.0
       },
       {
         "doutor": "Luisa Moraes Lucas",
@@ -159,7 +159,7 @@
       },
       {
         "doutor": "Marina Alievi",
-        "quantidade": 15,
+        "quantidade": 14,
         "valor_descontado": 0.0
       },
       {
@@ -195,7 +195,7 @@
       {
         "doutor": "Thalia Tessaro",
         "quantidade": 1,
-        "valor_descontado": 206.0
+        "valor_descontado": 22.0
       },
       {
         "doutor": "Thalia Vezzosi",
