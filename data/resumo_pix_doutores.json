@@ -9,31 +9,31 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-18T12:01:27.102954",
-    "quantidade_total": 422,
-    "valor_total": 56634.0,
+    "gerado_em": "2026-04-18T13:07:47.372872",
+    "quantidade_total": 437,
+    "valor_total": 58442.0,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 56634.0,
+    "valor_total_pendente": 58442.0,
     "por_unidade": [
       {
         "unidade": "Bento",
-        "quantidade": 18,
-        "valor": 2172.0
+        "quantidade": 20,
+        "valor": 2412.0
       },
       {
         "unidade": "Caxias",
-        "quantidade": 83,
-        "valor": 13116.0
+        "quantidade": 86,
+        "valor": 13506.0
       },
       {
         "unidade": "Encantado",
-        "quantidade": 40,
-        "valor": 4175.0
+        "quantidade": 44,
+        "valor": 4558.0
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 46,
-        "valor": 7251.0
+        "quantidade": 47,
+        "valor": 7406.0
       },
       {
         "unidade": "FloresDaCunha",
@@ -47,8 +47,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 96,
-        "valor": 11290.0
+        "quantidade": 98,
+        "valor": 11495.0
       },
       {
         "unidade": "Ssdocai",
@@ -57,8 +57,8 @@
       },
       {
         "unidade": "Veranopolis",
-        "quantidade": 22,
-        "valor": 3705.0
+        "quantidade": 25,
+        "valor": 4140.0
       }
     ],
     "por_doutor": [
@@ -69,7 +69,7 @@
       },
       {
         "doutor": "Adriele da Silva",
-        "quantidade": 10,
+        "quantidade": 11,
         "valor_descontado": 0.0
       },
       {
@@ -79,7 +79,7 @@
       },
       {
         "doutor": "Alexandre Orlandini",
-        "quantidade": 5,
+        "quantidade": 9,
         "valor_descontado": 0.0
       },
       {
@@ -94,7 +94,7 @@
       },
       {
         "doutor": "Evalda Baldissera",
-        "quantidade": 20,
+        "quantidade": 23,
         "valor_descontado": 0.0
       },
       {
@@ -189,7 +189,7 @@
       },
       {
         "doutor": "Norberto Filipe",
-        "quantidade": 14,
+        "quantidade": 16,
         "valor_descontado": 0.0
       },
       {
@@ -204,7 +204,7 @@
       },
       {
         "doutor": "Thalia Tessaro",
-        "quantidade": 12,
+        "quantidade": 15,
         "valor_descontado": 0.0
       },
       {
@@ -219,7 +219,7 @@
       },
       {
         "doutor": "TOP",
-        "quantidade": 9,
+        "quantidade": 11,
         "valor_descontado": 0.0
       }
     ]
