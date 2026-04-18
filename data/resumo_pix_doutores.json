@@ -9,11 +9,11 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-18T00:04:06.663431",
+    "gerado_em": "2026-04-18T03:00:14.827373",
     "quantidade_total": 417,
     "valor_total": 56188.0,
-    "valor_total_descontado": 27.0,
-    "valor_total_pendente": 56161.0,
+    "valor_total_descontado": 0.0,
+    "valor_total_pendente": 56188.0,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -150,7 +150,7 @@
       {
         "doutor": "Letícia Cauzzi",
         "quantidade": 2,
-        "valor_descontado": 27.0
+        "valor_descontado": 0.0
       },
       {
         "doutor": "Luisa Moraes Lucas",
