@@ -1,30 +1,30 @@
 {
   "competencia": "2026-04",
-  "gerado_em": "2026-04-18T13:07:47.372872",
-  "quantidade_total": 437,
-  "valor_total": 58442.0,
+  "gerado_em": "2026-04-18T14:14:28.105850",
+  "quantidade_total": 445,
+  "valor_total": 59285.0,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 58442.0,
+  "valor_total_pendente": 59285.0,
   "por_unidade": [
     {
       "unidade": "Bento",
-      "quantidade": 20,
-      "valor": 2412.0
+      "quantidade": 22,
+      "valor": 2622.0
     },
     {
       "unidade": "Caxias",
-      "quantidade": 86,
-      "valor": 13506.0
+      "quantidade": 87,
+      "valor": 13601.0
     },
     {
       "unidade": "Encantado",
-      "quantidade": 44,
-      "valor": 4558.0
+      "quantidade": 45,
+      "valor": 4657.0
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 47,
-      "valor": 7406.0
+      "quantidade": 49,
+      "valor": 7641.0
     },
     {
       "unidade": "FloresDaCunha",
@@ -38,8 +38,8 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 98,
-      "valor": 11495.0
+      "quantidade": 100,
+      "valor": 11699.0
     },
     {
       "unidade": "Ssdocai",
@@ -55,12 +55,12 @@
   "por_doutor": [
     {
       "doutor": ".Nelson Agostino Vaccari Junior",
-      "quantidade": 1,
+      "quantidade": 3,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Adriele da Silva",
-      "quantidade": 11,
+      "quantidade": 13,
       "valor_descontado": 0.0
     },
     {
@@ -70,7 +70,7 @@
     },
     {
       "doutor": "Alexandre Orlandini",
-      "quantidade": 9,
+      "quantidade": 10,
       "valor_descontado": 0.0
     },
     {
@@ -180,7 +180,7 @@
     },
     {
       "doutor": "Norberto Filipe",
-      "quantidade": 16,
+      "quantidade": 18,
       "valor_descontado": 0.0
     },
     {
@@ -195,7 +195,7 @@
     },
     {
       "doutor": "Thalia Tessaro",
-      "quantidade": 15,
+      "quantidade": 16,
       "valor_descontado": 0.0
     },
     {
