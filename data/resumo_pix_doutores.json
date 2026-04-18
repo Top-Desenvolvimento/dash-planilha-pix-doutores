@@ -9,11 +9,11 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-18T15:07:15.255546",
+    "gerado_em": "2026-04-18T15:59:10.739808",
     "quantidade_total": 452,
-    "valor_total": 60279.0,
+    "valor_total": 60249.0,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 60279.0,
+    "valor_total_pendente": 60249.0,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -58,7 +58,7 @@
       {
         "unidade": "Veranopolis",
         "quantidade": 27,
-        "valor": 4325.0
+        "valor": 4295.0
       }
     ],
     "por_doutor": [
