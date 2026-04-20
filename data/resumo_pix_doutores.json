@@ -9,7 +9,7 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-20T21:13:55.793723",
+    "gerado_em": "2026-04-20T22:10:19.728416",
     "quantidade_total": 462,
     "valor_total": 61039.0,
     "valor_total_descontado": 90.0,
@@ -64,7 +64,7 @@
     "por_doutor": [
       {
         "doutor": ".Nelson Agostino Vaccari Junior",
-        "quantidade": 6,
+        "quantidade": 7,
         "valor_descontado": 0.0
       },
       {
@@ -189,7 +189,7 @@
       },
       {
         "doutor": "Nelson Vaccari",
-        "quantidade": 2,
+        "quantidade": 1,
         "valor_descontado": 0.0
       },
       {
