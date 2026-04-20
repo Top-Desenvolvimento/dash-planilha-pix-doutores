@@ -60,8 +60,8 @@
       "doutor_id": "8",
       "doutor": "Bruno Castellan",
       "credito_inicial": 600.0,
-      "utilizado": 540.0,
-      "credito_disponivel": 60.0,
+      "utilizado": 600.0,
+      "credito_disponivel": 0.0,
       "pix_key": ""
     },
     {
