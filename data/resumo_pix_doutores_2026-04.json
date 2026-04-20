@@ -1,10 +1,10 @@
 {
   "competencia": "2026-04",
-  "gerado_em": "2026-04-20T20:20:45.359529",
-  "quantidade_total": 459,
-  "valor_total": 60856.0,
+  "gerado_em": "2026-04-20T21:13:55.793723",
+  "quantidade_total": 462,
+  "valor_total": 61039.0,
   "valor_total_descontado": 90.0,
-  "valor_total_pendente": 60766.0,
+  "valor_total_pendente": 60949.0,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,13 +13,13 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 93,
-      "valor": 14098.0
+      "quantidade": 95,
+      "valor": 14192.0
     },
     {
       "unidade": "Encantado",
-      "quantidade": 46,
-      "valor": 4762.0
+      "quantidade": 47,
+      "valor": 4851.0
     },
     {
       "unidade": "Farroupilha",
@@ -70,7 +70,7 @@
     },
     {
       "doutor": "Alexandre Orlandini",
-      "quantidade": 11,
+      "quantidade": 12,
       "valor_descontado": 0.0
     },
     {
@@ -195,7 +195,7 @@
     },
     {
       "doutor": "Tamara Macanan",
-      "quantidade": 37,
+      "quantidade": 39,
       "valor_descontado": 0.0
     },
     {
