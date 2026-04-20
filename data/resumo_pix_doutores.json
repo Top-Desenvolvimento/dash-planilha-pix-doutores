@@ -9,11 +9,11 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-20T17:06:19.311024",
-    "quantidade_total": 455,
-    "valor_total": 60558.0,
+    "gerado_em": "2026-04-20T18:14:36.613756",
+    "quantidade_total": 457,
+    "valor_total": 60666.0,
     "valor_total_descontado": 90.0,
-    "valor_total_pendente": 60468.0,
+    "valor_total_pendente": 60576.0,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -22,8 +22,8 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 90,
-        "valor": 13905.0
+        "quantidade": 92,
+        "valor": 14013.0
       },
       {
         "unidade": "Encantado",
@@ -64,7 +64,7 @@
     "por_doutor": [
       {
         "doutor": ".Nelson Agostino Vaccari Junior",
-        "quantidade": 3,
+        "quantidade": 6,
         "valor_descontado": 0.0
       },
       {
@@ -204,7 +204,7 @@
       },
       {
         "doutor": "Tamara Macanan",
-        "quantidade": 34,
+        "quantidade": 36,
         "valor_descontado": 0.0
       },
       {
@@ -224,7 +224,7 @@
       },
       {
         "doutor": "TOP",
-        "quantidade": 11,
+        "quantidade": 8,
         "valor_descontado": 0.0
       }
     ]
