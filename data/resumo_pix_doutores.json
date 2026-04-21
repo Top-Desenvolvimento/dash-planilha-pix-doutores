@@ -9,11 +9,11 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-20T23:10:00.158178",
+    "gerado_em": "2026-04-21T00:05:51.842488",
     "quantidade_total": 464,
     "valor_total": 61129.0,
-    "valor_total_descontado": 60.0,
-    "valor_total_pendente": 61069.0,
+    "valor_total_descontado": 0.0,
+    "valor_total_pendente": 61129.0,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -85,7 +85,7 @@
       {
         "doutor": "Bruno Castellan",
         "quantidade": 1,
-        "valor_descontado": 60.0
+        "valor_descontado": 0.0
       },
       {
         "doutor": "Cristian Pressi",
