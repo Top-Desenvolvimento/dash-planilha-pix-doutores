@@ -395,9 +395,13 @@ async function garantirDoutorNoSupabase(idOriginal, payloadBase) {
   return novo.id;
 }
 
+/*
+  IMPORTANTE:
+  Esta função agora roda para TODOS os usuários logados,
+  não apenas admin.
+*/
 async function sincronizarSaldosAdminNoDashboard() {
   if (!dashboardData) return;
-  if (!currentUserIsAdmin) return;
 
   try {
     const client = validarSupabasePronto();
@@ -865,12 +869,6 @@ function atualizarDashboard() {
 
   garantirIdsSecoesDashboard();
   renderCards(registros);
-
-  // Ordem solicitada:
-  // 1. bloqueados
-  // 2. atenção
-  // 3. controlados
-  // 4. todos
   renderTabelaBloqueados(saldos);
   renderTabelaAtencao(saldos);
   renderTabelaControlados(saldos);
