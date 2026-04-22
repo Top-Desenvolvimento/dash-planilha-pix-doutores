@@ -1,10 +1,10 @@
 {
   "competencia": "2026-04",
-  "gerado_em": "2026-04-22T21:49:05.062331",
-  "quantidade_total": 503,
-  "valor_total": 65618.55,
+  "gerado_em": "2026-04-22T22:43:22.103394",
+  "quantidade_total": 506,
+  "valor_total": 66186.55,
   "valor_total_descontado": 441.0,
-  "valor_total_pendente": 65177.55,
+  "valor_total_pendente": 65745.55,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,8 +13,8 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 96,
-      "valor": 14227.0
+      "quantidade": 97,
+      "valor": 14548.0
     },
     {
       "unidade": "Encantado",
@@ -23,8 +23,8 @@
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 56,
-      "valor": 8313.0
+      "quantidade": 57,
+      "valor": 8440.0
     },
     {
       "unidade": "FloresDaCunha",
@@ -48,8 +48,8 @@
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 30,
-      "valor": 4798.55
+      "quantidade": 31,
+      "valor": 4918.55
     }
   ],
   "por_doutor": [
@@ -95,7 +95,7 @@
     },
     {
       "doutor": "Evalda Baldissera",
-      "quantidade": 28,
+      "quantidade": 29,
       "valor_descontado": 0.0
     },
     {
@@ -210,7 +210,7 @@
     },
     {
       "doutor": "Tamara Macanan",
-      "quantidade": 40,
+      "quantidade": 41,
       "valor_descontado": 0.0
     },
     {
@@ -230,7 +230,7 @@
     },
     {
       "doutor": "TOP",
-      "quantidade": 8,
+      "quantidade": 9,
       "valor_descontado": 0.0
     }
   ]
