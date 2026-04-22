@@ -9,11 +9,11 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-22T13:02:55.408923",
-    "quantidade_total": 465,
-    "valor_total": 61224.0,
-    "valor_total_descontado": 95.0,
-    "valor_total_pendente": 61129.0,
+    "gerado_em": "2026-04-22T14:57:21.617246",
+    "quantidade_total": 468,
+    "valor_total": 61649.0,
+    "valor_total_descontado": 283.0,
+    "valor_total_pendente": 61366.0,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -47,8 +47,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 101,
-        "valor": 11794.0
+        "quantidade": 104,
+        "valor": 12219.0
       },
       {
         "unidade": "Ssdocai",
@@ -114,7 +114,7 @@
       },
       {
         "doutor": "Gabrielli Fabonato",
-        "quantidade": 6,
+        "quantidade": 7,
         "valor_descontado": 0.0
       },
       {
@@ -184,8 +184,8 @@
       },
       {
         "doutor": "Murilo Debortoli",
-        "quantidade": 1,
-        "valor_descontado": 95.0
+        "quantidade": 3,
+        "valor_descontado": 283.0
       },
       {
         "doutor": "Naiane Pieta",
