@@ -1,10 +1,10 @@
 {
   "competencia": "2026-04",
-  "gerado_em": "2026-04-22T16:08:55.195825",
-  "quantidade_total": 468,
-  "valor_total": 61649.0,
-  "valor_total_descontado": 122.0,
-  "valor_total_pendente": 61527.0,
+  "gerado_em": "2026-04-22T17:22:51.850352",
+  "quantidade_total": 472,
+  "valor_total": 61989.0,
+  "valor_total_descontado": 210.0,
+  "valor_total_pendente": 61779.0,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,8 +13,8 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 95,
-      "valor": 14192.0
+      "quantidade": 96,
+      "valor": 14227.0
     },
     {
       "unidade": "Encantado",
@@ -38,13 +38,13 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 104,
-      "valor": 12219.0
+      "quantidade": 106,
+      "valor": 12429.0
     },
     {
       "unidade": "Ssdocai",
-      "quantidade": 36,
-      "valor": 4197.0
+      "quantidade": 37,
+      "valor": 4292.0
     },
     {
       "unidade": "Veranopolis",
@@ -75,7 +75,7 @@
     },
     {
       "doutor": "Bruno Castellan",
-      "quantidade": 1,
+      "quantidade": 2,
       "valor_descontado": 0.0
     },
     {
@@ -117,6 +117,11 @@
       "doutor": "Greici Matiello",
       "quantidade": 1,
       "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Gustavo Lourenço Ongaratto",
+      "quantidade": 2,
+      "valor_descontado": 210.0
     },
     {
       "doutor": "Joana Sganzerla",
@@ -176,7 +181,7 @@
     {
       "doutor": "Murilo Debortoli",
       "quantidade": 3,
-      "valor_descontado": 122.0
+      "valor_descontado": 0.0
     },
     {
       "doutor": "Naiane Pieta",
@@ -200,7 +205,7 @@
     },
     {
       "doutor": "Tamara Macanan",
-      "quantidade": 39,
+      "quantidade": 40,
       "valor_descontado": 0.0
     },
     {
