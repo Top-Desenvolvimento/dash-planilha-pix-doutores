@@ -9,16 +9,16 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-22T17:22:51.850352",
-    "quantidade_total": 472,
-    "valor_total": 61989.0,
-    "valor_total_descontado": 210.0,
-    "valor_total_pendente": 61779.0,
+    "gerado_em": "2026-04-22T18:46:18.568892",
+    "quantidade_total": 478,
+    "valor_total": 62699.55,
+    "valor_total_descontado": 411.0,
+    "valor_total_pendente": 62288.55,
     "por_unidade": [
       {
         "unidade": "Bento",
-        "quantidade": 22,
-        "valor": 2622.0
+        "quantidade": 23,
+        "valor": 2727.0
       },
       {
         "unidade": "Caxias",
@@ -32,8 +32,8 @@
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 49,
-        "valor": 7641.0
+        "quantidade": 51,
+        "valor": 7732.0
       },
       {
         "unidade": "FloresDaCunha",
@@ -47,8 +47,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 106,
-        "valor": 12429.0
+        "quantidade": 108,
+        "valor": 12630.0
       },
       {
         "unidade": "Ssdocai",
@@ -57,19 +57,19 @@
       },
       {
         "unidade": "Veranopolis",
-        "quantidade": 27,
-        "valor": 4295.0
+        "quantidade": 28,
+        "valor": 4608.55
       }
     ],
     "por_doutor": [
       {
         "doutor": ".Nelson Agostino Vaccari Junior",
-        "quantidade": 7,
+        "quantidade": 1,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Adriele da Silva",
-        "quantidade": 13,
+        "quantidade": 15,
         "valor_descontado": 0.0
       },
       {
@@ -99,7 +99,7 @@
       },
       {
         "doutor": "Evalda Baldissera",
-        "quantidade": 25,
+        "quantidade": 26,
         "valor_descontado": 0.0
       },
       {
@@ -129,8 +129,8 @@
       },
       {
         "doutor": "Gustavo Lourenço Ongaratto",
-        "quantidade": 2,
-        "valor_descontado": 210.0
+        "quantidade": 4,
+        "valor_descontado": 411.0
       },
       {
         "doutor": "Joana Sganzerla",
@@ -199,7 +199,7 @@
       },
       {
         "doutor": "Nelson Vaccari",
-        "quantidade": 1,
+        "quantidade": 8,
         "valor_descontado": 0.0
       },
       {
