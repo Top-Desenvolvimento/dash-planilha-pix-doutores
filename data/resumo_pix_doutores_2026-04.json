@@ -1,10 +1,10 @@
 {
   "competencia": "2026-04",
-  "gerado_em": "2026-04-22T19:54:58.677854",
-  "quantidade_total": 484,
-  "valor_total": 63410.55,
-  "valor_total_descontado": 411.0,
-  "valor_total_pendente": 62999.55,
+  "gerado_em": "2026-04-22T20:49:57.443709",
+  "quantidade_total": 490,
+  "valor_total": 64028.55,
+  "valor_total_descontado": 441.0,
+  "valor_total_pendente": 63587.55,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -23,8 +23,8 @@
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 52,
-      "valor": 7820.0
+      "quantidade": 53,
+      "valor": 7928.0
     },
     {
       "unidade": "FloresDaCunha",
@@ -38,8 +38,8 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 108,
-      "valor": 12630.0
+      "quantidade": 112,
+      "valor": 13055.0
     },
     {
       "unidade": "Ssdocai",
@@ -48,8 +48,8 @@
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 28,
-      "valor": 4608.55
+      "quantidade": 29,
+      "valor": 4693.55
     }
   ],
   "por_doutor": [
@@ -60,7 +60,7 @@
     },
     {
       "doutor": "Adriele da Silva",
-      "quantidade": 16,
+      "quantidade": 17,
       "valor_descontado": 0.0
     },
     {
@@ -90,7 +90,7 @@
     },
     {
       "doutor": "Evalda Baldissera",
-      "quantidade": 26,
+      "quantidade": 27,
       "valor_descontado": 0.0
     },
     {
@@ -120,8 +120,8 @@
     },
     {
       "doutor": "Gustavo Lourenço Ongaratto",
-      "quantidade": 4,
-      "valor_descontado": 411.0
+      "quantidade": 5,
+      "valor_descontado": 441.0
     },
     {
       "doutor": "Joana Sganzerla",
@@ -145,7 +145,7 @@
     },
     {
       "doutor": "Leticia Canabarro",
-      "quantidade": 20,
+      "quantidade": 22,
       "valor_descontado": 0.0
     },
     {
@@ -180,7 +180,7 @@
     },
     {
       "doutor": "Murilo Debortoli",
-      "quantidade": 3,
+      "quantidade": 4,
       "valor_descontado": 0.0
     },
     {
