@@ -1,10 +1,10 @@
 {
   "competencia": "2026-04",
-  "gerado_em": "2026-04-22T18:46:18.568892",
-  "quantidade_total": 478,
-  "valor_total": 62699.55,
+  "gerado_em": "2026-04-22T19:54:58.677854",
+  "quantidade_total": 484,
+  "valor_total": 63410.55,
   "valor_total_descontado": 411.0,
-  "valor_total_pendente": 62288.55,
+  "valor_total_pendente": 62999.55,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -23,13 +23,13 @@
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 51,
-      "valor": 7732.0
+      "quantidade": 52,
+      "valor": 7820.0
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 47,
-      "valor": 7137.0
+      "quantidade": 51,
+      "valor": 7650.0
     },
     {
       "unidade": "Garibaldi",
@@ -43,8 +43,8 @@
     },
     {
       "unidade": "Ssdocai",
-      "quantidade": 37,
-      "valor": 4292.0
+      "quantidade": 38,
+      "valor": 4402.0
     },
     {
       "unidade": "Veranopolis",
@@ -60,7 +60,7 @@
     },
     {
       "doutor": "Adriele da Silva",
-      "quantidade": 15,
+      "quantidade": 16,
       "valor_descontado": 0.0
     },
     {
@@ -75,7 +75,7 @@
     },
     {
       "doutor": "Bruno Castellan",
-      "quantidade": 2,
+      "quantidade": 3,
       "valor_descontado": 0.0
     },
     {
@@ -150,7 +150,7 @@
     },
     {
       "doutor": "Letícia Cauzzi",
-      "quantidade": 6,
+      "quantidade": 10,
       "valor_descontado": 0.0
     },
     {
