@@ -9,11 +9,11 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-22T14:57:21.617246",
+    "gerado_em": "2026-04-22T16:08:55.195825",
     "quantidade_total": 468,
     "valor_total": 61649.0,
-    "valor_total_descontado": 283.0,
-    "valor_total_pendente": 61366.0,
+    "valor_total_descontado": 122.0,
+    "valor_total_pendente": 61527.0,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -185,7 +185,7 @@
       {
         "doutor": "Murilo Debortoli",
         "quantidade": 3,
-        "valor_descontado": 283.0
+        "valor_descontado": 122.0
       },
       {
         "doutor": "Naiane Pieta",

@@ -276,8 +276,8 @@
       "doutor_id": "11",
       "doutor": "Murilo Debortoli",
       "credito_inicial": 500.0,
-      "utilizado": 378.0,
-      "credito_disponivel": 122.0,
+      "utilizado": 500.0,
+      "credito_disponivel": 0.0,
       "pix_key": ""
     },
     {
