@@ -9,10 +9,10 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-22T11:57:30.067220",
-    "quantidade_total": 464,
-    "valor_total": 61129.0,
-    "valor_total_descontado": 0.0,
+    "gerado_em": "2026-04-22T13:02:55.408923",
+    "quantidade_total": 465,
+    "valor_total": 61224.0,
+    "valor_total_descontado": 95.0,
     "valor_total_pendente": 61129.0,
     "por_unidade": [
       {
@@ -47,8 +47,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 100,
-        "valor": 11699.0
+        "quantidade": 101,
+        "valor": 11794.0
       },
       {
         "unidade": "Ssdocai",
@@ -181,6 +181,11 @@
         "doutor": "Morgana Zambiasi",
         "quantidade": 1,
         "valor_descontado": 0.0
+      },
+      {
+        "doutor": "Murilo Debortoli",
+        "quantidade": 1,
+        "valor_descontado": 95.0
       },
       {
         "doutor": "Naiane Pieta",
