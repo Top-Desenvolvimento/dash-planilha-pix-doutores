@@ -9,16 +9,16 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-23T17:02:14.672782",
-    "quantidade_total": 522,
-    "valor_total": 68451.55,
+    "gerado_em": "2026-04-23T18:16:45.619278",
+    "quantidade_total": 524,
+    "valor_total": 68971.55,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 68451.55,
+    "valor_total_pendente": 68971.55,
     "por_unidade": [
       {
         "unidade": "Bento",
-        "quantidade": 26,
-        "valor": 3153.0
+        "quantidade": 27,
+        "valor": 3553.0
       },
       {
         "unidade": "Caxias",
@@ -37,8 +37,8 @@
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 53,
-        "valor": 7840.0
+        "quantidade": 54,
+        "valor": 7960.0
       },
       {
         "unidade": "Garibaldi",
@@ -164,7 +164,7 @@
       },
       {
         "doutor": "Letícia Cauzzi",
-        "quantidade": 12,
+        "quantidade": 13,
         "valor_descontado": 0.0
       },
       {
@@ -204,7 +204,7 @@
       },
       {
         "doutor": "Nelson Vaccari",
-        "quantidade": 11,
+        "quantidade": 12,
         "valor_descontado": 0.0
       },
       {
