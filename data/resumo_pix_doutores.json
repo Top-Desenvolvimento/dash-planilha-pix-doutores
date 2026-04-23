@@ -9,11 +9,11 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-23T01:22:50.723783",
+    "gerado_em": "2026-04-23T04:35:19.946259",
     "quantidade_total": 509,
     "valor_total": 66572.55,
-    "valor_total_descontado": 204.0,
-    "valor_total_pendente": 66368.55,
+    "valor_total_descontado": 0.0,
+    "valor_total_pendente": 66572.55,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -135,7 +135,7 @@
       {
         "doutor": "Gustavo Lourenço Ongaratto",
         "quantidade": 5,
-        "valor_descontado": 204.0
+        "valor_descontado": 0.0
       },
       {
         "doutor": "Joana Sganzerla",
