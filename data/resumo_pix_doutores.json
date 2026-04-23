@@ -9,16 +9,16 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-23T18:16:45.619278",
-    "quantidade_total": 524,
-    "valor_total": 68971.55,
+    "gerado_em": "2026-04-23T19:51:18.835533",
+    "quantidade_total": 526,
+    "valor_total": 69211.55,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 68971.55,
+    "valor_total_pendente": 69211.55,
     "por_unidade": [
       {
         "unidade": "Bento",
-        "quantidade": 27,
-        "valor": 3553.0
+        "quantidade": 28,
+        "valor": 3688.0
       },
       {
         "unidade": "Caxias",
@@ -52,8 +52,8 @@
       },
       {
         "unidade": "Ssdocai",
-        "quantidade": 44,
-        "valor": 4982.0
+        "quantidade": 45,
+        "valor": 5087.0
       },
       {
         "unidade": "Veranopolis",
@@ -154,7 +154,7 @@
       },
       {
         "doutor": "Leandro Diniz",
-        "quantidade": 3,
+        "quantidade": 4,
         "valor_descontado": 0.0
       },
       {
@@ -204,7 +204,7 @@
       },
       {
         "doutor": "Nelson Vaccari",
-        "quantidade": 12,
+        "quantidade": 13,
         "valor_descontado": 0.0
       },
       {
