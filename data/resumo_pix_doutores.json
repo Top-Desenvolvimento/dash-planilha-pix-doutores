@@ -9,11 +9,11 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-23T19:51:18.835533",
-    "quantidade_total": 526,
-    "valor_total": 69211.55,
+    "gerado_em": "2026-04-23T20:50:31.068023",
+    "quantidade_total": 530,
+    "valor_total": 69686.55,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 69211.55,
+    "valor_total_pendente": 69686.55,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -37,8 +37,8 @@
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 54,
-        "valor": 7960.0
+        "quantidade": 55,
+        "valor": 7975.0
       },
       {
         "unidade": "Garibaldi",
@@ -47,13 +47,13 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 115,
-        "valor": 13434.0
+        "quantidade": 117,
+        "valor": 13774.0
       },
       {
         "unidade": "Ssdocai",
-        "quantidade": 45,
-        "valor": 5087.0
+        "quantidade": 46,
+        "valor": 5207.0
       },
       {
         "unidade": "Veranopolis",
@@ -94,7 +94,7 @@
       },
       {
         "doutor": "Cristian Pressi",
-        "quantidade": 29,
+        "quantidade": 30,
         "valor_descontado": 0.0
       },
       {
@@ -154,7 +154,7 @@
       },
       {
         "doutor": "Leandro Diniz",
-        "quantidade": 4,
+        "quantidade": 5,
         "valor_descontado": 0.0
       },
       {
@@ -184,7 +184,7 @@
       },
       {
         "doutor": "Marina Alievi",
-        "quantidade": 15,
+        "quantidade": 16,
         "valor_descontado": 0.0
       },
       {
@@ -239,7 +239,7 @@
       },
       {
         "doutor": "TOP",
-        "quantidade": 11,
+        "quantidade": 12,
         "valor_descontado": 0.0
       }
     ]
