@@ -110,14 +110,6 @@ function calcularCreditoInicialDoMes(creditoBase, saldoSupabase = null, saldoOri
   return Number(base.toFixed(2));
 }
 
-function calcularUtilizadoDoMes(saldoSupabase = null, saldoOriginal = null) {
-  const utilizadoSistema = toNumber(saldoOriginal?.utilizado, 0);
-  if (utilizadoSistema > 0) return Number(utilizadoSistema.toFixed(2));
-
-  const utilizadoSupabase = toNumber(saldoSupabase?.utilizado, 0);
-  return Number(utilizadoSupabase.toFixed(2));
-}
-
 function calcularSaldoFinalDoMes(creditoInicial, utilizado) {
   return Number((toNumber(creditoInicial, 0) - toNumber(utilizado, 0)).toFixed(2));
 }
@@ -306,6 +298,29 @@ function obterSaldosFallbackDaCompetencia(competencia) {
   return mapa;
 }
 
+function somarUtilizadoPorNomeNosRegistros(competencia) {
+  const registros = getRegistrosCompetencia(competencia);
+  const mapa = {};
+
+  for (const item of registros) {
+    const nome = normalizarNome(
+      item.doutor_final ||
+      item.doutor ||
+      item.nome_doutor ||
+      item.responsavel_fiscal ||
+      item.responsavel_fiscal_lido ||
+      ""
+    );
+
+    if (!nome) continue;
+
+    const valor = toNumber(item.valor, 0);
+    mapa[nome] = Number(((mapa[nome] || 0) + valor).toFixed(2));
+  }
+
+  return mapa;
+}
+
 async function garantirDoutorNoSupabase(idOriginal, payloadBase) {
   const client = validarSupabasePronto();
 
@@ -405,6 +420,7 @@ async function sincronizarSaldosAdminNoDashboard() {
 
     for (const competencia of meses) {
       const fallbackSaldos = obterSaldosFallbackDaCompetencia(competencia);
+      const utilizadoPorNome = somarUtilizadoPorNomeNosRegistros(competencia);
       const baseMes = [];
 
       for (const doutor of todosPorNome.values()) {
@@ -416,7 +432,17 @@ async function sincronizarSaldosAdminNoDashboard() {
 
         const creditoBase = toNumber(doutor.credito, 0);
         const creditoInicial = calcularCreditoInicialDoMes(creditoBase, saldoSupabase, original);
-        const utilizado = calcularUtilizadoDoMes(saldoSupabase, original);
+
+        // AGORA O UTILIZADO VEM DOS LANÇAMENTOS DO MÊS
+        const utilizadoRegistros = toNumber(utilizadoPorNome[chaveNome], 0);
+        const utilizadoFallback = toNumber(original?.utilizado, 0);
+        const utilizadoSupabase = toNumber(saldoSupabase?.utilizado, 0);
+
+        const utilizado =
+          utilizadoRegistros > 0
+            ? utilizadoRegistros
+            : (utilizadoFallback > 0 ? utilizadoFallback : utilizadoSupabase);
+
         const creditoFinal = calcularSaldoFinalDoMes(creditoInicial, utilizado);
 
         baseMes.push({
@@ -800,6 +826,7 @@ async function carregarDoutoresAdmin() {
 
     const fallbackDoutores = obterDoutoresFallbackDoDashboard();
     const fallbackSaldos = obterSaldosFallbackDaCompetencia(competencia);
+    const utilizadoPorNome = somarUtilizadoPorNomeNosRegistros(competencia);
 
     const todosPorNome = new Map();
 
@@ -853,7 +880,16 @@ async function carregarDoutoresAdmin() {
 
       const creditoBase = toNumber(item.credito, 0);
       const creditoInicial = calcularCreditoInicialDoMes(creditoBase, saldoSupabase, saldoOriginal);
-      const utilizado = calcularUtilizadoDoMes(saldoSupabase, saldoOriginal);
+
+      const utilizadoRegistros = toNumber(utilizadoPorNome[chaveNome], 0);
+      const utilizadoFallback = toNumber(saldoOriginal?.utilizado, 0);
+      const utilizadoSupabase = toNumber(saldoSupabase?.utilizado, 0);
+
+      const utilizado =
+        utilizadoRegistros > 0
+          ? utilizadoRegistros
+          : (utilizadoFallback > 0 ? utilizadoFallback : utilizadoSupabase);
+
       const saldoFinal = calcularSaldoFinalDoMes(creditoInicial, utilizado);
 
       const responsavelUltimo =
