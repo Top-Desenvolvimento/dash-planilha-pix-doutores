@@ -2,9 +2,11 @@ from __future__ import annotations
 
 import json
 import os
+import re
+import unicodedata
 from datetime import date
 from pathlib import Path
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Optional
 
 try:
     import requests
@@ -18,6 +20,7 @@ DATA_DIR = Path("data")
 ARQUIVO_PIX = DATA_DIR / "pix_doutores.json"
 ARQUIVO_ERROS = DATA_DIR / "erros_pix_doutores.json"
 ARQUIVO_DASH = DATA_DIR / "dashboard_data.json"
+
 ARQ_DOUTORES_LOCAL = DATA_DIR / "doutores_config_local.json"
 ARQ_SALDOS_LOCAL = DATA_DIR / "doutores_saldos_mensais_local.json"
 
@@ -57,34 +60,22 @@ def get_supabase(url: str, params: Dict[str, str] | None = None) -> Any:
     return resp.json()
 
 
-def normalizar_nome(nome: str) -> str:
-    texto = str(nome or "").strip().lower()
-    texto = (
-        texto.replace("á", "a")
-        .replace("à", "a")
-        .replace("ã", "a")
-        .replace("â", "a")
-        .replace("é", "e")
-        .replace("ê", "e")
-        .replace("í", "i")
-        .replace("ó", "o")
-        .replace("ô", "o")
-        .replace("õ", "o")
-        .replace("ú", "u")
-        .replace("ç", "c")
-    )
-    texto = " ".join(texto.split())
+def normalizar_nome(valor: Any) -> str:
+    texto = str(valor or "").strip().lower()
+    texto = unicodedata.normalize("NFD", texto)
+    texto = "".join(ch for ch in texto if unicodedata.category(ch) != "Mn")
+    texto = re.sub(r"[^\w\s]", " ", texto)
+    texto = re.sub(r"\s+", " ", texto).strip()
 
     aliases = {
-        "cir.dionathan paim pohlmann": "dionathan pohlmann",
         "cir dionathan paim pohlmann": "dionathan pohlmann",
-        "dionathan paim pohlmann": "dionathan pohlmann",
-        "cir.dionathan pohlmann": "dionathan pohlmann",
         "cir dionathan pohlmann": "dionathan pohlmann",
+        "dionathan paim pohlmann": "dionathan pohlmann",
         "dionathan pohlmann": "dionathan pohlmann",
-        "andriele da silva": "adriele da silva",
+
         "dra andriele da silva": "adriele da silva",
         "dra adriele da silva": "adriele da silva",
+        "andriele da silva": "adriele da silva",
         "adriele da silva": "adriele da silva",
     }
 
@@ -109,10 +100,17 @@ def extrair_competencia_do_item(item: Dict[str, Any]) -> str:
         return competencia
 
     data_item = str(item.get("data") or "").strip()
-    if len(data_item) >= 7:
+    if "/" in data_item:
         try:
-            ano = int(data_item[6:10]) if "/" in data_item else int(data_item[0:4])
-            mes = int(data_item[3:5]) if "/" in data_item else int(data_item[5:7])
+            dia, mes, ano = data_item.split("/")
+            return f"{int(ano):04d}-{int(mes):02d}"
+        except Exception:
+            return ""
+
+    if len(data_item) >= 7 and data_item[4] == "-":
+        try:
+            ano = int(data_item[:4])
+            mes = int(data_item[5:7])
             return f"{ano:04d}-{mes:02d}"
         except Exception:
             return ""
@@ -140,23 +138,26 @@ def carregar_registros_por_mes(meses: List[str]) -> Dict[str, List[Dict[str, Any
                 continue
             comp = extrair_competencia_do_item(item)
             if comp in resultado:
-                registro = dict(item)
-                registro["competencia"] = comp
-                resultado[comp].append(registro)
+                novo = dict(item)
+                novo["competencia"] = comp
+                resultado[comp].append(novo)
 
     for mes in meses:
-        arquivo_mensal = obter_arquivo_mensal("pix_doutores", mes)
-        if arquivo_mensal.exists():
-            conteudo = carregar_json(arquivo_mensal, [])
-            if isinstance(conteudo, list):
-                saida = []
-                for item in conteudo:
-                    if not isinstance(item, dict):
-                        continue
-                    registro = dict(item)
-                    registro["competencia"] = mes
-                    saida.append(registro)
-                resultado[mes] = saida
+        arquivo = obter_arquivo_mensal("pix_doutores", mes)
+        if not arquivo.exists():
+            continue
+        conteudo = carregar_json(arquivo, [])
+        if not isinstance(conteudo, list):
+            continue
+        saida_mes = []
+        for item in conteudo:
+            if not isinstance(item, dict):
+                continue
+            novo = dict(item)
+            novo["competencia"] = mes
+            saida_mes.append(novo)
+        if saida_mes:
+            resultado[mes] = saida_mes
 
     return resultado
 
@@ -171,23 +172,26 @@ def carregar_erros_por_mes(meses: List[str]) -> Dict[str, List[Dict[str, Any]]]:
                 continue
             comp = extrair_competencia_do_item(item)
             if comp in resultado:
-                registro = dict(item)
-                registro["competencia"] = comp
-                resultado[comp].append(registro)
+                novo = dict(item)
+                novo["competencia"] = comp
+                resultado[comp].append(novo)
 
     for mes in meses:
-        arquivo_mensal = obter_arquivo_mensal("erros_pix_doutores", mes)
-        if arquivo_mensal.exists():
-            conteudo = carregar_json(arquivo_mensal, [])
-            if isinstance(conteudo, list):
-                saida = []
-                for item in conteudo:
-                    if not isinstance(item, dict):
-                        continue
-                    registro = dict(item)
-                    registro["competencia"] = mes
-                    saida.append(registro)
-                resultado[mes] = saida
+        arquivo = obter_arquivo_mensal("erros_pix_doutores", mes)
+        if not arquivo.exists():
+            continue
+        conteudo = carregar_json(arquivo, [])
+        if not isinstance(conteudo, list):
+            continue
+        saida_mes = []
+        for item in conteudo:
+            if not isinstance(item, dict):
+                continue
+            novo = dict(item)
+            novo["competencia"] = mes
+            saida_mes.append(novo)
+        if saida_mes:
+            resultado[mes] = saida_mes
 
     return resultado
 
@@ -211,7 +215,7 @@ def carregar_doutores_local() -> List[Dict[str, Any]]:
         saida.append({
             "id": item.get("id") or normalizar_nome(nome),
             "nome": nome,
-            "nome_normalizado": normalizar_nome(nome),
+            "nome_normalizado": normalizar_nome(item.get("nome_normalizado") or nome),
             "credito": float(item.get("credito") or 0),
             "pix_key": item.get("pix_key") or "",
             "ativo": bool(item.get("ativo", True)),
@@ -280,70 +284,120 @@ def carregar_saldos_mensais(competencia: str) -> List[Dict[str, Any]]:
         return carregar_saldos_local(competencia)
 
 
-def somar_pix_por_doutor(registros: List[Dict[str, Any]]) -> Dict[str, float]:
-    totais: Dict[str, float] = {}
+def extrair_candidatos_nome_registro(item: Dict[str, Any]) -> List[str]:
+    campos = [
+        "doutor_final",
+        "doutor",
+        "nome_doutor",
+        "responsavel_fiscal",
+        "responsavel_fiscal_lido",
+        "responsavel",
+        "profissional",
+    ]
+
+    candidatos: List[str] = []
+    for campo in campos:
+        valor = str(item.get(campo) or "").strip()
+        if valor:
+            candidatos.append(valor)
+    return candidatos
+
+
+def localizar_doutor_do_registro(
+    item: Dict[str, Any],
+    doutores_por_nome: Dict[str, Dict[str, Any]],
+) -> Optional[Dict[str, Any]]:
+    candidatos = extrair_candidatos_nome_registro(item)
+
+    for bruto in candidatos:
+        chave = normalizar_nome(bruto)
+        if chave in doutores_por_nome:
+            return doutores_por_nome[chave]
+
+    return None
+
+
+def somar_pix_por_doutor(
+    registros: List[Dict[str, Any]],
+    doutores: List[Dict[str, Any]],
+) -> Dict[str, float]:
+    totais: Dict[str, float] = {str(d["id"]): 0.0 for d in doutores}
+    doutores_por_nome = {d["nome_normalizado"]: d for d in doutores}
 
     for item in registros:
         if not isinstance(item, dict):
             continue
 
-        nome = normalizar_nome(item.get("doutor_final") or "")
-        if not nome:
+        doutor = localizar_doutor_do_registro(item, doutores_por_nome)
+        if not doutor:
             continue
 
         valor = float(item.get("valor") or 0)
-        totais[nome] = round(totais.get(nome, 0.0) + valor, 2)
+        doutor_id = str(doutor["id"])
+        totais[doutor_id] = round(totais.get(doutor_id, 0.0) + valor, 2)
 
     return totais
+
+
+def calcular_credito_inicial(credito_base: float, saldo_salvo: Dict[str, Any]) -> float:
+    credito_inicial_salvo = saldo_salvo.get("credito_inicial")
+    ajuste_manual = float(saldo_salvo.get("ajuste_manual") or 0)
+
+    if credito_inicial_salvo is not None and str(credito_inicial_salvo) != "":
+        valor = float(credito_inicial_salvo)
+        if valor < 0 < credito_base:
+            return round(credito_base + valor, 2)
+        return round(valor, 2)
+
+    if ajuste_manual != 0:
+        return round(credito_base + ajuste_manual, 2)
+
+    return round(credito_base, 2)
 
 
 def montar_saldos_do_mes(competencia: str, registros_mes: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     doutores = carregar_doutores_config()
     saldos_salvos = carregar_saldos_mensais(competencia)
-    pix_por_doutor = somar_pix_por_doutor(registros_mes)
 
-    salvos_por_id: Dict[str, Dict[str, Any]] = {}
+    saldos_por_id: Dict[str, Dict[str, Any]] = {}
     for item in saldos_salvos:
         doutor_id = item.get("doutor_id")
         if doutor_id:
-            salvos_por_id[str(doutor_id)] = item
+            saldos_por_id[str(doutor_id)] = item
+
+    pix_por_doutor = somar_pix_por_doutor(registros_mes, doutores)
 
     saida: List[Dict[str, Any]] = []
-
     for doutor in doutores:
-        doutor_id = str(doutor.get("id"))
-        nome = str(doutor.get("nome") or "").strip()
-        nome_norm = normalizar_nome(doutor.get("nome_normalizado") or nome)
+        doutor_id = str(doutor["id"])
+        saldo_salvo = saldos_por_id.get(doutor_id, {})
+
         credito_base = float(doutor.get("credito") or 0)
+        credito_inicial = calcular_credito_inicial(credito_base, saldo_salvo)
 
-        salvo = salvos_por_id.get(doutor_id, {})
+        # REGRA IMPORTANTE:
+        # o utilizado principal vem do sistema/coleta
+        utilizado = round(float(pix_por_doutor.get(doutor_id, 0.0)), 2)
 
-        credito_inicial_salvo = salvo.get("credito_inicial")
-        ajuste_manual = float(salvo.get("ajuste_manual") or 0)
+        # se não houver PIX do sistema, usa o salvo apenas como fallback
+        if utilizado == 0:
+            utilizado = round(float(saldo_salvo.get("utilizado") or 0), 2)
 
-        if credito_inicial_salvo is not None and str(credito_inicial_salvo) != "":
-            credito_inicial = float(credito_inicial_salvo)
-            if credito_inicial < 0 and credito_base > 0:
-                credito_inicial = round(credito_base + credito_inicial, 2)
-        elif ajuste_manual != 0:
-            credito_inicial = round(credito_base + ajuste_manual, 2)
-        else:
-            credito_inicial = round(credito_base, 2)
-
-        utilizado = round(float(pix_por_doutor.get(nome_norm, 0.0)), 2)
         saldo_final = round(credito_inicial - utilizado, 2)
 
         saida.append({
             "doutor_id": doutor_id,
-            "doutor": nome,
+            "doutor": doutor["nome"],
             "credito_inicial": credito_inicial,
             "utilizado": utilizado,
             "credito_disponivel": saldo_final,
             "credito_final": saldo_final,
             "pix_key": doutor.get("pix_key") or "",
+            "updated_by_email": saldo_salvo.get("updated_by_email"),
+            "updated_by_nome": saldo_salvo.get("updated_by_nome"),
         })
 
-    saida.sort(key=lambda x: str(x.get("doutor") or "").lower())
+    saida.sort(key=lambda x: normalizar_nome(x.get("doutor")))
     return saida
 
 
@@ -407,9 +461,9 @@ def achatar_registros_por_mes(registros_por_competencia: Dict[str, List[Dict[str
     saida: List[Dict[str, Any]] = []
     for competencia, itens in registros_por_competencia.items():
         for item in itens:
-            registro = dict(item)
-            registro["competencia"] = competencia
-            saida.append(registro)
+            novo = dict(item)
+            novo["competencia"] = competencia
+            saida.append(novo)
     return saida
 
 
@@ -417,9 +471,9 @@ def achatar_erros_por_mes(erros_por_competencia: Dict[str, List[Dict[str, Any]]]
     saida: List[Dict[str, Any]] = []
     for competencia, itens in erros_por_competencia.items():
         for item in itens:
-            registro = dict(item)
-            registro["competencia"] = competencia
-            saida.append(registro)
+            novo = dict(item)
+            novo["competencia"] = competencia
+            saida.append(novo)
     return saida
 
 
@@ -463,9 +517,9 @@ def main() -> None:
     erros = achatar_erros_por_mes(erros_por_competencia)
 
     competencia_padrao = obter_competencia_padrao(
-        ANO_REFERENCIA,
-        registros_por_competencia,
-        saldos_por_competencia,
+      ANO_REFERENCIA,
+      registros_por_competencia,
+      saldos_por_competencia,
     )
 
     dashboard = {
