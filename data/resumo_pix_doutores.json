@@ -9,11 +9,11 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-24T16:53:34.955832",
-    "quantidade_total": 545,
-    "valor_total": 71307.55,
+    "gerado_em": "2026-04-24T17:51:06.820185",
+    "quantidade_total": 546,
+    "valor_total": 71455.55,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 71307.55,
+    "valor_total_pendente": 71455.55,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -27,8 +27,8 @@
       },
       {
         "unidade": "Encantado",
-        "quantidade": 50,
-        "valor": 5147.0
+        "quantidade": 51,
+        "valor": 5295.0
       },
       {
         "unidade": "Farroupilha",
@@ -154,7 +154,7 @@
       },
       {
         "doutor": "Leandro Diniz",
-        "quantidade": 5,
+        "quantidade": 6,
         "valor_descontado": 0.0
       },
       {
@@ -234,12 +234,12 @@
       },
       {
         "doutor": "Thiany Cristofoli",
-        "quantidade": 13,
+        "quantidade": 14,
         "valor_descontado": 0.0
       },
       {
         "doutor": "TOP",
-        "quantidade": 11,
+        "quantidade": 10,
         "valor_descontado": 0.0
       }
     ]
