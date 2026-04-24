@@ -1,25 +1,25 @@
 {
   "competencia": "2026-04",
-  "gerado_em": "2026-04-24T20:40:45.923643",
-  "quantidade_total": 558,
-  "valor_total": 72636.55,
+  "gerado_em": "2026-04-24T21:40:27.038805",
+  "quantidade_total": 567,
+  "valor_total": 73613.55,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 72636.55,
+  "valor_total_pendente": 73613.55,
   "por_unidade": [
     {
       "unidade": "Bento",
-      "quantidade": 31,
-      "valor": 3985.0
+      "quantidade": 32,
+      "valor": 4034.0
     },
     {
       "unidade": "Caxias",
-      "quantidade": 104,
-      "valor": 15356.0
+      "quantidade": 108,
+      "valor": 15770.0
     },
     {
       "unidade": "Encantado",
-      "quantidade": 53,
-      "valor": 5505.0
+      "quantidade": 56,
+      "valor": 5813.0
     },
     {
       "unidade": "Farroupilha",
@@ -38,8 +38,8 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 131,
-      "valor": 15267.0
+      "quantidade": 132,
+      "valor": 15473.0
     },
     {
       "unidade": "Ssdocai",
@@ -195,12 +195,12 @@
     },
     {
       "doutor": "Nelson Vaccari",
-      "quantidade": 17,
+      "quantidade": 22,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Norberto Filipe",
-      "quantidade": 29,
+      "quantidade": 30,
       "valor_descontado": 0.0
     },
     {
@@ -225,7 +225,7 @@
     },
     {
       "doutor": "Thiany Cristofoli",
-      "quantidade": 16,
+      "quantidade": 19,
       "valor_descontado": 0.0
     },
     {
