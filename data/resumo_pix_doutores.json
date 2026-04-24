@@ -9,11 +9,11 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-24T22:36:10.112387",
-    "quantidade_total": 573,
-    "valor_total": 74344.55,
+    "gerado_em": "2026-04-24T23:20:53.568633",
+    "quantidade_total": 574,
+    "valor_total": 74958.09,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 74344.55,
+    "valor_total_pendente": 74958.09,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -57,8 +57,8 @@
       },
       {
         "unidade": "Veranopolis",
-        "quantidade": 41,
-        "valor": 6597.55
+        "quantidade": 42,
+        "valor": 7211.09
       }
     ],
     "por_doutor": [
@@ -104,7 +104,7 @@
       },
       {
         "doutor": "Evalda Baldissera",
-        "quantidade": 36,
+        "quantidade": 37,
         "valor_descontado": 0.0
       },
       {
