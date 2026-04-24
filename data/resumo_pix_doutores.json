@@ -9,11 +9,11 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-24T19:47:36.587537",
-    "quantidade_total": 553,
-    "valor_total": 72257.55,
+    "gerado_em": "2026-04-24T20:40:45.923643",
+    "quantidade_total": 558,
+    "valor_total": 72636.55,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 72257.55,
+    "valor_total_pendente": 72636.55,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -27,8 +27,8 @@
       },
       {
         "unidade": "Encantado",
-        "quantidade": 52,
-        "valor": 5400.0
+        "quantidade": 53,
+        "valor": 5505.0
       },
       {
         "unidade": "Farroupilha",
@@ -37,8 +37,8 @@
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 57,
-        "valor": 8156.0
+        "quantidade": 59,
+        "valor": 8280.0
       },
       {
         "unidade": "Garibaldi",
@@ -47,8 +47,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 129,
-        "valor": 15117.0
+        "quantidade": 131,
+        "valor": 15267.0
       },
       {
         "unidade": "Ssdocai",
@@ -94,7 +94,7 @@
       },
       {
         "doutor": "Cristian Pressi",
-        "quantidade": 30,
+        "quantidade": 32,
         "valor_descontado": 0.0
       },
       {
@@ -164,7 +164,7 @@
       },
       {
         "doutor": "Letícia Cauzzi",
-        "quantidade": 16,
+        "quantidade": 18,
         "valor_descontado": 0.0
       },
       {
@@ -234,7 +234,7 @@
       },
       {
         "doutor": "Thiany Cristofoli",
-        "quantidade": 15,
+        "quantidade": 16,
         "valor_descontado": 0.0
       },
       {
