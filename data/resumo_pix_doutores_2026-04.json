@@ -1,10 +1,10 @@
 {
   "competencia": "2026-04",
-  "gerado_em": "2026-04-24T18:42:43.700300",
-  "quantidade_total": 551,
-  "valor_total": 71994.55,
+  "gerado_em": "2026-04-24T19:47:36.587537",
+  "quantidade_total": 553,
+  "valor_total": 72257.55,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 71994.55,
+  "valor_total_pendente": 72257.55,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -18,8 +18,8 @@
     },
     {
       "unidade": "Encantado",
-      "quantidade": 51,
-      "valor": 5295.0
+      "quantidade": 52,
+      "valor": 5400.0
     },
     {
       "unidade": "Farroupilha",
@@ -48,8 +48,8 @@
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 37,
-      "valor": 6033.55
+      "quantidade": 38,
+      "valor": 6191.55
     }
   ],
   "por_doutor": [
@@ -225,12 +225,17 @@
     },
     {
       "doutor": "Thiany Cristofoli",
-      "quantidade": 14,
+      "quantidade": 15,
       "valor_descontado": 0.0
     },
     {
       "doutor": "TOP",
       "quantidade": 10,
+      "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Valter Baldissera",
+      "quantidade": 1,
       "valor_descontado": 0.0
     }
   ]
