@@ -1,10 +1,10 @@
 {
   "competencia": "2026-04",
-  "gerado_em": "2026-04-24T17:51:06.820185",
-  "quantidade_total": 546,
-  "valor_total": 71455.55,
+  "gerado_em": "2026-04-24T18:42:43.700300",
+  "quantidade_total": 551,
+  "valor_total": 71994.55,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 71455.55,
+  "valor_total_pendente": 71994.55,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,8 +13,8 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 103,
-      "valor": 15236.0
+      "quantidade": 104,
+      "valor": 15356.0
     },
     {
       "unidade": "Encantado",
@@ -28,8 +28,8 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 56,
-      "valor": 8060.0
+      "quantidade": 57,
+      "valor": 8156.0
     },
     {
       "unidade": "Garibaldi",
@@ -38,8 +38,8 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 126,
-      "valor": 14794.0
+      "quantidade": 129,
+      "valor": 15117.0
     },
     {
       "unidade": "Ssdocai",
@@ -155,7 +155,7 @@
     },
     {
       "doutor": "Letícia Cauzzi",
-      "quantidade": 15,
+      "quantidade": 16,
       "valor_descontado": 0.0
     },
     {
@@ -195,12 +195,12 @@
     },
     {
       "doutor": "Nelson Vaccari",
-      "quantidade": 16,
+      "quantidade": 17,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Norberto Filipe",
-      "quantidade": 26,
+      "quantidade": 29,
       "valor_descontado": 0.0
     },
     {
