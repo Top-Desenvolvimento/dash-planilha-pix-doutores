@@ -9,21 +9,21 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-25T13:23:43.078971",
-    "quantidade_total": 588,
-    "valor_total": 76411.09,
+    "gerado_em": "2026-04-25T14:21:12.488477",
+    "quantidade_total": 593,
+    "valor_total": 77173.09,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 76411.09,
+    "valor_total_pendente": 77173.09,
     "por_unidade": [
       {
         "unidade": "Bento",
-        "quantidade": 34,
-        "valor": 4274.0
+        "quantidade": 35,
+        "valor": 4574.0
       },
       {
         "unidade": "Caxias",
-        "quantidade": 109,
-        "valor": 15855.0
+        "quantidade": 110,
+        "valor": 15992.0
       },
       {
         "unidade": "Encantado",
@@ -32,8 +32,8 @@
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 59,
-        "valor": 8635.0
+        "quantidade": 60,
+        "valor": 8720.0
       },
       {
         "unidade": "FloresDaCunha",
@@ -52,8 +52,8 @@
       },
       {
         "unidade": "Ssdocai",
-        "quantidade": 49,
-        "valor": 5572.0
+        "quantidade": 51,
+        "valor": 5812.0
       },
       {
         "unidade": "Veranopolis",
@@ -84,7 +84,7 @@
       },
       {
         "doutor": "Bruno Castellan",
-        "quantidade": 6,
+        "quantidade": 7,
         "valor_descontado": 0.0
       },
       {
@@ -119,12 +119,12 @@
       },
       {
         "doutor": "Franciele Pedrotti",
-        "quantidade": 59,
+        "quantidade": 60,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Gabrielli Fabonato",
-        "quantidade": 7,
+        "quantidade": 8,
         "valor_descontado": 0.0
       },
       {
@@ -159,7 +159,7 @@
       },
       {
         "doutor": "Leandro Diniz",
-        "quantidade": 9,
+        "quantidade": 10,
         "valor_descontado": 0.0
       },
       {
@@ -193,11 +193,6 @@
         "valor_descontado": 0.0
       },
       {
-        "doutor": "MEI",
-        "quantidade": 1,
-        "valor_descontado": 0.0
-      },
-      {
         "doutor": "Morgana Zambiasi",
         "quantidade": 1,
         "valor_descontado": 0.0
@@ -214,7 +209,7 @@
       },
       {
         "doutor": "Nelson Vaccari",
-        "quantidade": 25,
+        "quantidade": 27,
         "valor_descontado": 0.0
       },
       {
