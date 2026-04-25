@@ -9,11 +9,11 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-25T11:15:47.514870",
-    "quantidade_total": 575,
-    "valor_total": 75043.09,
+    "gerado_em": "2026-04-25T12:04:29.514685",
+    "quantidade_total": 585,
+    "valor_total": 76048.09,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 75043.09,
+    "valor_total_pendente": 76048.09,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -27,13 +27,13 @@
       },
       {
         "unidade": "Encantado",
-        "quantidade": 57,
-        "valor": 5898.0
+        "quantidade": 58,
+        "valor": 5993.0
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 57,
-        "valor": 8440.0
+        "quantidade": 59,
+        "valor": 8660.0
       },
       {
         "unidade": "FloresDaCunha",
@@ -47,13 +47,13 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 132,
-        "valor": 15473.0
+        "quantidade": 136,
+        "valor": 15798.0
       },
       {
         "unidade": "Ssdocai",
-        "quantidade": 46,
-        "valor": 5207.0
+        "quantidade": 49,
+        "valor": 5572.0
       },
       {
         "unidade": "Veranopolis",
@@ -95,6 +95,11 @@
       {
         "doutor": "Cristian Pressi",
         "quantidade": 32,
+        "valor_descontado": 0.0
+      },
+      {
+        "doutor": "Diogo Cemin Amarante",
+        "quantidade": 1,
         "valor_descontado": 0.0
       },
       {
@@ -154,7 +159,7 @@
       },
       {
         "doutor": "Leandro Diniz",
-        "quantidade": 6,
+        "quantidade": 9,
         "valor_descontado": 0.0
       },
       {
@@ -188,13 +193,18 @@
         "valor_descontado": 0.0
       },
       {
+        "doutor": "MEI",
+        "quantidade": 1,
+        "valor_descontado": 0.0
+      },
+      {
         "doutor": "Morgana Zambiasi",
         "quantidade": 1,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Murilo Debortoli",
-        "quantidade": 4,
+        "quantidade": 5,
         "valor_descontado": 0.0
       },
       {
@@ -209,7 +219,7 @@
       },
       {
         "doutor": "Norberto Filipe",
-        "quantidade": 30,
+        "quantidade": 31,
         "valor_descontado": 0.0
       },
       {
@@ -234,12 +244,12 @@
       },
       {
         "doutor": "Thiany Cristofoli",
-        "quantidade": 20,
+        "quantidade": 21,
         "valor_descontado": 0.0
       },
       {
         "doutor": "TOP",
-        "quantidade": 10,
+        "quantidade": 12,
         "valor_descontado": 0.0
       },
       {
