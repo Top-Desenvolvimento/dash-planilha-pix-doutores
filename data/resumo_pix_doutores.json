@@ -9,21 +9,21 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-25T14:21:12.488477",
-    "quantidade_total": 593,
-    "valor_total": 77173.09,
+    "gerado_em": "2026-04-25T15:14:09.571842",
+    "quantidade_total": 600,
+    "valor_total": 78009.09,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 77173.09,
+    "valor_total_pendente": 78009.09,
     "por_unidade": [
       {
         "unidade": "Bento",
-        "quantidade": 35,
-        "valor": 4574.0
+        "quantidade": 36,
+        "valor": 4669.0
       },
       {
         "unidade": "Caxias",
-        "quantidade": 110,
-        "valor": 15992.0
+        "quantidade": 114,
+        "valor": 16508.0
       },
       {
         "unidade": "Encantado",
@@ -32,8 +32,8 @@
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 60,
-        "valor": 8720.0
+        "quantidade": 61,
+        "valor": 8825.0
       },
       {
         "unidade": "FloresDaCunha",
@@ -52,8 +52,8 @@
       },
       {
         "unidade": "Ssdocai",
-        "quantidade": 51,
-        "valor": 5812.0
+        "quantidade": 52,
+        "valor": 5932.0
       },
       {
         "unidade": "Veranopolis",
@@ -159,7 +159,7 @@
       },
       {
         "doutor": "Leandro Diniz",
-        "quantidade": 10,
+        "quantidade": 11,
         "valor_descontado": 0.0
       },
       {
@@ -179,7 +179,7 @@
       },
       {
         "doutor": "Luiz Henrique",
-        "quantidade": 19,
+        "quantidade": 20,
         "valor_descontado": 0.0
       },
       {
@@ -209,7 +209,7 @@
       },
       {
         "doutor": "Nelson Vaccari",
-        "quantidade": 27,
+        "quantidade": 31,
         "valor_descontado": 0.0
       },
       {
@@ -244,7 +244,7 @@
       },
       {
         "doutor": "TOP",
-        "quantidade": 10,
+        "quantidade": 11,
         "valor_descontado": 0.0
       },
       {
