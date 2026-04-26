@@ -9,11 +9,11 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-26T17:05:54.963126",
-    "quantidade_total": 561,
-    "valor_total": 73604.09,
+    "gerado_em": "2026-04-26T18:01:38.290866",
+    "quantidade_total": 600,
+    "valor_total": 78009.09,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 73604.09,
+    "valor_total_pendente": 78009.09,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -39,6 +39,11 @@
         "unidade": "FloresDaCunha",
         "quantidade": 61,
         "valor": 8520.0
+      },
+      {
+        "unidade": "Garibaldi",
+        "quantidade": 39,
+        "valor": 4405.0
       },
       {
         "unidade": "Soledade",
@@ -128,8 +133,18 @@
         "valor_descontado": 0.0
       },
       {
+        "doutor": "Greici Matiello",
+        "quantidade": 1,
+        "valor_descontado": 0.0
+      },
+      {
         "doutor": "Gustavo Lourenço Ongaratto",
         "quantidade": 5,
+        "valor_descontado": 0.0
+      },
+      {
+        "doutor": "Joana Sganzerla",
+        "quantidade": 2,
         "valor_descontado": 0.0
       },
       {
@@ -168,6 +183,11 @@
         "valor_descontado": 0.0
       },
       {
+        "doutor": "Marcella Zancanaro",
+        "quantidade": 11,
+        "valor_descontado": 0.0
+      },
+      {
         "doutor": "Marina Alievi",
         "quantidade": 16,
         "valor_descontado": 0.0
@@ -198,6 +218,11 @@
         "valor_descontado": 0.0
       },
       {
+        "doutor": "Sofie Owens",
+        "quantidade": 22,
+        "valor_descontado": 0.0
+      },
+      {
         "doutor": "Tamara Macanan",
         "quantidade": 47,
         "valor_descontado": 0.0
@@ -219,7 +244,7 @@
       },
       {
         "doutor": "TOP",
-        "quantidade": 8,
+        "quantidade": 11,
         "valor_descontado": 0.0
       },
       {
