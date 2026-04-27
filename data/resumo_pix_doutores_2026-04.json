@@ -1,10 +1,10 @@
 {
   "competencia": "2026-04",
-  "gerado_em": "2026-04-27T18:58:27.206510",
-  "quantidade_total": 605,
-  "valor_total": 78640.09,
+  "gerado_em": "2026-04-27T20:02:33.236746",
+  "quantidade_total": 607,
+  "valor_total": 79040.09,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 78640.09,
+  "valor_total_pendente": 79040.09,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,8 +13,8 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 116,
-      "valor": 16701.0
+      "quantidade": 118,
+      "valor": 17101.0
     },
     {
       "unidade": "Encantado",
@@ -184,6 +184,11 @@
       "valor_descontado": 0.0
     },
     {
+      "doutor": "MEI",
+      "quantidade": 1,
+      "valor_descontado": 0.0
+    },
+    {
       "doutor": "Morgana Zambiasi",
       "quantidade": 1,
       "valor_descontado": 0.0
@@ -225,7 +230,7 @@
     },
     {
       "doutor": "Thalia Vezzosi",
-      "quantidade": 11,
+      "quantidade": 12,
       "valor_descontado": 0.0
     },
     {
