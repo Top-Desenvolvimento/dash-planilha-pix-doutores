@@ -1369,6 +1369,10 @@ iniciarAplicacao();
 let cidadesAtuaisCache = {};
 let cidadesAtuaisCompetencia = "";
 
+const atualizarDashboardOriginalStatusCards = atualizarDashboard;
+const mostrarDashboardOriginalStatusCards = mostrarDashboard;
+const mostrarAdminOriginalStatusCards = mostrarAdmin;
+
 function classificarCardDoutor(item) {
   if (item.percentual >= 100) return "bloqueado";
   if (item.percentual >= 50) return "atencao";
@@ -1394,7 +1398,7 @@ function garantirPainelStatusInicio() {
   painel.innerHTML = `
     <datalist id="listaCidadesAtuais"></datalist>
 
-    <div class="status-group" id="grupoBloqueadosCards">
+    <div class="status-group">
       <div class="status-group-header">
         <div>
           <h2>Doutores bloqueados</h2>
@@ -1404,7 +1408,7 @@ function garantirPainelStatusInicio() {
       <div class="doctor-card-grid" id="cardsBloqueados"></div>
     </div>
 
-    <div class="status-group" id="grupoAtencaoCards">
+    <div class="status-group">
       <div class="status-group-header">
         <div>
           <h2>Doutores em atenção</h2>
@@ -1414,7 +1418,7 @@ function garantirPainelStatusInicio() {
       <div class="doctor-card-grid" id="cardsAtencao"></div>
     </div>
 
-    <div class="status-group" id="grupoControladosCards">
+    <div class="status-group">
       <div class="status-group-header">
         <div>
           <h2>Doutores controlados</h2>
@@ -1425,19 +1429,13 @@ function garantirPainelStatusInicio() {
     </div>
   `;
 
-  const primeiroCard = dashboardView.firstElementChild;
-  if (primeiroCard) {
-    dashboardView.insertBefore(painel, primeiroCard);
-  } else {
-    dashboardView.appendChild(painel);
-  }
-
+  dashboardView.prepend(painel);
   return painel;
 }
 
 function preencherListaCidadesAtuais() {
   const lista = byId("listaCidadesAtuais");
-  if (!lista) return;
+  if (!lista || !dashboardData) return;
 
   const competencia = getCompetenciaAtual();
   const registros = getRegistrosCompetencia(competencia);
@@ -1450,6 +1448,7 @@ function preencherListaCidadesAtuais() {
 
 async function carregarCidadesAtuais(competencia) {
   try {
+    if (!competencia) return;
     if (cidadesAtuaisCompetencia === competencia) return;
 
     const client = validarSupabasePronto();
@@ -1586,44 +1585,72 @@ function renderizarCardsStatusInicio(saldos) {
   }
 }
 
-const mostrarDashboardOriginalStatusCards = mostrarDashboard;
+async function atualizarPainelInicioBonito() {
+  if (!dashboardData) return;
+
+  const competencia = getCompetenciaAtual();
+
+  await carregarCidadesAtuais(competencia);
+
+  const saldos = getSaldosFiltrados();
+  const registros = getRegistrosFiltrados();
+
+  document.body.classList.add("modo-inicio-limpo");
+
+  renderizarCardsStatusInicio(saldos);
+  renderTabelaPixMes(registros);
+}
+
 mostrarDashboard = function () {
   mostrarDashboardOriginalStatusCards();
   document.body.classList.add("modo-inicio-limpo");
 
-  const competencia = getCompetenciaAtual();
-  const registros = getRegistrosFiltrados();
-  const saldos = getSaldosFiltrados();
-
-  carregarCidadesAtuais(competencia).then(() => {
-    renderizarCardsStatusInicio(saldos);
-    renderTabelaPixMes(registros);
-  });
+  if (dashboardData) {
+    preencherFiltroMes();
+    preencherFiltroCidade();
+    preencherFiltroDoutor();
+    atualizarPainelInicioBonito();
+  }
 };
 
-const mostrarAdminOriginalStatusCards = mostrarAdmin;
 mostrarAdmin = function () {
   mostrarAdminOriginalStatusCards();
   document.body.classList.remove("modo-inicio-limpo");
 };
 
-const atualizarDashboardOriginalStatusCards = atualizarDashboard;
 atualizarDashboard = async function () {
-  const competencia = getCompetenciaAtual();
-  const registros = getRegistrosFiltrados();
-  const saldos = getSaldosFiltrados();
+  if (!dashboardData) return;
 
-  document.body.classList.add("modo-inicio-limpo");
+  atualizarDashboardOriginalStatusCards();
 
-  await carregarCidadesAtuais(competencia);
+  preencherFiltroCidade();
+  preencherFiltroDoutor();
 
-  renderizarCardsStatusInicio(saldos);
-  renderTabelaPixMes(registros);
-
-  const badgeCompetencia = byId("badgeCompetencia");
-  if (badgeCompetencia) {
-    badgeCompetencia.textContent = formatarCompetenciaLabel(competencia);
-  }
+  await atualizarPainelInicioBonito();
 };
+
+byId("filtroMes")?.addEventListener("change", async () => {
+  if (!dashboardData) return;
+
+  cidadesAtuaisCompetencia = "";
+
+  preencherFiltroCidade();
+  preencherFiltroDoutor();
+
+  await sincronizarSaldosAdminNoDashboard();
+  await atualizarPainelInicioBonito();
+
+  if (!byId("adminView")?.classList.contains("hidden")) {
+    await carregarDoutoresAdmin();
+  }
+});
+
+byId("filtroCidade")?.addEventListener("change", async () => {
+  await atualizarPainelInicioBonito();
+});
+
+byId("filtroDoutor")?.addEventListener("change", async () => {
+  await atualizarPainelInicioBonito();
+});
 
 window.salvarCidadeAtualDoutor = salvarCidadeAtualDoutor;
