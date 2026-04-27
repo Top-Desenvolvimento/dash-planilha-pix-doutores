@@ -1366,3 +1366,264 @@ if (window.supabaseClient) {
 }
 
 iniciarAplicacao();
+let cidadesAtuaisCache = {};
+let cidadesAtuaisCompetencia = "";
+
+function classificarCardDoutor(item) {
+  if (item.percentual >= 100) return "bloqueado";
+  if (item.percentual >= 50) return "atencao";
+  return "controlado";
+}
+
+function tituloStatusCard(tipo) {
+  if (tipo === "bloqueado") return "Bloqueado";
+  if (tipo === "atencao") return "Atenção";
+  return "Controlado";
+}
+
+function garantirPainelStatusInicio() {
+  const dashboardView = byId("dashboardView");
+  if (!dashboardView) return null;
+
+  let painel = byId("painelStatusDoutores");
+  if (painel) return painel;
+
+  painel = document.createElement("section");
+  painel.id = "painelStatusDoutores";
+  painel.className = "status-dashboard-grid";
+  painel.innerHTML = `
+    <datalist id="listaCidadesAtuais"></datalist>
+
+    <div class="status-group" id="grupoBloqueadosCards">
+      <div class="status-group-header">
+        <div>
+          <h2>Doutores bloqueados</h2>
+          <span>Utilização igual ou acima de 100%</span>
+        </div>
+      </div>
+      <div class="doctor-card-grid" id="cardsBloqueados"></div>
+    </div>
+
+    <div class="status-group" id="grupoAtencaoCards">
+      <div class="status-group-header">
+        <div>
+          <h2>Doutores em atenção</h2>
+          <span>Utilização entre 50% e 99%</span>
+        </div>
+      </div>
+      <div class="doctor-card-grid" id="cardsAtencao"></div>
+    </div>
+
+    <div class="status-group" id="grupoControladosCards">
+      <div class="status-group-header">
+        <div>
+          <h2>Doutores controlados</h2>
+          <span>Utilização abaixo de 50%</span>
+        </div>
+      </div>
+      <div class="doctor-card-grid" id="cardsControlados"></div>
+    </div>
+  `;
+
+  const primeiroCard = dashboardView.firstElementChild;
+  if (primeiroCard) {
+    dashboardView.insertBefore(painel, primeiroCard);
+  } else {
+    dashboardView.appendChild(painel);
+  }
+
+  return painel;
+}
+
+function preencherListaCidadesAtuais() {
+  const lista = byId("listaCidadesAtuais");
+  if (!lista) return;
+
+  const competencia = getCompetenciaAtual();
+  const registros = getRegistrosCompetencia(competencia);
+  const cidades = [...new Set(registros.map(r => r.unidade).filter(Boolean))].sort();
+
+  lista.innerHTML = cidades
+    .map(cidade => `<option value="${escapeHtml(cidade)}"></option>`)
+    .join("");
+}
+
+async function carregarCidadesAtuais(competencia) {
+  try {
+    if (cidadesAtuaisCompetencia === competencia) return;
+
+    const client = validarSupabasePronto();
+
+    const { data, error } = await client
+      .from("doutores_cidade_atual")
+      .select("*")
+      .eq("competencia", competencia);
+
+    if (error) throw error;
+
+    cidadesAtuaisCache = {};
+
+    for (const item of data || []) {
+      cidadesAtuaisCache[item.doutor_nome_normalizado] = item.cidade_atual || "";
+    }
+
+    cidadesAtuaisCompetencia = competencia;
+  } catch (err) {
+    console.warn("Não foi possível carregar cidades atuais:", err);
+  }
+}
+
+async function salvarCidadeAtualDoutor(doutorNome, cidadeAtual) {
+  try {
+    const competencia = getCompetenciaAtual();
+    const chave = normalizarNome(doutorNome);
+    const client = validarSupabasePronto();
+
+    const { data: userData } = await client.auth.getUser();
+    const email = userData?.user?.email || null;
+
+    cidadesAtuaisCache[chave] = cidadeAtual;
+
+    const { error } = await client
+      .from("doutores_cidade_atual")
+      .upsert({
+        competencia,
+        doutor_nome_normalizado: chave,
+        doutor_nome: doutorNome,
+        cidade_atual: cidadeAtual || null,
+        updated_by_email: email,
+        updated_at: new Date().toISOString()
+      }, {
+        onConflict: "competencia,doutor_nome_normalizado"
+      });
+
+    if (error) throw error;
+  } catch (err) {
+    console.error("Erro ao salvar cidade atual:", err);
+    alert("Não foi possível salvar a cidade atual.");
+  }
+}
+
+function montarCardDoutorStatus(item) {
+  const tipo = classificarCardDoutor(item);
+  const saldoClasse = item.creditoDisponivel < 0 ? "negative" : "";
+  const chave = normalizarNome(item.doutor);
+  const cidadeAtual = cidadesAtuaisCache[chave] || "";
+
+  return `
+    <div class="doctor-status-card ${tipo}">
+      <div class="doctor-card-top">
+        <div class="doctor-card-name">${escapeHtml(item.doutor)}</div>
+        <div class="doctor-card-status ${tipo}">${tituloStatusCard(tipo)}</div>
+      </div>
+
+      <div class="doctor-card-values">
+        <div class="doctor-card-metric">
+          <small>Crédito inicial</small>
+          <strong>${formatarMoeda(item.creditoInicial)}</strong>
+        </div>
+
+        <div class="doctor-card-metric">
+          <small>Utilizado</small>
+          <strong>${formatarMoeda(item.utilizado)}</strong>
+        </div>
+
+        <div class="doctor-card-metric">
+          <small>Saldo</small>
+          <strong class="${saldoClasse}">${formatarMoeda(item.creditoDisponivel)}</strong>
+        </div>
+
+        <div class="doctor-card-metric">
+          <small>% utilizado</small>
+          <strong>${item.percentual.toFixed(1)}%</strong>
+        </div>
+      </div>
+
+      <div class="doctor-city-box">
+        <label>Cidade atual usando a chave PIX</label>
+        <input
+          class="doctor-city-input"
+          list="listaCidadesAtuais"
+          value="${escapeHtml(cidadeAtual)}"
+          placeholder="Digite ou selecione a cidade"
+          onchange="salvarCidadeAtualDoutor('${escapeHtml(item.doutor)}', this.value)"
+        />
+      </div>
+    </div>
+  `;
+}
+
+function renderizarCardsStatusInicio(saldos) {
+  garantirPainelStatusInicio();
+  preencherListaCidadesAtuais();
+
+  const todos = montarResumoDoutores(saldos);
+
+  const bloqueados = todos.filter(item => item.percentual >= 100);
+  const atencao = todos.filter(item => item.percentual >= 50 && item.percentual < 100);
+  const controlados = todos.filter(item => item.percentual < 50);
+
+  const elBloqueados = byId("cardsBloqueados");
+  const elAtencao = byId("cardsAtencao");
+  const elControlados = byId("cardsControlados");
+
+  if (elBloqueados) {
+    elBloqueados.innerHTML = bloqueados.length
+      ? bloqueados.map(montarCardDoutorStatus).join("")
+      : `<div class="empty-status-card">Sem doutores bloqueados.</div>`;
+  }
+
+  if (elAtencao) {
+    elAtencao.innerHTML = atencao.length
+      ? atencao.map(montarCardDoutorStatus).join("")
+      : `<div class="empty-status-card">Sem doutores em atenção.</div>`;
+  }
+
+  if (elControlados) {
+    elControlados.innerHTML = controlados.length
+      ? controlados.map(montarCardDoutorStatus).join("")
+      : `<div class="empty-status-card">Sem doutores controlados.</div>`;
+  }
+}
+
+const mostrarDashboardOriginalStatusCards = mostrarDashboard;
+mostrarDashboard = function () {
+  mostrarDashboardOriginalStatusCards();
+  document.body.classList.add("modo-inicio-limpo");
+
+  const competencia = getCompetenciaAtual();
+  const registros = getRegistrosFiltrados();
+  const saldos = getSaldosFiltrados();
+
+  carregarCidadesAtuais(competencia).then(() => {
+    renderizarCardsStatusInicio(saldos);
+    renderTabelaPixMes(registros);
+  });
+};
+
+const mostrarAdminOriginalStatusCards = mostrarAdmin;
+mostrarAdmin = function () {
+  mostrarAdminOriginalStatusCards();
+  document.body.classList.remove("modo-inicio-limpo");
+};
+
+const atualizarDashboardOriginalStatusCards = atualizarDashboard;
+atualizarDashboard = async function () {
+  const competencia = getCompetenciaAtual();
+  const registros = getRegistrosFiltrados();
+  const saldos = getSaldosFiltrados();
+
+  document.body.classList.add("modo-inicio-limpo");
+
+  await carregarCidadesAtuais(competencia);
+
+  renderizarCardsStatusInicio(saldos);
+  renderTabelaPixMes(registros);
+
+  const badgeCompetencia = byId("badgeCompetencia");
+  if (badgeCompetencia) {
+    badgeCompetencia.textContent = formatarCompetenciaLabel(competencia);
+  }
+};
+
+window.salvarCidadeAtualDoutor = salvarCidadeAtualDoutor;
