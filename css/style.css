@@ -499,3 +499,190 @@ tbody tr:hover {
     grid-template-columns: 1fr;
   }
 }
+body.modo-inicio-limpo #tituloDashboard,
+body.modo-inicio-limpo #subtituloDashboard,
+body.modo-inicio-limpo #badgeCompetencia,
+body.modo-inicio-limpo #badgeArquivo,
+body.modo-inicio-limpo #badgeUsuario,
+body.modo-inicio-limpo #secaoResumoRapido,
+body.modo-inicio-limpo #secaoTodos,
+body.modo-inicio-limpo #secaoBloqueados,
+body.modo-inicio-limpo #secaoAtencao,
+body.modo-inicio-limpo #secaoControlados {
+  display: none !important;
+}
+
+.status-dashboard-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin-bottom: 24px;
+}
+
+.status-group {
+  background: rgba(28, 43, 78, 0.82);
+  border: 1px solid rgba(118, 145, 220, 0.22);
+  border-radius: 22px;
+  padding: 20px;
+}
+
+.status-group-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.status-group-header h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #fff;
+}
+
+.status-group-header span {
+  font-size: 13px;
+  color: #c8d3ee;
+}
+
+.doctor-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 14px;
+}
+
+.doctor-status-card {
+  border-radius: 18px;
+  padding: 16px;
+  background: rgba(13, 28, 58, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.20);
+}
+
+.doctor-status-card.bloqueado {
+  border-color: rgba(255, 82, 113, 0.75);
+  animation: piscarBloqueado 1.15s infinite;
+}
+
+.doctor-status-card.atencao {
+  border-color: rgba(255, 202, 87, 0.75);
+  box-shadow: 0 0 0 1px rgba(255, 202, 87, 0.22);
+}
+
+.doctor-status-card.controlado {
+  border-color: rgba(34, 211, 153, 0.55);
+}
+
+@keyframes piscarBloqueado {
+  0%, 100% {
+    box-shadow: 0 0 0 1px rgba(255, 82, 113, 0.25), 0 0 18px rgba(255, 82, 113, 0.20);
+  }
+  50% {
+    box-shadow: 0 0 0 2px rgba(255, 82, 113, 0.75), 0 0 36px rgba(255, 82, 113, 0.55);
+  }
+}
+
+.doctor-card-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+  margin-bottom: 14px;
+}
+
+.doctor-card-name {
+  font-size: 16px;
+  font-weight: 800;
+  color: #fff;
+}
+
+.doctor-card-status {
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.doctor-card-status.bloqueado {
+  background: rgba(255, 82, 113, 0.22);
+  color: #ff8fa5;
+}
+
+.doctor-card-status.atencao {
+  background: rgba(255, 202, 87, 0.18);
+  color: #ffd978;
+}
+
+.doctor-card-status.controlado {
+  background: rgba(34, 211, 153, 0.16);
+  color: #55e6b7;
+}
+
+.doctor-card-values {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.doctor-card-metric {
+  background: rgba(255,255,255,0.055);
+  border-radius: 14px;
+  padding: 10px;
+}
+
+.doctor-card-metric small {
+  display: block;
+  color: #aebbe0;
+  font-size: 11px;
+  margin-bottom: 5px;
+}
+
+.doctor-card-metric strong {
+  font-size: 15px;
+  color: #fff;
+}
+
+.doctor-card-metric .negative {
+  color: #ff7f99;
+}
+
+.doctor-city-box {
+  margin-top: 13px;
+}
+
+.doctor-city-box label {
+  display: block;
+  font-size: 11px;
+  color: #c8d3ee;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+.doctor-city-input {
+  width: 100%;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.09);
+  color: #fff;
+  border-radius: 12px;
+  padding: 10px 12px;
+  outline: none;
+}
+
+.doctor-city-input:focus {
+  border-color: #6b8cff;
+  box-shadow: 0 0 0 3px rgba(107,140,255,0.18);
+}
+
+.empty-status-card {
+  color: #aebbe0;
+  padding: 14px;
+}
+
+@media (max-width: 768px) {
+  .doctor-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .doctor-card-values {
+    grid-template-columns: 1fr;
+  }
+}
