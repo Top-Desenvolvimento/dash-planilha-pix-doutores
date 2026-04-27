@@ -9,11 +9,11 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-27T15:27:09.860739",
-    "quantidade_total": 600,
-    "valor_total": 78009.09,
+    "gerado_em": "2026-04-27T16:51:40.862257",
+    "quantidade_total": 601,
+    "valor_total": 78114.09,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 78009.09,
+    "valor_total_pendente": 78114.09,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -27,8 +27,8 @@
       },
       {
         "unidade": "Encantado",
-        "quantidade": 59,
-        "valor": 6141.0
+        "quantidade": 60,
+        "valor": 6246.0
       },
       {
         "unidade": "Farroupilha",
@@ -239,7 +239,7 @@
       },
       {
         "doutor": "Thiany Cristofoli",
-        "quantidade": 22,
+        "quantidade": 23,
         "valor_descontado": 0.0
       },
       {
