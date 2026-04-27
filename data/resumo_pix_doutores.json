@@ -9,11 +9,11 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-27T18:27:28.257918",
-    "quantidade_total": 604,
-    "valor_total": 78492.09,
+    "gerado_em": "2026-04-27T18:58:27.206510",
+    "quantidade_total": 605,
+    "valor_total": 78640.09,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 78492.09,
+    "valor_total_pendente": 78640.09,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -57,8 +57,8 @@
       },
       {
         "unidade": "Veranopolis",
-        "quantidade": 43,
-        "valor": 7396.09
+        "quantidade": 44,
+        "valor": 7544.09
       }
     ],
     "por_doutor": [
@@ -209,7 +209,7 @@
       },
       {
         "doutor": "Nelson Vaccari",
-        "quantidade": 32,
+        "quantidade": 33,
         "valor_descontado": 0.0
       },
       {
@@ -219,7 +219,7 @@
       },
       {
         "doutor": "Sofie Owens",
-        "quantidade": 22,
+        "quantidade": 23,
         "valor_descontado": 0.0
       },
       {
@@ -244,7 +244,7 @@
       },
       {
         "doutor": "TOP",
-        "quantidade": 11,
+        "quantidade": 10,
         "valor_descontado": 0.0
       },
       {
