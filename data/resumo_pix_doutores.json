@@ -9,11 +9,11 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-28T19:17:55.774999",
-    "quantidade_total": 629,
-    "valor_total": 81695.09,
-    "valor_total_descontado": 0.0,
-    "valor_total_pendente": 81695.09,
+    "gerado_em": "2026-04-28T20:52:10.951112",
+    "quantidade_total": 634,
+    "valor_total": 83441.09,
+    "valor_total_descontado": 125.0,
+    "valor_total_pendente": 83316.09,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -32,13 +32,13 @@
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 61,
-        "valor": 8825.0
+        "quantidade": 62,
+        "valor": 9031.0
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 61,
-        "valor": 8520.0
+        "quantidade": 62,
+        "valor": 8645.0
       },
       {
         "unidade": "Garibaldi",
@@ -47,8 +47,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 148,
-        "valor": 17280.0
+        "quantidade": 150,
+        "valor": 17495.0
       },
       {
         "unidade": "Ssdocai",
@@ -57,8 +57,8 @@
       },
       {
         "unidade": "Veranopolis",
-        "quantidade": 44,
-        "valor": 7544.09
+        "quantidade": 45,
+        "valor": 8744.09
       }
     ],
     "por_doutor": [
@@ -118,6 +118,11 @@
         "valor_descontado": 0.0
       },
       {
+        "doutor": "Fernana Sozo",
+        "quantidade": 1,
+        "valor_descontado": 125.0
+      },
+      {
         "doutor": "Franciele Pedrotti",
         "quantidade": 60,
         "valor_descontado": 0.0
@@ -164,7 +169,7 @@
       },
       {
         "doutor": "Leticia Canabarro",
-        "quantidade": 24,
+        "quantidade": 26,
         "valor_descontado": 0.0
       },
       {
@@ -179,7 +184,7 @@
       },
       {
         "doutor": "Luiz Henrique",
-        "quantidade": 20,
+        "quantidade": 21,
         "valor_descontado": 0.0
       },
       {
@@ -199,7 +204,7 @@
       },
       {
         "doutor": "Morgana Zambiasi",
-        "quantidade": 1,
+        "quantidade": 2,
         "valor_descontado": 0.0
       },
       {
