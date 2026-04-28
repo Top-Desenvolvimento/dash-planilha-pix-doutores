@@ -9,11 +9,11 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-28T22:53:28.782994",
-    "quantidade_total": 646,
-    "valor_total": 84582.09,
+    "gerado_em": "2026-04-28T23:51:46.468104",
+    "quantidade_total": 647,
+    "valor_total": 84677.09,
     "valor_total_descontado": 125.0,
-    "valor_total_pendente": 84457.09,
+    "valor_total_pendente": 84552.09,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -37,8 +37,8 @@
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 64,
-        "valor": 8829.0
+        "quantidade": 65,
+        "valor": 8924.0
       },
       {
         "unidade": "Garibaldi",
@@ -259,7 +259,7 @@
       },
       {
         "doutor": "TOP",
-        "quantidade": 12,
+        "quantidade": 13,
         "valor_descontado": 0.0
       },
       {
