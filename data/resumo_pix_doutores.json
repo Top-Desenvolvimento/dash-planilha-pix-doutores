@@ -9,11 +9,11 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-28T13:18:49.542099",
-    "quantidade_total": 617,
-    "valor_total": 80157.09,
+    "gerado_em": "2026-04-28T15:55:42.128880",
+    "quantidade_total": 625,
+    "valor_total": 81164.09,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 80157.09,
+    "valor_total_pendente": 81164.09,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -22,8 +22,8 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 122,
-        "valor": 17540.0
+        "quantidade": 125,
+        "valor": 17911.0
       },
       {
         "unidade": "Encantado",
@@ -47,8 +47,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 140,
-        "valor": 16208.0
+        "quantidade": 145,
+        "valor": 16844.0
       },
       {
         "unidade": "Ssdocai",
@@ -94,7 +94,7 @@
       },
       {
         "doutor": "Cristian Pressi",
-        "quantidade": 36,
+        "quantidade": 41,
         "valor_descontado": 0.0
       },
       {
@@ -214,7 +214,7 @@
       },
       {
         "doutor": "Nelson Vaccari",
-        "quantidade": 33,
+        "quantidade": 34,
         "valor_descontado": 0.0
       },
       {
@@ -239,7 +239,7 @@
       },
       {
         "doutor": "Thalia Vezzosi",
-        "quantidade": 16,
+        "quantidade": 18,
         "valor_descontado": 0.0
       },
       {
