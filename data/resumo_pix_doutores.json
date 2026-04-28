@@ -9,11 +9,11 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-28T15:55:42.128880",
-    "quantidade_total": 625,
-    "valor_total": 81164.09,
+    "gerado_em": "2026-04-28T17:33:39.861626",
+    "quantidade_total": 626,
+    "valor_total": 81259.09,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 81164.09,
+    "valor_total_pendente": 81259.09,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -22,8 +22,8 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 125,
-        "valor": 17911.0
+        "quantidade": 126,
+        "valor": 18006.0
       },
       {
         "unidade": "Encantado",
@@ -239,7 +239,7 @@
       },
       {
         "doutor": "Thalia Vezzosi",
-        "quantidade": 18,
+        "quantidade": 19,
         "valor_descontado": 0.0
       },
       {
