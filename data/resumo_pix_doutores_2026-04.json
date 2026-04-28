@@ -1,10 +1,10 @@
 {
   "competencia": "2026-04",
-  "gerado_em": "2026-04-28T11:29:47.077414",
-  "quantidade_total": 613,
-  "valor_total": 79747.09,
+  "gerado_em": "2026-04-28T13:18:49.542099",
+  "quantidade_total": 617,
+  "valor_total": 80157.09,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 79747.09,
+  "valor_total_pendente": 80157.09,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -38,8 +38,8 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 136,
-      "valor": 15798.0
+      "quantidade": 140,
+      "valor": 16208.0
     },
     {
       "unidade": "Ssdocai",
@@ -85,7 +85,7 @@
     },
     {
       "doutor": "Cristian Pressi",
-      "quantidade": 32,
+      "quantidade": 36,
       "valor_descontado": 0.0
     },
     {
