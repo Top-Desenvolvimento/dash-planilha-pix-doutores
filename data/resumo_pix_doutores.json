@@ -9,11 +9,11 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-29T13:13:57.300838",
-    "quantidade_total": 649,
-    "valor_total": 84968.09,
-    "valor_total_descontado": 125.0,
-    "valor_total_pendente": 84843.09,
+    "gerado_em": "2026-04-29T15:36:11.416410",
+    "quantidade_total": 652,
+    "valor_total": 85231.09,
+    "valor_total_descontado": 164.0,
+    "valor_total_pendente": 85067.09,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -22,8 +22,8 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 130,
-        "valor": 18370.0
+        "quantidade": 129,
+        "valor": 18275.0
       },
       {
         "unidade": "Encantado",
@@ -37,8 +37,8 @@
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 65,
-        "valor": 8924.0
+        "quantidade": 66,
+        "valor": 8963.0
       },
       {
         "unidade": "Garibaldi",
@@ -47,8 +47,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 156,
-        "valor": 18190.0
+        "quantidade": 159,
+        "valor": 18509.0
       },
       {
         "unidade": "Ssdocai",
@@ -119,8 +119,8 @@
       },
       {
         "doutor": "Fernana Sozo",
-        "quantidade": 1,
-        "valor_descontado": 125.0
+        "quantidade": 2,
+        "valor_descontado": 164.0
       },
       {
         "doutor": "Franciele Pedrotti",
@@ -169,7 +169,7 @@
       },
       {
         "doutor": "Leticia Canabarro",
-        "quantidade": 32,
+        "quantidade": 35,
         "valor_descontado": 0.0
       },
       {
@@ -195,11 +195,6 @@
       {
         "doutor": "Marina Alievi",
         "quantidade": 16,
-        "valor_descontado": 0.0
-      },
-      {
-        "doutor": "MEI",
-        "quantidade": 1,
         "valor_descontado": 0.0
       },
       {
