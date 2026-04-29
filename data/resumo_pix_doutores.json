@@ -9,16 +9,16 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-29T15:36:11.416410",
-    "quantidade_total": 652,
-    "valor_total": 85231.09,
-    "valor_total_descontado": 164.0,
-    "valor_total_pendente": 85067.09,
+    "gerado_em": "2026-04-29T17:20:02.527174",
+    "quantidade_total": 653,
+    "valor_total": 85350.09,
+    "valor_total_descontado": 86.0,
+    "valor_total_pendente": 85264.09,
     "por_unidade": [
       {
         "unidade": "Bento",
-        "quantidade": 36,
-        "valor": 4669.0
+        "quantidade": 34,
+        "valor": 4459.0
       },
       {
         "unidade": "Caxias",
@@ -27,8 +27,8 @@
       },
       {
         "unidade": "Encantado",
-        "quantidade": 62,
-        "valor": 6514.0
+        "quantidade": 63,
+        "valor": 6619.0
       },
       {
         "unidade": "Farroupilha",
@@ -37,8 +37,8 @@
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 66,
-        "valor": 8963.0
+        "quantidade": 68,
+        "valor": 9257.0
       },
       {
         "unidade": "Garibaldi",
@@ -53,7 +53,7 @@
       {
         "unidade": "Ssdocai",
         "quantidade": 53,
-        "valor": 6017.0
+        "valor": 5947.0
       },
       {
         "unidade": "Veranopolis",
@@ -62,11 +62,6 @@
       }
     ],
     "por_doutor": [
-      {
-        "doutor": ".Nelson Agostino Vaccari Junior",
-        "quantidade": 1,
-        "valor_descontado": 0.0
-      },
       {
         "doutor": "Adriele da Silva",
         "quantidade": 18,
@@ -85,11 +80,6 @@
       {
         "doutor": "Bruno Castellan",
         "quantidade": 8,
-        "valor_descontado": 0.0
-      },
-      {
-        "doutor": "Bruno Lorenzoni",
-        "quantidade": 1,
         "valor_descontado": 0.0
       },
       {
@@ -119,8 +109,8 @@
       },
       {
         "doutor": "Fernana Sozo",
-        "quantidade": 2,
-        "valor_descontado": 164.0
+        "quantidade": 4,
+        "valor_descontado": 86.0
       },
       {
         "doutor": "Franciele Pedrotti",
@@ -159,7 +149,7 @@
       },
       {
         "doutor": "Keyla Daniele",
-        "quantidade": 12,
+        "quantidade": 13,
         "valor_descontado": 0.0
       },
       {
@@ -214,7 +204,7 @@
       },
       {
         "doutor": "Nelson Vaccari",
-        "quantidade": 34,
+        "quantidade": 33,
         "valor_descontado": 0.0
       },
       {
@@ -249,7 +239,7 @@
       },
       {
         "doutor": "Thiany Cristofoli",
-        "quantidade": 25,
+        "quantidade": 26,
         "valor_descontado": 0.0
       },
       {
