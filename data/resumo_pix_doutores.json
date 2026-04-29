@@ -9,11 +9,11 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-29T21:29:20.896449",
-    "quantidade_total": 668,
-    "valor_total": 87481.09,
+    "gerado_em": "2026-04-29T22:25:58.541611",
+    "quantidade_total": 602,
+    "valor_total": 80003.09,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 87481.09,
+    "valor_total_pendente": 80003.09,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -26,19 +26,14 @@
         "valor": 18275.0
       },
       {
-        "unidade": "Encantado",
-        "quantidade": 70,
-        "valor": 7913.0
-      },
-      {
         "unidade": "Farroupilha",
         "quantidade": 64,
         "valor": 9220.0
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 71,
-        "valor": 9542.0
+        "quantidade": 73,
+        "valor": 9747.0
       },
       {
         "unidade": "Garibaldi",
@@ -47,8 +42,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 159,
-        "valor": 18509.0
+        "quantidade": 161,
+        "valor": 18739.0
       },
       {
         "unidade": "Ssdocai",
@@ -65,16 +60,6 @@
       {
         "doutor": "Adriele da Silva",
         "quantidade": 18,
-        "valor_descontado": 0.0
-      },
-      {
-        "doutor": "Alexandre Favero",
-        "quantidade": 21,
-        "valor_descontado": 0.0
-      },
-      {
-        "doutor": "Alexandre Orlandini",
-        "quantidade": 14,
         "valor_descontado": 0.0
       },
       {
@@ -109,7 +94,7 @@
       },
       {
         "doutor": "Fernana Sozo",
-        "quantidade": 4,
+        "quantidade": 6,
         "valor_descontado": 0.0
       },
       {
@@ -159,7 +144,7 @@
       },
       {
         "doutor": "Leticia Canabarro",
-        "quantidade": 35,
+        "quantidade": 37,
         "valor_descontado": 0.0
       },
       {
@@ -238,13 +223,8 @@
         "valor_descontado": 0.0
       },
       {
-        "doutor": "Thiany Cristofoli",
-        "quantidade": 33,
-        "valor_descontado": 0.0
-      },
-      {
         "doutor": "TOP",
-        "quantidade": 15,
+        "quantidade": 13,
         "valor_descontado": 0.0
       },
       {
