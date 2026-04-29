@@ -1,10 +1,10 @@
 {
   "competencia": "2026-04",
-  "gerado_em": "2026-04-29T18:59:19.463608",
-  "quantidade_total": 661,
-  "valor_total": 86457.09,
+  "gerado_em": "2026-04-29T20:17:16.985970",
+  "quantidade_total": 664,
+  "valor_total": 86757.09,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 86457.09,
+  "valor_total_pendente": 86757.09,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -18,8 +18,8 @@
     },
     {
       "unidade": "Encantado",
-      "quantidade": 66,
-      "valor": 7167.0
+      "quantidade": 67,
+      "valor": 7287.0
     },
     {
       "unidade": "Farroupilha",
@@ -28,8 +28,8 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 69,
-      "valor": 9362.0
+      "quantidade": 71,
+      "valor": 9542.0
     },
     {
       "unidade": "Garibaldi",
@@ -85,7 +85,7 @@
     },
     {
       "doutor": "Dionathan Pohlmann",
-      "quantidade": 27,
+      "quantidade": 28,
       "valor_descontado": 0.0
     },
     {
@@ -230,12 +230,12 @@
     },
     {
       "doutor": "Thiany Cristofoli",
-      "quantidade": 29,
+      "quantidade": 30,
       "valor_descontado": 0.0
     },
     {
       "doutor": "TOP",
-      "quantidade": 14,
+      "quantidade": 15,
       "valor_descontado": 0.0
     },
     {
