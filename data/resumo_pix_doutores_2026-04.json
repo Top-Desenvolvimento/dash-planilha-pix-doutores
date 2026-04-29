@@ -1,10 +1,10 @@
 {
   "competencia": "2026-04",
-  "gerado_em": "2026-04-29T20:17:16.985970",
-  "quantidade_total": 664,
-  "valor_total": 86757.09,
+  "gerado_em": "2026-04-29T21:29:20.896449",
+  "quantidade_total": 668,
+  "valor_total": 87481.09,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 86757.09,
+  "valor_total_pendente": 87481.09,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -18,8 +18,8 @@
     },
     {
       "unidade": "Encantado",
-      "quantidade": 67,
-      "valor": 7287.0
+      "quantidade": 70,
+      "valor": 7913.0
     },
     {
       "unidade": "Farroupilha",
@@ -43,8 +43,8 @@
     },
     {
       "unidade": "Ssdocai",
-      "quantidade": 55,
-      "valor": 6211.0
+      "quantidade": 56,
+      "valor": 6309.0
     },
     {
       "unidade": "Veranopolis",
@@ -140,7 +140,7 @@
     },
     {
       "doutor": "Keyla Daniele",
-      "quantidade": 14,
+      "quantidade": 15,
       "valor_descontado": 0.0
     },
     {
@@ -230,7 +230,7 @@
     },
     {
       "doutor": "Thiany Cristofoli",
-      "quantidade": 30,
+      "quantidade": 33,
       "valor_descontado": 0.0
     },
     {
