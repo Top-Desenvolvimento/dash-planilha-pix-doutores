@@ -1,15 +1,15 @@
 {
   "competencia": "2026-04",
-  "gerado_em": "2026-04-29T17:20:02.527174",
-  "quantidade_total": 653,
-  "valor_total": 85350.09,
-  "valor_total_descontado": 86.0,
-  "valor_total_pendente": 85264.09,
+  "gerado_em": "2026-04-29T18:59:19.463608",
+  "quantidade_total": 661,
+  "valor_total": 86457.09,
+  "valor_total_descontado": 0.0,
+  "valor_total_pendente": 86457.09,
   "por_unidade": [
     {
       "unidade": "Bento",
-      "quantidade": 34,
-      "valor": 4459.0
+      "quantidade": 35,
+      "valor": 4564.0
     },
     {
       "unidade": "Caxias",
@@ -18,18 +18,18 @@
     },
     {
       "unidade": "Encantado",
-      "quantidade": 63,
-      "valor": 6619.0
+      "quantidade": 66,
+      "valor": 7167.0
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 63,
-      "valor": 9135.0
+      "quantidade": 64,
+      "valor": 9220.0
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 68,
-      "valor": 9257.0
+      "quantidade": 69,
+      "valor": 9362.0
     },
     {
       "unidade": "Garibaldi",
@@ -43,8 +43,8 @@
     },
     {
       "unidade": "Ssdocai",
-      "quantidade": 53,
-      "valor": 5947.0
+      "quantidade": 55,
+      "valor": 6211.0
     },
     {
       "unidade": "Veranopolis",
@@ -70,7 +70,7 @@
     },
     {
       "doutor": "Bruno Castellan",
-      "quantidade": 8,
+      "quantidade": 9,
       "valor_descontado": 0.0
     },
     {
@@ -101,7 +101,7 @@
     {
       "doutor": "Fernana Sozo",
       "quantidade": 4,
-      "valor_descontado": 86.0
+      "valor_descontado": 0.0
     },
     {
       "doutor": "Franciele Pedrotti",
@@ -140,7 +140,7 @@
     },
     {
       "doutor": "Keyla Daniele",
-      "quantidade": 13,
+      "quantidade": 14,
       "valor_descontado": 0.0
     },
     {
@@ -165,7 +165,7 @@
     },
     {
       "doutor": "Luiz Henrique",
-      "quantidade": 21,
+      "quantidade": 22,
       "valor_descontado": 0.0
     },
     {
@@ -195,7 +195,7 @@
     },
     {
       "doutor": "Nelson Vaccari",
-      "quantidade": 33,
+      "quantidade": 34,
       "valor_descontado": 0.0
     },
     {
@@ -230,12 +230,12 @@
     },
     {
       "doutor": "Thiany Cristofoli",
-      "quantidade": 26,
+      "quantidade": 29,
       "valor_descontado": 0.0
     },
     {
       "doutor": "TOP",
-      "quantidade": 13,
+      "quantidade": 14,
       "valor_descontado": 0.0
     },
     {
