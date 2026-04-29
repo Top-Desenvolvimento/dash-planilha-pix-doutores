@@ -1,10 +1,10 @@
 {
   "competencia": "2026-04",
-  "gerado_em": "2026-04-29T11:29:59.909258",
-  "quantidade_total": 647,
-  "valor_total": 84677.09,
+  "gerado_em": "2026-04-29T13:13:57.300838",
+  "quantidade_total": 649,
+  "valor_total": 84968.09,
   "valor_total_descontado": 125.0,
-  "valor_total_pendente": 84552.09,
+  "valor_total_pendente": 84843.09,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -38,13 +38,13 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 155,
-      "valor": 17984.0
+      "quantidade": 156,
+      "valor": 18190.0
     },
     {
       "unidade": "Ssdocai",
-      "quantidade": 52,
-      "valor": 5932.0
+      "quantidade": 53,
+      "valor": 6017.0
     },
     {
       "unidade": "Veranopolis",
@@ -75,7 +75,7 @@
     },
     {
       "doutor": "Bruno Castellan",
-      "quantidade": 7,
+      "quantidade": 8,
       "valor_descontado": 0.0
     },
     {
@@ -160,7 +160,7 @@
     },
     {
       "doutor": "Leticia Canabarro",
-      "quantidade": 31,
+      "quantidade": 32,
       "valor_descontado": 0.0
     },
     {
