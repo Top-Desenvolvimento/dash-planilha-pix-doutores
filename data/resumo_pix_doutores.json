@@ -9,11 +9,11 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-30T17:00:56.511014",
-    "quantidade_total": 694,
-    "valor_total": 91372.09,
-    "valor_total_descontado": 757.0,
-    "valor_total_pendente": 90615.09,
+    "gerado_em": "2026-04-30T18:17:59.750649",
+    "quantidade_total": 697,
+    "valor_total": 91956.09,
+    "valor_total_descontado": 796.0,
+    "valor_total_pendente": 91160.09,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -32,13 +32,13 @@
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 69,
-        "valor": 10107.0
+        "quantidade": 70,
+        "valor": 10146.0
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 77,
-        "valor": 10714.0
+        "quantidade": 79,
+        "valor": 11259.0
       },
       {
         "unidade": "Garibaldi",
@@ -114,7 +114,7 @@
       },
       {
         "doutor": "Fernana Sozo",
-        "quantidade": 8,
+        "quantidade": 9,
         "valor_descontado": 0.0
       },
       {
@@ -169,7 +169,7 @@
       },
       {
         "doutor": "Letícia Cauzzi",
-        "quantidade": 20,
+        "quantidade": 21,
         "valor_descontado": 0.0
       },
       {
@@ -194,8 +194,8 @@
       },
       {
         "doutor": "Matheus Strapasson",
-        "quantidade": 1,
-        "valor_descontado": 105.0
+        "quantidade": 2,
+        "valor_descontado": 144.0
       },
       {
         "doutor": "Morgana Zambiasi",
