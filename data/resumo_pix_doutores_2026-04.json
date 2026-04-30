@@ -1,9 +1,9 @@
 {
   "competencia": "2026-04",
-  "gerado_em": "2026-04-29T23:25:53.353480",
-  "quantidade_total": 676,
-  "valor_total": 88725.09,
-  "valor_total_descontado": 0.0,
+  "gerado_em": "2026-04-30T00:22:38.134284",
+  "quantidade_total": 677,
+  "valor_total": 88830.09,
+  "valor_total_descontado": 105.0,
   "valor_total_pendente": 88725.09,
   "por_unidade": [
     {
@@ -48,8 +48,8 @@
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 45,
-      "valor": 8744.09
+      "quantidade": 46,
+      "valor": 8849.09
     }
   ],
   "por_doutor": [
@@ -177,6 +177,11 @@
       "doutor": "Marina Alievi",
       "quantidade": 16,
       "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Matheus Strapasson",
+      "quantidade": 1,
+      "valor_descontado": 105.0
     },
     {
       "doutor": "Morgana Zambiasi",
