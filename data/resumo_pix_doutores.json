@@ -9,11 +9,11 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-30T20:01:34.719169",
-    "quantidade_total": 705,
-    "valor_total": 92783.09,
-    "valor_total_descontado": 212.0,
-    "valor_total_pendente": 92571.09,
+    "gerado_em": "2026-04-30T21:05:55.792664",
+    "quantidade_total": 710,
+    "valor_total": 93424.09,
+    "valor_total_descontado": 0.0,
+    "valor_total_pendente": 93424.09,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -32,8 +32,8 @@
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 70,
-        "valor": 10146.0
+        "quantidade": 71,
+        "valor": 10266.0
       },
       {
         "unidade": "FloresDaCunha",
@@ -47,8 +47,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 171,
-        "valor": 19726.0
+        "quantidade": 173,
+        "valor": 19923.0
       },
       {
         "unidade": "Ssdocai",
@@ -57,8 +57,8 @@
       },
       {
         "unidade": "Veranopolis",
-        "quantidade": 48,
-        "valor": 9122.09
+        "quantidade": 50,
+        "valor": 9446.09
       }
     ],
     "por_doutor": [
@@ -80,7 +80,7 @@
       {
         "doutor": "Ana Cristina Corso",
         "quantidade": 4,
-        "valor_descontado": 196.0
+        "valor_descontado": 0.0
       },
       {
         "doutor": "Bruno Castellan",
@@ -139,7 +139,7 @@
       },
       {
         "doutor": "Gustavo Lourenço Ongaratto",
-        "quantidade": 7,
+        "quantidade": 9,
         "valor_descontado": 0.0
       },
       {
@@ -179,7 +179,7 @@
       },
       {
         "doutor": "Luiz Henrique",
-        "quantidade": 28,
+        "quantidade": 29,
         "valor_descontado": 0.0
       },
       {
@@ -194,8 +194,8 @@
       },
       {
         "doutor": "Matheus Strapasson",
-        "quantidade": 4,
-        "valor_descontado": 16.0
+        "quantidade": 6,
+        "valor_descontado": 0.0
       },
       {
         "doutor": "Morgana Zambiasi",
