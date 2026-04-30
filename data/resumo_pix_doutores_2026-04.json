@@ -1,10 +1,10 @@
 {
   "competencia": "2026-04",
-  "gerado_em": "2026-04-30T13:03:59.699027",
-  "quantidade_total": 679,
-  "valor_total": 89028.09,
+  "gerado_em": "2026-04-30T15:22:00.388881",
+  "quantidade_total": 690,
+  "valor_total": 90302.09,
   "valor_total_descontado": 105.0,
-  "valor_total_pendente": 88923.09,
+  "valor_total_pendente": 90197.09,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -23,13 +23,13 @@
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 67,
-      "valor": 9919.0
+      "quantidade": 68,
+      "valor": 10022.0
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 73,
-      "valor": 9747.0
+      "quantidade": 75,
+      "valor": 10062.0
     },
     {
       "unidade": "Garibaldi",
@@ -38,13 +38,13 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 164,
-      "valor": 19047.0
+      "quantidade": 171,
+      "valor": 19776.0
     },
     {
       "unidade": "Ssdocai",
-      "quantidade": 56,
-      "valor": 6309.0
+      "quantidade": 57,
+      "valor": 6436.0
     },
     {
       "unidade": "Veranopolis",
@@ -70,7 +70,7 @@
     },
     {
       "doutor": "Bruno Castellan",
-      "quantidade": 9,
+      "quantidade": 10,
       "valor_descontado": 0.0
     },
     {
@@ -100,7 +100,7 @@
     },
     {
       "doutor": "Fernana Sozo",
-      "quantidade": 6,
+      "quantidade": 8,
       "valor_descontado": 0.0
     },
     {
@@ -150,7 +150,7 @@
     },
     {
       "doutor": "Leticia Canabarro",
-      "quantidade": 40,
+      "quantidade": 47,
       "valor_descontado": 0.0
     },
     {
@@ -165,7 +165,7 @@
     },
     {
       "doutor": "Luiz Henrique",
-      "quantidade": 25,
+      "quantidade": 26,
       "valor_descontado": 0.0
     },
     {
