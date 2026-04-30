@@ -9,11 +9,11 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-04-30T18:17:59.750649",
-    "quantidade_total": 697,
-    "valor_total": 91956.09,
-    "valor_total_descontado": 796.0,
-    "valor_total_pendente": 91160.09,
+    "gerado_em": "2026-04-30T20:01:34.719169",
+    "quantidade_total": 705,
+    "valor_total": 92783.09,
+    "valor_total_descontado": 212.0,
+    "valor_total_pendente": 92571.09,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -22,13 +22,13 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 129,
-        "valor": 18275.0
+        "quantidade": 131,
+        "valor": 18480.0
       },
       {
         "unidade": "Encantado",
-        "quantidade": 72,
-        "valor": 8270.0
+        "quantidade": 73,
+        "valor": 8300.0
       },
       {
         "unidade": "Farroupilha",
@@ -47,18 +47,18 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 169,
-        "valor": 19546.0
+        "quantidade": 171,
+        "valor": 19726.0
       },
       {
         "unidade": "Ssdocai",
-        "quantidade": 58,
-        "valor": 6642.0
+        "quantidade": 59,
+        "valor": 6781.0
       },
       {
         "unidade": "Veranopolis",
-        "quantidade": 46,
-        "valor": 8849.09
+        "quantidade": 48,
+        "valor": 9122.09
       }
     ],
     "por_doutor": [
@@ -79,8 +79,8 @@
       },
       {
         "doutor": "Ana Cristina Corso",
-        "quantidade": 2,
-        "valor_descontado": 652.0
+        "quantidade": 4,
+        "valor_descontado": 196.0
       },
       {
         "doutor": "Bruno Castellan",
@@ -139,7 +139,7 @@
       },
       {
         "doutor": "Gustavo Lourenço Ongaratto",
-        "quantidade": 5,
+        "quantidade": 7,
         "valor_descontado": 0.0
       },
       {
@@ -159,7 +159,7 @@
       },
       {
         "doutor": "Leandro Diniz",
-        "quantidade": 11,
+        "quantidade": 12,
         "valor_descontado": 0.0
       },
       {
@@ -179,7 +179,7 @@
       },
       {
         "doutor": "Luiz Henrique",
-        "quantidade": 27,
+        "quantidade": 28,
         "valor_descontado": 0.0
       },
       {
@@ -194,8 +194,8 @@
       },
       {
         "doutor": "Matheus Strapasson",
-        "quantidade": 2,
-        "valor_descontado": 144.0
+        "quantidade": 4,
+        "valor_descontado": 16.0
       },
       {
         "doutor": "Morgana Zambiasi",
@@ -223,7 +223,7 @@
         "valor_descontado": 0.0
       },
       {
-        "doutor": "PEDI.Giovana Gasparini",
+        "doutor": "Renata Protto",
         "quantidade": 1,
         "valor_descontado": 0.0
       },
