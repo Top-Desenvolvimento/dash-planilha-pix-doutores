@@ -1,10 +1,10 @@
 {
   "competencia": "2026-04",
-  "gerado_em": "2026-04-30T15:22:00.388881",
-  "quantidade_total": 690,
-  "valor_total": 90302.09,
-  "valor_total_descontado": 105.0,
-  "valor_total_pendente": 90197.09,
+  "gerado_em": "2026-04-30T17:00:56.511014",
+  "quantidade_total": 694,
+  "valor_total": 91372.09,
+  "valor_total_descontado": 757.0,
+  "valor_total_pendente": 90615.09,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -18,18 +18,18 @@
     },
     {
       "unidade": "Encantado",
-      "quantidade": 70,
-      "valor": 7913.0
+      "quantidade": 72,
+      "valor": 8270.0
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 68,
-      "valor": 10022.0
+      "quantidade": 69,
+      "valor": 10107.0
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 75,
-      "valor": 10062.0
+      "quantidade": 77,
+      "valor": 10714.0
     },
     {
       "unidade": "Garibaldi",
@@ -38,13 +38,13 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 171,
-      "valor": 19776.0
+      "quantidade": 169,
+      "valor": 19546.0
     },
     {
       "unidade": "Ssdocai",
-      "quantidade": 57,
-      "valor": 6436.0
+      "quantidade": 58,
+      "valor": 6642.0
     },
     {
       "unidade": "Veranopolis",
@@ -69,8 +69,13 @@
       "valor_descontado": 0.0
     },
     {
+      "doutor": "Ana Cristina Corso",
+      "quantidade": 2,
+      "valor_descontado": 652.0
+    },
+    {
       "doutor": "Bruno Castellan",
-      "quantidade": 10,
+      "quantidade": 11,
       "valor_descontado": 0.0
     },
     {
@@ -150,7 +155,7 @@
     },
     {
       "doutor": "Leticia Canabarro",
-      "quantidade": 47,
+      "quantidade": 45,
       "valor_descontado": 0.0
     },
     {
@@ -165,7 +170,7 @@
     },
     {
       "doutor": "Luiz Henrique",
-      "quantidade": 26,
+      "quantidade": 27,
       "valor_descontado": 0.0
     },
     {
@@ -235,7 +240,7 @@
     },
     {
       "doutor": "Thiany Cristofoli",
-      "quantidade": 33,
+      "quantidade": 35,
       "valor_descontado": 0.0
     },
     {
