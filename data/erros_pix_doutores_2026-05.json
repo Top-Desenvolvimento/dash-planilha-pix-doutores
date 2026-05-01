@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "unidade": "Garibaldi",
+    "competencia": "2026-05",
+    "erro": "Menu Finanças não encontrado.",
+    "coletado_em": "2026-05-01T07:15:38.095134"
+  },
+  {
+    "unidade": "FloresDaCunha",
+    "competencia": "2026-05",
+    "erro": "Menu Finanças não encontrado.",
+    "coletado_em": "2026-05-01T07:17:36.961045"
+  }
+]
