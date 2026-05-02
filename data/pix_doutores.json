@@ -16579,13 +16579,13 @@
     "origem": "Recebido de Vanusa Meireles Vedoi (L) (6111) (Parcela 3/48) Pago por: O paciente",
     "valor": 125.0,
     "valor_com_descontos": 125.0,
-    "credito_antes": 6660.0,
+    "credito_antes": 6325.0,
     "valor_descontado": 125.0,
-    "credito_depois": 6535.0,
-    "utilizado_depois": 1465.0,
+    "credito_depois": 6200.0,
+    "utilizado_depois": 1800.0,
     "pendente": 0.0,
     "linha_original": "02/05/2026\tPix Doutores\nCristian Pressi\tRecebido de Vanusa Meireles Vedoi (L) (6111) (Parcela 3/48) Pago por: O paciente\t125,00 C\t125,00 C\t1\t\t\t275,00\t275,00",
-    "coletado_em": "2026-05-02T17:33:41.199528"
+    "coletado_em": "2026-05-02T18:37:04.240640"
   },
   {
     "unidade": "Soledade",
@@ -16602,13 +16602,13 @@
     "origem": "Recebido de Rita de Cassia dos Santos Brito (L) (11546) (Parcela 15/48) Pago por: O paciente",
     "valor": 105.0,
     "valor_com_descontos": 105.0,
-    "credito_antes": 6535.0,
+    "credito_antes": 6200.0,
     "valor_descontado": 105.0,
-    "credito_depois": 6430.0,
-    "utilizado_depois": 1570.0,
+    "credito_depois": 6095.0,
+    "utilizado_depois": 1905.0,
     "pendente": 0.0,
     "linha_original": "02/05/2026\tPix Doutores\nCristian Pressi\tRecebido de Rita de Cassia dos Santos Brito (L) (11546) (Parcela 15/48) Pago por: O paciente\t105,00 C\t105,00 C\t1\t\t\t545,00\t545,00",
-    "coletado_em": "2026-05-02T17:33:41.236569"
+    "coletado_em": "2026-05-02T18:37:04.278603"
   },
   {
     "unidade": "Soledade",
@@ -16625,12 +16625,12 @@
     "origem": "Recebido de Josibel da Silva (M) (4755) (Parcela 22/48) Pago por: O paciente",
     "valor": 105.0,
     "valor_com_descontos": 105.0,
-    "credito_antes": 6430.0,
+    "credito_antes": 6095.0,
     "valor_descontado": 105.0,
-    "credito_depois": 6325.0,
-    "utilizado_depois": 1675.0,
+    "credito_depois": 5990.0,
+    "utilizado_depois": 2010.0,
     "pendente": 0.0,
     "linha_original": "02/05/2026\tPix Doutores\nCristian Pressi\tRecebido de Josibel da Silva (M) (4755) (Parcela 22/48) Pago por: O paciente\t105,00 C\t105,00 C\t1\t\t\t749,00\t749,00",
-    "coletado_em": "2026-05-02T17:33:41.261732"
+    "coletado_em": "2026-05-02T18:37:04.305173"
   }
 ]
