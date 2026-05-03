@@ -266,11 +266,11 @@
   },
   "2026-05": {
     "competencia": "2026-05",
-    "gerado_em": "2026-05-03T17:12:29.941333",
+    "gerado_em": "2026-05-03T18:09:52.792551",
     "quantidade_total": 3,
     "valor_total": 335.0,
-    "valor_total_descontado": 335.0,
-    "valor_total_pendente": 0.0,
+    "valor_total_descontado": 295.0,
+    "valor_total_pendente": 40.0,
     "por_unidade": [
       {
         "unidade": "Soledade",
@@ -282,7 +282,7 @@
       {
         "doutor": "Cristian Pressi",
         "quantidade": 3,
-        "valor_descontado": 335.0
+        "valor_descontado": 295.0
       }
     ]
   }
