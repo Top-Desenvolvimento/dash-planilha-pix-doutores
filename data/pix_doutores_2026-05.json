@@ -14,13 +14,13 @@
     "origem": "Recebido de Vanusa Meireles Vedoi (L) (6111) (Parcela 3/48) Pago por: O paciente",
     "valor": 125.0,
     "valor_com_descontos": 125.0,
-    "credito_antes": 965.0,
+    "credito_antes": 630.0,
     "valor_descontado": 125.0,
-    "credito_depois": 840.0,
-    "utilizado_depois": 7160.0,
+    "credito_depois": 505.0,
+    "utilizado_depois": 7495.0,
     "pendente": 0.0,
     "linha_original": "02/05/2026\tPix Doutores\nCristian Pressi\tRecebido de Vanusa Meireles Vedoi (L) (6111) (Parcela 3/48) Pago por: O paciente\t125,00 C\t125,00 C\t1\t\t\t275,00\t275,00",
-    "coletado_em": "2026-05-03T16:04:15.233073"
+    "coletado_em": "2026-05-03T17:08:37.779229"
   },
   {
     "unidade": "Soledade",
@@ -37,13 +37,13 @@
     "origem": "Recebido de Rita de Cassia dos Santos Brito (L) (11546) (Parcela 15/48) Pago por: O paciente",
     "valor": 105.0,
     "valor_com_descontos": 105.0,
-    "credito_antes": 840.0,
+    "credito_antes": 505.0,
     "valor_descontado": 105.0,
-    "credito_depois": 735.0,
-    "utilizado_depois": 7265.0,
+    "credito_depois": 400.0,
+    "utilizado_depois": 7600.0,
     "pendente": 0.0,
     "linha_original": "02/05/2026\tPix Doutores\nCristian Pressi\tRecebido de Rita de Cassia dos Santos Brito (L) (11546) (Parcela 15/48) Pago por: O paciente\t105,00 C\t105,00 C\t1\t\t\t545,00\t545,00",
-    "coletado_em": "2026-05-03T16:04:15.271241"
+    "coletado_em": "2026-05-03T17:08:37.818181"
   },
   {
     "unidade": "Soledade",
@@ -60,12 +60,12 @@
     "origem": "Recebido de Josibel da Silva (M) (4755) (Parcela 22/48) Pago por: O paciente",
     "valor": 105.0,
     "valor_com_descontos": 105.0,
-    "credito_antes": 735.0,
+    "credito_antes": 400.0,
     "valor_descontado": 105.0,
-    "credito_depois": 630.0,
-    "utilizado_depois": 7370.0,
+    "credito_depois": 295.0,
+    "utilizado_depois": 7705.0,
     "pendente": 0.0,
     "linha_original": "02/05/2026\tPix Doutores\nCristian Pressi\tRecebido de Josibel da Silva (M) (4755) (Parcela 22/48) Pago por: O paciente\t105,00 C\t105,00 C\t1\t\t\t749,00\t749,00",
-    "coletado_em": "2026-05-03T16:04:15.296837"
+    "coletado_em": "2026-05-03T17:08:37.844310"
   }
 ]
