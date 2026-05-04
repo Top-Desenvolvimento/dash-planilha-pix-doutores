@@ -1,5 +1,51 @@
 [
   {
+    "unidade": "Caxias",
+    "data": "04/05/2026",
+    "competencia": "2026-05",
+    "metodo_pagamento": "Pix Doutores",
+    "responsavel_fiscal_lido": "Franciele Pedrotti",
+    "doutor_id": "16",
+    "doutor_final": "Franciele Pedrotti",
+    "doutor_encontrado": true,
+    "paciente": "Recebido de Nicolly dos Santos Ferreira Pago por: Regiane dos Santos Ferreira",
+    "codigo_origem": "45045",
+    "parcela": "27/48",
+    "origem": "Recebido de Nicolly dos Santos Ferreira (45045) (Parcela 27/48) Pago por: Regiane dos Santos Ferreira",
+    "valor": 99.0,
+    "valor_com_descontos": 99.0,
+    "credito_antes": 10000.0,
+    "valor_descontado": 99.0,
+    "credito_depois": 9901.0,
+    "utilizado_depois": 99.0,
+    "pendente": 0.0,
+    "linha_original": "04/05/2026\tPix Doutores\nFranciele Pedrotti\tRecebido de Nicolly dos Santos Ferreira (45045) (Parcela 27/48) Pago por: Regiane dos Santos Ferreira\t99,00 C\t99,00 C\t1\t\t\t936,00\t917,67",
+    "coletado_em": "2026-05-04T15:20:52.025426"
+  },
+  {
+    "unidade": "Caxias",
+    "data": "04/05/2026",
+    "competencia": "2026-05",
+    "metodo_pagamento": "Pix Doutores",
+    "responsavel_fiscal_lido": "Franciele Pedrotti",
+    "doutor_id": "16",
+    "doutor_final": "Franciele Pedrotti",
+    "doutor_encontrado": true,
+    "paciente": "Recebido de Valentina Dos Santos Ferreira Pago por: Regiane dos Santos Ferreira",
+    "codigo_origem": "48131",
+    "parcela": "16/48",
+    "origem": "Recebido de Valentina Dos Santos Ferreira (48131) (Parcela 16/48) Pago por: Regiane dos Santos Ferreira",
+    "valor": 99.0,
+    "valor_com_descontos": 99.0,
+    "credito_antes": 9901.0,
+    "valor_descontado": 99.0,
+    "credito_depois": 9802.0,
+    "utilizado_depois": 198.0,
+    "pendente": 0.0,
+    "linha_original": "04/05/2026\tPix Doutores\nFranciele Pedrotti\tRecebido de Valentina Dos Santos Ferreira (48131) (Parcela 16/48) Pago por: Regiane dos Santos Ferreira\t99,00 C\t99,00 C\t1\t\t\t1.035,00\t1.016,67",
+    "coletado_em": "2026-05-04T15:20:52.037734"
+  },
+  {
     "unidade": "Soledade",
     "data": "02/05/2026",
     "competencia": "2026-05",
@@ -20,7 +66,7 @@
     "utilizado_depois": 8000.0,
     "pendente": 125.0,
     "linha_original": "02/05/2026\tPix Doutores\nCristian Pressi\tRecebido de Vanusa Meireles Vedoi (L) (6111) (Parcela 3/48) Pago por: O paciente\t125,00 C\t125,00 C\t1\t\t\t275,00\t275,00",
-    "coletado_em": "2026-05-04T13:10:02.145665"
+    "coletado_em": "2026-05-04T15:24:43.725338"
   },
   {
     "unidade": "Soledade",
@@ -43,7 +89,7 @@
     "utilizado_depois": 8000.0,
     "pendente": 105.0,
     "linha_original": "02/05/2026\tPix Doutores\nCristian Pressi\tRecebido de Rita de Cassia dos Santos Brito (L) (11546) (Parcela 15/48) Pago por: O paciente\t105,00 C\t105,00 C\t1\t\t\t545,00\t545,00",
-    "coletado_em": "2026-05-04T13:10:02.184912"
+    "coletado_em": "2026-05-04T15:24:43.761156"
   },
   {
     "unidade": "Soledade",
@@ -66,6 +112,6 @@
     "utilizado_depois": 8000.0,
     "pendente": 105.0,
     "linha_original": "02/05/2026\tPix Doutores\nCristian Pressi\tRecebido de Josibel da Silva (M) (4755) (Parcela 22/48) Pago por: O paciente\t105,00 C\t105,00 C\t1\t\t\t749,00\t749,00",
-    "coletado_em": "2026-05-04T13:10:02.211333"
+    "coletado_em": "2026-05-04T15:24:43.785863"
   }
 ]
