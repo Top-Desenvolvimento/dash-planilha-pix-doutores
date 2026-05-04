@@ -1,10 +1,10 @@
 {
   "competencia": "2026-05",
-  "gerado_em": "2026-05-04T17:18:28.298456",
-  "quantidade_total": 10,
-  "valor_total": 1126.0,
+  "gerado_em": "2026-05-04T19:06:04.804855",
+  "quantidade_total": 12,
+  "valor_total": 1336.0,
   "valor_total_descontado": 306.0,
-  "valor_total_pendente": 820.0,
+  "valor_total_pendente": 1030.0,
   "por_unidade": [
     {
       "unidade": "Caxias",
@@ -13,8 +13,8 @@
     },
     {
       "unidade": "Encantado",
-      "quantidade": 4,
-      "valor": 485.0
+      "quantidade": 6,
+      "valor": 695.0
     },
     {
       "unidade": "Soledade",
@@ -40,7 +40,7 @@
     },
     {
       "doutor": "Renata Protto",
-      "quantidade": 4,
+      "quantidade": 6,
       "valor_descontado": 0.0
     }
   ]
