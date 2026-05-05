@@ -374,8 +374,8 @@
       "doutor_id": "1",
       "doutor": "Adriele da Silva",
       "credito_inicial": 3000.0,
-      "utilizado": 0.0,
-      "credito_disponivel": 3000.0,
+      "utilizado": 158.0,
+      "credito_disponivel": 2842.0,
       "pix_key": ""
     },
     {
@@ -478,16 +478,16 @@
       "doutor_id": "15",
       "doutor": "Fernana Sozo",
       "credito_inicial": 1500.0,
-      "utilizado": 1478.0,
-      "credito_disponivel": 22.0,
+      "utilizado": 1500.0,
+      "credito_disponivel": 0.0,
       "pix_key": ""
     },
     {
       "doutor_id": "16",
       "doutor": "Franciele Pedrotti",
       "credito_inicial": 10000.0,
-      "utilizado": 9707.0,
-      "credito_disponivel": 293.0,
+      "utilizado": 10000.0,
+      "credito_disponivel": 0.0,
       "pix_key": ""
     },
     {
@@ -614,8 +614,8 @@
       "doutor_id": "30",
       "doutor": "Luiz Henrique",
       "credito_inicial": 2500.0,
-      "utilizado": 0.0,
-      "credito_disponivel": 2500.0,
+      "utilizado": 206.0,
+      "credito_disponivel": 2294.0,
       "pix_key": ""
     },
     {
@@ -726,8 +726,8 @@
       "doutor_id": "46",
       "doutor": "Thalia Vezzosi",
       "credito_inicial": 2500.0,
-      "utilizado": 0.0,
-      "credito_disponivel": 2500.0,
+      "utilizado": 206.0,
+      "credito_disponivel": 2294.0,
       "pix_key": ""
     },
     {
