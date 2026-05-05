@@ -1,10 +1,10 @@
 {
   "competencia": "2026-05",
-  "gerado_em": "2026-05-05T22:51:15.696961",
+  "gerado_em": "2026-05-05T23:44:29.019044",
   "quantidade_total": 65,
   "valor_total": 7916.0,
-  "valor_total_descontado": 1633.0,
-  "valor_total_pendente": 6283.0,
+  "valor_total_descontado": 563.0,
+  "valor_total_pendente": 7353.0,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -46,7 +46,7 @@
     {
       "doutor": "Adriele da Silva",
       "quantidade": 8,
-      "valor_descontado": 1070.0
+      "valor_descontado": 0.0
     },
     {
       "doutor": "Ana Cristina Corso",
