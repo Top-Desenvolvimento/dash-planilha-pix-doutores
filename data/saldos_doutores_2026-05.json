@@ -115,8 +115,8 @@
     "doutor_id": "16",
     "doutor": "Franciele Pedrotti",
     "credito_inicial": 10000.0,
-    "utilizado": 5816.0,
-    "credito_disponivel": 4184.0,
+    "utilizado": 6419.0,
+    "credito_disponivel": 3581.0,
     "pix_key": ""
   },
   {
@@ -283,8 +283,8 @@
     "doutor_id": "35",
     "doutor": "Naiane Pieta",
     "credito_inicial": 1000.0,
-    "utilizado": 840.0,
-    "credito_disponivel": 160.0,
+    "utilizado": 945.0,
+    "credito_disponivel": 55.0,
     "pix_key": ""
   },
   {
