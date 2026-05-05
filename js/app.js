@@ -1318,7 +1318,7 @@ byId("btnTabAdmin")?.addEventListener("click", async () => {
 byId("btnAdicionarDoutor")?.addEventListener("click", adicionarDoutor);
 
 byId("filtroMes")?.addEventListener("change", async () => {
-  preencherFiltroCidade();
+  preencherFiltro();
   preencherFiltroDoutor();
   await sincronizarSaldosAdminNoDashboard();
   atualizarDashboard();
@@ -1328,20 +1328,20 @@ byId("filtroMes")?.addEventListener("change", async () => {
   }
 });
 
-byId("filtroCidade")?.addEventListener("change", atualizarDashboard);
+byId("filtro")?.addEventListener("change", atualizarDashboard);
 byId("filtroDoutor")?.addEventListener("change", atualizarDashboard);
 
 byId("btnLimpar")?.addEventListener("click", async () => {
   const filtroMes = byId("filtroMes");
-  const filtroCidade = byId("filtroCidade");
+  const filtro = byId("filtro");
   const filtroDoutor = byId("filtroDoutor");
 
   if (filtroMes) filtroMes.value = dashboardData?.competencia_padrao || "2026-01";
 
-  preencherFiltroCidade();
+  preencherFiltro();
   preencherFiltroDoutor();
 
-  if (filtroCidade) filtroCidade.selectedIndex = 0;
+  if (filtro) filtro.selectedIndex = 0;
   if (filtroDoutor) filtroDoutor.selectedIndex = 0;
 
   await sincronizarSaldosAdminNoDashboard();
@@ -1385,6 +1385,42 @@ function tituloStatusCard(tipo) {
   return "Controlado";
 }
 
+function garantirFiltroMesAdmin() {
+  const adminView = byId("adminView");
+  if (!adminView || byId("filtroMesAdminBox")) return;
+
+  const box = document.createElement("div");
+  box.id = "filtroMesAdminBox";
+  box.className = "admin-extra-filter";
+  box.innerHTML = `
+    <label>Mês da edição / histórico das observações</label>
+    <select id="filtroMesAdmin"></select>
+  `;
+
+  adminView.insertBefore(box, adminView.firstElementChild.nextSibling);
+
+  const select = byId("filtroMesAdmin");
+  const meses = dashboardData?.meses_disponiveis || [];
+
+  select.innerHTML = meses
+    .map(mes => `<option value="${escapeHtml(mes)}">${escapeHtml(formatarCompetenciaLabel(mes))}</option>`)
+    .join("");
+
+  select.value = getCompetenciaAtual();
+
+  select.addEventListener("change", async () => {
+    const filtroMes = byId("filtroMes");
+    if (filtroMes) filtroMes.value = select.value;
+
+    cidadesAtuaisCompetencia = "";
+
+    preencherFiltroCidade();
+    preencherFiltroDoutor();
+    await sincronizarSaldosAdminNoDashboard();
+    await carregarDoutoresAdmin();
+  });
+}
+
 function garantirPainelStatusInicio() {
   const dashboardView = byId("dashboardView");
   if (!dashboardView) return null;
@@ -1398,33 +1434,18 @@ function garantirPainelStatusInicio() {
   painel.innerHTML = `
     <datalist id="listaCidadesAtuais"></datalist>
 
-    <div class="status-group">
-      <div class="status-group-header">
-        <div>
-          <h2>Doutores bloqueados</h2>
-          <span>Utilização igual ou acima de 100%</span>
-        </div>
-      </div>
+    <div class="status-group" id="grupoBloqueadosCards">
+      <div class="status-group-header"><h2>Doutores bloqueados</h2></div>
       <div class="doctor-card-grid" id="cardsBloqueados"></div>
     </div>
 
-    <div class="status-group">
-      <div class="status-group-header">
-        <div>
-          <h2>Doutores em atenção</h2>
-          <span>Utilização entre 50% e 99%</span>
-        </div>
-      </div>
+    <div class="status-group" id="grupoAtencaoCards">
+      <div class="status-group-header"><h2>Doutores em atenção</h2></div>
       <div class="doctor-card-grid" id="cardsAtencao"></div>
     </div>
 
-    <div class="status-group">
-      <div class="status-group-header">
-        <div>
-          <h2>Doutores controlados</h2>
-          <span>Utilização abaixo de 50%</span>
-        </div>
-      </div>
+    <div class="status-group" id="grupoControladosCards">
+      <div class="status-group-header"><h2>Doutores controlados</h2></div>
       <div class="doctor-card-grid" id="cardsControlados"></div>
     </div>
   `;
@@ -1437,8 +1458,7 @@ function preencherListaCidadesAtuais() {
   const lista = byId("listaCidadesAtuais");
   if (!lista || !dashboardData) return;
 
-  const competencia = getCompetenciaAtual();
-  const registros = getRegistrosCompetencia(competencia);
+  const registros = getRegistrosCompetencia(getCompetenciaAtual());
   const cidades = [...new Set(registros.map(r => r.unidade).filter(Boolean))].sort();
 
   lista.innerHTML = cidades
@@ -1448,8 +1468,7 @@ function preencherListaCidadesAtuais() {
 
 async function carregarCidadesAtuais(competencia) {
   try {
-    if (!competencia) return;
-    if (cidadesAtuaisCompetencia === competencia) return;
+    if (!competencia || cidadesAtuaisCompetencia === competencia) return;
 
     const client = validarSupabasePronto();
 
@@ -1461,7 +1480,6 @@ async function carregarCidadesAtuais(competencia) {
     if (error) throw error;
 
     cidadesAtuaisCache = {};
-
     for (const item of data || []) {
       cidadesAtuaisCache[item.doutor_nome_normalizado] = item.cidade_atual || "";
     }
@@ -1503,11 +1521,20 @@ async function salvarCidadeAtualDoutor(doutorNome, cidadeAtual) {
   }
 }
 
+function obterPixKeyDoDoutor(nomeDoutor) {
+  const competencia = getCompetenciaAtual();
+  const saldos = getSaldosCompetencia(competencia);
+  const chave = normalizarNome(nomeDoutor);
+  const item = saldos.find(s => normalizarNome(s.doutor) === chave);
+  return item?.pix_key || "";
+}
+
 function montarCardDoutorStatus(item) {
   const tipo = classificarCardDoutor(item);
   const saldoClasse = item.creditoDisponivel < 0 ? "negative" : "";
   const chave = normalizarNome(item.doutor);
   const cidadeAtual = cidadesAtuaisCache[chave] || "";
+  const pixKey = obterPixKeyDoDoutor(item.doutor);
 
   return `
     <div class="doctor-status-card ${tipo}">
@@ -1521,21 +1548,23 @@ function montarCardDoutorStatus(item) {
           <small>Crédito inicial</small>
           <strong>${formatarMoeda(item.creditoInicial)}</strong>
         </div>
-
         <div class="doctor-card-metric">
           <small>Utilizado</small>
           <strong>${formatarMoeda(item.utilizado)}</strong>
         </div>
-
         <div class="doctor-card-metric">
           <small>Saldo</small>
           <strong class="${saldoClasse}">${formatarMoeda(item.creditoDisponivel)}</strong>
         </div>
-
         <div class="doctor-card-metric">
           <small>% utilizado</small>
           <strong>${item.percentual.toFixed(1)}%</strong>
         </div>
+      </div>
+
+      <div class="doctor-card-pix">
+        <small>Chave PIX</small>
+        <strong>${pixKey ? escapeHtml(pixKey) : "Não informada"}</strong>
       </div>
 
       <div class="doctor-city-box">
@@ -1562,27 +1591,17 @@ function renderizarCardsStatusInicio(saldos) {
   const atencao = todos.filter(item => item.percentual >= 50 && item.percentual < 100);
   const controlados = todos.filter(item => item.percentual < 50);
 
-  const elBloqueados = byId("cardsBloqueados");
-  const elAtencao = byId("cardsAtencao");
-  const elControlados = byId("cardsControlados");
+  byId("cardsBloqueados").innerHTML = bloqueados.length
+    ? bloqueados.map(montarCardDoutorStatus).join("")
+    : `<div class="empty-status-card">Sem doutores bloqueados.</div>`;
 
-  if (elBloqueados) {
-    elBloqueados.innerHTML = bloqueados.length
-      ? bloqueados.map(montarCardDoutorStatus).join("")
-      : `<div class="empty-status-card">Sem doutores bloqueados.</div>`;
-  }
+  byId("cardsAtencao").innerHTML = atencao.length
+    ? atencao.map(montarCardDoutorStatus).join("")
+    : `<div class="empty-status-card">Sem doutores em atenção.</div>`;
 
-  if (elAtencao) {
-    elAtencao.innerHTML = atencao.length
-      ? atencao.map(montarCardDoutorStatus).join("")
-      : `<div class="empty-status-card">Sem doutores em atenção.</div>`;
-  }
-
-  if (elControlados) {
-    elControlados.innerHTML = controlados.length
-      ? controlados.map(montarCardDoutorStatus).join("")
-      : `<div class="empty-status-card">Sem doutores controlados.</div>`;
-  }
+  byId("cardsControlados").innerHTML = controlados.length
+    ? controlados.map(montarCardDoutorStatus).join("")
+    : `<div class="empty-status-card">Sem doutores controlados.</div>`;
 }
 
 async function atualizarPainelInicioBonito() {
@@ -1592,13 +1611,10 @@ async function atualizarPainelInicioBonito() {
 
   await carregarCidadesAtuais(competencia);
 
-  const saldos = getSaldosFiltrados();
-  const registros = getRegistrosFiltrados();
-
   document.body.classList.add("modo-inicio-limpo");
 
-  renderizarCardsStatusInicio(saldos);
-  renderTabelaPixMes(registros);
+  renderizarCardsStatusInicio(getSaldosFiltrados());
+  renderTabelaPixMes(getRegistrosFiltrados());
 }
 
 mostrarDashboard = function () {
@@ -1616,6 +1632,12 @@ mostrarDashboard = function () {
 mostrarAdmin = function () {
   mostrarAdminOriginalStatusCards();
   document.body.classList.remove("modo-inicio-limpo");
+
+  if (dashboardData) {
+    garantirFiltroMesAdmin();
+    const adminMes = byId("filtroMesAdmin");
+    if (adminMes) adminMes.value = getCompetenciaAtual();
+  }
 };
 
 atualizarDashboard = async function () {
@@ -1634,6 +1656,9 @@ byId("filtroMes")?.addEventListener("change", async () => {
 
   cidadesAtuaisCompetencia = "";
 
+  const adminMes = byId("filtroMesAdmin");
+  if (adminMes) adminMes.value = getCompetenciaAtual();
+
   preencherFiltroCidade();
   preencherFiltroDoutor();
 
@@ -1645,12 +1670,7 @@ byId("filtroMes")?.addEventListener("change", async () => {
   }
 });
 
-byId("filtroCidade")?.addEventListener("change", async () => {
-  await atualizarPainelInicioBonito();
-});
-
-byId("filtroDoutor")?.addEventListener("change", async () => {
-  await atualizarPainelInicioBonito();
-});
+byId("filtroCidade")?.addEventListener("change", atualizarPainelInicioBonito);
+byId("filtroDoutor")?.addEventListener("change", atualizarPainelInicioBonito);
 
 window.salvarCidadeAtualDoutor = salvarCidadeAtualDoutor;
