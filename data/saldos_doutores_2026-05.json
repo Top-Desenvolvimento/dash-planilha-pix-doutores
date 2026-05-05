@@ -35,8 +35,8 @@
     "doutor_id": "5",
     "doutor": "Ana Cristina Corso",
     "credito_inicial": 1500.0,
-    "utilizado": 948.0,
-    "credito_disponivel": 552.0,
+    "utilizado": 1156.0,
+    "credito_disponivel": 344.0,
     "pix_key": ""
   },
   {
@@ -115,8 +115,8 @@
     "doutor_id": "16",
     "doutor": "Franciele Pedrotti",
     "credito_inicial": 10000.0,
-    "utilizado": 2801.0,
-    "credito_disponivel": 7199.0,
+    "utilizado": 3404.0,
+    "credito_disponivel": 6596.0,
     "pix_key": ""
   },
   {
@@ -283,8 +283,8 @@
     "doutor_id": "35",
     "doutor": "Naiane Pieta",
     "credito_inicial": 1000.0,
-    "utilizado": 315.0,
-    "credito_disponivel": 685.0,
+    "utilizado": 420.0,
+    "credito_disponivel": 580.0,
     "pix_key": ""
   },
   {
