@@ -107,16 +107,16 @@
     "doutor_id": "15",
     "doutor": "Fernana Sozo",
     "credito_inicial": 1500.0,
-    "utilizado": 1071.0,
-    "credito_disponivel": 429.0,
+    "utilizado": 1478.0,
+    "credito_disponivel": 22.0,
     "pix_key": ""
   },
   {
     "doutor_id": "16",
     "doutor": "Franciele Pedrotti",
     "credito_inicial": 10000.0,
-    "utilizado": 8885.0,
-    "credito_disponivel": 1115.0,
+    "utilizado": 9707.0,
+    "credito_disponivel": 293.0,
     "pix_key": ""
   },
   {
