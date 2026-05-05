@@ -478,16 +478,16 @@
       "doutor_id": "15",
       "doutor": "Fernana Sozo",
       "credito_inicial": 1500.0,
-      "utilizado": 0.0,
-      "credito_disponivel": 1500.0,
+      "utilizado": 257.0,
+      "credito_disponivel": 1243.0,
       "pix_key": ""
     },
     {
       "doutor_id": "16",
       "doutor": "Franciele Pedrotti",
       "credito_inicial": 10000.0,
-      "utilizado": 6419.0,
-      "credito_disponivel": 3581.0,
+      "utilizado": 7241.0,
+      "credito_disponivel": 2759.0,
       "pix_key": ""
     },
     {
@@ -654,8 +654,8 @@
       "doutor_id": "35",
       "doutor": "Naiane Pieta",
       "credito_inicial": 1000.0,
-      "utilizado": 945.0,
-      "credito_disponivel": 55.0,
+      "utilizado": 1000.0,
+      "credito_disponivel": 0.0,
       "pix_key": ""
     },
     {

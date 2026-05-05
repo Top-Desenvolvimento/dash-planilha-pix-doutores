@@ -1,10 +1,10 @@
 {
   "competencia": "2026-05",
-  "gerado_em": "2026-05-05T12:19:45.520757",
-  "quantidade_total": 25,
-  "valor_total": 2820.0,
-  "valor_total_descontado": 708.0,
-  "valor_total_pendente": 2112.0,
+  "gerado_em": "2026-05-05T14:36:08.345237",
+  "quantidade_total": 35,
+  "valor_total": 4120.0,
+  "valor_total_descontado": 1134.0,
+  "valor_total_pendente": 2986.0,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,8 +13,8 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 8,
-      "valor": 811.0
+      "quantidade": 10,
+      "valor": 1030.0
     },
     {
       "unidade": "Encantado",
@@ -22,9 +22,14 @@
       "valor": 1040.0
     },
     {
+      "unidade": "FloresDaCunha",
+      "quantidade": 1,
+      "valor": 257.0
+    },
+    {
       "unidade": "Soledade",
-      "quantidade": 7,
-      "valor": 864.0
+      "quantidade": 14,
+      "valor": 1688.0
     }
   ],
   "por_doutor": [
@@ -35,18 +40,23 @@
     },
     {
       "doutor": "Cristian Pressi",
-      "quantidade": 7,
+      "quantidade": 14,
       "valor_descontado": 0.0
     },
     {
+      "doutor": "Fernana Sozo",
+      "quantidade": 1,
+      "valor_descontado": 257.0
+    },
+    {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 6,
-      "valor_descontado": 603.0
+      "quantidade": 8,
+      "valor_descontado": 822.0
     },
     {
       "doutor": "Naiane Pieta",
       "quantidade": 1,
-      "valor_descontado": 105.0
+      "valor_descontado": 55.0
     },
     {
       "doutor": "Renata Protto",
