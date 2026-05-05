@@ -266,11 +266,11 @@
   },
   "2026-05": {
     "competencia": "2026-05",
-    "gerado_em": "2026-05-05T07:14:14.591460",
+    "gerado_em": "2026-05-05T09:28:58.264837",
     "quantidade_total": 21,
     "valor_total": 2291.0,
-    "valor_total_descontado": 844.0,
-    "valor_total_pendente": 1447.0,
+    "valor_total_descontado": 708.0,
+    "valor_total_pendente": 1583.0,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -297,7 +297,7 @@
       {
         "doutor": "Ana Cristina Corso",
         "quantidade": 2,
-        "valor_descontado": 136.0
+        "valor_descontado": 0.0
       },
       {
         "doutor": "Cristian Pressi",
