@@ -875,3 +875,14 @@ body.modo-inicio-limpo #grupoControladosCards .status-group-header {
   color: #aebbe0;
   padding: 14px;
 }
+.linha-inativo {
+  background: rgba(255, 82, 113, 0.12) !important;
+  border-left: 4px solid #ff5271;
+  opacity: 0.85;
+}
+
+.linha-inativo input,
+.linha-inativo select {
+  background: rgba(255, 82, 113, 0.08) !important;
+  color: #ffb3c1 !important;
+}
