@@ -1,10 +1,10 @@
 {
   "competencia": "2026-05",
-  "gerado_em": "2026-05-05T20:57:18.435467",
-  "quantidade_total": 51,
-  "valor_total": 6309.0,
-  "valor_total_descontado": 1057.0,
-  "valor_total_pendente": 5252.0,
+  "gerado_em": "2026-05-05T21:56:40.113444",
+  "quantidade_total": 62,
+  "valor_total": 7607.0,
+  "valor_total_descontado": 1604.0,
+  "valor_total_pendente": 6003.0,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,8 +13,8 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 10,
-      "valor": 1030.0
+      "quantidade": 11,
+      "valor": 1129.0
     },
     {
       "unidade": "Encantado",
@@ -23,8 +23,8 @@
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 5,
-      "valor": 937.0
+      "quantidade": 7,
+      "valor": 1247.0
     },
     {
       "unidade": "FloresDaCunha",
@@ -33,20 +33,20 @@
     },
     {
       "unidade": "Garibaldi",
-      "quantidade": 1,
-      "valor": 95.0
+      "quantidade": 3,
+      "valor": 295.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 16,
-      "valor": 1876.0
+      "quantidade": 22,
+      "valor": 2565.0
     }
   ],
   "por_doutor": [
     {
       "doutor": "Adriele da Silva",
-      "quantidade": 4,
-      "valor_descontado": 731.0
+      "quantidade": 6,
+      "valor_descontado": 1041.0
     },
     {
       "doutor": "Ana Cristina Corso",
@@ -55,7 +55,7 @@
     },
     {
       "doutor": "Cristian Pressi",
-      "quantidade": 16,
+      "quantidade": 21,
       "valor_descontado": 0.0
     },
     {
@@ -65,8 +65,13 @@
     },
     {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 8,
+      "quantidade": 9,
       "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Gabrielli Fabonato",
+      "quantidade": 1,
+      "valor_descontado": 237.0
     },
     {
       "doutor": "Naiane Pieta",
@@ -90,7 +95,7 @@
     },
     {
       "doutor": "TOP",
-      "quantidade": 1,
+      "quantidade": 3,
       "valor_descontado": 0.0
     }
   ]
