@@ -1,10 +1,10 @@
 {
   "competencia": "2026-05",
-  "gerado_em": "2026-05-05T19:52:23.492472",
-  "quantidade_total": 46,
-  "valor_total": 5624.0,
-  "valor_total_descontado": 885.0,
-  "valor_total_pendente": 4739.0,
+  "gerado_em": "2026-05-05T20:57:18.435467",
+  "quantidade_total": 51,
+  "valor_total": 6309.0,
+  "valor_total_descontado": 1057.0,
+  "valor_total_pendente": 5252.0,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -23,13 +23,13 @@
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 3,
-      "valor": 570.0
+      "quantidade": 5,
+      "valor": 937.0
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 7,
-      "valor": 1007.0
+      "quantidade": 9,
+      "valor": 1226.0
     },
     {
       "unidade": "Garibaldi",
@@ -38,15 +38,15 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 15,
-      "valor": 1777.0
+      "quantidade": 16,
+      "valor": 1876.0
     }
   ],
   "por_doutor": [
     {
       "doutor": "Adriele da Silva",
-      "quantidade": 1,
-      "valor_descontado": 158.0
+      "quantidade": 4,
+      "valor_descontado": 731.0
     },
     {
       "doutor": "Ana Cristina Corso",
@@ -55,23 +55,18 @@
     },
     {
       "doutor": "Cristian Pressi",
-      "quantidade": 15,
+      "quantidade": 16,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Fernana Sozo",
-      "quantidade": 7,
-      "valor_descontado": 22.0
+      "quantidade": 8,
+      "valor_descontado": 0.0
     },
     {
       "doutor": "Franciele Pedrotti",
       "quantidade": 8,
-      "valor_descontado": 293.0
-    },
-    {
-      "doutor": "Luiz Henrique",
-      "quantidade": 1,
-      "valor_descontado": 206.0
+      "valor_descontado": 0.0
     },
     {
       "doutor": "Naiane Pieta",
@@ -82,6 +77,11 @@
       "doutor": "Renata Protto",
       "quantidade": 9,
       "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Tamara Macanan",
+      "quantidade": 1,
+      "valor_descontado": 120.0
     },
     {
       "doutor": "Thalia Vezzosi",
