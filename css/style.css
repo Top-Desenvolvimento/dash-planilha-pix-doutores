@@ -686,3 +686,192 @@ body.modo-inicio-limpo #secaoControlados {
     grid-template-columns: 1fr;
   }
 }
+body.modo-inicio-limpo #tituloDashboard,
+body.modo-inicio-limpo #subtituloDashboard,
+body.modo-inicio-limpo #badgeCompetencia,
+body.modo-inicio-limpo #badgeArquivo,
+body.modo-inicio-limpo #badgeUsuario,
+body.modo-inicio-limpo #secaoResumoRapido,
+body.modo-inicio-limpo #secaoTodos,
+body.modo-inicio-limpo #secaoBloqueados,
+body.modo-inicio-limpo #secaoAtencao,
+body.modo-inicio-limpo #secaoControlados,
+body.modo-inicio-limpo #grupoBloqueadosCards .status-group-header,
+body.modo-inicio-limpo #grupoAtencaoCards .status-group-header,
+body.modo-inicio-limpo #grupoControladosCards .status-group-header {
+  display: none !important;
+}
+
+.status-dashboard-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.status-group {
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+
+.doctor-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  gap: 14px;
+}
+
+.doctor-status-card {
+  border-radius: 18px;
+  padding: 16px;
+  background: rgba(13, 28, 58, 0.92);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.22);
+}
+
+.doctor-status-card.bloqueado {
+  border-color: rgba(255,82,113,.85);
+  animation: piscarBloqueado 1.1s infinite;
+}
+
+.doctor-status-card.atencao {
+  border-color: rgba(255,202,87,.85);
+}
+
+.doctor-status-card.controlado {
+  border-color: rgba(34,211,153,.65);
+}
+
+@keyframes piscarBloqueado {
+  0%,100% { box-shadow: 0 0 16px rgba(255,82,113,.25); }
+  50% { box-shadow: 0 0 34px rgba(255,82,113,.70); }
+}
+
+.doctor-card-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.doctor-card-name {
+  font-size: 16px;
+  font-weight: 900;
+  color: #fff;
+}
+
+.doctor-card-status {
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.doctor-card-status.bloqueado {
+  background: rgba(255,82,113,.22);
+  color: #ff9bad;
+}
+
+.doctor-card-status.atencao {
+  background: rgba(255,202,87,.18);
+  color: #ffdc7d;
+}
+
+.doctor-card-status.controlado {
+  background: rgba(34,211,153,.16);
+  color: #55e6b7;
+}
+
+.doctor-card-values {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 10px;
+}
+
+.doctor-card-metric {
+  background: rgba(255,255,255,.055);
+  border-radius: 14px;
+  padding: 10px;
+}
+
+.doctor-card-metric small {
+  display: block;
+  color: #aebbe0;
+  font-size: 11px;
+  margin-bottom: 5px;
+}
+
+.doctor-card-metric strong {
+  color: #fff;
+  font-size: 15px;
+}
+
+.doctor-card-metric .negative {
+  color: #ff7f99;
+}
+
+.doctor-card-pix {
+  margin-top: 12px;
+  background: rgba(255,255,255,.06);
+  border-radius: 14px;
+  padding: 10px;
+}
+
+.doctor-card-pix small {
+  display: block;
+  color: #aebbe0;
+  font-size: 11px;
+  margin-bottom: 5px;
+}
+
+.doctor-card-pix strong {
+  color: #fff;
+  word-break: break-all;
+}
+
+.doctor-city-box {
+  margin-top: 12px;
+}
+
+.doctor-city-box label {
+  display: block;
+  font-size: 11px;
+  color: #c8d3ee;
+  margin-bottom: 6px;
+  font-weight: 800;
+}
+
+.doctor-city-input {
+  width: 100%;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.09);
+  color: #fff;
+  border-radius: 12px;
+  padding: 10px 12px;
+}
+
+.admin-extra-filter {
+  margin: 14px 0 20px;
+  background: rgba(28,43,78,.82);
+  border: 1px solid rgba(118,145,220,.22);
+  border-radius: 18px;
+  padding: 16px;
+  max-width: 360px;
+}
+
+.admin-extra-filter label {
+  display: block;
+  color: #c8d3ee;
+  margin-bottom: 8px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.admin-extra-filter select {
+  width: 100%;
+}
+
+.empty-status-card {
+  color: #aebbe0;
+  padding: 14px;
+}
