@@ -266,11 +266,11 @@
   },
   "2026-05": {
     "competencia": "2026-05",
-    "gerado_em": "2026-05-06T12:11:01.661089",
-    "quantidade_total": 65,
-    "valor_total": 7916.0,
-    "valor_total_descontado": 563.0,
-    "valor_total_pendente": 7353.0,
+    "gerado_em": "2026-05-06T13:31:19.112155",
+    "quantidade_total": 69,
+    "valor_total": 8451.0,
+    "valor_total_descontado": 758.0,
+    "valor_total_pendente": 7693.0,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -304,8 +304,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 23,
-        "valor": 2664.0
+        "quantidade": 27,
+        "valor": 3199.0
       }
     ],
     "por_doutor": [
@@ -321,7 +321,7 @@
       },
       {
         "doutor": "Cristian Pressi",
-        "quantidade": 22,
+        "quantidade": 25,
         "valor_descontado": 0.0
       },
       {
@@ -336,8 +336,8 @@
       },
       {
         "doutor": "Gabrielli Fabonato",
-        "quantidade": 1,
-        "valor_descontado": 237.0
+        "quantidade": 2,
+        "valor_descontado": 432.0
       },
       {
         "doutor": "Naiane Pieta",
