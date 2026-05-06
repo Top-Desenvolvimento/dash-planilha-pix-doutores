@@ -1,10 +1,10 @@
 {
   "competencia": "2026-05",
-  "gerado_em": "2026-05-06T22:21:59.945736",
-  "quantidade_total": 97,
-  "valor_total": 11972.5,
-  "valor_total_descontado": 1674.0,
-  "valor_total_pendente": 10298.5,
+  "gerado_em": "2026-05-06T23:18:51.784159",
+  "quantidade_total": 103,
+  "valor_total": 12853.5,
+  "valor_total_descontado": 1569.0,
+  "valor_total_pendente": 11284.5,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -23,8 +23,8 @@
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 10,
-      "valor": 1714.0
+      "quantidade": 11,
+      "valor": 1879.0
     },
     {
       "unidade": "FloresDaCunha",
@@ -43,14 +43,14 @@
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 1,
-      "valor": 158.0
+      "quantidade": 6,
+      "valor": 874.0
     }
   ],
   "por_doutor": [
     {
       "doutor": "Adriele da Silva",
-      "quantidade": 9,
+      "quantidade": 10,
       "valor_descontado": 0.0
     },
     {
@@ -65,8 +65,8 @@
     },
     {
       "doutor": "Evalda Baldissera",
-      "quantidade": 1,
-      "valor_descontado": 158.0
+      "quantidade": 6,
+      "valor_descontado": 874.0
     },
     {
       "doutor": "Fernana Sozo",
@@ -101,7 +101,7 @@
     {
       "doutor": "Sofie Owens",
       "quantidade": 9,
-      "valor_descontado": 990.0
+      "valor_descontado": 169.0
     },
     {
       "doutor": "Tamara Macanan",
