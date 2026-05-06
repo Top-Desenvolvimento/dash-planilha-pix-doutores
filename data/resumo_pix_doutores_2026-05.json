@@ -1,10 +1,10 @@
 {
   "competencia": "2026-05",
-  "gerado_em": "2026-05-06T14:24:31.661832",
+  "gerado_em": "2026-05-06T14:51:56.406465",
   "quantidade_total": 67,
   "valor_total": 8241.0,
-  "valor_total_descontado": 496.0,
-  "valor_total_pendente": 7745.0,
+  "valor_total_descontado": 120.0,
+  "valor_total_pendente": 8121.0,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -66,7 +66,7 @@
     {
       "doutor": "Gabrielli Fabonato",
       "quantidade": 2,
-      "valor_descontado": 376.0
+      "valor_descontado": 0.0
     },
     {
       "doutor": "Naiane Pieta",
