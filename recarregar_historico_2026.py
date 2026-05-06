@@ -10,6 +10,7 @@ ANO = 2026
 
 def rodar(comando: list[str], env_extra: dict[str, str] | None = None) -> None:
     env = os.environ.copy()
+
     if env_extra:
         env.update(env_extra)
 
@@ -38,17 +39,23 @@ def main() -> None:
         print("[INFO] Nenhum mês anterior para recarregar.")
         return
 
-    print(f"[INFO] Meses que serão recarregados: {', '.join(meses)}")
+    print(f"[INFO] Meses anteriores que serão recarregados: {', '.join(meses)}")
 
     for competencia in meses:
-        print(f"\n[INFO] Recarregando competência {competencia}")
-        rodar(["python", "coletor_pix.py"], {"COMPETENCIA": competencia})
+        print(f"\n[INFO] Recarregando competência: {competencia}")
+        rodar(
+            ["python", "coletor_pix.py"],
+            {
+                "COMPETENCIA": competencia,
+                "MODO_COLETA": "rapido",
+            },
+        )
 
     print("\n[INFO] Regenerando dashboard")
     rodar(["python", "generate_data.py"])
     rodar(["python", "generate_dashboard.py"])
 
-    print("[OK] Histórico recarregado com sucesso.")
+    print("[OK] Histórico de meses anteriores recarregado com sucesso.")
 
 
 if __name__ == "__main__":
