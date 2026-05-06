@@ -266,11 +266,11 @@
   },
   "2026-05": {
     "competencia": "2026-05",
-    "gerado_em": "2026-05-06T18:07:42.419864",
-    "quantidade_total": 80,
-    "valor_total": 9736.0,
-    "valor_total_descontado": 808.0,
-    "valor_total_pendente": 8928.0,
+    "gerado_em": "2026-05-06T20:12:47.514148",
+    "quantidade_total": 87,
+    "valor_total": 10647.0,
+    "valor_total_descontado": 1163.0,
+    "valor_total_pendente": 9484.0,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -284,13 +284,13 @@
       },
       {
         "unidade": "Encantado",
-        "quantidade": 12,
-        "valor": 1350.0
+        "quantidade": 15,
+        "valor": 1645.0
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 9,
-        "valor": 1457.0
+        "quantidade": 10,
+        "valor": 1714.0
       },
       {
         "unidade": "FloresDaCunha",
@@ -299,13 +299,13 @@
       },
       {
         "unidade": "Garibaldi",
-        "quantidade": 6,
-        "valor": 530.0
+        "quantidade": 7,
+        "valor": 685.0
       },
       {
         "unidade": "Soledade",
-        "quantidade": 28,
-        "valor": 3284.0
+        "quantidade": 30,
+        "valor": 3488.0
       },
       {
         "unidade": "Veranopolis",
@@ -316,7 +316,7 @@
     "por_doutor": [
       {
         "doutor": "Adriele da Silva",
-        "quantidade": 8,
+        "quantidade": 9,
         "valor_descontado": 0.0
       },
       {
@@ -326,7 +326,7 @@
       },
       {
         "doutor": "Cristian Pressi",
-        "quantidade": 26,
+        "quantidade": 28,
         "valor_descontado": 0.0
       },
       {
@@ -356,13 +356,13 @@
       },
       {
         "doutor": "Renata Protto",
-        "quantidade": 12,
+        "quantidade": 13,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Sofie Owens",
-        "quantidade": 6,
-        "valor_descontado": 530.0
+        "quantidade": 7,
+        "valor_descontado": 685.0
       },
       {
         "doutor": "Tamara Macanan",
@@ -373,6 +373,11 @@
         "doutor": "Thalia Vezzosi",
         "quantidade": 1,
         "valor_descontado": 0.0
+      },
+      {
+        "doutor": "Thiany Cristofoli",
+        "quantidade": 2,
+        "valor_descontado": 200.0
       }
     ]
   },
