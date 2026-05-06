@@ -1,10 +1,10 @@
 {
   "competencia": "2026-05",
-  "gerado_em": "2026-05-06T16:30:36.193939",
-  "quantidade_total": 71,
-  "valor_total": 8596.0,
-  "valor_total_descontado": 355.0,
-  "valor_total_pendente": 8241.0,
+  "gerado_em": "2026-05-06T18:07:42.419864",
+  "quantidade_total": 80,
+  "valor_total": 9736.0,
+  "valor_total_descontado": 808.0,
+  "valor_total_pendente": 8928.0,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,13 +13,13 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 11,
-      "valor": 1129.0
+      "quantidade": 14,
+      "valor": 1626.0
     },
     {
       "unidade": "Encantado",
-      "quantidade": 10,
-      "valor": 1160.0
+      "quantidade": 12,
+      "valor": 1350.0
     },
     {
       "unidade": "Farroupilha",
@@ -33,13 +33,18 @@
     },
     {
       "unidade": "Garibaldi",
-      "quantidade": 3,
-      "valor": 235.0
+      "quantidade": 6,
+      "valor": 530.0
     },
     {
       "unidade": "Soledade",
       "quantidade": 28,
       "valor": 3284.0
+    },
+    {
+      "unidade": "Veranopolis",
+      "quantidade": 1,
+      "valor": 158.0
     }
   ],
   "por_doutor": [
@@ -59,13 +64,18 @@
       "valor_descontado": 0.0
     },
     {
+      "doutor": "Evalda Baldissera",
+      "quantidade": 1,
+      "valor_descontado": 158.0
+    },
+    {
       "doutor": "Fernana Sozo",
       "quantidade": 8,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 9,
+      "quantidade": 12,
       "valor_descontado": 0.0
     },
     {
@@ -80,13 +90,13 @@
     },
     {
       "doutor": "Renata Protto",
-      "quantidade": 10,
+      "quantidade": 12,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Sofie Owens",
-      "quantidade": 3,
-      "valor_descontado": 235.0
+      "quantidade": 6,
+      "valor_descontado": 530.0
     },
     {
       "doutor": "Tamara Macanan",
