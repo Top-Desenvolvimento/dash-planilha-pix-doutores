@@ -84,6 +84,18 @@ def obter_mes_atual_referencia() -> str:
 
 
 def gerar_competencias() -> List[str]:
+    competencia_env = os.getenv("COMPETENCIA", "").strip()
+
+    if competencia_env:
+        if not re.fullmatch(r"\d{4}-\d{2}", competencia_env):
+            raise ValueError(f"COMPETENCIA inválida: {competencia_env}. Use YYYY-MM, ex: 2026-04")
+
+        ano, mes = map(int, competencia_env.split("-"))
+        if mes < 1 or mes > 12:
+            raise ValueError(f"Mês inválido em COMPETENCIA: {competencia_env}")
+
+        return [competencia_env]
+
     mes_atual = int(obter_mes_atual_referencia().split("-")[1])
 
     if MODO_COLETA == "historico":
