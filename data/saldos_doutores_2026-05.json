@@ -331,16 +331,16 @@
     "doutor_id": "41",
     "doutor": "Sofie Owens",
     "credito_inicial": 3500.0,
-    "utilizado": 0.0,
-    "credito_disponivel": 3500.0,
+    "utilizado": 235.0,
+    "credito_disponivel": 3265.0,
     "pix_key": ""
   },
   {
     "doutor_id": "42",
     "doutor": "Tamara Macanan",
     "credito_inicial": 5000.0,
-    "utilizado": 1800.0,
-    "credito_disponivel": 3200.0,
+    "utilizado": 1920.0,
+    "credito_disponivel": 3080.0,
     "pix_key": ""
   },
   {
