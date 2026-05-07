@@ -462,8 +462,8 @@
       "doutor_id": "38",
       "doutor": "Evalda Baldissera",
       "credito_inicial": 5604.82,
-      "utilizado": 1506.0,
-      "credito_disponivel": 4098.82,
+      "utilizado": 2821.0,
+      "credito_disponivel": 2783.82,
       "pix_key": ""
     },
     {
@@ -710,8 +710,8 @@
       "doutor_id": "42",
       "doutor": "Tamara Macanan",
       "credito_inicial": 5000.0,
-      "utilizado": 2520.0,
-      "credito_disponivel": 2480.0,
+      "utilizado": 2640.0,
+      "credito_disponivel": 2360.0,
       "pix_key": ""
     },
     {
@@ -734,8 +734,8 @@
       "doutor_id": "44",
       "doutor": "Thiany Cristofoli",
       "credito_inicial": 4000.0,
-      "utilizado": 1418.0,
-      "credito_disponivel": 2582.0,
+      "utilizado": 1824.0,
+      "credito_disponivel": 2176.0,
       "pix_key": ""
     }
   ],
