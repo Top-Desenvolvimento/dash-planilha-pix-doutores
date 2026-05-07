@@ -1591,19 +1591,30 @@ function renderizarCardsStatusInicio(saldos) {
   const atencao = todos.filter(item => item.percentual >= 50 && item.percentual < 100);
   const controlados = todos.filter(item => item.percentual < 50);
 
-  byId("cardsBloqueados").innerHTML = bloqueados.length
-    ? bloqueados.map(montarCardDoutorStatus).join("")
-    : `<div class="empty-status-card">Sem doutores bloqueados.</div>`;
+  const elBloqueados = byId("cardsBloqueados");
+  const elAtencao = byId("cardsAtencao");
+  const elControlados = byId("cardsControlados");
 
-  byId("cardsAtencao").innerHTML = atencao.length
-    ? atencao.map(montarCardDoutorStatus).join("")
-    : `<div class="empty-status-card">Sem doutores em atenção.</div>`;
+  if (elBloqueados) {
+    elBloqueados.innerHTML = bloqueados.length
+      ? bloqueados.map(montarCardDoutorStatus).join("")
+      : `<div class="empty-status-card">Sem doutores bloqueados.</div>`;
+  }
 
-  byId("cardsControlados").innerHTML = controlados.length
-    ? controlados.map(montarCardDoutorStatus).join("")
-    : `<div class="empty-status-card">Sem doutores controlados.</div>`;
+  if (elAtencao) {
+    elAtencao.innerHTML = atencao.length
+      ? atencao.map(montarCardDoutorStatus).join("")
+      : `<div class="empty-status-card">Sem doutores em atenção.</div>`;
+  }
+
+  if (elControlados) {
+    elControlados.innerHTML = controlados.length
+      ? controlados.map(montarCardDoutorStatus).join("")
+      : `<div class="empty-status-card">Sem doutores controlados.</div>`;
+  }
+
+  renderResumoRapidoFiltros();
 }
-
 async function atualizarPainelInicioBonito() {
   if (!dashboardData) return;
 
@@ -1674,3 +1685,77 @@ byId("filtroCidade")?.addEventListener("change", atualizarPainelInicioBonito);
 byId("filtroDoutor")?.addEventListener("change", atualizarPainelInicioBonito);
 
 window.salvarCidadeAtualDoutor = salvarCidadeAtualDoutor;
+function garantirResumoRapidoNovo() {
+  let resumo = byId("novoResumoRapido");
+
+  if (resumo) return resumo;
+
+  resumo = document.createElement("section");
+  resumo.id = "novoResumoRapido";
+  resumo.className = "dashboard-resumo-container";
+
+  resumo.innerHTML = `
+    <div class="dashboard-bloco">
+      <div class="dashboard-titulo-principal">Resumo rápido</div>
+      <div class="dashboard-subtitulo-principal">
+        Informações conforme os filtros selecionados
+      </div>
+
+      <div class="dashboard-resumo-grid" id="resumoRapidoGrid"></div>
+    </div>
+  `;
+
+  const painel = byId("painelStatusDoutores");
+
+  if (painel) {
+    painel.insertAdjacentElement("afterend", resumo);
+  }
+
+  return resumo;
+}
+
+function renderResumoRapidoFiltros() {
+  garantirResumoRapidoNovo();
+
+  const registros = getRegistrosFiltrados();
+
+  const totalLancamentos = registros.length;
+
+  const totalValor = registros.reduce((acc, item) => {
+    return acc + Number(item.valor || 0);
+  }, 0);
+
+  const totalDescontado = registros.reduce((acc, item) => {
+    return acc + Number(item.valor_descontado || 0);
+  }, 0);
+
+  const totalPendente = registros.reduce((acc, item) => {
+    return acc + Number(item.pendente || 0);
+  }, 0);
+
+  const grid = byId("resumoRapidoGrid");
+
+  if (!grid) return;
+
+  grid.innerHTML = `
+    <div class="dashboard-resumo-card">
+      <small>Lançamentos</small>
+      <strong>${totalLancamentos}</strong>
+    </div>
+
+    <div class="dashboard-resumo-card">
+      <small>Valor total</small>
+      <strong>${formatarMoeda(totalValor)}</strong>
+    </div>
+
+    <div class="dashboard-resumo-card">
+      <small>Descontado</small>
+      <strong>${formatarMoeda(totalDescontado)}</strong>
+    </div>
+
+    <div class="dashboard-resumo-card">
+      <small>Pendente</small>
+      <strong>${formatarMoeda(totalPendente)}</strong>
+    </div>
+  `;
+}
