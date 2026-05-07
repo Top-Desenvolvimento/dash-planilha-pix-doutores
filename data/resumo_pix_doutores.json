@@ -266,21 +266,21 @@
   },
   "2026-05": {
     "competencia": "2026-05",
-    "gerado_em": "2026-05-07T21:52:05.660786",
-    "quantidade_total": 151,
-    "valor_total": 19164.5,
-    "valor_total_descontado": 300.0,
-    "valor_total_pendente": 18864.5,
+    "gerado_em": "2026-05-07T22:54:32.760342",
+    "quantidade_total": 157,
+    "valor_total": 20171.5,
+    "valor_total_descontado": 100.0,
+    "valor_total_pendente": 20071.5,
     "por_unidade": [
       {
         "unidade": "Bento",
-        "quantidade": 6,
-        "valor": 614.0
+        "quantidade": 8,
+        "valor": 919.0
       },
       {
         "unidade": "Caxias",
-        "quantidade": 21,
-        "valor": 2485.5
+        "quantidade": 24,
+        "valor": 3087.5
       },
       {
         "unidade": "Encantado",
@@ -309,8 +309,8 @@
       },
       {
         "unidade": "Ssdocai",
-        "quantidade": 6,
-        "valor": 774.0
+        "quantidade": 7,
+        "valor": 874.0
       },
       {
         "unidade": "Veranopolis",
@@ -346,7 +346,7 @@
       },
       {
         "doutor": "Franciele Pedrotti",
-        "quantidade": 19,
+        "quantidade": 22,
         "valor_descontado": 0.0
       },
       {
@@ -361,8 +361,8 @@
       },
       {
         "doutor": "Leandro Diniz",
-        "quantidade": 2,
-        "valor_descontado": 300.0
+        "quantidade": 3,
+        "valor_descontado": 100.0
       },
       {
         "doutor": "Luisa Moraes Lucas",
@@ -371,7 +371,7 @@
       },
       {
         "doutor": "Naiane Pieta",
-        "quantidade": 6,
+        "quantidade": 8,
         "valor_descontado": 0.0
       },
       {
