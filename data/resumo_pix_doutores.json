@@ -266,11 +266,11 @@
   },
   "2026-05": {
     "competencia": "2026-05",
-    "gerado_em": "2026-05-07T20:53:51.991030",
-    "quantidade_total": 141,
-    "valor_total": 17770.5,
-    "valor_total_descontado": 56.0,
-    "valor_total_pendente": 17714.5,
+    "gerado_em": "2026-05-07T21:52:05.660786",
+    "quantidade_total": 151,
+    "valor_total": 19164.5,
+    "valor_total_descontado": 300.0,
+    "valor_total_pendente": 18864.5,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -279,8 +279,8 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 17,
-        "valor": 1839.5
+        "quantidade": 21,
+        "valor": 2485.5
       },
       {
         "unidade": "Encantado",
@@ -304,18 +304,18 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 42,
-        "valor": 5144.0
+        "quantidade": 45,
+        "valor": 5453.0
       },
       {
         "unidade": "Ssdocai",
-        "quantidade": 4,
-        "valor": 474.0
+        "quantidade": 6,
+        "valor": 774.0
       },
       {
         "unidade": "Veranopolis",
-        "quantidade": 10,
-        "valor": 1463.0
+        "quantidade": 11,
+        "valor": 1602.0
       }
     ],
     "por_doutor": [
@@ -336,7 +336,7 @@
       },
       {
         "doutor": "Evalda Baldissera",
-        "quantidade": 9,
+        "quantidade": 10,
         "valor_descontado": 0.0
       },
       {
@@ -346,7 +346,7 @@
       },
       {
         "doutor": "Franciele Pedrotti",
-        "quantidade": 15,
+        "quantidade": 19,
         "valor_descontado": 0.0
       },
       {
@@ -360,8 +360,13 @@
         "valor_descontado": 0.0
       },
       {
-        "doutor": "Luisa Moraes Lucas",
+        "doutor": "Leandro Diniz",
         "quantidade": 2,
+        "valor_descontado": 300.0
+      },
+      {
+        "doutor": "Luisa Moraes Lucas",
+        "quantidade": 5,
         "valor_descontado": 0.0
       },
       {
@@ -382,7 +387,7 @@
       {
         "doutor": "Tamara Macanan",
         "quantidade": 3,
-        "valor_descontado": 56.0
+        "valor_descontado": 0.0
       },
       {
         "doutor": "Thalia Vezzosi",
