@@ -886,3 +886,63 @@ body.modo-inicio-limpo #grupoControladosCards .status-group-header {
   background: rgba(255, 82, 113, 0.08) !important;
   color: #ffb3c1 !important;
 }
+.dashboard-bloco {
+  margin-bottom: 28px;
+}
+
+.dashboard-titulo-principal {
+  font-size: 30px;
+  font-weight: 900;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.dashboard-subtitulo-principal {
+  color: #aebbe0;
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+
+.dashboard-resumo-container {
+  background: rgba(28, 43, 78, 0.82);
+  border: 1px solid rgba(118, 145, 220, 0.22);
+  border-radius: 22px;
+  padding: 22px;
+  margin-bottom: 28px;
+}
+
+.dashboard-resumo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.dashboard-resumo-card {
+  background: rgba(255,255,255,0.06);
+  border-radius: 18px;
+  padding: 18px;
+}
+
+.dashboard-resumo-card small {
+  display: block;
+  color: #aebbe0;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.dashboard-resumo-card strong {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.dashboard-lista-pix {
+  margin-top: 28px;
+}
+
+.dashboard-lista-pix h2 {
+  font-size: 24px;
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 14px;
+}
