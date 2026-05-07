@@ -710,8 +710,8 @@
       "doutor_id": "42",
       "doutor": "Tamara Macanan",
       "credito_inicial": 5000.0,
-      "utilizado": 3000.0,
-      "credito_disponivel": 2000.0,
+      "utilizado": 3120.0,
+      "credito_disponivel": 1880.0,
       "pix_key": ""
     },
     {
@@ -734,8 +734,8 @@
       "doutor_id": "44",
       "doutor": "Thiany Cristofoli",
       "credito_inicial": 4000.0,
-      "utilizado": 3042.0,
-      "credito_disponivel": 958.0,
+      "utilizado": 3448.0,
+      "credito_disponivel": 552.0,
       "pix_key": ""
     }
   ],
