@@ -1,10 +1,10 @@
 {
   "competencia": "2026-02",
-  "gerado_em": "2026-05-06T15:44:22.310444",
+  "gerado_em": "2026-05-07T14:49:23.986993",
   "quantidade_total": 727,
   "valor_total": 97910.59,
-  "valor_total_descontado": 8052.82,
-  "valor_total_pendente": 89857.77,
+  "valor_total_descontado": 2448.0,
+  "valor_total_pendente": 95462.59,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -216,7 +216,7 @@
     {
       "doutor": "Evalda Baldissera",
       "quantidade": 40,
-      "valor_descontado": 5604.82
+      "valor_descontado": 0.0
     },
     {
       "doutor": "MEI",

@@ -1,10 +1,10 @@
 {
   "competencia": "2026-01",
-  "gerado_em": "2026-05-06T15:33:00.952154",
+  "gerado_em": "2026-05-07T14:37:56.170113",
   "quantidade_total": 745,
   "valor_total": 96685.48,
-  "valor_total_descontado": 7711.35,
-  "valor_total_pendente": 88974.13,
+  "valor_total_descontado": 3525.75,
+  "valor_total_pendente": 93159.73,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -131,7 +131,7 @@
     {
       "doutor": "Dionathan Pohlmann",
       "quantidade": 37,
-      "valor_descontado": 4592.8
+      "valor_descontado": 1407.2
     },
     {
       "doutor": "Doutores não locais",
@@ -226,7 +226,7 @@
     {
       "doutor": "Giovana Gasparini",
       "quantidade": 10,
-      "valor_descontado": 1000.0
+      "valor_descontado": 0.0
     },
     {
       "doutor": "MEI",

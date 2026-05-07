@@ -9,11 +9,11 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-05-06T16:07:29.851806",
-    "quantidade_total": 722,
-    "valor_total": 95214.09,
+    "gerado_em": "2026-05-07T15:11:54.611955",
+    "quantidade_total": 723,
+    "valor_total": 95420.09,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 95214.09,
+    "valor_total_pendente": 95420.09,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -47,8 +47,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 176,
-        "valor": 20474.0
+        "quantidade": 177,
+        "valor": 20680.0
       },
       {
         "unidade": "Ssdocai",
@@ -124,7 +124,7 @@
       },
       {
         "doutor": "Gabrielli Fabonato",
-        "quantidade": 11,
+        "quantidade": 12,
         "valor_descontado": 0.0
       },
       {
@@ -229,7 +229,7 @@
       },
       {
         "doutor": "Sofie Owens",
-        "quantidade": 25,
+        "quantidade": 26,
         "valor_descontado": 0.0
       },
       {
@@ -254,7 +254,7 @@
       },
       {
         "doutor": "TOP",
-        "quantidade": 7,
+        "quantidade": 6,
         "valor_descontado": 0.0
       },
       {
@@ -398,11 +398,11 @@
   },
   "2026-01": {
     "competencia": "2026-01",
-    "gerado_em": "2026-05-06T15:33:00.952154",
+    "gerado_em": "2026-05-07T14:37:56.170113",
     "quantidade_total": 745,
     "valor_total": 96685.48,
-    "valor_total_descontado": 7711.35,
-    "valor_total_pendente": 88974.13,
+    "valor_total_descontado": 3525.75,
+    "valor_total_pendente": 93159.73,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -529,7 +529,7 @@
       {
         "doutor": "Dionathan Pohlmann",
         "quantidade": 37,
-        "valor_descontado": 4592.8
+        "valor_descontado": 1407.2
       },
       {
         "doutor": "Doutores não locais",
@@ -624,7 +624,7 @@
       {
         "doutor": "Giovana Gasparini",
         "quantidade": 10,
-        "valor_descontado": 1000.0
+        "valor_descontado": 0.0
       },
       {
         "doutor": "MEI",
@@ -645,11 +645,11 @@
   },
   "2026-02": {
     "competencia": "2026-02",
-    "gerado_em": "2026-05-06T15:44:22.310444",
+    "gerado_em": "2026-05-07T14:49:23.986993",
     "quantidade_total": 727,
     "valor_total": 97910.59,
-    "valor_total_descontado": 8052.82,
-    "valor_total_pendente": 89857.77,
+    "valor_total_descontado": 2448.0,
+    "valor_total_pendente": 95462.59,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -861,7 +861,7 @@
       {
         "doutor": "Evalda Baldissera",
         "quantidade": 40,
-        "valor_descontado": 5604.82
+        "valor_descontado": 0.0
       },
       {
         "doutor": "MEI",
@@ -882,11 +882,11 @@
   },
   "2026-03": {
     "competencia": "2026-03",
-    "gerado_em": "2026-05-06T15:56:06.418038",
+    "gerado_em": "2026-05-07T15:00:59.340671",
     "quantidade_total": 700,
     "valor_total": 95984.51,
-    "valor_total_descontado": 10783.98,
-    "valor_total_pendente": 85200.53,
+    "valor_total_descontado": 2684.84,
+    "valor_total_pendente": 93299.67,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1013,7 +1013,7 @@
       {
         "doutor": "Dionathan Pohlmann",
         "quantidade": 38,
-        "valor_descontado": 4833.9
+        "valor_descontado": 1166.1
       },
       {
         "doutor": "Doutores não locais",
@@ -1108,12 +1108,12 @@
       {
         "doutor": "Evalda Baldissera",
         "quantidade": 31,
-        "valor_descontado": 4994.08
+        "valor_descontado": 610.74
       },
       {
         "doutor": "Gislaine Santos",
         "quantidade": 5,
-        "valor_descontado": 524.0
+        "valor_descontado": 476.0
       },
       {
         "doutor": "Matheus Strapasson",

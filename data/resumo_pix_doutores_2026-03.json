@@ -1,10 +1,10 @@
 {
   "competencia": "2026-03",
-  "gerado_em": "2026-05-06T15:56:06.418038",
+  "gerado_em": "2026-05-07T15:00:59.340671",
   "quantidade_total": 700,
   "valor_total": 95984.51,
-  "valor_total_descontado": 10783.98,
-  "valor_total_pendente": 85200.53,
+  "valor_total_descontado": 2684.84,
+  "valor_total_pendente": 93299.67,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -131,7 +131,7 @@
     {
       "doutor": "Dionathan Pohlmann",
       "quantidade": 38,
-      "valor_descontado": 4833.9
+      "valor_descontado": 1166.1
     },
     {
       "doutor": "Doutores não locais",
@@ -226,12 +226,12 @@
     {
       "doutor": "Evalda Baldissera",
       "quantidade": 31,
-      "valor_descontado": 4994.08
+      "valor_descontado": 610.74
     },
     {
       "doutor": "Gislaine Santos",
       "quantidade": 5,
-      "valor_descontado": 524.0
+      "valor_descontado": 476.0
     },
     {
       "doutor": "Matheus Strapasson",
