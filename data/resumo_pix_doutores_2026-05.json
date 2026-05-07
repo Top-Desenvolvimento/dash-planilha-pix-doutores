@@ -1,10 +1,10 @@
 {
   "competencia": "2026-05",
-  "gerado_em": "2026-05-07T18:54:40.325559",
-  "quantidade_total": 127,
-  "valor_total": 15647.5,
-  "valor_total_descontado": 136.0,
-  "valor_total_pendente": 15511.5,
+  "gerado_em": "2026-05-07T19:26:42.939805",
+  "quantidade_total": 134,
+  "valor_total": 17028.5,
+  "valor_total_descontado": 672.0,
+  "valor_total_pendente": 16356.5,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -18,8 +18,8 @@
     },
     {
       "unidade": "Encantado",
-      "quantidade": 18,
-      "valor": 2156.0
+      "quantidade": 20,
+      "valor": 2346.0
     },
     {
       "unidade": "Farroupilha",
@@ -28,23 +28,23 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 10,
-      "valor": 1346.0
+      "quantidade": 12,
+      "valor": 1898.0
     },
     {
       "unidade": "Garibaldi",
-      "quantidade": 16,
-      "valor": 1755.0
+      "quantidade": 17,
+      "valor": 1875.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 39,
-      "valor": 4521.0
+      "quantidade": 40,
+      "valor": 4920.0
     },
     {
       "unidade": "Ssdocai",
-      "quantidade": 2,
-      "valor": 254.0
+      "quantidade": 3,
+      "valor": 374.0
     },
     {
       "unidade": "Veranopolis",
@@ -65,7 +65,7 @@
     },
     {
       "doutor": "Cristian Pressi",
-      "quantidade": 37,
+      "quantidade": 38,
       "valor_descontado": 0.0
     },
     {
@@ -90,8 +90,8 @@
     },
     {
       "doutor": "Keyla Daniele",
-      "quantidade": 2,
-      "valor_descontado": 16.0
+      "quantidade": 3,
+      "valor_descontado": 0.0
     },
     {
       "doutor": "Naiane Pieta",
@@ -100,18 +100,18 @@
     },
     {
       "doutor": "Renata Protto",
-      "quantidade": 15,
-      "valor_descontado": 0.0
-    },
-    {
-      "doutor": "Sofie Owens",
       "quantidade": 17,
       "valor_descontado": 0.0
     },
     {
+      "doutor": "Sofie Owens",
+      "quantidade": 18,
+      "valor_descontado": 0.0
+    },
+    {
       "doutor": "Tamara Macanan",
-      "quantidade": 1,
-      "valor_descontado": 120.0
+      "quantidade": 3,
+      "valor_descontado": 672.0
     },
     {
       "doutor": "Thalia Vezzosi",
