@@ -1,10 +1,10 @@
 {
   "competencia": "2026-05",
-  "gerado_em": "2026-05-07T15:51:26.071831",
-  "quantidade_total": 111,
-  "valor_total": 13911.5,
-  "valor_total_descontado": 381.0,
-  "valor_total_pendente": 13530.5,
+  "gerado_em": "2026-05-07T17:36:39.259401",
+  "quantidade_total": 120,
+  "valor_total": 14861.5,
+  "valor_total_descontado": 374.0,
+  "valor_total_pendente": 14487.5,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -33,18 +33,18 @@
     },
     {
       "unidade": "Garibaldi",
-      "quantidade": 9,
-      "valor": 990.0
+      "quantidade": 13,
+      "valor": 1413.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 34,
-      "valor": 4013.0
+      "quantidade": 38,
+      "valor": 4401.0
     },
     {
       "unidade": "Ssdocai",
-      "quantidade": 1,
-      "valor": 115.0
+      "quantidade": 2,
+      "valor": 254.0
     },
     {
       "unidade": "Veranopolis",
@@ -65,7 +65,7 @@
     },
     {
       "doutor": "Cristian Pressi",
-      "quantidade": 32,
+      "quantidade": 36,
       "valor_descontado": 0.0
     },
     {
@@ -90,8 +90,8 @@
     },
     {
       "doutor": "Keyla Daniele",
-      "quantidade": 1,
-      "valor_descontado": 115.0
+      "quantidade": 2,
+      "valor_descontado": 254.0
     },
     {
       "doutor": "Naiane Pieta",
@@ -105,7 +105,7 @@
     },
     {
       "doutor": "Sofie Owens",
-      "quantidade": 10,
+      "quantidade": 14,
       "valor_descontado": 0.0
     },
     {
@@ -121,7 +121,7 @@
     {
       "doutor": "Thiany Cristofoli",
       "quantidade": 3,
-      "valor_descontado": 146.0
+      "valor_descontado": 0.0
     }
   ]
 }
