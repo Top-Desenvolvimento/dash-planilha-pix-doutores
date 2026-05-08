@@ -1064,3 +1064,10 @@ body.modo-inicio-limpo #grupoControladosCards .status-group-header {
 .quadrante-status-topo.controlado .quadrante-status-dot {
   background: #22d399 !important;
 }
+.doctor-card-grid-inline {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+  padding: 4px;
+}
