@@ -1537,11 +1537,10 @@ function montarCardDoutorStatus(item) {
   const pixKey = obterPixKeyDoDoutor(item.doutor);
 
   return `
-    <div class="doctor-status-card ${tipo}">
-      <div class="doctor-card-top">
-        <div class="doctor-card-name">${escapeHtml(item.doutor)}</div>
-        <div class="doctor-card-status ${tipo}">${tituloStatusCard(tipo)}</div>
-      </div>
+<div class="quadrante-status-topo ${tipo}">
+  <span class="quadrante-status-dot"></span>
+  ${tituloStatusCard(tipo)}
+</div>
 
       <div class="doctor-card-values">
         <div class="doctor-card-metric">
