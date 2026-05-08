@@ -153,11 +153,8 @@ function mostrarDashboard() {
   byId("dashboardView")?.classList.remove("hidden");
   byId("adminView")?.classList.add("hidden");
   byId("filtrosSidebar")?.classList.remove("hidden");
-  document.body.classList.add("modo-inicio-limpo");
 
-  if (dashboardData) {
-    atualizarDashboard();
-  }
+  if (dashboardData) atualizarDashboard();
 }
 
 function mostrarAdmin() {
@@ -166,7 +163,6 @@ function mostrarAdmin() {
   byId("dashboardView")?.classList.add("hidden");
   byId("adminView")?.classList.remove("hidden");
   byId("filtrosSidebar")?.classList.add("hidden");
-  document.body.classList.remove("modo-inicio-limpo");
 
   if (dashboardData) {
     garantirFiltroMesAdmin();
@@ -207,9 +203,7 @@ async function validarUsuarioAdmin() {
 
 async function emailPodeCadastrar(email) {
   const client = validarSupabasePronto();
-  const { data, error } = await client.rpc("email_pode_cadastrar", {
-    p_email: email
-  });
+  const { data, error } = await client.rpc("email_pode_cadastrar", { p_email: email });
   if (error) throw error;
   return data === true;
 }
@@ -217,11 +211,7 @@ async function emailPodeCadastrar(email) {
 async function loginSupabase(email, password) {
   const client = validarSupabasePronto();
 
-  const { error } = await client.auth.signInWithPassword({
-    email,
-    password
-  });
-
+  const { error } = await client.auth.signInWithPassword({ email, password });
   if (error) throw error;
 
   const autorizado = await validarUsuarioAutorizado();
@@ -235,9 +225,7 @@ async function loginSupabase(email, password) {
 async function criarAcessoSupabase(email, password) {
   const permitido = await emailPodeCadastrar(email);
 
-  if (!permitido) {
-    throw new Error("Este e-mail não está autorizado para criar acesso.");
-  }
+  if (!permitido) throw new Error("Este e-mail não está autorizado para criar acesso.");
 
   const client = validarSupabasePronto();
   const redirectTo = getBaseAppUrl();
@@ -245,9 +233,7 @@ async function criarAcessoSupabase(email, password) {
   const { error } = await client.auth.signUp({
     email,
     password,
-    options: {
-      emailRedirectTo: redirectTo
-    }
+    options: { emailRedirectTo: redirectTo }
   });
 
   if (error) throw error;
@@ -262,18 +248,13 @@ async function enviarRecuperacaoSenha(email) {
   const client = validarSupabasePronto();
   const redirectTo = `${getBaseAppUrl()}reset.html`;
 
-  const { error } = await client.auth.resetPasswordForEmail(email, {
-    redirectTo
-  });
-
+  const { error } = await client.auth.resetPasswordForEmail(email, { redirectTo });
   if (error) throw error;
 }
 
 function preencherBadgeUsuario() {
   const badge = byId("badgeUsuario");
-  if (badge) {
-    badge.textContent = currentUser?.email || "Usuário";
-  }
+  if (badge) badge.textContent = currentUser?.email || "Usuário";
 }
 
 function getCompetenciaAtual() {
@@ -368,6 +349,7 @@ function somarUtilizadoPorNomeNosRegistros(competencia) {
 
   return mapa;
 }
+
 async function garantirDoutorNoSupabase(idOriginal, payloadBase) {
   const client = validarSupabasePronto();
 
@@ -389,7 +371,6 @@ async function garantirDoutorNoSupabase(idOriginal, payloadBase) {
     .single();
 
   if (errorInsert) throw errorInsert;
-
   return novo.id;
 }
 
@@ -404,10 +385,7 @@ async function sincronizarSaldosAdminNoDashboard() {
       .select("id, nome, nome_normalizado, credito, pix_key, ativo, updated_by_email, updated_by_nome")
       .order("nome", { ascending: true });
 
-    if (errorDoutores) {
-      console.warn("Não foi possível carregar doutores da ADM. Mantendo dashboard original.", errorDoutores);
-      return;
-    }
+    if (errorDoutores) return;
 
     const meses = dashboardData?.meses_disponiveis || [];
     if (!meses.length) return;
@@ -417,10 +395,7 @@ async function sincronizarSaldosAdminNoDashboard() {
       .select("*")
       .in("competencia", meses);
 
-    if (errorSaldos) {
-      console.warn("Não foi possível carregar saldos da ADM. Mantendo dashboard original.", errorSaldos);
-      return;
-    }
+    if (errorSaldos) return;
 
     const fallbackDoutores = obterDoutoresFallbackDoDashboard();
     const todosPorNome = new Map();
@@ -437,8 +412,7 @@ async function sincronizarSaldosAdminNoDashboard() {
         pix_key: item.pix_key || "",
         ativo: item.ativo !== false,
         updated_by_email: item.updated_by_email || null,
-        updated_by_nome: item.updated_by_nome || null,
-        origem: "dashboard"
+        updated_by_nome: item.updated_by_nome || null
       });
     }
 
@@ -456,8 +430,7 @@ async function sincronizarSaldosAdminNoDashboard() {
         pix_key: item.pix_key || existente.pix_key || "",
         ativo: item.ativo !== false,
         updated_by_email: item.updated_by_email || existente.updated_by_email || null,
-        updated_by_nome: item.updated_by_nome || existente.updated_by_nome || null,
-        origem: "supabase"
+        updated_by_nome: item.updated_by_nome || existente.updated_by_nome || null
       });
     }
 
@@ -515,7 +488,7 @@ async function sincronizarSaldosAdminNoDashboard() {
       );
     }
   } catch (err) {
-    console.error("Erro ao sincronizar saldos da ADM no dashboard:", err);
+    console.error("Erro ao sincronizar saldos:", err);
   }
 }
 
@@ -530,11 +503,8 @@ function preencherFiltroMes() {
     .map(item => `<option value="${escapeHtml(item)}">${escapeHtml(formatarCompetenciaLabel(item))}</option>`)
     .join("");
 
-  if (competenciaPadrao && meses.includes(competenciaPadrao)) {
-    filtroMes.value = competenciaPadrao;
-  } else if (meses.length) {
-    filtroMes.value = meses[0];
-  }
+  if (competenciaPadrao && meses.includes(competenciaPadrao)) filtroMes.value = competenciaPadrao;
+  else if (meses.length) filtroMes.value = meses[0];
 }
 
 function preencherFiltroCidade() {
@@ -542,18 +512,14 @@ function preencherFiltroCidade() {
   if (!filtroCidade) return;
 
   const cidadeSelecionada = filtroCidade.value;
-  const competencia = getCompetenciaAtual();
-  const registros = getRegistrosCompetencia(competencia);
-
+  const registros = getRegistrosCompetencia(getCompetenciaAtual());
   const cidades = [...new Set(registros.map(item => item.unidade).filter(Boolean))].sort();
 
   filtroCidade.innerHTML =
     `<option value="">Todas</option>` +
     cidades.map(item => `<option value="${escapeHtml(item)}">${escapeHtml(item)}</option>`).join("");
 
-  if (cidades.includes(cidadeSelecionada)) {
-    filtroCidade.value = cidadeSelecionada;
-  }
+  if (cidades.includes(cidadeSelecionada)) filtroCidade.value = cidadeSelecionada;
 }
 
 function preencherFiltroDoutor() {
@@ -576,9 +542,7 @@ function preencherFiltroDoutor() {
     `<option value="">Todos</option>` +
     doutores.map(item => `<option value="${escapeHtml(item)}">${escapeHtml(item)}</option>`).join("");
 
-  if (doutores.includes(doutorSelecionado)) {
-    filtroDoutor.value = doutorSelecionado;
-  }
+  if (doutores.includes(doutorSelecionado)) filtroDoutor.value = doutorSelecionado;
 }
 
 function getRegistrosFiltrados() {
@@ -587,14 +551,8 @@ function getRegistrosFiltrados() {
   const doutor = getDoutorAtual();
 
   let registros = getRegistrosCompetencia(competencia);
-
-  if (cidade) {
-    registros = registros.filter(item => String(item.unidade || "") === cidade);
-  }
-
-  if (doutor) {
-    registros = registros.filter(item => String(item.doutor_final || "") === doutor);
-  }
+  if (cidade) registros = registros.filter(item => String(item.unidade || "") === cidade);
+  if (doutor) registros = registros.filter(item => String(item.doutor_final || "") === doutor);
 
   return registros;
 }
@@ -604,10 +562,7 @@ function getSaldosFiltrados() {
   const doutor = getDoutorAtual();
 
   let saldos = getSaldosCompetencia(competencia);
-
-  if (doutor) {
-    saldos = saldos.filter(item => String(item.doutor || "") === doutor);
-  }
+  if (doutor) saldos = saldos.filter(item => String(item.doutor || "") === doutor);
 
   return saldos;
 }
@@ -619,14 +574,8 @@ function obterPercentual(utilizado, creditoInicial) {
 }
 
 function obterStatus(percentual) {
-  if (percentual >= 100) {
-    return { classe: "status-red", texto: "Bloqueado", dot: "dot-red" };
-  }
-
-  if (percentual >= 50) {
-    return { classe: "status-yellow", texto: "Atenção", dot: "dot-yellow" };
-  }
-
+  if (percentual >= 100) return { classe: "status-red", texto: "Bloqueado", dot: "dot-red" };
+  if (percentual >= 50) return { classe: "status-yellow", texto: "Atenção", dot: "dot-yellow" };
   return { classe: "status-green", texto: "Controlado", dot: "dot-green" };
 }
 
@@ -652,201 +601,6 @@ function montarResumoDoutores(saldos) {
     .sort((a, b) => String(a.doutor || "").localeCompare(String(b.doutor || ""), "pt-BR"));
 }
 
-function renderCards(registros) {
-  const alvo = byId("cardsResumo");
-  if (!alvo) return;
-
-  const totalLancamentos = registros.length;
-  const totalValor = registros.reduce((acc, item) => acc + toNumber(item.valor, 0), 0);
-  const totalDescontado = registros.reduce((acc, item) => acc + toNumber(item.valor_descontado, 0), 0);
-  const totalPendente = registros.reduce((acc, item) => acc + toNumber(item.pendente, 0), 0);
-  const totalCidades = new Set(registros.map(item => item.unidade).filter(Boolean)).size;
-
-  alvo.innerHTML = `
-    <div class="stat-card"><div class="stat-title">Lançamentos</div><div class="stat-value">${totalLancamentos}</div></div>
-    <div class="stat-card"><div class="stat-title">Valor total</div><div class="stat-value">${formatarMoeda(totalValor)}</div></div>
-    <div class="stat-card"><div class="stat-title">Descontado</div><div class="stat-value">${formatarMoeda(totalDescontado)}</div></div>
-    <div class="stat-card"><div class="stat-title">Pendente</div><div class="stat-value">${formatarMoeda(totalPendente)}</div></div>
-    <div class="stat-card"><div class="stat-title">Cidades</div><div class="stat-value">${totalCidades}</div></div>
-  `;
-}
-
-function renderTabelaBase(tbodyId, linhas, mensagemVazia) {
-  const tbody = byId(tbodyId);
-  if (!tbody) return;
-
-  if (!linhas.length) {
-    tbody.innerHTML = `<tr><td colspan="6" class="empty-state">${mensagemVazia}</td></tr>`;
-    return;
-  }
-
-  tbody.innerHTML = linhas.map(item => `
-    <tr>
-      <td>${escapeHtml(item.doutor)}</td>
-      <td>${formatarMoeda(item.creditoInicial)}</td>
-      <td>${formatarMoeda(item.utilizado)}</td>
-      <td class="${item.creditoDisponivel < 0 ? "text-danger" : ""}">${formatarMoeda(item.creditoDisponivel)}</td>
-      <td>${item.percentual.toFixed(1)}%</td>
-      <td><span class="status-pill ${item.status.classe}"><span class="dot ${item.status.dot}"></span>${item.status.texto}</span></td>
-    </tr>
-  `).join("");
-}
-
-function renderTabelaResumoDoutores(saldos) {
-  renderTabelaBase("tabelaResumoDoutores", montarResumoDoutores(saldos), "Sem doutores cadastrados para a competência");
-}
-
-function renderCardsDentroDaSecao(containerId, linhas, mensagemVazia) {
-  const container = byId(containerId);
-  if (!container) return;
-
-  if (!linhas.length) {
-    container.innerHTML = `
-      <div class="empty-status-card">
-        ${mensagemVazia}
-      </div>
-    `;
-    return;
-  }
-
-  container.innerHTML = linhas
-    .map(item => montarCardDoutorStatus(item))
-    .join("");
-}
-
-function renderTabelaBloqueados(saldos) {
-  const linhas = montarResumoDoutores(saldos)
-    .filter(item => item.percentual >= 100);
-
-  renderCardsDentroDaSecao(
-    "cardsBloqueados",
-    linhas,
-    "Sem doutores bloqueados."
-  );
-}
-
-function renderTabelaAtencao(saldos) {
-  const linhas = montarResumoDoutores(saldos)
-    .filter(item => item.percentual >= 50 && item.percentual < 100);
-
-  renderCardsDentroDaSecao(
-    "cardsAtencao",
-    linhas,
-    "Sem doutores em atenção."
-  );
-}
-
-function renderTabelaControlados(saldos) {
-  const linhas = montarResumoDoutores(saldos)
-    .filter(item => item.percentual < 50);
-
-  renderCardsDentroDaSecao(
-    "cardsControlados",
-    linhas,
-    "Sem doutores controlados."
-  );
-}
-
-function garantirSecaoControlados() {
-  const dashboardView = byId("dashboardView");
-  if (!dashboardView) return;
-
-  let secao = byId("secaoControlados");
-  if (secao) return;
-
-  secao = document.createElement("section");
-  secao.id = "secaoControlados";
-  secao.className = "card card-large";
-  secao.innerHTML = `
-    <div class="card-header">
-      <div>
-        <h2>Doutores controlados</h2>
-        <p>Utilização abaixo de 50%</p>
-      </div>
-    </div>
-    <div class="table-wrapper">
-      <table class="data-table">
-        <thead>
-          <tr>
-            <th>Doutor</th>
-            <th>Crédito inicial</th>
-            <th>Utilizado</th>
-            <th>Saldo</th>
-            <th>% utilizado</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-        <tbody id="tabelaControlados">
-          <tr><td colspan="6" class="empty-state">Carregando...</td></tr>
-        </tbody>
-      </table>
-    </div>
-  `;
-
-  dashboardView.appendChild(secao);
-}
-
-function reordenarSecoesDashboard() {
-  const dashboardView = byId("dashboardView");
-  if (!dashboardView) return;
-
-  const ordem = [
-    byId("painelStatusDoutores"),
-    byId("novoResumoRapido"),
-    byId("secaoPixMes"),
-    byId("secaoResumoRapido"),
-    byId("secaoBloqueados"),
-    byId("secaoAtencao"),
-    byId("secaoControlados"),
-    byId("secaoTodos")
-  ].filter(Boolean);
-
-  ordem.forEach(secao => dashboardView.appendChild(secao));
-}
-
-function garantirIdsSecoesDashboard() {
-  const cards = byId("cardsResumo")?.closest(".card");
-  if (cards) cards.id = "secaoResumoRapido";
-
-  const tabelaResumo = byId("tabelaResumoDoutores")?.closest(".card");
-  if (tabelaResumo) tabelaResumo.id = "secaoTodos";
-
-  const tabelaAtencao = byId("tabelaAtencao")?.closest(".card");
-  if (tabelaAtencao) tabelaAtencao.id = "secaoAtencao";
-
-  const tabelaBloqueados = byId("tabelaBloqueados")?.closest(".card");
-  if (tabelaBloqueados) tabelaBloqueados.id = "secaoBloqueados";
-
-  const tabelaPixMes = byId("tabelaPixMes")?.closest(".card");
-  if (tabelaPixMes) tabelaPixMes.id = "secaoPixMes";
-
-  garantirSecaoControlados();
-}
-function renderTabelaPixMes(registros) {
-  const tbody = byId("tabelaPixMes");
-  if (!tbody) return;
-
-  if (!registros.length) {
-    tbody.innerHTML = `<tr><td colspan="7" class="empty-state">Sem dados</td></tr>`;
-    return;
-  }
-
-  tbody.innerHTML = registros
-    .slice()
-    .sort((a, b) => String(b.data || "").localeCompare(String(a.data || "")))
-    .map(item => `
-      <tr>
-        <td>${escapeHtml(item.data)}</td>
-        <td>${escapeHtml(item.unidade)}</td>
-        <td>${escapeHtml(item.doutor_final || "Sem responsável fiscal")}</td>
-        <td>${escapeHtml(item.paciente)}</td>
-        <td>${formatarMoeda(item.valor)}</td>
-        <td>${formatarMoeda(item.valor_descontado)}</td>
-        <td class="${toNumber(item.pendente, 0) > 0 ? "text-warning" : "text-success"}">${formatarMoeda(item.pendente)}</td>
-      </tr>
-    `).join("");
-}
-
 function classificarCardDoutor(item) {
   if (item.percentual >= 100) return "bloqueado";
   if (item.percentual >= 50) return "atencao";
@@ -859,167 +613,8 @@ function tituloStatusCard(tipo) {
   return "Controlado";
 }
 
-function garantirFiltroMesAdmin() {
-  const adminView = byId("adminView");
-  if (!adminView || byId("filtroMesAdminBox")) return;
-
-  const box = document.createElement("div");
-  box.id = "filtroMesAdminBox";
-  box.className = "admin-extra-filter";
-  box.innerHTML = `
-    <label>Mês da edição / histórico das observações</label>
-    <select id="filtroMesAdmin"></select>
-  `;
-
-  if (adminView.firstElementChild?.nextSibling) {
-    adminView.insertBefore(box, adminView.firstElementChild.nextSibling);
-  } else {
-    adminView.prepend(box);
-  }
-
-  const select = byId("filtroMesAdmin");
-  const meses = dashboardData?.meses_disponiveis || [];
-
-  select.innerHTML = meses
-    .map(mes => `<option value="${escapeHtml(mes)}">${escapeHtml(formatarCompetenciaLabel(mes))}</option>`)
-    .join("");
-
-  select.value = getCompetenciaAtual();
-
-  select.addEventListener("change", async () => {
-    const filtroMes = byId("filtroMes");
-    if (filtroMes) filtroMes.value = select.value;
-
-    cidadesAtuaisCompetencia = "";
-
-    preencherFiltroCidade();
-    preencherFiltroDoutor();
-
-    await sincronizarSaldosAdminNoDashboard();
-    await carregarDoutoresAdmin();
-    atualizarDashboard();
-  });
-}
-
-function garantirPainelStatusInicio() {
-  const dashboardView = byId("dashboardView");
-  if (!dashboardView) return null;
-
-  let painel = byId("painelStatusDoutores");
-  if (painel) return painel;
-
-  painel = document.createElement("section");
-  painel.id = "painelStatusDoutores";
-  painel.className = "status-dashboard-grid";
-  painel.innerHTML = `
-    <datalist id="listaCidadesAtuais"></datalist>
-
-    <div class="status-group" id="grupoBloqueadosCards">
-      <div class="status-group-header">
-        <h2>Doutores bloqueados</h2>
-        <span>Quadrantes dos doutores com utilização igual ou acima de 100%</span>
-      </div>
-      <div class="doctor-card-grid" id="cardsBloqueados"></div>
-    </div>
-
-    <div class="status-group" id="grupoAtencaoCards">
-      <div class="status-group-header">
-        <h2>Doutores em atenção</h2>
-        <span>Quadrantes dos doutores com utilização entre 50% e 99%</span>
-      </div>
-      <div class="doctor-card-grid" id="cardsAtencao"></div>
-    </div>
-
-    <div class="status-group" id="grupoControladosCards">
-      <div class="status-group-header">
-        <h2>Doutores controlados</h2>
-        <span>Quadrantes dos doutores com utilização abaixo de 50%</span>
-      </div>
-      <div class="doctor-card-grid" id="cardsControlados"></div>
-    </div>
-  `;
-
-  const primeiraSecao = dashboardView.firstElementChild;
-  if (primeiraSecao) {
-    dashboardView.insertBefore(painel, primeiraSecao);
-  } else {
-    dashboardView.appendChild(painel);
-  }
-
-  return painel;
-}
-
-function preencherListaCidadesAtuais() {
-  const lista = byId("listaCidadesAtuais");
-  if (!lista || !dashboardData) return;
-
-  const registros = getRegistrosCompetencia(getCompetenciaAtual());
-  const cidades = [...new Set(registros.map(r => r.unidade).filter(Boolean))].sort();
-
-  lista.innerHTML = cidades
-    .map(cidade => `<option value="${escapeHtml(cidade)}"></option>`)
-    .join("");
-}
-
-async function carregarCidadesAtuais(competencia) {
-  try {
-    if (!competencia || cidadesAtuaisCompetencia === competencia) return;
-
-    const client = validarSupabasePronto();
-
-    const { data, error } = await client
-      .from("doutores_cidade_atual")
-      .select("*")
-      .eq("competencia", competencia);
-
-    if (error) throw error;
-
-    cidadesAtuaisCache = {};
-
-    for (const item of data || []) {
-      cidadesAtuaisCache[item.doutor_nome_normalizado] = item.cidade_atual || "";
-    }
-
-    cidadesAtuaisCompetencia = competencia;
-  } catch (err) {
-    console.warn("Não foi possível carregar cidades atuais:", err);
-  }
-}
-
-async function salvarCidadeAtualDoutor(doutorNome, cidadeAtual) {
-  try {
-    const competencia = getCompetenciaAtual();
-    const chave = normalizarNome(doutorNome);
-    const client = validarSupabasePronto();
-
-    const { data: userData } = await client.auth.getUser();
-    const email = userData?.user?.email || null;
-
-    cidadesAtuaisCache[chave] = cidadeAtual;
-
-    const { error } = await client
-      .from("doutores_cidade_atual")
-      .upsert({
-        competencia,
-        doutor_nome_normalizado: chave,
-        doutor_nome: doutorNome,
-        cidade_atual: cidadeAtual || null,
-        updated_by_email: email,
-        updated_at: new Date().toISOString()
-      }, {
-        onConflict: "competencia,doutor_nome_normalizado"
-      });
-
-    if (error) throw error;
-  } catch (err) {
-    console.error("Erro ao salvar cidade atual:", err);
-    alert("Não foi possível salvar a cidade atual.");
-  }
-}
-
 function obterPixKeyDoDoutor(nomeDoutor) {
-  const competencia = getCompetenciaAtual();
-  const saldos = getSaldosCompetencia(competencia);
+  const saldos = getSaldosCompetencia(getCompetenciaAtual());
   const chave = normalizarNome(nomeDoutor);
   const item = saldos.find(s => normalizarNome(s.doutor) === chave);
   return item?.pix_key || "";
@@ -1036,9 +631,7 @@ function montarCardDoutorStatus(item) {
     <div class="doctor-status-card ${tipo}">
       <div class="doctor-card-top">
         <div class="doctor-card-name">${escapeHtml(item.doutor)}</div>
-        <div class="doctor-card-status ${tipo}">
-          ${tituloStatusCard(tipo)}
-        </div>
+        <div class="doctor-card-status ${tipo}">${tituloStatusCard(tipo)}</div>
       </div>
 
       <div class="doctor-card-values">
@@ -1046,17 +639,14 @@ function montarCardDoutorStatus(item) {
           <small>Crédito inicial</small>
           <strong>${formatarMoeda(item.creditoInicial)}</strong>
         </div>
-
         <div class="doctor-card-metric">
           <small>Utilizado</small>
           <strong>${formatarMoeda(item.utilizado)}</strong>
         </div>
-
         <div class="doctor-card-metric">
           <small>Saldo</small>
           <strong class="${saldoClasse}">${formatarMoeda(item.creditoDisponivel)}</strong>
         </div>
-
         <div class="doctor-card-metric">
           <small>% utilizado</small>
           <strong>${item.percentual.toFixed(1)}%</strong>
@@ -1073,827 +663,5 @@ function montarCardDoutorStatus(item) {
         <input
           class="doctor-city-input"
           list="listaCidadesAtuais"
-          value="${escapeHtml(cidadeAtual)}"
-          placeholder="Digite ou selecione a cidade"
-          onchange="salvarCidadeAtualDoutor('${escapeHtml(item.doutor)}', this.value)"
-        />
-      </div>
-    </div>
-  `;
-}
-
-function garantirResumoRapidoNovo() {
-  let resumo = byId("novoResumoRapido");
-  if (resumo) return resumo;
-
-  resumo = document.createElement("section");
-  resumo.id = "novoResumoRapido";
-  resumo.className = "dashboard-resumo-container";
-
-  resumo.innerHTML = `
-    <div class="dashboard-bloco">
-      <div class="dashboard-titulo-principal">Resumo rápido</div>
-      <div class="dashboard-subtitulo-principal">Informações conforme os filtros selecionados</div>
-      <div class="dashboard-resumo-grid" id="resumoRapidoGrid"></div>
-    </div>
-  `;
-
-  const painel = byId("painelStatusDoutores");
-  if (painel) {
-    painel.insertAdjacentElement("afterend", resumo);
-  } else {
-    byId("dashboardView")?.prepend(resumo);
-  }
-
-  return resumo;
-}
-
-function renderResumoRapidoFiltros() {
-  garantirResumoRapidoNovo();
-
-  const registros = getRegistrosFiltrados();
-
-  const totalLancamentos = registros.length;
-  const totalValor = registros.reduce((acc, item) => acc + toNumber(item.valor, 0), 0);
-  const totalDescontado = registros.reduce((acc, item) => acc + toNumber(item.valor_descontado, 0), 0);
-  const totalPendente = registros.reduce((acc, item) => acc + toNumber(item.pendente, 0), 0);
-
-  const grid = byId("resumoRapidoGrid");
-  if (!grid) return;
-
-  grid.innerHTML = `
-    <div class="dashboard-resumo-card">
-      <small>Lançamentos</small>
-      <strong>${totalLancamentos}</strong>
-    </div>
-
-    <div class="dashboard-resumo-card">
-      <small>Valor total</small>
-      <strong>${formatarMoeda(totalValor)}</strong>
-    </div>
-
-    <div class="dashboard-resumo-card">
-      <small>Descontado</small>
-      <strong>${formatarMoeda(totalDescontado)}</strong>
-    </div>
-
-    <div class="dashboard-resumo-card">
-      <small>Pendente</small>
-      <strong>${formatarMoeda(totalPendente)}</strong>
-    </div>
-  `;
-}
-
-function renderizarCardsStatusInicio(saldos) {
-  garantirPainelStatusInicio();
-  preencherListaCidadesAtuais();
-
-  const todos = montarResumoDoutores(saldos);
-
-  const bloqueados = todos.filter(item => item.percentual >= 100);
-  const atencao = todos.filter(item => item.percentual >= 50 && item.percentual < 100);
-  const controlados = todos.filter(item => item.percentual < 50);
-
-  const elBloqueados = byId("cardsBloqueados");
-  const elAtencao = byId("cardsAtencao");
-  const elControlados = byId("cardsControlados");
-
-  if (elBloqueados) {
-    elBloqueados.innerHTML = bloqueados.length
-      ? bloqueados.map(montarCardDoutorStatus).join("")
-      : `<div class="empty-status-card">Sem doutores bloqueados.</div>`;
-  }
-
-  if (elAtencao) {
-    elAtencao.innerHTML = atencao.length
-      ? atencao.map(montarCardDoutorStatus).join("")
-      : `<div class="empty-status-card">Sem doutores em atenção.</div>`;
-  }
-
-  if (elControlados) {
-    elControlados.innerHTML = controlados.length
-      ? controlados.map(montarCardDoutorStatus).join("")
-      : `<div class="empty-status-card">Sem doutores controlados.</div>`;
-  }
-
-  renderResumoRapidoFiltros();
-}
-
-async function atualizarPainelInicioBonito() {
-  if (!dashboardData) return;
-
-  const competencia = getCompetenciaAtual();
-
-  await carregarCidadesAtuais(competencia);
-
-  document.body.classList.add("modo-inicio-limpo");
-
-  renderizarCardsStatusInicio(getSaldosFiltrados());
-  renderTabelaPixMes(getRegistrosFiltrados());
-
-  reordenarSecoesDashboard();
-}
-
-async function atualizarDashboard() {
-  if (!dashboardData) return;
-
-  const competencia = getCompetenciaAtual();
-  const registros = getRegistrosFiltrados();
-  const saldos = getSaldosFiltrados();
-
-  garantirIdsSecoesDashboard();
-
-  renderCards(registros);
-  renderTabelaBloqueados(saldos);
-  renderTabelaAtencao(saldos);
-  renderTabelaControlados(saldos);
-  renderTabelaResumoDoutores(saldos);
-  renderTabelaPixMes(registros);
-
-  const badgeCompetencia = byId("badgeCompetencia");
-  if (badgeCompetencia) badgeCompetencia.textContent = formatarCompetenciaLabel(competencia);
-
-  await atualizarPainelInicioBonito();
-}
-
-function exportarCSV() {
-  const competencia = getCompetenciaAtual();
-  const registros = getRegistrosFiltrados();
-
-  if (!registros.length) {
-    alert("Não há dados para exportar.");
-    return;
-  }
-
-  const headers = [
-    "competencia", "data", "cidade", "responsavel_fiscal", "doutor_final",
-    "paciente", "valor", "valor_descontado", "pendente"
-  ];
-
-  const rows = registros.map(item => [
-    item.competencia ?? "",
-    item.data ?? "",
-    item.unidade ?? "",
-    item.responsavel_fiscal_lido ?? "",
-    item.doutor_final ?? "",
-    item.paciente ?? "",
-    item.valor ?? 0,
-    item.valor_descontado ?? 0,
-    item.pendente ?? 0
-  ]);
-
-  const csv = [headers, ...rows]
-    .map(row => row.map(value => `"${String(value).replace(/"/g, '""')}"`).join(";"))
-    .join("\n");
-
-  const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
-  const url = URL.createObjectURL(blob);
-  const link = document.createElement("a");
-  link.href = url;
-  link.download = `pix_doutores_${competencia}.csv`;
-  link.click();
-  URL.revokeObjectURL(url);
-}
-
-async function carregarDashboardInterno() {
-  const resposta = await fetch("./data/dashboard_data.json", { cache: "no-store" });
-  if (!resposta.ok) throw new Error(`Arquivo não encontrado: ${resposta.status}`);
-
-  dashboardData = await resposta.json();
-  if (!dashboardData || typeof dashboardData !== "object") throw new Error("dashboard_data.json inválido.");
-
-  if (byId("tituloDashboard")) byId("tituloDashboard").textContent = dashboardData.titulo_dashboard || "PIX Doutores";
-  if (byId("subtituloDashboard")) byId("subtituloDashboard").textContent = "Lista mensal de PIX Doutores com alertas de limite";
-  if (byId("badgeArquivo")) {
-    byId("badgeArquivo").textContent = dashboardData?.arquivo_origem
-      ? `Base: ${dashboardData.arquivo_origem}`
-      : "Base não informada";
-  }
-
-  preencherBadgeUsuario();
-  preencherFiltroMes();
-  preencherFiltroCidade();
-  preencherFiltroDoutor();
-  garantirIdsSecoesDashboard();
-
-  await sincronizarSaldosAdminNoDashboard();
-  await atualizarDashboard();
-}
-
-async function carregarDoutoresAdmin() {
-  const tbody = byId("tabelaAdminDoutores");
-  if (!tbody) return;
-
-  tbody.innerHTML = `<tr><td colspan="10" class="empty-state">Carregando...</td></tr>`;
-
-  const competencia = getCompetenciaAtual();
-  const client = validarSupabasePronto();
-
-  try {
-    const { data: doutoresSupabase } = await client
-      .from("doutores_config")
-      .select("*")
-      .order("nome", { ascending: true });
-
-    const { data: saldosSupabase } = await client
-      .from("doutores_saldos_mensais")
-      .select("*")
-      .eq("competencia", competencia);
-
-    const fallbackDoutores = obterDoutoresFallbackDoDashboard();
-    const fallbackSaldos = obterSaldosFallbackDaCompetencia(competencia);
-    const utilizadoPorNome = somarUtilizadoPorNomeNosRegistros(competencia);
-
-    const todosPorNome = new Map();
-
-    for (const item of fallbackDoutores) {
-      const chave = normalizarNome(item.nome || "");
-      if (!chave) continue;
-
-      todosPorNome.set(chave, {
-        id: item.id,
-        nome: item.nome,
-        nome_normalizado: chave,
-        credito: toNumber(item.credito, 0),
-        pix_key: item.pix_key || "",
-        ativo: item.ativo !== false,
-        updated_by_email: item.updated_by_email || null,
-        updated_by_nome: item.updated_by_nome || null
-      });
-    }
-
-    for (const item of doutoresSupabase || []) {
-      const chave = normalizarNome(item.nome || item.nome_normalizado || "");
-      if (!chave) continue;
-
-      const existente = todosPorNome.get(chave) || {};
-
-      todosPorNome.set(chave, {
-        id: item.id || existente.id || chave,
-        nome: item.nome || existente.nome || "",
-        nome_normalizado: chave,
-        credito: toNumber(item.credito ?? existente.credito, 0),
-        pix_key: item.pix_key || existente.pix_key || "",
-        ativo: item.ativo !== false,
-        updated_by_email: item.updated_by_email || existente.updated_by_email || null,
-        updated_by_nome: item.updated_by_nome || existente.updated_by_nome || null
-      });
-    }
-
-    const saldoPorDoutorId = {};
-    for (const item of saldosSupabase || []) {
-      saldoPorDoutorId[item.doutor_id] = item;
-    }
-
-    const doutores = Array.from(todosPorNome.values()).sort((a, b) => {
-      if (a.ativo !== b.ativo) return a.ativo ? -1 : 1;
-      return String(a.nome || "").localeCompare(String(b.nome || ""), "pt-BR");
-    });
-
-    if (!doutores.length) {
-      tbody.innerHTML = `<tr><td colspan="10" class="empty-state">Nenhum doutor cadastrado</td></tr>`;
-      return;
-    }
-
-    tbody.innerHTML = doutores.map(item => {
-      const chaveNome = normalizarNome(item.nome || "");
-      const saldoOriginal = fallbackSaldos[chaveNome] || {};
-      const saldoSupabase = isUuid(item.id) ? (saldoPorDoutorId[item.id] || {}) : {};
-
-      const creditoBase = toNumber(item.credito, 0);
-      const creditoInicial = calcularCreditoInicialDoMes(creditoBase, saldoSupabase, saldoOriginal);
-
-      const utilizadoRegistros = toNumber(utilizadoPorNome[chaveNome], 0);
-      const utilizadoFallback = toNumber(saldoOriginal?.utilizado, 0);
-      const utilizadoSupabase = toNumber(saldoSupabase?.utilizado, 0);
-
-      const utilizado =
-        utilizadoRegistros > 0
-          ? utilizadoRegistros
-          : (utilizadoFallback > 0 ? utilizadoFallback : utilizadoSupabase);
-
-      const saldoFinal = calcularSaldoFinalDoMes(creditoInicial, utilizado);
-
-      const responsavelUltimo =
-        saldoSupabase.updated_by_nome ||
-        saldoSupabase.updated_by_email ||
-        item.updated_by_nome ||
-        item.updated_by_email ||
-        "";
-
-      const classeInativo = item.ativo === false ? "linha-inativo" : "";
-
-      return `
-        <tr class="${classeInativo}">
-          <td><input data-id="${item.id}" data-field="nome" type="text" value="${escapeHtml(item.nome)}" /></td>
-          <td><input data-id="${item.id}" data-field="credito" type="number" step="0.01" value="${creditoBase}" /></td>
-          <td><input data-id="${item.id}" data-field="credito_inicial" type="number" step="0.01" value="${creditoInicial}" /></td>
-          <td><input data-id="${item.id}" data-field="utilizado" type="number" step="0.01" value="${utilizado}" /></td>
-          <td><input data-id="${item.id}" data-field="credito_final" type="number" step="0.01" value="${saldoFinal}" /></td>
-          <td><input data-id="${item.id}" data-field="pix_key" type="text" value="${escapeHtml(item.pix_key || "")}" /></td>
-          <td>
-            <select data-id="${item.id}" data-field="ativo">
-              <option value="true" ${item.ativo !== false ? "selected" : ""}>Ativo</option>
-              <option value="false" ${item.ativo === false ? "selected" : ""}>Inativo</option>
-            </select>
-          </td>
-          <td><input data-id="${item.id}" data-field="observacao" type="text" value="${escapeHtml(saldoSupabase.observacao || "")}" /></td>
-          <td>${escapeHtml(responsavelUltimo)}</td>
-          <td>
-            <button class="btn btn-primary btn-small" onclick="salvarDoutor('${item.id}')">Salvar</button>
-            <button class="btn btn-secondary btn-small" onclick="removerDoutor('${item.id}')">Excluir</button>
-          </td>
-        </tr>
-      `;
-    }).join("");
-  } catch (err) {
-    console.error("Erro ao carregar doutores:", err);
-    tbody.innerHTML = `<tr><td colspan="10" class="empty-state">Erro ao carregar doutores</td></tr>`;
-  }
-}
-async function salvarDoutor(id) {
-  try {
-    mostrarMensagemAdmin("");
-
-    const competencia = getCompetenciaAtual();
-    const client = validarSupabasePronto();
-
-    const nome = document.querySelector(`[data-id="${id}"][data-field="nome"]`)?.value.trim() || "";
-    const creditoBase = toNumber(document.querySelector(`[data-id="${id}"][data-field="credito"]`)?.value, 0);
-    const creditoInicial = toNumber(document.querySelector(`[data-id="${id}"][data-field="credito_inicial"]`)?.value, 0);
-    const utilizado = toNumber(document.querySelector(`[data-id="${id}"][data-field="utilizado"]`)?.value, 0);
-    const pixKey = document.querySelector(`[data-id="${id}"][data-field="pix_key"]`)?.value.trim() || "";
-    const ativo = document.querySelector(`[data-id="${id}"][data-field="ativo"]`)?.value === "true";
-    const observacao = document.querySelector(`[data-id="${id}"][data-field="observacao"]`)?.value.trim() || null;
-
-    if (!nome) {
-      mostrarMensagemAdmin("Nome é obrigatório.", true);
-      return;
-    }
-
-    const { data: userData } = await client.auth.getUser();
-    const userAtual = userData?.user || null;
-    const emailAtual = userAtual?.email || null;
-    const nomeResponsavel = obterNomeResponsavelAtual(userAtual);
-
-    const payloadDoutor = {
-      nome,
-      nome_normalizado: normalizarNome(nome),
-      credito: creditoBase,
-      pix_key: pixKey || null,
-      ativo,
-      updated_by_email: emailAtual,
-      updated_by_nome: nomeResponsavel
-    };
-
-    const doutorIdReal = await garantirDoutorNoSupabase(id, payloadDoutor);
-
-    const { error: errorDoutor } = await client
-      .from("doutores_config")
-      .update(payloadDoutor)
-      .eq("id", doutorIdReal);
-
-    if (errorDoutor) throw errorDoutor;
-
-    const creditoFinal = calcularSaldoFinalDoMes(creditoInicial, utilizado);
-    const ajusteManual = Number((creditoInicial - creditoBase).toFixed(2));
-
-    const { data: saldoExistente, error: errorBuscaSaldo } = await client
-      .from("doutores_saldos_mensais")
-      .select("*")
-      .eq("competencia", competencia)
-      .eq("doutor_id", doutorIdReal)
-      .maybeSingle();
-
-    if (errorBuscaSaldo) throw errorBuscaSaldo;
-
-    const payloadSaldo = {
-      credito_inicial: creditoInicial,
-      utilizado,
-      credito_final: creditoFinal,
-      ajuste_manual: ajusteManual,
-      observacao,
-      updated_by_email: emailAtual,
-      updated_by_nome: nomeResponsavel
-    };
-
-    if (saldoExistente) {
-      const { error: errorSaldo } = await client
-        .from("doutores_saldos_mensais")
-        .update(payloadSaldo)
-        .eq("id", saldoExistente.id);
-
-      if (errorSaldo) throw errorSaldo;
-    } else {
-      const { error: errorInsertSaldo } = await client
-        .from("doutores_saldos_mensais")
-        .insert({
-          competencia,
-          doutor_id: doutorIdReal,
-          ...payloadSaldo
-        });
-
-      if (errorInsertSaldo) throw errorInsertSaldo;
-    }
-
-    await sincronizarSaldosAdminNoDashboard();
-    await atualizarDashboard();
-    await carregarDoutoresAdmin();
-
-    mostrarMensagemAdmin("Doutor salvo com sucesso.");
-  } catch (err) {
-    console.error("Erro detalhado ao salvar doutor:", err);
-    mostrarMensagemAdmin(`Erro ao salvar doutor: ${err.message || "falha no banco de dados"}`, true);
-  }
-}
-
-async function removerDoutor(id) {
-  if (!confirm("Tem certeza que deseja excluir este doutor?")) return;
-
-  try {
-    mostrarMensagemAdmin("");
-
-    if (!isUuid(id)) {
-      mostrarMensagemAdmin("Este doutor ainda não existe no Supabase. Nada para excluir no banco.", true);
-      return;
-    }
-
-    const client = validarSupabasePronto();
-
-    const { error: errorSaldo } = await client
-      .from("doutores_saldos_mensais")
-      .delete()
-      .eq("doutor_id", id);
-
-    if (errorSaldo) throw errorSaldo;
-
-    const { error: errorDoutor } = await client
-      .from("doutores_config")
-      .delete()
-      .eq("id", id);
-
-    if (errorDoutor) throw errorDoutor;
-
-    await sincronizarSaldosAdminNoDashboard();
-    await atualizarDashboard();
-    await carregarDoutoresAdmin();
-
-    mostrarMensagemAdmin("Doutor removido com sucesso.");
-  } catch (err) {
-    console.error("Erro detalhado ao remover doutor:", err);
-    mostrarMensagemAdmin(`Erro ao remover doutor: ${err.message || "falha no banco de dados"}`, true);
-  }
-}
-
-async function adicionarDoutor() {
-  try {
-    mostrarMensagemAdmin("");
-
-    const client = validarSupabasePronto();
-
-    const nome = byId("novoNome")?.value.trim() || "";
-    const credito = toNumber(byId("novoCredito")?.value, 0);
-    const pixKey = byId("novaPixKey")?.value.trim() || "";
-    const ativo = byId("novoAtivo")?.value === "true";
-    const competencia = getCompetenciaAtual();
-
-    if (!nome) {
-      mostrarMensagemAdmin("Informe o nome do doutor.", true);
-      return;
-    }
-
-    if (Number.isNaN(credito) || credito < 0) {
-      mostrarMensagemAdmin("Informe um crédito válido.", true);
-      return;
-    }
-
-    const { data: userData, error: errorUser } = await client.auth.getUser();
-    if (errorUser) throw errorUser;
-
-    const userAtual = userData?.user || null;
-    const emailAtual = userAtual?.email || null;
-    const nomeResponsavel = obterNomeResponsavelAtual(userAtual);
-
-    const payloadDoutor = {
-      nome,
-      nome_normalizado: normalizarNome(nome),
-      credito,
-      pix_key: pixKey || null,
-      ativo,
-      updated_by_email: emailAtual,
-      updated_by_nome: nomeResponsavel
-    };
-
-    const insertDoutor = await client
-      .from("doutores_config")
-      .insert(payloadDoutor)
-      .select()
-      .single();
-
-    if (insertDoutor.error) throw insertDoutor.error;
-
-    const novoDoutor = insertDoutor.data;
-
-    const payloadSaldo = {
-      competencia,
-      doutor_id: novoDoutor.id,
-      credito_inicial: credito,
-      utilizado: 0,
-      credito_final: credito,
-      ajuste_manual: 0,
-      observacao: null,
-      updated_by_email: emailAtual,
-      updated_by_nome: nomeResponsavel
-    };
-
-    const insertSaldo = await client
-      .from("doutores_saldos_mensais")
-      .insert(payloadSaldo);
-
-    if (insertSaldo.error) {
-      await client.from("doutores_config").delete().eq("id", novoDoutor.id);
-      throw insertSaldo.error;
-    }
-
-    if (byId("novoNome")) byId("novoNome").value = "";
-    if (byId("novoCredito")) byId("novoCredito").value = "";
-    if (byId("novaPixKey")) byId("novaPixKey").value = "";
-    if (byId("novoAtivo")) byId("novoAtivo").value = "true";
-
-    await sincronizarSaldosAdminNoDashboard();
-    await atualizarDashboard();
-    await carregarDoutoresAdmin();
-
-    mostrarMensagemAdmin("Doutor adicionado com sucesso.");
-  } catch (err) {
-    console.error("Erro detalhado ao adicionar doutor:", err);
-
-    const mensagem = [
-      err?.message || "Erro desconhecido",
-      err?.details ? `Detalhes: ${err.details}` : "",
-      err?.hint ? `Dica: ${err.hint}` : "",
-      err?.code ? `Código: ${err.code}` : ""
-    ].filter(Boolean).join(" | ");
-
-    mostrarMensagemAdmin(mensagem, true);
-  }
-}
-
-async function iniciarAplicacao() {
-  try {
-    if (!window.supabaseClient) {
-      mostrarTelaLogin();
-      mostrarMensagemAuth("Supabase não configurado. Verifique js/supabase-config.js.", true);
-      return;
-    }
-
-    const client = validarSupabasePronto();
-    const { data, error } = await client.auth.getSession();
-
-    if (error) throw error;
-
-    const session = data?.session || null;
-
-    if (!session) {
-      mostrarTelaLogin();
-      return;
-    }
-
-    const autorizado = await validarUsuarioAutorizado();
-
-    if (!autorizado) {
-      await client.auth.signOut();
-      mostrarTelaLogin();
-      mostrarMensagemAuth("Usuário sem permissão de acesso.", true);
-      return;
-    }
-
-    currentUser = session.user;
-    currentUserIsAdmin = await validarUsuarioAdmin();
-
-    if (currentUserIsAdmin) {
-      byId("btnTabAdmin")?.classList.remove("hidden");
-    } else {
-      byId("btnTabAdmin")?.classList.add("hidden");
-    }
-
-    mostrarApp();
-    mostrarDashboard();
-    preencherBadgeUsuario();
-
-    try {
-      await carregarDashboardInterno();
-    } catch (errDashboard) {
-      console.error("Erro ao carregar dashboard:", errDashboard);
-
-      const titulo = byId("tituloDashboard");
-      const subtitulo = byId("subtituloDashboard");
-      const cards = byId("cardsResumo");
-      const tabelaResumo = byId("tabelaResumoDoutores");
-      const tabelaAtencao = byId("tabelaAtencao");
-      const tabelaBloqueados = byId("tabelaBloqueados");
-      const tabelaPixMes = byId("tabelaPixMes");
-
-      if (titulo) titulo.textContent = "PIX Doutores";
-      if (subtitulo) subtitulo.textContent = "Erro ao carregar os dados da dashboard.";
-
-      if (cards) {
-        cards.innerHTML = `
-          <div class="stat-card">
-            <div class="stat-title">Status</div>
-            <div class="stat-value">Falha ao carregar data/dashboard_data.json</div>
-          </div>
-        `;
-      }
-
-      if (tabelaResumo) tabelaResumo.innerHTML = `<tr><td colspan="6" class="empty-state">Erro ao carregar dados</td></tr>`;
-      if (tabelaAtencao) tabelaAtencao.innerHTML = `<tr><td colspan="6" class="empty-state">Erro ao carregar dados</td></tr>`;
-      if (tabelaBloqueados) tabelaBloqueados.innerHTML = `<tr><td colspan="6" class="empty-state">Erro ao carregar dados</td></tr>`;
-      if (tabelaPixMes) tabelaPixMes.innerHTML = `<tr><td colspan="7" class="empty-state">Erro ao carregar dados</td></tr>`;
-    }
-  } catch (erro) {
-    console.error("Erro ao iniciar app:", erro);
-    mostrarTelaLogin();
-    mostrarMensagemAuth(erro.message || "Erro ao validar acesso.", true);
-  }
-}
-
-byId("loginForm")?.addEventListener("submit", async (event) => {
-  event.preventDefault();
-
-  const email = byId("email")?.value.trim() || "";
-  const password = byId("password")?.value.trim() || "";
-
-  mostrarMensagemAuth("");
-
-  if (!email || !password) {
-    mostrarMensagemAuth("Preencha e-mail e senha.", true);
-    return;
-  }
-
-  try {
-    await loginSupabase(email, password);
-
-    const client = validarSupabasePronto();
-    const { data } = await client.auth.getUser();
-
-    currentUser = data?.user || null;
-    currentUserIsAdmin = await validarUsuarioAdmin();
-
-    if (currentUserIsAdmin) {
-      byId("btnTabAdmin")?.classList.remove("hidden");
-    } else {
-      byId("btnTabAdmin")?.classList.add("hidden");
-    }
-
-    mostrarApp();
-    mostrarDashboard();
-    preencherBadgeUsuario();
-
-    await carregarDashboardInterno();
-  } catch (erro) {
-    console.error(erro);
-    mostrarMensagemAuth(erro.message || "Não foi possível entrar.", true);
-  }
-});
-
-byId("btnCriarAcesso")?.addEventListener("click", async () => {
-  const email = byId("email")?.value.trim() || "";
-  const password = byId("password")?.value.trim() || "";
-
-  mostrarMensagemAuth("");
-
-  if (!email || !password) {
-    mostrarMensagemAuth("Preencha e-mail e senha para criar o acesso.", true);
-    return;
-  }
-
-  try {
-    await criarAcessoSupabase(email, password);
-    mostrarMensagemAuth("Acesso criado com sucesso. Confira seu e-mail.");
-  } catch (erro) {
-    console.error(erro);
-    mostrarMensagemAuth(erro.message || "Não foi possível criar o acesso.", true);
-  }
-});
-
-byId("btnForgotPassword")?.addEventListener("click", async () => {
-  const email = byId("email")?.value.trim() || "";
-
-  if (!email) {
-    mostrarMensagemAuth("Digite seu e-mail para recuperar a senha.", true);
-    return;
-  }
-
-  try {
-    await enviarRecuperacaoSenha(email);
-    mostrarMensagemAuth("Enviamos um link de recuperação para seu e-mail.");
-  } catch (erro) {
-    console.error(erro);
-    mostrarMensagemAuth("Não foi possível enviar o e-mail de recuperação.", true);
-  }
-});
-
-byId("btnLogout")?.addEventListener("click", async () => {
-  try {
-    await logoutSupabase();
-  } catch (err) {
-    console.error(err);
-  }
-
-  currentUser = null;
-  currentUserIsAdmin = false;
-  dashboardData = null;
-
-  mostrarTelaLogin();
-});
-
-byId("btnTabDashboard")?.addEventListener("click", () => {
-  mostrarDashboard();
-});
-
-byId("btnTabAdmin")?.addEventListener("click", async () => {
-  if (!currentUserIsAdmin) return;
-
-  mostrarAdmin();
-  await carregarDoutoresAdmin();
-});
-
-byId("btnAdicionarDoutor")?.addEventListener("click", adicionarDoutor);
-
-byId("filtroMes")?.addEventListener("change", async () => {
-  if (!dashboardData) return;
-
-  cidadesAtuaisCompetencia = "";
-
-  const adminMes = byId("filtroMesAdmin");
-  if (adminMes) adminMes.value = getCompetenciaAtual();
-
-  preencherFiltroCidade();
-  preencherFiltroDoutor();
-
-  await sincronizarSaldosAdminNoDashboard();
-  await atualizarDashboard();
-
-  if (!byId("adminView")?.classList.contains("hidden")) {
-    await carregarDoutoresAdmin();
-  }
-});
-
-byId("filtroCidade")?.addEventListener("change", async () => {
-  await atualizarDashboard();
-});
-
-byId("filtroDoutor")?.addEventListener("change", async () => {
-  await atualizarDashboard();
-});
-
-byId("btnLimpar")?.addEventListener("click", async () => {
-  const filtroMes = byId("filtroMes");
-  const filtroCidade = byId("filtroCidade");
-  const filtroDoutor = byId("filtroDoutor");
-
-  if (filtroMes) {
-    filtroMes.value = dashboardData?.competencia_padrao || "2026-01";
-  }
-
-  preencherFiltroCidade();
-  preencherFiltroDoutor();
-
-  if (filtroCidade) filtroCidade.selectedIndex = 0;
-  if (filtroDoutor) filtroDoutor.selectedIndex = 0;
-
-  cidadesAtuaisCompetencia = "";
-
-  await sincronizarSaldosAdminNoDashboard();
-  await atualizarDashboard();
-});
-
-byId("btnExportar")?.addEventListener("click", exportarCSV);
-
-window.salvarDoutor = salvarDoutor;
-window.removerDoutor = removerDoutor;
-window.salvarCidadeAtualDoutor = salvarCidadeAtualDoutor;
-
-if (window.supabaseClient) {
-  window.supabaseClient.auth.onAuthStateChange(async (_event, session) => {
-    if (!session) {
-      currentUser = null;
-      currentUserIsAdmin = false;
-      mostrarTelaLogin();
-      return;
-    }
-
-    currentUser = session.user;
-  });
-}
-
-iniciarAplicacao();
-.doctor-card-grid-inline {
-  margin-top: 16px;
-  padding: 4px;
-}
-
-body:not(.modo-inicio-limpo) .doctor-card-grid-inline {
-  display: grid;
-}
+          data-doutor="${escapeHtml(item.doutor)}"
+          value="${escape
