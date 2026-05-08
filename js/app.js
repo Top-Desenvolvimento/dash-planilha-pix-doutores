@@ -696,16 +696,45 @@ function renderTabelaResumoDoutores(saldos) {
   renderTabelaBase("tabelaResumoDoutores", montarResumoDoutores(saldos), "Sem doutores cadastrados para a competência");
 }
 
-function renderTabelaControlados(saldos) {
-  renderTabelaBase("tabelaControlados", montarResumoDoutores(saldos).filter(item => item.percentual < 50), "Sem doutores controlados");
-}
+function renderCardsDentroDaSecao(tbodyId, linhas, mensagemVazia) {
+  const tbody = byId(tbodyId);
+  if (!tbody) return;
 
-function renderTabelaAtencao(saldos) {
-  renderTabelaBase("tabelaAtencao", montarResumoDoutores(saldos).filter(item => item.percentual >= 50 && item.percentual < 100), "Sem doutores em atenção");
+  const tabela = tbody.closest("table");
+  const wrapper = tbody.closest(".table-wrapper");
+
+  if (tabela) tabela.style.display = "none";
+
+  let container = wrapper?.querySelector(".doctor-card-grid-inline");
+  if (!container && wrapper) {
+    container = document.createElement("div");
+    container.className = "doctor-card-grid doctor-card-grid-inline";
+    wrapper.appendChild(container);
+  }
+
+  if (!container) return;
+
+  if (!linhas.length) {
+    container.innerHTML = `<div class="empty-status-card">${mensagemVazia}</div>`;
+    return;
+  }
+
+  container.innerHTML = linhas.map(montarCardDoutorStatus).join("");
 }
 
 function renderTabelaBloqueados(saldos) {
-  renderTabelaBase("tabelaBloqueados", montarResumoDoutores(saldos).filter(item => item.percentual >= 100), "Sem doutores bloqueados");
+  const linhas = montarResumoDoutores(saldos).filter(item => item.percentual >= 100);
+  renderCardsDentroDaSecao("tabelaBloqueados", linhas, "Sem doutores bloqueados.");
+}
+
+function renderTabelaAtencao(saldos) {
+  const linhas = montarResumoDoutores(saldos).filter(item => item.percentual >= 50 && item.percentual < 100);
+  renderCardsDentroDaSecao("tabelaAtencao", linhas, "Sem doutores em atenção.");
+}
+
+function renderTabelaControlados(saldos) {
+  const linhas = montarResumoDoutores(saldos).filter(item => item.percentual < 50);
+  renderCardsDentroDaSecao("tabelaControlados", linhas, "Sem doutores controlados.");
 }
 
 function garantirSecaoControlados() {
