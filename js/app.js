@@ -731,5 +731,54 @@ if (window.supabaseClient) {
     currentUser = session.user;
   });
 }
+async function iniciarAplicacao() {
+  try {
+    if (!window.supabaseClient) {
+      mostrarTelaLogin();
+      mostrarMensagemAuth("Supabase não configurado. Verifique js/supabase-config.js.", true);
+      return;
+    }
 
+    const client = validarSupabasePronto();
+
+    const { data, error } = await client.auth.getSession();
+    if (error) throw error;
+
+    const session = data?.session || null;
+
+    if (!session) {
+      mostrarTelaLogin();
+      return;
+    }
+
+    const autorizado = await validarUsuarioAutorizado();
+
+    if (!autorizado) {
+      await client.auth.signOut();
+      mostrarTelaLogin();
+      mostrarMensagemAuth("Usuário sem permissão de acesso.", true);
+      return;
+    }
+
+    currentUser = session.user;
+    currentUserIsAdmin = await validarUsuarioAdmin();
+
+    if (currentUserIsAdmin) {
+      byId("btnTabAdmin")?.classList.remove("hidden");
+    } else {
+      byId("btnTabAdmin")?.classList.add("hidden");
+    }
+
+    mostrarApp();
+    mostrarDashboard();
+    preencherBadgeUsuario();
+
+    await carregarDashboardInterno();
+
+  } catch (erro) {
+    console.error("Erro ao iniciar app:", erro);
+    mostrarTelaLogin();
+    mostrarMensagemAuth(erro.message || "Erro ao validar acesso.", true);
+  }
+}
 iniciarAplicacao();
