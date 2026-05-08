@@ -996,3 +996,71 @@ body.modo-inicio-limpo #grupoControladosCards .status-group-header {
 .quadrante-status-topo.controlado .quadrante-status-dot {
   background: #22d399;
 }
+.doctor-card-top {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: flex-start !important;
+  gap: 12px !important;
+  margin-bottom: 14px !important;
+}
+
+.doctor-card-name {
+  display: block !important;
+  font-size: 16px !important;
+  font-weight: 900 !important;
+  color: #fff !important;
+}
+
+.quadrante-status-topo {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 7px !important;
+  width: auto !important;
+  min-width: unset !important;
+  max-width: max-content !important;
+  height: auto !important;
+  padding: 6px 10px !important;
+  border-radius: 999px !important;
+  font-size: 11px !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.3px !important;
+  text-transform: uppercase !important;
+  white-space: nowrap !important;
+}
+
+.quadrante-status-topo.bloqueado {
+  background: rgba(255,82,113,.22) !important;
+  color: #ff8fa5 !important;
+  border: 1px solid rgba(255,82,113,.45) !important;
+}
+
+.quadrante-status-topo.atencao {
+  background: rgba(255,202,87,.18) !important;
+  color: #ffd978 !important;
+  border: 1px solid rgba(255,202,87,.35) !important;
+}
+
+.quadrante-status-topo.controlado {
+  background: rgba(34,211,153,.16) !important;
+  color: #55e6b7 !important;
+  border: 1px solid rgba(34,211,153,.30) !important;
+}
+
+.quadrante-status-dot {
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 50% !important;
+  flex: 0 0 8px !important;
+}
+
+.quadrante-status-topo.bloqueado .quadrante-status-dot {
+  background: #ff5271 !important;
+}
+
+.quadrante-status-topo.atencao .quadrante-status-dot {
+  background: #ffca57 !important;
+}
+
+.quadrante-status-topo.controlado .quadrante-status-dot {
+  background: #22d399 !important;
+}
