@@ -665,3 +665,9 @@ function montarCardDoutorStatus(item) {
           list="listaCidadesAtuais"
           data-doutor="${escapeHtml(item.doutor)}"
           value="${escape
+iniciarAplicacao();
+
+.doctor-card-grid-inline {
+  margin-top: 16px;
+  padding: 4px;
+}
