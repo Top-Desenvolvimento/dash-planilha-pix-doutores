@@ -946,3 +946,53 @@ body.modo-inicio-limpo #grupoControladosCards .status-group-header {
   color: #fff;
   margin-bottom: 14px;
 }
+.quadrante-status-topo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 7px 12px;
+  border-radius: 999px;
+
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.quadrante-status-topo.bloqueado {
+  background: rgba(255, 82, 113, 0.18);
+  color: #ff8fa5;
+  border: 1px solid rgba(255, 82, 113, 0.45);
+}
+
+.quadrante-status-topo.atencao {
+  background: rgba(255, 202, 87, 0.16);
+  color: #ffd978;
+  border: 1px solid rgba(255, 202, 87, 0.35);
+}
+
+.quadrante-status-topo.controlado {
+  background: rgba(34, 211, 153, 0.16);
+  color: #55e6b7;
+  border: 1px solid rgba(34, 211, 153, 0.30);
+}
+
+.quadrante-status-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+
+.quadrante-status-topo.bloqueado .quadrante-status-dot {
+  background: #ff5271;
+  box-shadow: 0 0 10px rgba(255,82,113,.7);
+}
+
+.quadrante-status-topo.atencao .quadrante-status-dot {
+  background: #ffca57;
+}
+
+.quadrante-status-topo.controlado .quadrante-status-dot {
+  background: #22d399;
+}
