@@ -266,11 +266,11 @@
   },
   "2026-05": {
     "competencia": "2026-05",
-    "gerado_em": "2026-05-08T17:03:43.741977",
-    "quantidade_total": 167,
-    "valor_total": 21461.5,
+    "gerado_em": "2026-05-08T18:03:12.477972",
+    "quantidade_total": 171,
+    "valor_total": 21856.5,
     "valor_total_descontado": 210.0,
-    "valor_total_pendente": 21251.5,
+    "valor_total_pendente": 21646.5,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -294,8 +294,8 @@
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 14,
-        "valor": 2193.0
+        "quantidade": 15,
+        "valor": 2313.0
       },
       {
         "unidade": "Garibaldi",
@@ -304,8 +304,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 47,
-        "valor": 5677.0
+        "quantidade": 50,
+        "valor": 5952.0
       },
       {
         "unidade": "Ssdocai",
@@ -371,7 +371,7 @@
       },
       {
         "doutor": "Luisa Moraes Lucas",
-        "quantidade": 7,
+        "quantidade": 10,
         "valor_descontado": 0.0
       },
       {
@@ -391,7 +391,7 @@
       },
       {
         "doutor": "Tamara Macanan",
-        "quantidade": 5,
+        "quantidade": 6,
         "valor_descontado": 0.0
       },
       {
