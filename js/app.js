@@ -1372,3 +1372,481 @@ async function carregarDoutoresAdmin() {
     tbody.innerHTML = `<tr><td colspan="10" class="empty-state">Erro ao carregar doutores</td></tr>`;
   }
 }
+async function salvarDoutor(id) {
+  try {
+    mostrarMensagemAdmin("");
+
+    const competencia = getCompetenciaAtual();
+    const client = validarSupabasePronto();
+
+    const nome = document.querySelector(`[data-id="${id}"][data-field="nome"]`)?.value.trim() || "";
+    const creditoBase = toNumber(document.querySelector(`[data-id="${id}"][data-field="credito"]`)?.value, 0);
+    const creditoInicial = toNumber(document.querySelector(`[data-id="${id}"][data-field="credito_inicial"]`)?.value, 0);
+    const utilizado = toNumber(document.querySelector(`[data-id="${id}"][data-field="utilizado"]`)?.value, 0);
+    const pixKey = document.querySelector(`[data-id="${id}"][data-field="pix_key"]`)?.value.trim() || "";
+    const ativo = document.querySelector(`[data-id="${id}"][data-field="ativo"]`)?.value === "true";
+    const observacao = document.querySelector(`[data-id="${id}"][data-field="observacao"]`)?.value.trim() || null;
+
+    if (!nome) {
+      mostrarMensagemAdmin("Nome é obrigatório.", true);
+      return;
+    }
+
+    const { data: userData } = await client.auth.getUser();
+    const userAtual = userData?.user || null;
+    const emailAtual = userAtual?.email || null;
+    const nomeResponsavel = obterNomeResponsavelAtual(userAtual);
+
+    const payloadDoutor = {
+      nome,
+      nome_normalizado: normalizarNome(nome),
+      credito: creditoBase,
+      pix_key: pixKey || null,
+      ativo,
+      updated_by_email: emailAtual,
+      updated_by_nome: nomeResponsavel
+    };
+
+    const doutorIdReal = await garantirDoutorNoSupabase(id, payloadDoutor);
+
+    const { error: errorDoutor } = await client
+      .from("doutores_config")
+      .update(payloadDoutor)
+      .eq("id", doutorIdReal);
+
+    if (errorDoutor) throw errorDoutor;
+
+    const creditoFinal = calcularSaldoFinalDoMes(creditoInicial, utilizado);
+    const ajusteManual = Number((creditoInicial - creditoBase).toFixed(2));
+
+    const { data: saldoExistente, error: errorBuscaSaldo } = await client
+      .from("doutores_saldos_mensais")
+      .select("*")
+      .eq("competencia", competencia)
+      .eq("doutor_id", doutorIdReal)
+      .maybeSingle();
+
+    if (errorBuscaSaldo) throw errorBuscaSaldo;
+
+    const payloadSaldo = {
+      credito_inicial: creditoInicial,
+      utilizado,
+      credito_final: creditoFinal,
+      ajuste_manual: ajusteManual,
+      observacao,
+      updated_by_email: emailAtual,
+      updated_by_nome: nomeResponsavel
+    };
+
+    if (saldoExistente) {
+      const { error: errorSaldo } = await client
+        .from("doutores_saldos_mensais")
+        .update(payloadSaldo)
+        .eq("id", saldoExistente.id);
+
+      if (errorSaldo) throw errorSaldo;
+    } else {
+      const { error: errorInsertSaldo } = await client
+        .from("doutores_saldos_mensais")
+        .insert({
+          competencia,
+          doutor_id: doutorIdReal,
+          ...payloadSaldo
+        });
+
+      if (errorInsertSaldo) throw errorInsertSaldo;
+    }
+
+    await sincronizarSaldosAdminNoDashboard();
+    await atualizarDashboard();
+    await carregarDoutoresAdmin();
+
+    mostrarMensagemAdmin("Doutor salvo com sucesso.");
+  } catch (err) {
+    console.error("Erro detalhado ao salvar doutor:", err);
+    mostrarMensagemAdmin(`Erro ao salvar doutor: ${err.message || "falha no banco de dados"}`, true);
+  }
+}
+
+async function removerDoutor(id) {
+  if (!confirm("Tem certeza que deseja excluir este doutor?")) return;
+
+  try {
+    mostrarMensagemAdmin("");
+
+    if (!isUuid(id)) {
+      mostrarMensagemAdmin("Este doutor ainda não existe no Supabase. Nada para excluir no banco.", true);
+      return;
+    }
+
+    const client = validarSupabasePronto();
+
+    const { error: errorSaldo } = await client
+      .from("doutores_saldos_mensais")
+      .delete()
+      .eq("doutor_id", id);
+
+    if (errorSaldo) throw errorSaldo;
+
+    const { error: errorDoutor } = await client
+      .from("doutores_config")
+      .delete()
+      .eq("id", id);
+
+    if (errorDoutor) throw errorDoutor;
+
+    await sincronizarSaldosAdminNoDashboard();
+    await atualizarDashboard();
+    await carregarDoutoresAdmin();
+
+    mostrarMensagemAdmin("Doutor removido com sucesso.");
+  } catch (err) {
+    console.error("Erro detalhado ao remover doutor:", err);
+    mostrarMensagemAdmin(`Erro ao remover doutor: ${err.message || "falha no banco de dados"}`, true);
+  }
+}
+
+async function adicionarDoutor() {
+  try {
+    mostrarMensagemAdmin("");
+
+    const client = validarSupabasePronto();
+
+    const nome = byId("novoNome")?.value.trim() || "";
+    const credito = toNumber(byId("novoCredito")?.value, 0);
+    const pixKey = byId("novaPixKey")?.value.trim() || "";
+    const ativo = byId("novoAtivo")?.value === "true";
+    const competencia = getCompetenciaAtual();
+
+    if (!nome) {
+      mostrarMensagemAdmin("Informe o nome do doutor.", true);
+      return;
+    }
+
+    if (Number.isNaN(credito) || credito < 0) {
+      mostrarMensagemAdmin("Informe um crédito válido.", true);
+      return;
+    }
+
+    const { data: userData, error: errorUser } = await client.auth.getUser();
+    if (errorUser) throw errorUser;
+
+    const userAtual = userData?.user || null;
+    const emailAtual = userAtual?.email || null;
+    const nomeResponsavel = obterNomeResponsavelAtual(userAtual);
+
+    const payloadDoutor = {
+      nome,
+      nome_normalizado: normalizarNome(nome),
+      credito,
+      pix_key: pixKey || null,
+      ativo,
+      updated_by_email: emailAtual,
+      updated_by_nome: nomeResponsavel
+    };
+
+    const insertDoutor = await client
+      .from("doutores_config")
+      .insert(payloadDoutor)
+      .select()
+      .single();
+
+    if (insertDoutor.error) throw insertDoutor.error;
+
+    const novoDoutor = insertDoutor.data;
+
+    const payloadSaldo = {
+      competencia,
+      doutor_id: novoDoutor.id,
+      credito_inicial: credito,
+      utilizado: 0,
+      credito_final: credito,
+      ajuste_manual: 0,
+      observacao: null,
+      updated_by_email: emailAtual,
+      updated_by_nome: nomeResponsavel
+    };
+
+    const insertSaldo = await client
+      .from("doutores_saldos_mensais")
+      .insert(payloadSaldo);
+
+    if (insertSaldo.error) {
+      await client.from("doutores_config").delete().eq("id", novoDoutor.id);
+      throw insertSaldo.error;
+    }
+
+    if (byId("novoNome")) byId("novoNome").value = "";
+    if (byId("novoCredito")) byId("novoCredito").value = "";
+    if (byId("novaPixKey")) byId("novaPixKey").value = "";
+    if (byId("novoAtivo")) byId("novoAtivo").value = "true";
+
+    await sincronizarSaldosAdminNoDashboard();
+    await atualizarDashboard();
+    await carregarDoutoresAdmin();
+
+    mostrarMensagemAdmin("Doutor adicionado com sucesso.");
+  } catch (err) {
+    console.error("Erro detalhado ao adicionar doutor:", err);
+
+    const mensagem = [
+      err?.message || "Erro desconhecido",
+      err?.details ? `Detalhes: ${err.details}` : "",
+      err?.hint ? `Dica: ${err.hint}` : "",
+      err?.code ? `Código: ${err.code}` : ""
+    ].filter(Boolean).join(" | ");
+
+    mostrarMensagemAdmin(mensagem, true);
+  }
+}
+
+async function iniciarAplicacao() {
+  try {
+    if (!window.supabaseClient) {
+      mostrarTelaLogin();
+      mostrarMensagemAuth("Supabase não configurado. Verifique js/supabase-config.js.", true);
+      return;
+    }
+
+    const client = validarSupabasePronto();
+    const { data, error } = await client.auth.getSession();
+
+    if (error) throw error;
+
+    const session = data?.session || null;
+
+    if (!session) {
+      mostrarTelaLogin();
+      return;
+    }
+
+    const autorizado = await validarUsuarioAutorizado();
+
+    if (!autorizado) {
+      await client.auth.signOut();
+      mostrarTelaLogin();
+      mostrarMensagemAuth("Usuário sem permissão de acesso.", true);
+      return;
+    }
+
+    currentUser = session.user;
+    currentUserIsAdmin = await validarUsuarioAdmin();
+
+    if (currentUserIsAdmin) {
+      byId("btnTabAdmin")?.classList.remove("hidden");
+    } else {
+      byId("btnTabAdmin")?.classList.add("hidden");
+    }
+
+    mostrarApp();
+    mostrarDashboard();
+    preencherBadgeUsuario();
+
+    try {
+      await carregarDashboardInterno();
+    } catch (errDashboard) {
+      console.error("Erro ao carregar dashboard:", errDashboard);
+
+      const titulo = byId("tituloDashboard");
+      const subtitulo = byId("subtituloDashboard");
+      const cards = byId("cardsResumo");
+      const tabelaResumo = byId("tabelaResumoDoutores");
+      const tabelaAtencao = byId("tabelaAtencao");
+      const tabelaBloqueados = byId("tabelaBloqueados");
+      const tabelaPixMes = byId("tabelaPixMes");
+
+      if (titulo) titulo.textContent = "PIX Doutores";
+      if (subtitulo) subtitulo.textContent = "Erro ao carregar os dados da dashboard.";
+
+      if (cards) {
+        cards.innerHTML = `
+          <div class="stat-card">
+            <div class="stat-title">Status</div>
+            <div class="stat-value">Falha ao carregar data/dashboard_data.json</div>
+          </div>
+        `;
+      }
+
+      if (tabelaResumo) tabelaResumo.innerHTML = `<tr><td colspan="6" class="empty-state">Erro ao carregar dados</td></tr>`;
+      if (tabelaAtencao) tabelaAtencao.innerHTML = `<tr><td colspan="6" class="empty-state">Erro ao carregar dados</td></tr>`;
+      if (tabelaBloqueados) tabelaBloqueados.innerHTML = `<tr><td colspan="6" class="empty-state">Erro ao carregar dados</td></tr>`;
+      if (tabelaPixMes) tabelaPixMes.innerHTML = `<tr><td colspan="7" class="empty-state">Erro ao carregar dados</td></tr>`;
+    }
+  } catch (erro) {
+    console.error("Erro ao iniciar app:", erro);
+    mostrarTelaLogin();
+    mostrarMensagemAuth(erro.message || "Erro ao validar acesso.", true);
+  }
+}
+
+byId("loginForm")?.addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+  const email = byId("email")?.value.trim() || "";
+  const password = byId("password")?.value.trim() || "";
+
+  mostrarMensagemAuth("");
+
+  if (!email || !password) {
+    mostrarMensagemAuth("Preencha e-mail e senha.", true);
+    return;
+  }
+
+  try {
+    await loginSupabase(email, password);
+
+    const client = validarSupabasePronto();
+    const { data } = await client.auth.getUser();
+
+    currentUser = data?.user || null;
+    currentUserIsAdmin = await validarUsuarioAdmin();
+
+    if (currentUserIsAdmin) {
+      byId("btnTabAdmin")?.classList.remove("hidden");
+    } else {
+      byId("btnTabAdmin")?.classList.add("hidden");
+    }
+
+    mostrarApp();
+    mostrarDashboard();
+    preencherBadgeUsuario();
+
+    await carregarDashboardInterno();
+  } catch (erro) {
+    console.error(erro);
+    mostrarMensagemAuth(erro.message || "Não foi possível entrar.", true);
+  }
+});
+
+byId("btnCriarAcesso")?.addEventListener("click", async () => {
+  const email = byId("email")?.value.trim() || "";
+  const password = byId("password")?.value.trim() || "";
+
+  mostrarMensagemAuth("");
+
+  if (!email || !password) {
+    mostrarMensagemAuth("Preencha e-mail e senha para criar o acesso.", true);
+    return;
+  }
+
+  try {
+    await criarAcessoSupabase(email, password);
+    mostrarMensagemAuth("Acesso criado com sucesso. Confira seu e-mail.");
+  } catch (erro) {
+    console.error(erro);
+    mostrarMensagemAuth(erro.message || "Não foi possível criar o acesso.", true);
+  }
+});
+
+byId("btnForgotPassword")?.addEventListener("click", async () => {
+  const email = byId("email")?.value.trim() || "";
+
+  if (!email) {
+    mostrarMensagemAuth("Digite seu e-mail para recuperar a senha.", true);
+    return;
+  }
+
+  try {
+    await enviarRecuperacaoSenha(email);
+    mostrarMensagemAuth("Enviamos um link de recuperação para seu e-mail.");
+  } catch (erro) {
+    console.error(erro);
+    mostrarMensagemAuth("Não foi possível enviar o e-mail de recuperação.", true);
+  }
+});
+
+byId("btnLogout")?.addEventListener("click", async () => {
+  try {
+    await logoutSupabase();
+  } catch (err) {
+    console.error(err);
+  }
+
+  currentUser = null;
+  currentUserIsAdmin = false;
+  dashboardData = null;
+
+  mostrarTelaLogin();
+});
+
+byId("btnTabDashboard")?.addEventListener("click", () => {
+  mostrarDashboard();
+});
+
+byId("btnTabAdmin")?.addEventListener("click", async () => {
+  if (!currentUserIsAdmin) return;
+
+  mostrarAdmin();
+  await carregarDoutoresAdmin();
+});
+
+byId("btnAdicionarDoutor")?.addEventListener("click", adicionarDoutor);
+
+byId("filtroMes")?.addEventListener("change", async () => {
+  if (!dashboardData) return;
+
+  cidadesAtuaisCompetencia = "";
+
+  const adminMes = byId("filtroMesAdmin");
+  if (adminMes) adminMes.value = getCompetenciaAtual();
+
+  preencherFiltroCidade();
+  preencherFiltroDoutor();
+
+  await sincronizarSaldosAdminNoDashboard();
+  await atualizarDashboard();
+
+  if (!byId("adminView")?.classList.contains("hidden")) {
+    await carregarDoutoresAdmin();
+  }
+});
+
+byId("filtroCidade")?.addEventListener("change", async () => {
+  await atualizarDashboard();
+});
+
+byId("filtroDoutor")?.addEventListener("change", async () => {
+  await atualizarDashboard();
+});
+
+byId("btnLimpar")?.addEventListener("click", async () => {
+  const filtroMes = byId("filtroMes");
+  const filtroCidade = byId("filtroCidade");
+  const filtroDoutor = byId("filtroDoutor");
+
+  if (filtroMes) {
+    filtroMes.value = dashboardData?.competencia_padrao || "2026-01";
+  }
+
+  preencherFiltroCidade();
+  preencherFiltroDoutor();
+
+  if (filtroCidade) filtroCidade.selectedIndex = 0;
+  if (filtroDoutor) filtroDoutor.selectedIndex = 0;
+
+  cidadesAtuaisCompetencia = "";
+
+  await sincronizarSaldosAdminNoDashboard();
+  await atualizarDashboard();
+});
+
+byId("btnExportar")?.addEventListener("click", exportarCSV);
+
+window.salvarDoutor = salvarDoutor;
+window.removerDoutor = removerDoutor;
+window.salvarCidadeAtualDoutor = salvarCidadeAtualDoutor;
+
+if (window.supabaseClient) {
+  window.supabaseClient.auth.onAuthStateChange(async (_event, session) => {
+    if (!session) {
+      currentUser = null;
+      currentUserIsAdmin = false;
+      mostrarTelaLogin();
+      return;
+    }
+
+    currentUser = session.user;
+  });
+}
+
+iniciarAplicacao();
