@@ -626,12 +626,15 @@ function montarCardDoutorStatus(item) {
   const chave = normalizarNome(item.doutor);
   const cidadeAtual = cidadesAtuaisCache[chave] || "";
   const pixKey = obterPixKeyDoDoutor(item.doutor);
+  const doutorEscapado = escapeHtml(item.doutor);
 
   return `
     <div class="doctor-status-card ${tipo}">
       <div class="doctor-card-top">
-        <div class="doctor-card-name">${escapeHtml(item.doutor)}</div>
-        <div class="doctor-card-status ${tipo}">${tituloStatusCard(tipo)}</div>
+        <div class="doctor-card-name">${doutorEscapado}</div>
+        <div class="doctor-card-status ${tipo}">
+          ${tituloStatusCard(tipo)}
+        </div>
       </div>
 
       <div class="doctor-card-values">
@@ -639,14 +642,17 @@ function montarCardDoutorStatus(item) {
           <small>Crédito inicial</small>
           <strong>${formatarMoeda(item.creditoInicial)}</strong>
         </div>
+
         <div class="doctor-card-metric">
           <small>Utilizado</small>
           <strong>${formatarMoeda(item.utilizado)}</strong>
         </div>
+
         <div class="doctor-card-metric">
           <small>Saldo</small>
           <strong class="${saldoClasse}">${formatarMoeda(item.creditoDisponivel)}</strong>
         </div>
+
         <div class="doctor-card-metric">
           <small>% utilizado</small>
           <strong>${item.percentual.toFixed(1)}%</strong>
@@ -663,7 +669,13 @@ function montarCardDoutorStatus(item) {
         <input
           class="doctor-city-input"
           list="listaCidadesAtuais"
-          data-doutor="${escapeHtml(item.doutor)}"
-          value="${escape}
-iniciarAplicacao();
+          value="${escapeHtml(cidadeAtual)}"
+          placeholder="Digite ou selecione a cidade"
+          onchange="salvarCidadeAtualDoutor(this.dataset.doutor, this.value)"
+          data-doutor="${doutorEscapado}"
+        />
+      </div>
+    </div>
+  `;
 }
+iniciarAplicacao();
