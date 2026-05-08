@@ -676,6 +676,39 @@ function montarCardDoutorStatus(item) {
     </div>
   `;
 }
+async function salvarCidadeAtualDoutor(doutorNome, cidadeAtual) {
+  try {
+    const competencia = getCompetenciaAtual();
+    const chave = normalizarNome(doutorNome);
+    const client = validarSupabasePronto();
+
+    const { data: userData } = await client.auth.getUser();
+    const email = userData?.user?.email || null;
+
+    cidadesAtuaisCache[chave] = cidadeAtual;
+
+    const { error } = await client
+      .from("doutores_cidade_atual")
+      .upsert({
+        competencia,
+        doutor_nome_normalizado: chave,
+        doutor_nome: doutorNome,
+        cidade_atual: cidadeAtual || null,
+        updated_by_email: email,
+        updated_at: new Date().toISOString()
+      }, {
+        onConflict: "competencia,doutor_nome_normalizado"
+      });
+
+    if (error) throw error;
+  } catch (err) {
+    console.error("Erro ao salvar cidade atual:", err);
+    alert("Não foi possível salvar a cidade atual.");
+  }
+}
+
+window.salvarDoutor = salvarDoutor;
+window.removerDoutor = removerDoutor;
 window.salvarCidadeAtualDoutor = salvarCidadeAtualDoutor;
 
 if (window.supabaseClient) {
