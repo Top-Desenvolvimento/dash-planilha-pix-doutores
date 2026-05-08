@@ -1879,3 +1879,11 @@ if (window.supabaseClient) {
 }
 
 iniciarAplicacao();
+.doctor-card-grid-inline {
+  margin-top: 16px;
+  padding: 4px;
+}
+
+body:not(.modo-inicio-limpo) .doctor-card-grid-inline {
+  display: grid;
+}
