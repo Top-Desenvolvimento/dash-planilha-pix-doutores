@@ -1,10 +1,10 @@
 {
   "competencia": "2026-05",
-  "gerado_em": "2026-05-08T21:20:59.466523",
-  "quantidade_total": 184,
-  "valor_total": 23504.5,
+  "gerado_em": "2026-05-08T21:49:04.619213",
+  "quantidade_total": 187,
+  "valor_total": 23969.5,
   "valor_total_descontado": 210.0,
-  "valor_total_pendente": 23294.5,
+  "valor_total_pendente": 23759.5,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,8 +13,8 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 25,
-      "valor": 3072.5
+      "quantidade": 26,
+      "valor": 3297.5
     },
     {
       "unidade": "Encantado",
@@ -28,8 +28,8 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 20,
-      "valor": 2827.0
+      "quantidade": 21,
+      "valor": 2947.0
     },
     {
       "unidade": "Garibaldi",
@@ -38,8 +38,8 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 50,
-      "valor": 5952.0
+      "quantidade": 51,
+      "valor": 6072.0
     },
     {
       "unidade": "Ssdocai",
@@ -85,7 +85,7 @@
     },
     {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 21,
+      "quantidade": 22,
       "valor_descontado": 0.0
     },
     {
@@ -105,7 +105,7 @@
     },
     {
       "doutor": "Luisa Moraes Lucas",
-      "quantidade": 10,
+      "quantidade": 11,
       "valor_descontado": 0.0
     },
     {
@@ -125,7 +125,7 @@
     },
     {
       "doutor": "Tamara Macanan",
-      "quantidade": 11,
+      "quantidade": 12,
       "valor_descontado": 0.0
     },
     {
