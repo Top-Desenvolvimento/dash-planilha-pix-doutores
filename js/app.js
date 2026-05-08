@@ -666,3 +666,4 @@ function montarCardDoutorStatus(item) {
           data-doutor="${escapeHtml(item.doutor)}"
           value="${escape}
 iniciarAplicacao();
+}
