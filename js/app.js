@@ -678,4 +678,3 @@ function montarCardDoutorStatus(item) {
     </div>
   `;
 }
-iniciarAplicacao();
