@@ -626,15 +626,13 @@ function montarCardDoutorStatus(item) {
   const chave = normalizarNome(item.doutor);
   const cidadeAtual = cidadesAtuaisCache[chave] || "";
   const pixKey = obterPixKeyDoDoutor(item.doutor);
-  const doutorEscapado = escapeHtml(item.doutor);
+  const doutorSeguro = escapeHtml(item.doutor);
 
   return `
     <div class="doctor-status-card ${tipo}">
       <div class="doctor-card-top">
-        <div class="doctor-card-name">${doutorEscapado}</div>
-        <div class="doctor-card-status ${tipo}">
-          ${tituloStatusCard(tipo)}
-        </div>
+        <div class="doctor-card-name">${doutorSeguro}</div>
+        <div class="doctor-card-status ${tipo}">${tituloStatusCard(tipo)}</div>
       </div>
 
       <div class="doctor-card-values">
@@ -671,10 +669,26 @@ function montarCardDoutorStatus(item) {
           list="listaCidadesAtuais"
           value="${escapeHtml(cidadeAtual)}"
           placeholder="Digite ou selecione a cidade"
+          data-doutor="${doutorSeguro}"
           onchange="salvarCidadeAtualDoutor(this.dataset.doutor, this.value)"
-          data-doutor="${doutorEscapado}"
         />
       </div>
     </div>
   `;
 }
+window.salvarCidadeAtualDoutor = salvarCidadeAtualDoutor;
+
+if (window.supabaseClient) {
+  window.supabaseClient.auth.onAuthStateChange(async (_event, session) => {
+    if (!session) {
+      currentUser = null;
+      currentUserIsAdmin = false;
+      mostrarTelaLogin();
+      return;
+    }
+
+    currentUser = session.user;
+  });
+}
+
+iniciarAplicacao();
