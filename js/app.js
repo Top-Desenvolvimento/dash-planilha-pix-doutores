@@ -664,5 +664,5 @@ function montarCardDoutorStatus(item) {
           class="doctor-city-input"
           list="listaCidadesAtuais"
           data-doutor="${escapeHtml(item.doutor)}"
-          value="${escape
+          value="${escape}
 iniciarAplicacao();
