@@ -1530,6 +1530,13 @@ function obterPixKeyDoDoutor(nomeDoutor) {
 }
 
 function montarCardDoutorStatus(item) {
+  <div class="doctor-card-top">
+  <div class="doctor-card-name">${escapeHtml(item.doutor)}</div>
+  <div class="quadrante-status-topo ${tipo}">
+    <span class="quadrante-status-dot"></span>
+    ${tituloStatusCard(tipo)}
+  </div>
+</div>
   const tipo = classificarCardDoutor(item);
   const saldoClasse = item.creditoDisponivel < 0 ? "negative" : "";
   const chave = normalizarNome(item.doutor);
