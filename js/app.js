@@ -707,9 +707,17 @@ async function salvarCidadeAtualDoutor(doutorNome, cidadeAtual) {
   }
 }
 
-window.salvarDoutor = salvarDoutor;
-window.removerDoutor = removerDoutor;
-window.salvarCidadeAtualDoutor = salvarCidadeAtualDoutor;
+if (typeof salvarDoutor !== "undefined") {
+  window.salvarDoutor = salvarDoutor;
+}
+
+if (typeof removerDoutor !== "undefined") {
+  window.removerDoutor = removerDoutor;
+}
+
+if (typeof salvarCidadeAtualDoutor !== "undefined") {
+  window.salvarCidadeAtualDoutor = salvarCidadeAtualDoutor;
+}
 
 if (window.supabaseClient) {
   window.supabaseClient.auth.onAuthStateChange(async (_event, session) => {
