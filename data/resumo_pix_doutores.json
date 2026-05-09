@@ -266,11 +266,11 @@
   },
   "2026-05": {
     "competencia": "2026-05",
-    "gerado_em": "2026-05-09T16:45:10.230317",
-    "quantidade_total": 228,
-    "valor_total": 29160.5,
-    "valor_total_descontado": 258.0,
-    "valor_total_pendente": 28902.5,
+    "gerado_em": "2026-05-09T17:45:20.844490",
+    "quantidade_total": 231,
+    "valor_total": 29597.5,
+    "valor_total_descontado": 163.0,
+    "valor_total_pendente": 29434.5,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -314,8 +314,8 @@
       },
       {
         "unidade": "Veranopolis",
-        "quantidade": 17,
-        "valor": 2453.0
+        "quantidade": 20,
+        "valor": 2890.0
       }
     ],
     "por_doutor": [
@@ -341,7 +341,7 @@
       },
       {
         "doutor": "Evalda Baldissera",
-        "quantidade": 15,
+        "quantidade": 19,
         "valor_descontado": 0.0
       },
       {
@@ -377,7 +377,7 @@
       {
         "doutor": "Marcella Zancanaro",
         "quantidade": 3,
-        "valor_descontado": 258.0
+        "valor_descontado": 163.0
       },
       {
         "doutor": "Naiane Pieta",
@@ -411,7 +411,7 @@
       },
       {
         "doutor": "TOP",
-        "quantidade": 3,
+        "quantidade": 2,
         "valor_descontado": 0.0
       }
     ]
