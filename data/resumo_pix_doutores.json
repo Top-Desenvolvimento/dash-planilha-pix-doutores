@@ -266,11 +266,11 @@
   },
   "2026-05": {
     "competencia": "2026-05",
-    "gerado_em": "2026-05-09T14:53:37.512712",
-    "quantidade_total": 221,
-    "valor_total": 28185.5,
-    "valor_total_descontado": 378.0,
-    "valor_total_pendente": 27807.5,
+    "gerado_em": "2026-05-09T15:47:25.259122",
+    "quantidade_total": 223,
+    "valor_total": 28462.5,
+    "valor_total_descontado": 258.0,
+    "valor_total_pendente": 28204.5,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -284,8 +284,8 @@
       },
       {
         "unidade": "Encantado",
-        "quantidade": 37,
-        "valor": 4469.0
+        "quantidade": 38,
+        "valor": 4489.0
       },
       {
         "unidade": "Farroupilha",
@@ -304,8 +304,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 57,
-        "valor": 6953.0
+        "quantidade": 58,
+        "valor": 7210.0
       },
       {
         "unidade": "Ssdocai",
@@ -337,7 +337,7 @@
       {
         "doutor": "Dionathan Pohlmann",
         "quantidade": 2,
-        "valor_descontado": 120.0
+        "valor_descontado": 0.0
       },
       {
         "doutor": "Evalda Baldissera",
@@ -371,7 +371,7 @@
       },
       {
         "doutor": "Luisa Moraes Lucas",
-        "quantidade": 15,
+        "quantidade": 16,
         "valor_descontado": 0.0
       },
       {
@@ -406,7 +406,7 @@
       },
       {
         "doutor": "Thiany Cristofoli",
-        "quantidade": 18,
+        "quantidade": 19,
         "valor_descontado": 0.0
       },
       {
