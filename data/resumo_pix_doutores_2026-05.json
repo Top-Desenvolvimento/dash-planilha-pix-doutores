@@ -1,10 +1,10 @@
 {
   "competencia": "2026-05",
-  "gerado_em": "2026-05-09T10:15:52.974487",
-  "quantidade_total": 188,
-  "valor_total": 24089.5,
+  "gerado_em": "2026-05-09T11:20:17.676192",
+  "quantidade_total": 191,
+  "valor_total": 24684.5,
   "valor_total_descontado": 210.0,
-  "valor_total_pendente": 23879.5,
+  "valor_total_pendente": 24474.5,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -18,8 +18,8 @@
     },
     {
       "unidade": "Encantado",
-      "quantidade": 29,
-      "valor": 3600.0
+      "quantidade": 30,
+      "valor": 3720.0
     },
     {
       "unidade": "Farroupilha",
@@ -38,8 +38,8 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 51,
-      "valor": 6072.0
+      "quantidade": 53,
+      "valor": 6547.0
     },
     {
       "unidade": "Ssdocai",
@@ -65,7 +65,7 @@
     },
     {
       "doutor": "Cristian Pressi",
-      "quantidade": 38,
+      "quantidade": 40,
       "valor_descontado": 0.0
     },
     {
@@ -135,7 +135,7 @@
     },
     {
       "doutor": "Thiany Cristofoli",
-      "quantidade": 11,
+      "quantidade": 12,
       "valor_descontado": 0.0
     },
     {
