@@ -266,11 +266,11 @@
   },
   "2026-05": {
     "competencia": "2026-05",
-    "gerado_em": "2026-05-09T12:13:02.250237",
-    "quantidade_total": 200,
-    "valor_total": 25786.5,
-    "valor_total_descontado": 330.0,
-    "valor_total_pendente": 25456.5,
+    "gerado_em": "2026-05-09T13:59:40.100226",
+    "quantidade_total": 214,
+    "valor_total": 27391.5,
+    "valor_total_descontado": 353.0,
+    "valor_total_pendente": 27038.5,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -284,28 +284,28 @@
       },
       {
         "unidade": "Encantado",
-        "quantidade": 32,
-        "valor": 3920.0
+        "quantidade": 36,
+        "valor": 4364.0
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 13,
-        "valor": 2154.0
+        "quantidade": 18,
+        "valor": 2714.0
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 24,
-        "valor": 3384.0
+        "quantidade": 26,
+        "valor": 3746.0
       },
       {
         "unidade": "Garibaldi",
-        "quantidade": 20,
-        "valor": 2233.0
+        "quantidade": 21,
+        "valor": 2256.0
       },
       {
         "unidade": "Soledade",
-        "quantidade": 55,
-        "valor": 6737.0
+        "quantidade": 57,
+        "valor": 6953.0
       },
       {
         "unidade": "Ssdocai",
@@ -321,7 +321,7 @@
     "por_doutor": [
       {
         "doutor": "Adriele da Silva",
-        "quantidade": 12,
+        "quantidade": 17,
         "valor_descontado": 0.0
       },
       {
@@ -371,13 +371,13 @@
       },
       {
         "doutor": "Luisa Moraes Lucas",
-        "quantidade": 13,
+        "quantidade": 15,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Marcella Zancanaro",
-        "quantidade": 1,
-        "valor_descontado": 120.0
+        "quantidade": 2,
+        "valor_descontado": 143.0
       },
       {
         "doutor": "Naiane Pieta",
@@ -396,7 +396,7 @@
       },
       {
         "doutor": "Tamara Macanan",
-        "quantidade": 15,
+        "quantidade": 17,
         "valor_descontado": 0.0
       },
       {
@@ -406,12 +406,12 @@
       },
       {
         "doutor": "Thiany Cristofoli",
-        "quantidade": 14,
+        "quantidade": 17,
         "valor_descontado": 0.0
       },
       {
         "doutor": "TOP",
-        "quantidade": 1,
+        "quantidade": 2,
         "valor_descontado": 0.0
       }
     ]
