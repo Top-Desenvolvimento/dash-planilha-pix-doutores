@@ -519,8 +519,8 @@
       "competencia": "2026-05",
       "doutor_id": "12",
       "credito_inicial": 6000.0,
-      "utilizado": 5460.0,
-      "credito_final": 540.0,
+      "utilizado": 5670.0,
+      "credito_final": 330.0,
       "updated_by_email": null,
       "updated_by_nome": null
     },
@@ -699,8 +699,8 @@
       "competencia": "2026-05",
       "doutor_id": "32",
       "credito_inicial": 1200.0,
-      "utilizado": 0.0,
-      "credito_final": 1200.0,
+      "utilizado": 120.0,
+      "credito_final": 1080.0,
       "updated_by_email": null,
       "updated_by_nome": null
     },
