@@ -735,7 +735,61 @@ function configurarListenerAuth() {
     currentUser = session.user;
   });
 }
+async function carregarDashboardInterno() {
+  try {
+    const resposta = await fetch("data/dashboard-data.json", {
+      cache: "no-store"
+    });
 
+    if (!resposta.ok) {
+      throw new Error("Arquivo data/dashboard-data.json não encontrado.");
+    }
+
+    dashboardData = await resposta.json();
+
+    await sincronizarSaldosAdminNoDashboard();
+
+    preencherFiltroMes();
+    preencherFiltroCidade();
+    preencherFiltroDoutor();
+
+    atualizarDashboard();
+
+  } catch (erro) {
+    console.error("Erro ao carregar dashboard:", erro);
+    mostrarMensagemAuth(erro.message || "Erro ao carregar dados da dashboard.", true);
+  }
+}
+
+function atualizarDashboard() {
+  preencherFiltroCidade();
+  preencherFiltroDoutor();
+
+  const saldos = getSaldosFiltrados();
+  const resumo = montarResumoDoutores(saldos);
+
+  const container =
+    byId("doctorStatusGrid") ||
+    byId("cardsDoutores") ||
+    byId("resumoDoutores") ||
+    byId("doutoresStatus");
+
+  if (container) {
+    container.innerHTML = resumo.map(montarCardDoutorStatus).join("");
+  }
+
+  const totalCredito = resumo.reduce((soma, item) => soma + item.creditoInicial, 0);
+  const totalUtilizado = resumo.reduce((soma, item) => soma + item.utilizado, 0);
+  const totalSaldo = resumo.reduce((soma, item) => soma + item.creditoDisponivel, 0);
+
+  const elCredito = byId("kpiCreditoInicial") || byId("totalCredito");
+  const elUtilizado = byId("kpiUtilizado") || byId("totalUtilizado");
+  const elSaldo = byId("kpiSaldo") || byId("totalSaldo");
+
+  if (elCredito) elCredito.textContent = formatarMoeda(totalCredito);
+  if (elUtilizado) elUtilizado.textContent = formatarMoeda(totalUtilizado);
+  if (elSaldo) elSaldo.textContent = formatarMoeda(totalSaldo);
+}
 async function iniciarAplicacao() {
   try {
     if (!window.supabaseClient) {
