@@ -781,4 +781,9 @@ async function iniciarAplicacao() {
     mostrarMensagemAuth(erro.message || "Erro ao validar acesso.", true);
   }
 }
-iniciarAplicacao();
+
+window.iniciarAplicacao = iniciarAplicacao;
+
+document.addEventListener("DOMContentLoaded", () => {
+  window.iniciarAplicacao();
+});
