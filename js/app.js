@@ -719,7 +719,11 @@ if (typeof salvarCidadeAtualDoutor !== "undefined") {
   window.salvarCidadeAtualDoutor = salvarCidadeAtualDoutor;
 }
 
-if (window.supabaseClient) {
+window.salvarCidadeAtualDoutor = salvarCidadeAtualDoutor;
+
+function configurarListenerAuth() {
+  if (!window.supabaseClient) return;
+
   window.supabaseClient.auth.onAuthStateChange(async (_event, session) => {
     if (!session) {
       currentUser = null;
@@ -731,6 +735,7 @@ if (window.supabaseClient) {
     currentUser = session.user;
   });
 }
+
 async function iniciarAplicacao() {
   try {
     if (!window.supabaseClient) {
@@ -784,6 +789,19 @@ async function iniciarAplicacao() {
 
 window.iniciarAplicacao = iniciarAplicacao;
 
-document.addEventListener("DOMContentLoaded", () => {
+function iniciarAppQuandoPaginaPronta() {
+  configurarListenerAuth();
+
+  if (typeof window.iniciarAplicacao !== "function") {
+    console.error("Função iniciarAplicacao não foi carregada.");
+    return;
+  }
+
   window.iniciarAplicacao();
-});
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", iniciarAppQuandoPaginaPronta);
+} else {
+  iniciarAppQuandoPaginaPronta();
+}
