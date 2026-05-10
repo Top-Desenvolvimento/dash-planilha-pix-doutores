@@ -266,11 +266,11 @@
   },
   "2026-05": {
     "competencia": "2026-05",
-    "gerado_em": "2026-05-10T12:19:14.819697",
-    "quantidade_total": 224,
-    "valor_total": 28723.5,
+    "gerado_em": "2026-05-10T14:06:37.766398",
+    "quantidade_total": 231,
+    "valor_total": 29597.5,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 28723.5,
+    "valor_total_pendente": 29597.5,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -306,6 +306,11 @@
         "unidade": "Soledade",
         "quantidade": 58,
         "valor": 7210.0
+      },
+      {
+        "unidade": "Ssdocai",
+        "quantidade": 7,
+        "valor": 874.0
       },
       {
         "unidade": "Veranopolis",
@@ -352,6 +357,16 @@
       {
         "doutor": "Gabrielli Fabonato",
         "quantidade": 2,
+        "valor_descontado": 0.0
+      },
+      {
+        "doutor": "Keyla Daniele",
+        "quantidade": 4,
+        "valor_descontado": 0.0
+      },
+      {
+        "doutor": "Leandro Diniz",
+        "quantidade": 3,
         "valor_descontado": 0.0
       },
       {
