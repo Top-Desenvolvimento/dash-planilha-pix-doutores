@@ -1094,3 +1094,10 @@ body.modo-inicio-limpo .status-group-header span {
   color: #c8d3ee !important;
   font-size: 13px !important;
 }
+/* REMOVE AS TABELAS ANTIGAS */
+#secaoTodos,
+#secaoAtencao,
+#secaoBloqueados,
+#secaoControlados {
+  display: none !important;
+}
