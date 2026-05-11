@@ -1071,3 +1071,26 @@ body.modo-inicio-limpo #grupoControladosCards .status-group-header {
   margin-top: 18px;
   padding: 4px;
 }
+body.modo-inicio-limpo #grupoBloqueadosCards .status-group-header,
+body.modo-inicio-limpo #grupoAtencaoCards .status-group-header,
+body.modo-inicio-limpo #grupoControladosCards .status-group-header {
+  display: flex !important;
+}
+
+body.modo-inicio-limpo .status-group-header {
+  margin-bottom: 14px !important;
+}
+
+body.modo-inicio-limpo .status-group-header h2 {
+  display: block !important;
+  font-size: 24px !important;
+  font-weight: 900 !important;
+  color: #ffffff !important;
+  margin: 0 !important;
+}
+
+body.modo-inicio-limpo .status-group-header span {
+  display: block !important;
+  color: #c8d3ee !important;
+  font-size: 13px !important;
+}
