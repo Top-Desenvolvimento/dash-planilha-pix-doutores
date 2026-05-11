@@ -1,20 +1,20 @@
 {
   "competencia": "2026-05",
-  "gerado_em": "2026-05-11T17:44:54.180942",
-  "quantidade_total": 247,
-  "valor_total": 31527.5,
-  "valor_total_descontado": 509.0,
-  "valor_total_pendente": 31018.5,
+  "gerado_em": "2026-05-11T19:28:31.053052",
+  "quantidade_total": 251,
+  "valor_total": 32206.5,
+  "valor_total_descontado": 491.0,
+  "valor_total_pendente": 31715.5,
   "por_unidade": [
     {
       "unidade": "Bento",
-      "quantidade": 12,
-      "valor": 1428.0
+      "quantidade": 13,
+      "valor": 1533.0
     },
     {
       "unidade": "Caxias",
-      "quantidade": 33,
-      "valor": 4137.5
+      "quantidade": 35,
+      "valor": 4606.5
     },
     {
       "unidade": "Encantado",
@@ -33,8 +33,8 @@
     },
     {
       "unidade": "Garibaldi",
-      "quantidade": 22,
-      "valor": 2371.0
+      "quantidade": 23,
+      "valor": 2476.0
     },
     {
       "unidade": "Soledade",
@@ -85,7 +85,7 @@
     },
     {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 30,
+      "quantidade": 32,
       "valor_descontado": 0.0
     },
     {
@@ -95,8 +95,8 @@
     },
     {
       "doutor": "Jéssica Barreto",
-      "quantidade": 4,
-      "valor_descontado": 509.0
+      "quantidade": 5,
+      "valor_descontado": 491.0
     },
     {
       "doutor": "Keyla Daniele",
@@ -115,7 +115,7 @@
     },
     {
       "doutor": "Marcella Zancanaro",
-      "quantidade": 3,
+      "quantidade": 4,
       "valor_descontado": 0.0
     },
     {
