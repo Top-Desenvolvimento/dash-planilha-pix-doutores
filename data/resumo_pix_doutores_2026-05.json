@@ -1,25 +1,25 @@
 {
   "competencia": "2026-05",
-  "gerado_em": "2026-05-11T15:42:21.305243",
-  "quantidade_total": 233,
-  "valor_total": 29827.5,
-  "valor_total_descontado": 0.0,
-  "valor_total_pendente": 29827.5,
+  "gerado_em": "2026-05-11T17:44:54.180942",
+  "quantidade_total": 247,
+  "valor_total": 31527.5,
+  "valor_total_descontado": 509.0,
+  "valor_total_pendente": 31018.5,
   "por_unidade": [
     {
       "unidade": "Bento",
-      "quantidade": 8,
-      "valor": 919.0
+      "quantidade": 12,
+      "valor": 1428.0
     },
     {
       "unidade": "Caxias",
-      "quantidade": 28,
-      "valor": 3521.5
+      "quantidade": 33,
+      "valor": 4137.5
     },
     {
       "unidade": "Encantado",
-      "quantidade": 38,
-      "valor": 4489.0
+      "quantidade": 41,
+      "valor": 4824.0
     },
     {
       "unidade": "Farroupilha",
@@ -38,8 +38,8 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 59,
-      "valor": 7315.0
+      "quantidade": 61,
+      "valor": 7555.0
     },
     {
       "unidade": "Ssdocai",
@@ -85,13 +85,18 @@
     },
     {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 25,
+      "quantidade": 30,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Gabrielli Fabonato",
       "quantidade": 2,
       "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Jéssica Barreto",
+      "quantidade": 4,
+      "valor_descontado": 509.0
     },
     {
       "doutor": "Keyla Daniele",
@@ -105,7 +110,7 @@
     },
     {
       "doutor": "Luisa Moraes Lucas",
-      "quantidade": 17,
+      "quantidade": 19,
       "valor_descontado": 0.0
     },
     {
@@ -140,7 +145,7 @@
     },
     {
       "doutor": "Thiany Cristofoli",
-      "quantidade": 19,
+      "quantidade": 22,
       "valor_descontado": 0.0
     },
     {
