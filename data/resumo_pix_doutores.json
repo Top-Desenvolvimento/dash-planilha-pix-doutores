@@ -266,11 +266,11 @@
   },
   "2026-05": {
     "competencia": "2026-05",
-    "gerado_em": "2026-05-12T21:06:42.691257",
-    "quantidade_total": 310,
-    "valor_total": 44022.49,
-    "valor_total_descontado": 770.0,
-    "valor_total_pendente": 43252.49,
+    "gerado_em": "2026-05-12T22:29:11.430561",
+    "quantidade_total": 317,
+    "valor_total": 44743.49,
+    "valor_total_descontado": 0.0,
+    "valor_total_pendente": 44743.49,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -279,8 +279,8 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 54,
-        "valor": 6493.5
+        "quantidade": 55,
+        "valor": 6578.5
       },
       {
         "unidade": "Encantado",
@@ -289,23 +289,23 @@
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 32,
-        "valor": 4789.0
+        "quantidade": 34,
+        "valor": 5022.0
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 36,
-        "valor": 4964.0
+        "quantidade": 37,
+        "valor": 5063.0
       },
       {
         "unidade": "Garibaldi",
-        "quantidade": 31,
-        "valor": 3396.0
+        "quantidade": 33,
+        "valor": 3601.0
       },
       {
         "unidade": "Soledade",
-        "quantidade": 65,
-        "valor": 8104.0
+        "quantidade": 66,
+        "valor": 8203.0
       },
       {
         "unidade": "Ssdocai",
@@ -346,8 +346,8 @@
       },
       {
         "doutor": "Everlize Cipriani",
-        "quantidade": 6,
-        "valor_descontado": 770.0
+        "quantidade": 7,
+        "valor_descontado": 0.0
       },
       {
         "doutor": "Fernana Sozo",
@@ -356,7 +356,7 @@
       },
       {
         "doutor": "Franciele Pedrotti",
-        "quantidade": 54,
+        "quantidade": 57,
         "valor_descontado": 0.0
       },
       {
@@ -391,7 +391,7 @@
       },
       {
         "doutor": "Marina Alievi",
-        "quantidade": 3,
+        "quantidade": 4,
         "valor_descontado": 0.0
       },
       {
@@ -411,7 +411,7 @@
       },
       {
         "doutor": "Sofie Owens",
-        "quantidade": 21,
+        "quantidade": 23,
         "valor_descontado": 0.0
       },
       {
