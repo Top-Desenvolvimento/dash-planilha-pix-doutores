@@ -1,10 +1,10 @@
 {
   "competencia": "2026-05",
-  "gerado_em": "2026-05-12T10:11:52.569230",
-  "quantidade_total": 275,
-  "valor_total": 40037.49,
+  "gerado_em": "2026-05-12T12:21:36.275459",
+  "quantidade_total": 276,
+  "valor_total": 40142.49,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 40037.49,
+  "valor_total_pendente": 40142.49,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -38,8 +38,8 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 62,
-      "valor": 7812.0
+      "quantidade": 63,
+      "valor": 7917.0
     },
     {
       "unidade": "Ssdocai",
@@ -116,6 +116,11 @@
     {
       "doutor": "Marcella Zancanaro",
       "quantidade": 6,
+      "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Marina Alievi",
+      "quantidade": 1,
       "valor_descontado": 0.0
     },
     {
