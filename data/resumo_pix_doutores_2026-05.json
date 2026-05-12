@@ -1,10 +1,10 @@
 {
   "competencia": "2026-05",
-  "gerado_em": "2026-05-12T22:29:11.430561",
-  "quantidade_total": 317,
-  "valor_total": 44743.49,
+  "gerado_em": "2026-05-12T23:44:38.400332",
+  "quantidade_total": 322,
+  "valor_total": 45445.49,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 44743.49,
+  "valor_total_pendente": 45445.49,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -23,13 +23,13 @@
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 34,
-      "valor": 5022.0
+      "quantidade": 35,
+      "valor": 5149.0
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 37,
-      "valor": 5063.0
+      "quantidade": 41,
+      "valor": 5638.0
     },
     {
       "unidade": "Garibaldi",
@@ -80,7 +80,7 @@
     },
     {
       "doutor": "Everlize Cipriani",
-      "quantidade": 7,
+      "quantidade": 8,
       "valor_descontado": 0.0
     },
     {
@@ -90,7 +90,7 @@
     },
     {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 57,
+      "quantidade": 61,
       "valor_descontado": 0.0
     },
     {
