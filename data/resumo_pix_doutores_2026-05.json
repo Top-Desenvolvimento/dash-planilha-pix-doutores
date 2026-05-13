@@ -1,10 +1,10 @@
 {
   "competencia": "2026-05",
-  "gerado_em": "2026-05-13T17:26:27.350098",
-  "quantidade_total": 338,
-  "valor_total": 47334.49,
+  "gerado_em": "2026-05-13T18:26:44.537152",
+  "quantidade_total": 346,
+  "valor_total": 48509.49,
   "valor_total_descontado": 459.0,
-  "valor_total_pendente": 46875.49,
+  "valor_total_pendente": 48050.49,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -18,18 +18,18 @@
     },
     {
       "unidade": "Encantado",
-      "quantidade": 45,
-      "valor": 5398.0
+      "quantidade": 47,
+      "valor": 5724.0
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 37,
-      "valor": 5284.0
+      "quantidade": 38,
+      "valor": 5381.0
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 41,
-      "valor": 5638.0
+      "quantidade": 44,
+      "valor": 5947.0
     },
     {
       "unidade": "Garibaldi",
@@ -38,8 +38,8 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 74,
-      "valor": 9023.0
+      "quantidade": 76,
+      "valor": 9466.0
     },
     {
       "unidade": "Ssdocai",
@@ -65,7 +65,7 @@
     },
     {
       "doutor": "Cristian Pressi",
-      "quantidade": 40,
+      "quantidade": 41,
       "valor_descontado": 0.0
     },
     {
@@ -80,7 +80,7 @@
     },
     {
       "doutor": "Everlize Cipriani",
-      "quantidade": 10,
+      "quantidade": 11,
       "valor_descontado": 0.0
     },
     {
@@ -90,7 +90,7 @@
     },
     {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 61,
+      "quantidade": 64,
       "valor_descontado": 0.0
     },
     {
@@ -130,7 +130,7 @@
     },
     {
       "doutor": "Marina Alievi",
-      "quantidade": 12,
+      "quantidade": 13,
       "valor_descontado": 0.0
     },
     {
@@ -160,7 +160,7 @@
     },
     {
       "doutor": "Thiany Cristofoli",
-      "quantidade": 26,
+      "quantidade": 28,
       "valor_descontado": 0.0
     },
     {
