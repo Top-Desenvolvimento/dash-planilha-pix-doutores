@@ -235,8 +235,8 @@
     "doutor_id": "29",
     "doutor": "Letícia Cauzzi",
     "credito_inicial": 4000.0,
-    "utilizado": 1921.0,
-    "credito_disponivel": 2079.0,
+    "utilizado": 2695.0,
+    "credito_disponivel": 1305.0,
     "pix_key": ""
   },
   {
@@ -267,8 +267,8 @@
     "doutor_id": "34",
     "doutor": "Morgana Zambiasi",
     "credito_inicial": 1500.0,
-    "utilizado": 257.0,
-    "credito_disponivel": 1243.0,
+    "utilizado": 1007.0,
+    "credito_disponivel": 493.0,
     "pix_key": ""
   },
   {
