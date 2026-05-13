@@ -86,9 +86,9 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          git add .
+          git add data/*.json data/*.html index.html js/*.js css/*.css || true
 
-          git commit -m "Atualiza dashboard PIX Doutores" || echo "Sem alterações para commitar"
+          git commit -m "Atualiza dashboard PIX Doutores" || echo "Sem alterações"
 
           git pull --rebase origin main
 
