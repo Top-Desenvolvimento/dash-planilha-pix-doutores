@@ -1,10 +1,10 @@
 {
   "competencia": "2026-05",
-  "gerado_em": "2026-05-13T11:14:26.710895",
-  "quantidade_total": 322,
-  "valor_total": 45445.49,
+  "gerado_em": "2026-05-13T13:36:38.885995",
+  "quantidade_total": 325,
+  "valor_total": 45746.49,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 45445.49,
+  "valor_total_pendente": 45746.49,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,8 +13,8 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 55,
-      "valor": 6578.5
+      "quantidade": 54,
+      "valor": 6458.5
     },
     {
       "unidade": "Encantado",
@@ -23,8 +23,8 @@
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 35,
-      "valor": 5149.0
+      "quantidade": 36,
+      "valor": 5189.0
     },
     {
       "unidade": "FloresDaCunha",
@@ -38,8 +38,8 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 66,
-      "valor": 8203.0
+      "quantidade": 69,
+      "valor": 8584.0
     },
     {
       "unidade": "Ssdocai",
@@ -80,7 +80,7 @@
     },
     {
       "doutor": "Everlize Cipriani",
-      "quantidade": 8,
+      "quantidade": 9,
       "valor_descontado": 0.0
     },
     {
@@ -125,12 +125,7 @@
     },
     {
       "doutor": "Marina Alievi",
-      "quantidade": 4,
-      "valor_descontado": 0.0
-    },
-    {
-      "doutor": "MEI",
-      "quantidade": 1,
+      "quantidade": 7,
       "valor_descontado": 0.0
     },
     {
