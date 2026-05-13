@@ -499,27 +499,48 @@ function preencherFiltroCidade() {
   if (cidades.includes(cidadeSelecionada)) filtroCidade.value = cidadeSelecionada;
 }
 
-function preencherFiltroDoutor() {
-  const filtroDoutor = byId("filtroDoutor");
-  if (!filtroDoutor) return;
+function preencherFiltroDoutores() {
+  const select = byId("filtroDoutor");
+  if (!select || !dashboardData) return;
 
-  const doutorSelecionado = filtroDoutor.value;
   const competencia = getCompetenciaAtual();
-  const registros = getRegistrosCompetencia(competencia);
-  const saldos = getSaldosCompetencia(competencia);
 
-  const nomesRegistros = registros.map(item => item.doutor_final).filter(Boolean);
-  const nomesSaldos = saldos.map(item => item.doutor).filter(Boolean);
+  const configs = Array.isArray(
+    dashboardData?.doutores_config_por_competencia?.[competencia]
+  )
+    ? dashboardData.doutores_config_por_competencia[competencia]
+    : [];
 
-  const doutores = [...new Set([...nomesRegistros, ...nomesSaldos])].sort((a, b) =>
-    a.localeCompare(b, "pt-BR")
-  );
+  const nomesUnicos = new Map();
 
-  filtroDoutor.innerHTML =
-    `<option value="">Todos</option>` +
-    doutores.map(item => `<option value="${escapeHtml(item)}">${escapeHtml(item)}</option>`).join("");
+  configs.forEach(d => {
+    const nomeOriginal = String(d.nome || "").trim();
+    const chave = normalizarNome(nomeOriginal);
 
-  if (doutores.includes(doutorSelecionado)) filtroDoutor.value = doutorSelecionado;
+    if (!nomeOriginal) return;
+
+    if (!nomesUnicos.has(chave)) {
+      nomesUnicos.set(chave, nomeOriginal);
+    }
+  });
+
+  const doutores = [...nomesUnicos.values()]
+    .sort((a, b) => a.localeCompare(b, "pt-BR"));
+
+  const valorAtual = select.value;
+
+  select.innerHTML = `
+    <option value="">Todos</option>
+    ${doutores.map(nome => `
+      <option value="${escapeHtml(nome)}">
+        ${escapeHtml(nome)}
+      </option>
+    `).join("")}
+  `;
+
+  if (doutores.includes(valorAtual)) {
+    select.value = valorAtual;
+  }
 }
 
 function getRegistrosFiltrados() {
