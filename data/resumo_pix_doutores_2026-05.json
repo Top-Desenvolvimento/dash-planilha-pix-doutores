@@ -1,10 +1,10 @@
 {
   "competencia": "2026-05",
-  "gerado_em": "2026-05-13T21:58:50.596292",
-  "quantidade_total": 374,
-  "valor_total": 51747.49,
-  "valor_total_descontado": 1524.0,
-  "valor_total_pendente": 50223.49,
+  "gerado_em": "2026-05-13T23:05:56.196164",
+  "quantidade_total": 381,
+  "valor_total": 52679.49,
+  "valor_total_descontado": 1684.0,
+  "valor_total_pendente": 50995.49,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -18,18 +18,18 @@
     },
     {
       "unidade": "Encantado",
-      "quantidade": 52,
-      "valor": 6172.0
+      "quantidade": 53,
+      "valor": 6270.0
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 41,
-      "valor": 5751.0
+      "quantidade": 42,
+      "valor": 5998.0
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 54,
-      "valor": 7041.0
+      "quantidade": 55,
+      "valor": 7126.0
     },
     {
       "unidade": "Garibaldi",
@@ -38,13 +38,13 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 78,
-      "valor": 9727.0
+      "quantidade": 79,
+      "valor": 9812.0
     },
     {
       "unidade": "Ssdocai",
-      "quantidade": 19,
-      "valor": 2308.0
+      "quantidade": 22,
+      "valor": 2725.0
     },
     {
       "unidade": "Veranopolis",
@@ -80,7 +80,7 @@
     },
     {
       "doutor": "Everlize Cipriani",
-      "quantidade": 14,
+      "quantidade": 15,
       "valor_descontado": 0.0
     },
     {
@@ -90,7 +90,7 @@
     },
     {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 74,
+      "quantidade": 75,
       "valor_descontado": 0.0
     },
     {
@@ -115,8 +115,8 @@
     },
     {
       "doutor": "Letícia Cauzzi",
-      "quantidade": 6,
-      "valor_descontado": 774.0
+      "quantidade": 9,
+      "valor_descontado": 1191.0
     },
     {
       "doutor": "Luisa Moraes Lucas",
@@ -130,13 +130,13 @@
     },
     {
       "doutor": "Marina Alievi",
-      "quantidade": 14,
+      "quantidade": 15,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Morgana Zambiasi",
       "quantidade": 5,
-      "valor_descontado": 750.0
+      "valor_descontado": 493.0
     },
     {
       "doutor": "Naiane Pieta",
@@ -165,7 +165,7 @@
     },
     {
       "doutor": "Thiany Cristofoli",
-      "quantidade": 33,
+      "quantidade": 34,
       "valor_descontado": 0.0
     },
     {
