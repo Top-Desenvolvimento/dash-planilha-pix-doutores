@@ -1,10 +1,10 @@
 {
   "competencia": "2026-05",
-  "gerado_em": "2026-05-13T13:36:38.885995",
-  "quantidade_total": 325,
-  "valor_total": 45746.49,
-  "valor_total_descontado": 0.0,
-  "valor_total_pendente": 45746.49,
+  "gerado_em": "2026-05-13T17:26:27.350098",
+  "quantidade_total": 338,
+  "valor_total": 47334.49,
+  "valor_total_descontado": 459.0,
+  "valor_total_pendente": 46875.49,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -18,13 +18,13 @@
     },
     {
       "unidade": "Encantado",
-      "quantidade": 43,
-      "valor": 5028.0
+      "quantidade": 45,
+      "valor": 5398.0
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 36,
-      "valor": 5189.0
+      "quantidade": 37,
+      "valor": 5284.0
     },
     {
       "unidade": "FloresDaCunha",
@@ -38,13 +38,13 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 69,
-      "valor": 8584.0
+      "quantidade": 74,
+      "valor": 9023.0
     },
     {
       "unidade": "Ssdocai",
-      "quantidade": 11,
-      "valor": 1309.0
+      "quantidade": 16,
+      "valor": 1993.0
     },
     {
       "unidade": "Veranopolis",
@@ -80,7 +80,7 @@
     },
     {
       "doutor": "Everlize Cipriani",
-      "quantidade": 9,
+      "quantidade": 10,
       "valor_descontado": 0.0
     },
     {
@@ -105,13 +105,18 @@
     },
     {
       "doutor": "Keyla Daniele",
-      "quantidade": 8,
+      "quantidade": 10,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Leandro Diniz",
       "quantidade": 3,
       "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Letícia Cauzzi",
+      "quantidade": 3,
+      "valor_descontado": 459.0
     },
     {
       "doutor": "Luisa Moraes Lucas",
@@ -125,7 +130,7 @@
     },
     {
       "doutor": "Marina Alievi",
-      "quantidade": 7,
+      "quantidade": 12,
       "valor_descontado": 0.0
     },
     {
@@ -155,7 +160,7 @@
     },
     {
       "doutor": "Thiany Cristofoli",
-      "quantidade": 24,
+      "quantidade": 26,
       "valor_descontado": 0.0
     },
     {
