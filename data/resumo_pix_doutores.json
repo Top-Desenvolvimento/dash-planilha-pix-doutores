@@ -266,10 +266,10 @@
   },
   "2026-05": {
     "competencia": "2026-05",
-    "gerado_em": "2026-05-14T16:43:03.228620",
-    "quantidade_total": 387,
-    "valor_total": 53392.49,
-    "valor_total_descontado": 0.0,
+    "gerado_em": "2026-05-14T18:31:45.302781",
+    "quantidade_total": 389,
+    "valor_total": 53567.49,
+    "valor_total_descontado": 175.0,
     "valor_total_pendente": 53392.49,
     "por_unidade": [
       {
@@ -304,8 +304,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 81,
-        "valor": 10052.0
+        "quantidade": 83,
+        "valor": 10227.0
       },
       {
         "unidade": "Ssdocai",
@@ -368,6 +368,11 @@
         "doutor": "Gabrielli Fabonato",
         "quantidade": 2,
         "valor_descontado": 0.0
+      },
+      {
+        "doutor": "Gustavo Lourenço Ongaratto",
+        "quantidade": 2,
+        "valor_descontado": 175.0
       },
       {
         "doutor": "Jéssica Barreto",
