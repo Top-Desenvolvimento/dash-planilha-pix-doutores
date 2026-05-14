@@ -266,11 +266,11 @@
   },
   "2026-05": {
     "competencia": "2026-05",
-    "gerado_em": "2026-05-14T14:45:57.705666",
-    "quantidade_total": 383,
-    "valor_total": 52982.49,
+    "gerado_em": "2026-05-14T16:43:03.228620",
+    "quantidade_total": 387,
+    "valor_total": 53392.49,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 52982.49,
+    "valor_total_pendente": 53392.49,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -294,8 +294,8 @@
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 55,
-        "valor": 7126.0
+        "quantidade": 57,
+        "valor": 7296.0
       },
       {
         "unidade": "Garibaldi",
@@ -304,8 +304,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 79,
-        "valor": 9812.0
+        "quantidade": 81,
+        "valor": 10052.0
       },
       {
         "unidade": "Ssdocai",
@@ -335,6 +335,11 @@
         "valor_descontado": 0.0
       },
       {
+        "doutor": "Diogo Cemin Amarante",
+        "quantidade": 1,
+        "valor_descontado": 0.0
+      },
+      {
         "doutor": "Dionathan Pohlmann",
         "quantidade": 2,
         "valor_descontado": 0.0
@@ -356,7 +361,7 @@
       },
       {
         "doutor": "Franciele Pedrotti",
-        "quantidade": 75,
+        "quantidade": 77,
         "valor_descontado": 0.0
       },
       {
@@ -396,7 +401,7 @@
       },
       {
         "doutor": "Marina Alievi",
-        "quantidade": 15,
+        "quantidade": 16,
         "valor_descontado": 0.0
       },
       {
