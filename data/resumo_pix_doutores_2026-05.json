@@ -1,10 +1,10 @@
 {
   "competencia": "2026-05",
-  "gerado_em": "2026-05-13T23:05:56.196164",
-  "quantidade_total": 381,
-  "valor_total": 52679.49,
-  "valor_total_descontado": 1684.0,
-  "valor_total_pendente": 50995.49,
+  "gerado_em": "2026-05-14T00:20:55.877335",
+  "quantidade_total": 383,
+  "valor_total": 52982.49,
+  "valor_total_descontado": 114.0,
+  "valor_total_pendente": 52868.49,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -48,8 +48,8 @@
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 26,
-      "valor": 8061.0
+      "quantidade": 28,
+      "valor": 8364.0
     }
   ],
   "por_doutor": [
@@ -116,7 +116,7 @@
     {
       "doutor": "Letícia Cauzzi",
       "quantidade": 9,
-      "valor_descontado": 1191.0
+      "valor_descontado": 114.0
     },
     {
       "doutor": "Luisa Moraes Lucas",
@@ -135,8 +135,8 @@
     },
     {
       "doutor": "Morgana Zambiasi",
-      "quantidade": 5,
-      "valor_descontado": 493.0
+      "quantidade": 7,
+      "valor_descontado": 0.0
     },
     {
       "doutor": "Naiane Pieta",
