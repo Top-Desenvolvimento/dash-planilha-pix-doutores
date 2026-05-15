@@ -266,21 +266,21 @@
   },
   "2026-05": {
     "competencia": "2026-05",
-    "gerado_em": "2026-05-15T19:07:48.327474",
-    "quantidade_total": 413,
-    "valor_total": 57447.49,
-    "valor_total_descontado": 1527.0,
-    "valor_total_pendente": 55920.49,
+    "gerado_em": "2026-05-15T20:30:50.970164",
+    "quantidade_total": 422,
+    "valor_total": 59130.49,
+    "valor_total_descontado": 488.0,
+    "valor_total_pendente": 58642.49,
     "por_unidade": [
       {
         "unidade": "Bento",
-        "quantidade": 19,
-        "valor": 2820.99
+        "quantidade": 20,
+        "valor": 2940.99
       },
       {
         "unidade": "Caxias",
-        "quantidade": 63,
-        "valor": 7658.5
+        "quantidade": 68,
+        "valor": 8918.5
       },
       {
         "unidade": "Encantado",
@@ -304,8 +304,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 93,
-        "valor": 11299.0
+        "quantidade": 96,
+        "valor": 11602.0
       },
       {
         "unidade": "Ssdocai",
@@ -331,7 +331,7 @@
       },
       {
         "doutor": "Cristian Pressi",
-        "quantidade": 42,
+        "quantidade": 43,
         "valor_descontado": 0.0
       },
       {
@@ -391,7 +391,7 @@
       },
       {
         "doutor": "Leticia Canabarro",
-        "quantidade": 9,
+        "quantidade": 10,
         "valor_descontado": 0.0
       },
       {
@@ -401,7 +401,7 @@
       },
       {
         "doutor": "Luisa Moraes Lucas",
-        "quantidade": 20,
+        "quantidade": 21,
         "valor_descontado": 0.0
       },
       {
@@ -426,8 +426,8 @@
       },
       {
         "doutor": "Nelson Vaccari",
-        "quantidade": 2,
-        "valor_descontado": 193.0
+        "quantidade": 3,
+        "valor_descontado": 313.0
       },
       {
         "doutor": "Renata Protto",
@@ -446,8 +446,8 @@
       },
       {
         "doutor": "Thalia Tessaro",
-        "quantidade": 9,
-        "valor_descontado": 1159.0
+        "quantidade": 14,
+        "valor_descontado": 0.0
       },
       {
         "doutor": "Thalia Vezzosi",
