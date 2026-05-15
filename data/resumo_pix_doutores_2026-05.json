@@ -1,10 +1,10 @@
 {
   "competencia": "2026-05",
-  "gerado_em": "2026-05-15T13:12:26.239060",
-  "quantidade_total": 397,
-  "valor_total": 54666.49,
+  "gerado_em": "2026-05-15T15:36:53.606860",
+  "quantidade_total": 398,
+  "valor_total": 54761.49,
   "valor_total_descontado": 575.0,
-  "valor_total_pendente": 54091.49,
+  "valor_total_pendente": 54186.49,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -38,8 +38,8 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 88,
-      "valor": 10827.0
+      "quantidade": 89,
+      "valor": 10922.0
     },
     {
       "unidade": "Ssdocai",
@@ -125,7 +125,7 @@
     },
     {
       "doutor": "Leticia Canabarro",
-      "quantidade": 3,
+      "quantidade": 4,
       "valor_descontado": 0.0
     },
     {
