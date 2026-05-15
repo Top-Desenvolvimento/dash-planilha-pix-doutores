@@ -266,11 +266,11 @@
   },
   "2026-05": {
     "competencia": "2026-05",
-    "gerado_em": "2026-05-15T08:38:48.169214",
-    "quantidade_total": 308,
-    "valor_total": 43534.49,
-    "valor_total_descontado": 95.0,
-    "valor_total_pendente": 43439.49,
+    "gerado_em": "2026-05-15T11:12:43.662901",
+    "quantidade_total": 395,
+    "valor_total": 54241.49,
+    "valor_total_descontado": 270.0,
+    "valor_total_pendente": 53971.49,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -303,6 +303,11 @@
         "valor": 3700.0
       },
       {
+        "unidade": "Soledade",
+        "quantidade": 87,
+        "valor": 10707.0
+      },
+      {
         "unidade": "Ssdocai",
         "quantidade": 22,
         "valor": 2725.0
@@ -322,6 +327,16 @@
       {
         "doutor": "Ana Cristina Corso",
         "quantidade": 2,
+        "valor_descontado": 0.0
+      },
+      {
+        "doutor": "Cristian Pressi",
+        "quantidade": 42,
+        "valor_descontado": 0.0
+      },
+      {
+        "doutor": "Diogo Cemin Amarante",
+        "quantidade": 1,
         "valor_descontado": 0.0
       },
       {
@@ -350,6 +365,16 @@
         "valor_descontado": 0.0
       },
       {
+        "doutor": "Gabrielli Fabonato",
+        "quantidade": 3,
+        "valor_descontado": 0.0
+      },
+      {
+        "doutor": "Gustavo Lourenço Ongaratto",
+        "quantidade": 2,
+        "valor_descontado": 175.0
+      },
+      {
         "doutor": "Jéssica Barreto",
         "quantidade": 9,
         "valor_descontado": 0.0
@@ -365,13 +390,33 @@
         "valor_descontado": 0.0
       },
       {
+        "doutor": "Leticia Canabarro",
+        "quantidade": 2,
+        "valor_descontado": 0.0
+      },
+      {
         "doutor": "Letícia Cauzzi",
         "quantidade": 9,
         "valor_descontado": 0.0
       },
       {
+        "doutor": "Luisa Moraes Lucas",
+        "quantidade": 20,
+        "valor_descontado": 0.0
+      },
+      {
         "doutor": "Marcella Zancanaro",
         "quantidade": 11,
+        "valor_descontado": 0.0
+      },
+      {
+        "doutor": "Marina Alievi",
+        "quantidade": 16,
+        "valor_descontado": 0.0
+      },
+      {
+        "doutor": "MEI",
+        "quantidade": 1,
         "valor_descontado": 0.0
       },
       {
