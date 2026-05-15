@@ -155,8 +155,8 @@
     "doutor_id": "43",
     "doutor": "Gustavo Lourenço Ongaratto",
     "credito_inicial": 3000.0,
-    "utilizado": 1750.0,
-    "credito_disponivel": 1250.0,
+    "utilizado": 1925.0,
+    "credito_disponivel": 1075.0,
     "pix_key": ""
   },
   {
@@ -291,8 +291,8 @@
     "doutor_id": "36",
     "doutor": "Nelson Vaccari",
     "credito_inicial": 4000.0,
-    "utilizado": 953.0,
-    "credito_disponivel": 3047.0,
+    "utilizado": 1146.0,
+    "credito_disponivel": 2854.0,
     "pix_key": ""
   },
   {
@@ -347,8 +347,8 @@
     "doutor_id": "45",
     "doutor": "Thalia Tessaro",
     "credito_inicial": 2700.0,
-    "utilizado": 1541.0,
-    "credito_disponivel": 1159.0,
+    "utilizado": 2700.0,
+    "credito_disponivel": 0.0,
     "pix_key": ""
   },
   {
