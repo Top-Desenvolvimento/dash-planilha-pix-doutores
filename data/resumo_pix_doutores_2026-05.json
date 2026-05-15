@@ -1,10 +1,10 @@
 {
   "competencia": "2026-05",
-  "gerado_em": "2026-05-15T22:45:18.462409",
-  "quantidade_total": 431,
-  "valor_total": 60396.49,
-  "valor_total_descontado": 1039.0,
-  "valor_total_pendente": 59357.49,
+  "gerado_em": "2026-05-15T23:47:31.001358",
+  "quantidade_total": 433,
+  "valor_total": 60701.49,
+  "valor_total_descontado": 988.0,
+  "valor_total_pendente": 59713.49,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,8 +13,8 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 71,
-      "valor": 9418.5
+      "quantidade": 73,
+      "valor": 9723.5
     },
     {
       "unidade": "Encantado",
@@ -161,7 +161,7 @@
     {
       "doutor": "Nelson Vaccari",
       "quantidade": 7,
-      "valor_descontado": 864.0
+      "valor_descontado": 813.0
     },
     {
       "doutor": "Renata Protto",
@@ -185,7 +185,7 @@
     },
     {
       "doutor": "Thalia Vezzosi",
-      "quantidade": 2,
+      "quantidade": 4,
       "valor_descontado": 0.0
     },
     {
