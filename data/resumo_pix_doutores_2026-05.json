@@ -1,10 +1,10 @@
 {
   "competencia": "2026-05",
-  "gerado_em": "2026-05-15T23:47:31.001358",
+  "gerado_em": "2026-05-16T01:34:24.370560",
   "quantidade_total": 433,
   "valor_total": 60701.49,
-  "valor_total_descontado": 988.0,
-  "valor_total_pendente": 59713.49,
+  "valor_total_descontado": 175.0,
+  "valor_total_pendente": 60526.49,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -161,7 +161,7 @@
     {
       "doutor": "Nelson Vaccari",
       "quantidade": 7,
-      "valor_descontado": 813.0
+      "valor_descontado": 0.0
     },
     {
       "doutor": "Renata Protto",
