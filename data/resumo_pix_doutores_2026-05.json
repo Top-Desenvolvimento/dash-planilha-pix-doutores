@@ -1,10 +1,10 @@
 {
   "competencia": "2026-05",
-  "gerado_em": "2026-05-16T10:49:07.863266",
-  "quantidade_total": 433,
-  "valor_total": 60701.49,
+  "gerado_em": "2026-05-16T11:47:34.241846",
+  "quantidade_total": 439,
+  "valor_total": 61386.49,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 60701.49,
+  "valor_total_pendente": 61386.49,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,13 +13,13 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 73,
-      "valor": 9723.5
+      "quantidade": 74,
+      "valor": 9843.5
     },
     {
       "unidade": "Encantado",
-      "quantidade": 57,
-      "valor": 7801.0
+      "quantidade": 58,
+      "valor": 7921.0
     },
     {
       "unidade": "Farroupilha",
@@ -28,18 +28,18 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 57,
-      "valor": 7296.0
+      "quantidade": 58,
+      "valor": 7411.0
     },
     {
       "unidade": "Garibaldi",
-      "quantidade": 34,
-      "valor": 3700.0
+      "quantidade": 35,
+      "valor": 3800.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 96,
-      "valor": 11602.0
+      "quantidade": 98,
+      "valor": 11832.0
     },
     {
       "unidade": "Ssdocai",
@@ -109,6 +109,11 @@
       "valor_descontado": 0.0
     },
     {
+      "doutor": "Indiamara Rech",
+      "quantidade": 1,
+      "valor_descontado": 0.0
+    },
+    {
       "doutor": "Jéssica Barreto",
       "quantidade": 9,
       "valor_descontado": 0.0
@@ -125,7 +130,7 @@
     },
     {
       "doutor": "Leticia Canabarro",
-      "quantidade": 10,
+      "quantidade": 12,
       "valor_descontado": 0.0
     },
     {
@@ -140,7 +145,7 @@
     },
     {
       "doutor": "Marcella Zancanaro",
-      "quantidade": 11,
+      "quantidade": 12,
       "valor_descontado": 0.0
     },
     {
@@ -185,12 +190,12 @@
     },
     {
       "doutor": "Thalia Vezzosi",
-      "quantidade": 4,
+      "quantidade": 5,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Thiany Cristofoli",
-      "quantidade": 38,
+      "quantidade": 39,
       "valor_descontado": 0.0
     },
     {
