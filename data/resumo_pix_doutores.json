@@ -266,36 +266,36 @@
   },
   "2026-05": {
     "competencia": "2026-05",
-    "gerado_em": "2026-05-16T11:47:34.241846",
-    "quantidade_total": 439,
-    "valor_total": 61386.49,
+    "gerado_em": "2026-05-16T12:54:45.758616",
+    "quantidade_total": 451,
+    "valor_total": 62665.49,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 61386.49,
+    "valor_total_pendente": 62665.49,
     "por_unidade": [
       {
         "unidade": "Bento",
-        "quantidade": 24,
-        "valor": 3491.99
+        "quantidade": 26,
+        "valor": 3701.99
       },
       {
         "unidade": "Caxias",
-        "quantidade": 74,
-        "valor": 9843.5
+        "quantidade": 75,
+        "valor": 9968.5
       },
       {
         "unidade": "Encantado",
-        "quantidade": 58,
-        "valor": 7921.0
+        "quantidade": 60,
+        "valor": 8119.0
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 42,
-        "valor": 5998.0
+        "quantidade": 43,
+        "valor": 6070.0
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 58,
-        "valor": 7411.0
+        "quantidade": 59,
+        "valor": 7570.0
       },
       {
         "unidade": "Garibaldi",
@@ -304,8 +304,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 98,
-        "valor": 11832.0
+        "quantidade": 103,
+        "valor": 12347.0
       },
       {
         "unidade": "Ssdocai",
@@ -376,7 +376,7 @@
       },
       {
         "doutor": "Indiamara Rech",
-        "quantidade": 1,
+        "quantidade": 2,
         "valor_descontado": 0.0
       },
       {
@@ -396,7 +396,7 @@
       },
       {
         "doutor": "Leticia Canabarro",
-        "quantidade": 12,
+        "quantidade": 17,
         "valor_descontado": 0.0
       },
       {
@@ -431,7 +431,7 @@
       },
       {
         "doutor": "Nelson Vaccari",
-        "quantidade": 7,
+        "quantidade": 9,
         "valor_descontado": 0.0
       },
       {
@@ -456,17 +456,17 @@
       },
       {
         "doutor": "Thalia Vezzosi",
-        "quantidade": 5,
+        "quantidade": 7,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Thiany Cristofoli",
-        "quantidade": 39,
+        "quantidade": 40,
         "valor_descontado": 0.0
       },
       {
         "doutor": "TOP",
-        "quantidade": 3,
+        "quantidade": 4,
         "valor_descontado": 0.0
       }
     ]
