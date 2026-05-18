@@ -266,17 +266,12 @@
   },
   "2026-05": {
     "competencia": "2026-05",
-    "gerado_em": "2026-05-18T00:06:55.580606",
-    "quantidade_total": 473,
-    "valor_total": 65572.49,
+    "gerado_em": "2026-05-18T04:33:47.539784",
+    "quantidade_total": 447,
+    "valor_total": 61870.5,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 65572.49,
+    "valor_total_pendente": 61870.5,
     "por_unidade": [
-      {
-        "unidade": "Bento",
-        "quantidade": 26,
-        "valor": 3701.99
-      },
       {
         "unidade": "Caxias",
         "quantidade": 79,
@@ -385,11 +380,6 @@
         "valor_descontado": 0.0
       },
       {
-        "doutor": "Jéssica Barreto",
-        "quantidade": 9,
-        "valor_descontado": 0.0
-      },
-      {
         "doutor": "Keyla Daniele",
         "quantidade": 10,
         "valor_descontado": 0.0
@@ -427,16 +417,6 @@
       {
         "doutor": "Morgana Zambiasi",
         "quantidade": 7,
-        "valor_descontado": 0.0
-      },
-      {
-        "doutor": "Naiane Pieta",
-        "quantidade": 8,
-        "valor_descontado": 0.0
-      },
-      {
-        "doutor": "Nelson Vaccari",
-        "quantidade": 9,
         "valor_descontado": 0.0
       },
       {
