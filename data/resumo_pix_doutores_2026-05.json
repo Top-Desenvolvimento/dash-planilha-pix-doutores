@@ -1,11 +1,16 @@
 {
   "competencia": "2026-05",
-  "gerado_em": "2026-05-18T04:33:47.539784",
-  "quantidade_total": 447,
-  "valor_total": 61870.5,
+  "gerado_em": "2026-05-18T08:41:28.791732",
+  "quantidade_total": 408,
+  "valor_total": 57192.49,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 61870.5,
+  "valor_total_pendente": 57192.49,
   "por_unidade": [
+    {
+      "unidade": "Bento",
+      "quantidade": 26,
+      "valor": 3701.99
+    },
     {
       "unidade": "Caxias",
       "quantidade": 79,
@@ -20,11 +25,6 @@
       "unidade": "Farroupilha",
       "quantidade": 49,
       "valor": 6904.0
-    },
-    {
-      "unidade": "FloresDaCunha",
-      "quantidade": 65,
-      "valor": 8380.0
     },
     {
       "unidade": "Garibaldi",
@@ -89,13 +89,8 @@
       "valor_descontado": 0.0
     },
     {
-      "doutor": "Fernana Sozo",
-      "quantidade": 9,
-      "valor_descontado": 0.0
-    },
-    {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 77,
+      "quantidade": 52,
       "valor_descontado": 0.0
     },
     {
@@ -109,8 +104,8 @@
       "valor_descontado": 0.0
     },
     {
-      "doutor": "Indiamara Rech",
-      "quantidade": 8,
+      "doutor": "Jéssica Barreto",
+      "quantidade": 9,
       "valor_descontado": 0.0
     },
     {
@@ -154,6 +149,16 @@
       "valor_descontado": 0.0
     },
     {
+      "doutor": "Naiane Pieta",
+      "quantidade": 8,
+      "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Nelson Vaccari",
+      "quantidade": 9,
+      "valor_descontado": 0.0
+    },
+    {
       "doutor": "Renata Protto",
       "quantidade": 17,
       "valor_descontado": 0.0
@@ -165,7 +170,7 @@
     },
     {
       "doutor": "Tamara Macanan",
-      "quantidade": 24,
+      "quantidade": 1,
       "valor_descontado": 0.0
     },
     {
