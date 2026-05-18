@@ -1,15 +1,15 @@
 {
   "competencia": "2026-05",
-  "gerado_em": "2026-05-18T18:17:02.256342",
-  "quantidade_total": 478,
-  "valor_total": 69972.49,
+  "gerado_em": "2026-05-18T20:11:00.411827",
+  "quantidade_total": 480,
+  "valor_total": 70637.49,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 69972.49,
+  "valor_total_pendente": 70637.49,
   "por_unidade": [
     {
       "unidade": "Bento",
-      "quantidade": 26,
-      "valor": 3701.99
+      "quantidade": 27,
+      "valor": 4215.99
     },
     {
       "unidade": "Caxias",
@@ -48,11 +48,16 @@
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 28,
-      "valor": 8364.0
+      "quantidade": 29,
+      "valor": 8515.0
     }
   ],
   "por_doutor": [
+    {
+      "doutor": ".Nelson Agostino Vaccari Junior",
+      "quantidade": 1,
+      "valor_descontado": 0.0
+    },
     {
       "doutor": "Adriele da Silva",
       "quantidade": 23,
@@ -205,7 +210,7 @@
     },
     {
       "doutor": "TOP",
-      "quantidade": 4,
+      "quantidade": 5,
       "valor_descontado": 0.0
     }
   ]
