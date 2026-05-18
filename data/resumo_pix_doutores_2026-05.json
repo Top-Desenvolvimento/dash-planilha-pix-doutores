@@ -1,10 +1,10 @@
 {
   "competencia": "2026-05",
-  "gerado_em": "2026-05-18T21:32:38.567017",
-  "quantidade_total": 485,
-  "valor_total": 71696.49,
+  "gerado_em": "2026-05-18T22:42:53.269698",
+  "quantidade_total": 489,
+  "valor_total": 72140.49,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 71696.49,
+  "valor_total_pendente": 72140.49,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,13 +13,13 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 81,
-      "valor": 10562.5
+      "quantidade": 84,
+      "valor": 10911.5
     },
     {
       "unidade": "Encantado",
-      "quantidade": 64,
-      "valor": 12567.0
+      "quantidade": 65,
+      "valor": 12662.0
     },
     {
       "unidade": "Farroupilha",
@@ -200,7 +200,7 @@
     },
     {
       "doutor": "Thalia Vezzosi",
-      "quantidade": 19,
+      "quantidade": 22,
       "valor_descontado": 0.0
     },
     {
@@ -210,7 +210,7 @@
     },
     {
       "doutor": "TOP",
-      "quantidade": 6,
+      "quantidade": 7,
       "valor_descontado": 0.0
     }
   ]
