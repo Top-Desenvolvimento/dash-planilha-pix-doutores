@@ -266,11 +266,11 @@
   },
   "2026-05": {
     "competencia": "2026-05",
-    "gerado_em": "2026-05-18T16:05:49.209379",
-    "quantidade_total": 474,
-    "valor_total": 65657.49,
+    "gerado_em": "2026-05-18T18:17:02.256342",
+    "quantidade_total": 478,
+    "valor_total": 69972.49,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 65657.49,
+    "valor_total_pendente": 69972.49,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -279,13 +279,13 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 80,
-        "valor": 10467.5
+        "quantidade": 81,
+        "valor": 10562.5
       },
       {
         "unidade": "Encantado",
-        "quantidade": 61,
-        "valor": 8367.0
+        "quantidade": 63,
+        "valor": 12462.0
       },
       {
         "unidade": "Farroupilha",
@@ -304,8 +304,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 105,
-        "valor": 12638.0
+        "quantidade": 106,
+        "valor": 12763.0
       },
       {
         "unidade": "Ssdocai",
@@ -401,7 +401,7 @@
       },
       {
         "doutor": "Leticia Canabarro",
-        "quantidade": 19,
+        "quantidade": 20,
         "valor_descontado": 0.0
       },
       {
@@ -461,12 +461,12 @@
       },
       {
         "doutor": "Thalia Vezzosi",
-        "quantidade": 18,
+        "quantidade": 19,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Thiany Cristofoli",
-        "quantidade": 41,
+        "quantidade": 43,
         "valor_descontado": 0.0
       },
       {
