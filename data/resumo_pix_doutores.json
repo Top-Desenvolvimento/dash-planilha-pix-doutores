@@ -266,11 +266,11 @@
   },
   "2026-05": {
     "competencia": "2026-05",
-    "gerado_em": "2026-05-19T13:39:50.061948",
-    "quantidade_total": 494,
-    "valor_total": 72780.49,
+    "gerado_em": "2026-05-19T16:48:47.346036",
+    "quantidade_total": 498,
+    "valor_total": 73325.49,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 72780.49,
+    "valor_total_pendente": 73325.49,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -279,8 +279,8 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 87,
-        "valor": 11336.5
+        "quantidade": 90,
+        "valor": 11782.5
       },
       {
         "unidade": "Encantado",
@@ -304,8 +304,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 106,
-        "valor": 12763.0
+        "quantidade": 107,
+        "valor": 12862.0
       },
       {
         "unidade": "Ssdocai",
@@ -371,7 +371,7 @@
       },
       {
         "doutor": "Franciele Pedrotti",
-        "quantidade": 77,
+        "quantidade": 78,
         "valor_descontado": 0.0
       },
       {
@@ -406,7 +406,7 @@
       },
       {
         "doutor": "Leticia Canabarro",
-        "quantidade": 20,
+        "quantidade": 21,
         "valor_descontado": 0.0
       },
       {
@@ -431,7 +431,7 @@
       },
       {
         "doutor": "Morgana Zambiasi",
-        "quantidade": 9,
+        "quantidade": 10,
         "valor_descontado": 0.0
       },
       {
@@ -441,7 +441,7 @@
       },
       {
         "doutor": "Nelson Vaccari",
-        "quantidade": 11,
+        "quantidade": 12,
         "valor_descontado": 0.0
       },
       {
@@ -466,7 +466,7 @@
       },
       {
         "doutor": "Thalia Vezzosi",
-        "quantidade": 27,
+        "quantidade": 28,
         "valor_descontado": 0.0
       },
       {
@@ -476,7 +476,7 @@
       },
       {
         "doutor": "TOP",
-        "quantidade": 7,
+        "quantidade": 6,
         "valor_descontado": 0.0
       }
     ]
