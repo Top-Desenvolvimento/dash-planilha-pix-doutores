@@ -266,11 +266,11 @@
   },
   "2026-05": {
     "competencia": "2026-05",
-    "gerado_em": "2026-05-19T16:48:47.346036",
-    "quantidade_total": 498,
-    "valor_total": 73325.49,
+    "gerado_em": "2026-05-19T18:38:00.169179",
+    "quantidade_total": 501,
+    "valor_total": 73703.49,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 73325.49,
+    "valor_total_pendente": 73703.49,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -289,13 +289,13 @@
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 51,
-        "valor": 7119.0
+        "quantidade": 52,
+        "valor": 7221.0
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 65,
-        "valor": 8380.0
+        "quantidade": 66,
+        "valor": 8500.0
       },
       {
         "unidade": "Garibaldi",
@@ -304,8 +304,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 107,
-        "valor": 12862.0
+        "quantidade": 108,
+        "valor": 13018.0
       },
       {
         "unidade": "Ssdocai",
@@ -386,7 +386,7 @@
       },
       {
         "doutor": "Indiamara Rech",
-        "quantidade": 8,
+        "quantidade": 9,
         "valor_descontado": 0.0
       },
       {
@@ -406,7 +406,7 @@
       },
       {
         "doutor": "Leticia Canabarro",
-        "quantidade": 21,
+        "quantidade": 22,
         "valor_descontado": 0.0
       },
       {
@@ -476,7 +476,7 @@
       },
       {
         "doutor": "TOP",
-        "quantidade": 6,
+        "quantidade": 7,
         "valor_descontado": 0.0
       }
     ]
