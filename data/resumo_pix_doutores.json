@@ -266,11 +266,11 @@
   },
   "2026-05": {
     "competencia": "2026-05",
-    "gerado_em": "2026-05-20T17:40:19.939411",
-    "quantidade_total": 519,
-    "valor_total": 76322.49,
-    "valor_total_descontado": 941.0,
-    "valor_total_pendente": 75381.49,
+    "gerado_em": "2026-05-20T20:01:05.427756",
+    "quantidade_total": 522,
+    "valor_total": 76571.49,
+    "valor_total_descontado": 1147.0,
+    "valor_total_pendente": 75424.49,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -279,8 +279,8 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 93,
-        "valor": 12117.5
+        "quantidade": 91,
+        "valor": 11791.5
       },
       {
         "unidade": "Encantado",
@@ -294,8 +294,8 @@
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 68,
-        "valor": 8654.0
+        "quantidade": 71,
+        "valor": 9014.0
       },
       {
         "unidade": "Garibaldi",
@@ -314,8 +314,8 @@
       },
       {
         "unidade": "Veranopolis",
-        "quantidade": 32,
-        "valor": 8895.0
+        "quantidade": 34,
+        "valor": 9110.0
       }
     ],
     "por_doutor": [
@@ -326,8 +326,8 @@
       },
       {
         "doutor": "Alexandre Favero",
-        "quantidade": 2,
-        "valor_descontado": 647.0
+        "quantidade": 4,
+        "valor_descontado": 853.0
       },
       {
         "doutor": "Alexandre Orlandini",
@@ -336,7 +336,7 @@
       },
       {
         "doutor": "Ana Cristina Corso",
-        "quantidade": 2,
+        "quantidade": 3,
         "valor_descontado": 0.0
       },
       {
@@ -391,7 +391,7 @@
       },
       {
         "doutor": "Indiamara Rech",
-        "quantidade": 11,
+        "quantidade": 13,
         "valor_descontado": 0.0
       },
       {
@@ -476,7 +476,7 @@
       },
       {
         "doutor": "Thalia Vezzosi",
-        "quantidade": 31,
+        "quantidade": 29,
         "valor_descontado": 0.0
       },
       {
