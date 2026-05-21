@@ -299,8 +299,8 @@
     "doutor_id": "37",
     "doutor": "Nicoli Weber",
     "credito_inicial": 1000.0,
-    "utilizado": 904.0,
-    "credito_disponivel": 96.0,
+    "utilizado": 1000.0,
+    "credito_disponivel": 0.0,
     "pix_key": ""
   },
   {
