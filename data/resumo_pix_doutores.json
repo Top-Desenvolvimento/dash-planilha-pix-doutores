@@ -266,21 +266,21 @@
   },
   "2026-05": {
     "competencia": "2026-05",
-    "gerado_em": "2026-05-21T12:01:06.003862",
-    "quantidade_total": 536,
-    "valor_total": 79381.49,
+    "gerado_em": "2026-05-21T15:08:06.541543",
+    "quantidade_total": 544,
+    "valor_total": 80384.49,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 79381.49,
+    "valor_total_pendente": 80384.49,
     "por_unidade": [
       {
         "unidade": "Bento",
-        "quantidade": 29,
-        "valor": 4926.99
+        "quantidade": 30,
+        "valor": 5031.99
       },
       {
         "unidade": "Caxias",
-        "quantidade": 91,
-        "valor": 11791.5
+        "quantidade": 97,
+        "valor": 12601.5
       },
       {
         "unidade": "Encantado",
@@ -289,8 +289,8 @@
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 61,
-        "valor": 8458.0
+        "quantidade": 62,
+        "valor": 8546.0
       },
       {
         "unidade": "FloresDaCunha",
@@ -426,7 +426,7 @@
       },
       {
         "doutor": "Luiz Henrique",
-        "quantidade": 6,
+        "quantidade": 7,
         "valor_descontado": 0.0
       },
       {
@@ -451,7 +451,7 @@
       },
       {
         "doutor": "Nelson Vaccari",
-        "quantidade": 16,
+        "quantidade": 21,
         "valor_descontado": 0.0
       },
       {
@@ -476,7 +476,7 @@
       },
       {
         "doutor": "Thalia Tessaro",
-        "quantidade": 16,
+        "quantidade": 18,
         "valor_descontado": 0.0
       },
       {
