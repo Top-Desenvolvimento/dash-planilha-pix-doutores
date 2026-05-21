@@ -1,10 +1,10 @@
 {
   "competencia": "2026-05",
-  "gerado_em": "2026-05-21T21:25:22.141785",
-  "quantidade_total": 559,
-  "valor_total": 82555.49,
-  "valor_total_descontado": 20.0,
-  "valor_total_pendente": 82535.49,
+  "gerado_em": "2026-05-21T22:56:15.059552",
+  "quantidade_total": 564,
+  "valor_total": 83014.49,
+  "valor_total_descontado": 210.0,
+  "valor_total_pendente": 82804.49,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,8 +13,8 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 104,
-      "valor": 13649.5
+      "quantidade": 107,
+      "valor": 13918.5
     },
     {
       "unidade": "Encantado",
@@ -23,8 +23,8 @@
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 67,
-      "valor": 9161.0
+      "quantidade": 68,
+      "valor": 9256.0
     },
     {
       "unidade": "FloresDaCunha",
@@ -48,8 +48,8 @@
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 36,
-      "valor": 10308.0
+      "quantidade": 37,
+      "valor": 10403.0
     }
   ],
   "por_doutor": [
@@ -120,8 +120,8 @@
     },
     {
       "doutor": "Giovana Gasparini",
-      "quantidade": 1,
-      "valor_descontado": 20.0
+      "quantidade": 3,
+      "valor_descontado": 210.0
     },
     {
       "doutor": "Gustavo Lourenço Ongaratto",
@@ -190,7 +190,7 @@
     },
     {
       "doutor": "Nelson Vaccari",
-      "quantidade": 24,
+      "quantidade": 27,
       "valor_descontado": 0.0
     },
     {
