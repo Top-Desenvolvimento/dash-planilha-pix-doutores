@@ -1101,3 +1101,20 @@ body.modo-inicio-limpo .status-group-header span {
 #secaoControlados {
   display: none !important;
 }
+.tabela-doutores thead th {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #1e2b52; /* mesma cor do cabeçalho */
+  color: #fff;
+}
+
+.tabela-doutores {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.container-tabela-doutores {
+  max-height: 600px; /* altura da área rolável */
+  overflow-y: auto;
+}
