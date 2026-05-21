@@ -1,9 +1,9 @@
 {
   "competencia": "2026-05",
-  "gerado_em": "2026-05-21T17:42:47.153216",
-  "quantidade_total": 552,
-  "valor_total": 81355.49,
-  "valor_total_descontado": 0.0,
+  "gerado_em": "2026-05-21T18:51:46.204976",
+  "quantidade_total": 553,
+  "valor_total": 81375.49,
+  "valor_total_descontado": 20.0,
   "valor_total_pendente": 81355.49,
   "por_unidade": [
     {
@@ -48,8 +48,8 @@
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 35,
-      "valor": 10288.0
+      "quantidade": 36,
+      "valor": 10308.0
     }
   ],
   "por_doutor": [
@@ -117,6 +117,11 @@
       "doutor": "Gabrielli Fabonato",
       "quantidade": 3,
       "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Giovana Gasparini",
+      "quantidade": 1,
+      "valor_descontado": 20.0
     },
     {
       "doutor": "Gustavo Lourenço Ongaratto",
