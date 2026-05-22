@@ -1,10 +1,10 @@
 {
   "competencia": "2026-05",
-  "gerado_em": "2026-05-22T19:24:46.616287",
-  "quantidade_total": 582,
-  "valor_total": 85378.49,
-  "valor_total_descontado": 0.0,
-  "valor_total_pendente": 85378.49,
+  "gerado_em": "2026-05-22T21:00:23.505290",
+  "quantidade_total": 549,
+  "valor_total": 75230.49,
+  "valor_total_descontado": 317.0,
+  "valor_total_pendente": 74913.49,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -18,8 +18,8 @@
     },
     {
       "unidade": "Encantado",
-      "quantidade": 76,
-      "valor": 14476.0
+      "quantidade": 77,
+      "valor": 14574.0
     },
     {
       "unidade": "Farroupilha",
@@ -38,18 +38,13 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 113,
-      "valor": 13592.0
+      "quantidade": 118,
+      "valor": 14079.0
     },
     {
       "unidade": "Ssdocai",
       "quantidade": 29,
       "valor": 3445.0
-    },
-    {
-      "unidade": "Veranopolis",
-      "quantidade": 39,
-      "valor": 10733.0
     }
   ],
   "por_doutor": [
@@ -60,7 +55,7 @@
     },
     {
       "doutor": "Alexandre Favero",
-      "quantidade": 5,
+      "quantidade": 1,
       "valor_descontado": 0.0
     },
     {
@@ -94,11 +89,6 @@
       "valor_descontado": 0.0
     },
     {
-      "doutor": "Evalda Baldissera",
-      "quantidade": 20,
-      "valor_descontado": 0.0
-    },
-    {
       "doutor": "Everlize Cipriani",
       "quantidade": 15,
       "valor_descontado": 0.0
@@ -120,7 +110,7 @@
     },
     {
       "doutor": "Giovana Gasparini",
-      "quantidade": 9,
+      "quantidade": 5,
       "valor_descontado": 0.0
     },
     {
@@ -175,13 +165,13 @@
     },
     {
       "doutor": "Marina Alievi",
-      "quantidade": 16,
+      "quantidade": 18,
       "valor_descontado": 0.0
     },
     {
-      "doutor": "Morgana Zambiasi",
-      "quantidade": 10,
-      "valor_descontado": 0.0
+      "doutor": "Murilo Debortoli",
+      "quantidade": 3,
+      "valor_descontado": 317.0
     },
     {
       "doutor": "Naiane Pieta",
@@ -195,7 +185,7 @@
     },
     {
       "doutor": "Nicoli Weber",
-      "quantidade": 3,
+      "quantidade": 4,
       "valor_descontado": 0.0
     },
     {
@@ -205,7 +195,7 @@
     },
     {
       "doutor": "Sofie Owens",
-      "quantidade": 23,
+      "quantidade": 22,
       "valor_descontado": 0.0
     },
     {
