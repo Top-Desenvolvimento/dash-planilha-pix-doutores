@@ -1118,3 +1118,19 @@ body.modo-inicio-limpo .status-group-header span {
   max-height: 600px; /* altura da área rolável */
   overflow-y: auto;
 }
+/* Congelar títulos da tabela Doutores cadastrados */
+.tabela-doutores,
+.tabela-admin,
+.table-wrapper {
+  overflow: visible !important;
+}
+
+#adminDoutores table thead th,
+.doutores-cadastrados table thead th,
+table thead th {
+  position: sticky !important;
+  top: 0;
+  z-index: 50;
+  background: #243154;
+  color: #ffffff;
+}
