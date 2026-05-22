@@ -266,11 +266,11 @@
   },
   "2026-05": {
     "competencia": "2026-05",
-    "gerado_em": "2026-05-22T17:34:17.434942",
-    "quantidade_total": 546,
-    "valor_total": 81483.49,
+    "gerado_em": "2026-05-22T19:24:46.616287",
+    "quantidade_total": 582,
+    "valor_total": 85378.49,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 81483.49,
+    "valor_total_pendente": 85378.49,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -298,14 +298,19 @@
         "valor": 9906.0
       },
       {
+        "unidade": "Garibaldi",
+        "quantidade": 35,
+        "valor": 3800.0
+      },
+      {
         "unidade": "Soledade",
         "quantidade": 113,
         "valor": 13592.0
       },
       {
         "unidade": "Ssdocai",
-        "quantidade": 28,
-        "valor": 3350.0
+        "quantidade": 29,
+        "valor": 3445.0
       },
       {
         "unidade": "Veranopolis",
@@ -336,7 +341,7 @@
       },
       {
         "doutor": "Bruno Castellan",
-        "quantidade": 3,
+        "quantidade": 4,
         "valor_descontado": 0.0
       },
       {
@@ -430,6 +435,11 @@
         "valor_descontado": 0.0
       },
       {
+        "doutor": "Marcella Zancanaro",
+        "quantidade": 12,
+        "valor_descontado": 0.0
+      },
+      {
         "doutor": "Marina Alievi",
         "quantidade": 16,
         "valor_descontado": 0.0
@@ -461,7 +471,7 @@
       },
       {
         "doutor": "Sofie Owens",
-        "quantidade": 1,
+        "quantidade": 23,
         "valor_descontado": 0.0
       },
       {
@@ -486,7 +496,7 @@
       },
       {
         "doutor": "TOP",
-        "quantidade": 9,
+        "quantidade": 10,
         "valor_descontado": 0.0
       }
     ]
