@@ -266,11 +266,11 @@
   },
   "2026-05": {
     "competencia": "2026-05",
-    "gerado_em": "2026-05-22T02:02:20.376215",
+    "gerado_em": "2026-05-22T06:17:30.301373",
     "quantidade_total": 566,
     "valor_total": 83344.49,
-    "valor_total_descontado": 190.0,
-    "valor_total_pendente": 83154.49,
+    "valor_total_descontado": 0.0,
+    "valor_total_pendente": 83344.49,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -387,7 +387,7 @@
       {
         "doutor": "Giovana Gasparini",
         "quantidade": 5,
-        "valor_descontado": 190.0
+        "valor_descontado": 0.0
       },
       {
         "doutor": "Gustavo Lourenço Ongaratto",
