@@ -266,11 +266,11 @@
   },
   "2026-05": {
     "competencia": "2026-05",
-    "gerado_em": "2026-05-22T15:36:45.223499",
-    "quantidade_total": 572,
-    "valor_total": 84081.49,
+    "gerado_em": "2026-05-22T17:34:17.434942",
+    "quantidade_total": 546,
+    "valor_total": 81483.49,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 84081.49,
+    "valor_total_pendente": 81483.49,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -279,13 +279,13 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 107,
-        "valor": 13918.5
+        "quantidade": 109,
+        "valor": 14123.5
       },
       {
         "unidade": "Encantado",
-        "quantidade": 72,
-        "valor": 14020.0
+        "quantidade": 76,
+        "valor": 14476.0
       },
       {
         "unidade": "Farroupilha",
@@ -294,18 +294,13 @@
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 75,
-        "valor": 9485.0
-      },
-      {
-        "unidade": "Garibaldi",
-        "quantidade": 35,
-        "valor": 3800.0
+        "quantidade": 77,
+        "valor": 9906.0
       },
       {
         "unidade": "Soledade",
-        "quantidade": 112,
-        "valor": 13472.0
+        "quantidade": 113,
+        "valor": 13592.0
       },
       {
         "unidade": "Ssdocai",
@@ -336,7 +331,7 @@
       },
       {
         "doutor": "Ana Cristina Corso",
-        "quantidade": 7,
+        "quantidade": 9,
         "valor_descontado": 0.0
       },
       {
@@ -416,7 +411,7 @@
       },
       {
         "doutor": "Leticia Canabarro",
-        "quantidade": 24,
+        "quantidade": 25,
         "valor_descontado": 0.0
       },
       {
@@ -432,11 +427,6 @@
       {
         "doutor": "Luiz Henrique",
         "quantidade": 11,
-        "valor_descontado": 0.0
-      },
-      {
-        "doutor": "Marcella Zancanaro",
-        "quantidade": 12,
         "valor_descontado": 0.0
       },
       {
@@ -456,12 +446,12 @@
       },
       {
         "doutor": "Nelson Vaccari",
-        "quantidade": 27,
+        "quantidade": 29,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Nicoli Weber",
-        "quantidade": 2,
+        "quantidade": 3,
         "valor_descontado": 0.0
       },
       {
@@ -471,7 +461,7 @@
       },
       {
         "doutor": "Sofie Owens",
-        "quantidade": 23,
+        "quantidade": 1,
         "valor_descontado": 0.0
       },
       {
@@ -486,7 +476,7 @@
       },
       {
         "doutor": "Thalia Vezzosi",
-        "quantidade": 29,
+        "quantidade": 30,
         "valor_descontado": 0.0
       },
       {
@@ -496,7 +486,7 @@
       },
       {
         "doutor": "TOP",
-        "quantidade": 8,
+        "quantidade": 9,
         "valor_descontado": 0.0
       }
     ]
