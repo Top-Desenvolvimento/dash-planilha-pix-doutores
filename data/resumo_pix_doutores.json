@@ -266,11 +266,11 @@
   },
   "2026-05": {
     "competencia": "2026-05",
-    "gerado_em": "2026-05-22T12:23:48.550807",
-    "quantidade_total": 566,
-    "valor_total": 83344.49,
+    "gerado_em": "2026-05-22T15:36:45.223499",
+    "quantidade_total": 572,
+    "valor_total": 84081.49,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 83344.49,
+    "valor_total_pendente": 84081.49,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -289,8 +289,8 @@
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 68,
-        "valor": 9256.0
+        "quantidade": 72,
+        "valor": 9783.0
       },
       {
         "unidade": "FloresDaCunha",
@@ -304,8 +304,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 110,
-        "valor": 13262.0
+        "quantidade": 112,
+        "valor": 13472.0
       },
       {
         "unidade": "Ssdocai",
@@ -381,12 +381,12 @@
       },
       {
         "doutor": "Gabrielli Fabonato",
-        "quantidade": 3,
+        "quantidade": 4,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Giovana Gasparini",
-        "quantidade": 5,
+        "quantidade": 9,
         "valor_descontado": 0.0
       },
       {
@@ -416,7 +416,7 @@
       },
       {
         "doutor": "Leticia Canabarro",
-        "quantidade": 23,
+        "quantidade": 24,
         "valor_descontado": 0.0
       },
       {
