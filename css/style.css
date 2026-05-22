@@ -1134,3 +1134,21 @@ table thead th {
   background: #243154;
   color: #ffffff;
 }
+/* Container da tabela com rolagem interna */
+.doutores-cadastrados,
+#adminDoutores,
+.card-doutores {
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+/* Cabeçalho congelado */
+.doutores-cadastrados table thead th,
+#adminDoutores table thead th,
+.card-doutores table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #243154;
+  color: white;
+}
