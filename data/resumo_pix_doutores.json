@@ -266,11 +266,11 @@
   },
   "2026-05": {
     "competencia": "2026-05",
-    "gerado_em": "2026-05-23T09:36:07.572413",
-    "quantidade_total": 566,
-    "valor_total": 83143.49,
+    "gerado_em": "2026-05-23T12:13:55.318058",
+    "quantidade_total": 603,
+    "valor_total": 87504.49,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 83143.49,
+    "valor_total_pendente": 87504.49,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -284,8 +284,8 @@
       },
       {
         "unidade": "Encantado",
-        "quantidade": 83,
-        "valor": 15094.0
+        "quantidade": 85,
+        "valor": 15319.0
       },
       {
         "unidade": "Farroupilha",
@@ -304,8 +304,13 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 119,
-        "valor": 14184.0
+        "quantidade": 125,
+        "valor": 14875.0
+      },
+      {
+        "unidade": "Ssdocai",
+        "quantidade": 29,
+        "valor": 3445.0
       },
       {
         "unidade": "Veranopolis",
@@ -332,6 +337,11 @@
       {
         "doutor": "Ana Cristina Corso",
         "quantidade": 9,
+        "valor_descontado": 0.0
+      },
+      {
+        "doutor": "Bruno Castellan",
+        "quantidade": 4,
         "valor_descontado": 0.0
       },
       {
@@ -396,12 +406,22 @@
       },
       {
         "doutor": "Keyla Daniele",
-        "quantidade": 6,
+        "quantidade": 16,
+        "valor_descontado": 0.0
+      },
+      {
+        "doutor": "Leandro Diniz",
+        "quantidade": 3,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Leticia Canabarro",
         "quantidade": 25,
+        "valor_descontado": 0.0
+      },
+      {
+        "doutor": "Letícia Cauzzi",
+        "quantidade": 12,
         "valor_descontado": 0.0
       },
       {
@@ -431,7 +451,7 @@
       },
       {
         "doutor": "Murilo Debortoli",
-        "quantidade": 4,
+        "quantidade": 10,
         "valor_descontado": 0.0
       },
       {
@@ -446,7 +466,7 @@
       },
       {
         "doutor": "Nicoli Weber",
-        "quantidade": 10,
+        "quantidade": 12,
         "valor_descontado": 0.0
       },
       {
