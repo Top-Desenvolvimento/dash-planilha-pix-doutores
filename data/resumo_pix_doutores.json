@@ -266,11 +266,11 @@
   },
   "2026-05": {
     "competencia": "2026-05",
-    "gerado_em": "2026-05-23T12:13:55.318058",
-    "quantidade_total": 603,
-    "valor_total": 87504.49,
+    "gerado_em": "2026-05-23T14:10:54.364788",
+    "quantidade_total": 607,
+    "valor_total": 88028.49,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 87504.49,
+    "valor_total_pendente": 88028.49,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -284,8 +284,8 @@
       },
       {
         "unidade": "Encantado",
-        "quantidade": 85,
-        "valor": 15319.0
+        "quantidade": 87,
+        "valor": 15529.0
       },
       {
         "unidade": "Farroupilha",
@@ -304,8 +304,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 125,
-        "valor": 14875.0
+        "quantidade": 127,
+        "valor": 15189.0
       },
       {
         "unidade": "Ssdocai",
@@ -445,13 +445,18 @@
         "valor_descontado": 0.0
       },
       {
+        "doutor": "MEI",
+        "quantidade": 1,
+        "valor_descontado": 0.0
+      },
+      {
         "doutor": "Morgana Zambiasi",
         "quantidade": 10,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Murilo Debortoli",
-        "quantidade": 10,
+        "quantidade": 11,
         "valor_descontado": 0.0
       },
       {
@@ -466,7 +471,7 @@
       },
       {
         "doutor": "Nicoli Weber",
-        "quantidade": 12,
+        "quantidade": 14,
         "valor_descontado": 0.0
       },
       {
