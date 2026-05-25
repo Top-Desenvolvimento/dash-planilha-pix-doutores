@@ -1,10 +1,10 @@
 {
   "competencia": "2026-05",
-  "gerado_em": "2026-05-25T20:11:26.107700",
-  "quantidade_total": 612,
-  "valor_total": 88683.49,
+  "gerado_em": "2026-05-25T21:31:24.496217",
+  "quantidade_total": 615,
+  "valor_total": 89019.49,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 88683.49,
+  "valor_total_pendente": 89019.49,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,8 +13,8 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 109,
-      "valor": 14123.5
+      "quantidade": 112,
+      "valor": 14459.5
     },
     {
       "unidade": "Encantado",
@@ -155,7 +155,7 @@
     },
     {
       "doutor": "Letícia Cauzzi",
-      "quantidade": 12,
+      "quantidade": 15,
       "valor_descontado": 0.0
     },
     {
