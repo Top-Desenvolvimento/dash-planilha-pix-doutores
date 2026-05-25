@@ -266,11 +266,11 @@
   },
   "2026-05": {
     "competencia": "2026-05",
-    "gerado_em": "2026-05-25T18:21:16.254027",
-    "quantidade_total": 611,
-    "valor_total": 88563.49,
+    "gerado_em": "2026-05-25T20:11:26.107700",
+    "quantidade_total": 612,
+    "valor_total": 88683.49,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 88563.49,
+    "valor_total_pendente": 88683.49,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -304,8 +304,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 130,
-        "valor": 15619.0
+        "quantidade": 131,
+        "valor": 15739.0
       },
       {
         "unidade": "Ssdocai",
@@ -456,7 +456,7 @@
       },
       {
         "doutor": "Murilo Debortoli",
-        "quantidade": 14,
+        "quantidade": 15,
         "valor_descontado": 0.0
       },
       {
