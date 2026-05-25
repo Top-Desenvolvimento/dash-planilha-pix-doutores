@@ -266,11 +266,11 @@
   },
   "2026-05": {
     "competencia": "2026-05",
-    "gerado_em": "2026-05-25T14:04:58.642551",
-    "quantidade_total": 610,
-    "valor_total": 88458.49,
+    "gerado_em": "2026-05-25T16:36:20.765269",
+    "quantidade_total": 611,
+    "valor_total": 88563.49,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 88458.49,
+    "valor_total_pendente": 88563.49,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -309,8 +309,8 @@
       },
       {
         "unidade": "Ssdocai",
-        "quantidade": 29,
-        "valor": 3445.0
+        "quantidade": 30,
+        "valor": 3550.0
       },
       {
         "unidade": "Veranopolis",
@@ -341,7 +341,7 @@
       },
       {
         "doutor": "Bruno Castellan",
-        "quantidade": 4,
+        "quantidade": 5,
         "valor_descontado": 0.0
       },
       {
