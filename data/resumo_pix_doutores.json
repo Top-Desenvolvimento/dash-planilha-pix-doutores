@@ -266,11 +266,11 @@
   },
   "2026-05": {
     "competencia": "2026-05",
-    "gerado_em": "2026-05-26T12:59:24.470180",
-    "quantidade_total": 617,
-    "valor_total": 89209.49,
+    "gerado_em": "2026-05-26T16:45:32.511302",
+    "quantidade_total": 622,
+    "valor_total": 89903.49,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 89209.49,
+    "valor_total_pendente": 89903.49,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -304,8 +304,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 133,
-        "valor": 15929.0
+        "quantidade": 138,
+        "valor": 16623.0
       },
       {
         "unidade": "Ssdocai",
@@ -381,7 +381,7 @@
       },
       {
         "doutor": "Gabrielli Fabonato",
-        "quantidade": 4,
+        "quantidade": 5,
         "valor_descontado": 0.0
       },
       {
@@ -391,7 +391,7 @@
       },
       {
         "doutor": "Gustavo Lourenço Ongaratto",
-        "quantidade": 2,
+        "quantidade": 5,
         "valor_descontado": 0.0
       },
       {
@@ -456,7 +456,7 @@
       },
       {
         "doutor": "Murilo Debortoli",
-        "quantidade": 17,
+        "quantidade": 18,
         "valor_descontado": 0.0
       },
       {
