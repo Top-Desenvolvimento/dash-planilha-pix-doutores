@@ -1,10 +1,10 @@
 {
   "competencia": "2026-05",
-  "gerado_em": "2026-05-26T16:45:32.511302",
-  "quantidade_total": 622,
-  "valor_total": 89903.49,
+  "gerado_em": "2026-05-26T19:18:01.998101",
+  "quantidade_total": 632,
+  "valor_total": 91167.49,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 89903.49,
+  "valor_total_pendente": 91167.49,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -33,18 +33,18 @@
     },
     {
       "unidade": "Garibaldi",
-      "quantidade": 35,
-      "valor": 3800.0
+      "quantidade": 36,
+      "valor": 3920.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 138,
-      "valor": 16623.0
+      "quantidade": 145,
+      "valor": 17549.0
     },
     {
       "unidade": "Ssdocai",
-      "quantidade": 30,
-      "valor": 3550.0
+      "quantidade": 32,
+      "valor": 3768.0
     },
     {
       "unidade": "Veranopolis",
@@ -75,7 +75,7 @@
     },
     {
       "doutor": "Bruno Castellan",
-      "quantidade": 5,
+      "quantidade": 7,
       "valor_descontado": 0.0
     },
     {
@@ -115,7 +115,7 @@
     },
     {
       "doutor": "Gabrielli Fabonato",
-      "quantidade": 5,
+      "quantidade": 7,
       "valor_descontado": 0.0
     },
     {
@@ -125,7 +125,7 @@
     },
     {
       "doutor": "Gustavo Lourenço Ongaratto",
-      "quantidade": 5,
+      "quantidade": 10,
       "valor_descontado": 0.0
     },
     {
@@ -170,7 +170,7 @@
     },
     {
       "doutor": "Marcella Zancanaro",
-      "quantidade": 12,
+      "quantidade": 13,
       "valor_descontado": 0.0
     },
     {
