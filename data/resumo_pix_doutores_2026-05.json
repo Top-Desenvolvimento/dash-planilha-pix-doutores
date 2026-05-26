@@ -1,10 +1,10 @@
 {
   "competencia": "2026-05",
-  "gerado_em": "2026-05-26T21:11:11.417810",
-  "quantidade_total": 633,
-  "valor_total": 91266.49,
+  "gerado_em": "2026-05-26T22:48:03.939626",
+  "quantidade_total": 636,
+  "valor_total": 91586.49,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 91266.49,
+  "valor_total_pendente": 91586.49,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -38,13 +38,13 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 146,
-      "valor": 17648.0
+      "quantidade": 147,
+      "valor": 17753.0
     },
     {
       "unidade": "Ssdocai",
-      "quantidade": 32,
-      "valor": 3768.0
+      "quantidade": 34,
+      "valor": 3983.0
     },
     {
       "unidade": "Veranopolis",
@@ -75,7 +75,7 @@
     },
     {
       "doutor": "Bruno Castellan",
-      "quantidade": 7,
+      "quantidade": 8,
       "valor_descontado": 0.0
     },
     {
@@ -125,7 +125,7 @@
     },
     {
       "doutor": "Gustavo Lourenço Ongaratto",
-      "quantidade": 10,
+      "quantidade": 11,
       "valor_descontado": 0.0
     },
     {
@@ -240,7 +240,7 @@
     },
     {
       "doutor": "TOP",
-      "quantidade": 10,
+      "quantidade": 11,
       "valor_descontado": 0.0
     }
   ]
