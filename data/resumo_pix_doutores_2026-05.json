@@ -1,10 +1,10 @@
 {
   "competencia": "2026-05",
-  "gerado_em": "2026-05-27T10:53:32.439992",
-  "quantidade_total": 636,
-  "valor_total": 91586.49,
+  "gerado_em": "2026-05-27T14:24:09.334093",
+  "quantidade_total": 642,
+  "valor_total": 92180.49,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 91586.49,
+  "valor_total_pendente": 92180.49,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,8 +13,8 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 112,
-      "valor": 14459.5
+      "quantidade": 113,
+      "valor": 14554.5
     },
     {
       "unidade": "Encantado",
@@ -38,8 +38,8 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 147,
-      "valor": 17753.0
+      "quantidade": 152,
+      "valor": 18252.0
     },
     {
       "unidade": "Ssdocai",
@@ -85,7 +85,7 @@
     },
     {
       "doutor": "Diogo Cemin Amarante",
-      "quantidade": 2,
+      "quantidade": 3,
       "valor_descontado": 0.0
     },
     {
@@ -125,7 +125,7 @@
     },
     {
       "doutor": "Gustavo Lourenço Ongaratto",
-      "quantidade": 11,
+      "quantidade": 13,
       "valor_descontado": 0.0
     },
     {
@@ -155,7 +155,7 @@
     },
     {
       "doutor": "Letícia Cauzzi",
-      "quantidade": 15,
+      "quantidade": 16,
       "valor_descontado": 0.0
     },
     {
@@ -190,7 +190,7 @@
     },
     {
       "doutor": "Murilo Debortoli",
-      "quantidade": 18,
+      "quantidade": 20,
       "valor_descontado": 0.0
     },
     {
