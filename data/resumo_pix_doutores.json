@@ -266,11 +266,11 @@
   },
   "2026-05": {
     "competencia": "2026-05",
-    "gerado_em": "2026-05-27T21:56:38.686758",
-    "quantidade_total": 666,
-    "valor_total": 94721.49,
+    "gerado_em": "2026-05-27T23:15:56.191374",
+    "quantidade_total": 669,
+    "valor_total": 95024.49,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 94721.49,
+    "valor_total_pendente": 95024.49,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -284,8 +284,8 @@
       },
       {
         "unidade": "Encantado",
-        "quantidade": 90,
-        "valor": 15834.0
+        "quantidade": 92,
+        "valor": 16017.0
       },
       {
         "unidade": "Farroupilha",
@@ -309,8 +309,8 @@
       },
       {
         "unidade": "Ssdocai",
-        "quantidade": 41,
-        "valor": 4746.0
+        "quantidade": 42,
+        "valor": 4866.0
       },
       {
         "unidade": "Veranopolis",
@@ -331,7 +331,7 @@
       },
       {
         "doutor": "Alexandre Orlandini",
-        "quantidade": 6,
+        "quantidade": 7,
         "valor_descontado": 0.0
       },
       {
@@ -421,7 +421,7 @@
       },
       {
         "doutor": "Letícia Cauzzi",
-        "quantidade": 23,
+        "quantidade": 24,
         "valor_descontado": 0.0
       },
       {
@@ -506,7 +506,7 @@
       },
       {
         "doutor": "TOP",
-        "quantidade": 13,
+        "quantidade": 14,
         "valor_descontado": 0.0
       }
     ]
