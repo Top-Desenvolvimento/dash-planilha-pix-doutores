@@ -266,11 +266,11 @@
   },
   "2026-05": {
     "competencia": "2026-05",
-    "gerado_em": "2026-05-27T02:20:44.275700",
-    "quantidade_total": 636,
-    "valor_total": 91586.49,
+    "gerado_em": "2026-05-27T06:50:41.955678",
+    "quantidade_total": 564,
+    "valor_total": 81803.49,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 91586.49,
+    "valor_total_pendente": 81803.49,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -286,11 +286,6 @@
         "unidade": "Encantado",
         "quantidade": 87,
         "valor": 15529.0
-      },
-      {
-        "unidade": "Farroupilha",
-        "quantidade": 72,
-        "valor": 9783.0
       },
       {
         "unidade": "FloresDaCunha",
@@ -319,11 +314,6 @@
       }
     ],
     "por_doutor": [
-      {
-        "doutor": "Adriele da Silva",
-        "quantidade": 23,
-        "valor_descontado": 0.0
-      },
       {
         "doutor": "Alexandre Favero",
         "quantidade": 5,
@@ -365,18 +355,13 @@
         "valor_descontado": 0.0
       },
       {
-        "doutor": "Everlize Cipriani",
-        "quantidade": 15,
-        "valor_descontado": 0.0
-      },
-      {
         "doutor": "Fernana Sozo",
         "quantidade": 9,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Franciele Pedrotti",
-        "quantidade": 78,
+        "quantidade": 75,
         "valor_descontado": 0.0
       },
       {
@@ -386,7 +371,7 @@
       },
       {
         "doutor": "Giovana Gasparini",
-        "quantidade": 9,
+        "quantidade": 4,
         "valor_descontado": 0.0
       },
       {
@@ -427,11 +412,6 @@
       {
         "doutor": "Luisa Moraes Lucas",
         "quantidade": 21,
-        "valor_descontado": 0.0
-      },
-      {
-        "doutor": "Luiz Henrique",
-        "quantidade": 11,
         "valor_descontado": 0.0
       },
       {
@@ -496,7 +476,7 @@
       },
       {
         "doutor": "Thalia Vezzosi",
-        "quantidade": 30,
+        "quantidade": 16,
         "valor_descontado": 0.0
       },
       {
@@ -506,7 +486,7 @@
       },
       {
         "doutor": "TOP",
-        "quantidade": 11,
+        "quantidade": 10,
         "valor_descontado": 0.0
       }
     ]
