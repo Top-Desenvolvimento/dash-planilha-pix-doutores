@@ -266,11 +266,11 @@
   },
   "2026-05": {
     "competencia": "2026-05",
-    "gerado_em": "2026-05-28T08:46:43.522692",
-    "quantidade_total": 669,
-    "valor_total": 95024.49,
+    "gerado_em": "2026-05-28T12:16:35.372187",
+    "quantidade_total": 670,
+    "valor_total": 95126.49,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 95024.49,
+    "valor_total_pendente": 95126.49,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -289,8 +289,8 @@
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 72,
-        "valor": 9783.0
+        "quantidade": 73,
+        "valor": 9885.0
       },
       {
         "unidade": "FloresDaCunha",
@@ -386,7 +386,7 @@
       },
       {
         "doutor": "Giovana Gasparini",
-        "quantidade": 10,
+        "quantidade": 11,
         "valor_descontado": 0.0
       },
       {
