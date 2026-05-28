@@ -266,11 +266,11 @@
   },
   "2026-05": {
     "competencia": "2026-05",
-    "gerado_em": "2026-05-28T16:43:39.143182",
-    "quantidade_total": 672,
-    "valor_total": 95332.49,
+    "gerado_em": "2026-05-28T19:27:30.897874",
+    "quantidade_total": 684,
+    "valor_total": 98199.49,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 95332.49,
+    "valor_total_pendente": 98199.49,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -289,8 +289,8 @@
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 74,
-        "valor": 9984.0
+        "quantidade": 83,
+        "valor": 12488.0
       },
       {
         "unidade": "FloresDaCunha",
@@ -304,8 +304,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 153,
-        "valor": 18351.0
+        "quantidade": 154,
+        "valor": 18436.0
       },
       {
         "unidade": "Ssdocai",
@@ -314,8 +314,8 @@
       },
       {
         "unidade": "Veranopolis",
-        "quantidade": 41,
-        "valor": 10943.0
+        "quantidade": 43,
+        "valor": 11221.0
       }
     ],
     "por_doutor": [
@@ -386,7 +386,7 @@
       },
       {
         "doutor": "Giovana Gasparini",
-        "quantidade": 12,
+        "quantidade": 21,
         "valor_descontado": 0.0
       },
       {
@@ -416,7 +416,7 @@
       },
       {
         "doutor": "Leticia Canabarro",
-        "quantidade": 25,
+        "quantidade": 26,
         "valor_descontado": 0.0
       },
       {
@@ -481,7 +481,7 @@
       },
       {
         "doutor": "Sofie Owens",
-        "quantidade": 25,
+        "quantidade": 27,
         "valor_descontado": 0.0
       },
       {
