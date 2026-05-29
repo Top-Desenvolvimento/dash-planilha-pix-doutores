@@ -1,10 +1,10 @@
 {
   "competencia": "2026-05",
-  "gerado_em": "2026-05-29T16:15:14.876346",
-  "quantidade_total": 694,
-  "valor_total": 100269.49,
+  "gerado_em": "2026-05-29T18:53:07.897503",
+  "quantidade_total": 695,
+  "valor_total": 100284.49,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 100269.49,
+  "valor_total_pendente": 100284.49,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -28,8 +28,8 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 85,
-      "valor": 10811.0
+      "quantidade": 86,
+      "valor": 10826.0
     },
     {
       "unidade": "Garibaldi",
@@ -220,7 +220,7 @@
     },
     {
       "doutor": "Tamara Macanan",
-      "quantidade": 24,
+      "quantidade": 25,
       "valor_descontado": 0.0
     },
     {
