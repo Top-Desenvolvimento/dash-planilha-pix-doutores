@@ -1,10 +1,10 @@
 {
   "competencia": "2026-05",
-  "gerado_em": "2026-05-29T04:59:07.970216",
-  "quantidade_total": 605,
-  "valor_total": 89003.49,
+  "gerado_em": "2026-05-29T08:48:30.602098",
+  "quantidade_total": 690,
+  "valor_total": 99814.49,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 89003.49,
+  "valor_total_pendente": 99814.49,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -25,6 +25,11 @@
       "unidade": "Farroupilha",
       "quantidade": 86,
       "valor": 13442.0
+    },
+    {
+      "unidade": "FloresDaCunha",
+      "quantidade": 85,
+      "valor": 10811.0
     },
     {
       "unidade": "Garibaldi",
@@ -65,7 +70,7 @@
     },
     {
       "doutor": "Ana Cristina Corso",
-      "quantidade": 2,
+      "quantidade": 9,
       "valor_descontado": 0.0
     },
     {
@@ -99,8 +104,13 @@
       "valor_descontado": 0.0
     },
     {
+      "doutor": "Fernana Sozo",
+      "quantidade": 10,
+      "valor_descontado": 0.0
+    },
+    {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 53,
+      "quantidade": 78,
       "valor_descontado": 0.0
     },
     {
@@ -116,6 +126,11 @@
     {
       "doutor": "Gustavo Lourenço Ongaratto",
       "quantidade": 14,
+      "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Indiamara Rech",
+      "quantidade": 13,
       "valor_descontado": 0.0
     },
     {
@@ -140,7 +155,7 @@
     },
     {
       "doutor": "Letícia Cauzzi",
-      "quantidade": 21,
+      "quantidade": 24,
       "valor_descontado": 0.0
     },
     {
@@ -205,7 +220,7 @@
     },
     {
       "doutor": "Tamara Macanan",
-      "quantidade": 1,
+      "quantidade": 24,
       "valor_descontado": 0.0
     },
     {
@@ -225,7 +240,7 @@
     },
     {
       "doutor": "TOP",
-      "quantidade": 10,
+      "quantidade": 14,
       "valor_descontado": 0.0
     }
   ]
