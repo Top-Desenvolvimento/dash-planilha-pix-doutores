@@ -266,11 +266,11 @@
   },
   "2026-05": {
     "competencia": "2026-05",
-    "gerado_em": "2026-05-29T00:27:24.294289",
-    "quantidade_total": 690,
-    "valor_total": 99814.49,
+    "gerado_em": "2026-05-29T04:59:07.970216",
+    "quantidade_total": 605,
+    "valor_total": 89003.49,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 99814.49,
+    "valor_total_pendente": 89003.49,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -291,11 +291,6 @@
         "unidade": "Farroupilha",
         "quantidade": 86,
         "valor": 13442.0
-      },
-      {
-        "unidade": "FloresDaCunha",
-        "quantidade": 85,
-        "valor": 10811.0
       },
       {
         "unidade": "Garibaldi",
@@ -336,7 +331,7 @@
       },
       {
         "doutor": "Ana Cristina Corso",
-        "quantidade": 9,
+        "quantidade": 2,
         "valor_descontado": 0.0
       },
       {
@@ -370,13 +365,8 @@
         "valor_descontado": 0.0
       },
       {
-        "doutor": "Fernana Sozo",
-        "quantidade": 10,
-        "valor_descontado": 0.0
-      },
-      {
         "doutor": "Franciele Pedrotti",
-        "quantidade": 78,
+        "quantidade": 53,
         "valor_descontado": 0.0
       },
       {
@@ -392,11 +382,6 @@
       {
         "doutor": "Gustavo Lourenço Ongaratto",
         "quantidade": 14,
-        "valor_descontado": 0.0
-      },
-      {
-        "doutor": "Indiamara Rech",
-        "quantidade": 13,
         "valor_descontado": 0.0
       },
       {
@@ -421,7 +406,7 @@
       },
       {
         "doutor": "Letícia Cauzzi",
-        "quantidade": 24,
+        "quantidade": 21,
         "valor_descontado": 0.0
       },
       {
@@ -486,7 +471,7 @@
       },
       {
         "doutor": "Tamara Macanan",
-        "quantidade": 24,
+        "quantidade": 1,
         "valor_descontado": 0.0
       },
       {
@@ -506,7 +491,7 @@
       },
       {
         "doutor": "TOP",
-        "quantidade": 14,
+        "quantidade": 10,
         "valor_descontado": 0.0
       }
     ]
