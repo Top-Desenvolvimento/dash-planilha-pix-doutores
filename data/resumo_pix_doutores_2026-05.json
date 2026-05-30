@@ -1,10 +1,10 @@
 {
   "competencia": "2026-05",
-  "gerado_em": "2026-05-30T09:40:34.231230",
-  "quantidade_total": 704,
-  "valor_total": 101415.49,
+  "gerado_em": "2026-05-30T11:15:16.633273",
+  "quantidade_total": 706,
+  "valor_total": 101664.49,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 101415.49,
+  "valor_total_pendente": 101664.49,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -43,8 +43,8 @@
     },
     {
       "unidade": "Ssdocai",
-      "quantidade": 46,
-      "valor": 5318.0
+      "quantidade": 48,
+      "valor": 5567.0
     },
     {
       "unidade": "Veranopolis",
@@ -140,7 +140,7 @@
     },
     {
       "doutor": "Keyla Daniele",
-      "quantidade": 20,
+      "quantidade": 22,
       "valor_descontado": 0.0
     },
     {
