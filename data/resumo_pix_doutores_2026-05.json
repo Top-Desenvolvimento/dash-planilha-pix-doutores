@@ -1,10 +1,10 @@
 {
   "competencia": "2026-05",
-  "gerado_em": "2026-05-30T14:21:11.310833",
-  "quantidade_total": 718,
-  "valor_total": 103088.49,
-  "valor_total_descontado": 200.0,
-  "valor_total_pendente": 102888.49,
+  "gerado_em": "2026-05-30T15:48:55.388683",
+  "quantidade_total": 722,
+  "valor_total": 103446.49,
+  "valor_total_descontado": 0.0,
+  "valor_total_pendente": 103446.49,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,8 +13,8 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 119,
-      "valor": 15144.5
+      "quantidade": 122,
+      "valor": 15413.5
     },
     {
       "unidade": "Encantado",
@@ -38,8 +38,8 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 164,
-      "valor": 19711.0
+      "quantidade": 165,
+      "valor": 19800.0
     },
     {
       "unidade": "Ssdocai",
@@ -126,7 +126,7 @@
     {
       "doutor": "Greici Matiello",
       "quantidade": 4,
-      "valor_descontado": 200.0
+      "valor_descontado": 0.0
     },
     {
       "doutor": "Gustavo Lourenço Ongaratto",
@@ -155,12 +155,12 @@
     },
     {
       "doutor": "Leticia Canabarro",
-      "quantidade": 35,
+      "quantidade": 36,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Letícia Cauzzi",
-      "quantidade": 25,
+      "quantidade": 28,
       "valor_descontado": 0.0
     },
     {
