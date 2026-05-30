@@ -518,8 +518,8 @@
       "doutor_id": "21",
       "doutor": "Greici Matiello",
       "credito_inicial": 500.0,
-      "utilizado": 0.0,
-      "credito_disponivel": 500.0,
+      "utilizado": 300.0,
+      "credito_disponivel": 200.0,
       "pix_key": ""
     },
     {
