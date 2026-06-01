@@ -1,10 +1,32 @@
 {
   "competencia": "2026-06",
-  "gerado_em": "2026-06-01T13:15:29.348278",
-  "quantidade_total": 0,
-  "valor_total": 0,
-  "valor_total_descontado": 0,
-  "valor_total_pendente": 0,
-  "por_unidade": [],
-  "por_doutor": []
+  "gerado_em": "2026-06-01T18:59:05.460769",
+  "quantidade_total": 2,
+  "valor_total": 209.0,
+  "valor_total_descontado": 120.0,
+  "valor_total_pendente": 89.0,
+  "por_unidade": [
+    {
+      "unidade": "Farroupilha",
+      "quantidade": 1,
+      "valor": 120.0
+    },
+    {
+      "unidade": "Soledade",
+      "quantidade": 1,
+      "valor": 89.0
+    }
+  ],
+  "por_doutor": [
+    {
+      "doutor": "Adriele da Silva",
+      "quantidade": 1,
+      "valor_descontado": 120.0
+    },
+    {
+      "doutor": "Marina Alievi",
+      "quantidade": 1,
+      "valor_descontado": 0.0
+    }
+  ]
 }
