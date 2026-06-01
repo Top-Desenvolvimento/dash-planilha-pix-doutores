@@ -1854,8 +1854,8 @@
       "doutor_id": "1",
       "doutor": "Adriele da Silva",
       "credito_inicial": 3000.0,
-      "utilizado": 240.0,
-      "credito_disponivel": 2760.0,
+      "utilizado": 360.0,
+      "credito_disponivel": 2640.0,
       "pix_key": ""
     },
     {
