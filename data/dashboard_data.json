@@ -83219,13 +83219,13 @@
       "origem": "Recebido de Jussara da Silva- ALERGIA A LATEX (138056) (Parcela 8/48) Pago por: O paciente",
       "valor": 120.0,
       "valor_com_descontos": 120.0,
-      "credito_antes": 2640.0,
+      "credito_antes": 2520.0,
       "valor_descontado": 120.0,
-      "credito_depois": 2520.0,
-      "utilizado_depois": 480.0,
+      "credito_depois": 2400.0,
+      "utilizado_depois": 600.0,
       "pendente": 0.0,
       "linha_original": "01/06/2026\tPix Doutores\nAdriele da Silva\tRecebido de Jussara da Silva- ALERGIA A LATEX (138056) (Parcela 8/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t120,00\t120,00",
-      "coletado_em": "2026-06-02T02:07:24.657296"
+      "coletado_em": "2026-06-02T06:57:58.723425"
     },
     {
       "unidade": "Soledade",
@@ -83248,7 +83248,7 @@
       "utilizado_depois": 0.0,
       "pendente": 89.0,
       "linha_original": "01/06/2026\tPix Doutores\nMarina Alievi\tRecebido de Aiéser Vans da Silva (L) (2876) (Parcela 33/48) Pago por: O paciente\t89,00 C\t89,00 C\t1\t\t\t89,00\t89,00",
-      "coletado_em": "2026-06-02T02:10:18.987725"
+      "coletado_em": "2026-06-02T07:00:50.994546"
     }
   ],
   "erros": [
@@ -83256,7 +83256,7 @@
       "unidade": "Garibaldi",
       "competencia": "2026-06",
       "erro": "Menu Finanças não encontrado.",
-      "coletado_em": "2026-06-02T02:10:20.983300"
+      "coletado_em": "2026-06-02T07:00:52.840457"
     }
   ],
   "registros_por_competencia": {
@@ -166477,13 +166477,13 @@
         "origem": "Recebido de Jussara da Silva- ALERGIA A LATEX (138056) (Parcela 8/48) Pago por: O paciente",
         "valor": 120.0,
         "valor_com_descontos": 120.0,
-        "credito_antes": 2640.0,
+        "credito_antes": 2520.0,
         "valor_descontado": 120.0,
-        "credito_depois": 2520.0,
-        "utilizado_depois": 480.0,
+        "credito_depois": 2400.0,
+        "utilizado_depois": 600.0,
         "pendente": 0.0,
         "linha_original": "01/06/2026\tPix Doutores\nAdriele da Silva\tRecebido de Jussara da Silva- ALERGIA A LATEX (138056) (Parcela 8/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t120,00\t120,00",
-        "coletado_em": "2026-06-02T02:07:24.657296"
+        "coletado_em": "2026-06-02T06:57:58.723425"
       },
       {
         "unidade": "Soledade",
@@ -166506,7 +166506,7 @@
         "utilizado_depois": 0.0,
         "pendente": 89.0,
         "linha_original": "01/06/2026\tPix Doutores\nMarina Alievi\tRecebido de Aiéser Vans da Silva (L) (2876) (Parcela 33/48) Pago por: O paciente\t89,00 C\t89,00 C\t1\t\t\t89,00\t89,00",
-        "coletado_em": "2026-06-02T02:10:18.987725"
+        "coletado_em": "2026-06-02T07:00:50.994546"
       }
     ]
   },
@@ -166521,7 +166521,7 @@
         "unidade": "Garibaldi",
         "competencia": "2026-06",
         "erro": "Menu Finanças não encontrado.",
-        "coletado_em": "2026-06-02T02:10:20.983300"
+        "coletado_em": "2026-06-02T07:00:52.840457"
       }
     ]
   },
