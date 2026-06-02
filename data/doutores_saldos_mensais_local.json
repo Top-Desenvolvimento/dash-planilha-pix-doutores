@@ -2084,8 +2084,8 @@
       "competencia": "2026-06",
       "doutor_id": "1",
       "credito_inicial": 3000.0,
-      "utilizado": 840.0,
-      "credito_final": 2160.0,
+      "utilizado": 960.0,
+      "credito_final": 2040.0,
       "updated_by_email": null,
       "updated_by_nome": null
     },
@@ -2336,8 +2336,8 @@
       "competencia": "2026-06",
       "doutor_id": "29",
       "credito_inicial": 4000.0,
-      "utilizado": 0.0,
-      "credito_final": 4000.0,
+      "utilizado": 120.0,
+      "credito_final": 3880.0,
       "updated_by_email": null,
       "updated_by_nome": null
     },
@@ -2399,8 +2399,8 @@
       "competencia": "2026-06",
       "doutor_id": "36",
       "credito_inicial": 4000.0,
-      "utilizado": 0.0,
-      "credito_final": 4000.0,
+      "utilizado": 85.0,
+      "credito_final": 3915.0,
       "updated_by_email": null,
       "updated_by_nome": null
     },
@@ -2444,8 +2444,8 @@
       "competencia": "2026-06",
       "doutor_id": "41",
       "credito_inicial": 3500.0,
-      "utilizado": 0.0,
-      "credito_final": 3500.0,
+      "utilizado": 148.0,
+      "credito_final": 3352.0,
       "updated_by_email": null,
       "updated_by_nome": null
     },

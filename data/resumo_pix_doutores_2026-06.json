@@ -1,11 +1,16 @@
 {
   "competencia": "2026-06",
-  "gerado_em": "2026-06-02T15:51:07.117359",
-  "quantidade_total": 2,
-  "valor_total": 209.0,
-  "valor_total_descontado": 120.0,
+  "gerado_em": "2026-06-02T19:39:16.443186",
+  "quantidade_total": 5,
+  "valor_total": 562.0,
+  "valor_total_descontado": 473.0,
   "valor_total_pendente": 89.0,
   "por_unidade": [
+    {
+      "unidade": "Caxias",
+      "quantidade": 2,
+      "valor": 205.0
+    },
     {
       "unidade": "Farroupilha",
       "quantidade": 1,
@@ -15,6 +20,11 @@
       "unidade": "Soledade",
       "quantidade": 1,
       "valor": 89.0
+    },
+    {
+      "unidade": "Veranopolis",
+      "quantidade": 1,
+      "valor": 148.0
     }
   ],
   "por_doutor": [
@@ -24,9 +34,24 @@
       "valor_descontado": 120.0
     },
     {
+      "doutor": "Letícia Cauzzi",
+      "quantidade": 1,
+      "valor_descontado": 120.0
+    },
+    {
       "doutor": "Marina Alievi",
       "quantidade": 1,
       "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Nelson Vaccari",
+      "quantidade": 1,
+      "valor_descontado": 85.0
+    },
+    {
+      "doutor": "Sofie Owens",
+      "quantidade": 1,
+      "valor_descontado": 148.0
     }
   ]
 }

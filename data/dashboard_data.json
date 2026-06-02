@@ -83205,6 +83205,52 @@
       "coletado_em": "2026-05-31T23:45:37.103948"
     },
     {
+      "unidade": "Caxias",
+      "data": "02/06/2026",
+      "competencia": "2026-06",
+      "metodo_pagamento": "Pix Doutores",
+      "responsavel_fiscal_lido": "Letícia Cauzzi",
+      "doutor_id": "29",
+      "doutor_final": "Letícia Cauzzi",
+      "doutor_encontrado": true,
+      "paciente": "Recebido de Luisana Jose Ramos Varela Pago por: O paciente",
+      "codigo_origem": "49086",
+      "parcela": "9/48",
+      "origem": "Recebido de Luisana Jose Ramos Varela (49086) (Parcela 9/48) Pago por: O paciente",
+      "valor": 120.0,
+      "valor_com_descontos": 120.0,
+      "credito_antes": 4000.0,
+      "valor_descontado": 120.0,
+      "credito_depois": 3880.0,
+      "utilizado_depois": 120.0,
+      "pendente": 0.0,
+      "linha_original": "02/06/2026\tPix Doutores\nLetícia Cauzzi\tRecebido de Luisana Jose Ramos Varela (49086) (Parcela 9/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t-4.741,22\t-4.741,22",
+      "coletado_em": "2026-06-02T19:32:18.634363"
+    },
+    {
+      "unidade": "Caxias",
+      "data": "02/06/2026",
+      "competencia": "2026-06",
+      "metodo_pagamento": "Pix Doutores",
+      "responsavel_fiscal_lido": "Nelson Vaccari",
+      "doutor_id": "36",
+      "doutor_final": "Nelson Vaccari",
+      "doutor_encontrado": true,
+      "paciente": "Recebido de Marielena Muchacho Pago por: O paciente",
+      "codigo_origem": "36711",
+      "parcela": "15/48",
+      "origem": "Recebido de Marielena Muchacho (36711) (Parcela 15/48) Pago por: O paciente",
+      "valor": 85.0,
+      "valor_com_descontos": 85.0,
+      "credito_antes": 4000.0,
+      "valor_descontado": 85.0,
+      "credito_depois": 3915.0,
+      "utilizado_depois": 85.0,
+      "pendente": 0.0,
+      "linha_original": "02/06/2026\tPix Doutores\nNelson Vaccari\tRecebido de Marielena Muchacho (36711) (Parcela 15/48) Pago por: O paciente\t85,00 C\t85,00 C\t1\t\t\t-4.656,22\t-4.656,22",
+      "coletado_em": "2026-06-02T19:32:18.647839"
+    },
+    {
       "unidade": "Farroupilha",
       "data": "01/06/2026",
       "competencia": "2026-06",
@@ -83219,13 +83265,13 @@
       "origem": "Recebido de Jussara da Silva- ALERGIA A LATEX (138056) (Parcela 8/48) Pago por: O paciente",
       "valor": 120.0,
       "valor_com_descontos": 120.0,
-      "credito_antes": 2280.0,
+      "credito_antes": 2160.0,
       "valor_descontado": 120.0,
-      "credito_depois": 2160.0,
-      "utilizado_depois": 840.0,
+      "credito_depois": 2040.0,
+      "utilizado_depois": 960.0,
       "pendente": 0.0,
       "linha_original": "01/06/2026\tPix Doutores\nAdriele da Silva\tRecebido de Jussara da Silva- ALERGIA A LATEX (138056) (Parcela 8/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t120,00\t120,00",
-      "coletado_em": "2026-06-02T15:45:19.078744"
+      "coletado_em": "2026-06-02T19:33:17.786197"
     },
     {
       "unidade": "Soledade",
@@ -83248,7 +83294,30 @@
       "utilizado_depois": 0.0,
       "pendente": 89.0,
       "linha_original": "01/06/2026\tPix Doutores\nMarina Alievi\tRecebido de Aiéser Vans da Silva (L) (2876) (Parcela 33/48) Pago por: O paciente\t89,00 C\t89,00 C\t1\t\t\t89,00\t89,00",
-      "coletado_em": "2026-06-02T15:48:11.613629"
+      "coletado_em": "2026-06-02T19:36:15.017933"
+    },
+    {
+      "unidade": "Veranopolis",
+      "data": "02/06/2026",
+      "competencia": "2026-06",
+      "metodo_pagamento": "Pix Doutores",
+      "responsavel_fiscal_lido": "Sofie Owens",
+      "doutor_id": "41",
+      "doutor_final": "Sofie Owens",
+      "doutor_encontrado": true,
+      "paciente": "Recebido de Lorraine Câmara Rodrigues Pago por: Rita de Cassia Santos Camara",
+      "codigo_origem": "6689",
+      "parcela": "25/48",
+      "origem": "Recebido de Lorraine Câmara Rodrigues (6689) (Parcela 25/48) Pago por: Rita de Cassia Santos Camara",
+      "valor": 148.0,
+      "valor_com_descontos": 148.0,
+      "credito_antes": 3500.0,
+      "valor_descontado": 148.0,
+      "credito_depois": 3352.0,
+      "utilizado_depois": 148.0,
+      "pendente": 0.0,
+      "linha_original": "02/06/2026\tPix Doutores\nSofie Owens\tRecebido de Lorraine Câmara Rodrigues (6689) (Parcela 25/48) Pago por: Rita de Cassia Santos Camara\t148,00 C\t148,00 C\t1\t\t\t148,00\t148,00",
+      "coletado_em": "2026-06-02T19:37:16.799183"
     }
   ],
   "erros": [
@@ -83256,7 +83325,7 @@
       "unidade": "Garibaldi",
       "competencia": "2026-06",
       "erro": "Menu Finanças não encontrado.",
-      "coletado_em": "2026-06-02T15:48:13.577214"
+      "coletado_em": "2026-06-02T19:36:17.593937"
     }
   ],
   "registros_por_competencia": {
@@ -166463,6 +166532,52 @@
     ],
     "2026-06": [
       {
+        "unidade": "Caxias",
+        "data": "02/06/2026",
+        "competencia": "2026-06",
+        "metodo_pagamento": "Pix Doutores",
+        "responsavel_fiscal_lido": "Letícia Cauzzi",
+        "doutor_id": "29",
+        "doutor_final": "Letícia Cauzzi",
+        "doutor_encontrado": true,
+        "paciente": "Recebido de Luisana Jose Ramos Varela Pago por: O paciente",
+        "codigo_origem": "49086",
+        "parcela": "9/48",
+        "origem": "Recebido de Luisana Jose Ramos Varela (49086) (Parcela 9/48) Pago por: O paciente",
+        "valor": 120.0,
+        "valor_com_descontos": 120.0,
+        "credito_antes": 4000.0,
+        "valor_descontado": 120.0,
+        "credito_depois": 3880.0,
+        "utilizado_depois": 120.0,
+        "pendente": 0.0,
+        "linha_original": "02/06/2026\tPix Doutores\nLetícia Cauzzi\tRecebido de Luisana Jose Ramos Varela (49086) (Parcela 9/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t-4.741,22\t-4.741,22",
+        "coletado_em": "2026-06-02T19:32:18.634363"
+      },
+      {
+        "unidade": "Caxias",
+        "data": "02/06/2026",
+        "competencia": "2026-06",
+        "metodo_pagamento": "Pix Doutores",
+        "responsavel_fiscal_lido": "Nelson Vaccari",
+        "doutor_id": "36",
+        "doutor_final": "Nelson Vaccari",
+        "doutor_encontrado": true,
+        "paciente": "Recebido de Marielena Muchacho Pago por: O paciente",
+        "codigo_origem": "36711",
+        "parcela": "15/48",
+        "origem": "Recebido de Marielena Muchacho (36711) (Parcela 15/48) Pago por: O paciente",
+        "valor": 85.0,
+        "valor_com_descontos": 85.0,
+        "credito_antes": 4000.0,
+        "valor_descontado": 85.0,
+        "credito_depois": 3915.0,
+        "utilizado_depois": 85.0,
+        "pendente": 0.0,
+        "linha_original": "02/06/2026\tPix Doutores\nNelson Vaccari\tRecebido de Marielena Muchacho (36711) (Parcela 15/48) Pago por: O paciente\t85,00 C\t85,00 C\t1\t\t\t-4.656,22\t-4.656,22",
+        "coletado_em": "2026-06-02T19:32:18.647839"
+      },
+      {
         "unidade": "Farroupilha",
         "data": "01/06/2026",
         "competencia": "2026-06",
@@ -166477,13 +166592,13 @@
         "origem": "Recebido de Jussara da Silva- ALERGIA A LATEX (138056) (Parcela 8/48) Pago por: O paciente",
         "valor": 120.0,
         "valor_com_descontos": 120.0,
-        "credito_antes": 2280.0,
+        "credito_antes": 2160.0,
         "valor_descontado": 120.0,
-        "credito_depois": 2160.0,
-        "utilizado_depois": 840.0,
+        "credito_depois": 2040.0,
+        "utilizado_depois": 960.0,
         "pendente": 0.0,
         "linha_original": "01/06/2026\tPix Doutores\nAdriele da Silva\tRecebido de Jussara da Silva- ALERGIA A LATEX (138056) (Parcela 8/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t120,00\t120,00",
-        "coletado_em": "2026-06-02T15:45:19.078744"
+        "coletado_em": "2026-06-02T19:33:17.786197"
       },
       {
         "unidade": "Soledade",
@@ -166506,7 +166621,30 @@
         "utilizado_depois": 0.0,
         "pendente": 89.0,
         "linha_original": "01/06/2026\tPix Doutores\nMarina Alievi\tRecebido de Aiéser Vans da Silva (L) (2876) (Parcela 33/48) Pago por: O paciente\t89,00 C\t89,00 C\t1\t\t\t89,00\t89,00",
-        "coletado_em": "2026-06-02T15:48:11.613629"
+        "coletado_em": "2026-06-02T19:36:15.017933"
+      },
+      {
+        "unidade": "Veranopolis",
+        "data": "02/06/2026",
+        "competencia": "2026-06",
+        "metodo_pagamento": "Pix Doutores",
+        "responsavel_fiscal_lido": "Sofie Owens",
+        "doutor_id": "41",
+        "doutor_final": "Sofie Owens",
+        "doutor_encontrado": true,
+        "paciente": "Recebido de Lorraine Câmara Rodrigues Pago por: Rita de Cassia Santos Camara",
+        "codigo_origem": "6689",
+        "parcela": "25/48",
+        "origem": "Recebido de Lorraine Câmara Rodrigues (6689) (Parcela 25/48) Pago por: Rita de Cassia Santos Camara",
+        "valor": 148.0,
+        "valor_com_descontos": 148.0,
+        "credito_antes": 3500.0,
+        "valor_descontado": 148.0,
+        "credito_depois": 3352.0,
+        "utilizado_depois": 148.0,
+        "pendente": 0.0,
+        "linha_original": "02/06/2026\tPix Doutores\nSofie Owens\tRecebido de Lorraine Câmara Rodrigues (6689) (Parcela 25/48) Pago por: Rita de Cassia Santos Camara\t148,00 C\t148,00 C\t1\t\t\t148,00\t148,00",
+        "coletado_em": "2026-06-02T19:37:16.799183"
       }
     ]
   },
@@ -166521,7 +166659,7 @@
         "unidade": "Garibaldi",
         "competencia": "2026-06",
         "erro": "Menu Finanças não encontrado.",
-        "coletado_em": "2026-06-02T15:48:13.577214"
+        "coletado_em": "2026-06-02T19:36:17.593937"
       }
     ]
   },
@@ -169390,9 +169528,9 @@
         "doutor_id": "29",
         "doutor": "Letícia Cauzzi",
         "credito_inicial": 4000.0,
-        "utilizado": 0.0,
-        "credito_disponivel": 4000.0,
-        "credito_final": 4000.0,
+        "utilizado": 120.0,
+        "credito_disponivel": 3880.0,
+        "credito_final": 3880.0,
         "pix_key": "",
         "updated_by_email": null,
         "updated_by_nome": null
@@ -169467,9 +169605,9 @@
         "doutor_id": "36",
         "doutor": "Nelson Vaccari",
         "credito_inicial": 4000.0,
-        "utilizado": 0.0,
-        "credito_disponivel": 4000.0,
-        "credito_final": 4000.0,
+        "utilizado": 85.0,
+        "credito_disponivel": 3915.0,
+        "credito_final": 3915.0,
         "pix_key": "",
         "updated_by_email": null,
         "updated_by_nome": null
@@ -169522,9 +169660,9 @@
         "doutor_id": "41",
         "doutor": "Sofie Owens",
         "credito_inicial": 3500.0,
-        "utilizado": 0.0,
-        "credito_disponivel": 3500.0,
-        "credito_final": 3500.0,
+        "utilizado": 148.0,
+        "credito_disponivel": 3352.0,
+        "credito_final": 3352.0,
         "pix_key": "",
         "updated_by_email": null,
         "updated_by_nome": null
@@ -171306,11 +171444,18 @@
     },
     "2026-06": {
       "competencia": "2026-06",
-      "quantidade_total": 2,
-      "valor_total": 209.0,
-      "valor_total_descontado": 120.0,
+      "quantidade_total": 5,
+      "valor_total": 562.0,
+      "valor_total_descontado": 473.0,
       "valor_total_pendente": 89.0,
       "por_unidade": [
+        {
+          "unidade": "Caxias",
+          "quantidade": 2,
+          "valor": 205.0,
+          "descontado": 205.0,
+          "pendente": 0.0
+        },
         {
           "unidade": "Farroupilha",
           "quantidade": 1,
@@ -171324,6 +171469,13 @@
           "valor": 89.0,
           "descontado": 0.0,
           "pendente": 89.0
+        },
+        {
+          "unidade": "Veranopolis",
+          "quantidade": 1,
+          "valor": 148.0,
+          "descontado": 148.0,
+          "pendente": 0.0
         }
       ],
       "por_doutor": [
@@ -171335,11 +171487,32 @@
           "pendente": 0.0
         },
         {
+          "doutor": "Letícia Cauzzi",
+          "quantidade": 1,
+          "valor": 120.0,
+          "descontado": 120.0,
+          "pendente": 0.0
+        },
+        {
           "doutor": "Marina Alievi",
           "quantidade": 1,
           "valor": 89.0,
           "descontado": 0.0,
           "pendente": 89.0
+        },
+        {
+          "doutor": "Nelson Vaccari",
+          "quantidade": 1,
+          "valor": 85.0,
+          "descontado": 85.0,
+          "pendente": 0.0
+        },
+        {
+          "doutor": "Sofie Owens",
+          "quantidade": 1,
+          "valor": 148.0,
+          "descontado": 148.0,
+          "pendente": 0.0
         }
       ]
     }
