@@ -1264,11 +1264,11 @@
   },
   "2026-06": {
     "competencia": "2026-06",
-    "gerado_em": "2026-06-03T19:05:19.810379",
-    "quantidade_total": 24,
-    "valor_total": 2690.0,
-    "valor_total_descontado": 1294.0,
-    "valor_total_pendente": 1396.0,
+    "gerado_em": "2026-06-03T22:04:50.673758",
+    "quantidade_total": 39,
+    "valor_total": 4118.0,
+    "valor_total_descontado": 1135.0,
+    "valor_total_pendente": 2983.0,
     "por_unidade": [
       {
         "unidade": "Caxias",
@@ -1277,8 +1277,8 @@
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 5,
-        "valor": 636.0
+        "quantidade": 7,
+        "valor": 774.0
       },
       {
         "unidade": "FloresDaCunha",
@@ -1287,8 +1287,13 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 13,
-        "valor": 1396.0
+        "quantidade": 21,
+        "valor": 2136.0
+      },
+      {
+        "unidade": "Ssdocai",
+        "quantidade": 5,
+        "valor": 550.0
       },
       {
         "unidade": "Veranopolis",
@@ -1299,13 +1304,18 @@
     "por_doutor": [
       {
         "doutor": "Adriele da Silva",
-        "quantidade": 4,
-        "valor_descontado": 552.0
+        "quantidade": 6,
+        "valor_descontado": 393.0
       },
       {
         "doutor": "Franciele Pedrotti",
         "quantidade": 1,
         "valor_descontado": 84.0
+      },
+      {
+        "doutor": "Leticia Canabarro",
+        "quantidade": 1,
+        "valor_descontado": 0.0
       },
       {
         "doutor": "Letícia Cauzzi",
@@ -1314,12 +1324,12 @@
       },
       {
         "doutor": "Luisa Moraes Lucas",
-        "quantidade": 12,
+        "quantidade": 18,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Marina Alievi",
-        "quantidade": 1,
+        "quantidade": 2,
         "valor_descontado": 0.0
       },
       {
@@ -1336,6 +1346,11 @@
         "doutor": "Tamara Macanan",
         "quantidade": 1,
         "valor_descontado": 95.0
+      },
+      {
+        "doutor": "TOP",
+        "quantidade": 5,
+        "valor_descontado": 0.0
       }
     ]
   }
