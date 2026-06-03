@@ -1264,11 +1264,11 @@
   },
   "2026-06": {
     "competencia": "2026-06",
-    "gerado_em": "2026-06-03T15:10:43.782366",
-    "quantidade_total": 12,
-    "valor_total": 1273.0,
-    "valor_total_descontado": 782.0,
-    "valor_total_pendente": 491.0,
+    "gerado_em": "2026-06-03T19:05:19.810379",
+    "quantidade_total": 24,
+    "valor_total": 2690.0,
+    "valor_total_descontado": 1294.0,
+    "valor_total_pendente": 1396.0,
     "por_unidade": [
       {
         "unidade": "Caxias",
@@ -1277,13 +1277,18 @@
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 2,
-        "valor": 219.0
+        "quantidade": 5,
+        "valor": 636.0
+      },
+      {
+        "unidade": "FloresDaCunha",
+        "quantidade": 1,
+        "valor": 95.0
       },
       {
         "unidade": "Soledade",
-        "quantidade": 5,
-        "valor": 491.0
+        "quantidade": 13,
+        "valor": 1396.0
       },
       {
         "unidade": "Veranopolis",
@@ -1294,8 +1299,13 @@
     "por_doutor": [
       {
         "doutor": "Adriele da Silva",
-        "quantidade": 2,
-        "valor_descontado": 219.0
+        "quantidade": 4,
+        "valor_descontado": 552.0
+      },
+      {
+        "doutor": "Franciele Pedrotti",
+        "quantidade": 1,
+        "valor_descontado": 84.0
       },
       {
         "doutor": "Letícia Cauzzi",
@@ -1304,7 +1314,7 @@
       },
       {
         "doutor": "Luisa Moraes Lucas",
-        "quantidade": 4,
+        "quantidade": 12,
         "valor_descontado": 0.0
       },
       {
@@ -1321,6 +1331,11 @@
         "doutor": "Sofie Owens",
         "quantidade": 1,
         "valor_descontado": 148.0
+      },
+      {
+        "doutor": "Tamara Macanan",
+        "quantidade": 1,
+        "valor_descontado": 95.0
       }
     ]
   }
