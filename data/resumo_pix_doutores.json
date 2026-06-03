@@ -1264,11 +1264,11 @@
   },
   "2026-06": {
     "competencia": "2026-06",
-    "gerado_em": "2026-06-03T10:14:43.426076",
-    "quantidade_total": 8,
-    "valor_total": 871.0,
+    "gerado_em": "2026-06-03T15:10:43.782366",
+    "quantidade_total": 12,
+    "valor_total": 1273.0,
     "valor_total_descontado": 782.0,
-    "valor_total_pendente": 89.0,
+    "valor_total_pendente": 491.0,
     "por_unidade": [
       {
         "unidade": "Caxias",
@@ -1282,8 +1282,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 1,
-        "valor": 89.0
+        "quantidade": 5,
+        "valor": 491.0
       },
       {
         "unidade": "Veranopolis",
@@ -1301,6 +1301,11 @@
         "doutor": "Letícia Cauzzi",
         "quantidade": 1,
         "valor_descontado": 120.0
+      },
+      {
+        "doutor": "Luisa Moraes Lucas",
+        "quantidade": 4,
+        "valor_descontado": 0.0
       },
       {
         "doutor": "Marina Alievi",
