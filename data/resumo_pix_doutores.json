@@ -1264,11 +1264,11 @@
   },
   "2026-06": {
     "competencia": "2026-06",
-    "gerado_em": "2026-06-04T17:34:47.081245",
+    "gerado_em": "2026-06-04T19:46:43.566138",
     "quantidade_total": 41,
     "valor_total": 4475.0,
-    "valor_total_descontado": 742.0,
-    "valor_total_pendente": 3733.0,
+    "valor_total_descontado": 527.0,
+    "valor_total_pendente": 3948.0,
     "por_unidade": [
       {
         "unidade": "Caxias",
@@ -1335,7 +1335,7 @@
       {
         "doutor": "Nelson Vaccari",
         "quantidade": 3,
-        "valor_descontado": 295.0
+        "valor_descontado": 80.0
       },
       {
         "doutor": "Sofie Owens",
