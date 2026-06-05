@@ -1264,21 +1264,21 @@
   },
   "2026-06": {
     "competencia": "2026-06",
-    "gerado_em": "2026-06-05T17:08:44.118552",
-    "quantidade_total": 50,
-    "valor_total": 5622.0,
-    "valor_total_descontado": 962.0,
-    "valor_total_pendente": 4660.0,
+    "gerado_em": "2026-06-05T19:13:45.636563",
+    "quantidade_total": 60,
+    "valor_total": 7019.0,
+    "valor_total_descontado": 2307.0,
+    "valor_total_pendente": 4712.0,
     "por_unidade": [
       {
         "unidade": "Caxias",
-        "quantidade": 6,
-        "valor": 637.0
+        "quantidade": 13,
+        "valor": 1655.0
       },
       {
         "unidade": "Encantado",
-        "quantidade": 6,
-        "valor": 730.0
+        "quantidade": 8,
+        "valor": 914.0
       },
       {
         "unidade": "Farroupilha",
@@ -1287,8 +1287,8 @@
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 2,
-        "valor": 290.0
+        "quantidade": 3,
+        "valor": 485.0
       },
       {
         "unidade": "Soledade",
@@ -1319,8 +1319,8 @@
       },
       {
         "doutor": "Franciele Pedrotti",
-        "quantidade": 1,
-        "valor_descontado": 84.0
+        "quantidade": 8,
+        "valor_descontado": 1102.0
       },
       {
         "doutor": "Leticia Canabarro",
@@ -1350,17 +1350,17 @@
       {
         "doutor": "Sofie Owens",
         "quantidade": 1,
-        "valor_descontado": 148.0
+        "valor_descontado": 96.0
       },
       {
         "doutor": "Tamara Macanan",
-        "quantidade": 2,
-        "valor_descontado": 290.0
+        "quantidade": 3,
+        "valor_descontado": 485.0
       },
       {
         "doutor": "Thiany Cristofoli",
-        "quantidade": 3,
-        "valor_descontado": 320.0
+        "quantidade": 5,
+        "valor_descontado": 504.0
       },
       {
         "doutor": "TOP",
