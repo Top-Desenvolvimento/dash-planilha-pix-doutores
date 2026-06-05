@@ -1,15 +1,20 @@
 {
   "competencia": "2026-06",
-  "gerado_em": "2026-06-05T14:33:23.386346",
-  "quantidade_total": 42,
-  "valor_total": 4602.0,
-  "valor_total_descontado": 447.0,
-  "valor_total_pendente": 4155.0,
+  "gerado_em": "2026-06-05T17:08:44.118552",
+  "quantidade_total": 50,
+  "valor_total": 5622.0,
+  "valor_total_descontado": 962.0,
+  "valor_total_pendente": 4660.0,
   "por_unidade": [
     {
       "unidade": "Caxias",
-      "quantidade": 5,
-      "valor": 542.0
+      "quantidade": 6,
+      "valor": 637.0
+    },
+    {
+      "unidade": "Encantado",
+      "quantidade": 6,
+      "valor": 730.0
     },
     {
       "unidade": "Farroupilha",
@@ -18,8 +23,8 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 1,
-      "valor": 95.0
+      "quantidade": 2,
+      "valor": 290.0
     },
     {
       "unidade": "Soledade",
@@ -41,6 +46,11 @@
     {
       "doutor": "Adriele da Silva",
       "quantidade": 6,
+      "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Alexandre Orlandini",
+      "quantidade": 3,
       "valor_descontado": 0.0
     },
     {
@@ -70,7 +80,7 @@
     },
     {
       "doutor": "Nelson Vaccari",
-      "quantidade": 4,
+      "quantidade": 5,
       "valor_descontado": 0.0
     },
     {
@@ -80,8 +90,13 @@
     },
     {
       "doutor": "Tamara Macanan",
-      "quantidade": 1,
-      "valor_descontado": 95.0
+      "quantidade": 2,
+      "valor_descontado": 290.0
+    },
+    {
+      "doutor": "Thiany Cristofoli",
+      "quantidade": 3,
+      "valor_descontado": 320.0
     },
     {
       "doutor": "TOP",
