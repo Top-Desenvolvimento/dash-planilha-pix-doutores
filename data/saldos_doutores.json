@@ -1966,8 +1966,8 @@
       "doutor_id": "16",
       "doutor": "Franciele Pedrotti",
       "credito_inicial": 10000.0,
-      "utilizado": 924.0,
-      "credito_disponivel": 9076.0,
+      "utilizado": 1008.0,
+      "credito_disponivel": 8992.0,
       "pix_key": ""
     },
     {
@@ -2086,8 +2086,8 @@
       "doutor_id": "29",
       "doutor": "Letícia Cauzzi",
       "credito_inicial": 4000.0,
-      "utilizado": 2040.0,
-      "credito_disponivel": 1960.0,
+      "utilizado": 2160.0,
+      "credito_disponivel": 1840.0,
       "pix_key": ""
     },
     {
@@ -2182,16 +2182,16 @@
       "doutor_id": "41",
       "doutor": "Sofie Owens",
       "credito_inicial": 3500.0,
-      "utilizado": 2516.0,
-      "credito_disponivel": 984.0,
+      "utilizado": 2664.0,
+      "credito_disponivel": 836.0,
       "pix_key": ""
     },
     {
       "doutor_id": "42",
       "doutor": "Tamara Macanan",
       "credito_inicial": 5000.0,
-      "utilizado": 1045.0,
-      "credito_disponivel": 3955.0,
+      "utilizado": 1140.0,
+      "credito_disponivel": 3860.0,
       "pix_key": ""
     },
     {
