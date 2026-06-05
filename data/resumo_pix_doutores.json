@@ -1264,11 +1264,11 @@
   },
   "2026-06": {
     "competencia": "2026-06",
-    "gerado_em": "2026-06-05T22:29:17.385005",
+    "gerado_em": "2026-06-05T23:53:38.921320",
     "quantidade_total": 85,
     "valor_total": 9670.0,
-    "valor_total_descontado": 4538.0,
-    "valor_total_pendente": 5132.0,
+    "valor_total_descontado": 4019.0,
+    "valor_total_pendente": 5651.0,
     "por_unidade": [
       {
         "unidade": "Caxias",
@@ -1365,7 +1365,7 @@
       {
         "doutor": "Thiany Cristofoli",
         "quantidade": 12,
-        "valor_descontado": 1365.0
+        "valor_descontado": 846.0
       },
       {
         "doutor": "TOP",
