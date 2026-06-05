@@ -1,15 +1,15 @@
 {
   "competencia": "2026-06",
-  "gerado_em": "2026-06-05T11:57:09.076658",
-  "quantidade_total": 41,
-  "valor_total": 4475.0,
+  "gerado_em": "2026-06-05T14:33:23.386346",
+  "quantidade_total": 42,
+  "valor_total": 4602.0,
   "valor_total_descontado": 447.0,
-  "valor_total_pendente": 4028.0,
+  "valor_total_pendente": 4155.0,
   "por_unidade": [
     {
       "unidade": "Caxias",
-      "quantidade": 4,
-      "valor": 415.0
+      "quantidade": 5,
+      "valor": 542.0
     },
     {
       "unidade": "Farroupilha",
@@ -70,7 +70,7 @@
     },
     {
       "doutor": "Nelson Vaccari",
-      "quantidade": 3,
+      "quantidade": 4,
       "valor_descontado": 0.0
     },
     {
