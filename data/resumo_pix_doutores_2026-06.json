@@ -1,15 +1,15 @@
 {
   "competencia": "2026-06",
-  "gerado_em": "2026-06-06T10:35:02.741616",
-  "quantidade_total": 85,
-  "valor_total": 9670.0,
-  "valor_total_descontado": 610.0,
-  "valor_total_pendente": 9060.0,
+  "gerado_em": "2026-06-06T12:05:42.894223",
+  "quantidade_total": 95,
+  "valor_total": 11535.0,
+  "valor_total_descontado": 330.0,
+  "valor_total_pendente": 11205.0,
   "por_unidade": [
     {
       "unidade": "Caxias",
-      "quantidade": 28,
-      "valor": 3121.0
+      "quantidade": 31,
+      "valor": 4217.0
     },
     {
       "unidade": "Encantado",
@@ -18,18 +18,18 @@
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 7,
-      "valor": 774.0
+      "quantidade": 10,
+      "valor": 1148.0
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 3,
-      "valor": 485.0
+      "quantidade": 5,
+      "valor": 690.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 24,
-      "valor": 2598.0
+      "quantidade": 26,
+      "valor": 2788.0
     },
     {
       "unidade": "Ssdocai",
@@ -45,7 +45,7 @@
   "por_doutor": [
     {
       "doutor": "Adriele da Silva",
-      "quantidade": 6,
+      "quantidade": 9,
       "valor_descontado": 0.0
     },
     {
@@ -60,7 +60,7 @@
     },
     {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 21,
+      "quantidade": 24,
       "valor_descontado": 0.0
     },
     {
@@ -80,7 +80,7 @@
     },
     {
       "doutor": "Marina Alievi",
-      "quantidade": 2,
+      "quantidade": 4,
       "valor_descontado": 0.0
     },
     {
@@ -95,8 +95,8 @@
     },
     {
       "doutor": "Tamara Macanan",
-      "quantidade": 3,
-      "valor_descontado": 280.0
+      "quantidade": 5,
+      "valor_descontado": 0.0
     },
     {
       "doutor": "Thiany Cristofoli",
