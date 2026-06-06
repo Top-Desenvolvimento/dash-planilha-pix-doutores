@@ -1264,11 +1264,11 @@
   },
   "2026-06": {
     "competencia": "2026-06",
-    "gerado_em": "2026-06-05T23:53:38.921320",
+    "gerado_em": "2026-06-06T01:56:10.832043",
     "quantidade_total": 85,
     "valor_total": 9670.0,
-    "valor_total_descontado": 4019.0,
-    "valor_total_pendente": 5651.0,
+    "valor_total_descontado": 1586.0,
+    "valor_total_pendente": 8084.0,
     "por_unidade": [
       {
         "unidade": "Caxias",
@@ -1325,7 +1325,7 @@
       {
         "doutor": "Franciele Pedrotti",
         "quantidade": 21,
-        "valor_descontado": 2358.0
+        "valor_descontado": 771.0
       },
       {
         "doutor": "Leticia Canabarro",
@@ -1365,7 +1365,7 @@
       {
         "doutor": "Thiany Cristofoli",
         "quantidade": 12,
-        "valor_descontado": 846.0
+        "valor_descontado": 0.0
       },
       {
         "doutor": "TOP",
