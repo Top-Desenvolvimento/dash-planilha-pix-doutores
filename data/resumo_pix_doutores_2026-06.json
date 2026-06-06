@@ -1,10 +1,10 @@
 {
   "competencia": "2026-06",
-  "gerado_em": "2026-06-06T18:06:47.187193",
-  "quantidade_total": 81,
-  "valor_total": 10464.0,
+  "gerado_em": "2026-06-06T19:52:09.213757",
+  "quantidade_total": 111,
+  "valor_total": 13712.0,
   "valor_total_descontado": 210.0,
-  "valor_total_pendente": 10254.0,
+  "valor_total_pendente": 13502.0,
   "por_unidade": [
     {
       "unidade": "Caxias",
@@ -25,6 +25,11 @@
       "unidade": "FloresDaCunha",
       "quantidade": 6,
       "valor": 810.0
+    },
+    {
+      "unidade": "Soledade",
+      "quantidade": 30,
+      "valor": 3248.0
     },
     {
       "unidade": "Ssdocai",
@@ -59,8 +64,23 @@
       "valor_descontado": 0.0
     },
     {
+      "doutor": "Leticia Canabarro",
+      "quantidade": 3,
+      "valor_descontado": 0.0
+    },
+    {
       "doutor": "Letícia Cauzzi",
       "quantidade": 1,
+      "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Luisa Moraes Lucas",
+      "quantidade": 19,
+      "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Marina Alievi",
+      "quantidade": 8,
       "valor_descontado": 0.0
     },
     {
