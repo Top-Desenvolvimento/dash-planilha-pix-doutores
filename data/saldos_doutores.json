@@ -1934,8 +1934,8 @@
       "doutor_id": "12",
       "doutor": "Dionathan Pohlmann",
       "credito_inicial": 6000.0,
-      "utilizado": 840.0,
-      "credito_disponivel": 5160.0,
+      "utilizado": 1050.0,
+      "credito_disponivel": 4950.0,
       "pix_key": ""
     },
     {
@@ -2086,8 +2086,8 @@
       "doutor_id": "29",
       "doutor": "Letícia Cauzzi",
       "credito_inicial": 4000.0,
-      "utilizado": 3360.0,
-      "credito_disponivel": 640.0,
+      "utilizado": 3480.0,
+      "credito_disponivel": 520.0,
       "pix_key": ""
     },
     {
