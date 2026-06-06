@@ -1264,11 +1264,11 @@
   },
   "2026-06": {
     "competencia": "2026-06",
-    "gerado_em": "2026-06-06T08:25:22.148655",
+    "gerado_em": "2026-06-06T10:35:02.741616",
     "quantidade_total": 85,
     "valor_total": 9670.0,
-    "valor_total_descontado": 815.0,
-    "valor_total_pendente": 8855.0,
+    "valor_total_descontado": 610.0,
+    "valor_total_pendente": 9060.0,
     "por_unidade": [
       {
         "unidade": "Caxias",
@@ -1360,7 +1360,7 @@
       {
         "doutor": "Tamara Macanan",
         "quantidade": 3,
-        "valor_descontado": 485.0
+        "valor_descontado": 280.0
       },
       {
         "doutor": "Thiany Cristofoli",
