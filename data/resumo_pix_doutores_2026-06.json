@@ -1,25 +1,25 @@
 {
   "competencia": "2026-06",
-  "gerado_em": "2026-06-08T19:33:08.577044",
-  "quantidade_total": 127,
-  "valor_total": 17180.0,
-  "valor_total_descontado": 490.0,
-  "valor_total_pendente": 16690.0,
+  "gerado_em": "2026-06-08T21:31:30.677698",
+  "quantidade_total": 133,
+  "valor_total": 17999.0,
+  "valor_total_descontado": 390.0,
+  "valor_total_pendente": 17609.0,
   "por_unidade": [
     {
       "unidade": "Caxias",
-      "quantidade": 37,
-      "valor": 4941.0
+      "quantidade": 38,
+      "valor": 4971.0
     },
     {
       "unidade": "Encantado",
-      "quantidade": 26,
-      "valor": 3089.0
+      "quantidade": 29,
+      "valor": 3500.0
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 16,
-      "valor": 3673.0
+      "quantidade": 17,
+      "valor": 3926.0
     },
     {
       "unidade": "FloresDaCunha",
@@ -28,8 +28,8 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 32,
-      "valor": 3453.0
+      "quantidade": 33,
+      "valor": 3578.0
     },
     {
       "unidade": "Ssdocai",
@@ -45,7 +45,7 @@
   "por_doutor": [
     {
       "doutor": "Adriele da Silva",
-      "quantidade": 15,
+      "quantidade": 16,
       "valor_descontado": 0.0
     },
     {
@@ -60,7 +60,7 @@
     },
     {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 30,
+      "quantidade": 31,
       "valor_descontado": 0.0
     },
     {
@@ -80,7 +80,7 @@
     },
     {
       "doutor": "Marina Alievi",
-      "quantidade": 10,
+      "quantidade": 11,
       "valor_descontado": 0.0
     },
     {
@@ -90,8 +90,8 @@
     },
     {
       "doutor": "Nicoli Weber",
-      "quantidade": 5,
-      "valor_descontado": 490.0
+      "quantidade": 8,
+      "valor_descontado": 390.0
     },
     {
       "doutor": "Sofie Owens",
