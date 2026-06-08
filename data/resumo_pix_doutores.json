@@ -1264,11 +1264,11 @@
   },
   "2026-06": {
     "competencia": "2026-06",
-    "gerado_em": "2026-06-07T22:52:49.953478",
+    "gerado_em": "2026-06-08T00:01:19.014663",
     "quantidade_total": 111,
     "valor_total": 13712.0,
-    "valor_total_descontado": 210.0,
-    "valor_total_pendente": 13502.0,
+    "valor_total_descontado": 120.0,
+    "valor_total_pendente": 13592.0,
     "por_unidade": [
       {
         "unidade": "Caxias",
@@ -1320,7 +1320,7 @@
       {
         "doutor": "Dionathan Pohlmann",
         "quantidade": 2,
-        "valor_descontado": 210.0
+        "valor_descontado": 120.0
       },
       {
         "doutor": "Franciele Pedrotti",
