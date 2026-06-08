@@ -1,10 +1,10 @@
 {
   "competencia": "2026-06",
-  "gerado_em": "2026-06-08T09:11:04.262005",
-  "quantidade_total": 111,
-  "valor_total": 13712.0,
+  "gerado_em": "2026-06-08T13:23:59.307967",
+  "quantidade_total": 112,
+  "valor_total": 14021.0,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 13712.0,
+  "valor_total_pendente": 14021.0,
   "por_unidade": [
     {
       "unidade": "Caxias",
@@ -18,8 +18,8 @@
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 13,
-      "valor": 1581.0
+      "quantidade": 14,
+      "valor": 1890.0
     },
     {
       "unidade": "FloresDaCunha",
@@ -45,7 +45,7 @@
   "por_doutor": [
     {
       "doutor": "Adriele da Silva",
-      "quantidade": 12,
+      "quantidade": 13,
       "valor_descontado": 0.0
     },
     {
