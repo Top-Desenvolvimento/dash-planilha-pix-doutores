@@ -1,25 +1,25 @@
 {
   "competencia": "2026-06",
-  "gerado_em": "2026-06-08T13:23:59.307967",
-  "quantidade_total": 112,
-  "valor_total": 14021.0,
-  "valor_total_descontado": 0.0,
-  "valor_total_pendente": 14021.0,
+  "gerado_em": "2026-06-08T17:02:49.361275",
+  "quantidade_total": 119,
+  "valor_total": 15453.0,
+  "valor_total_descontado": 120.0,
+  "valor_total_pendente": 15333.0,
   "por_unidade": [
     {
       "unidade": "Caxias",
-      "quantidade": 33,
-      "valor": 4518.0
+      "quantidade": 34,
+      "valor": 4617.0
     },
     {
       "unidade": "Encantado",
-      "quantidade": 22,
-      "valor": 2699.0
+      "quantidade": 24,
+      "valor": 2924.0
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 14,
-      "valor": 1890.0
+      "quantidade": 15,
+      "valor": 2645.0
     },
     {
       "unidade": "FloresDaCunha",
@@ -28,8 +28,8 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 30,
-      "valor": 3248.0
+      "quantidade": 31,
+      "valor": 3348.0
     },
     {
       "unidade": "Ssdocai",
@@ -38,19 +38,19 @@
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 2,
-      "valor": 306.0
+      "quantidade": 4,
+      "valor": 559.0
     }
   ],
   "por_doutor": [
     {
       "doutor": "Adriele da Silva",
-      "quantidade": 13,
+      "quantidade": 14,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Alexandre Orlandini",
-      "quantidade": 3,
+      "quantidade": 4,
       "valor_descontado": 0.0
     },
     {
@@ -60,7 +60,7 @@
     },
     {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 26,
+      "quantidade": 27,
       "valor_descontado": 0.0
     },
     {
@@ -80,7 +80,7 @@
     },
     {
       "doutor": "Marina Alievi",
-      "quantidade": 8,
+      "quantidade": 9,
       "valor_descontado": 0.0
     },
     {
@@ -89,8 +89,13 @@
       "valor_descontado": 0.0
     },
     {
+      "doutor": "Nicoli Weber",
+      "quantidade": 1,
+      "valor_descontado": 120.0
+    },
+    {
       "doutor": "Sofie Owens",
-      "quantidade": 2,
+      "quantidade": 4,
       "valor_descontado": 0.0
     },
     {
