@@ -1264,16 +1264,16 @@
   },
   "2026-06": {
     "competencia": "2026-06",
-    "gerado_em": "2026-06-09T14:15:03.980030",
-    "quantidade_total": 144,
-    "valor_total": 19152.0,
+    "gerado_em": "2026-06-09T16:55:26.320284",
+    "quantidade_total": 152,
+    "valor_total": 20205.0,
     "valor_total_descontado": 120.0,
-    "valor_total_pendente": 19032.0,
+    "valor_total_pendente": 20085.0,
     "por_unidade": [
       {
         "unidade": "Caxias",
-        "quantidade": 42,
-        "valor": 5291.0
+        "quantidade": 43,
+        "valor": 5376.0
       },
       {
         "unidade": "Encantado",
@@ -1282,13 +1282,13 @@
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 19,
-        "valor": 4204.0
+        "quantidade": 21,
+        "valor": 4552.0
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 6,
-        "valor": 810.0
+        "quantidade": 11,
+        "valor": 1430.0
       },
       {
         "unidade": "Soledade",
@@ -1324,7 +1324,7 @@
       },
       {
         "doutor": "Franciele Pedrotti",
-        "quantidade": 36,
+        "quantidade": 39,
         "valor_descontado": 0.0
       },
       {
@@ -1364,7 +1364,7 @@
       },
       {
         "doutor": "Tamara Macanan",
-        "quantidade": 6,
+        "quantidade": 11,
         "valor_descontado": 0.0
       },
       {
