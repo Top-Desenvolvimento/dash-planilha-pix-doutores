@@ -2046,8 +2046,8 @@
       "doutor_id": "23",
       "doutor": "Jéssica Barreto",
       "credito_inicial": 1000.0,
-      "utilizado": 105.0,
-      "credito_disponivel": 895.0,
+      "utilizado": 210.0,
+      "credito_disponivel": 790.0,
       "pix_key": ""
     },
     {
@@ -2206,8 +2206,8 @@
       "doutor_id": "46",
       "doutor": "Thalia Vezzosi",
       "credito_inicial": 2500.0,
-      "utilizado": 780.0,
-      "credito_disponivel": 1720.0,
+      "utilizado": 1550.0,
+      "credito_disponivel": 950.0,
       "pix_key": ""
     },
     {
