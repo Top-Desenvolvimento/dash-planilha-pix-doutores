@@ -1264,11 +1264,11 @@
   },
   "2026-06": {
     "competencia": "2026-06",
-    "gerado_em": "2026-06-09T22:58:40.496984",
-    "quantidade_total": 187,
-    "valor_total": 24982.0,
-    "valor_total_descontado": 1000.0,
-    "valor_total_pendente": 23982.0,
+    "gerado_em": "2026-06-10T00:15:13.559568",
+    "quantidade_total": 188,
+    "valor_total": 25303.0,
+    "valor_total_descontado": 160.0,
+    "valor_total_pendente": 25143.0,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1292,8 +1292,8 @@
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 18,
-        "valor": 2944.0
+        "quantidade": 19,
+        "valor": 3265.0
       },
       {
         "unidade": "Soledade",
@@ -1379,13 +1379,13 @@
       },
       {
         "doutor": "Tamara Macanan",
-        "quantidade": 13,
+        "quantidade": 14,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Thalia Vezzosi",
         "quantidade": 7,
-        "valor_descontado": 895.0
+        "valor_descontado": 55.0
       },
       {
         "doutor": "Thiany Cristofoli",
