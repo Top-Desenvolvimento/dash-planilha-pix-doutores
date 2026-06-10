@@ -2102,8 +2102,8 @@
       "competencia": "2026-06",
       "doutor_id": "3",
       "credito_inicial": 1500.0,
-      "utilizado": 640.0,
-      "credito_final": 860.0,
+      "utilizado": 1500.0,
+      "credito_final": 0.0,
       "updated_by_email": null,
       "updated_by_nome": null
     },
