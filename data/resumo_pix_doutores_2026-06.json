@@ -1,15 +1,15 @@
 {
   "competencia": "2026-06",
-  "gerado_em": "2026-06-10T16:13:35.482200",
-  "quantidade_total": 198,
-  "valor_total": 27123.5,
-  "valor_total_descontado": 610.0,
-  "valor_total_pendente": 26513.5,
+  "gerado_em": "2026-06-10T18:49:38.064767",
+  "quantidade_total": 219,
+  "valor_total": 29750.5,
+  "valor_total_descontado": 695.0,
+  "valor_total_pendente": 29055.5,
   "por_unidade": [
     {
       "unidade": "Bento",
-      "quantidade": 2,
-      "valor": 261.0
+      "quantidade": 5,
+      "valor": 672.0
     },
     {
       "unidade": "Caxias",
@@ -18,8 +18,8 @@
     },
     {
       "unidade": "Encantado",
-      "quantidade": 33,
-      "valor": 3935.0
+      "quantidade": 38,
+      "valor": 4460.0
     },
     {
       "unidade": "Farroupilha",
@@ -28,23 +28,23 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 19,
-      "valor": 3265.0
+      "quantidade": 26,
+      "valor": 3995.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 50,
-      "valor": 5567.0
+      "quantidade": 52,
+      "valor": 6051.0
     },
     {
       "unidade": "Ssdocai",
-      "quantidade": 11,
-      "valor": 1731.5
+      "quantidade": 12,
+      "valor": 1836.5
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 6,
-      "valor": 791.0
+      "quantidade": 9,
+      "valor": 1163.0
     }
   ],
   "por_doutor": [
@@ -55,12 +55,12 @@
     },
     {
       "doutor": "Alexandre Favero",
-      "quantidade": 1,
-      "valor_descontado": 105.0
+      "quantidade": 5,
+      "valor_descontado": 535.0
     },
     {
       "doutor": "Alexandre Orlandini",
-      "quantidade": 4,
+      "quantidade": 5,
       "valor_descontado": 0.0
     },
     {
@@ -75,17 +75,17 @@
     },
     {
       "doutor": "Jéssica Barreto",
-      "quantidade": 1,
-      "valor_descontado": 105.0
+      "quantidade": 4,
+      "valor_descontado": 160.0
     },
     {
       "doutor": "Leandro Diniz",
       "quantidade": 1,
-      "valor_descontado": 400.0
+      "valor_descontado": 0.0
     },
     {
       "doutor": "Leticia Canabarro",
-      "quantidade": 18,
+      "quantidade": 20,
       "valor_descontado": 0.0
     },
     {
@@ -120,12 +120,12 @@
     },
     {
       "doutor": "Sofie Owens",
-      "quantidade": 6,
+      "quantidade": 9,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Tamara Macanan",
-      "quantidade": 19,
+      "quantidade": 26,
       "valor_descontado": 0.0
     },
     {
@@ -140,7 +140,7 @@
     },
     {
       "doutor": "TOP",
-      "quantidade": 11,
+      "quantidade": 12,
       "valor_descontado": 0.0
     }
   ]
