@@ -1,10 +1,10 @@
 {
   "competencia": "2026-06",
-  "gerado_em": "2026-06-11T15:06:03.640067",
-  "quantidade_total": 249,
-  "valor_total": 33093.5,
-  "valor_total_descontado": 0.0,
-  "valor_total_pendente": 33093.5,
+  "gerado_em": "2026-06-11T18:33:40.816015",
+  "quantidade_total": 252,
+  "valor_total": 33963.5,
+  "valor_total_descontado": 630.0,
+  "valor_total_pendente": 33333.5,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,13 +13,13 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 51,
-      "valor": 6328.0
+      "quantidade": 52,
+      "valor": 6448.0
     },
     {
       "unidade": "Encantado",
-      "quantidade": 45,
-      "valor": 5139.0
+      "quantidade": 46,
+      "valor": 5259.0
     },
     {
       "unidade": "Farroupilha",
@@ -28,8 +28,8 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 36,
-      "valor": 4974.0
+      "quantidade": 37,
+      "valor": 5604.0
     },
     {
       "unidade": "Soledade",
@@ -55,7 +55,7 @@
     },
     {
       "doutor": "Alexandre Favero",
-      "quantidade": 11,
+      "quantidade": 12,
       "valor_descontado": 0.0
     },
     {
@@ -69,8 +69,13 @@
       "valor_descontado": 0.0
     },
     {
+      "doutor": "Fernana Sozo",
+      "quantidade": 1,
+      "valor_descontado": 630.0
+    },
+    {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 47,
+      "quantidade": 48,
       "valor_descontado": 0.0
     },
     {
