@@ -1,10 +1,10 @@
 {
   "competencia": "2026-06",
-  "gerado_em": "2026-06-10T23:09:16.571428",
-  "quantidade_total": 245,
-  "valor_total": 32628.5,
+  "gerado_em": "2026-06-11T01:43:21.478106",
+  "quantidade_total": 246,
+  "valor_total": 32786.5,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 32628.5,
+  "valor_total_pendente": 32786.5,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -43,8 +43,8 @@
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 9,
-      "valor": 1163.0
+      "quantidade": 10,
+      "valor": 1321.0
     }
   ],
   "por_doutor": [
@@ -120,7 +120,7 @@
     },
     {
       "doutor": "Sofie Owens",
-      "quantidade": 9,
+      "quantidade": 10,
       "valor_descontado": 0.0
     },
     {
