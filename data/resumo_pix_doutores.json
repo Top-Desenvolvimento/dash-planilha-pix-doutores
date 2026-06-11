@@ -1264,11 +1264,11 @@
   },
   "2026-06": {
     "competencia": "2026-06",
-    "gerado_em": "2026-06-11T18:33:40.816015",
-    "quantidade_total": 252,
-    "valor_total": 33963.5,
+    "gerado_em": "2026-06-11T21:11:20.643272",
+    "quantidade_total": 256,
+    "valor_total": 34559.5,
     "valor_total_descontado": 630.0,
-    "valor_total_pendente": 33333.5,
+    "valor_total_pendente": 33929.5,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1277,8 +1277,8 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 52,
-        "valor": 6448.0
+        "quantidade": 54,
+        "valor": 6753.0
       },
       {
         "unidade": "Encantado",
@@ -1307,8 +1307,8 @@
       },
       {
         "unidade": "Veranopolis",
-        "quantidade": 10,
-        "valor": 1321.0
+        "quantidade": 12,
+        "valor": 1612.0
       }
     ],
     "por_doutor": [
@@ -1339,7 +1339,7 @@
       },
       {
         "doutor": "Franciele Pedrotti",
-        "quantidade": 48,
+        "quantidade": 50,
         "valor_descontado": 0.0
       },
       {
@@ -1389,7 +1389,7 @@
       },
       {
         "doutor": "Sofie Owens",
-        "quantidade": 10,
+        "quantidade": 12,
         "valor_descontado": 0.0
       },
       {
