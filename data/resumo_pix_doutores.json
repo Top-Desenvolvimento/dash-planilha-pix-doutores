@@ -1264,11 +1264,11 @@
   },
   "2026-06": {
     "competencia": "2026-06",
-    "gerado_em": "2026-06-12T20:37:54.725850",
-    "quantidade_total": 243,
-    "valor_total": 32926.0,
+    "gerado_em": "2026-06-12T22:19:47.812269",
+    "quantidade_total": 248,
+    "valor_total": 33743.0,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 32926.0,
+    "valor_total_pendente": 33743.0,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1292,13 +1292,13 @@
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 39,
-        "valor": 6107.0
+        "quantidade": 43,
+        "valor": 6804.0
       },
       {
         "unidade": "Soledade",
-        "quantidade": 54,
-        "valor": 6270.0
+        "quantidade": 55,
+        "valor": 6390.0
       },
       {
         "unidade": "Veranopolis",
@@ -1329,12 +1329,12 @@
       },
       {
         "doutor": "Fernana Sozo",
-        "quantidade": 3,
+        "quantidade": 6,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Franciele Pedrotti",
-        "quantidade": 51,
+        "quantidade": 52,
         "valor_descontado": 0.0
       },
       {
@@ -1344,7 +1344,7 @@
       },
       {
         "doutor": "Leticia Canabarro",
-        "quantidade": 22,
+        "quantidade": 23,
         "valor_descontado": 0.0
       },
       {
