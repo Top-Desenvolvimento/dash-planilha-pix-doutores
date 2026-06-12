@@ -1264,16 +1264,16 @@
   },
   "2026-06": {
     "competencia": "2026-06",
-    "gerado_em": "2026-06-12T16:05:59.825754",
-    "quantidade_total": 257,
-    "valor_total": 34679.5,
+    "gerado_em": "2026-06-12T18:23:32.900975",
+    "quantidade_total": 259,
+    "valor_total": 34899.5,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 34679.5,
+    "valor_total_pendente": 34899.5,
     "por_unidade": [
       {
         "unidade": "Bento",
-        "quantidade": 8,
-        "valor": 1258.0
+        "quantidade": 9,
+        "valor": 1358.0
       },
       {
         "unidade": "Caxias",
@@ -1297,8 +1297,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 53,
-        "valor": 6150.0
+        "quantidade": 54,
+        "valor": 6270.0
       },
       {
         "unidade": "Ssdocai",
@@ -1344,7 +1344,7 @@
       },
       {
         "doutor": "Jéssica Barreto",
-        "quantidade": 7,
+        "quantidade": 8,
         "valor_descontado": 0.0
       },
       {
@@ -1354,7 +1354,7 @@
       },
       {
         "doutor": "Leticia Canabarro",
-        "quantidade": 21,
+        "quantidade": 22,
         "valor_descontado": 0.0
       },
       {
