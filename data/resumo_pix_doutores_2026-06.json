@@ -1,10 +1,10 @@
 {
   "competencia": "2026-06",
-  "gerado_em": "2026-06-14T22:58:24.254796",
-  "quantidade_total": 270,
-  "valor_total": 36314.0,
+  "gerado_em": "2026-06-15T00:10:54.038643",
+  "quantidade_total": 220,
+  "valor_total": 28710.0,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 36314.0,
+  "valor_total_pendente": 28710.0,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -25,11 +25,6 @@
       "unidade": "Farroupilha",
       "quantidade": 30,
       "valor": 5745.0
-    },
-    {
-      "unidade": "FloresDaCunha",
-      "quantidade": 50,
-      "valor": 7604.0
     },
     {
       "unidade": "Soledade",
@@ -64,13 +59,8 @@
       "valor_descontado": 0.0
     },
     {
-      "doutor": "Fernana Sozo",
-      "quantidade": 6,
-      "valor_descontado": 0.0
-    },
-    {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 63,
+      "quantidade": 56,
       "valor_descontado": 0.0
     },
     {
@@ -124,11 +114,6 @@
       "valor_descontado": 0.0
     },
     {
-      "doutor": "Tamara Macanan",
-      "quantidade": 36,
-      "valor_descontado": 0.0
-    },
-    {
       "doutor": "Thalia Vezzosi",
       "quantidade": 10,
       "valor_descontado": 0.0
@@ -140,7 +125,7 @@
     },
     {
       "doutor": "TOP",
-      "quantidade": 2,
+      "quantidade": 1,
       "valor_descontado": 0.0
     }
   ]
