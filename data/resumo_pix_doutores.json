@@ -1264,11 +1264,11 @@
   },
   "2026-06": {
     "competencia": "2026-06",
-    "gerado_em": "2026-06-15T16:38:41.959815",
-    "quantidade_total": 271,
-    "valor_total": 36571.0,
+    "gerado_em": "2026-06-15T20:13:00.787314",
+    "quantidade_total": 279,
+    "valor_total": 37393.0,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 36571.0,
+    "valor_total_pendente": 37393.0,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1277,13 +1277,13 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 61,
-        "valor": 7584.0
+        "quantidade": 62,
+        "valor": 7683.0
       },
       {
         "unidade": "Encantado",
-        "quantidade": 46,
-        "valor": 5259.0
+        "quantidade": 48,
+        "valor": 5464.0
       },
       {
         "unidade": "Farroupilha",
@@ -1297,13 +1297,13 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 63,
-        "valor": 7409.0
+        "quantidade": 67,
+        "valor": 7842.0
       },
       {
         "unidade": "Veranopolis",
-        "quantidade": 12,
-        "valor": 1612.0
+        "quantidade": 13,
+        "valor": 1697.0
       }
     ],
     "por_doutor": [
@@ -1334,7 +1334,7 @@
       },
       {
         "doutor": "Franciele Pedrotti",
-        "quantidade": 64,
+        "quantidade": 65,
         "valor_descontado": 0.0
       },
       {
@@ -1369,7 +1369,7 @@
       },
       {
         "doutor": "Murilo Debortoli",
-        "quantidade": 5,
+        "quantidade": 9,
         "valor_descontado": 0.0
       },
       {
@@ -1384,7 +1384,7 @@
       },
       {
         "doutor": "Sofie Owens",
-        "quantidade": 12,
+        "quantidade": 13,
         "valor_descontado": 0.0
       },
       {
@@ -1399,7 +1399,7 @@
       },
       {
         "doutor": "Thiany Cristofoli",
-        "quantidade": 17,
+        "quantidade": 19,
         "valor_descontado": 0.0
       },
       {
