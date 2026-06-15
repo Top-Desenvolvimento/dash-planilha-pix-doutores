@@ -1,15 +1,11 @@
 name: Recarregar histórico PIX 2026
-
 on:
   workflow_dispatch:
-
 permissions:
   contents: write
-
 jobs:
   recarregar:
     runs-on: ubuntu-latest
-
     steps:
       - name: Baixar repositório
         uses: actions/checkout@v4
@@ -39,16 +35,12 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-
+          git fetch origin main
+          git rebase origin/main
           git add data/*.json data/*.html index.html || true
-
           if git diff --cached --quiet; then
             echo "Sem alterações para commitar"
             exit 0
           fi
-
           git commit -m "Recarrega histórico PIX 2026"
-
-          git pull --rebase origin main
-
           git push origin main
