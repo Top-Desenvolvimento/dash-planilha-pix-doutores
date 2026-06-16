@@ -1264,11 +1264,11 @@
   },
   "2026-06": {
     "competencia": "2026-06",
-    "gerado_em": "2026-06-15T22:35:49.894569",
-    "quantidade_total": 283,
-    "valor_total": 37873.0,
-    "valor_total_descontado": 155.0,
-    "valor_total_pendente": 37718.0,
+    "gerado_em": "2026-06-16T00:22:12.523214",
+    "quantidade_total": 285,
+    "valor_total": 38555.0,
+    "valor_total_descontado": 693.0,
+    "valor_total_pendente": 37862.0,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1277,8 +1277,8 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 65,
-        "valor": 8008.0
+        "quantidade": 66,
+        "valor": 8152.0
       },
       {
         "unidade": "Encantado",
@@ -1302,8 +1302,8 @@
       },
       {
         "unidade": "Veranopolis",
-        "quantidade": 14,
-        "valor": 1852.0
+        "quantidade": 15,
+        "valor": 2390.0
       }
     ],
     "por_doutor": [
@@ -1334,7 +1334,7 @@
       },
       {
         "doutor": "Franciele Pedrotti",
-        "quantidade": 67,
+        "quantidade": 68,
         "valor_descontado": 0.0
       },
       {
@@ -1369,8 +1369,8 @@
       },
       {
         "doutor": "Morgana Zambiasi",
-        "quantidade": 1,
-        "valor_descontado": 155.0
+        "quantidade": 2,
+        "valor_descontado": 693.0
       },
       {
         "doutor": "Murilo Debortoli",
