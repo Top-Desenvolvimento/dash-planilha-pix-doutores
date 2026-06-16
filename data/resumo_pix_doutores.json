@@ -1044,11 +1044,11 @@
   },
   "2026-06": {
     "competencia": "2026-06",
-    "gerado_em": "2026-06-16T21:55:24.325435",
-    "quantidade_total": 299,
-    "valor_total": 40660.0,
+    "gerado_em": "2026-06-16T23:23:07.015654",
+    "quantidade_total": 302,
+    "valor_total": 40997.0,
     "valor_total_descontado": 334.0,
-    "valor_total_pendente": 40326.0,
+    "valor_total_pendente": 40663.0,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1067,8 +1067,8 @@
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 33,
-        "valor": 6185.0
+        "quantidade": 36,
+        "valor": 6522.0
       },
       {
         "unidade": "FloresDaCunha",
@@ -1114,7 +1114,7 @@
       },
       {
         "doutor": "Franciele Pedrotti",
-        "quantidade": 75,
+        "quantidade": 76,
         "valor_descontado": 0.0
       },
       {
@@ -1179,7 +1179,7 @@
       },
       {
         "doutor": "Thalia Vezzosi",
-        "quantidade": 12,
+        "quantidade": 14,
         "valor_descontado": 0.0
       },
       {
