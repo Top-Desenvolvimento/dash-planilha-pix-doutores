@@ -1,10 +1,10 @@
 {
   "competencia": "2026-06",
-  "gerado_em": "2026-06-16T15:39:36.862706",
-  "quantidade_total": 286,
-  "valor_total": 38675.0,
+  "gerado_em": "2026-06-16T19:13:42.051685",
+  "quantidade_total": 296,
+  "valor_total": 40248.0,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 38675.0,
+  "valor_total_pendente": 40248.0,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,8 +13,8 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 67,
-      "valor": 8272.0
+      "quantidade": 68,
+      "valor": 8675.0
     },
     {
       "unidade": "Encantado",
@@ -23,8 +23,8 @@
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 30,
-      "valor": 5745.0
+      "quantidade": 33,
+      "valor": 6185.0
     },
     {
       "unidade": "FloresDaCunha",
@@ -33,8 +33,8 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 67,
-      "valor": 7842.0
+      "quantidade": 73,
+      "valor": 8572.0
     },
     {
       "unidade": "Veranopolis",
@@ -70,7 +70,7 @@
     },
     {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 69,
+      "quantidade": 71,
       "valor_descontado": 0.0
     },
     {
@@ -80,7 +80,7 @@
     },
     {
       "doutor": "Leticia Canabarro",
-      "quantidade": 26,
+      "quantidade": 27,
       "valor_descontado": 0.0
     },
     {
@@ -99,18 +99,13 @@
       "valor_descontado": 0.0
     },
     {
-      "doutor": "MEI",
-      "quantidade": 1,
-      "valor_descontado": 0.0
-    },
-    {
       "doutor": "Morgana Zambiasi",
       "quantidade": 2,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Murilo Debortoli",
-      "quantidade": 9,
+      "quantidade": 12,
       "valor_descontado": 0.0
     },
     {
@@ -135,7 +130,7 @@
     },
     {
       "doutor": "Thalia Vezzosi",
-      "quantidade": 10,
+      "quantidade": 12,
       "valor_descontado": 0.0
     },
     {
@@ -145,6 +140,11 @@
     },
     {
       "doutor": "TOP",
+      "quantidade": 3,
+      "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Vitoria de Brito",
       "quantidade": 3,
       "valor_descontado": 0.0
     }
