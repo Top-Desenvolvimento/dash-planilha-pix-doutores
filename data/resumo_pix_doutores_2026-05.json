@@ -1,10 +1,10 @@
 {
   "competencia": "2026-05",
-  "gerado_em": "2026-05-31T23:45:37.836081",
-  "quantidade_total": 722,
-  "valor_total": 103446.49,
+  "gerado_em": "2026-06-16T14:45:27.089656",
+  "quantidade_total": 639,
+  "valor_total": 94043.49,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 103446.49,
+  "valor_total_pendente": 94043.49,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,8 +13,8 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 122,
-      "valor": 15413.5
+      "quantidade": 123,
+      "valor": 15508.5
     },
     {
       "unidade": "Encantado",
@@ -29,22 +29,12 @@
     {
       "unidade": "FloresDaCunha",
       "quantidade": 86,
-      "valor": 10826.0
-    },
-    {
-      "unidade": "Garibaldi",
-      "quantidade": 36,
-      "valor": 3920.0
+      "valor": 10815.0
     },
     {
       "unidade": "Soledade",
       "quantidade": 165,
       "valor": 19800.0
-    },
-    {
-      "unidade": "Ssdocai",
-      "quantidade": 48,
-      "valor": 5567.0
     },
     {
       "unidade": "Veranopolis",
@@ -65,17 +55,12 @@
     },
     {
       "doutor": "Alexandre Orlandini",
-      "quantidade": 13,
+      "quantidade": 16,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Ana Cristina Corso",
       "quantidade": 9,
-      "valor_descontado": 0.0
-    },
-    {
-      "doutor": "Bruno Castellan",
-      "quantidade": 10,
       "valor_descontado": 0.0
     },
     {
@@ -145,12 +130,7 @@
     },
     {
       "doutor": "Keyla Daniele",
-      "quantidade": 22,
-      "valor_descontado": 0.0
-    },
-    {
-      "doutor": "Leandro Diniz",
-      "quantidade": 9,
+      "quantidade": 6,
       "valor_descontado": 0.0
     },
     {
@@ -160,7 +140,7 @@
     },
     {
       "doutor": "Letícia Cauzzi",
-      "quantidade": 28,
+      "quantidade": 20,
       "valor_descontado": 0.0
     },
     {
@@ -174,18 +154,8 @@
       "valor_descontado": 0.0
     },
     {
-      "doutor": "Marcella Zancanaro",
-      "quantidade": 13,
-      "valor_descontado": 0.0
-    },
-    {
       "doutor": "Marina Alievi",
       "quantidade": 18,
-      "valor_descontado": 0.0
-    },
-    {
-      "doutor": "MEI",
-      "quantidade": 1,
       "valor_descontado": 0.0
     },
     {
@@ -195,7 +165,7 @@
     },
     {
       "doutor": "Murilo Debortoli",
-      "quantidade": 20,
+      "quantidade": 21,
       "valor_descontado": 0.0
     },
     {
@@ -210,7 +180,7 @@
     },
     {
       "doutor": "Nicoli Weber",
-      "quantidade": 14,
+      "quantidade": 17,
       "valor_descontado": 0.0
     },
     {
@@ -220,7 +190,7 @@
     },
     {
       "doutor": "Sofie Owens",
-      "quantidade": 29,
+      "quantidade": 7,
       "valor_descontado": 0.0
     },
     {
@@ -240,12 +210,7 @@
     },
     {
       "doutor": "Thiany Cristofoli",
-      "quantidade": 44,
-      "valor_descontado": 0.0
-    },
-    {
-      "doutor": "TOP",
-      "quantidade": 14,
+      "quantidade": 47,
       "valor_descontado": 0.0
     }
   ]

@@ -1,10 +1,10 @@
 {
   "competencia": "2026-01",
-  "gerado_em": "2026-05-07T14:37:56.170113",
-  "quantidade_total": 745,
-  "valor_total": 96685.48,
-  "valor_total_descontado": 3525.75,
-  "valor_total_pendente": 93159.73,
+  "gerado_em": "2026-06-16T14:08:45.674648",
+  "quantidade_total": 631,
+  "valor_total": 80218.48,
+  "valor_total_descontado": 1367.72,
+  "valor_total_pendente": 78850.76,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -32,19 +32,9 @@
       "valor": 10852.0
     },
     {
-      "unidade": "Garibaldi",
-      "quantidade": 57,
-      "valor": 7130.0
-    },
-    {
       "unidade": "Soledade",
       "quantidade": 167,
       "valor": 20011.0
-    },
-    {
-      "unidade": "Ssdocai",
-      "quantidade": 57,
-      "valor": 9337.0
     },
     {
       "unidade": "Veranopolis",
@@ -74,23 +64,13 @@
       "valor_descontado": 0.0
     },
     {
-      "doutor": ".Gislaine Santos Lima",
-      "quantidade": 17,
-      "valor_descontado": 0.0
-    },
-    {
-      "doutor": ".Greici",
-      "quantidade": 5,
-      "valor_descontado": 0.0
-    },
-    {
       "doutor": ".Jéssica Barreto",
       "quantidade": 6,
       "valor_descontado": 0.0
     },
     {
       "doutor": ".Laura Luiza Cimolin",
-      "quantidade": 15,
+      "quantidade": 6,
       "valor_descontado": 0.0
     },
     {
@@ -131,11 +111,11 @@
     {
       "doutor": "Dionathan Pohlmann",
       "quantidade": 37,
-      "valor_descontado": 1407.2
+      "valor_descontado": 0.0
     },
     {
       "doutor": "Doutores não locais",
-      "quantidade": 44,
+      "quantidade": 28,
       "valor_descontado": 0.0
     },
     {
@@ -179,26 +159,6 @@
       "valor_descontado": 0.0
     },
     {
-      "doutor": "Dra.Joana Pereira Sganzerla",
-      "quantidade": 6,
-      "valor_descontado": 0.0
-    },
-    {
-      "doutor": "Dra.Letícia Cauzzi Rodrigues",
-      "quantidade": 2,
-      "valor_descontado": 0.0
-    },
-    {
-      "doutor": "Dra.Marcella",
-      "quantidade": 10,
-      "valor_descontado": 0.0
-    },
-    {
-      "doutor": "Dra.Sofie",
-      "quantidade": 16,
-      "valor_descontado": 0.0
-    },
-    {
       "doutor": "Dra.Sofie Owens",
       "quantidade": 1,
       "valor_descontado": 0.0
@@ -221,7 +181,7 @@
     {
       "doutor": "Evalda Baldissera",
       "quantidade": 15,
-      "valor_descontado": 2118.55
+      "valor_descontado": 1367.72
     },
     {
       "doutor": "Giovana Gasparini",
@@ -230,7 +190,7 @@
     },
     {
       "doutor": "MEI",
-      "quantidade": 174,
+      "quantidade": 171,
       "valor_descontado": 0.0
     },
     {
@@ -240,7 +200,7 @@
     },
     {
       "doutor": "TOP",
-      "quantidade": 86,
+      "quantidade": 56,
       "valor_descontado": 0.0
     }
   ]

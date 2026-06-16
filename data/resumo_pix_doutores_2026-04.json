@@ -1,10 +1,10 @@
 {
   "competencia": "2026-04",
-  "gerado_em": "2026-05-07T15:11:54.611955",
-  "quantidade_total": 723,
-  "valor_total": 95420.09,
+  "gerado_em": "2026-06-16T14:36:29.579016",
+  "quantidade_total": 622,
+  "valor_total": 83899.09,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 95420.09,
+  "valor_total_pendente": 83899.09,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -32,19 +32,9 @@
       "valor": 11174.0
     },
     {
-      "unidade": "Garibaldi",
-      "quantidade": 41,
-      "valor": 4620.0
-    },
-    {
       "unidade": "Soledade",
       "quantidade": 177,
       "valor": 20680.0
-    },
-    {
-      "unidade": "Ssdocai",
-      "quantidade": 60,
-      "valor": 6901.0
     },
     {
       "unidade": "Veranopolis",
@@ -74,11 +64,6 @@
       "valor_descontado": 0.0
     },
     {
-      "doutor": "Bruno Castellan",
-      "quantidade": 11,
-      "valor_descontado": 0.0
-    },
-    {
       "doutor": "Cristian Pressi",
       "quantidade": 44,
       "valor_descontado": 0.0
@@ -95,7 +80,7 @@
     },
     {
       "doutor": "Evalda Baldissera",
-      "quantidade": 38,
+      "quantidade": 39,
       "valor_descontado": 0.0
     },
     {
@@ -119,38 +104,13 @@
       "valor_descontado": 0.0
     },
     {
-      "doutor": "Gislaine Santos",
-      "quantidade": 5,
-      "valor_descontado": 0.0
-    },
-    {
-      "doutor": "Greici Matiello",
-      "quantidade": 1,
-      "valor_descontado": 0.0
-    },
-    {
       "doutor": "Gustavo Lourenço Ongaratto",
       "quantidade": 9,
       "valor_descontado": 0.0
     },
     {
-      "doutor": "Joana Sganzerla",
-      "quantidade": 2,
-      "valor_descontado": 0.0
-    },
-    {
       "doutor": "Jéssica Barreto",
       "quantidade": 9,
-      "valor_descontado": 0.0
-    },
-    {
-      "doutor": "Keyla Daniele",
-      "quantidade": 15,
-      "valor_descontado": 0.0
-    },
-    {
-      "doutor": "Leandro Diniz",
-      "quantidade": 13,
       "valor_descontado": 0.0
     },
     {
@@ -170,12 +130,7 @@
     },
     {
       "doutor": "Luiz Henrique",
-      "quantidade": 37,
-      "valor_descontado": 0.0
-    },
-    {
-      "doutor": "Marcella Zancanaro",
-      "quantidade": 11,
+      "quantidade": 22,
       "valor_descontado": 0.0
     },
     {
@@ -220,7 +175,7 @@
     },
     {
       "doutor": "Sofie Owens",
-      "quantidade": 26,
+      "quantidade": 1,
       "valor_descontado": 0.0
     },
     {
@@ -245,7 +200,7 @@
     },
     {
       "doutor": "TOP",
-      "quantidade": 6,
+      "quantidade": 2,
       "valor_descontado": 0.0
     },
     {
