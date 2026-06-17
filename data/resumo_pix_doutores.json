@@ -1044,12 +1044,17 @@
   },
   "2026-06": {
     "competencia": "2026-06",
-    "gerado_em": "2026-06-17T18:10:57.398784",
-    "quantidade_total": 299,
-    "valor_total": 40602.0,
+    "gerado_em": "2026-06-17T20:43:35.597126",
+    "quantidade_total": 312,
+    "valor_total": 42304.0,
     "valor_total_descontado": 334.0,
-    "valor_total_pendente": 40268.0,
+    "valor_total_pendente": 41970.0,
     "por_unidade": [
+      {
+        "unidade": "Bento",
+        "quantidade": 8,
+        "valor": 1258.0
+      },
       {
         "unidade": "Caxias",
         "quantidade": 72,
@@ -1067,8 +1072,8 @@
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 54,
-        "valor": 8368.0
+        "quantidade": 57,
+        "valor": 8597.0
       },
       {
         "unidade": "Soledade",
@@ -1077,8 +1082,8 @@
       },
       {
         "unidade": "Veranopolis",
-        "quantidade": 15,
-        "valor": 2390.0
+        "quantidade": 17,
+        "valor": 2605.0
       }
     ],
     "por_doutor": [
@@ -1113,8 +1118,13 @@
         "valor_descontado": 0.0
       },
       {
+        "doutor": "Jéssica Barreto",
+        "quantidade": 8,
+        "valor_descontado": 0.0
+      },
+      {
         "doutor": "Karen Ramona Kuwer",
-        "quantidade": 3,
+        "quantidade": 6,
         "valor_descontado": 0.0
       },
       {
@@ -1159,7 +1169,7 @@
       },
       {
         "doutor": "Sofie Owens",
-        "quantidade": 13,
+        "quantidade": 15,
         "valor_descontado": 0.0
       },
       {
