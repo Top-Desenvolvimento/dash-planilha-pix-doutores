@@ -60,15 +60,21 @@
     "coletado_em": "2026-06-16T14:44:17.251856"
   },
   {
+    "unidade": "Bento",
+    "competencia": "2026-06",
+    "erro": "Menu Finanças não encontrado.",
+    "coletado_em": "2026-06-17T18:06:44.359311"
+  },
+  {
     "unidade": "Garibaldi",
     "competencia": "2026-06",
     "erro": "Menu Finanças não encontrado.",
-    "coletado_em": "2026-06-17T15:38:24.179805"
+    "coletado_em": "2026-06-17T18:08:50.783897"
   },
   {
     "unidade": "Ssdocai",
     "competencia": "2026-06",
     "erro": "Menu Finanças não encontrado.",
-    "coletado_em": "2026-06-17T15:39:25.580166"
+    "coletado_em": "2026-06-17T18:09:54.199225"
   }
 ]

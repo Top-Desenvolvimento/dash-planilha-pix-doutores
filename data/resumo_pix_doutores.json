@@ -1044,17 +1044,12 @@
   },
   "2026-06": {
     "competencia": "2026-06",
-    "gerado_em": "2026-06-17T15:40:28.244841",
-    "quantidade_total": 303,
-    "valor_total": 41421.0,
+    "gerado_em": "2026-06-17T18:10:57.398784",
+    "quantidade_total": 299,
+    "valor_total": 40602.0,
     "valor_total_descontado": 334.0,
-    "valor_total_pendente": 41087.0,
+    "valor_total_pendente": 40268.0,
     "por_unidade": [
-      {
-        "unidade": "Bento",
-        "quantidade": 8,
-        "valor": 1258.0
-      },
       {
         "unidade": "Caxias",
         "quantidade": 72,
@@ -1067,13 +1062,13 @@
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 36,
-        "valor": 6522.0
+        "quantidade": 37,
+        "valor": 6621.0
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 51,
-        "valor": 8028.0
+        "quantidade": 54,
+        "valor": 8368.0
       },
       {
         "unidade": "Soledade",
@@ -1114,12 +1109,12 @@
       },
       {
         "doutor": "Franciele Pedrotti",
-        "quantidade": 77,
+        "quantidade": 78,
         "valor_descontado": 0.0
       },
       {
-        "doutor": "Jéssica Barreto",
-        "quantidade": 8,
+        "doutor": "Karen Ramona Kuwer",
+        "quantidade": 3,
         "valor_descontado": 0.0
       },
       {
