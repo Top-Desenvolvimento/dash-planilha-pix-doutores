@@ -1,10 +1,10 @@
 {
   "competencia": "2026-06",
-  "gerado_em": "2026-06-17T12:00:29.805184",
-  "quantidade_total": 302,
-  "valor_total": 40997.0,
+  "gerado_em": "2026-06-17T15:40:28.244841",
+  "quantidade_total": 303,
+  "valor_total": 41421.0,
   "valor_total_descontado": 334.0,
-  "valor_total_pendente": 40663.0,
+  "valor_total_pendente": 41087.0,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -28,8 +28,8 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 50,
-      "valor": 7604.0
+      "quantidade": 51,
+      "valor": 8028.0
     },
     {
       "unidade": "Soledade",
@@ -70,7 +70,7 @@
     },
     {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 76,
+      "quantidade": 77,
       "valor_descontado": 0.0
     },
     {
