@@ -1,10 +1,10 @@
 {
   "competencia": "2026-06",
-  "gerado_em": "2026-06-17T20:43:35.597126",
-  "quantidade_total": 312,
-  "valor_total": 42304.0,
-  "valor_total_descontado": 334.0,
-  "valor_total_pendente": 41970.0,
+  "gerado_em": "2026-06-17T22:31:28.048271",
+  "quantidade_total": 315,
+  "valor_total": 42653.0,
+  "valor_total_descontado": 28.0,
+  "valor_total_pendente": 42625.0,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -28,8 +28,8 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 57,
-      "valor": 8597.0
+      "quantidade": 60,
+      "valor": 8946.0
     },
     {
       "unidade": "Soledade",
@@ -80,7 +80,7 @@
     },
     {
       "doutor": "Karen Ramona Kuwer",
-      "quantidade": 6,
+      "quantidade": 9,
       "valor_descontado": 0.0
     },
     {
@@ -136,7 +136,7 @@
     {
       "doutor": "Thalia Tessaro",
       "quantidade": 2,
-      "valor_descontado": 334.0
+      "valor_descontado": 28.0
     },
     {
       "doutor": "Thalia Vezzosi",
