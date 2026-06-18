@@ -1,10 +1,10 @@
 {
   "competencia": "2026-06",
-  "gerado_em": "2026-06-18T18:44:54.065237",
-  "quantidade_total": 337,
-  "valor_total": 45153.0,
-  "valor_total_descontado": 540.0,
-  "valor_total_pendente": 44613.0,
+  "gerado_em": "2026-06-18T21:20:27.411964",
+  "quantidade_total": 353,
+  "valor_total": 47254.55,
+  "valor_total_descontado": 1301.0,
+  "valor_total_pendente": 45953.55,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,8 +13,8 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 75,
-      "valor": 9497.0
+      "quantidade": 79,
+      "valor": 10129.55
     },
     {
       "unidade": "Encantado",
@@ -23,23 +23,23 @@
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 43,
-      "valor": 7384.0
+      "quantidade": 45,
+      "valor": 7567.0
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 63,
-      "valor": 9296.0
+      "quantidade": 67,
+      "valor": 9769.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 80,
-      "valor": 9277.0
+      "quantidade": 83,
+      "valor": 9602.0
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 19,
-      "valor": 2827.0
+      "quantidade": 22,
+      "valor": 3315.0
     }
   ],
   "por_doutor": [
@@ -60,13 +60,18 @@
     },
     {
       "doutor": "Ana Cristina Corso",
-      "quantidade": 2,
-      "valor_descontado": 235.0
+      "quantidade": 6,
+      "valor_descontado": 708.0
     },
     {
       "doutor": "Dionathan Pohlmann",
       "quantidade": 2,
       "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Everlize Cipriani",
+      "quantidade": 1,
+      "valor_descontado": 98.0
     },
     {
       "doutor": "Fernana Sozo",
@@ -105,7 +110,7 @@
     },
     {
       "doutor": "Marina Alievi",
-      "quantidade": 15,
+      "quantidade": 16,
       "valor_descontado": 0.0
     },
     {
@@ -135,8 +140,8 @@
     },
     {
       "doutor": "Norberto Filipe",
-      "quantidade": 2,
-      "valor_descontado": 155.0
+      "quantidade": 4,
+      "valor_descontado": 345.0
     },
     {
       "doutor": "Sofie Owens",
@@ -150,7 +155,7 @@
     },
     {
       "doutor": "Thalia Tessaro",
-      "quantidade": 5,
+      "quantidade": 9,
       "valor_descontado": 0.0
     },
     {
@@ -165,12 +170,12 @@
     },
     {
       "doutor": "TOP",
-      "quantidade": 1,
+      "quantidade": 3,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Valdemir Luiz Abatti",
-      "quantidade": 1,
+      "quantidade": 3,
       "valor_descontado": 0.0
     },
     {
