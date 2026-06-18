@@ -1044,11 +1044,11 @@
   },
   "2026-06": {
     "competencia": "2026-06",
-    "gerado_em": "2026-06-17T22:31:28.048271",
-    "quantidade_total": 315,
-    "valor_total": 42653.0,
-    "valor_total_descontado": 28.0,
-    "valor_total_pendente": 42625.0,
+    "gerado_em": "2026-06-18T00:04:53.531204",
+    "quantidade_total": 317,
+    "valor_total": 42875.0,
+    "valor_total_descontado": 0.0,
+    "valor_total_pendente": 42875.0,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1082,8 +1082,8 @@
       },
       {
         "unidade": "Veranopolis",
-        "quantidade": 17,
-        "valor": 2605.0
+        "quantidade": 19,
+        "valor": 2827.0
       }
     ],
     "por_doutor": [
@@ -1169,7 +1169,7 @@
       },
       {
         "doutor": "Sofie Owens",
-        "quantidade": 15,
+        "quantidade": 16,
         "valor_descontado": 0.0
       },
       {
@@ -1180,7 +1180,7 @@
       {
         "doutor": "Thalia Tessaro",
         "quantidade": 2,
-        "valor_descontado": 28.0
+        "valor_descontado": 0.0
       },
       {
         "doutor": "Thalia Vezzosi",
@@ -1190,6 +1190,11 @@
       {
         "doutor": "Thiany Cristofoli",
         "quantidade": 19,
+        "valor_descontado": 0.0
+      },
+      {
+        "doutor": "Valdemir Luiz Abatti",
+        "quantidade": 1,
         "valor_descontado": 0.0
       },
       {
