@@ -1044,21 +1044,16 @@
   },
   "2026-06": {
     "competencia": "2026-06",
-    "gerado_em": "2026-06-18T12:43:07.597622",
-    "quantidade_total": 320,
-    "valor_total": 43245.0,
+    "gerado_em": "2026-06-18T16:15:45.129907",
+    "quantidade_total": 318,
+    "valor_total": 42612.0,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 43245.0,
+    "valor_total_pendente": 42612.0,
     "por_unidade": [
       {
-        "unidade": "Bento",
-        "quantidade": 8,
-        "valor": 1258.0
-      },
-      {
         "unidade": "Caxias",
-        "quantidade": 72,
-        "valor": 9187.0
+        "quantidade": 74,
+        "valor": 9392.0
       },
       {
         "unidade": "Encantado",
@@ -1067,8 +1062,8 @@
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 37,
-        "valor": 6621.0
+        "quantidade": 39,
+        "valor": 6861.0
       },
       {
         "unidade": "FloresDaCunha",
@@ -1077,8 +1072,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 76,
-        "valor": 8942.0
+        "quantidade": 78,
+        "valor": 9122.0
       },
       {
         "unidade": "Veranopolis",
@@ -1118,11 +1113,6 @@
         "valor_descontado": 0.0
       },
       {
-        "doutor": "Jéssica Barreto",
-        "quantidade": 8,
-        "valor_descontado": 0.0
-      },
-      {
         "doutor": "Karen Ramona Kuwer",
         "quantidade": 9,
         "valor_descontado": 0.0
@@ -1144,7 +1134,7 @@
       },
       {
         "doutor": "Marina Alievi",
-        "quantidade": 13,
+        "quantidade": 15,
         "valor_descontado": 0.0
       },
       {
@@ -1179,12 +1169,12 @@
       },
       {
         "doutor": "Thalia Tessaro",
-        "quantidade": 2,
+        "quantidade": 4,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Thalia Vezzosi",
-        "quantidade": 14,
+        "quantidade": 16,
         "valor_descontado": 0.0
       },
       {
