@@ -1,15 +1,15 @@
 {
   "competencia": "2026-06",
-  "gerado_em": "2026-06-19T19:20:25.545256",
-  "quantidade_total": 369,
-  "valor_total": 48918.55,
+  "gerado_em": "2026-06-19T20:56:45.600947",
+  "quantidade_total": 372,
+  "valor_total": 49333.55,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 48918.55,
+  "valor_total_pendente": 49333.55,
   "por_unidade": [
     {
       "unidade": "Bento",
-      "quantidade": 12,
-      "valor": 1759.0
+      "quantidade": 13,
+      "valor": 1879.0
     },
     {
       "unidade": "Caxias",
@@ -28,13 +28,13 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 72,
-      "valor": 10297.0
+      "quantidade": 73,
+      "valor": 10492.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 88,
-      "valor": 10137.0
+      "quantidade": 89,
+      "valor": 10237.0
     },
     {
       "unidade": "Veranopolis",
@@ -60,12 +60,12 @@
     },
     {
       "doutor": "Ana Cristina Corso",
-      "quantidade": 12,
+      "quantidade": 13,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Diogo Cemin Amarante",
-      "quantidade": 1,
+      "quantidade": 2,
       "valor_descontado": 0.0
     },
     {
@@ -130,7 +130,7 @@
     },
     {
       "doutor": "Naiane Pieta",
-      "quantidade": 4,
+      "quantidade": 5,
       "valor_descontado": 0.0
     },
     {
