@@ -1,10 +1,10 @@
 {
   "competencia": "2026-06",
-  "gerado_em": "2026-06-19T11:58:28.708817",
-  "quantidade_total": 364,
-  "valor_total": 48418.55,
+  "gerado_em": "2026-06-19T14:59:51.161222",
+  "quantidade_total": 365,
+  "valor_total": 48513.55,
   "valor_total_descontado": 380.0,
-  "valor_total_pendente": 48038.55,
+  "valor_total_pendente": 48133.55,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -33,8 +33,8 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 84,
-      "valor": 9722.0
+      "quantidade": 85,
+      "valor": 9817.0
     },
     {
       "unidade": "Veranopolis",
@@ -60,7 +60,7 @@
     },
     {
       "doutor": "Ana Cristina Corso",
-      "quantidade": 10,
+      "quantidade": 11,
       "valor_descontado": 0.0
     },
     {
@@ -110,7 +110,7 @@
     },
     {
       "doutor": "Marina Alievi",
-      "quantidade": 16,
+      "quantidade": 17,
       "valor_descontado": 0.0
     },
     {
@@ -170,7 +170,7 @@
     },
     {
       "doutor": "TOP",
-      "quantidade": 2,
+      "quantidade": 1,
       "valor_descontado": 0.0
     },
     {
