@@ -1950,8 +1950,8 @@
       "doutor_id": "14",
       "doutor": "Everlize Cipriani",
       "credito_inicial": 2000.0,
-      "utilizado": 478.0,
-      "credito_disponivel": 1522.0,
+      "utilizado": 858.0,
+      "credito_disponivel": 1142.0,
       "pix_key": ""
     },
     {
@@ -2134,8 +2134,8 @@
       "doutor_id": "35",
       "doutor": "Naiane Pieta",
       "credito_inicial": 1000.0,
-      "utilizado": 801.0,
-      "credito_disponivel": 199.0,
+      "utilizado": 1000.0,
+      "credito_disponivel": 0.0,
       "pix_key": ""
     },
     {
