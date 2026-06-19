@@ -1044,16 +1044,16 @@
   },
   "2026-06": {
     "competencia": "2026-06",
-    "gerado_em": "2026-06-19T20:56:45.600947",
-    "quantidade_total": 372,
-    "valor_total": 49333.55,
+    "gerado_em": "2026-06-19T22:05:39.120630",
+    "quantidade_total": 375,
+    "valor_total": 49815.55,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 49333.55,
+    "valor_total_pendente": 49815.55,
     "por_unidade": [
       {
         "unidade": "Bento",
-        "quantidade": 13,
-        "valor": 1879.0
+        "quantidade": 16,
+        "valor": 2361.0
       },
       {
         "unidade": "Caxias",
@@ -1174,7 +1174,7 @@
       },
       {
         "doutor": "Naiane Pieta",
-        "quantidade": 5,
+        "quantidade": 8,
         "valor_descontado": 0.0
       },
       {
