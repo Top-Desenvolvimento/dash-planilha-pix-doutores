@@ -1,10 +1,10 @@
 {
   "competencia": "2026-06",
-  "gerado_em": "2026-06-22T11:24:09.802800",
-  "quantidade_total": 402,
-  "valor_total": 52815.55,
+  "gerado_em": "2026-06-22T16:12:34.889026",
+  "quantidade_total": 403,
+  "valor_total": 52855.55,
   "valor_total_descontado": 120.0,
-  "valor_total_pendente": 52695.55,
+  "valor_total_pendente": 52735.55,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -28,8 +28,8 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 79,
-      "valor": 11311.0
+      "quantidade": 80,
+      "valor": 11351.0
     },
     {
       "unidade": "Soledade",
@@ -100,7 +100,7 @@
     },
     {
       "doutor": "Karen Ramona Kuwer",
-      "quantidade": 9,
+      "quantidade": 10,
       "valor_descontado": 0.0
     },
     {
