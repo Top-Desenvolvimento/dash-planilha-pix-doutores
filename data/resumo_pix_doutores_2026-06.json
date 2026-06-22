@@ -1,20 +1,20 @@
 {
   "competencia": "2026-06",
-  "gerado_em": "2026-06-22T16:12:34.889026",
-  "quantidade_total": 403,
-  "valor_total": 52855.55,
-  "valor_total_descontado": 120.0,
-  "valor_total_pendente": 52735.55,
+  "gerado_em": "2026-06-22T19:52:42.182797",
+  "quantidade_total": 409,
+  "valor_total": 53560.55,
+  "valor_total_descontado": 100.0,
+  "valor_total_pendente": 53460.55,
   "por_unidade": [
     {
       "unidade": "Bento",
-      "quantidade": 20,
-      "valor": 2821.0
+      "quantidade": 21,
+      "valor": 2926.0
     },
     {
       "unidade": "Caxias",
-      "quantidade": 88,
-      "valor": 11174.55
+      "quantidade": 92,
+      "valor": 11654.55
     },
     {
       "unidade": "Encantado",
@@ -28,8 +28,8 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 80,
-      "valor": 11351.0
+      "quantidade": 81,
+      "valor": 11471.0
     },
     {
       "unidade": "Soledade",
@@ -90,7 +90,7 @@
     },
     {
       "doutor": "Indiamara Rech",
-      "quantidade": 2,
+      "quantidade": 3,
       "valor_descontado": 0.0
     },
     {
@@ -120,8 +120,8 @@
     },
     {
       "doutor": "Luiz Henrique",
-      "quantidade": 1,
-      "valor_descontado": 120.0
+      "quantidade": 2,
+      "valor_descontado": 100.0
     },
     {
       "doutor": "Marina Alievi",
@@ -145,7 +145,7 @@
     },
     {
       "doutor": "Nelson Vaccari",
-      "quantidade": 6,
+      "quantidade": 10,
       "valor_descontado": 0.0
     },
     {
