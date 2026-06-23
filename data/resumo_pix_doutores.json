@@ -1044,11 +1044,11 @@
   },
   "2026-06": {
     "competencia": "2026-06",
-    "gerado_em": "2026-06-23T09:07:38.779482",
-    "quantidade_total": 412,
-    "valor_total": 53820.55,
+    "gerado_em": "2026-06-23T12:20:31.158636",
+    "quantidade_total": 360,
+    "valor_total": 45754.55,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 53820.55,
+    "valor_total_pendente": 45754.55,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1064,11 +1064,6 @@
         "unidade": "Encantado",
         "quantidade": 48,
         "valor": 5464.0
-      },
-      {
-        "unidade": "Farroupilha",
-        "quantidade": 52,
-        "valor": 8066.0
       },
       {
         "unidade": "FloresDaCunha",
@@ -1087,11 +1082,6 @@
       }
     ],
     "por_doutor": [
-      {
-        "doutor": "Adriele da Silva",
-        "quantidade": 16,
-        "valor_descontado": 0.0
-      },
       {
         "doutor": "Alexandre Favero",
         "quantidade": 12,
@@ -1118,18 +1108,13 @@
         "valor_descontado": 0.0
       },
       {
-        "doutor": "Everlize Cipriani",
-        "quantidade": 10,
-        "valor_descontado": 0.0
-      },
-      {
         "doutor": "Fernana Sozo",
         "quantidade": 6,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Franciele Pedrotti",
-        "quantidade": 78,
+        "quantidade": 71,
         "valor_descontado": 0.0
       },
       {
@@ -1215,11 +1200,6 @@
       {
         "doutor": "Thalia Tessaro",
         "quantidade": 17,
-        "valor_descontado": 0.0
-      },
-      {
-        "doutor": "Thalia Vezzosi",
-        "quantidade": 19,
         "valor_descontado": 0.0
       },
       {
