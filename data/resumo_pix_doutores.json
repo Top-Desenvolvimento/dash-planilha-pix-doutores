@@ -1044,16 +1044,16 @@
   },
   "2026-06": {
     "competencia": "2026-06",
-    "gerado_em": "2026-06-23T17:36:15.433433",
-    "quantidade_total": 419,
-    "valor_total": 54519.55,
+    "gerado_em": "2026-06-23T18:46:56.512533",
+    "quantidade_total": 424,
+    "valor_total": 55238.55,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 54519.55,
+    "valor_total_pendente": 55238.55,
     "por_unidade": [
       {
         "unidade": "Bento",
-        "quantidade": 21,
-        "valor": 2926.0
+        "quantidade": 22,
+        "valor": 3025.0
       },
       {
         "unidade": "Caxias",
@@ -1067,18 +1067,18 @@
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 53,
-        "valor": 8161.0
+        "quantidade": 54,
+        "valor": 8288.0
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 83,
-        "valor": 11686.0
+        "quantidade": 85,
+        "valor": 12059.0
       },
       {
         "unidade": "Soledade",
-        "quantidade": 94,
-        "valor": 10764.0
+        "quantidade": 95,
+        "valor": 10884.0
       },
       {
         "unidade": "Veranopolis",
@@ -1119,12 +1119,12 @@
       },
       {
         "doutor": "Everlize Cipriani",
-        "quantidade": 11,
+        "quantidade": 12,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Felipe Lino",
-        "quantidade": 3,
+        "quantidade": 4,
         "valor_descontado": 0.0
       },
       {
@@ -1139,7 +1139,7 @@
       },
       {
         "doutor": "Indiamara Rech",
-        "quantidade": 4,
+        "quantidade": 6,
         "valor_descontado": 0.0
       },
       {
@@ -1169,7 +1169,7 @@
       },
       {
         "doutor": "Luiz Henrique",
-        "quantidade": 2,
+        "quantidade": 3,
         "valor_descontado": 0.0
       },
       {
