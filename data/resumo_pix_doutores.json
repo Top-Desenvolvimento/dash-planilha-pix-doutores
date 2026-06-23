@@ -1044,11 +1044,11 @@
   },
   "2026-06": {
     "competencia": "2026-06",
-    "gerado_em": "2026-06-23T15:35:02.379910",
-    "quantidade_total": 415,
-    "valor_total": 54119.55,
+    "gerado_em": "2026-06-23T17:36:15.433433",
+    "quantidade_total": 419,
+    "valor_total": 54519.55,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 54119.55,
+    "valor_total_pendente": 54519.55,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1067,18 +1067,18 @@
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 52,
-        "valor": 8066.0
+        "quantidade": 53,
+        "valor": 8161.0
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 82,
-        "valor": 11586.0
+        "quantidade": 83,
+        "valor": 11686.0
       },
       {
         "unidade": "Soledade",
-        "quantidade": 92,
-        "valor": 10559.0
+        "quantidade": 94,
+        "valor": 10764.0
       },
       {
         "unidade": "Veranopolis",
@@ -1119,12 +1119,12 @@
       },
       {
         "doutor": "Everlize Cipriani",
-        "quantidade": 10,
+        "quantidade": 11,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Felipe Lino",
-        "quantidade": 1,
+        "quantidade": 3,
         "valor_descontado": 0.0
       },
       {
@@ -1139,7 +1139,7 @@
       },
       {
         "doutor": "Indiamara Rech",
-        "quantidade": 3,
+        "quantidade": 4,
         "valor_descontado": 0.0
       },
       {
