@@ -1044,11 +1044,11 @@
   },
   "2026-06": {
     "competencia": "2026-06",
-    "gerado_em": "2026-06-24T12:15:54.564323",
-    "quantidade_total": 378,
-    "valor_total": 47933.55,
+    "gerado_em": "2026-06-24T15:27:27.918337",
+    "quantidade_total": 433,
+    "valor_total": 56341.55,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 47933.55,
+    "valor_total_pendente": 56341.55,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1066,14 +1066,19 @@
         "valor": 5464.0
       },
       {
+        "unidade": "Farroupilha",
+        "quantidade": 54,
+        "valor": 8288.0
+      },
+      {
         "unidade": "FloresDaCunha",
         "quantidade": 89,
         "valor": 12683.0
       },
       {
         "unidade": "Soledade",
-        "quantidade": 98,
-        "valor": 11123.0
+        "quantidade": 99,
+        "valor": 11243.0
       },
       {
         "unidade": "Veranopolis",
@@ -1082,6 +1087,11 @@
       }
     ],
     "por_doutor": [
+      {
+        "doutor": "Adriele da Silva",
+        "quantidade": 16,
+        "valor_descontado": 0.0
+      },
       {
         "doutor": "Alexandre Favero",
         "quantidade": 12,
@@ -1108,6 +1118,11 @@
         "valor_descontado": 0.0
       },
       {
+        "doutor": "Everlize Cipriani",
+        "quantidade": 12,
+        "valor_descontado": 0.0
+      },
+      {
         "doutor": "Felipe Lino",
         "quantidade": 7,
         "valor_descontado": 0.0
@@ -1119,7 +1134,7 @@
       },
       {
         "doutor": "Franciele Pedrotti",
-        "quantidade": 71,
+        "quantidade": 78,
         "valor_descontado": 0.0
       },
       {
@@ -1189,7 +1204,7 @@
       },
       {
         "doutor": "Norberto Filipe",
-        "quantidade": 9,
+        "quantidade": 10,
         "valor_descontado": 0.0
       },
       {
@@ -1205,6 +1220,11 @@
       {
         "doutor": "Thalia Tessaro",
         "quantidade": 17,
+        "valor_descontado": 0.0
+      },
+      {
+        "doutor": "Thalia Vezzosi",
+        "quantidade": 19,
         "valor_descontado": 0.0
       },
       {
