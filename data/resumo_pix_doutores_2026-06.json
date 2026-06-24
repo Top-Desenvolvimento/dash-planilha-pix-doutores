@@ -1,10 +1,10 @@
 {
   "competencia": "2026-06",
-  "gerado_em": "2026-06-24T21:06:00.293314",
-  "quantidade_total": 451,
-  "valor_total": 58467.55,
-  "valor_total_descontado": 517.0,
-  "valor_total_pendente": 57950.55,
+  "gerado_em": "2026-06-24T22:33:26.488232",
+  "quantidade_total": 459,
+  "valor_total": 61400.55,
+  "valor_total_descontado": 0.0,
+  "valor_total_pendente": 61400.55,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -28,18 +28,18 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 99,
-      "valor": 13908.0
+      "quantidade": 100,
+      "valor": 14007.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 99,
-      "valor": 11243.0
+      "quantidade": 100,
+      "valor": 11346.0
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 29,
-      "valor": 4089.0
+      "quantidade": 35,
+      "valor": 6820.0
     }
   ],
   "por_doutor": [
@@ -80,7 +80,7 @@
     },
     {
       "doutor": "Felipe Lino",
-      "quantidade": 7,
+      "quantidade": 8,
       "valor_descontado": 0.0
     },
     {
@@ -95,8 +95,8 @@
     },
     {
       "doutor": "Giovana Gasparini",
-      "quantidade": 7,
-      "valor_descontado": 517.0
+      "quantidade": 8,
+      "valor_descontado": 0.0
     },
     {
       "doutor": "Indiamara Rech",
@@ -140,7 +140,7 @@
     },
     {
       "doutor": "Morgana Zambiasi",
-      "quantidade": 7,
+      "quantidade": 10,
       "valor_descontado": 0.0
     },
     {
@@ -200,7 +200,7 @@
     },
     {
       "doutor": "Valter Baldissera",
-      "quantidade": 2,
+      "quantidade": 5,
       "valor_descontado": 0.0
     },
     {
