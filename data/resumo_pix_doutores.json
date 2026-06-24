@@ -1044,21 +1044,21 @@
   },
   "2026-06": {
     "competencia": "2026-06",
-    "gerado_em": "2026-06-24T17:29:58.489481",
-    "quantidade_total": 434,
-    "valor_total": 56478.55,
-    "valor_total_descontado": 0.0,
-    "valor_total_pendente": 56478.55,
+    "gerado_em": "2026-06-24T19:18:12.571082",
+    "quantidade_total": 444,
+    "valor_total": 57702.55,
+    "valor_total_descontado": 483.0,
+    "valor_total_pendente": 57219.55,
     "por_unidade": [
       {
         "unidade": "Bento",
-        "quantidade": 22,
-        "valor": 3025.0
+        "quantidade": 23,
+        "valor": 3231.0
       },
       {
         "unidade": "Caxias",
-        "quantidade": 97,
-        "valor": 12119.55
+        "quantidade": 98,
+        "valor": 12139.55
       },
       {
         "unidade": "Encantado",
@@ -1072,8 +1072,8 @@
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 89,
-        "valor": 12683.0
+        "quantidade": 96,
+        "valor": 13586.0
       },
       {
         "unidade": "Soledade",
@@ -1082,8 +1082,8 @@
       },
       {
         "unidade": "Veranopolis",
-        "quantidade": 25,
-        "valor": 3656.0
+        "quantidade": 26,
+        "valor": 3751.0
       }
     ],
     "por_doutor": [
@@ -1138,8 +1138,13 @@
         "valor_descontado": 0.0
       },
       {
+        "doutor": "Giovana Gasparini",
+        "quantidade": 4,
+        "valor_descontado": 483.0
+      },
+      {
         "doutor": "Indiamara Rech",
-        "quantidade": 10,
+        "quantidade": 13,
         "valor_descontado": 0.0
       },
       {
@@ -1169,7 +1174,7 @@
       },
       {
         "doutor": "Luiz Henrique",
-        "quantidade": 3,
+        "quantidade": 4,
         "valor_descontado": 0.0
       },
       {
@@ -1179,7 +1184,7 @@
       },
       {
         "doutor": "Morgana Zambiasi",
-        "quantidade": 5,
+        "quantidade": 6,
         "valor_descontado": 0.0
       },
       {
@@ -1194,7 +1199,7 @@
       },
       {
         "doutor": "Nelson Vaccari",
-        "quantidade": 15,
+        "quantidade": 16,
         "valor_descontado": 0.0
       },
       {
