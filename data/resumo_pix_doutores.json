@@ -1044,11 +1044,11 @@
   },
   "2026-06": {
     "competencia": "2026-06",
-    "gerado_em": "2026-06-25T15:24:19.267266",
-    "quantidade_total": 463,
-    "valor_total": 61813.55,
+    "gerado_em": "2026-06-25T17:34:54.615512",
+    "quantidade_total": 467,
+    "valor_total": 62155.55,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 61813.55,
+    "valor_total_pendente": 62155.55,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1057,8 +1057,8 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 101,
-        "valor": 12469.55
+        "quantidade": 102,
+        "valor": 12489.55
       },
       {
         "unidade": "Encantado",
@@ -1067,8 +1067,8 @@
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 56,
-        "valor": 8476.0
+        "quantidade": 58,
+        "valor": 8703.0
       },
       {
         "unidade": "FloresDaCunha",
@@ -1077,8 +1077,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 100,
-        "valor": 11346.0
+        "quantidade": 101,
+        "valor": 11441.0
       },
       {
         "unidade": "Veranopolis",
@@ -1134,7 +1134,7 @@
       },
       {
         "doutor": "Franciele Pedrotti",
-        "quantidade": 79,
+        "quantidade": 80,
         "valor_descontado": 0.0
       },
       {
@@ -1169,12 +1169,12 @@
       },
       {
         "doutor": "Luisa Moraes Lucas",
-        "quantidade": 19,
+        "quantidade": 20,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Luiz Henrique",
-        "quantidade": 4,
+        "quantidade": 5,
         "valor_descontado": 0.0
       },
       {
@@ -1199,7 +1199,7 @@
       },
       {
         "doutor": "Nelson Vaccari",
-        "quantidade": 18,
+        "quantidade": 19,
         "valor_descontado": 0.0
       },
       {
