@@ -1044,16 +1044,16 @@
   },
   "2026-06": {
     "competencia": "2026-06",
-    "gerado_em": "2026-06-25T17:34:54.615512",
-    "quantidade_total": 467,
-    "valor_total": 62155.55,
+    "gerado_em": "2026-06-25T19:34:38.801149",
+    "quantidade_total": 470,
+    "valor_total": 63368.55,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 62155.55,
+    "valor_total_pendente": 63368.55,
     "por_unidade": [
       {
         "unidade": "Bento",
-        "quantidade": 23,
-        "valor": 3231.0
+        "quantidade": 25,
+        "valor": 3450.0
       },
       {
         "unidade": "Caxias",
@@ -1082,8 +1082,8 @@
       },
       {
         "unidade": "Veranopolis",
-        "quantidade": 35,
-        "valor": 6820.0
+        "quantidade": 36,
+        "valor": 7814.0
       }
     ],
     "por_doutor": [
@@ -1174,7 +1174,7 @@
       },
       {
         "doutor": "Luiz Henrique",
-        "quantidade": 5,
+        "quantidade": 7,
         "valor_descontado": 0.0
       },
       {
@@ -1244,7 +1244,7 @@
       },
       {
         "doutor": "Valter Baldissera",
-        "quantidade": 5,
+        "quantidade": 6,
         "valor_descontado": 0.0
       },
       {
