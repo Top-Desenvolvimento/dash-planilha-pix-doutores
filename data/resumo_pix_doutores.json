@@ -9,7 +9,7 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-06-16T14:36:29.579016",
+    "gerado_em": "2026-06-25T20:38:26.543516",
     "quantidade_total": 622,
     "valor_total": 83899.09,
     "valor_total_descontado": 0.0,
@@ -221,7 +221,7 @@
   },
   "2026-05": {
     "competencia": "2026-05",
-    "gerado_em": "2026-06-16T14:45:27.089656",
+    "gerado_em": "2026-06-25T20:47:23.296055",
     "quantidade_total": 639,
     "valor_total": 94043.49,
     "valor_total_descontado": 0.0,
@@ -271,12 +271,12 @@
       },
       {
         "doutor": "Alexandre Favero",
-        "quantidade": 5,
+        "quantidade": 4,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Alexandre Orlandini",
-        "quantidade": 16,
+        "quantidade": 17,
         "valor_descontado": 0.0
       },
       {
@@ -438,11 +438,11 @@
   },
   "2026-01": {
     "competencia": "2026-01",
-    "gerado_em": "2026-06-16T14:08:45.674648",
+    "gerado_em": "2026-06-25T20:10:44.801620",
     "quantidade_total": 631,
     "valor_total": 80218.48,
-    "valor_total_descontado": 1367.72,
-    "valor_total_pendente": 78850.76,
+    "valor_total_descontado": 0.0,
+    "valor_total_pendente": 80218.48,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -619,7 +619,7 @@
       {
         "doutor": "Evalda Baldissera",
         "quantidade": 15,
-        "valor_descontado": 1367.72
+        "valor_descontado": 0.0
       },
       {
         "doutor": "Giovana Gasparini",
@@ -645,11 +645,11 @@
   },
   "2026-02": {
     "competencia": "2026-02",
-    "gerado_em": "2026-06-16T14:18:08.420193",
+    "gerado_em": "2026-06-25T20:19:56.530010",
     "quantidade_total": 592,
     "valor_total": 79847.59,
-    "valor_total_descontado": 1104.0,
-    "valor_total_pendente": 78743.59,
+    "valor_total_descontado": 0.0,
+    "valor_total_pendente": 79847.59,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -741,7 +741,7 @@
       {
         "doutor": "Dionathan Pohlmann",
         "quantidade": 23,
-        "valor_descontado": 1104.0
+        "valor_descontado": 0.0
       },
       {
         "doutor": "Doutores não locais",
@@ -832,7 +832,7 @@
   },
   "2026-03": {
     "competencia": "2026-03",
-    "gerado_em": "2026-06-16T14:27:33.331903",
+    "gerado_em": "2026-06-25T20:29:25.259487",
     "quantidade_total": 586,
     "valor_total": 80692.51,
     "valor_total_descontado": 432.0,

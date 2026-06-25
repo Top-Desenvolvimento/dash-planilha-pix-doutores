@@ -1,66 +1,6 @@
 [
   {
     "unidade": "Garibaldi",
-    "competencia": "2026-01",
-    "erro": "Menu Finanças não encontrado.",
-    "coletado_em": "2026-06-16T14:06:20.672104"
-  },
-  {
-    "unidade": "Ssdocai",
-    "competencia": "2026-01",
-    "erro": "Menu Finanças não encontrado.",
-    "coletado_em": "2026-06-16T14:07:29.591600"
-  },
-  {
-    "unidade": "Garibaldi",
-    "competencia": "2026-02",
-    "erro": "Menu Finanças não encontrado.",
-    "coletado_em": "2026-06-16T14:15:45.072121"
-  },
-  {
-    "unidade": "Ssdocai",
-    "competencia": "2026-02",
-    "erro": "Menu Finanças não encontrado.",
-    "coletado_em": "2026-06-16T14:16:53.854340"
-  },
-  {
-    "unidade": "Garibaldi",
-    "competencia": "2026-03",
-    "erro": "Menu Finanças não encontrado.",
-    "coletado_em": "2026-06-16T14:25:08.478952"
-  },
-  {
-    "unidade": "Ssdocai",
-    "competencia": "2026-03",
-    "erro": "Menu Finanças não encontrado.",
-    "coletado_em": "2026-06-16T14:26:17.558515"
-  },
-  {
-    "unidade": "Garibaldi",
-    "competencia": "2026-04",
-    "erro": "Menu Finanças não encontrado.",
-    "coletado_em": "2026-06-16T14:34:12.547131"
-  },
-  {
-    "unidade": "Ssdocai",
-    "competencia": "2026-04",
-    "erro": "Menu Finanças não encontrado.",
-    "coletado_em": "2026-06-16T14:35:18.494002"
-  },
-  {
-    "unidade": "Garibaldi",
-    "competencia": "2026-05",
-    "erro": "Menu Finanças não encontrado.",
-    "coletado_em": "2026-06-16T14:43:10.594700"
-  },
-  {
-    "unidade": "Ssdocai",
-    "competencia": "2026-05",
-    "erro": "Menu Finanças não encontrado.",
-    "coletado_em": "2026-06-16T14:44:17.251856"
-  },
-  {
-    "unidade": "Garibaldi",
     "competencia": "2026-06",
     "erro": "Menu Finanças não encontrado.",
     "coletado_em": "2026-06-25T19:32:27.765765"
@@ -70,5 +10,65 @@
     "competencia": "2026-06",
     "erro": "Menu Finanças não encontrado.",
     "coletado_em": "2026-06-25T19:33:32.243421"
+  },
+  {
+    "unidade": "Garibaldi",
+    "competencia": "2026-01",
+    "erro": "Menu Finanças não encontrado.",
+    "coletado_em": "2026-06-25T20:08:18.750269"
+  },
+  {
+    "unidade": "Ssdocai",
+    "competencia": "2026-01",
+    "erro": "Menu Finanças não encontrado.",
+    "coletado_em": "2026-06-25T20:09:29.287474"
+  },
+  {
+    "unidade": "Garibaldi",
+    "competencia": "2026-02",
+    "erro": "Menu Finanças não encontrado.",
+    "coletado_em": "2026-06-25T20:17:31.648944"
+  },
+  {
+    "unidade": "Ssdocai",
+    "competencia": "2026-02",
+    "erro": "Menu Finanças não encontrado.",
+    "coletado_em": "2026-06-25T20:18:40.318939"
+  },
+  {
+    "unidade": "Garibaldi",
+    "competencia": "2026-03",
+    "erro": "Menu Finanças não encontrado.",
+    "coletado_em": "2026-06-25T20:26:59.782154"
+  },
+  {
+    "unidade": "Ssdocai",
+    "competencia": "2026-03",
+    "erro": "Menu Finanças não encontrado.",
+    "coletado_em": "2026-06-25T20:28:09.113720"
+  },
+  {
+    "unidade": "Garibaldi",
+    "competencia": "2026-04",
+    "erro": "Menu Finanças não encontrado.",
+    "coletado_em": "2026-06-25T20:36:08.134748"
+  },
+  {
+    "unidade": "Ssdocai",
+    "competencia": "2026-04",
+    "erro": "Menu Finanças não encontrado.",
+    "coletado_em": "2026-06-25T20:37:14.797012"
+  },
+  {
+    "unidade": "Garibaldi",
+    "competencia": "2026-05",
+    "erro": "Menu Finanças não encontrado.",
+    "coletado_em": "2026-06-25T20:45:05.430318"
+  },
+  {
+    "unidade": "Ssdocai",
+    "competencia": "2026-05",
+    "erro": "Menu Finanças não encontrado.",
+    "coletado_em": "2026-06-25T20:46:12.768682"
   }
 ]
