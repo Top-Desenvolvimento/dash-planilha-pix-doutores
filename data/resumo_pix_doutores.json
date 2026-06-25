@@ -1044,11 +1044,11 @@
   },
   "2026-06": {
     "competencia": "2026-06",
-    "gerado_em": "2026-06-25T21:23:32.659447",
-    "quantidade_total": 477,
-    "valor_total": 64502.55,
+    "gerado_em": "2026-06-25T23:00:00.115492",
+    "quantidade_total": 478,
+    "valor_total": 64597.55,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 64502.55,
+    "valor_total_pendente": 64597.55,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1082,8 +1082,8 @@
       },
       {
         "unidade": "Veranopolis",
-        "quantidade": 38,
-        "valor": 8086.0
+        "quantidade": 39,
+        "valor": 8181.0
       }
     ],
     "por_doutor": [
@@ -1244,7 +1244,7 @@
       },
       {
         "doutor": "Valter Baldissera",
-        "quantidade": 8,
+        "quantidade": 9,
         "valor_descontado": 0.0
       },
       {
