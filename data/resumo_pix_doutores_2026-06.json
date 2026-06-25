@@ -1,10 +1,10 @@
 {
   "competencia": "2026-06",
-  "gerado_em": "2026-06-25T19:34:38.801149",
-  "quantidade_total": 470,
-  "valor_total": 63368.55,
+  "gerado_em": "2026-06-25T21:23:32.659447",
+  "quantidade_total": 477,
+  "valor_total": 64502.55,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 63368.55,
+  "valor_total_pendente": 64502.55,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,8 +13,8 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 102,
-      "valor": 12489.55
+      "quantidade": 105,
+      "valor": 12793.55
     },
     {
       "unidade": "Encantado",
@@ -23,8 +23,8 @@
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 58,
-      "valor": 8703.0
+      "quantidade": 60,
+      "valor": 9261.0
     },
     {
       "unidade": "FloresDaCunha",
@@ -38,8 +38,8 @@
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 36,
-      "valor": 7814.0
+      "quantidade": 38,
+      "valor": 8086.0
     }
   ],
   "por_doutor": [
@@ -75,7 +75,7 @@
     },
     {
       "doutor": "Everlize Cipriani",
-      "quantidade": 12,
+      "quantidade": 13,
       "valor_descontado": 0.0
     },
     {
@@ -130,7 +130,7 @@
     },
     {
       "doutor": "Luiz Henrique",
-      "quantidade": 7,
+      "quantidade": 8,
       "valor_descontado": 0.0
     },
     {
@@ -155,7 +155,7 @@
     },
     {
       "doutor": "Nelson Vaccari",
-      "quantidade": 19,
+      "quantidade": 22,
       "valor_descontado": 0.0
     },
     {
@@ -200,7 +200,7 @@
     },
     {
       "doutor": "Valter Baldissera",
-      "quantidade": 6,
+      "quantidade": 8,
       "valor_descontado": 0.0
     },
     {
