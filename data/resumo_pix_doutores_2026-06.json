@@ -1,10 +1,10 @@
 {
   "competencia": "2026-06",
-  "gerado_em": "2026-06-25T12:16:52.382628",
-  "quantidade_total": 459,
-  "valor_total": 61400.55,
+  "gerado_em": "2026-06-25T15:24:19.267266",
+  "quantidade_total": 463,
+  "valor_total": 61813.55,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 61400.55,
+  "valor_total_pendente": 61813.55,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,8 +13,8 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 99,
-      "valor": 12244.55
+      "quantidade": 101,
+      "valor": 12469.55
     },
     {
       "unidade": "Encantado",
@@ -23,8 +23,8 @@
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 54,
-      "valor": 8288.0
+      "quantidade": 56,
+      "valor": 8476.0
     },
     {
       "unidade": "FloresDaCunha",
@@ -90,12 +90,12 @@
     },
     {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 78,
+      "quantidade": 79,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Giovana Gasparini",
-      "quantidade": 8,
+      "quantidade": 10,
       "valor_descontado": 0.0
     },
     {
@@ -155,7 +155,7 @@
     },
     {
       "doutor": "Nelson Vaccari",
-      "quantidade": 17,
+      "quantidade": 18,
       "valor_descontado": 0.0
     },
     {
