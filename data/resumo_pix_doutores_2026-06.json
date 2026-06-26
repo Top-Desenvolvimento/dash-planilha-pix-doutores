@@ -1,10 +1,10 @@
 {
   "competencia": "2026-06",
-  "gerado_em": "2026-06-26T20:11:04.848382",
-  "quantidade_total": 492,
-  "valor_total": 66181.55,
+  "gerado_em": "2026-06-26T21:45:38.528357",
+  "quantidade_total": 450,
+  "valor_total": 61283.55,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 66181.55,
+  "valor_total_pendente": 61283.55,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,13 +13,8 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 107,
-      "valor": 12970.55
-    },
-    {
-      "unidade": "Encantado",
-      "quantidade": 50,
-      "valor": 5803.0
+      "quantidade": 109,
+      "valor": 13154.55
     },
     {
       "unidade": "Farroupilha",
@@ -33,8 +28,8 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 111,
-      "valor": 12509.0
+      "quantidade": 117,
+      "valor": 13230.0
     },
     {
       "unidade": "Veranopolis",
@@ -46,16 +41,6 @@
     {
       "doutor": "Adriele da Silva",
       "quantidade": 16,
-      "valor_descontado": 0.0
-    },
-    {
-      "doutor": "Alexandre Favero",
-      "quantidade": 12,
-      "valor_descontado": 0.0
-    },
-    {
-      "doutor": "Alexandre Orlandini",
-      "quantidade": 6,
       "valor_descontado": 0.0
     },
     {
@@ -125,7 +110,7 @@
     },
     {
       "doutor": "Luisa Moraes Lucas",
-      "quantidade": 29,
+      "quantidade": 35,
       "valor_descontado": 0.0
     },
     {
@@ -155,12 +140,7 @@
     },
     {
       "doutor": "Nelson Vaccari",
-      "quantidade": 24,
-      "valor_descontado": 0.0
-    },
-    {
-      "doutor": "Nicoli Weber",
-      "quantidade": 13,
+      "quantidade": 26,
       "valor_descontado": 0.0
     },
     {
@@ -185,11 +165,6 @@
     },
     {
       "doutor": "Thalia Vezzosi",
-      "quantidade": 19,
-      "valor_descontado": 0.0
-    },
-    {
-      "doutor": "Thiany Cristofoli",
       "quantidade": 19,
       "valor_descontado": 0.0
     },
