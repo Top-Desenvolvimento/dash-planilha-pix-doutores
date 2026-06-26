@@ -1,10 +1,10 @@
 {
   "competencia": "2026-06",
-  "gerado_em": "2026-06-26T16:03:19.599692",
-  "quantidade_total": 485,
-  "valor_total": 65415.55,
+  "gerado_em": "2026-06-26T18:05:26.147352",
+  "quantidade_total": 489,
+  "valor_total": 65885.55,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 65415.55,
+  "valor_total_pendente": 65885.55,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -33,8 +33,8 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 105,
-      "valor": 11841.0
+      "quantidade": 109,
+      "valor": 12311.0
     },
     {
       "unidade": "Veranopolis",
@@ -80,7 +80,7 @@
     },
     {
       "doutor": "Felipe Lino",
-      "quantidade": 8,
+      "quantidade": 9,
       "valor_descontado": 0.0
     },
     {
@@ -125,7 +125,7 @@
     },
     {
       "doutor": "Luisa Moraes Lucas",
-      "quantidade": 24,
+      "quantidade": 27,
       "valor_descontado": 0.0
     },
     {
