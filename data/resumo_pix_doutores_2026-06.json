@@ -1,10 +1,10 @@
 {
   "competencia": "2026-06",
-  "gerado_em": "2026-06-26T13:36:37.856690",
-  "quantidade_total": 482,
-  "valor_total": 65146.55,
+  "gerado_em": "2026-06-26T16:03:19.599692",
+  "quantidade_total": 485,
+  "valor_total": 65415.55,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 65146.55,
+  "valor_total_pendente": 65415.55,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,8 +13,8 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 105,
-      "valor": 12793.55
+      "quantidade": 106,
+      "valor": 12872.55
     },
     {
       "unidade": "Encantado",
@@ -33,8 +33,8 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 103,
-      "valor": 11651.0
+      "quantidade": 105,
+      "valor": 11841.0
     },
     {
       "unidade": "Veranopolis",
@@ -125,7 +125,7 @@
     },
     {
       "doutor": "Luisa Moraes Lucas",
-      "quantidade": 22,
+      "quantidade": 24,
       "valor_descontado": 0.0
     },
     {
@@ -155,7 +155,7 @@
     },
     {
       "doutor": "Nelson Vaccari",
-      "quantidade": 22,
+      "quantidade": 23,
       "valor_descontado": 0.0
     },
     {
