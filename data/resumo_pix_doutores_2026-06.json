@@ -1,10 +1,10 @@
 {
   "competencia": "2026-06",
-  "gerado_em": "2026-06-29T21:09:43.622140",
-  "quantidade_total": 521,
-  "valor_total": 69347.55,
+  "gerado_em": "2026-06-29T22:26:25.472622",
+  "quantidade_total": 524,
+  "valor_total": 69677.55,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 69347.55,
+  "valor_total_pendente": 69677.55,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -23,8 +23,8 @@
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 65,
-      "valor": 9955.0
+      "quantidade": 68,
+      "valor": 10285.0
     },
     {
       "unidade": "FloresDaCunha",
@@ -130,7 +130,7 @@
     },
     {
       "doutor": "Luiz Henrique",
-      "quantidade": 14,
+      "quantidade": 17,
       "valor_descontado": 0.0
     },
     {
