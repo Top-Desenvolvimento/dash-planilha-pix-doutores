@@ -1,10 +1,10 @@
 {
   "competencia": "2026-06",
-  "gerado_em": "2026-06-29T19:26:00.246186",
+  "gerado_em": "2026-06-29T21:09:43.622140",
   "quantidade_total": 521,
-  "valor_total": 69468.55,
+  "valor_total": 69347.55,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 69468.55,
+  "valor_total_pendente": 69347.55,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,8 +13,8 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 112,
-      "valor": 13565.55
+      "quantidade": 111,
+      "valor": 13359.55
     },
     {
       "unidade": "Encantado",
@@ -23,8 +23,8 @@
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 64,
-      "valor": 9870.0
+      "quantidade": 65,
+      "valor": 9955.0
     },
     {
       "unidade": "FloresDaCunha",
@@ -130,7 +130,7 @@
     },
     {
       "doutor": "Luiz Henrique",
-      "quantidade": 13,
+      "quantidade": 14,
       "valor_descontado": 0.0
     },
     {
@@ -195,7 +195,7 @@
     },
     {
       "doutor": "TOP",
-      "quantidade": 4,
+      "quantidade": 3,
       "valor_descontado": 0.0
     },
     {
