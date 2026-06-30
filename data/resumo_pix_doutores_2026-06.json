@@ -1,10 +1,10 @@
 {
   "competencia": "2026-06",
-  "gerado_em": "2026-06-30T12:10:24.775802",
-  "quantidade_total": 524,
-  "valor_total": 69677.55,
+  "gerado_em": "2026-06-30T14:48:40.073239",
+  "quantidade_total": 528,
+  "valor_total": 70081.55,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 69677.55,
+  "valor_total_pendente": 70081.55,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -28,13 +28,13 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 100,
-      "valor": 14007.0
+      "quantidade": 101,
+      "valor": 14122.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 125,
-      "valor": 13963.0
+      "quantidade": 128,
+      "valor": 14252.0
     },
     {
       "unidade": "Veranopolis",
@@ -43,6 +43,11 @@
     }
   ],
   "por_doutor": [
+    {
+      "doutor": ".Felipe Lino",
+      "quantidade": 1,
+      "valor_descontado": 0.0
+    },
     {
       "doutor": "Adriele da Silva",
       "quantidade": 16,
@@ -80,7 +85,7 @@
     },
     {
       "doutor": "Felipe Lino",
-      "quantidade": 9,
+      "quantidade": 11,
       "valor_descontado": 0.0
     },
     {
@@ -100,7 +105,7 @@
     },
     {
       "doutor": "Indiamara Rech",
-      "quantidade": 13,
+      "quantidade": 14,
       "valor_descontado": 0.0
     },
     {
