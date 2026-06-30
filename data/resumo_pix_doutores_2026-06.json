@@ -1,10 +1,10 @@
 {
   "competencia": "2026-06",
-  "gerado_em": "2026-06-30T18:14:32.361962",
-  "quantidade_total": 536,
-  "valor_total": 70879.55,
+  "gerado_em": "2026-06-30T19:08:48.769913",
+  "quantidade_total": 539,
+  "valor_total": 71117.55,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 70879.55,
+  "valor_total_pendente": 71117.55,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -33,13 +33,13 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 134,
-      "valor": 14835.0
+      "quantidade": 135,
+      "valor": 14920.0
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 39,
-      "valor": 8181.0
+      "quantidade": 41,
+      "valor": 8334.0
     }
   ],
   "por_doutor": [
@@ -85,7 +85,7 @@
     },
     {
       "doutor": "Felipe Lino",
-      "quantidade": 16,
+      "quantidade": 17,
       "valor_descontado": 0.0
     },
     {
@@ -205,7 +205,7 @@
     },
     {
       "doutor": "Valter Baldissera",
-      "quantidade": 9,
+      "quantidade": 11,
       "valor_descontado": 0.0
     },
     {
