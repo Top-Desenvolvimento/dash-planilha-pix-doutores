@@ -1,10 +1,10 @@
 {
   "competencia": "2026-06",
-  "gerado_em": "2026-06-30T17:03:31.797559",
-  "quantidade_total": 533,
-  "valor_total": 70630.55,
+  "gerado_em": "2026-06-30T18:14:32.361962",
+  "quantidade_total": 536,
+  "valor_total": 70879.55,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 70630.55,
+  "valor_total_pendente": 70879.55,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -33,8 +33,8 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 131,
-      "valor": 14586.0
+      "quantidade": 134,
+      "valor": 14835.0
     },
     {
       "unidade": "Veranopolis",
@@ -85,7 +85,7 @@
     },
     {
       "doutor": "Felipe Lino",
-      "quantidade": 14,
+      "quantidade": 16,
       "valor_descontado": 0.0
     },
     {
@@ -120,7 +120,7 @@
     },
     {
       "doutor": "Leticia Canabarro",
-      "quantidade": 33,
+      "quantidade": 34,
       "valor_descontado": 0.0
     },
     {
@@ -130,12 +130,12 @@
     },
     {
       "doutor": "Luisa Moraes Lucas",
-      "quantidade": 37,
+      "quantidade": 38,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Luiz Henrique",
-      "quantidade": 19,
+      "quantidade": 21,
       "valor_descontado": 0.0
     },
     {
@@ -150,7 +150,7 @@
     },
     {
       "doutor": "Murilo Debortoli",
-      "quantidade": 12,
+      "quantidade": 11,
       "valor_descontado": 0.0
     },
     {
@@ -190,17 +190,12 @@
     },
     {
       "doutor": "Thalia Vezzosi",
-      "quantidade": 21,
+      "quantidade": 22,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Thiany Cristofoli",
       "quantidade": 19,
-      "valor_descontado": 0.0
-    },
-    {
-      "doutor": "TOP",
-      "quantidade": 3,
       "valor_descontado": 0.0
     },
     {
