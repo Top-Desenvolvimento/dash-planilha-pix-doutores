@@ -1044,11 +1044,11 @@
   },
   "2026-06": {
     "competencia": "2026-06",
-    "gerado_em": "2026-06-30T19:08:48.769913",
-    "quantidade_total": 539,
-    "valor_total": 71117.55,
+    "gerado_em": "2026-06-30T21:11:32.019156",
+    "quantidade_total": 543,
+    "valor_total": 71673.55,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 71117.55,
+    "valor_total_pendente": 71673.55,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1067,8 +1067,8 @@
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 68,
-        "valor": 10285.0
+        "quantidade": 69,
+        "valor": 10491.0
       },
       {
         "unidade": "FloresDaCunha",
@@ -1077,8 +1077,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 135,
-        "valor": 14920.0
+        "quantidade": 138,
+        "valor": 15270.0
       },
       {
         "unidade": "Veranopolis",
@@ -1144,7 +1144,7 @@
       },
       {
         "doutor": "Giovana Gasparini",
-        "quantidade": 10,
+        "quantidade": 11,
         "valor_descontado": 0.0
       },
       {
@@ -1164,7 +1164,7 @@
       },
       {
         "doutor": "Leticia Canabarro",
-        "quantidade": 34,
+        "quantidade": 36,
         "valor_descontado": 0.0
       },
       {
@@ -1184,7 +1184,7 @@
       },
       {
         "doutor": "Marina Alievi",
-        "quantidade": 17,
+        "quantidade": 18,
         "valor_descontado": 0.0
       },
       {
