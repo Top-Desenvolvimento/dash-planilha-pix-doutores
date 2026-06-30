@@ -1,15 +1,15 @@
 {
   "competencia": "2026-06",
-  "gerado_em": "2026-06-30T14:48:40.073239",
-  "quantidade_total": 528,
-  "valor_total": 70081.55,
+  "gerado_em": "2026-06-30T17:03:31.797559",
+  "quantidade_total": 533,
+  "valor_total": 70630.55,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 70081.55,
+  "valor_total_pendente": 70630.55,
   "por_unidade": [
     {
       "unidade": "Bento",
-      "quantidade": 31,
-      "valor": 4079.0
+      "quantidade": 33,
+      "valor": 4294.0
     },
     {
       "unidade": "Caxias",
@@ -33,8 +33,8 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 128,
-      "valor": 14252.0
+      "quantidade": 131,
+      "valor": 14586.0
     },
     {
       "unidade": "Veranopolis",
@@ -85,7 +85,7 @@
     },
     {
       "doutor": "Felipe Lino",
-      "quantidade": 11,
+      "quantidade": 14,
       "valor_descontado": 0.0
     },
     {
@@ -135,7 +135,7 @@
     },
     {
       "doutor": "Luiz Henrique",
-      "quantidade": 17,
+      "quantidade": 19,
       "valor_descontado": 0.0
     },
     {
