@@ -1044,11 +1044,11 @@
   },
   "2026-06": {
     "competencia": "2026-06",
-    "gerado_em": "2026-06-30T21:11:32.019156",
-    "quantidade_total": 543,
-    "valor_total": 71673.55,
+    "gerado_em": "2026-06-30T22:45:22.415327",
+    "quantidade_total": 548,
+    "valor_total": 72173.55,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 71673.55,
+    "valor_total_pendente": 72173.55,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1077,13 +1077,13 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 138,
-        "valor": 15270.0
+        "quantidade": 141,
+        "valor": 15615.0
       },
       {
         "unidade": "Veranopolis",
-        "quantidade": 41,
-        "valor": 8334.0
+        "quantidade": 43,
+        "valor": 8489.0
       }
     ],
     "por_doutor": [
@@ -1164,7 +1164,7 @@
       },
       {
         "doutor": "Leticia Canabarro",
-        "quantidade": 36,
+        "quantidade": 39,
         "valor_descontado": 0.0
       },
       {
@@ -1249,7 +1249,7 @@
       },
       {
         "doutor": "Valter Baldissera",
-        "quantidade": 11,
+        "quantidade": 13,
         "valor_descontado": 0.0
       },
       {
