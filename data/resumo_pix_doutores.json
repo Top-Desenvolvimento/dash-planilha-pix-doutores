@@ -1261,12 +1261,24 @@
   },
   "2026-07": {
     "competencia": "2026-07",
-    "gerado_em": "2026-07-01T16:15:55.366260",
-    "quantidade_total": 0,
-    "valor_total": 0,
-    "valor_total_descontado": 0,
-    "valor_total_pendente": 0,
-    "por_unidade": [],
-    "por_doutor": []
+    "gerado_em": "2026-07-01T18:24:18.945132",
+    "quantidade_total": 2,
+    "valor_total": 210.0,
+    "valor_total_descontado": 0.0,
+    "valor_total_pendente": 210.0,
+    "por_unidade": [
+      {
+        "unidade": "Soledade",
+        "quantidade": 2,
+        "valor": 210.0
+      }
+    ],
+    "por_doutor": [
+      {
+        "doutor": "Luisa Moraes Lucas",
+        "quantidade": 2,
+        "valor_descontado": 0.0
+      }
+    ]
   }
 }
