@@ -1261,23 +1261,33 @@
   },
   "2026-07": {
     "competencia": "2026-07",
-    "gerado_em": "2026-07-01T20:26:59.161459",
-    "quantidade_total": 2,
-    "valor_total": 210.0,
-    "valor_total_descontado": 0.0,
-    "valor_total_pendente": 210.0,
+    "gerado_em": "2026-07-01T22:04:21.649057",
+    "quantidade_total": 8,
+    "valor_total": 878.0,
+    "valor_total_descontado": 300.0,
+    "valor_total_pendente": 578.0,
     "por_unidade": [
       {
+        "unidade": "FloresDaCunha",
+        "quantidade": 3,
+        "valor": 300.0
+      },
+      {
         "unidade": "Soledade",
-        "quantidade": 2,
-        "valor": 210.0
+        "quantidade": 5,
+        "valor": 578.0
       }
     ],
     "por_doutor": [
       {
         "doutor": "Luisa Moraes Lucas",
-        "quantidade": 2,
+        "quantidade": 5,
         "valor_descontado": 0.0
+      },
+      {
+        "doutor": "Tamara Macanan",
+        "quantidade": 3,
+        "valor_descontado": 300.0
       }
     ]
   }
