@@ -1,11 +1,15 @@
 name: Recarregar histórico PIX 2026
+
 on:
   workflow_dispatch:
+
 permissions:
   contents: write
+
 jobs:
   recarregar:
     runs-on: ubuntu-latest
+
     steps:
       - name: Baixar repositório
         uses: actions/checkout@v4
@@ -31,8 +35,8 @@ jobs:
         run: |
           python recarregar_historico_2026.py
 
-       - name: Commit dos arquivos atualizados
-         run: |
+      - name: Commit dos arquivos atualizados
+        run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
