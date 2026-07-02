@@ -20,7 +20,7 @@
     "utilizado_depois": 0.0,
     "pendente": 125.0,
     "linha_original": "01/07/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Murilo Maya Hoffmann (L) (12347) (Parcela 2/48) Pago por: O paciente\t125,00 C\t125,00 C\t1\t\t\t125,00\t125,00",
-    "coletado_em": "2026-07-02T17:23:31.776276"
+    "coletado_em": "2026-07-02T20:27:26.355348"
   },
   {
     "unidade": "Soledade",
@@ -42,8 +42,8 @@
     "credito_depois": 0.0,
     "utilizado_depois": 0.0,
     "pendente": 85.0,
-    "linha_original": "01/07/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Lucas de Camargo Aguirre (L) (6652) (Parcela 22/48) Pago por: O paciente\t85,00 C\t85,00 C\t1\t\t\t330,00\t330,00",
-    "coletado_em": "2026-07-02T17:23:31.805573"
+    "linha_original": "01/07/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Lucas de Camargo Aguirre (L) (6652) (Parcela 22/48) Pago por: O paciente\t85,00 C\t85,00 C\t1\t\t\t210,00\t210,00",
+    "coletado_em": "2026-07-02T20:27:26.369215"
   },
   {
     "unidade": "Soledade",
@@ -65,8 +65,8 @@
     "credito_depois": 0.0,
     "utilizado_depois": 0.0,
     "pendente": 148.0,
-    "linha_original": "01/07/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Tamara De Oliveira Silveira Portela (L) PANORâMICA (10869) (Parcela 22/48) Pago por: O paciente\t148,00 C\t148,00 C\t1\t\t\t1.522,00\t1.522,00",
-    "coletado_em": "2026-07-02T17:23:31.913828"
+    "linha_original": "01/07/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Tamara De Oliveira Silveira Portela (L) PANORâMICA (10869) (Parcela 22/48) Pago por: O paciente\t148,00 C\t148,00 C\t1\t\t\t1.402,00\t1.402,00",
+    "coletado_em": "2026-07-02T20:27:26.478963"
   },
   {
     "unidade": "Soledade",
@@ -88,8 +88,8 @@
     "credito_depois": 0.0,
     "utilizado_depois": 0.0,
     "pendente": 105.0,
-    "linha_original": "01/07/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Mauricio França Da Silva (C) (4919) (Parcela 31/48) Pago por: O paciente\t105,00 C\t105,00 C\t1\t\t\t1.969,00\t1.962,71",
-    "coletado_em": "2026-07-02T17:23:31.981879"
+    "linha_original": "01/07/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Mauricio França Da Silva (C) (4919) (Parcela 31/48) Pago por: O paciente\t105,00 C\t105,00 C\t1\t\t\t1.849,00\t1.842,71",
+    "coletado_em": "2026-07-02T20:27:26.548357"
   },
   {
     "unidade": "Soledade",
@@ -111,12 +111,12 @@
     "credito_depois": 0.0,
     "utilizado_depois": 0.0,
     "pendente": 115.0,
-    "linha_original": "01/07/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Anita Benites Gonçalves (L) (12172) (Parcela 5/48) Pago por: Mauricio Goncalves Machado\t115,00 C\t115,00 C\t1\t\t\t2.084,00\t2.077,71",
-    "coletado_em": "2026-07-02T17:23:31.995226"
+    "linha_original": "01/07/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Anita Benites Gonçalves (L) (12172) (Parcela 5/48) Pago por: Mauricio Goncalves Machado\t115,00 C\t115,00 C\t1\t\t\t1.964,00\t1.957,71",
+    "coletado_em": "2026-07-02T20:27:26.561773"
   },
   {
     "unidade": "Soledade",
-    "data": "02/07/2026",
+    "data": "01/07/2026",
     "competencia": "2026-07",
     "metodo_pagamento": "Pix Doutores",
     "responsavel_fiscal_lido": "Leticia Canabarro",
@@ -134,8 +134,8 @@
     "credito_depois": 0.0,
     "utilizado_depois": 0.0,
     "pendente": 105.0,
-    "linha_original": "02/07/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Elias dos Santos (L) (9912) (Parcela 29/48) Pago por: O paciente\t105,00 C\t105,00 C\t1\t\t\t2.189,00\t2.182,71",
-    "coletado_em": "2026-07-02T17:23:32.008911"
+    "linha_original": "01/07/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Elias dos Santos (L) (9912) (Parcela 29/48) Pago por: O paciente\t105,00 C\t105,00 C\t1\t\t\t2.219,00\t2.212,71",
+    "coletado_em": "2026-07-02T20:27:26.588223"
   },
   {
     "unidade": "FloresDaCunha",
@@ -152,13 +152,13 @@
     "origem": "Recebido de Eliza Kessner Pedroso Pacheco (19637) (Parcela 17/48) Pago por: Norma Lucia Ribeiro Pedroso",
     "valor": 100.0,
     "valor_com_descontos": 100.0,
-    "credito_antes": 2600.0,
+    "credito_antes": 2300.0,
     "valor_descontado": 100.0,
-    "credito_depois": 2500.0,
-    "utilizado_depois": 2500.0,
+    "credito_depois": 2200.0,
+    "utilizado_depois": 2800.0,
     "pendente": 0.0,
     "linha_original": "01/07/2026\tPix Doutores\nTamara Macanan\tRecebido de Eliza Kessner Pedroso Pacheco (19637) (Parcela 17/48) Pago por: Norma Lucia Ribeiro Pedroso\t100,00 C\t100,00 C\t1\t\t0\t1.077,00\t1.077,00",
-    "coletado_em": "2026-07-02T17:25:32.749946"
+    "coletado_em": "2026-07-02T20:29:27.030573"
   },
   {
     "unidade": "FloresDaCunha",
@@ -175,13 +175,13 @@
     "origem": "Recebido de Eliza Kessner Pedroso Pacheco (19637) (Parcela 18/48) Pago por: Norma Lucia Ribeiro Pedroso",
     "valor": 100.0,
     "valor_com_descontos": 100.0,
-    "credito_antes": 2500.0,
+    "credito_antes": 2200.0,
     "valor_descontado": 100.0,
-    "credito_depois": 2400.0,
-    "utilizado_depois": 2600.0,
+    "credito_depois": 2100.0,
+    "utilizado_depois": 2900.0,
     "pendente": 0.0,
     "linha_original": "01/07/2026\tPix Doutores\nTamara Macanan\tRecebido de Eliza Kessner Pedroso Pacheco (19637) (Parcela 18/48) Pago por: Norma Lucia Ribeiro Pedroso\t100,00 C\t100,00 C\t1\t\t0\t1.177,00\t1.177,00",
-    "coletado_em": "2026-07-02T17:25:32.763086"
+    "coletado_em": "2026-07-02T20:29:27.043714"
   },
   {
     "unidade": "FloresDaCunha",
@@ -198,12 +198,81 @@
     "origem": "Recebido de Eduarda Pedroso Kessner Pacheco (20705) (Parcela 4/48) Pago por: Norma Lucia Ribeiro Pedroso",
     "valor": 100.0,
     "valor_com_descontos": 100.0,
-    "credito_antes": 2400.0,
+    "credito_antes": 2100.0,
     "valor_descontado": 100.0,
-    "credito_depois": 2300.0,
-    "utilizado_depois": 2700.0,
+    "credito_depois": 2000.0,
+    "utilizado_depois": 3000.0,
     "pendente": 0.0,
     "linha_original": "01/07/2026\tPix Doutores\nTamara Macanan\tRecebido de Eduarda Pedroso Kessner Pacheco (20705) (Parcela 4/48) Pago por: Norma Lucia Ribeiro Pedroso\t100,00 C\t100,00 C\t1\t\t0\t1.277,00\t1.277,00",
-    "coletado_em": "2026-07-02T17:25:32.775847"
+    "coletado_em": "2026-07-02T20:29:27.056684"
+  },
+  {
+    "unidade": "FloresDaCunha",
+    "data": "02/07/2026",
+    "competencia": "2026-07",
+    "metodo_pagamento": "Pix Doutores",
+    "responsavel_fiscal_lido": "Tamara Macanan",
+    "doutor_id": "42",
+    "doutor_final": "Tamara Macanan",
+    "doutor_encontrado": true,
+    "paciente": "Recebido de Larissa Dias da Silva Pago por: O paciente",
+    "codigo_origem": "15830",
+    "parcela": "1/1",
+    "origem": "Recebido de Larissa Dias da Silva (15830) (Parcela 1/1) Pago por: O paciente",
+    "valor": 707.0,
+    "valor_com_descontos": 707.0,
+    "credito_antes": 2000.0,
+    "valor_descontado": 707.0,
+    "credito_depois": 1293.0,
+    "utilizado_depois": 3707.0,
+    "pendente": 0.0,
+    "linha_original": "02/07/2026\tPix Doutores\nTamara Macanan\tRecebido de Larissa Dias da Silva (15830) (Parcela 1/1) Pago por: O paciente\t707,00 C\t707,00 C\t1\t\t000\t1.984,00\t1.984,00",
+    "coletado_em": "2026-07-02T20:29:27.069804"
+  },
+  {
+    "unidade": "FloresDaCunha",
+    "data": "02/07/2026",
+    "competencia": "2026-07",
+    "metodo_pagamento": "Pix Doutores",
+    "responsavel_fiscal_lido": "Tamara Macanan",
+    "doutor_id": "42",
+    "doutor_final": "Tamara Macanan",
+    "doutor_encontrado": true,
+    "paciente": "Recebido de Larissa Dias da Silva Pago por: O paciente",
+    "codigo_origem": "15830",
+    "parcela": "1/1",
+    "origem": "Recebido de Larissa Dias da Silva (15830) (Parcela 1/1) Pago por: O paciente",
+    "valor": 189.0,
+    "valor_com_descontos": 189.0,
+    "credito_antes": 1293.0,
+    "valor_descontado": 189.0,
+    "credito_depois": 1104.0,
+    "utilizado_depois": 3896.0,
+    "pendente": 0.0,
+    "linha_original": "02/07/2026\tPix Doutores\nTamara Macanan\tRecebido de Larissa Dias da Silva (15830) (Parcela 1/1) Pago por: O paciente\t189,00 C\t189,00 C\t1\t\t000\t2.173,00\t2.173,00",
+    "coletado_em": "2026-07-02T20:29:27.082130"
+  },
+  {
+    "unidade": "FloresDaCunha",
+    "data": "02/07/2026",
+    "competencia": "2026-07",
+    "metodo_pagamento": "Pix Doutores",
+    "responsavel_fiscal_lido": "Tamara Macanan",
+    "doutor_id": "42",
+    "doutor_final": "Tamara Macanan",
+    "doutor_encontrado": true,
+    "paciente": "Recebido de Suéllen Pegoraro Pago por: O paciente",
+    "codigo_origem": "20992",
+    "parcela": "1/1",
+    "origem": "Recebido de Suéllen Pegoraro (20992) (Parcela 1/1) Pago por: O paciente",
+    "valor": 200.0,
+    "valor_com_descontos": 200.0,
+    "credito_antes": 1104.0,
+    "valor_descontado": 200.0,
+    "credito_depois": 904.0,
+    "utilizado_depois": 4096.0,
+    "pendente": 0.0,
+    "linha_original": "02/07/2026\tPix Doutores\nTamara Macanan\tRecebido de Suéllen Pegoraro (20992) (Parcela 1/1) Pago por: O paciente\t200,00 C\t200,00 C\t1\t\t000\t2.373,00\t2.373,00",
+    "coletado_em": "2026-07-02T20:29:27.095218"
   }
 ]
