@@ -9,7 +9,7 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-06-25T20:38:26.543516",
+    "gerado_em": "2026-07-02T18:39:28.445840",
     "quantidade_total": 622,
     "valor_total": 83899.09,
     "valor_total_descontado": 0.0,
@@ -221,7 +221,7 @@
   },
   "2026-05": {
     "competencia": "2026-05",
-    "gerado_em": "2026-06-25T20:47:23.296055",
+    "gerado_em": "2026-07-02T18:48:32.896681",
     "quantidade_total": 639,
     "valor_total": 94043.49,
     "valor_total_descontado": 0.0,
@@ -438,7 +438,7 @@
   },
   "2026-01": {
     "competencia": "2026-01",
-    "gerado_em": "2026-06-25T20:10:44.801620",
+    "gerado_em": "2026-07-02T18:11:52.515684",
     "quantidade_total": 631,
     "valor_total": 80218.48,
     "valor_total_descontado": 0.0,
@@ -645,7 +645,7 @@
   },
   "2026-02": {
     "competencia": "2026-02",
-    "gerado_em": "2026-06-25T20:19:56.530010",
+    "gerado_em": "2026-07-02T18:21:07.628520",
     "quantidade_total": 592,
     "valor_total": 79847.59,
     "valor_total_descontado": 0.0,
@@ -832,7 +832,7 @@
   },
   "2026-03": {
     "competencia": "2026-03",
-    "gerado_em": "2026-06-25T20:29:25.259487",
+    "gerado_em": "2026-07-02T18:30:28.904841",
     "quantidade_total": 586,
     "valor_total": 80692.51,
     "valor_total_descontado": 432.0,
@@ -1044,16 +1044,16 @@
   },
   "2026-06": {
     "competencia": "2026-06",
-    "gerado_em": "2026-06-30T23:58:25.823980",
-    "quantidade_total": 550,
-    "valor_total": 72403.55,
+    "gerado_em": "2026-07-02T18:57:23.069341",
+    "quantidade_total": 557,
+    "valor_total": 73611.55,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 72403.55,
+    "valor_total_pendente": 73611.55,
     "por_unidade": [
       {
         "unidade": "Bento",
-        "quantidade": 33,
-        "valor": 4294.0
+        "quantidade": 36,
+        "valor": 4654.0
       },
       {
         "unidade": "Caxias",
@@ -1067,18 +1067,18 @@
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 69,
-        "valor": 10491.0
+        "quantidade": 70,
+        "valor": 10499.0
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 101,
-        "valor": 14122.0
+        "quantidade": 102,
+        "valor": 14207.0
       },
       {
         "unidade": "Soledade",
-        "quantidade": 143,
-        "valor": 15845.0
+        "quantidade": 145,
+        "valor": 16600.0
       },
       {
         "unidade": "Veranopolis",
@@ -1159,12 +1159,12 @@
       },
       {
         "doutor": "Karen Ramona Kuwer",
-        "quantidade": 10,
+        "quantidade": 11,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Leticia Canabarro",
-        "quantidade": 41,
+        "quantidade": 43,
         "valor_descontado": 0.0
       },
       {
@@ -1179,7 +1179,7 @@
       },
       {
         "doutor": "Luiz Henrique",
-        "quantidade": 21,
+        "quantidade": 24,
         "valor_descontado": 0.0
       },
       {
@@ -1199,7 +1199,7 @@
       },
       {
         "doutor": "Naiane Pieta",
-        "quantidade": 11,
+        "quantidade": 12,
         "valor_descontado": 0.0
       },
       {
