@@ -83285,7 +83285,7 @@
     "utilizado_depois": 0.0,
     "pendente": 125.0,
     "linha_original": "01/07/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Murilo Maya Hoffmann (L) (12347) (Parcela 2/48) Pago por: O paciente\t125,00 C\t125,00 C\t1\t\t\t125,00\t125,00",
-    "coletado_em": "2026-07-02T05:45:57.117960"
+    "coletado_em": "2026-07-02T08:40:17.375986"
   },
   {
     "unidade": "Soledade",
@@ -83308,7 +83308,7 @@
     "utilizado_depois": 0.0,
     "pendente": 85.0,
     "linha_original": "01/07/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Lucas de Camargo Aguirre (L) (6652) (Parcela 22/48) Pago por: O paciente\t85,00 C\t85,00 C\t1\t\t\t330,00\t330,00",
-    "coletado_em": "2026-07-02T05:45:57.145107"
+    "coletado_em": "2026-07-02T08:40:17.403393"
   },
   {
     "unidade": "Soledade",
@@ -83331,7 +83331,7 @@
     "utilizado_depois": 0.0,
     "pendente": 148.0,
     "linha_original": "01/07/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Tamara De Oliveira Silveira Portela (L) PANORâMICA (10869) (Parcela 22/48) Pago por: O paciente\t148,00 C\t148,00 C\t1\t\t\t1.522,00\t1.522,00",
-    "coletado_em": "2026-07-02T05:45:57.250319"
+    "coletado_em": "2026-07-02T08:40:17.510850"
   },
   {
     "unidade": "Soledade",
@@ -83354,7 +83354,7 @@
     "utilizado_depois": 0.0,
     "pendente": 105.0,
     "linha_original": "01/07/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Mauricio França Da Silva (C) (4919) (Parcela 31/48) Pago por: O paciente\t105,00 C\t105,00 C\t1\t\t\t1.969,00\t1.962,71",
-    "coletado_em": "2026-07-02T05:45:57.317638"
+    "coletado_em": "2026-07-02T08:40:17.578437"
   },
   {
     "unidade": "Soledade",
@@ -83377,7 +83377,7 @@
     "utilizado_depois": 0.0,
     "pendente": 115.0,
     "linha_original": "01/07/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Anita Benites Gonçalves (L) (12172) (Parcela 5/48) Pago por: Mauricio Goncalves Machado\t115,00 C\t115,00 C\t1\t\t\t2.084,00\t2.077,71",
-    "coletado_em": "2026-07-02T05:45:57.330647"
+    "coletado_em": "2026-07-02T08:40:17.591680"
   },
   {
     "unidade": "FloresDaCunha",
@@ -83394,13 +83394,13 @@
     "origem": "Recebido de Eliza Kessner Pedroso Pacheco (19637) (Parcela 17/48) Pago por: Norma Lucia Ribeiro Pedroso",
     "valor": 100.0,
     "valor_com_descontos": 100.0,
-    "credito_antes": 4100.0,
+    "credito_antes": 3800.0,
     "valor_descontado": 100.0,
-    "credito_depois": 4000.0,
-    "utilizado_depois": 1000.0,
+    "credito_depois": 3700.0,
+    "utilizado_depois": 1300.0,
     "pendente": 0.0,
     "linha_original": "01/07/2026\tPix Doutores\nTamara Macanan\tRecebido de Eliza Kessner Pedroso Pacheco (19637) (Parcela 17/48) Pago por: Norma Lucia Ribeiro Pedroso\t100,00 C\t100,00 C\t1\t\t0\t1.077,00\t1.077,00",
-    "coletado_em": "2026-07-02T05:47:56.249614"
+    "coletado_em": "2026-07-02T08:42:16.697472"
   },
   {
     "unidade": "FloresDaCunha",
@@ -83417,13 +83417,13 @@
     "origem": "Recebido de Eliza Kessner Pedroso Pacheco (19637) (Parcela 18/48) Pago por: Norma Lucia Ribeiro Pedroso",
     "valor": 100.0,
     "valor_com_descontos": 100.0,
-    "credito_antes": 4000.0,
+    "credito_antes": 3700.0,
     "valor_descontado": 100.0,
-    "credito_depois": 3900.0,
-    "utilizado_depois": 1100.0,
+    "credito_depois": 3600.0,
+    "utilizado_depois": 1400.0,
     "pendente": 0.0,
     "linha_original": "01/07/2026\tPix Doutores\nTamara Macanan\tRecebido de Eliza Kessner Pedroso Pacheco (19637) (Parcela 18/48) Pago por: Norma Lucia Ribeiro Pedroso\t100,00 C\t100,00 C\t1\t\t0\t1.177,00\t1.177,00",
-    "coletado_em": "2026-07-02T05:47:56.262558"
+    "coletado_em": "2026-07-02T08:42:16.710426"
   },
   {
     "unidade": "FloresDaCunha",
@@ -83440,12 +83440,12 @@
     "origem": "Recebido de Eduarda Pedroso Kessner Pacheco (20705) (Parcela 4/48) Pago por: Norma Lucia Ribeiro Pedroso",
     "valor": 100.0,
     "valor_com_descontos": 100.0,
-    "credito_antes": 3900.0,
+    "credito_antes": 3600.0,
     "valor_descontado": 100.0,
-    "credito_depois": 3800.0,
-    "utilizado_depois": 1200.0,
+    "credito_depois": 3500.0,
+    "utilizado_depois": 1500.0,
     "pendente": 0.0,
     "linha_original": "01/07/2026\tPix Doutores\nTamara Macanan\tRecebido de Eduarda Pedroso Kessner Pacheco (20705) (Parcela 4/48) Pago por: Norma Lucia Ribeiro Pedroso\t100,00 C\t100,00 C\t1\t\t0\t1.277,00\t1.277,00",
-    "coletado_em": "2026-07-02T05:47:56.275703"
+    "coletado_em": "2026-07-02T08:42:16.723635"
   }
 ]
