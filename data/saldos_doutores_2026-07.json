@@ -339,8 +339,8 @@
     "doutor_id": "42",
     "doutor": "Tamara Macanan",
     "credito_inicial": 5000.0,
-    "utilizado": 600.0,
-    "credito_disponivel": 4400.0,
+    "utilizado": 900.0,
+    "credito_disponivel": 4100.0,
     "pix_key": ""
   },
   {
