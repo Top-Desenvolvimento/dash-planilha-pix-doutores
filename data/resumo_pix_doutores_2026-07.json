@@ -1,11 +1,16 @@
 {
   "competencia": "2026-07",
-  "gerado_em": "2026-07-02T20:29:27.199240",
-  "quantidade_total": 12,
-  "valor_total": 2079.0,
-  "valor_total_descontado": 1396.0,
-  "valor_total_pendente": 683.0,
+  "gerado_em": "2026-07-02T21:51:49.793985",
+  "quantidade_total": 13,
+  "valor_total": 2199.0,
+  "valor_total_descontado": 1024.0,
+  "valor_total_pendente": 1175.0,
   "por_unidade": [
+    {
+      "unidade": "Farroupilha",
+      "quantidade": 1,
+      "valor": 120.0
+    },
     {
       "unidade": "FloresDaCunha",
       "quantidade": 6,
@@ -19,6 +24,11 @@
   ],
   "por_doutor": [
     {
+      "doutor": "Adriele da Silva",
+      "quantidade": 1,
+      "valor_descontado": 120.0
+    },
+    {
       "doutor": "Leticia Canabarro",
       "quantidade": 1,
       "valor_descontado": 0.0
@@ -31,7 +41,7 @@
     {
       "doutor": "Tamara Macanan",
       "quantidade": 6,
-      "valor_descontado": 1396.0
+      "valor_descontado": 904.0
     }
   ]
 }

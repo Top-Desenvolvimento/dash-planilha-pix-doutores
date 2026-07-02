@@ -3,8 +3,8 @@
     "doutor_id": "1",
     "doutor": "Adriele da Silva",
     "credito_inicial": 3000.0,
-    "utilizado": 0.0,
-    "credito_disponivel": 3000.0,
+    "utilizado": 120.0,
+    "credito_disponivel": 2880.0,
     "pix_key": ""
   },
   {
@@ -339,8 +339,8 @@
     "doutor_id": "42",
     "doutor": "Tamara Macanan",
     "credito_inicial": 5000.0,
-    "utilizado": 4096.0,
-    "credito_disponivel": 904.0,
+    "utilizado": 5000.0,
+    "credito_disponivel": 0.0,
     "pix_key": ""
   },
   {
