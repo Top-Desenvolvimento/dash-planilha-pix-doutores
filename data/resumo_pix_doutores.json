@@ -1261,11 +1261,11 @@
   },
   "2026-07": {
     "competencia": "2026-07",
-    "gerado_em": "2026-07-02T13:21:11.759474",
-    "quantidade_total": 8,
-    "valor_total": 878.0,
+    "gerado_em": "2026-07-02T15:43:10.512219",
+    "quantidade_total": 9,
+    "valor_total": 983.0,
     "valor_total_descontado": 300.0,
-    "valor_total_pendente": 578.0,
+    "valor_total_pendente": 683.0,
     "por_unidade": [
       {
         "unidade": "FloresDaCunha",
@@ -1274,11 +1274,16 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 5,
-        "valor": 578.0
+        "quantidade": 6,
+        "valor": 683.0
       }
     ],
     "por_doutor": [
+      {
+        "doutor": "Leticia Canabarro",
+        "quantidade": 1,
+        "valor_descontado": 0.0
+      },
       {
         "doutor": "Luisa Moraes Lucas",
         "quantidade": 5,
