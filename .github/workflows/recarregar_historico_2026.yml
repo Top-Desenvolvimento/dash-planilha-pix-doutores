@@ -31,19 +31,31 @@ jobs:
         run: |
           python recarregar_historico_2026.py
 
-      - name: Commit dos arquivos atualizados
-        run: |
+       - name: Commit dos arquivos atualizados
+         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git rm -r --cached __pycache__ || true
+          rm -rf __pycache__
+
+          echo "__pycache__/" >> .gitignore
+          echo "*.pyc" >> .gitignore
+
+          git add .gitignore
           git add data/*.json data/*.html index.html || true
+
           if git diff --cached --quiet; then
             echo "Sem alterações para commitar"
             exit 0
           fi
-          git stash
-          git fetch origin main
-          git rebase origin/main
-          git stash pop
-          git add data/*.json data/*.html index.html || true
+
           git commit -m "Recarrega histórico PIX 2026"
+
+          git pull --rebase origin main || {
+            echo "Conflito no rebase. Mantendo os arquivos gerados agora pelo robô."
+            git rebase --abort || true
+            git pull origin main --no-rebase -X ours
+          }
+
           git push origin main
