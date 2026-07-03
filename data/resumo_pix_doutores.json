@@ -1261,11 +1261,11 @@
   },
   "2026-07": {
     "competencia": "2026-07",
-    "gerado_em": "2026-07-03T16:22:34.890201",
-    "quantidade_total": 14,
-    "valor_total": 2428.0,
+    "gerado_em": "2026-07-03T18:00:50.395510",
+    "quantidade_total": 19,
+    "valor_total": 3386.0,
     "valor_total_descontado": 120.0,
-    "valor_total_pendente": 2308.0,
+    "valor_total_pendente": 3266.0,
     "por_unidade": [
       {
         "unidade": "Farroupilha",
@@ -1274,13 +1274,13 @@
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 7,
-        "valor": 1625.0
+        "quantidade": 8,
+        "valor": 2088.0
       },
       {
         "unidade": "Soledade",
-        "quantidade": 6,
-        "valor": 683.0
+        "quantidade": 10,
+        "valor": 1178.0
       }
     ],
     "por_doutor": [
@@ -1291,17 +1291,17 @@
       },
       {
         "doutor": "Leticia Canabarro",
-        "quantidade": 1,
+        "quantidade": 2,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Luisa Moraes Lucas",
-        "quantidade": 5,
+        "quantidade": 8,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Tamara Macanan",
-        "quantidade": 7,
+        "quantidade": 8,
         "valor_descontado": 0.0
       }
     ]
