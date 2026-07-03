@@ -1261,12 +1261,17 @@
   },
   "2026-07": {
     "competencia": "2026-07",
-    "gerado_em": "2026-07-03T19:33:41.850433",
-    "quantidade_total": 20,
-    "valor_total": 3506.0,
-    "valor_total_descontado": 120.0,
-    "valor_total_pendente": 3386.0,
+    "gerado_em": "2026-07-03T20:47:38.249581",
+    "quantidade_total": 22,
+    "valor_total": 3797.0,
+    "valor_total_descontado": 205.0,
+    "valor_total_pendente": 3592.0,
     "por_unidade": [
+      {
+        "unidade": "Caxias",
+        "quantidade": 1,
+        "valor": 85.0
+      },
       {
         "unidade": "Farroupilha",
         "quantidade": 1,
@@ -1279,8 +1284,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 11,
-        "valor": 1298.0
+        "quantidade": 12,
+        "valor": 1504.0
       }
     ],
     "por_doutor": [
@@ -1290,13 +1295,18 @@
         "valor_descontado": 120.0
       },
       {
+        "doutor": "Franciele Pedrotti",
+        "quantidade": 1,
+        "valor_descontado": 85.0
+      },
+      {
         "doutor": "Leticia Canabarro",
         "quantidade": 2,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Luisa Moraes Lucas",
-        "quantidade": 9,
+        "quantidade": 10,
         "valor_descontado": 0.0
       },
       {
