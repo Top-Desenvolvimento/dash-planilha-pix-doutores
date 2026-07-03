@@ -83440,13 +83440,13 @@
     "origem": "Recebido de Jussara da Silva- ALERGIA A LATEX (138056) (Parcela 9/48) Pago por: O paciente",
     "valor": 120.0,
     "valor_com_descontos": 120.0,
-    "credito_antes": 2160.0,
+    "credito_antes": 2040.0,
     "valor_descontado": 120.0,
-    "credito_depois": 2040.0,
-    "utilizado_depois": 960.0,
+    "credito_depois": 1920.0,
+    "utilizado_depois": 1080.0,
     "pendente": 0.0,
     "linha_original": "01/07/2026\tPix Doutores\nAdriele da Silva\tRecebido de Jussara da Silva- ALERGIA A LATEX (138056) (Parcela 9/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t120,00\t120,00",
-    "coletado_em": "2026-07-03T14:43:10.896404"
+    "coletado_em": "2026-07-03T16:17:35.239014"
   },
   {
     "unidade": "Soledade",
@@ -83469,7 +83469,7 @@
     "utilizado_depois": 0.0,
     "pendente": 125.0,
     "linha_original": "01/07/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Murilo Maya Hoffmann (L) (12347) (Parcela 2/48) Pago por: O paciente\t125,00 C\t125,00 C\t1\t\t\t125,00\t125,00",
-    "coletado_em": "2026-07-03T14:46:04.124326"
+    "coletado_em": "2026-07-03T16:20:31.283496"
   },
   {
     "unidade": "Soledade",
@@ -83492,7 +83492,7 @@
     "utilizado_depois": 0.0,
     "pendente": 85.0,
     "linha_original": "01/07/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Lucas de Camargo Aguirre (L) (6652) (Parcela 22/48) Pago por: O paciente\t85,00 C\t85,00 C\t1\t\t\t210,00\t210,00",
-    "coletado_em": "2026-07-03T14:46:04.137572"
+    "coletado_em": "2026-07-03T16:20:31.297502"
   },
   {
     "unidade": "Soledade",
@@ -83515,7 +83515,7 @@
     "utilizado_depois": 0.0,
     "pendente": 148.0,
     "linha_original": "01/07/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Tamara De Oliveira Silveira Portela (L) PANORâMICA (10869) (Parcela 22/48) Pago por: O paciente\t148,00 C\t148,00 C\t1\t\t\t1.402,00\t1.402,00",
-    "coletado_em": "2026-07-03T14:46:04.242871"
+    "coletado_em": "2026-07-03T16:20:31.405704"
   },
   {
     "unidade": "Soledade",
@@ -83538,7 +83538,7 @@
     "utilizado_depois": 0.0,
     "pendente": 105.0,
     "linha_original": "01/07/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Mauricio França Da Silva (C) (4919) (Parcela 31/48) Pago por: O paciente\t105,00 C\t105,00 C\t1\t\t\t1.849,00\t1.842,71",
-    "coletado_em": "2026-07-03T14:46:04.308993"
+    "coletado_em": "2026-07-03T16:20:31.474482"
   },
   {
     "unidade": "Soledade",
@@ -83561,7 +83561,7 @@
     "utilizado_depois": 0.0,
     "pendente": 115.0,
     "linha_original": "01/07/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Anita Benites Gonçalves (L) (12172) (Parcela 5/48) Pago por: Mauricio Goncalves Machado\t115,00 C\t115,00 C\t1\t\t\t1.964,00\t1.957,71",
-    "coletado_em": "2026-07-03T14:46:04.321919"
+    "coletado_em": "2026-07-03T16:20:31.487835"
   },
   {
     "unidade": "Soledade",
@@ -83584,7 +83584,7 @@
     "utilizado_depois": 0.0,
     "pendente": 105.0,
     "linha_original": "01/07/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Elias dos Santos (L) (9912) (Parcela 29/48) Pago por: O paciente\t105,00 C\t105,00 C\t1\t\t\t2.219,00\t2.212,71",
-    "coletado_em": "2026-07-03T14:46:04.347720"
+    "coletado_em": "2026-07-03T16:20:31.514476"
   },
   {
     "unidade": "FloresDaCunha",
@@ -83607,7 +83607,7 @@
     "utilizado_depois": 5000.0,
     "pendente": 100.0,
     "linha_original": "01/07/2026\tPix Doutores\nTamara Macanan\tRecebido de Eliza Kessner Pedroso Pacheco (19637) (Parcela 17/48) Pago por: Norma Lucia Ribeiro Pedroso\t100,00 C\t100,00 C\t1\t\t0\t1.077,00\t1.077,00",
-    "coletado_em": "2026-07-03T14:48:03.519850"
+    "coletado_em": "2026-07-03T16:22:34.661714"
   },
   {
     "unidade": "FloresDaCunha",
@@ -83630,7 +83630,7 @@
     "utilizado_depois": 5000.0,
     "pendente": 100.0,
     "linha_original": "01/07/2026\tPix Doutores\nTamara Macanan\tRecebido de Eliza Kessner Pedroso Pacheco (19637) (Parcela 18/48) Pago por: Norma Lucia Ribeiro Pedroso\t100,00 C\t100,00 C\t1\t\t0\t1.177,00\t1.177,00",
-    "coletado_em": "2026-07-03T14:48:03.532711"
+    "coletado_em": "2026-07-03T16:22:34.675211"
   },
   {
     "unidade": "FloresDaCunha",
@@ -83653,7 +83653,7 @@
     "utilizado_depois": 5000.0,
     "pendente": 100.0,
     "linha_original": "01/07/2026\tPix Doutores\nTamara Macanan\tRecebido de Eduarda Pedroso Kessner Pacheco (20705) (Parcela 4/48) Pago por: Norma Lucia Ribeiro Pedroso\t100,00 C\t100,00 C\t1\t\t0\t1.277,00\t1.277,00",
-    "coletado_em": "2026-07-03T14:48:03.545559"
+    "coletado_em": "2026-07-03T16:22:34.687939"
   },
   {
     "unidade": "FloresDaCunha",
@@ -83676,7 +83676,7 @@
     "utilizado_depois": 5000.0,
     "pendente": 707.0,
     "linha_original": "02/07/2026\tPix Doutores\nTamara Macanan\tRecebido de Larissa Dias da Silva (15830) (Parcela 1/1) Pago por: O paciente\t707,00 C\t707,00 C\t1\t\t000\t1.984,00\t1.984,00",
-    "coletado_em": "2026-07-03T14:48:03.558613"
+    "coletado_em": "2026-07-03T16:22:34.701442"
   },
   {
     "unidade": "FloresDaCunha",
@@ -83699,7 +83699,7 @@
     "utilizado_depois": 5000.0,
     "pendente": 189.0,
     "linha_original": "02/07/2026\tPix Doutores\nTamara Macanan\tRecebido de Larissa Dias da Silva (15830) (Parcela 1/1) Pago por: O paciente\t189,00 C\t189,00 C\t1\t\t000\t2.173,00\t2.173,00",
-    "coletado_em": "2026-07-03T14:48:03.571096"
+    "coletado_em": "2026-07-03T16:22:34.714411"
   },
   {
     "unidade": "FloresDaCunha",
@@ -83722,7 +83722,7 @@
     "utilizado_depois": 5000.0,
     "pendente": 200.0,
     "linha_original": "02/07/2026\tPix Doutores\nTamara Macanan\tRecebido de Suéllen Pegoraro (20992) (Parcela 1/1) Pago por: O paciente\t200,00 C\t200,00 C\t1\t\t000\t2.373,00\t2.373,00",
-    "coletado_em": "2026-07-03T14:48:03.583959"
+    "coletado_em": "2026-07-03T16:22:34.727817"
   },
   {
     "unidade": "FloresDaCunha",
@@ -83745,6 +83745,6 @@
     "utilizado_depois": 5000.0,
     "pendente": 229.0,
     "linha_original": "02/07/2026\tPix Doutores\nTamara Macanan\tRecebido de Eduardo Silveira Borges (20993) (Parcela 1/1) Pago por: O paciente\t229,00 C\t229,00 C\t1\t\t000\t5.286,00\t5.248,45",
-    "coletado_em": "2026-07-03T14:48:03.638413"
+    "coletado_em": "2026-07-03T16:22:34.784439"
   }
 ]
