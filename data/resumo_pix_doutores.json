@@ -1261,11 +1261,11 @@
   },
   "2026-07": {
     "competencia": "2026-07",
-    "gerado_em": "2026-07-03T12:30:00.610353",
-    "quantidade_total": 13,
-    "valor_total": 2199.0,
+    "gerado_em": "2026-07-03T14:48:03.739153",
+    "quantidade_total": 14,
+    "valor_total": 2428.0,
     "valor_total_descontado": 120.0,
-    "valor_total_pendente": 2079.0,
+    "valor_total_pendente": 2308.0,
     "por_unidade": [
       {
         "unidade": "Farroupilha",
@@ -1274,8 +1274,8 @@
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 6,
-        "valor": 1396.0
+        "quantidade": 7,
+        "valor": 1625.0
       },
       {
         "unidade": "Soledade",
@@ -1301,7 +1301,7 @@
       },
       {
         "doutor": "Tamara Macanan",
-        "quantidade": 6,
+        "quantidade": 7,
         "valor_descontado": 0.0
       }
     ]
