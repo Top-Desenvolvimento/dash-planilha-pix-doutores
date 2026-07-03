@@ -1,10 +1,10 @@
 {
   "competencia": "2026-07",
-  "gerado_em": "2026-07-03T18:00:50.395510",
-  "quantidade_total": 19,
-  "valor_total": 3386.0,
+  "gerado_em": "2026-07-03T19:33:41.850433",
+  "quantidade_total": 20,
+  "valor_total": 3506.0,
   "valor_total_descontado": 120.0,
-  "valor_total_pendente": 3266.0,
+  "valor_total_pendente": 3386.0,
   "por_unidade": [
     {
       "unidade": "Farroupilha",
@@ -18,8 +18,8 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 10,
-      "valor": 1178.0
+      "quantidade": 11,
+      "valor": 1298.0
     }
   ],
   "por_doutor": [
@@ -35,7 +35,7 @@
     },
     {
       "doutor": "Luisa Moraes Lucas",
-      "quantidade": 8,
+      "quantidade": 9,
       "valor_descontado": 0.0
     },
     {
