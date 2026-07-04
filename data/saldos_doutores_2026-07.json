@@ -3,8 +3,8 @@
     "doutor_id": "1",
     "doutor": "Adriele da Silva",
     "credito_inicial": 3000.0,
-    "utilizado": 2280.0,
-    "credito_disponivel": 720.0,
+    "utilizado": 2400.0,
+    "credito_disponivel": 600.0,
     "pix_key": ""
   },
   {
@@ -115,8 +115,8 @@
     "doutor_id": "16",
     "doutor": "Franciele Pedrotti",
     "credito_inicial": 10000.0,
-    "utilizado": 680.0,
-    "credito_disponivel": 9320.0,
+    "utilizado": 765.0,
+    "credito_disponivel": 9235.0,
     "pix_key": ""
   },
   {
