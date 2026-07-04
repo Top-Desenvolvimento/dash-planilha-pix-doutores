@@ -1261,11 +1261,11 @@
   },
   "2026-07": {
     "competencia": "2026-07",
-    "gerado_em": "2026-07-04T18:49:06.150032",
+    "gerado_em": "2026-07-04T20:05:29.322801",
     "quantidade_total": 26,
     "valor_total": 4830.0,
-    "valor_total_descontado": 305.0,
-    "valor_total_pendente": 4525.0,
+    "valor_total_descontado": 185.0,
+    "valor_total_pendente": 4645.0,
     "por_unidade": [
       {
         "unidade": "Caxias",
@@ -1292,7 +1292,7 @@
       {
         "doutor": "Adriele da Silva",
         "quantidade": 1,
-        "valor_descontado": 120.0
+        "valor_descontado": 0.0
       },
       {
         "doutor": "Franciele Pedrotti",
