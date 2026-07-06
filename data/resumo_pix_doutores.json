@@ -1261,16 +1261,16 @@
   },
   "2026-07": {
     "competencia": "2026-07",
-    "gerado_em": "2026-07-06T11:10:50.488201",
-    "quantidade_total": 26,
-    "valor_total": 4830.0,
-    "valor_total_descontado": 185.0,
+    "gerado_em": "2026-07-06T14:42:43.582378",
+    "quantidade_total": 27,
+    "valor_total": 4935.0,
+    "valor_total_descontado": 290.0,
     "valor_total_pendente": 4645.0,
     "por_unidade": [
       {
         "unidade": "Caxias",
-        "quantidade": 3,
-        "valor": 827.0
+        "quantidade": 4,
+        "valor": 932.0
       },
       {
         "unidade": "Farroupilha",
@@ -1296,8 +1296,8 @@
       },
       {
         "doutor": "Franciele Pedrotti",
-        "quantidade": 2,
-        "valor_descontado": 185.0
+        "quantidade": 3,
+        "valor_descontado": 290.0
       },
       {
         "doutor": "Leticia Canabarro",
