@@ -1740,8 +1740,8 @@
       "doutor_id": "33",
       "doutor": "Matheus Strapasson",
       "credito_inicial": 1000.0,
-      "utilizado": 525.0,
-      "credito_disponivel": 475.0,
+      "utilizado": 630.0,
+      "credito_disponivel": 370.0,
       "pix_key": ""
     },
     {
@@ -1772,8 +1772,8 @@
       "doutor_id": "36",
       "doutor": "Nelson Vaccari",
       "credito_inicial": 4000.0,
-      "utilizado": 1635.0,
-      "credito_disponivel": 2365.0,
+      "utilizado": 1962.0,
+      "credito_disponivel": 2038.0,
       "pix_key": ""
     },
     {

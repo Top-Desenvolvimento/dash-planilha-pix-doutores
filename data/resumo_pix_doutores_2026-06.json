@@ -1,15 +1,15 @@
 {
   "competencia": "2026-06",
-  "gerado_em": "2026-07-02T18:57:23.069341",
-  "quantidade_total": 557,
-  "valor_total": 73611.55,
+  "gerado_em": "2026-07-06T17:17:45.736900",
+  "quantidade_total": 558,
+  "valor_total": 73710.55,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 73611.55,
+  "valor_total_pendente": 73710.55,
   "por_unidade": [
     {
       "unidade": "Bento",
-      "quantidade": 36,
-      "valor": 4654.0
+      "quantidade": 37,
+      "valor": 4753.0
     },
     {
       "unidade": "Caxias",
@@ -55,12 +55,12 @@
     },
     {
       "doutor": "Alexandre Favero",
-      "quantidade": 12,
+      "quantidade": 14,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Alexandre Orlandini",
-      "quantidade": 6,
+      "quantidade": 4,
       "valor_descontado": 0.0
     },
     {
@@ -110,7 +110,7 @@
     },
     {
       "doutor": "Jéssica Barreto",
-      "quantidade": 8,
+      "quantidade": 9,
       "valor_descontado": 0.0
     },
     {

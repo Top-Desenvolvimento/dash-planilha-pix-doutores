@@ -9,7 +9,7 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-07-02T18:39:28.445840",
+    "gerado_em": "2026-07-06T17:00:06.519379",
     "quantidade_total": 622,
     "valor_total": 83899.09,
     "valor_total_descontado": 0.0,
@@ -221,7 +221,7 @@
   },
   "2026-05": {
     "competencia": "2026-05",
-    "gerado_em": "2026-07-02T18:48:32.896681",
+    "gerado_em": "2026-07-06T17:09:00.650458",
     "quantidade_total": 639,
     "valor_total": 94043.49,
     "valor_total_descontado": 0.0,
@@ -438,7 +438,7 @@
   },
   "2026-01": {
     "competencia": "2026-01",
-    "gerado_em": "2026-07-02T18:11:52.515684",
+    "gerado_em": "2026-07-06T16:32:49.802796",
     "quantidade_total": 631,
     "valor_total": 80218.48,
     "valor_total_descontado": 0.0,
@@ -645,7 +645,7 @@
   },
   "2026-02": {
     "competencia": "2026-02",
-    "gerado_em": "2026-07-02T18:21:07.628520",
+    "gerado_em": "2026-07-06T16:42:00.407484",
     "quantidade_total": 592,
     "valor_total": 79847.59,
     "valor_total_descontado": 0.0,
@@ -832,7 +832,7 @@
   },
   "2026-03": {
     "competencia": "2026-03",
-    "gerado_em": "2026-07-02T18:30:28.904841",
+    "gerado_em": "2026-07-06T16:51:13.268320",
     "quantidade_total": 586,
     "valor_total": 80692.51,
     "valor_total_descontado": 432.0,
@@ -1044,16 +1044,16 @@
   },
   "2026-06": {
     "competencia": "2026-06",
-    "gerado_em": "2026-07-02T18:57:23.069341",
-    "quantidade_total": 557,
-    "valor_total": 73611.55,
+    "gerado_em": "2026-07-06T17:17:45.736900",
+    "quantidade_total": 558,
+    "valor_total": 73710.55,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 73611.55,
+    "valor_total_pendente": 73710.55,
     "por_unidade": [
       {
         "unidade": "Bento",
-        "quantidade": 36,
-        "valor": 4654.0
+        "quantidade": 37,
+        "valor": 4753.0
       },
       {
         "unidade": "Caxias",
@@ -1099,12 +1099,12 @@
       },
       {
         "doutor": "Alexandre Favero",
-        "quantidade": 12,
+        "quantidade": 14,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Alexandre Orlandini",
-        "quantidade": 6,
+        "quantidade": 4,
         "valor_descontado": 0.0
       },
       {
@@ -1154,7 +1154,7 @@
       },
       {
         "doutor": "Jéssica Barreto",
-        "quantidade": 8,
+        "quantidade": 9,
         "valor_descontado": 0.0
       },
       {
