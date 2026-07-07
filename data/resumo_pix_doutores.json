@@ -1261,16 +1261,16 @@
   },
   "2026-07": {
     "competencia": "2026-07",
-    "gerado_em": "2026-07-07T19:31:49.602915",
-    "quantidade_total": 74,
-    "valor_total": 11090.0,
-    "valor_total_descontado": 1082.0,
-    "valor_total_pendente": 10008.0,
+    "gerado_em": "2026-07-07T21:14:16.137131",
+    "quantidade_total": 89,
+    "valor_total": 12933.0,
+    "valor_total_descontado": 669.0,
+    "valor_total_pendente": 12264.0,
     "por_unidade": [
       {
         "unidade": "Bento",
-        "quantidade": 2,
-        "valor": 294.0
+        "quantidade": 4,
+        "valor": 489.0
       },
       {
         "unidade": "Caxias",
@@ -1279,18 +1279,18 @@
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 12,
-        "valor": 1533.0
+        "quantidade": 17,
+        "valor": 2132.0
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 12,
-        "valor": 2853.0
+        "quantidade": 18,
+        "valor": 3581.0
       },
       {
         "unidade": "Soledade",
-        "quantidade": 18,
-        "valor": 2264.0
+        "quantidade": 20,
+        "valor": 2585.0
       },
       {
         "unidade": "Veranopolis",
@@ -1306,7 +1306,7 @@
       },
       {
         "doutor": "Felipe Lino",
-        "quantidade": 1,
+        "quantidade": 2,
         "valor_descontado": 0.0
       },
       {
@@ -1316,8 +1316,8 @@
       },
       {
         "doutor": "Giovana Gasparini",
-        "quantidade": 9,
-        "valor_descontado": 341.0
+        "quantidade": 14,
+        "valor_descontado": 0.0
       },
       {
         "doutor": "Leticia Canabarro",
@@ -1326,13 +1326,13 @@
       },
       {
         "doutor": "Luisa Moraes Lucas",
-        "quantidade": 15,
+        "quantidade": 16,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Nelson Vaccari",
-        "quantidade": 5,
-        "valor_descontado": 593.0
+        "quantidade": 7,
+        "valor_descontado": 521.0
       },
       {
         "doutor": "Sofie Owens",
@@ -1341,7 +1341,7 @@
       },
       {
         "doutor": "Tamara Macanan",
-        "quantidade": 13,
+        "quantidade": 19,
         "valor_descontado": 0.0
       },
       {
