@@ -1,15 +1,15 @@
 {
   "competencia": "2026-07",
-  "gerado_em": "2026-07-07T09:27:53.189147",
-  "quantidade_total": 47,
-  "valor_total": 7266.0,
+  "gerado_em": "2026-07-07T12:21:50.977933",
+  "quantidade_total": 48,
+  "valor_total": 7365.0,
   "valor_total_descontado": 447.0,
-  "valor_total_pendente": 6819.0,
+  "valor_total_pendente": 6918.0,
   "por_unidade": [
     {
       "unidade": "Caxias",
-      "quantidade": 22,
-      "valor": 2990.0
+      "quantidade": 23,
+      "valor": 3089.0
     },
     {
       "unidade": "Farroupilha",
@@ -66,6 +66,11 @@
     {
       "doutor": "Tamara Macanan",
       "quantidade": 10,
+      "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Valter Baldissera",
+      "quantidade": 1,
       "valor_descontado": 0.0
     }
   ]
