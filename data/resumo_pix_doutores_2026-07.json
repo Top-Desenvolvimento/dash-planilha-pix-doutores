@@ -1,35 +1,35 @@
 {
   "competencia": "2026-07",
-  "gerado_em": "2026-07-07T17:39:03.526576",
-  "quantidade_total": 64,
-  "valor_total": 9670.0,
-  "valor_total_descontado": 1029.0,
-  "valor_total_pendente": 8641.0,
+  "gerado_em": "2026-07-07T19:31:49.602915",
+  "quantidade_total": 74,
+  "valor_total": 11090.0,
+  "valor_total_descontado": 1082.0,
+  "valor_total_pendente": 10008.0,
   "por_unidade": [
     {
       "unidade": "Bento",
-      "quantidade": 1,
-      "valor": 195.0
+      "quantidade": 2,
+      "valor": 294.0
     },
     {
       "unidade": "Caxias",
-      "quantidade": 28,
-      "valor": 3878.0
+      "quantidade": 29,
+      "valor": 3998.0
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 6,
-      "valor": 726.0
+      "quantidade": 12,
+      "valor": 1533.0
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 11,
-      "valor": 2648.0
+      "quantidade": 12,
+      "valor": 2853.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 17,
-      "valor": 2075.0
+      "quantidade": 18,
+      "valor": 2264.0
     },
     {
       "unidade": "Veranopolis",
@@ -44,14 +44,19 @@
       "valor_descontado": 0.0
     },
     {
+      "doutor": "Felipe Lino",
+      "quantidade": 1,
+      "valor_descontado": 0.0
+    },
+    {
       "doutor": "Franciele Pedrotti",
       "quantidade": 20,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Giovana Gasparini",
-      "quantidade": 3,
-      "valor_descontado": 387.0
+      "quantidade": 9,
+      "valor_descontado": 341.0
     },
     {
       "doutor": "Leticia Canabarro",
@@ -65,8 +70,8 @@
     },
     {
       "doutor": "Nelson Vaccari",
-      "quantidade": 4,
-      "valor_descontado": 494.0
+      "quantidade": 5,
+      "valor_descontado": 593.0
     },
     {
       "doutor": "Sofie Owens",
@@ -75,12 +80,12 @@
     },
     {
       "doutor": "Tamara Macanan",
-      "quantidade": 12,
+      "quantidade": 13,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Valter Baldissera",
-      "quantidade": 4,
+      "quantidade": 5,
       "valor_descontado": 0.0
     }
   ]
