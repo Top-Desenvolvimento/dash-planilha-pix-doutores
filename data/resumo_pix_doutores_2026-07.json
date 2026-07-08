@@ -1,10 +1,10 @@
 {
   "competencia": "2026-07",
-  "gerado_em": "2026-07-08T18:54:43.188518",
-  "quantidade_total": 119,
-  "valor_total": 17157.84,
-  "valor_total_descontado": 1311.0,
-  "valor_total_pendente": 15846.84,
+  "gerado_em": "2026-07-08T20:21:29.591350",
+  "quantidade_total": 123,
+  "valor_total": 18743.84,
+  "valor_total_descontado": 2725.0,
+  "valor_total_pendente": 16018.84,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -18,8 +18,8 @@
     },
     {
       "unidade": "Encantado",
-      "quantidade": 4,
-      "valor": 953.0
+      "quantidade": 6,
+      "valor": 2224.0
     },
     {
       "unidade": "Farroupilha",
@@ -28,13 +28,13 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 22,
-      "valor": 4006.0
+      "quantidade": 23,
+      "valor": 4201.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 25,
-      "valor": 3114.0
+      "quantidade": 26,
+      "valor": 3234.0
     },
     {
       "unidade": "Veranopolis",
@@ -55,8 +55,13 @@
     },
     {
       "doutor": "Felipe Lino",
-      "quantidade": 7,
+      "quantidade": 8,
       "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Fernana Sozo",
+      "quantidade": 1,
+      "valor_descontado": 195.0
     },
     {
       "doutor": "Franciele Pedrotti",
@@ -84,9 +89,14 @@
       "valor_descontado": 0.0
     },
     {
+      "doutor": "Nicoli Weber",
+      "quantidade": 1,
+      "valor_descontado": 321.0
+    },
+    {
       "doutor": "Sofie Owens",
       "quantidade": 1,
-      "valor_descontado": 148.0
+      "valor_descontado": 96.0
     },
     {
       "doutor": "Tamara Macanan",
@@ -95,8 +105,8 @@
     },
     {
       "doutor": "Thiany Cristofoli",
-      "quantidade": 4,
-      "valor_descontado": 953.0
+      "quantidade": 5,
+      "valor_descontado": 1903.0
     },
     {
       "doutor": "Valter Baldissera",
