@@ -2304,8 +2304,8 @@
       "doutor_id": "12",
       "doutor": "Dionathan Pohlmann",
       "credito_inicial": 6000.0,
-      "utilizado": 2730.0,
-      "credito_disponivel": 3270.0,
+      "utilizado": 2940.0,
+      "credito_disponivel": 3060.0,
       "pix_key": ""
     },
     {
@@ -2328,8 +2328,8 @@
       "doutor_id": "15",
       "doutor": "Fernana Sozo",
       "credito_inicial": 1500.0,
-      "utilizado": 585.0,
-      "credito_disponivel": 915.0,
+      "utilizado": 780.0,
+      "credito_disponivel": 720.0,
       "pix_key": ""
     },
     {

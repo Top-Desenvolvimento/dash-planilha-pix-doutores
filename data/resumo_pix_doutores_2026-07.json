@@ -1,10 +1,10 @@
 {
   "competencia": "2026-07",
-  "gerado_em": "2026-07-08T22:48:47.411485",
+  "gerado_em": "2026-07-08T23:57:06.837269",
   "quantidade_total": 137,
   "valor_total": 20852.06,
-  "valor_total_descontado": 1483.94,
-  "valor_total_pendente": 19368.12,
+  "valor_total_descontado": 405.0,
+  "valor_total_pendente": 20447.06,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -86,7 +86,7 @@
     {
       "doutor": "Morgana Zambiasi",
       "quantidade": 8,
-      "valor_descontado": 720.94
+      "valor_descontado": 0.0
     },
     {
       "doutor": "Nelson Vaccari",
@@ -96,7 +96,7 @@
     {
       "doutor": "Nicoli Weber",
       "quantidade": 3,
-      "valor_descontado": 358.0
+      "valor_descontado": 0.0
     },
     {
       "doutor": "Sofie Owens",
