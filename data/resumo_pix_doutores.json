@@ -1261,31 +1261,31 @@
   },
   "2026-07": {
     "competencia": "2026-07",
-    "gerado_em": "2026-07-08T17:17:02.070639",
-    "quantidade_total": 111,
-    "valor_total": 16077.34,
-    "valor_total_descontado": 738.0,
-    "valor_total_pendente": 15339.34,
+    "gerado_em": "2026-07-08T18:54:43.188518",
+    "quantidade_total": 119,
+    "valor_total": 17157.84,
+    "valor_total_descontado": 1311.0,
+    "valor_total_pendente": 15846.84,
     "por_unidade": [
       {
         "unidade": "Bento",
-        "quantidade": 5,
-        "valor": 609.0
+        "quantidade": 6,
+        "valor": 744.5
       },
       {
         "unidade": "Caxias",
-        "quantidade": 36,
-        "valor": 5001.34
+        "quantidade": 38,
+        "valor": 5151.34
       },
       {
         "unidade": "Encantado",
-        "quantidade": 1,
-        "valor": 380.0
+        "quantidade": 4,
+        "valor": 953.0
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 22,
-        "valor": 2914.0
+        "quantidade": 23,
+        "valor": 3041.0
       },
       {
         "unidade": "FloresDaCunha",
@@ -1294,8 +1294,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 24,
-        "valor": 3019.0
+        "quantidade": 25,
+        "valor": 3114.0
       },
       {
         "unidade": "Veranopolis",
@@ -1316,12 +1316,12 @@
       },
       {
         "doutor": "Felipe Lino",
-        "quantidade": 6,
+        "quantidade": 7,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Franciele Pedrotti",
-        "quantidade": 21,
+        "quantidade": 24,
         "valor_descontado": 0.0
       },
       {
@@ -1341,7 +1341,7 @@
       },
       {
         "doutor": "Nelson Vaccari",
-        "quantidade": 8,
+        "quantidade": 9,
         "valor_descontado": 0.0
       },
       {
@@ -1356,8 +1356,8 @@
       },
       {
         "doutor": "Thiany Cristofoli",
-        "quantidade": 1,
-        "valor_descontado": 380.0
+        "quantidade": 4,
+        "valor_descontado": 953.0
       },
       {
         "doutor": "Valter Baldissera",
