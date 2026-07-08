@@ -1261,11 +1261,11 @@
   },
   "2026-07": {
     "competencia": "2026-07",
-    "gerado_em": "2026-07-08T15:45:24.234311",
-    "quantidade_total": 108,
-    "valor_total": 15465.34,
-    "valor_total_descontado": 358.0,
-    "valor_total_pendente": 15107.34,
+    "gerado_em": "2026-07-08T17:17:02.070639",
+    "quantidade_total": 111,
+    "valor_total": 16077.34,
+    "valor_total_descontado": 738.0,
+    "valor_total_pendente": 15339.34,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1278,19 +1278,24 @@
         "valor": 5001.34
       },
       {
+        "unidade": "Encantado",
+        "quantidade": 1,
+        "valor": 380.0
+      },
+      {
         "unidade": "Farroupilha",
         "quantidade": 22,
         "valor": 2914.0
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 21,
-        "valor": 3884.0
+        "quantidade": 22,
+        "valor": 4006.0
       },
       {
         "unidade": "Soledade",
-        "quantidade": 23,
-        "valor": 2909.0
+        "quantidade": 24,
+        "valor": 3019.0
       },
       {
         "unidade": "Veranopolis",
@@ -1311,7 +1316,7 @@
       },
       {
         "doutor": "Felipe Lino",
-        "quantidade": 5,
+        "quantidade": 6,
         "valor_descontado": 0.0
       },
       {
@@ -1346,8 +1351,13 @@
       },
       {
         "doutor": "Tamara Macanan",
-        "quantidade": 22,
+        "quantidade": 23,
         "valor_descontado": 0.0
+      },
+      {
+        "doutor": "Thiany Cristofoli",
+        "quantidade": 1,
+        "valor_descontado": 380.0
       },
       {
         "doutor": "Valter Baldissera",
