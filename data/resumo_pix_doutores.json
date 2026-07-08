@@ -1261,11 +1261,11 @@
   },
   "2026-07": {
     "competencia": "2026-07",
-    "gerado_em": "2026-07-08T20:21:29.591350",
-    "quantidade_total": 123,
-    "valor_total": 18743.84,
-    "valor_total_descontado": 2725.0,
-    "valor_total_pendente": 16018.84,
+    "gerado_em": "2026-07-08T21:41:43.765580",
+    "quantidade_total": 130,
+    "valor_total": 19740.9,
+    "valor_total_descontado": 2269.06,
+    "valor_total_pendente": 17471.84,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1294,13 +1294,13 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 26,
-        "valor": 3234.0
+        "quantidade": 28,
+        "valor": 3452.0
       },
       {
         "unidade": "Veranopolis",
-        "quantidade": 1,
-        "valor": 148.0
+        "quantidade": 6,
+        "valor": 927.06
       }
     ],
     "por_doutor": [
@@ -1316,7 +1316,7 @@
       },
       {
         "doutor": "Felipe Lino",
-        "quantidade": 8,
+        "quantidade": 10,
         "valor_descontado": 0.0
       },
       {
@@ -1345,6 +1345,11 @@
         "valor_descontado": 0.0
       },
       {
+        "doutor": "Morgana Zambiasi",
+        "quantidade": 5,
+        "valor_descontado": 779.06
+      },
+      {
         "doutor": "Nelson Vaccari",
         "quantidade": 9,
         "valor_descontado": 0.0
@@ -1357,7 +1362,7 @@
       {
         "doutor": "Sofie Owens",
         "quantidade": 1,
-        "valor_descontado": 96.0
+        "valor_descontado": 0.0
       },
       {
         "doutor": "Tamara Macanan",
@@ -1367,7 +1372,7 @@
       {
         "doutor": "Thiany Cristofoli",
         "quantidade": 5,
-        "valor_descontado": 1903.0
+        "valor_descontado": 764.0
       },
       {
         "doutor": "Valter Baldissera",
