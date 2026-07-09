@@ -853,7 +853,7 @@ async function carregarDoutoresAdmin() {
               <option value="false" ${isInativo  ? "selected" : ""}>Inativo</option>
             </select>
           </td>
-          <td><input data-id="${item.id}" data-field="observacao" type="text" value="${escapeHtml(saldoSupabase.observacao || "")}" /></td>
+          <td><textarea data-id="${item.id}" data-field="observacao" rows="2" class="obs-textarea">${escapeHtml(saldoSupabase.observacao || "")}</textarea></td>
           <td>${escapeHtml(responsavelUltimo)}</td>
           <td>${escapeHtml(dataAcao)}</td>
           <td>
@@ -880,7 +880,7 @@ async function salvarDoutor(id) {
     const utilizado = toNumber(document.querySelector(`[data-id="${id}"][data-field="utilizado"]`)?.value, 0);
     const pixKey = document.querySelector(`[data-id="${id}"][data-field="pix_key"]`)?.value.trim() || "";
     const ativo = document.querySelector(`[data-id="${id}"][data-field="ativo"]`)?.value === "true";
-    const observacao = document.querySelector(`[data-id="${id}"][data-field="observacao"]`)?.value.trim() || null;
+    const observacao = document.querySelector(`[data-id="${id}"][data-field="observacao"]`)?.value?.trim() || null;
     if (!nome) { mostrarMensagemAdmin("Nome é obrigatório.", true); return; }
 
     const { data: userData } = await client.auth.getUser();
