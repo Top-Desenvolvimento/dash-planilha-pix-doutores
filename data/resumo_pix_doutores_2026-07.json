@@ -1,10 +1,10 @@
 {
   "competencia": "2026-07",
-  "gerado_em": "2026-07-09T21:06:32.129354",
-  "quantidade_total": 174,
-  "valor_total": 26453.06,
-  "valor_total_descontado": 1828.0,
-  "valor_total_pendente": 24625.06,
+  "gerado_em": "2026-07-09T22:48:12.381074",
+  "quantidade_total": 183,
+  "valor_total": 27375.06,
+  "valor_total_descontado": 1305.0,
+  "valor_total_pendente": 26070.06,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,8 +13,8 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 50,
-      "valor": 7199.34
+      "quantidade": 51,
+      "valor": 7319.34
     },
     {
       "unidade": "Encantado",
@@ -23,18 +23,18 @@
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 32,
-      "valor": 4269.0
+      "quantidade": 35,
+      "valor": 4576.0
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 28,
-      "valor": 4770.0
+      "quantidade": 30,
+      "valor": 4968.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 32,
-      "valor": 3910.0
+      "quantidade": 35,
+      "valor": 4207.0
     },
     {
       "unidade": "Veranopolis",
@@ -50,8 +50,8 @@
     },
     {
       "doutor": "Alexandre Favero",
-      "quantidade": 1,
-      "valor_descontado": 522.0
+      "quantidade": 2,
+      "valor_descontado": 642.0
     },
     {
       "doutor": "Dionathan Pohlmann",
@@ -61,16 +61,16 @@
     {
       "doutor": "Everlize Cipriani",
       "quantidade": 2,
-      "valor_descontado": 320.0
+      "valor_descontado": 0.0
     },
     {
       "doutor": "Felipe Lino",
-      "quantidade": 14,
+      "quantidade": 17,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Fernana Sozo",
-      "quantidade": 6,
+      "quantidade": 8,
       "valor_descontado": 0.0
     },
     {
@@ -120,8 +120,8 @@
     },
     {
       "doutor": "Thalia Vezzosi",
-      "quantidade": 6,
-      "valor_descontado": 776.0
+      "quantidade": 8,
+      "valor_descontado": 453.0
     },
     {
       "doutor": "Thiany Cristofoli",
@@ -130,7 +130,7 @@
     },
     {
       "doutor": "TOP",
-      "quantidade": 1,
+      "quantidade": 2,
       "valor_descontado": 0.0
     },
     {

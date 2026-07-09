@@ -19,8 +19,8 @@
     "doutor_id": "3",
     "doutor": "Alexandre Favero",
     "credito_inicial": 1500.0,
-    "utilizado": 522.0,
-    "credito_disponivel": 978.0,
+    "utilizado": 1164.0,
+    "credito_disponivel": 336.0,
     "pix_key": ""
   },
   {
@@ -83,8 +83,8 @@
     "doutor_id": "12",
     "doutor": "Dionathan Pohlmann",
     "credito_inicial": 6000.0,
-    "utilizado": 5040.0,
-    "credito_disponivel": 960.0,
+    "utilizado": 5250.0,
+    "credito_disponivel": 750.0,
     "pix_key": ""
   },
   {
@@ -355,8 +355,8 @@
     "doutor_id": "46",
     "doutor": "Thalia Vezzosi",
     "credito_inicial": 2500.0,
-    "utilizado": 2047.0,
-    "credito_disponivel": 453.0,
+    "utilizado": 2500.0,
+    "credito_disponivel": 0.0,
     "pix_key": ""
   },
   {
