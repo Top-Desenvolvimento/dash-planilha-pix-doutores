@@ -2240,8 +2240,8 @@
       "doutor_id": "3",
       "doutor": "Alexandre Favero",
       "credito_inicial": 1500.0,
-      "utilizado": 1164.0,
-      "credito_disponivel": 336.0,
+      "utilizado": 1500.0,
+      "credito_disponivel": 0.0,
       "pix_key": ""
     },
     {
@@ -2304,8 +2304,8 @@
       "doutor_id": "12",
       "doutor": "Dionathan Pohlmann",
       "credito_inicial": 6000.0,
-      "utilizado": 5250.0,
-      "credito_disponivel": 750.0,
+      "utilizado": 5460.0,
+      "credito_disponivel": 540.0,
       "pix_key": ""
     },
     {
