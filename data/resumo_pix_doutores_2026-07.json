@@ -1,10 +1,10 @@
 {
   "competencia": "2026-07",
-  "gerado_em": "2026-07-10T17:33:26.223535",
-  "quantidade_total": 194,
-  "valor_total": 29099.06,
-  "valor_total_descontado": 85.0,
-  "valor_total_pendente": 29014.06,
+  "gerado_em": "2026-07-10T19:13:36.161726",
+  "quantidade_total": 201,
+  "valor_total": 30033.06,
+  "valor_total_descontado": 269.0,
+  "valor_total_pendente": 29764.06,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -18,8 +18,8 @@
     },
     {
       "unidade": "Encantado",
-      "quantidade": 8,
-      "valor": 2417.0
+      "quantidade": 13,
+      "valor": 3167.0
     },
     {
       "unidade": "Farroupilha",
@@ -33,8 +33,8 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 39,
-      "valor": 4653.0
+      "quantidade": 41,
+      "valor": 4837.0
     },
     {
       "unidade": "Veranopolis",
@@ -100,8 +100,8 @@
     },
     {
       "doutor": "Murilo Debortoli",
-      "quantidade": 1,
-      "valor_descontado": 85.0
+      "quantidade": 3,
+      "valor_descontado": 269.0
     },
     {
       "doutor": "Nelson Vaccari",
@@ -110,7 +110,7 @@
     },
     {
       "doutor": "Nicoli Weber",
-      "quantidade": 3,
+      "quantidade": 8,
       "valor_descontado": 0.0
     },
     {
