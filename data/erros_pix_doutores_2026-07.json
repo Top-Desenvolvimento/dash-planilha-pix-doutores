@@ -1,14 +1,20 @@
 [
   {
+    "unidade": "Caxias",
+    "competencia": "2026-07",
+    "erro": "Menu Finanças não encontrado.",
+    "coletado_em": "2026-07-10T20:42:48.463923"
+  },
+  {
     "unidade": "Garibaldi",
     "competencia": "2026-07",
     "erro": "Menu Finanças não encontrado.",
-    "coletado_em": "2026-07-10T19:11:35.698806"
+    "coletado_em": "2026-07-10T20:46:51.084564"
   },
   {
     "unidade": "Ssdocai",
     "competencia": "2026-07",
     "erro": "Menu Finanças não encontrado.",
-    "coletado_em": "2026-07-10T19:12:36.572132"
+    "coletado_em": "2026-07-10T20:47:53.245577"
   }
 ]
