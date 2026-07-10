@@ -1,10 +1,10 @@
 {
   "competencia": "2026-07",
-  "gerado_em": "2026-07-10T15:42:45.247740",
-  "quantidade_total": 185,
-  "valor_total": 27612.06,
-  "valor_total_descontado": 0.0,
-  "valor_total_pendente": 27612.06,
+  "gerado_em": "2026-07-10T17:33:26.223535",
+  "quantidade_total": 194,
+  "valor_total": 29099.06,
+  "valor_total_descontado": 85.0,
+  "valor_total_pendente": 29014.06,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,8 +13,8 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 51,
-      "valor": 7319.34
+      "quantidade": 55,
+      "valor": 7854.34
     },
     {
       "unidade": "Encantado",
@@ -28,13 +28,13 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 30,
-      "valor": 4968.0
+      "quantidade": 31,
+      "valor": 5474.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 35,
-      "valor": 4207.0
+      "quantidade": 39,
+      "valor": 4653.0
     },
     {
       "unidade": "Veranopolis",
@@ -50,7 +50,7 @@
     },
     {
       "doutor": "Alexandre Favero",
-      "quantidade": 2,
+      "quantidade": 5,
       "valor_descontado": 0.0
     },
     {
@@ -65,17 +65,17 @@
     },
     {
       "doutor": "Felipe Lino",
-      "quantidade": 17,
+      "quantidade": 20,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Fernana Sozo",
-      "quantidade": 8,
+      "quantidade": 9,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 35,
+      "quantidade": 36,
       "valor_descontado": 0.0
     },
     {
@@ -97,6 +97,11 @@
       "doutor": "Morgana Zambiasi",
       "quantidade": 14,
       "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Murilo Debortoli",
+      "quantidade": 1,
+      "valor_descontado": 85.0
     },
     {
       "doutor": "Nelson Vaccari",
