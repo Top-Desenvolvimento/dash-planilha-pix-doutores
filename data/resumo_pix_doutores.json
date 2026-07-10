@@ -1261,11 +1261,11 @@
   },
   "2026-07": {
     "competencia": "2026-07",
-    "gerado_em": "2026-07-10T07:07:17.719652",
+    "gerado_em": "2026-07-10T10:36:00.631105",
     "quantidade_total": 183,
     "valor_total": 27375.06,
-    "valor_total_descontado": 210.0,
-    "valor_total_pendente": 27165.06,
+    "valor_total_descontado": 120.0,
+    "valor_total_pendente": 27255.06,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1317,7 +1317,7 @@
       {
         "doutor": "Dionathan Pohlmann",
         "quantidade": 2,
-        "valor_descontado": 210.0
+        "valor_descontado": 120.0
       },
       {
         "doutor": "Everlize Cipriani",
