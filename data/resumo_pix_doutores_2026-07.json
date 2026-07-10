@@ -1,10 +1,10 @@
 {
   "competencia": "2026-07",
-  "gerado_em": "2026-07-10T00:00:32.822169",
+  "gerado_em": "2026-07-10T03:27:52.061699",
   "quantidade_total": 183,
   "valor_total": 27375.06,
-  "valor_total_descontado": 546.0,
-  "valor_total_pendente": 26829.06,
+  "valor_total_descontado": 210.0,
+  "valor_total_pendente": 27165.06,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -51,7 +51,7 @@
     {
       "doutor": "Alexandre Favero",
       "quantidade": 2,
-      "valor_descontado": 336.0
+      "valor_descontado": 0.0
     },
     {
       "doutor": "Dionathan Pohlmann",
