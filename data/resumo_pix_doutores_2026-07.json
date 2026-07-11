@@ -1,10 +1,10 @@
 {
   "competencia": "2026-07",
-  "gerado_em": "2026-07-11T10:26:09.762123",
-  "quantidade_total": 229,
-  "valor_total": 34437.06,
+  "gerado_em": "2026-07-11T11:36:05.157250",
+  "quantidade_total": 235,
+  "valor_total": 35484.06,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 34437.06,
+  "valor_total_pendente": 35484.06,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -18,8 +18,8 @@
     },
     {
       "unidade": "Encantado",
-      "quantidade": 17,
-      "valor": 3892.0
+      "quantidade": 18,
+      "valor": 4012.0
     },
     {
       "unidade": "Farroupilha",
@@ -28,13 +28,13 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 37,
-      "valor": 6350.0
+      "quantidade": 41,
+      "valor": 7172.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 45,
-      "valor": 5276.0
+      "quantidade": 46,
+      "valor": 5381.0
     },
     {
       "unidade": "Veranopolis",
@@ -84,8 +84,13 @@
       "valor_descontado": 0.0
     },
     {
+      "doutor": "Indiamara Rech",
+      "quantidade": 2,
+      "valor_descontado": 0.0
+    },
+    {
       "doutor": "Karen Ramona Kuwer",
-      "quantidade": 5,
+      "quantidade": 6,
       "valor_descontado": 0.0
     },
     {
@@ -105,7 +110,7 @@
     },
     {
       "doutor": "Murilo Debortoli",
-      "quantidade": 5,
+      "quantidade": 6,
       "valor_descontado": 0.0
     },
     {
@@ -115,7 +120,7 @@
     },
     {
       "doutor": "Nicoli Weber",
-      "quantidade": 11,
+      "quantidade": 12,
       "valor_descontado": 0.0
     },
     {
@@ -125,7 +130,7 @@
     },
     {
       "doutor": "Tamara Macanan",
-      "quantidade": 23,
+      "quantidade": 24,
       "valor_descontado": 0.0
     },
     {
