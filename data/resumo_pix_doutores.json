@@ -1261,11 +1261,11 @@
   },
   "2026-07": {
     "competencia": "2026-07",
-    "gerado_em": "2026-07-11T12:41:09.422876",
-    "quantidade_total": 238,
-    "valor_total": 35884.06,
+    "gerado_em": "2026-07-11T14:15:55.195027",
+    "quantidade_total": 246,
+    "valor_total": 36985.06,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 35884.06,
+    "valor_total_pendente": 36985.06,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1279,23 +1279,23 @@
       },
       {
         "unidade": "Encantado",
-        "quantidade": 19,
-        "valor": 4132.0
+        "quantidade": 20,
+        "valor": 4237.0
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 41,
-        "valor": 6180.0
+        "quantidade": 44,
+        "valor": 6696.0
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 42,
-        "valor": 7297.0
+        "quantidade": 43,
+        "valor": 7492.0
       },
       {
         "unidade": "Soledade",
-        "quantidade": 46,
-        "valor": 5381.0
+        "quantidade": 49,
+        "valor": 5666.0
       },
       {
         "unidade": "Veranopolis",
@@ -1346,7 +1346,7 @@
       },
       {
         "doutor": "Indiamara Rech",
-        "quantidade": 3,
+        "quantidade": 4,
         "valor_descontado": 0.0
       },
       {
@@ -1356,7 +1356,7 @@
       },
       {
         "doutor": "Leticia Canabarro",
-        "quantidade": 2,
+        "quantidade": 4,
         "valor_descontado": 0.0
       },
       {
@@ -1371,7 +1371,7 @@
       },
       {
         "doutor": "Murilo Debortoli",
-        "quantidade": 6,
+        "quantidade": 7,
         "valor_descontado": 0.0
       },
       {
@@ -1381,7 +1381,7 @@
       },
       {
         "doutor": "Nicoli Weber",
-        "quantidade": 12,
+        "quantidade": 13,
         "valor_descontado": 0.0
       },
       {
@@ -1396,7 +1396,7 @@
       },
       {
         "doutor": "Thalia Vezzosi",
-        "quantidade": 14,
+        "quantidade": 17,
         "valor_descontado": 0.0
       },
       {
