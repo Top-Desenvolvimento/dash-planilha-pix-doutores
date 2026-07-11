@@ -1261,11 +1261,11 @@
   },
   "2026-07": {
     "competencia": "2026-07",
-    "gerado_em": "2026-07-11T15:23:17.569895",
-    "quantidade_total": 247,
-    "valor_total": 37115.06,
+    "gerado_em": "2026-07-11T16:21:02.443663",
+    "quantidade_total": 261,
+    "valor_total": 38838.06,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 37115.06,
+    "valor_total_pendente": 38838.06,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1284,8 +1284,8 @@
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 45,
-        "valor": 6826.0
+        "quantidade": 49,
+        "valor": 7344.0
       },
       {
         "unidade": "FloresDaCunha",
@@ -1299,8 +1299,8 @@
       },
       {
         "unidade": "Veranopolis",
-        "quantidade": 15,
-        "valor": 2840.22
+        "quantidade": 25,
+        "valor": 4045.22
       }
     ],
     "por_doutor": [
@@ -1396,7 +1396,7 @@
       },
       {
         "doutor": "Thalia Vezzosi",
-        "quantidade": 18,
+        "quantidade": 22,
         "valor_descontado": 0.0
       },
       {
@@ -1411,7 +1411,7 @@
       },
       {
         "doutor": "Valter Baldissera",
-        "quantidade": 9,
+        "quantidade": 19,
         "valor_descontado": 0.0
       }
     ]
