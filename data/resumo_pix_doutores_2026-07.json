@@ -1,10 +1,10 @@
 {
   "competencia": "2026-07",
-  "gerado_em": "2026-07-12T04:49:14.677521",
-  "quantidade_total": 212,
-  "valor_total": 31494.06,
+  "gerado_em": "2026-07-12T07:26:16.818327",
+  "quantidade_total": 261,
+  "valor_total": 38838.06,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 31494.06,
+  "valor_total_pendente": 38838.06,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -20,6 +20,11 @@
       "unidade": "Encantado",
       "quantidade": 20,
       "valor": 4237.0
+    },
+    {
+      "unidade": "Farroupilha",
+      "quantidade": 49,
+      "valor": 7344.0
     },
     {
       "unidade": "FloresDaCunha",
@@ -39,6 +44,11 @@
   ],
   "por_doutor": [
     {
+      "doutor": "Adriele da Silva",
+      "quantidade": 3,
+      "valor_descontado": 0.0
+    },
+    {
       "doutor": "Alexandre Favero",
       "quantidade": 6,
       "valor_descontado": 0.0
@@ -46,6 +56,11 @@
     {
       "doutor": "Dionathan Pohlmann",
       "quantidade": 2,
+      "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Everlize Cipriani",
+      "quantidade": 4,
       "valor_descontado": 0.0
     },
     {
@@ -60,7 +75,12 @@
     },
     {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 43,
+      "quantidade": 44,
+      "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Giovana Gasparini",
+      "quantidade": 19,
       "valor_descontado": 0.0
     },
     {
@@ -111,6 +131,11 @@
     {
       "doutor": "Tamara Macanan",
       "quantidade": 24,
+      "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Thalia Vezzosi",
+      "quantidade": 22,
       "valor_descontado": 0.0
     },
     {
