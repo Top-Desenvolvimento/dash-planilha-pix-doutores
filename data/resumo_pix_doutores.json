@@ -1261,11 +1261,11 @@
   },
   "2026-07": {
     "competencia": "2026-07",
-    "gerado_em": "2026-07-13T20:00:51.025197",
-    "quantidade_total": 286,
-    "valor_total": 42110.06,
+    "gerado_em": "2026-07-13T21:04:52.231249",
+    "quantidade_total": 289,
+    "valor_total": 42528.06,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 42110.06,
+    "valor_total_pendente": 42528.06,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1275,12 +1275,12 @@
       {
         "unidade": "Caxias",
         "quantidade": 70,
-        "valor": 9502.34
+        "valor": 9575.34
       },
       {
         "unidade": "Encantado",
-        "quantidade": 24,
-        "valor": 4661.0
+        "quantidade": 26,
+        "valor": 4901.0
       },
       {
         "unidade": "Farroupilha",
@@ -1294,8 +1294,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 49,
-        "valor": 5666.0
+        "quantidade": 50,
+        "valor": 5771.0
       },
       {
         "unidade": "Veranopolis",
@@ -1321,7 +1321,7 @@
       },
       {
         "doutor": "Dra.Júlia Raquel Nardi",
-        "quantidade": 4,
+        "quantidade": 6,
         "valor_descontado": 0.0
       },
       {
@@ -1341,7 +1341,7 @@
       },
       {
         "doutor": "Franciele Pedrotti",
-        "quantidade": 49,
+        "quantidade": 50,
         "valor_descontado": 0.0
       },
       {
@@ -1361,17 +1361,12 @@
       },
       {
         "doutor": "Leticia Canabarro",
-        "quantidade": 4,
+        "quantidade": 5,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Luisa Moraes Lucas",
         "quantidade": 16,
-        "valor_descontado": 0.0
-      },
-      {
-        "doutor": "MEI",
-        "quantidade": 1,
         "valor_descontado": 0.0
       },
       {
