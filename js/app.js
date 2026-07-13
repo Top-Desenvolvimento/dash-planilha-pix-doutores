@@ -715,6 +715,11 @@ async function carregarDashboardInterno() {
   if (byId("badgeArquivo")) {
     byId("badgeArquivo").textContent = dashboardData?.arquivo_origem ? `Base: ${dashboardData.arquivo_origem}` : "Base não informada";
   }
+  if (byId("badgeAtualizado")) {
+    byId("badgeAtualizado").textContent = dashboardData?.gerado_em
+      ? `Última atualização: ${dashboardData.gerado_em}`
+      : "Última atualização: -";
+  }
 
   preencherBadgeUsuario();
   preencherFiltroMes();
