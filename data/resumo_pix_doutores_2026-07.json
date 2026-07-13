@@ -1,10 +1,10 @@
 {
   "competencia": "2026-07",
-  "gerado_em": "2026-07-13T21:04:52.231249",
-  "quantidade_total": 289,
-  "valor_total": 42528.06,
+  "gerado_em": "2026-07-13T22:10:46.372216",
+  "quantidade_total": 298,
+  "valor_total": 43817.06,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 42528.06,
+  "valor_total_pendente": 43817.06,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,13 +13,13 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 70,
-      "valor": 9575.34
+      "quantidade": 74,
+      "valor": 9797.34
     },
     {
       "unidade": "Encantado",
-      "quantidade": 26,
-      "valor": 4901.0
+      "quantidade": 28,
+      "valor": 5116.0
     },
     {
       "unidade": "Farroupilha",
@@ -33,13 +33,13 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 50,
-      "valor": 5771.0
+      "quantidade": 52,
+      "valor": 5981.0
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 25,
-      "valor": 4045.22
+      "quantidade": 26,
+      "valor": 4687.22
     }
   ],
   "por_doutor": [
@@ -60,7 +60,7 @@
     },
     {
       "doutor": "Dra.Júlia Raquel Nardi",
-      "quantidade": 6,
+      "quantidade": 8,
       "valor_descontado": 0.0
     },
     {
@@ -70,7 +70,7 @@
     },
     {
       "doutor": "Felipe Lino",
-      "quantidade": 22,
+      "quantidade": 23,
       "valor_descontado": 0.0
     },
     {
@@ -80,7 +80,7 @@
     },
     {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 50,
+      "quantidade": 54,
       "valor_descontado": 0.0
     },
     {
@@ -115,7 +115,7 @@
     },
     {
       "doutor": "Murilo Debortoli",
-      "quantidade": 7,
+      "quantidade": 8,
       "valor_descontado": 0.0
     },
     {
@@ -155,7 +155,7 @@
     },
     {
       "doutor": "Valter Baldissera",
-      "quantidade": 19,
+      "quantidade": 20,
       "valor_descontado": 0.0
     }
   ]
