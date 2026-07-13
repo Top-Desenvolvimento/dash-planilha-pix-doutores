@@ -1,15 +1,15 @@
 {
   "competencia": "2026-07",
-  "gerado_em": "2026-07-13T13:48:25.487158",
-  "quantidade_total": 264,
-  "valor_total": 39238.06,
+  "gerado_em": "2026-07-13T16:21:21.966183",
+  "quantidade_total": 267,
+  "valor_total": 39556.06,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 39238.06,
+  "valor_total_pendente": 39556.06,
   "por_unidade": [
     {
       "unidade": "Bento",
-      "quantidade": 11,
-      "valor": 1284.5
+      "quantidade": 14,
+      "valor": 1602.5
     },
     {
       "unidade": "Caxias",
@@ -115,7 +115,7 @@
     },
     {
       "doutor": "Nelson Vaccari",
-      "quantidade": 14,
+      "quantidade": 17,
       "valor_descontado": 0.0
     },
     {
