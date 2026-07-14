@@ -1,10 +1,10 @@
 {
   "competencia": "2026-07",
-  "gerado_em": "2026-07-14T20:24:34.963836",
-  "quantidade_total": 322,
-  "valor_total": 46717.06,
-  "valor_total_descontado": 0.0,
-  "valor_total_pendente": 46717.06,
+  "gerado_em": "2026-07-14T21:34:32.587138",
+  "quantidade_total": 329,
+  "valor_total": 47606.06,
+  "valor_total_descontado": 85.0,
+  "valor_total_pendente": 47521.06,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -18,23 +18,23 @@
     },
     {
       "unidade": "Encantado",
-      "quantidade": 28,
-      "valor": 5116.0
+      "quantidade": 30,
+      "valor": 5458.0
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 55,
-      "valor": 8087.0
+      "quantidade": 56,
+      "valor": 8234.0
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 51,
-      "valor": 8675.0
+      "quantidade": 53,
+      "valor": 8880.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 57,
-      "valor": 6441.0
+      "quantidade": 59,
+      "valor": 6636.0
     },
     {
       "unidade": "Veranopolis",
@@ -60,7 +60,7 @@
     },
     {
       "doutor": "Dra.Júlia Raquel Nardi",
-      "quantidade": 8,
+      "quantidade": 10,
       "valor_descontado": 0.0
     },
     {
@@ -80,7 +80,7 @@
     },
     {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 63,
+      "quantidade": 64,
       "valor_descontado": 0.0
     },
     {
@@ -89,8 +89,13 @@
       "valor_descontado": 0.0
     },
     {
+      "doutor": "Gustavo Lourenço Ongaratto",
+      "quantidade": 1,
+      "valor_descontado": 85.0
+    },
+    {
       "doutor": "Indiamara Rech",
-      "quantidade": 12,
+      "quantidade": 14,
       "valor_descontado": 0.0
     },
     {
@@ -105,7 +110,7 @@
     },
     {
       "doutor": "Luisa Moraes Lucas",
-      "quantidade": 21,
+      "quantidade": 22,
       "valor_descontado": 0.0
     },
     {
