@@ -1261,11 +1261,11 @@
   },
   "2026-07": {
     "competencia": "2026-07",
-    "gerado_em": "2026-07-14T21:34:32.587138",
-    "quantidade_total": 329,
-    "valor_total": 47606.06,
-    "valor_total_descontado": 85.0,
-    "valor_total_pendente": 47521.06,
+    "gerado_em": "2026-07-14T22:40:59.384393",
+    "quantidade_total": 338,
+    "valor_total": 48878.06,
+    "valor_total_descontado": 304.0,
+    "valor_total_pendente": 48574.06,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1284,18 +1284,18 @@
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 56,
-        "valor": 8234.0
+        "quantidade": 60,
+        "valor": 8868.0
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 53,
-        "valor": 8880.0
+        "quantidade": 57,
+        "valor": 9393.0
       },
       {
         "unidade": "Soledade",
-        "quantidade": 59,
-        "valor": 6636.0
+        "quantidade": 60,
+        "valor": 6761.0
       },
       {
         "unidade": "Veranopolis",
@@ -1315,6 +1315,16 @@
         "valor_descontado": 0.0
       },
       {
+        "doutor": "Ana Cristina Corso",
+        "quantidade": 2,
+        "valor_descontado": 219.0
+      },
+      {
+        "doutor": "Diogo Cemin Amarante",
+        "quantidade": 1,
+        "valor_descontado": 0.0
+      },
+      {
         "doutor": "Dionathan Pohlmann",
         "quantidade": 2,
         "valor_descontado": 0.0
@@ -1326,7 +1336,7 @@
       },
       {
         "doutor": "Everlize Cipriani",
-        "quantidade": 9,
+        "quantidade": 11,
         "valor_descontado": 0.0
       },
       {
@@ -1356,7 +1366,7 @@
       },
       {
         "doutor": "Indiamara Rech",
-        "quantidade": 14,
+        "quantidade": 16,
         "valor_descontado": 0.0
       },
       {
@@ -1416,7 +1426,7 @@
       },
       {
         "doutor": "TOP",
-        "quantidade": 2,
+        "quantidade": 4,
         "valor_descontado": 0.0
       },
       {
