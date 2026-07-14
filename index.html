@@ -170,13 +170,59 @@
       // ⚠️ Troque estes dois valores pelos seus, antes de salvar:
       var WORKER_URL = "https://dashboard-pixdoutores-trigger.topesteticabucal-gerencia2.workers.dev/";
       var DASHBOARD_SECRET = "pixdoutores-2026-k9m";
+      var intervaloCountdown = null;
+
+      function formatarTempo(ms) {
+        var totalSegundos = Math.ceil(ms / 1000);
+        var minutos = Math.floor(totalSegundos / 60);
+        var segundos = totalSegundos % 60;
+        return minutos + ":" + String(segundos).padStart(2, "0");
+      }
+
+      function iniciarCountdown(btn, textoBase, restanteMs) {
+        if (intervaloCountdown) clearInterval(intervaloCountdown);
+        var fim = Date.now() + restanteMs;
+        btn.disabled = true;
+
+        function atualizar() {
+          var restante = fim - Date.now();
+          if (restante <= 0) {
+            clearInterval(intervaloCountdown);
+            intervaloCountdown = null;
+            btn.disabled = false;
+            btn.textContent = textoBase;
+            return;
+          }
+          btn.textContent = "⏳ Aguarde " + formatarTempo(restante);
+        }
+
+        atualizar();
+        intervaloCountdown = setInterval(atualizar, 1000);
+      }
+
+      async function consultarCooldown(btn, textoBase) {
+        try {
+          var resp = await fetch(WORKER_URL, { method: "GET" });
+          var data = await resp.json();
+          if (data.restante_ms > 0) {
+            iniciarCountdown(btn, textoBase, data.restante_ms);
+          }
+        } catch (e) {
+          console.error("Erro ao consultar status do cooldown:", e);
+        }
+      }
 
       document.addEventListener("DOMContentLoaded", function () {
         var btn = document.getElementById("btnAtualizarDados");
         if (!btn) return;
+        var textoBase = btn.textContent;
+
+        // Assim que a página abre, já mostra o cronômetro pra qualquer
+        // pessoa, caso alguém tenha atualizado há pouco tempo.
+        consultarCooldown(btn, textoBase);
 
         btn.addEventListener("click", async function () {
-          var textoOriginal = btn.textContent;
+          if (btn.disabled) return;
           btn.disabled = true;
           btn.textContent = "Iniciando...";
           try {
@@ -189,15 +235,23 @@
               body: JSON.stringify({ workflow: "coleta_pix.yml" }),
             });
             var data = await resp.json();
-            btn.textContent = data.ok ? "✅ Atualização iniciada!" : "❌ Erro ao iniciar";
-            if (!data.ok) console.error(data.erro);
+
+            if (data.ok) {
+              btn.textContent = "✅ Atualização iniciada!";
+              setTimeout(function () {
+                iniciarCountdown(btn, textoBase, data.restante_ms || 10 * 60 * 1000);
+              }, 2000);
+            } else if (data.cooldown) {
+              iniciarCountdown(btn, textoBase, data.restante_ms);
+            } else {
+              btn.textContent = "❌ Erro ao iniciar";
+              console.error(data.erro);
+              setTimeout(function () { btn.disabled = false; btn.textContent = textoBase; }, 5000);
+            }
           } catch (e) {
             btn.textContent = "❌ Erro de conexão";
+            setTimeout(function () { btn.disabled = false; btn.textContent = textoBase; }, 5000);
           }
-          setTimeout(function () {
-            btn.disabled = false;
-            btn.textContent = textoOriginal;
-          }, 15000);
         });
       });
     })();
