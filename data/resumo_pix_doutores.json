@@ -1261,11 +1261,11 @@
   },
   "2026-07": {
     "competencia": "2026-07",
-    "gerado_em": "2026-07-14T17:54:41.846241",
-    "quantidade_total": 313,
-    "valor_total": 45541.06,
+    "gerado_em": "2026-07-14T19:02:25.657593",
+    "quantidade_total": 317,
+    "valor_total": 46009.06,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 45541.06,
+    "valor_total_pendente": 46009.06,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1274,8 +1274,8 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 79,
-        "valor": 10427.34
+        "quantidade": 80,
+        "valor": 10547.34
       },
       {
         "unidade": "Encantado",
@@ -1284,8 +1284,8 @@
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 52,
-        "valor": 7724.0
+        "quantidade": 54,
+        "valor": 7967.0
       },
       {
         "unidade": "FloresDaCunha",
@@ -1294,8 +1294,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 55,
-        "valor": 6241.0
+        "quantidade": 56,
+        "valor": 6346.0
       },
       {
         "unidade": "Veranopolis",
@@ -1326,7 +1326,7 @@
       },
       {
         "doutor": "Everlize Cipriani",
-        "quantidade": 6,
+        "quantidade": 8,
         "valor_descontado": 0.0
       },
       {
@@ -1341,7 +1341,7 @@
       },
       {
         "doutor": "Franciele Pedrotti",
-        "quantidade": 60,
+        "quantidade": 61,
         "valor_descontado": 0.0
       },
       {
@@ -1366,7 +1366,7 @@
       },
       {
         "doutor": "Luisa Moraes Lucas",
-        "quantidade": 19,
+        "quantidade": 20,
         "valor_descontado": 0.0
       },
       {
