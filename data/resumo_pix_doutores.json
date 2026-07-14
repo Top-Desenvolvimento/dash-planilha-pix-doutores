@@ -1261,11 +1261,11 @@
   },
   "2026-07": {
     "competencia": "2026-07",
-    "gerado_em": "2026-07-14T15:11:13.640375",
-    "quantidade_total": 306,
-    "valor_total": 44862.06,
+    "gerado_em": "2026-07-14T16:43:27.564916",
+    "quantidade_total": 260,
+    "valor_total": 36740.06,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 44862.06,
+    "valor_total_pendente": 36740.06,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1286,11 +1286,6 @@
         "unidade": "Farroupilha",
         "quantidade": 52,
         "valor": 7724.0
-      },
-      {
-        "unidade": "FloresDaCunha",
-        "quantidade": 46,
-        "valor": 8122.0
       },
       {
         "unidade": "Soledade",
@@ -1335,11 +1330,6 @@
         "valor_descontado": 0.0
       },
       {
-        "doutor": "Fernana Sozo",
-        "quantidade": 10,
-        "valor_descontado": 0.0
-      },
-      {
         "doutor": "Franciele Pedrotti",
         "quantidade": 59,
         "valor_descontado": 0.0
@@ -1347,16 +1337,6 @@
       {
         "doutor": "Giovana Gasparini",
         "quantidade": 19,
-        "valor_descontado": 0.0
-      },
-      {
-        "doutor": "Indiamara Rech",
-        "quantidade": 7,
-        "valor_descontado": 0.0
-      },
-      {
-        "doutor": "Karen Ramona Kuwer",
-        "quantidade": 6,
         "valor_descontado": 0.0
       },
       {
@@ -1396,7 +1376,7 @@
       },
       {
         "doutor": "Tamara Macanan",
-        "quantidade": 24,
+        "quantidade": 1,
         "valor_descontado": 0.0
       },
       {
