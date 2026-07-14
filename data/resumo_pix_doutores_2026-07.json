@@ -1,10 +1,10 @@
 {
   "competencia": "2026-07",
-  "gerado_em": "2026-07-14T16:43:27.564916",
-  "quantidade_total": 260,
-  "valor_total": 36740.06,
+  "gerado_em": "2026-07-14T17:06:44.967079",
+  "quantidade_total": 308,
+  "valor_total": 45002.06,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 36740.06,
+  "valor_total_pendente": 45002.06,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -27,9 +27,14 @@
       "valor": 7724.0
     },
     {
+      "unidade": "FloresDaCunha",
+      "quantidade": 47,
+      "valor": 8242.0
+    },
+    {
       "unidade": "Soledade",
-      "quantidade": 53,
-      "valor": 6101.0
+      "quantidade": 54,
+      "valor": 6121.0
     },
     {
       "unidade": "Veranopolis",
@@ -69,6 +74,11 @@
       "valor_descontado": 0.0
     },
     {
+      "doutor": "Fernana Sozo",
+      "quantidade": 10,
+      "valor_descontado": 0.0
+    },
+    {
       "doutor": "Franciele Pedrotti",
       "quantidade": 59,
       "valor_descontado": 0.0
@@ -79,13 +89,23 @@
       "valor_descontado": 0.0
     },
     {
+      "doutor": "Indiamara Rech",
+      "quantidade": 8,
+      "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Karen Ramona Kuwer",
+      "quantidade": 6,
+      "valor_descontado": 0.0
+    },
+    {
       "doutor": "Leticia Canabarro",
       "quantidade": 5,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Luisa Moraes Lucas",
-      "quantidade": 17,
+      "quantidade": 18,
       "valor_descontado": 0.0
     },
     {
@@ -115,7 +135,7 @@
     },
     {
       "doutor": "Tamara Macanan",
-      "quantidade": 1,
+      "quantidade": 24,
       "valor_descontado": 0.0
     },
     {
