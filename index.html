@@ -172,6 +172,8 @@
       var DASHBOARD_SECRET = "pixdoutores-2026-k9m";
       var intervaloCountdown = null;
 
+      console.log("[cooldown] script carregado. WORKER_URL =", WORKER_URL);
+
       function formatarTempo(ms) {
         var totalSegundos = Math.ceil(ms / 1000);
         var minutos = Math.floor(totalSegundos / 60);
@@ -180,6 +182,7 @@
       }
 
       function iniciarCountdown(btn, textoBase, restanteMs) {
+        console.log("[cooldown] iniciarCountdown chamado com restanteMs =", restanteMs);
         if (intervaloCountdown) clearInterval(intervaloCountdown);
         var fim = Date.now() + restanteMs;
         btn.disabled = true;
@@ -202,26 +205,28 @@
 
       async function consultarCooldown(btn, textoBase) {
         try {
+          console.log("[cooldown] consultando status inicial...");
           var resp = await fetch(WORKER_URL, { method: "GET" });
           var data = await resp.json();
+          console.log("[cooldown] resposta do GET:", data);
           if (data.restante_ms > 0) {
             iniciarCountdown(btn, textoBase, data.restante_ms);
           }
         } catch (e) {
-          console.error("Erro ao consultar status do cooldown:", e);
+          console.error("[cooldown] Erro ao consultar status do cooldown:", e);
         }
       }
 
       document.addEventListener("DOMContentLoaded", function () {
         var btn = document.getElementById("btnAtualizarDados");
-        if (!btn) return;
+        if (!btn) { console.warn("[cooldown] botão #btnAtualizarDados não encontrado no HTML!"); return; }
         var textoBase = btn.textContent;
+        console.log("[cooldown] botão encontrado, texto base =", textoBase);
 
-        // Assim que a página abre, já mostra o cronômetro pra qualquer
-        // pessoa, caso alguém tenha atualizado há pouco tempo.
         consultarCooldown(btn, textoBase);
 
         btn.addEventListener("click", async function () {
+          console.log("[cooldown] botão clicado. disabled?", btn.disabled);
           if (btn.disabled) return;
           btn.disabled = true;
           btn.textContent = "Iniciando...";
@@ -235,20 +240,25 @@
               body: JSON.stringify({ workflow: "coleta_pix.yml" }),
             });
             var data = await resp.json();
+            console.log("[cooldown] resposta do POST:", resp.status, data);
 
             if (data.ok) {
               btn.textContent = "✅ Atualização iniciada!";
+              console.log("[cooldown] vou chamar iniciarCountdown em 2 segundos...");
               setTimeout(function () {
+                console.log("[cooldown] chamando iniciarCountdown agora.");
                 iniciarCountdown(btn, textoBase, data.restante_ms || 10 * 60 * 1000);
               }, 2000);
             } else if (data.cooldown) {
+              console.log("[cooldown] servidor disse que ainda está em cooldown.");
               iniciarCountdown(btn, textoBase, data.restante_ms);
             } else {
               btn.textContent = "❌ Erro ao iniciar";
-              console.error(data.erro);
+              console.error("[cooldown] erro retornado pelo Worker:", data.erro);
               setTimeout(function () { btn.disabled = false; btn.textContent = textoBase; }, 5000);
             }
           } catch (e) {
+            console.error("[cooldown] Erro de conexão ao chamar o Worker:", e);
             btn.textContent = "❌ Erro de conexão";
             setTimeout(function () { btn.disabled = false; btn.textContent = textoBase; }, 5000);
           }
