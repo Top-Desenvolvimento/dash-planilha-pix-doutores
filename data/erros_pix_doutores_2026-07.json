@@ -1,14 +1,20 @@
 [
   {
+    "unidade": "Encantado",
+    "competencia": "2026-07",
+    "erro": "Menu Finanças não encontrado.",
+    "coletado_em": "2026-07-15T22:18:24.641373"
+  },
+  {
     "unidade": "Garibaldi",
     "competencia": "2026-07",
     "erro": "Menu Finanças não encontrado.",
-    "coletado_em": "2026-07-15T21:15:26.647367"
+    "coletado_em": "2026-07-15T22:19:29.493316"
   },
   {
     "unidade": "Ssdocai",
     "competencia": "2026-07",
     "erro": "Menu Finanças não encontrado.",
-    "coletado_em": "2026-07-15T21:16:30.072041"
+    "coletado_em": "2026-07-15T22:20:32.353341"
   }
 ]
