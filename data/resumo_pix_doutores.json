@@ -1261,11 +1261,11 @@
   },
   "2026-07": {
     "competencia": "2026-07",
-    "gerado_em": "2026-07-15T20:03:44.207036",
-    "quantidade_total": 355,
-    "valor_total": 51185.61,
-    "valor_total_descontado": 57.0,
-    "valor_total_pendente": 51128.61,
+    "gerado_em": "2026-07-15T21:17:32.856807",
+    "quantidade_total": 359,
+    "valor_total": 52168.61,
+    "valor_total_descontado": 0.0,
+    "valor_total_pendente": 52168.61,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1289,8 +1289,8 @@
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 63,
-        "valor": 10120.0
+        "quantidade": 66,
+        "valor": 10484.0
       },
       {
         "unidade": "Soledade",
@@ -1299,8 +1299,8 @@
       },
       {
         "unidade": "Veranopolis",
-        "quantidade": 27,
-        "valor": 4782.22
+        "quantidade": 28,
+        "valor": 5401.22
       }
     ],
     "por_doutor": [
@@ -1316,7 +1316,7 @@
       },
       {
         "doutor": "Ana Cristina Corso",
-        "quantidade": 8,
+        "quantidade": 10,
         "valor_descontado": 0.0
       },
       {
@@ -1362,7 +1362,7 @@
       {
         "doutor": "Gustavo Lourenço Ongaratto",
         "quantidade": 7,
-        "valor_descontado": 57.0
+        "valor_descontado": 0.0
       },
       {
         "doutor": "Indiamara Rech",
@@ -1426,12 +1426,12 @@
       },
       {
         "doutor": "TOP",
-        "quantidade": 2,
+        "quantidade": 3,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Valter Baldissera",
-        "quantidade": 21,
+        "quantidade": 22,
         "valor_descontado": 0.0
       }
     ]
