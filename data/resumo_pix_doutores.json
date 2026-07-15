@@ -1261,11 +1261,11 @@
   },
   "2026-07": {
     "competencia": "2026-07",
-    "gerado_em": "2026-07-15T12:29:27.746739",
-    "quantidade_total": 338,
-    "valor_total": 48878.06,
+    "gerado_em": "2026-07-15T14:27:07.932304",
+    "quantidade_total": 339,
+    "valor_total": 49131.61,
     "valor_total_descontado": 85.0,
-    "valor_total_pendente": 48793.06,
+    "valor_total_pendente": 49046.61,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1274,8 +1274,8 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 82,
-        "valor": 10941.34
+        "quantidade": 83,
+        "valor": 11194.34
       },
       {
         "unidade": "Encantado",
@@ -1285,7 +1285,7 @@
       {
         "unidade": "Farroupilha",
         "quantidade": 60,
-        "valor": 8868.0
+        "valor": 8868.55
       },
       {
         "unidade": "FloresDaCunha",
@@ -1351,7 +1351,7 @@
       },
       {
         "doutor": "Franciele Pedrotti",
-        "quantidade": 64,
+        "quantidade": 65,
         "valor_descontado": 0.0
       },
       {
