@@ -1,10 +1,10 @@
 {
   "competencia": "2026-07",
-  "gerado_em": "2026-07-15T17:41:29.803145",
-  "quantidade_total": 347,
-  "valor_total": 50239.61,
-  "valor_total_descontado": 561.0,
-  "valor_total_pendente": 49678.61,
+  "gerado_em": "2026-07-15T18:51:27.128303",
+  "quantidade_total": 354,
+  "valor_total": 51090.61,
+  "valor_total_descontado": 886.0,
+  "valor_total_pendente": 50204.61,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,8 +13,8 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 83,
-      "valor": 11194.34
+      "quantidade": 85,
+      "valor": 11392.34
     },
     {
       "unidade": "Encantado",
@@ -28,13 +28,13 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 62,
-      "valor": 10025.0
+      "quantidade": 63,
+      "valor": 10120.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 63,
-      "valor": 7237.0
+      "quantidade": 67,
+      "valor": 7795.0
     },
     {
       "unidade": "Veranopolis",
@@ -55,7 +55,7 @@
     },
     {
       "doutor": "Ana Cristina Corso",
-      "quantidade": 7,
+      "quantidade": 8,
       "valor_descontado": 0.0
     },
     {
@@ -90,7 +90,7 @@
     },
     {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 67,
+      "quantidade": 69,
       "valor_descontado": 0.0
     },
     {
@@ -100,8 +100,8 @@
     },
     {
       "doutor": "Gustavo Lourenço Ongaratto",
-      "quantidade": 4,
-      "valor_descontado": 561.0
+      "quantidade": 7,
+      "valor_descontado": 886.0
     },
     {
       "doutor": "Indiamara Rech",
@@ -120,7 +120,7 @@
     },
     {
       "doutor": "Luisa Moraes Lucas",
-      "quantidade": 22,
+      "quantidade": 23,
       "valor_descontado": 0.0
     },
     {
