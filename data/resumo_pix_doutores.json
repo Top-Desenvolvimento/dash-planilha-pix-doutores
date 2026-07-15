@@ -1261,11 +1261,11 @@
   },
   "2026-07": {
     "competencia": "2026-07",
-    "gerado_em": "2026-07-15T22:21:35.958546",
-    "quantidade_total": 330,
-    "valor_total": 46805.61,
+    "gerado_em": "2026-07-15T23:25:03.734953",
+    "quantidade_total": 360,
+    "valor_total": 52263.61,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 46805.61,
+    "valor_total_pendente": 52263.61,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1276,6 +1276,11 @@
         "unidade": "Caxias",
         "quantidade": 85,
         "valor": 11392.34
+      },
+      {
+        "unidade": "Encantado",
+        "quantidade": 30,
+        "valor": 5458.0
       },
       {
         "unidade": "Farroupilha",
@@ -1322,6 +1327,11 @@
       {
         "doutor": "Dionathan Pohlmann",
         "quantidade": 2,
+        "valor_descontado": 0.0
+      },
+      {
+        "doutor": "Dra.Júlia Raquel Nardi",
+        "quantidade": 10,
         "valor_descontado": 0.0
       },
       {
@@ -1390,6 +1400,11 @@
         "valor_descontado": 0.0
       },
       {
+        "doutor": "Nicoli Weber",
+        "quantidade": 13,
+        "valor_descontado": 0.0
+      },
+      {
         "doutor": "Sofie Owens",
         "quantidade": 1,
         "valor_descontado": 0.0
@@ -1405,8 +1420,13 @@
         "valor_descontado": 0.0
       },
       {
+        "doutor": "Thiany Cristofoli",
+        "quantidade": 5,
+        "valor_descontado": 0.0
+      },
+      {
         "doutor": "TOP",
-        "quantidade": 1,
+        "quantidade": 3,
         "valor_descontado": 0.0
       },
       {
