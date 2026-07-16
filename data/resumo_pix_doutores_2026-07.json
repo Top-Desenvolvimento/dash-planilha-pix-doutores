@@ -1,10 +1,10 @@
 {
   "competencia": "2026-07",
-  "gerado_em": "2026-07-16T19:57:19.865781",
-  "quantidade_total": 375,
-  "valor_total": 54398.11,
+  "gerado_em": "2026-07-16T20:31:37.501073",
+  "quantidade_total": 377,
+  "valor_total": 55495.11,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 54398.11,
+  "valor_total_pendente": 55495.11,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -28,8 +28,8 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 72,
-      "valor": 11193.0
+      "quantidade": 73,
+      "valor": 12175.0
     },
     {
       "unidade": "Soledade",
@@ -38,8 +38,8 @@
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 29,
-      "valor": 5486.22
+      "quantidade": 30,
+      "valor": 5601.22
     }
   ],
   "por_doutor": [
@@ -55,7 +55,7 @@
     },
     {
       "doutor": "Ana Cristina Corso",
-      "quantidade": 15,
+      "quantidade": 16,
       "valor_descontado": 0.0
     },
     {
@@ -166,6 +166,11 @@
     {
       "doutor": "Thiany Cristofoli",
       "quantidade": 6,
+      "valor_descontado": 0.0
+    },
+    {
+      "doutor": "TOP",
+      "quantidade": 1,
       "valor_descontado": 0.0
     },
     {
