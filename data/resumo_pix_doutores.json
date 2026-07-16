@@ -1261,7 +1261,7 @@
   },
   "2026-07": {
     "competencia": "2026-07",
-    "gerado_em": "2026-07-16T20:31:37.501073",
+    "gerado_em": "2026-07-16T20:53:34.976422",
     "quantidade_total": 377,
     "valor_total": 55495.11,
     "valor_total_descontado": 0.0,
@@ -1391,7 +1391,7 @@
       },
       {
         "doutor": "Morgana Zambiasi",
-        "quantidade": 14,
+        "quantidade": 15,
         "valor_descontado": 0.0
       },
       {
@@ -1427,11 +1427,6 @@
       {
         "doutor": "Thiany Cristofoli",
         "quantidade": 6,
-        "valor_descontado": 0.0
-      },
-      {
-        "doutor": "TOP",
-        "quantidade": 1,
         "valor_descontado": 0.0
       },
       {
