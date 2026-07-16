@@ -1261,11 +1261,11 @@
   },
   "2026-07": {
     "competencia": "2026-07",
-    "gerado_em": "2026-07-16T21:57:29.518194",
-    "quantidade_total": 379,
-    "valor_total": 55754.11,
-    "valor_total_descontado": 0.0,
-    "valor_total_pendente": 55754.11,
+    "gerado_em": "2026-07-16T22:58:04.395757",
+    "quantidade_total": 349,
+    "valor_total": 50218.61,
+    "valor_total_descontado": 195.0,
+    "valor_total_pendente": 50023.61,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1278,19 +1278,14 @@
         "valor": 11701.34
       },
       {
-        "unidade": "Encantado",
-        "quantidade": 33,
-        "valor": 6060.5
-      },
-      {
         "unidade": "Farroupilha",
         "quantidade": 60,
         "valor": 8868.55
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 73,
-        "valor": 12175.0
+        "quantidade": 74,
+        "valor": 12370.0
       },
       {
         "unidade": "Soledade",
@@ -1299,8 +1294,8 @@
       },
       {
         "unidade": "Veranopolis",
-        "quantidade": 31,
-        "valor": 5740.22
+        "quantidade": 33,
+        "valor": 6070.22
       }
     ],
     "por_doutor": [
@@ -1327,11 +1322,6 @@
       {
         "doutor": "Dionathan Pohlmann",
         "quantidade": 2,
-        "valor_descontado": 0.0
-      },
-      {
-        "doutor": "Dra.Júlia Raquel Nardi",
-        "quantidade": 10,
         "valor_descontado": 0.0
       },
       {
@@ -1375,11 +1365,6 @@
         "valor_descontado": 0.0
       },
       {
-        "doutor": "Julia Raquel Nardi",
-        "quantidade": 2,
-        "valor_descontado": 0.0
-      },
-      {
         "doutor": "Karen Ramona Kuwer",
         "quantidade": 6,
         "valor_descontado": 0.0
@@ -1388,6 +1373,11 @@
         "doutor": "Leticia Canabarro",
         "quantidade": 5,
         "valor_descontado": 0.0
+      },
+      {
+        "doutor": "Letícia Cauzzi",
+        "quantidade": 1,
+        "valor_descontado": 195.0
       },
       {
         "doutor": "Luisa Moraes Lucas",
@@ -1410,11 +1400,6 @@
         "valor_descontado": 0.0
       },
       {
-        "doutor": "Nicoli Weber",
-        "quantidade": 15,
-        "valor_descontado": 0.0
-      },
-      {
         "doutor": "Sofie Owens",
         "quantidade": 1,
         "valor_descontado": 0.0
@@ -1430,13 +1415,8 @@
         "valor_descontado": 0.0
       },
       {
-        "doutor": "Thiany Cristofoli",
-        "quantidade": 6,
-        "valor_descontado": 0.0
-      },
-      {
         "doutor": "Valter Baldissera",
-        "quantidade": 24,
+        "quantidade": 26,
         "valor_descontado": 0.0
       },
       {
