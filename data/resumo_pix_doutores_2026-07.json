@@ -1,10 +1,10 @@
 {
   "competencia": "2026-07",
-  "gerado_em": "2026-07-16T12:14:17.964749",
-  "quantidade_total": 360,
-  "valor_total": 52263.61,
+  "gerado_em": "2026-07-16T14:29:53.192261",
+  "quantidade_total": 363,
+  "valor_total": 52583.61,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 52263.61,
+  "valor_total_pendente": 52583.61,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -28,8 +28,8 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 67,
-      "valor": 10579.0
+      "quantidade": 70,
+      "valor": 10899.0
     },
     {
       "unidade": "Soledade",
@@ -55,7 +55,7 @@
     },
     {
       "doutor": "Ana Cristina Corso",
-      "quantidade": 11,
+      "quantidade": 15,
       "valor_descontado": 0.0
     },
     {
@@ -165,7 +165,7 @@
     },
     {
       "doutor": "TOP",
-      "quantidade": 3,
+      "quantidade": 2,
       "valor_descontado": 0.0
     },
     {
