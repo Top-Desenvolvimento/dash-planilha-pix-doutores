@@ -1261,11 +1261,11 @@
   },
   "2026-07": {
     "competencia": "2026-07",
-    "gerado_em": "2026-07-16T20:53:34.976422",
-    "quantidade_total": 377,
-    "valor_total": 55495.11,
+    "gerado_em": "2026-07-16T21:57:29.518194",
+    "quantidade_total": 379,
+    "valor_total": 55754.11,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 55495.11,
+    "valor_total_pendente": 55754.11,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1294,13 +1294,13 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 72,
-        "valor": 8319.0
+        "quantidade": 73,
+        "valor": 8439.0
       },
       {
         "unidade": "Veranopolis",
-        "quantidade": 30,
-        "valor": 5601.22
+        "quantidade": 31,
+        "valor": 5740.22
       }
     ],
     "por_doutor": [
@@ -1370,6 +1370,11 @@
         "valor_descontado": 0.0
       },
       {
+        "doutor": "Jonathan Zambryzcki",
+        "quantidade": 1,
+        "valor_descontado": 0.0
+      },
+      {
         "doutor": "Julia Raquel Nardi",
         "quantidade": 2,
         "valor_descontado": 0.0
@@ -1431,7 +1436,7 @@
       },
       {
         "doutor": "Valter Baldissera",
-        "quantidade": 23,
+        "quantidade": 24,
         "valor_descontado": 0.0
       },
       {
