@@ -1,10 +1,10 @@
 {
   "competencia": "2026-07",
-  "gerado_em": "2026-07-17T20:49:08.586859",
-  "quantidade_total": 388,
-  "valor_total": 57058.11,
+  "gerado_em": "2026-07-17T21:43:54.920790",
+  "quantidade_total": 389,
+  "valor_total": 57153.11,
   "valor_total_descontado": 384.0,
-  "valor_total_pendente": 56674.11,
+  "valor_total_pendente": 56769.11,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -33,8 +33,8 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 77,
-      "valor": 8919.0
+      "quantidade": 78,
+      "valor": 9014.0
     },
     {
       "unidade": "Veranopolis",
@@ -125,7 +125,7 @@
     },
     {
       "doutor": "Leticia Canabarro",
-      "quantidade": 5,
+      "quantidade": 6,
       "valor_descontado": 0.0
     },
     {
