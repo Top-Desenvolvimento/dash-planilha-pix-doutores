@@ -1261,11 +1261,11 @@
   },
   "2026-07": {
     "competencia": "2026-07",
-    "gerado_em": "2026-07-17T16:20:58.225225",
-    "quantidade_total": 384,
-    "valor_total": 56509.11,
+    "gerado_em": "2026-07-17T17:41:46.169812",
+    "quantidade_total": 386,
+    "valor_total": 56749.11,
     "valor_total_descontado": 315.0,
-    "valor_total_pendente": 56194.11,
+    "valor_total_pendente": 56434.11,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1294,8 +1294,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 74,
-        "valor": 8559.0
+        "quantidade": 76,
+        "valor": 8799.0
       },
       {
         "unidade": "Veranopolis",
@@ -1371,7 +1371,7 @@
       },
       {
         "doutor": "Jonathan Zambryzcki",
-        "quantidade": 1,
+        "quantidade": 3,
         "valor_descontado": 0.0
       },
       {
