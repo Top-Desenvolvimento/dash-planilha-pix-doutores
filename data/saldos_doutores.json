@@ -2456,8 +2456,8 @@
       "doutor_id": "29",
       "doutor": "Letícia Cauzzi",
       "credito_inicial": 4000.0,
-      "utilizado": 1560.0,
-      "credito_disponivel": 2440.0,
+      "utilizado": 1755.0,
+      "credito_disponivel": 2245.0,
       "pix_key": ""
     },
     {
@@ -2528,8 +2528,8 @@
       "doutor_id": "17",
       "doutor": "Norberto Filipe",
       "credito_inicial": 500.0,
-      "utilizado": 0.0,
-      "credito_disponivel": 500.0,
+      "utilizado": 120.0,
+      "credito_disponivel": 380.0,
       "pix_key": ""
     },
     {
