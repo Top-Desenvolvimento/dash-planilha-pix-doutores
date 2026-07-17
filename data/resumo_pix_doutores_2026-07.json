@@ -1,10 +1,10 @@
 {
   "competencia": "2026-07",
-  "gerado_em": "2026-07-16T22:58:04.395757",
-  "quantidade_total": 349,
-  "valor_total": 50218.61,
+  "gerado_em": "2026-07-17T00:03:43.542446",
+  "quantidade_total": 383,
+  "valor_total": 56389.11,
   "valor_total_descontado": 195.0,
-  "valor_total_pendente": 50023.61,
+  "valor_total_pendente": 56194.11,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -15,6 +15,11 @@
       "unidade": "Caxias",
       "quantidade": 86,
       "valor": 11701.34
+    },
+    {
+      "unidade": "Encantado",
+      "quantidade": 33,
+      "valor": 6060.5
     },
     {
       "unidade": "Farroupilha",
@@ -33,8 +38,8 @@
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 33,
-      "valor": 6070.22
+      "quantidade": 34,
+      "valor": 6180.22
     }
   ],
   "por_doutor": [
@@ -61,6 +66,11 @@
     {
       "doutor": "Dionathan Pohlmann",
       "quantidade": 2,
+      "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Dra.Júlia Raquel Nardi",
+      "quantidade": 10,
       "valor_descontado": 0.0
     },
     {
@@ -104,6 +114,11 @@
       "valor_descontado": 0.0
     },
     {
+      "doutor": "Julia Raquel Nardi",
+      "quantidade": 2,
+      "valor_descontado": 0.0
+    },
+    {
       "doutor": "Karen Ramona Kuwer",
       "quantidade": 6,
       "valor_descontado": 0.0
@@ -139,6 +154,11 @@
       "valor_descontado": 0.0
     },
     {
+      "doutor": "Nicoli Weber",
+      "quantidade": 15,
+      "valor_descontado": 0.0
+    },
+    {
       "doutor": "Sofie Owens",
       "quantidade": 1,
       "valor_descontado": 0.0
@@ -154,8 +174,13 @@
       "valor_descontado": 0.0
     },
     {
+      "doutor": "Thiany Cristofoli",
+      "quantidade": 6,
+      "valor_descontado": 0.0
+    },
+    {
       "doutor": "Valter Baldissera",
-      "quantidade": 26,
+      "quantidade": 27,
       "valor_descontado": 0.0
     },
     {
