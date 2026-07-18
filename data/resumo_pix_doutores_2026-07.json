@@ -1,10 +1,10 @@
 {
   "competencia": "2026-07",
-  "gerado_em": "2026-07-18T13:52:13.762862",
-  "quantidade_total": 407,
-  "valor_total": 59596.11,
+  "gerado_em": "2026-07-18T14:49:29.190978",
+  "quantidade_total": 409,
+  "valor_total": 59836.11,
   "valor_total_descontado": 35.0,
-  "valor_total_pendente": 59561.11,
+  "valor_total_pendente": 59801.11,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,8 +13,8 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 91,
-      "valor": 12612.34
+      "quantidade": 92,
+      "valor": 12732.34
     },
     {
       "unidade": "Encantado",
@@ -33,8 +33,8 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 84,
-      "valor": 9679.0
+      "quantidade": 85,
+      "valor": 9799.0
     },
     {
       "unidade": "Veranopolis",
@@ -125,7 +125,7 @@
     },
     {
       "doutor": "Leticia Canabarro",
-      "quantidade": 12,
+      "quantidade": 13,
       "valor_descontado": 0.0
     },
     {
@@ -180,7 +180,7 @@
     },
     {
       "doutor": "Thalia Tessaro",
-      "quantidade": 5,
+      "quantidade": 6,
       "valor_descontado": 0.0
     },
     {
