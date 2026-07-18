@@ -1,10 +1,10 @@
 {
   "competencia": "2026-07",
-  "gerado_em": "2026-07-18T12:10:58.482865",
-  "quantidade_total": 394,
-  "valor_total": 57791.11,
-  "valor_total_descontado": 189.0,
-  "valor_total_pendente": 57602.11,
+  "gerado_em": "2026-07-18T12:57:38.000516",
+  "quantidade_total": 404,
+  "valor_total": 59256.11,
+  "valor_total_descontado": 278.0,
+  "valor_total_pendente": 58978.11,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,8 +13,8 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 87,
-      "valor": 11890.34
+      "quantidade": 89,
+      "valor": 12387.34
     },
     {
       "unidade": "Encantado",
@@ -23,18 +23,18 @@
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 60,
-      "valor": 8868.55
+      "quantidade": 61,
+      "valor": 8903.55
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 77,
-      "valor": 12763.0
+      "quantidade": 81,
+      "valor": 13391.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 80,
-      "valor": 9259.0
+      "quantidade": 83,
+      "valor": 9564.0
     },
     {
       "unidade": "Veranopolis",
@@ -125,18 +125,23 @@
     },
     {
       "doutor": "Leticia Canabarro",
-      "quantidade": 8,
+      "quantidade": 11,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Letícia Cauzzi",
-      "quantidade": 4,
+      "quantidade": 8,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Luisa Moraes Lucas",
       "quantidade": 23,
       "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Luiz Henrique",
+      "quantidade": 1,
+      "valor_descontado": 35.0
     },
     {
       "doutor": "Morgana Zambiasi",
@@ -175,8 +180,8 @@
     },
     {
       "doutor": "Thalia Tessaro",
-      "quantidade": 1,
-      "valor_descontado": 189.0
+      "quantidade": 3,
+      "valor_descontado": 243.0
     },
     {
       "doutor": "Thalia Vezzosi",
