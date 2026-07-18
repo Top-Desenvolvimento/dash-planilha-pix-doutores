@@ -1,10 +1,10 @@
 {
   "competencia": "2026-07",
-  "gerado_em": "2026-07-17T23:38:52.241678",
+  "gerado_em": "2026-07-18T01:10:49.317871",
   "quantidade_total": 390,
   "valor_total": 57348.11,
-  "valor_total_descontado": 579.0,
-  "valor_total_pendente": 56769.11,
+  "valor_total_descontado": 289.0,
+  "valor_total_pendente": 57059.11,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -131,7 +131,7 @@
     {
       "doutor": "Letícia Cauzzi",
       "quantidade": 2,
-      "valor_descontado": 390.0
+      "valor_descontado": 100.0
     },
     {
       "doutor": "Luisa Moraes Lucas",
