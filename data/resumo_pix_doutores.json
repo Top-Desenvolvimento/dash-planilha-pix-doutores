@@ -1261,11 +1261,11 @@
   },
   "2026-07": {
     "competencia": "2026-07",
-    "gerado_em": "2026-07-20T21:42:35.347042",
-    "quantidade_total": 432,
-    "valor_total": 62694.11,
+    "gerado_em": "2026-07-20T22:11:26.420334",
+    "quantidade_total": 436,
+    "valor_total": 65493.11,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 62694.11,
+    "valor_total_pendente": 65493.11,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1274,13 +1274,13 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 103,
-        "valor": 14029.34
+        "quantidade": 105,
+        "valor": 14340.34
       },
       {
         "unidade": "Encantado",
-        "quantidade": 42,
-        "valor": 7068.5
+        "quantidade": 43,
+        "valor": 7173.5
       },
       {
         "unidade": "Farroupilha",
@@ -1299,8 +1299,8 @@
       },
       {
         "unidade": "Veranopolis",
-        "quantidade": 37,
-        "valor": 6733.22
+        "quantidade": 38,
+        "valor": 9116.22
       }
     ],
     "por_doutor": [
@@ -1426,7 +1426,7 @@
       },
       {
         "doutor": "Renata Protto",
-        "quantidade": 8,
+        "quantidade": 9,
         "valor_descontado": 0.0
       },
       {
@@ -1441,7 +1441,7 @@
       },
       {
         "doutor": "Thalia Tessaro",
-        "quantidade": 16,
+        "quantidade": 18,
         "valor_descontado": 0.0
       },
       {
@@ -1461,7 +1461,7 @@
       },
       {
         "doutor": "Valter Baldissera",
-        "quantidade": 29,
+        "quantidade": 30,
         "valor_descontado": 0.0
       },
       {
