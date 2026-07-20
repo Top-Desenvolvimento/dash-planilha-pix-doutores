@@ -1,10 +1,10 @@
 {
   "competencia": "2026-07",
-  "gerado_em": "2026-07-20T20:19:07.469237",
-  "quantidade_total": 425,
-  "valor_total": 61636.11,
+  "gerado_em": "2026-07-20T21:42:35.347042",
+  "quantidade_total": 432,
+  "valor_total": 62694.11,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 61636.11,
+  "valor_total_pendente": 62694.11,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,13 +13,13 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 102,
-      "valor": 13930.34
+      "quantidade": 103,
+      "valor": 14029.34
     },
     {
       "unidade": "Encantado",
-      "quantidade": 38,
-      "valor": 6567.5
+      "quantidade": 42,
+      "valor": 7068.5
     },
     {
       "unidade": "Farroupilha",
@@ -33,13 +33,13 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 85,
-      "valor": 9799.0
+      "quantidade": 84,
+      "valor": 9704.0
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 34,
-      "valor": 6180.22
+      "quantidade": 37,
+      "valor": 6733.22
     }
   ],
   "por_doutor": [
@@ -65,7 +65,7 @@
     },
     {
       "doutor": "Dionathan Pohlmann",
-      "quantidade": 2,
+      "quantidade": 3,
       "valor_descontado": 0.0
     },
     {
@@ -120,7 +120,7 @@
     },
     {
       "doutor": "Leticia Canabarro",
-      "quantidade": 13,
+      "quantidade": 12,
       "valor_descontado": 0.0
     },
     {
@@ -165,7 +165,7 @@
     },
     {
       "doutor": "Renata Protto",
-      "quantidade": 5,
+      "quantidade": 8,
       "valor_descontado": 0.0
     },
     {
@@ -194,8 +194,13 @@
       "valor_descontado": 0.0
     },
     {
+      "doutor": "TOP",
+      "quantidade": 2,
+      "valor_descontado": 0.0
+    },
+    {
       "doutor": "Valter Baldissera",
-      "quantidade": 27,
+      "quantidade": 29,
       "valor_descontado": 0.0
     },
     {
