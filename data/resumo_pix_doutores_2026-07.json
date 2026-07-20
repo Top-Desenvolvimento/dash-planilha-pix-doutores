@@ -1,6 +1,6 @@
 {
   "competencia": "2026-07",
-  "gerado_em": "2026-07-20T19:27:28.179979",
+  "gerado_em": "2026-07-20T20:19:07.469237",
   "quantidade_total": 425,
   "valor_total": 61636.11,
   "valor_total_descontado": 0.0,
@@ -69,11 +69,6 @@
       "valor_descontado": 0.0
     },
     {
-      "doutor": "Dra.Júlia Raquel Nardi",
-      "quantidade": 10,
-      "valor_descontado": 0.0
-    },
-    {
       "doutor": "Everlize Cipriani",
       "quantidade": 11,
       "valor_descontado": 0.0
@@ -114,8 +109,8 @@
       "valor_descontado": 0.0
     },
     {
-      "doutor": "Julia Raquel Nardi",
-      "quantidade": 2,
+      "doutor": "Julia Nardi",
+      "quantidade": 12,
       "valor_descontado": 0.0
     },
     {
