@@ -1261,11 +1261,11 @@
   },
   "2026-07": {
     "competencia": "2026-07",
-    "gerado_em": "2026-07-20T17:41:07.777563",
-    "quantidade_total": 421,
-    "valor_total": 60991.11,
+    "gerado_em": "2026-07-20T18:41:42.760142",
+    "quantidade_total": 425,
+    "valor_total": 61636.11,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 60991.11,
+    "valor_total_pendente": 61636.11,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1274,13 +1274,13 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 100,
-        "valor": 13553.34
+        "quantidade": 102,
+        "valor": 13930.34
       },
       {
         "unidade": "Encantado",
-        "quantidade": 36,
-        "valor": 6299.5
+        "quantidade": 38,
+        "valor": 6567.5
       },
       {
         "unidade": "Farroupilha",
@@ -1431,7 +1431,7 @@
       },
       {
         "doutor": "Renata Protto",
-        "quantidade": 3,
+        "quantidade": 5,
         "valor_descontado": 0.0
       },
       {
@@ -1446,7 +1446,7 @@
       },
       {
         "doutor": "Thalia Tessaro",
-        "quantidade": 14,
+        "quantidade": 16,
         "valor_descontado": 0.0
       },
       {
