@@ -1261,11 +1261,11 @@
   },
   "2026-07": {
     "competencia": "2026-07",
-    "gerado_em": "2026-07-20T22:11:26.420334",
-    "quantidade_total": 436,
-    "valor_total": 65493.11,
+    "gerado_em": "2026-07-20T22:44:58.760972",
+    "quantidade_total": 437,
+    "valor_total": 65746.11,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 65493.11,
+    "valor_total_pendente": 65746.11,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1279,8 +1279,8 @@
       },
       {
         "unidade": "Encantado",
-        "quantidade": 43,
-        "valor": 7173.5
+        "quantidade": 44,
+        "valor": 7426.5
       },
       {
         "unidade": "Farroupilha",
@@ -1426,7 +1426,7 @@
       },
       {
         "doutor": "Renata Protto",
-        "quantidade": 9,
+        "quantidade": 10,
         "valor_descontado": 0.0
       },
       {
