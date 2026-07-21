@@ -1261,16 +1261,16 @@
   },
   "2026-07": {
     "competencia": "2026-07",
-    "gerado_em": "2026-07-21T18:52:51.745042",
-    "quantidade_total": 446,
-    "valor_total": 66810.11,
-    "valor_total_descontado": 376.0,
-    "valor_total_pendente": 66434.11,
+    "gerado_em": "2026-07-21T20:17:04.946635",
+    "quantidade_total": 451,
+    "valor_total": 67735.11,
+    "valor_total_descontado": 0.0,
+    "valor_total_pendente": 67735.11,
     "por_unidade": [
       {
         "unidade": "Bento",
-        "quantidade": 25,
-        "valor": 2949.5
+        "quantidade": 28,
+        "valor": 3669.5
       },
       {
         "unidade": "Caxias",
@@ -1284,8 +1284,8 @@
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 62,
-        "valor": 8998.55
+        "quantidade": 63,
+        "valor": 9118.55
       },
       {
         "unidade": "FloresDaCunha",
@@ -1294,8 +1294,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 84,
-        "valor": 9704.0
+        "quantidade": 85,
+        "valor": 9789.0
       },
       {
         "unidade": "Veranopolis",
@@ -1376,8 +1376,8 @@
       },
       {
         "doutor": "Jéssica Barreto",
-        "quantidade": 5,
-        "valor_descontado": 376.0
+        "quantidade": 6,
+        "valor_descontado": 0.0
       },
       {
         "doutor": "Karen Ramona Kuwer",
@@ -1386,7 +1386,7 @@
       },
       {
         "doutor": "Leticia Canabarro",
-        "quantidade": 12,
+        "quantidade": 13,
         "valor_descontado": 0.0
       },
       {
@@ -1401,7 +1401,7 @@
       },
       {
         "doutor": "Luiz Henrique",
-        "quantidade": 3,
+        "quantidade": 6,
         "valor_descontado": 0.0
       },
       {
