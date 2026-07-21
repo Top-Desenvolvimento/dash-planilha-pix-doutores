@@ -2416,8 +2416,8 @@
       "doutor_id": "23",
       "doutor": "Jéssica Barreto",
       "credito_inicial": 1000.0,
-      "utilizado": 624.0,
-      "credito_disponivel": 376.0,
+      "utilizado": 1000.0,
+      "credito_disponivel": 0.0,
       "pix_key": ""
     },
     {
