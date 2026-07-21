@@ -1,20 +1,20 @@
 {
   "competencia": "2026-07",
-  "gerado_em": "2026-07-21T17:22:56.562885",
-  "quantidade_total": 439,
-  "valor_total": 65986.11,
-  "valor_total_descontado": 0.0,
-  "valor_total_pendente": 65986.11,
+  "gerado_em": "2026-07-21T18:13:45.012553",
+  "quantidade_total": 445,
+  "valor_total": 66715.11,
+  "valor_total_descontado": 624.0,
+  "valor_total_pendente": 66091.11,
   "por_unidade": [
     {
       "unidade": "Bento",
-      "quantidade": 23,
-      "valor": 2769.5
+      "quantidade": 24,
+      "valor": 2854.5
     },
     {
       "unidade": "Caxias",
-      "quantidade": 107,
-      "valor": 14580.34
+      "quantidade": 108,
+      "valor": 14685.34
     },
     {
       "unidade": "Encantado",
@@ -28,8 +28,8 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 81,
-      "valor": 13391.0
+      "quantidade": 85,
+      "valor": 13930.0
     },
     {
       "unidade": "Soledade",
@@ -114,6 +114,11 @@
       "valor_descontado": 0.0
     },
     {
+      "doutor": "Jéssica Barreto",
+      "quantidade": 5,
+      "valor_descontado": 624.0
+    },
+    {
       "doutor": "Karen Ramona Kuwer",
       "quantidade": 6,
       "valor_descontado": 0.0
@@ -180,7 +185,7 @@
     },
     {
       "doutor": "Thalia Tessaro",
-      "quantidade": 20,
+      "quantidade": 21,
       "valor_descontado": 0.0
     },
     {
