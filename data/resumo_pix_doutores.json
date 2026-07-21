@@ -1261,11 +1261,11 @@
   },
   "2026-07": {
     "competencia": "2026-07",
-    "gerado_em": "2026-07-21T12:02:27.632095",
-    "quantidade_total": 437,
-    "valor_total": 65746.11,
+    "gerado_em": "2026-07-21T12:20:21.528737",
+    "quantidade_total": 438,
+    "valor_total": 65866.11,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 65746.11,
+    "valor_total_pendente": 65866.11,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1274,8 +1274,8 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 105,
-        "valor": 14340.34
+        "quantidade": 106,
+        "valor": 14460.34
       },
       {
         "unidade": "Encantado",
@@ -1441,7 +1441,7 @@
       },
       {
         "doutor": "Thalia Tessaro",
-        "quantidade": 18,
+        "quantidade": 19,
         "valor_descontado": 0.0
       },
       {
