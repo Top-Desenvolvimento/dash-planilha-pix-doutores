@@ -1261,11 +1261,11 @@
   },
   "2026-07": {
     "competencia": "2026-07",
-    "gerado_em": "2026-07-22T20:33:04.457764",
-    "quantidade_total": 463,
-    "valor_total": 69112.11,
+    "gerado_em": "2026-07-22T21:04:42.963316",
+    "quantidade_total": 465,
+    "valor_total": 69355.11,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 69112.11,
+    "valor_total_pendente": 69355.11,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1299,8 +1299,8 @@
       },
       {
         "unidade": "Veranopolis",
-        "quantidade": 42,
-        "valor": 9569.22
+        "quantidade": 44,
+        "valor": 9812.22
       }
     ],
     "por_doutor": [
@@ -1326,7 +1326,7 @@
       },
       {
         "doutor": "Dionathan Pohlmann",
-        "quantidade": 7,
+        "quantidade": 9,
         "valor_descontado": 0.0
       },
       {
