@@ -1261,10 +1261,10 @@
   },
   "2026-07": {
     "competencia": "2026-07",
-    "gerado_em": "2026-07-22T22:10:51.798350",
-    "quantidade_total": 465,
-    "valor_total": 69355.11,
-    "valor_total_descontado": 0.0,
+    "gerado_em": "2026-07-22T22:20:47.023065",
+    "quantidade_total": 466,
+    "valor_total": 69513.11,
+    "valor_total_descontado": 158.0,
     "valor_total_pendente": 69355.11,
     "por_unidade": [
       {
@@ -1299,8 +1299,8 @@
       },
       {
         "unidade": "Veranopolis",
-        "quantidade": 44,
-        "valor": 9812.22
+        "quantidade": 45,
+        "valor": 9970.22
       }
     ],
     "por_doutor": [
@@ -1413,6 +1413,11 @@
         "doutor": "Murilo Debortoli",
         "quantidade": 8,
         "valor_descontado": 0.0
+      },
+      {
+        "doutor": "Naiane Pieta",
+        "quantidade": 1,
+        "valor_descontado": 158.0
       },
       {
         "doutor": "Nelson Vaccari",
