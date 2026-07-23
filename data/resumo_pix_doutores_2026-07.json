@@ -1,10 +1,10 @@
 {
   "competencia": "2026-07",
-  "gerado_em": "2026-07-23T09:43:56.994743",
+  "gerado_em": "2026-07-23T11:39:55.233145",
   "quantidade_total": 466,
   "valor_total": 69513.11,
-  "valor_total_descontado": 158.0,
-  "valor_total_pendente": 69355.11,
+  "valor_total_descontado": 52.0,
+  "valor_total_pendente": 69461.11,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -156,7 +156,7 @@
     {
       "doutor": "Naiane Pieta",
       "quantidade": 1,
-      "valor_descontado": 158.0
+      "valor_descontado": 52.0
     },
     {
       "doutor": "Nelson Vaccari",
