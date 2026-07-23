@@ -1261,11 +1261,11 @@
   },
   "2026-07": {
     "competencia": "2026-07",
-    "gerado_em": "2026-07-23T20:02:36.505488",
-    "quantidade_total": 484,
-    "valor_total": 71553.11,
-    "valor_total_descontado": 281.0,
-    "valor_total_pendente": 71272.11,
+    "gerado_em": "2026-07-23T21:17:38.155903",
+    "quantidade_total": 486,
+    "valor_total": 71705.11,
+    "valor_total_descontado": 0.0,
+    "valor_total_pendente": 71705.11,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1284,8 +1284,8 @@
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 68,
-        "valor": 9652.55
+        "quantidade": 69,
+        "valor": 9779.55
       },
       {
         "unidade": "FloresDaCunha",
@@ -1294,8 +1294,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 90,
-        "valor": 10297.0
+        "quantidade": 91,
+        "valor": 10322.0
       },
       {
         "unidade": "Veranopolis",
@@ -1306,7 +1306,7 @@
     "por_doutor": [
       {
         "doutor": "Adriele da Silva",
-        "quantidade": 3,
+        "quantidade": 4,
         "valor_descontado": 0.0
       },
       {
@@ -1336,7 +1336,7 @@
       },
       {
         "doutor": "Felipe Lino",
-        "quantidade": 24,
+        "quantidade": 25,
         "valor_descontado": 0.0
       },
       {
@@ -1367,7 +1367,7 @@
       {
         "doutor": "Joana Sganzerla",
         "quantidade": 3,
-        "valor_descontado": 281.0
+        "valor_descontado": 0.0
       },
       {
         "doutor": "Jonathan Zambryzcki",
@@ -1471,12 +1471,12 @@
       },
       {
         "doutor": "TOP",
-        "quantidade": 3,
+        "quantidade": 2,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Valter Baldissera",
-        "quantidade": 30,
+        "quantidade": 31,
         "valor_descontado": 0.0
       },
       {
