@@ -1261,11 +1261,11 @@
   },
   "2026-07": {
     "competencia": "2026-07",
-    "gerado_em": "2026-07-23T17:09:08.777882",
-    "quantidade_total": 472,
-    "valor_total": 70168.11,
-    "valor_total_descontado": 0.0,
-    "valor_total_pendente": 70168.11,
+    "gerado_em": "2026-07-23T18:29:46.015161",
+    "quantidade_total": 479,
+    "valor_total": 70934.11,
+    "valor_total_descontado": 219.0,
+    "valor_total_pendente": 70715.11,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1274,8 +1274,8 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 112,
-        "valor": 15090.34
+        "quantidade": 117,
+        "valor": 15641.34
       },
       {
         "unidade": "Encantado",
@@ -1294,8 +1294,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 86,
-        "valor": 9884.0
+        "quantidade": 88,
+        "valor": 10099.0
       },
       {
         "unidade": "Veranopolis",
@@ -1365,6 +1365,11 @@
         "valor_descontado": 0.0
       },
       {
+        "doutor": "Joana Sganzerla",
+        "quantidade": 2,
+        "valor_descontado": 219.0
+      },
+      {
         "doutor": "Jonathan Zambryzcki",
         "quantidade": 4,
         "valor_descontado": 0.0
@@ -1386,7 +1391,7 @@
       },
       {
         "doutor": "Leticia Canabarro",
-        "quantidade": 13,
+        "quantidade": 15,
         "valor_descontado": 0.0
       },
       {
@@ -1401,7 +1406,7 @@
       },
       {
         "doutor": "Luiz Henrique",
-        "quantidade": 12,
+        "quantidade": 13,
         "valor_descontado": 0.0
       },
       {
@@ -1451,7 +1456,7 @@
       },
       {
         "doutor": "Thalia Tessaro",
-        "quantidade": 25,
+        "quantidade": 28,
         "valor_descontado": 0.0
       },
       {
@@ -1466,7 +1471,7 @@
       },
       {
         "doutor": "TOP",
-        "quantidade": 3,
+        "quantidade": 2,
         "valor_descontado": 0.0
       },
       {
