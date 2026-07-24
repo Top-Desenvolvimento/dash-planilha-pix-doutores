@@ -1261,11 +1261,11 @@
   },
   "2026-07": {
     "competencia": "2026-07",
-    "gerado_em": "2026-07-24T17:56:21.504719",
-    "quantidade_total": 495,
-    "valor_total": 72877.11,
+    "gerado_em": "2026-07-24T18:56:04.412576",
+    "quantidade_total": 497,
+    "valor_total": 73225.11,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 72877.11,
+    "valor_total_pendente": 73225.11,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1274,8 +1274,8 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 119,
-        "valor": 15831.34
+        "quantidade": 120,
+        "valor": 16084.34
       },
       {
         "unidade": "Encantado",
@@ -1294,8 +1294,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 96,
-        "valor": 10941.0
+        "quantidade": 97,
+        "valor": 11036.0
       },
       {
         "unidade": "Veranopolis",
@@ -1391,7 +1391,7 @@
       },
       {
         "doutor": "Leticia Canabarro",
-        "quantidade": 21,
+        "quantidade": 22,
         "valor_descontado": 0.0
       },
       {
@@ -1451,7 +1451,7 @@
       },
       {
         "doutor": "Tamara Macanan",
-        "quantidade": 24,
+        "quantidade": 25,
         "valor_descontado": 0.0
       },
       {
