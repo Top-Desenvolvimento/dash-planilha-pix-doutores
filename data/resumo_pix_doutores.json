@@ -1261,11 +1261,11 @@
   },
   "2026-07": {
     "competencia": "2026-07",
-    "gerado_em": "2026-07-25T14:04:37.136223",
-    "quantidade_total": 524,
-    "valor_total": 76721.11,
+    "gerado_em": "2026-07-25T15:21:12.982341",
+    "quantidade_total": 530,
+    "valor_total": 77498.11,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 76721.11,
+    "valor_total_pendente": 77498.11,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1284,8 +1284,8 @@
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 71,
-        "valor": 9984.55
+        "quantidade": 74,
+        "valor": 10367.55
       },
       {
         "unidade": "FloresDaCunha",
@@ -1294,19 +1294,19 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 107,
-        "valor": 12108.0
+        "quantidade": 108,
+        "valor": 12197.0
       },
       {
         "unidade": "Veranopolis",
-        "quantidade": 47,
-        "valor": 10267.22
+        "quantidade": 49,
+        "valor": 10572.22
       }
     ],
     "por_doutor": [
       {
         "doutor": "Adriele da Silva",
-        "quantidade": 6,
+        "quantidade": 9,
         "valor_descontado": 0.0
       },
       {
@@ -1391,7 +1391,7 @@
       },
       {
         "doutor": "Leticia Canabarro",
-        "quantidade": 32,
+        "quantidade": 33,
         "valor_descontado": 0.0
       },
       {
@@ -1421,7 +1421,7 @@
       },
       {
         "doutor": "Naiane Pieta",
-        "quantidade": 3,
+        "quantidade": 5,
         "valor_descontado": 0.0
       },
       {
