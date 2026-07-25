@@ -1,15 +1,15 @@
 {
   "competencia": "2026-07",
-  "gerado_em": "2026-07-25T12:07:43.662116",
-  "quantidade_total": 516,
-  "valor_total": 75765.11,
+  "gerado_em": "2026-07-25T14:04:37.136223",
+  "quantidade_total": 524,
+  "valor_total": 76721.11,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 75765.11,
+  "valor_total_pendente": 76721.11,
   "por_unidade": [
     {
       "unidade": "Bento",
-      "quantidade": 35,
-      "valor": 4922.5
+      "quantidade": 37,
+      "valor": 5162.5
     },
     {
       "unidade": "Caxias",
@@ -33,13 +33,13 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 103,
-      "valor": 11689.0
+      "quantidade": 107,
+      "valor": 12108.0
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 45,
-      "valor": 9970.22
+      "quantidade": 47,
+      "valor": 10267.22
     }
   ],
   "por_doutor": [
@@ -130,7 +130,7 @@
     },
     {
       "doutor": "Leticia Canabarro",
-      "quantidade": 28,
+      "quantidade": 32,
       "valor_descontado": 0.0
     },
     {
@@ -145,7 +145,7 @@
     },
     {
       "doutor": "Luiz Henrique",
-      "quantidade": 17,
+      "quantidade": 19,
       "valor_descontado": 0.0
     },
     {
@@ -160,7 +160,7 @@
     },
     {
       "doutor": "Naiane Pieta",
-      "quantidade": 1,
+      "quantidade": 3,
       "valor_descontado": 0.0
     },
     {
