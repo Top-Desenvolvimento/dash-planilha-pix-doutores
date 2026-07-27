@@ -1261,11 +1261,11 @@
   },
   "2026-07": {
     "competencia": "2026-07",
-    "gerado_em": "2026-07-27T22:40:06.050503",
-    "quantidade_total": 482,
-    "valor_total": 67045.89,
+    "gerado_em": "2026-07-27T23:50:23.481312",
+    "quantidade_total": 531,
+    "valor_total": 77618.11,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 67045.89,
+    "valor_total_pendente": 77618.11,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1296,6 +1296,11 @@
         "unidade": "Soledade",
         "quantidade": 108,
         "valor": 12197.0
+      },
+      {
+        "unidade": "Veranopolis",
+        "quantidade": 49,
+        "valor": 10572.22
       }
     ],
     "por_doutor": [
@@ -1321,7 +1326,7 @@
       },
       {
         "doutor": "Dionathan Pohlmann",
-        "quantidade": 3,
+        "quantidade": 9,
         "valor_descontado": 0.0
       },
       {
@@ -1405,8 +1410,18 @@
         "valor_descontado": 0.0
       },
       {
+        "doutor": "Morgana Zambiasi",
+        "quantidade": 15,
+        "valor_descontado": 0.0
+      },
+      {
         "doutor": "Murilo Debortoli",
         "quantidade": 8,
+        "valor_descontado": 0.0
+      },
+      {
+        "doutor": "Naiane Pieta",
+        "quantidade": 5,
         "valor_descontado": 0.0
       },
       {
@@ -1427,6 +1442,11 @@
       {
         "doutor": "Renata Protto",
         "quantidade": 10,
+        "valor_descontado": 0.0
+      },
+      {
+        "doutor": "Sofie Owens",
+        "quantidade": 1,
         "valor_descontado": 0.0
       },
       {
@@ -1456,7 +1476,7 @@
       },
       {
         "doutor": "Valter Baldissera",
-        "quantidade": 9,
+        "quantidade": 31,
         "valor_descontado": 0.0
       },
       {
