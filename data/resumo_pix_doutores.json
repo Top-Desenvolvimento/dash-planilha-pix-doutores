@@ -1261,11 +1261,11 @@
   },
   "2026-07": {
     "competencia": "2026-07",
-    "gerado_em": "2026-07-28T21:01:29.002149",
-    "quantidade_total": 541,
-    "valor_total": 78880.11,
+    "gerado_em": "2026-07-28T22:12:05.302958",
+    "quantidade_total": 458,
+    "valor_total": 65240.11,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 78880.11,
+    "valor_total_pendente": 65240.11,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1288,14 +1288,9 @@
         "valor": 10601.55
       },
       {
-        "unidade": "FloresDaCunha",
-        "quantidade": 87,
-        "valor": 14114.0
-      },
-      {
         "unidade": "Soledade",
-        "quantidade": 115,
-        "valor": 13105.0
+        "quantidade": 119,
+        "valor": 13579.0
       },
       {
         "unidade": "Veranopolis",
@@ -1315,11 +1310,6 @@
         "valor_descontado": 0.0
       },
       {
-        "doutor": "Ana Cristina Corso",
-        "quantidade": 17,
-        "valor_descontado": 0.0
-      },
-      {
         "doutor": "Diogo Cemin Amarante",
         "quantidade": 1,
         "valor_descontado": 0.0
@@ -1336,12 +1326,7 @@
       },
       {
         "doutor": "Felipe Lino",
-        "quantidade": 27,
-        "valor_descontado": 0.0
-      },
-      {
-        "doutor": "Fernana Sozo",
-        "quantidade": 12,
+        "quantidade": 28,
         "valor_descontado": 0.0
       },
       {
@@ -1357,11 +1342,6 @@
       {
         "doutor": "Gustavo Lourenço Ongaratto",
         "quantidade": 7,
-        "valor_descontado": 0.0
-      },
-      {
-        "doutor": "Indiamara Rech",
-        "quantidade": 17,
         "valor_descontado": 0.0
       },
       {
@@ -1381,22 +1361,12 @@
       },
       {
         "doutor": "Jéssica Barreto",
-        "quantidade": 7,
-        "valor_descontado": 0.0
-      },
-      {
-        "doutor": "Karen Ramona Kuwer",
-        "quantidade": 6,
+        "quantidade": 3,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Leticia Canabarro",
-        "quantidade": 34,
-        "valor_descontado": 0.0
-      },
-      {
-        "doutor": "Letícia Cauzzi",
-        "quantidade": 8,
+        "quantidade": 35,
         "valor_descontado": 0.0
       },
       {
@@ -1407,6 +1377,11 @@
       {
         "doutor": "Luiz Henrique",
         "quantidade": 21,
+        "valor_descontado": 0.0
+      },
+      {
+        "doutor": "Marina Alievi",
+        "quantidade": 1,
         "valor_descontado": 0.0
       },
       {
@@ -1451,7 +1426,7 @@
       },
       {
         "doutor": "Tamara Macanan",
-        "quantidade": 25,
+        "quantidade": 2,
         "valor_descontado": 0.0
       },
       {
@@ -1481,7 +1456,7 @@
       },
       {
         "doutor": "Vitoria de Brito",
-        "quantidade": 9,
+        "quantidade": 10,
         "valor_descontado": 0.0
       }
     ]
