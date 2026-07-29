@@ -1,10 +1,10 @@
 {
   "competencia": "2026-07",
-  "gerado_em": "2026-07-29T15:39:41.945990",
-  "quantidade_total": 545,
-  "valor_total": 79354.11,
+  "gerado_em": "2026-07-29T17:03:16.767000",
+  "quantidade_total": 546,
+  "valor_total": 79491.11,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 79354.11,
+  "valor_total_pendente": 79491.11,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -38,8 +38,8 @@
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 49,
-      "valor": 10572.22
+      "quantidade": 50,
+      "valor": 10709.22
     }
   ],
   "por_doutor": [
@@ -180,7 +180,7 @@
     },
     {
       "doutor": "Norberto Filipe",
-      "quantidade": 1,
+      "quantidade": 2,
       "valor_descontado": 0.0
     },
     {
