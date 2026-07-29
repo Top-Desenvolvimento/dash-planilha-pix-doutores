@@ -1,10 +1,10 @@
 {
   "competencia": "2026-07",
-  "gerado_em": "2026-07-29T20:48:38.038568",
-  "quantidade_total": 551,
-  "valor_total": 79964.11,
+  "gerado_em": "2026-07-29T21:48:37.947834",
+  "quantidade_total": 558,
+  "valor_total": 80871.11,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 79964.11,
+  "valor_total_pendente": 80871.11,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -33,13 +33,13 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 123,
-      "valor": 13967.0
+      "quantidade": 129,
+      "valor": 14759.0
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 51,
-      "valor": 10794.22
+      "quantidade": 52,
+      "valor": 10909.22
     }
   ],
   "por_doutor": [
@@ -75,7 +75,7 @@
     },
     {
       "doutor": "Felipe Lino",
-      "quantidade": 28,
+      "quantidade": 29,
       "valor_descontado": 0.0
     },
     {
@@ -96,6 +96,11 @@
     {
       "doutor": "Gustavo Lourenço Ongaratto",
       "quantidade": 7,
+      "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Iara Dalvite",
+      "quantidade": 2,
       "valor_descontado": 0.0
     },
     {
@@ -150,7 +155,7 @@
     },
     {
       "doutor": "Marina Alievi",
-      "quantidade": 5,
+      "quantidade": 8,
       "valor_descontado": 0.0
     },
     {
@@ -180,7 +185,7 @@
     },
     {
       "doutor": "Norberto Filipe",
-      "quantidade": 3,
+      "quantidade": 4,
       "valor_descontado": 0.0
     },
     {
