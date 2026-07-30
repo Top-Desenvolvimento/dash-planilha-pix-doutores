@@ -1261,11 +1261,11 @@
   },
   "2026-07": {
     "competencia": "2026-07",
-    "gerado_em": "2026-07-30T11:50:02.814874",
-    "quantidade_total": 561,
-    "valor_total": 81128.61,
+    "gerado_em": "2026-07-30T13:25:11.552993",
+    "quantidade_total": 562,
+    "valor_total": 81227.61,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 81128.61,
+    "valor_total_pendente": 81227.61,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1294,8 +1294,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 129,
-        "valor": 14759.0
+        "quantidade": 130,
+        "valor": 14858.0
       },
       {
         "unidade": "Veranopolis",
@@ -1336,7 +1336,7 @@
       },
       {
         "doutor": "Felipe Lino",
-        "quantidade": 29,
+        "quantidade": 30,
         "valor_descontado": 0.0
       },
       {
