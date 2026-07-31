@@ -1261,11 +1261,11 @@
   },
   "2026-07": {
     "competencia": "2026-07",
-    "gerado_em": "2026-07-31T14:21:12.948711",
-    "quantidade_total": 577,
-    "valor_total": 82937.72,
+    "gerado_em": "2026-07-31T14:56:36.217240",
+    "quantidade_total": 579,
+    "valor_total": 83102.72,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 82937.72,
+    "valor_total_pendente": 83102.72,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1294,8 +1294,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 142,
-        "valor": 16201.0
+        "quantidade": 144,
+        "valor": 16366.0
       },
       {
         "unidade": "Veranopolis",
@@ -1361,7 +1361,7 @@
       },
       {
         "doutor": "Iara Dalvite",
-        "quantidade": 7,
+        "quantidade": 8,
         "valor_descontado": 0.0
       },
       {
@@ -1406,7 +1406,7 @@
       },
       {
         "doutor": "Luisa Moraes Lucas",
-        "quantidade": 24,
+        "quantidade": 25,
         "valor_descontado": 0.0
       },
       {
