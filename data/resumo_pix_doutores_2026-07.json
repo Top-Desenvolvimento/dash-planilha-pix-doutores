@@ -1,10 +1,10 @@
 {
   "competencia": "2026-07",
-  "gerado_em": "2026-07-31T15:14:08.985775",
-  "quantidade_total": 579,
-  "valor_total": 83102.72,
+  "gerado_em": "2026-07-31T17:05:04.991470",
+  "quantidade_total": 583,
+  "valor_total": 83465.72,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 83102.72,
+  "valor_total_pendente": 83465.72,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -33,8 +33,8 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 144,
-      "valor": 16366.0
+      "quantidade": 148,
+      "valor": 16729.0
     },
     {
       "unidade": "Veranopolis",
@@ -100,7 +100,7 @@
     },
     {
       "doutor": "Iara Dalvite",
-      "quantidade": 8,
+      "quantidade": 9,
       "valor_descontado": 0.0
     },
     {
@@ -145,7 +145,7 @@
     },
     {
       "doutor": "Luisa Moraes Lucas",
-      "quantidade": 25,
+      "quantidade": 26,
       "valor_descontado": 0.0
     },
     {
@@ -155,7 +155,7 @@
     },
     {
       "doutor": "Marina Alievi",
-      "quantidade": 11,
+      "quantidade": 13,
       "valor_descontado": 0.0
     },
     {
