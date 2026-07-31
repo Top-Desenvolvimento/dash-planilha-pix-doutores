@@ -1261,21 +1261,21 @@
   },
   "2026-07": {
     "competencia": "2026-07",
-    "gerado_em": "2026-07-31T18:34:17.252454",
-    "quantidade_total": 588,
-    "valor_total": 84029.72,
+    "gerado_em": "2026-07-31T20:13:49.842414",
+    "quantidade_total": 591,
+    "valor_total": 84287.72,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 84029.72,
+    "valor_total_pendente": 84287.72,
     "por_unidade": [
       {
         "unidade": "Bento",
         "quantidade": 40,
-        "valor": 5499.5
+        "valor": 5478.5
       },
       {
         "unidade": "Caxias",
-        "quantidade": 124,
-        "valor": 16426.84
+        "quantidade": 126,
+        "valor": 16610.84
       },
       {
         "unidade": "Encantado",
@@ -1294,8 +1294,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 152,
-        "valor": 17208.0
+        "quantidade": 153,
+        "valor": 17303.0
       },
       {
         "unidade": "Veranopolis",
@@ -1416,7 +1416,7 @@
       },
       {
         "doutor": "Marina Alievi",
-        "quantidade": 13,
+        "quantidade": 14,
         "valor_descontado": 0.0
       },
       {
@@ -1466,7 +1466,7 @@
       },
       {
         "doutor": "Thalia Tessaro",
-        "quantidade": 29,
+        "quantidade": 31,
         "valor_descontado": 0.0
       },
       {
