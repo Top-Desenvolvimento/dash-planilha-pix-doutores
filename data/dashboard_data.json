@@ -3,7 +3,7 @@
   "titulo_dashboard": "PIX Doutores",
   "arquivo_origem": "pix_doutores.json",
   "ano_referencia": 2026,
-  "gerado_em": "01/08/2026 18:45",
+  "gerado_em": "01/08/2026 19:46",
   "meses_disponiveis": [
     "2026-01",
     "2026-02",
@@ -97212,19 +97212,13 @@
       "unidade": "Garibaldi",
       "competencia": "2026-08",
       "erro": "Menu Finanças não encontrado.",
-      "coletado_em": "2026-08-01T21:43:59.502093"
+      "coletado_em": "2026-08-01T22:44:44.710141"
     },
     {
       "unidade": "Ssdocai",
       "competencia": "2026-08",
       "erro": "Menu Finanças não encontrado.",
-      "coletado_em": "2026-08-01T21:45:00.027705"
-    },
-    {
-      "unidade": "FloresDaCunha",
-      "competencia": "2026-08",
-      "erro": "Menu Finanças não encontrado.",
-      "coletado_em": "2026-08-01T21:45:01.973536"
+      "coletado_em": "2026-08-01T22:45:44.936249"
     }
   ],
   "registros_por_competencia": {
@@ -194454,19 +194448,13 @@
         "unidade": "Garibaldi",
         "competencia": "2026-08",
         "erro": "Menu Finanças não encontrado.",
-        "coletado_em": "2026-08-01T21:43:59.502093"
+        "coletado_em": "2026-08-01T22:44:44.710141"
       },
       {
         "unidade": "Ssdocai",
         "competencia": "2026-08",
         "erro": "Menu Finanças não encontrado.",
-        "coletado_em": "2026-08-01T21:45:00.027705"
-      },
-      {
-        "unidade": "FloresDaCunha",
-        "competencia": "2026-08",
-        "erro": "Menu Finanças não encontrado.",
-        "coletado_em": "2026-08-01T21:45:01.973536"
+        "coletado_em": "2026-08-01T22:45:44.936249"
       }
     ]
   },
