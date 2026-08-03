@@ -3,7 +3,7 @@
   "titulo_dashboard": "PIX Doutores",
   "arquivo_origem": "pix_doutores.json",
   "ano_referencia": 2026,
-  "gerado_em": "03/08/2026 19:38",
+  "gerado_em": "03/08/2026 20:50",
   "meses_disponiveis": [
     "2026-01",
     "2026-02",
@@ -97143,7 +97143,7 @@
       "utilizado_depois": 10000.0,
       "pendente": 3119.0,
       "linha_original": "03/08/2026\tPix Doutores\nFranciele Pedrotti\tRecebido de Camila Da Silva Machado (44999) (Parcela 1/1) Pago por: O paciente\t3.119,00 C\t3.119,00 C\t1\t\t\t3.119,00\t3.119,00",
-      "coletado_em": "2026-08-03T22:32:13.135401"
+      "coletado_em": "2026-08-03T23:44:03.484653"
     },
     {
       "unidade": "Soledade",
@@ -97166,7 +97166,7 @@
       "utilizado_depois": 0.0,
       "pendente": 120.0,
       "linha_original": "03/08/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Clisman Moraes De Quevedo (L) (11634) (Parcela 15/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t120,00\t120,00",
-      "coletado_em": "2026-08-03T22:36:04.869287"
+      "coletado_em": "2026-08-03T23:48:01.757534"
     }
   ],
   "erros": [
@@ -97258,13 +97258,13 @@
       "unidade": "Garibaldi",
       "competencia": "2026-08",
       "erro": "Menu Finanças não encontrado.",
-      "coletado_em": "2026-08-03T22:36:06.942897"
+      "coletado_em": "2026-08-03T23:48:04.291205"
     },
     {
       "unidade": "Ssdocai",
       "competencia": "2026-08",
       "erro": "Menu Finanças não encontrado.",
-      "coletado_em": "2026-08-03T22:37:06.655600"
+      "coletado_em": "2026-08-03T23:49:06.431462"
     }
   ],
   "registros_por_competencia": {
@@ -194410,7 +194410,7 @@
         "utilizado_depois": 10000.0,
         "pendente": 3119.0,
         "linha_original": "03/08/2026\tPix Doutores\nFranciele Pedrotti\tRecebido de Camila Da Silva Machado (44999) (Parcela 1/1) Pago por: O paciente\t3.119,00 C\t3.119,00 C\t1\t\t\t3.119,00\t3.119,00",
-        "coletado_em": "2026-08-03T22:32:13.135401"
+        "coletado_em": "2026-08-03T23:44:03.484653"
       },
       {
         "unidade": "Soledade",
@@ -194433,7 +194433,7 @@
         "utilizado_depois": 0.0,
         "pendente": 120.0,
         "linha_original": "03/08/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Clisman Moraes De Quevedo (L) (11634) (Parcela 15/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t120,00\t120,00",
-        "coletado_em": "2026-08-03T22:36:04.869287"
+        "coletado_em": "2026-08-03T23:48:01.757534"
       }
     ]
   },
@@ -194541,13 +194541,13 @@
         "unidade": "Garibaldi",
         "competencia": "2026-08",
         "erro": "Menu Finanças não encontrado.",
-        "coletado_em": "2026-08-03T22:36:06.942897"
+        "coletado_em": "2026-08-03T23:48:04.291205"
       },
       {
         "unidade": "Ssdocai",
         "competencia": "2026-08",
         "erro": "Menu Finanças não encontrado.",
-        "coletado_em": "2026-08-03T22:37:06.655600"
+        "coletado_em": "2026-08-03T23:49:06.431462"
       }
     ]
   },
