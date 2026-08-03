@@ -3,7 +3,7 @@
   "titulo_dashboard": "PIX Doutores",
   "arquivo_origem": "pix_doutores.json",
   "ano_referencia": 2026,
-  "gerado_em": "02/08/2026 21:22",
+  "gerado_em": "03/08/2026 01:09",
   "meses_disponiveis": [
     "2026-01",
     "2026-02",
@@ -97212,13 +97212,13 @@
       "unidade": "Garibaldi",
       "competencia": "2026-08",
       "erro": "Menu Finanças não encontrado.",
-      "coletado_em": "2026-08-03T00:20:45.860046"
+      "coletado_em": "2026-08-03T04:07:51.983758"
     },
     {
       "unidade": "Ssdocai",
       "competencia": "2026-08",
       "erro": "Menu Finanças não encontrado.",
-      "coletado_em": "2026-08-03T00:21:45.339325"
+      "coletado_em": "2026-08-03T04:08:51.450653"
     }
   ],
   "registros_por_competencia": {
@@ -194448,13 +194448,13 @@
         "unidade": "Garibaldi",
         "competencia": "2026-08",
         "erro": "Menu Finanças não encontrado.",
-        "coletado_em": "2026-08-03T00:20:45.860046"
+        "coletado_em": "2026-08-03T04:07:51.983758"
       },
       {
         "unidade": "Ssdocai",
         "competencia": "2026-08",
         "erro": "Menu Finanças não encontrado.",
-        "coletado_em": "2026-08-03T00:21:45.339325"
+        "coletado_em": "2026-08-03T04:08:51.450653"
       }
     ]
   },
