@@ -1,10 +1,22 @@
 {
   "competencia": "2026-08",
-  "gerado_em": "2026-08-03T11:06:13.728641",
-  "quantidade_total": 0,
-  "valor_total": 0,
-  "valor_total_descontado": 0,
-  "valor_total_pendente": 0,
-  "por_unidade": [],
-  "por_doutor": []
+  "gerado_em": "2026-08-03T13:54:07.101128",
+  "quantidade_total": 1,
+  "valor_total": 3119.0,
+  "valor_total_descontado": 3119.0,
+  "valor_total_pendente": 0.0,
+  "por_unidade": [
+    {
+      "unidade": "Caxias",
+      "quantidade": 1,
+      "valor": 3119.0
+    }
+  ],
+  "por_doutor": [
+    {
+      "doutor": "Franciele Pedrotti",
+      "quantidade": 1,
+      "valor_descontado": 3119.0
+    }
+  ]
 }
