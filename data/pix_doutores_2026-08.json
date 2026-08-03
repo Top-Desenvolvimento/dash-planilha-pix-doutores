@@ -14,12 +14,12 @@
     "origem": "Recebido de Camila Da Silva Machado (44999) (Parcela 1/1) Pago por: O paciente",
     "valor": 3119.0,
     "valor_com_descontos": 3119.0,
-    "credito_antes": 3762.0,
-    "valor_descontado": 3119.0,
-    "credito_depois": 643.0,
-    "utilizado_depois": 9357.0,
-    "pendente": 0.0,
+    "credito_antes": 643.0,
+    "valor_descontado": 643.0,
+    "credito_depois": 0.0,
+    "utilizado_depois": 10000.0,
+    "pendente": 2476.0,
     "linha_original": "03/08/2026\tPix Doutores\nFranciele Pedrotti\tRecebido de Camila Da Silva Machado (44999) (Parcela 1/1) Pago por: O paciente\t3.119,00 C\t3.119,00 C\t1\t\t\t3.119,00\t3.119,00",
-    "coletado_em": "2026-08-03T18:12:12.972113"
+    "coletado_em": "2026-08-03T20:02:14.854557"
   }
 ]
