@@ -1,10 +1,10 @@
 {
   "competencia": "2026-08",
-  "gerado_em": "2026-08-04T18:24:52.246416",
+  "gerado_em": "2026-08-04T18:38:11.875999",
   "quantidade_total": 22,
   "valor_total": 5695.0,
-  "valor_total_descontado": 533.0,
-  "valor_total_pendente": 5162.0,
+  "valor_total_descontado": 390.0,
+  "valor_total_pendente": 5305.0,
   "por_unidade": [
     {
       "unidade": "Caxias",
@@ -41,7 +41,7 @@
     {
       "doutor": "Giovana Gasparini",
       "quantidade": 4,
-      "valor_descontado": 143.0
+      "valor_descontado": 0.0
     },
     {
       "doutor": "Luisa Moraes Lucas",
