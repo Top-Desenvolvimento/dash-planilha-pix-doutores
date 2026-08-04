@@ -20,29 +20,6 @@
     "utilizado_depois": 10000.0,
     "pendente": 3119.0,
     "linha_original": "03/08/2026\tPix Doutores\nFranciele Pedrotti\tRecebido de Camila Da Silva Machado (44999) (Parcela 1/1) Pago por: O paciente\t3.119,00 C\t3.119,00 C\t1\t\t\t3.119,00\t3.119,00",
-    "coletado_em": "2026-08-04T04:34:07.477129"
-  },
-  {
-    "unidade": "Soledade",
-    "data": "03/08/2026",
-    "competencia": "2026-08",
-    "metodo_pagamento": "Pix Doutores",
-    "responsavel_fiscal_lido": "Luisa Moraes Lucas",
-    "doutor_id": null,
-    "doutor_final": "Luisa Moraes Lucas",
-    "doutor_encontrado": false,
-    "paciente": "Recebido de Clisman Moraes De Quevedo (L) Pago por: O paciente",
-    "codigo_origem": "11634",
-    "parcela": "15/48",
-    "origem": "Recebido de Clisman Moraes De Quevedo (L) (11634) (Parcela 15/48) Pago por: O paciente",
-    "valor": 120.0,
-    "valor_com_descontos": 120.0,
-    "credito_antes": 0.0,
-    "valor_descontado": 0.0,
-    "credito_depois": 0.0,
-    "utilizado_depois": 0.0,
-    "pendente": 120.0,
-    "linha_original": "03/08/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Clisman Moraes De Quevedo (L) (11634) (Parcela 15/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t120,00\t120,00",
-    "coletado_em": "2026-08-04T04:38:04.625486"
+    "coletado_em": "2026-08-04T07:21:45.546341"
   }
 ]
