@@ -1,10 +1,10 @@
 {
   "competencia": "2026-08",
-  "gerado_em": "2026-08-04T19:56:43.849121",
-  "quantidade_total": 25,
-  "valor_total": 5992.0,
-  "valor_total_descontado": 390.0,
-  "valor_total_pendente": 5602.0,
+  "gerado_em": "2026-08-04T20:21:22.286560",
+  "quantidade_total": 27,
+  "valor_total": 6192.0,
+  "valor_total_descontado": 495.0,
+  "valor_total_pendente": 5697.0,
   "por_unidade": [
     {
       "unidade": "Caxias",
@@ -18,19 +18,19 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 2,
-      "valor": 390.0
+      "quantidade": 3,
+      "valor": 495.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 15,
-      "valor": 1719.0
+      "quantidade": 16,
+      "valor": 1814.0
     }
   ],
   "por_doutor": [
     {
       "doutor": "Felipe Lino",
-      "quantidade": 7,
+      "quantidade": 8,
       "valor_descontado": 0.0
     },
     {
@@ -50,8 +50,8 @@
     },
     {
       "doutor": "Tamara Macanan",
-      "quantidade": 2,
-      "valor_descontado": 390.0
+      "quantidade": 3,
+      "valor_descontado": 495.0
     }
   ]
 }
