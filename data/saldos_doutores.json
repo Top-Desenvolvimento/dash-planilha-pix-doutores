@@ -2722,8 +2722,8 @@
       "doutor_id": "19",
       "doutor": "Giovana Gasparini",
       "credito_inicial": 1000.0,
-      "utilizado": 857.0,
-      "credito_disponivel": 143.0,
+      "utilizado": 1000.0,
+      "credito_disponivel": 0.0,
       "pix_key": ""
     },
     {
@@ -2930,8 +2930,8 @@
       "doutor_id": "42",
       "doutor": "Tamara Macanan",
       "credito_inicial": 5000.0,
-      "utilizado": 0.0,
-      "credito_disponivel": 5000.0,
+      "utilizado": 390.0,
+      "credito_disponivel": 4610.0,
       "pix_key": ""
     },
     {
