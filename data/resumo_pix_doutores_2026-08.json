@@ -1,10 +1,10 @@
 {
   "competencia": "2026-08",
-  "gerado_em": "2026-08-04T18:52:11.865517",
-  "quantidade_total": 23,
-  "valor_total": 5794.0,
+  "gerado_em": "2026-08-04T19:01:27.964863",
+  "quantidade_total": 24,
+  "valor_total": 5893.0,
   "valor_total_descontado": 390.0,
-  "valor_total_pendente": 5404.0,
+  "valor_total_pendente": 5503.0,
   "por_unidade": [
     {
       "unidade": "Caxias",
@@ -23,14 +23,14 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 13,
-      "valor": 1521.0
+      "quantidade": 14,
+      "valor": 1620.0
     }
   ],
   "por_doutor": [
     {
       "doutor": "Felipe Lino",
-      "quantidade": 6,
+      "quantidade": 7,
       "valor_descontado": 0.0
     },
     {
