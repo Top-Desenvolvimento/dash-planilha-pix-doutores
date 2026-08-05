@@ -1,10 +1,10 @@
 {
   "competencia": "2026-08",
-  "gerado_em": "2026-08-04T23:55:45.302191",
+  "gerado_em": "2026-08-05T01:31:31.808993",
   "quantidade_total": 40,
   "valor_total": 7803.0,
-  "valor_total_descontado": 660.0,
-  "valor_total_pendente": 7143.0,
+  "valor_total_descontado": 575.0,
+  "valor_total_pendente": 7228.0,
   "por_unidade": [
     {
       "unidade": "Caxias",
@@ -51,7 +51,7 @@
     {
       "doutor": "Tamara Macanan",
       "quantidade": 5,
-      "valor_descontado": 660.0
+      "valor_descontado": 575.0
     }
   ]
 }
