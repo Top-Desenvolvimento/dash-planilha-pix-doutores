@@ -1493,11 +1493,11 @@
   },
   "2026-08": {
     "competencia": "2026-08",
-    "gerado_em": "2026-08-05T14:49:37.024743",
-    "quantidade_total": 34,
-    "valor_total": 7159.0,
+    "gerado_em": "2026-08-05T16:30:32.072159",
+    "quantidade_total": 43,
+    "valor_total": 8131.0,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 7159.0,
+    "valor_total_pendente": 8131.0,
     "por_unidade": [
       {
         "unidade": "Caxias",
@@ -1505,25 +1505,35 @@
         "valor": 3968.0
       },
       {
+        "unidade": "Farroupilha",
+        "quantidade": 7,
+        "valor": 764.0
+      },
+      {
         "unidade": "FloresDaCunha",
-        "quantidade": 5,
-        "valor": 660.0
+        "quantidade": 6,
+        "valor": 748.0
       },
       {
         "unidade": "Soledade",
-        "quantidade": 21,
-        "valor": 2531.0
+        "quantidade": 22,
+        "valor": 2651.0
       }
     ],
     "por_doutor": [
       {
         "doutor": "Felipe Lino",
-        "quantidade": 13,
+        "quantidade": 14,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Franciele Pedrotti",
-        "quantidade": 8,
+        "quantidade": 9,
+        "valor_descontado": 0.0
+      },
+      {
+        "doutor": "Giovana Gasparini",
+        "quantidade": 6,
         "valor_descontado": 0.0
       },
       {
@@ -1533,7 +1543,7 @@
       },
       {
         "doutor": "Tamara Macanan",
-        "quantidade": 5,
+        "quantidade": 6,
         "valor_descontado": 0.0
       }
     ]
