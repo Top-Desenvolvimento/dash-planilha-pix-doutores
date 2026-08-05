@@ -1,10 +1,10 @@
 {
   "competencia": "2026-06",
-  "gerado_em": "2026-07-06T17:17:45.736900",
-  "quantidade_total": 558,
-  "valor_total": 73710.55,
+  "gerado_em": "2026-08-05T14:07:50.577423",
+  "quantidade_total": 559,
+  "valor_total": 73830.55,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 73710.55,
+  "valor_total_pendente": 73830.55,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -18,8 +18,8 @@
     },
     {
       "unidade": "Encantado",
-      "quantidade": 50,
-      "valor": 5803.0
+      "quantidade": 51,
+      "valor": 5923.0
     },
     {
       "unidade": "Farroupilha",
@@ -165,7 +165,7 @@
     },
     {
       "doutor": "Nicoli Weber",
-      "quantidade": 13,
+      "quantidade": 14,
       "valor_descontado": 0.0
     },
     {

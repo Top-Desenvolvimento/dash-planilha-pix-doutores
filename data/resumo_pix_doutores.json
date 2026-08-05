@@ -9,7 +9,7 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-07-06T17:00:06.519379",
+    "gerado_em": "2026-08-05T13:51:10.926314",
     "quantidade_total": 622,
     "valor_total": 83899.09,
     "valor_total_descontado": 0.0,
@@ -221,7 +221,7 @@
   },
   "2026-05": {
     "competencia": "2026-05",
-    "gerado_em": "2026-07-06T17:09:00.650458",
+    "gerado_em": "2026-08-05T13:59:35.293742",
     "quantidade_total": 639,
     "valor_total": 94043.49,
     "valor_total_descontado": 0.0,
@@ -438,7 +438,7 @@
   },
   "2026-01": {
     "competencia": "2026-01",
-    "gerado_em": "2026-07-06T16:32:49.802796",
+    "gerado_em": "2026-08-05T13:25:16.721875",
     "quantidade_total": 631,
     "valor_total": 80218.48,
     "valor_total_descontado": 0.0,
@@ -645,7 +645,7 @@
   },
   "2026-02": {
     "competencia": "2026-02",
-    "gerado_em": "2026-07-06T16:42:00.407484",
+    "gerado_em": "2026-08-05T13:33:57.510602",
     "quantidade_total": 592,
     "valor_total": 79847.59,
     "valor_total_descontado": 0.0,
@@ -832,7 +832,7 @@
   },
   "2026-03": {
     "competencia": "2026-03",
-    "gerado_em": "2026-07-06T16:51:13.268320",
+    "gerado_em": "2026-08-05T13:42:44.157547",
     "quantidade_total": 586,
     "valor_total": 80692.51,
     "valor_total_descontado": 432.0,
@@ -1044,11 +1044,11 @@
   },
   "2026-06": {
     "competencia": "2026-06",
-    "gerado_em": "2026-07-06T17:17:45.736900",
-    "quantidade_total": 558,
-    "valor_total": 73710.55,
+    "gerado_em": "2026-08-05T14:07:50.577423",
+    "quantidade_total": 559,
+    "valor_total": 73830.55,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 73710.55,
+    "valor_total_pendente": 73830.55,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1062,8 +1062,8 @@
       },
       {
         "unidade": "Encantado",
-        "quantidade": 50,
-        "valor": 5803.0
+        "quantidade": 51,
+        "valor": 5923.0
       },
       {
         "unidade": "Farroupilha",
@@ -1209,7 +1209,7 @@
       },
       {
         "doutor": "Nicoli Weber",
-        "quantidade": 13,
+        "quantidade": 14,
         "valor_descontado": 0.0
       },
       {
@@ -1261,11 +1261,11 @@
   },
   "2026-07": {
     "competencia": "2026-07",
-    "gerado_em": "2026-07-31T23:46:50.783014",
-    "quantidade_total": 594,
-    "valor_total": 84556.72,
+    "gerado_em": "2026-08-05T14:15:58.055471",
+    "quantidade_total": 595,
+    "valor_total": 84673.72,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 84556.72,
+    "valor_total_pendente": 84673.72,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1279,8 +1279,8 @@
       },
       {
         "unidade": "Encantado",
-        "quantidade": 56,
-        "valor": 9105.61
+        "quantidade": 57,
+        "valor": 9204.61
       },
       {
         "unidade": "Farroupilha",
@@ -1295,7 +1295,7 @@
       {
         "unidade": "Soledade",
         "quantidade": 153,
-        "valor": 17303.0
+        "valor": 17321.0
       },
       {
         "unidade": "Veranopolis",
@@ -1306,7 +1306,7 @@
     "por_doutor": [
       {
         "doutor": "Adriele da Silva",
-        "quantidade": 11,
+        "quantidade": 12,
         "valor_descontado": 0.0
       },
       {
@@ -1336,7 +1336,7 @@
       },
       {
         "doutor": "Felipe Lino",
-        "quantidade": 33,
+        "quantidade": 34,
         "valor_descontado": 0.0
       },
       {
@@ -1361,7 +1361,7 @@
       },
       {
         "doutor": "Iara Dalvite",
-        "quantidade": 9,
+        "quantidade": 8,
         "valor_descontado": 0.0
       },
       {
@@ -1441,7 +1441,7 @@
       },
       {
         "doutor": "Nicoli Weber",
-        "quantidade": 16,
+        "quantidade": 17,
         "valor_descontado": 0.0
       },
       {
@@ -1451,7 +1451,7 @@
       },
       {
         "doutor": "Renata Protto",
-        "quantidade": 11,
+        "quantidade": 12,
         "valor_descontado": 0.0
       },
       {
@@ -1477,11 +1477,6 @@
       {
         "doutor": "Thiany Cristofoli",
         "quantidade": 16,
-        "valor_descontado": 0.0
-      },
-      {
-        "doutor": "TOP",
-        "quantidade": 2,
         "valor_descontado": 0.0
       },
       {
