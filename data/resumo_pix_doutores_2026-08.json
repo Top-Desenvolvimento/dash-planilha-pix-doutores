@@ -1,10 +1,10 @@
 {
   "competencia": "2026-08",
-  "gerado_em": "2026-08-05T18:11:52.720329",
-  "quantidade_total": 47,
-  "valor_total": 8677.0,
+  "gerado_em": "2026-08-05T19:01:30.382018",
+  "quantidade_total": 48,
+  "valor_total": 8780.0,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 8677.0,
+  "valor_total_pendente": 8780.0,
   "por_unidade": [
     {
       "unidade": "Caxias",
@@ -18,8 +18,8 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 6,
-      "valor": 748.0
+      "quantidade": 7,
+      "valor": 851.0
     },
     {
       "unidade": "Soledade",
@@ -55,7 +55,7 @@
     },
     {
       "doutor": "Tamara Macanan",
-      "quantidade": 6,
+      "quantidade": 7,
       "valor_descontado": 0.0
     },
     {
