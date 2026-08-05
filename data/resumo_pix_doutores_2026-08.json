@@ -1,10 +1,10 @@
 {
   "competencia": "2026-08",
-  "gerado_em": "2026-08-05T22:26:16.922660",
+  "gerado_em": "2026-08-05T23:34:41.220687",
   "quantidade_total": 68,
   "valor_total": 12438.22,
-  "valor_total_descontado": 934.0,
-  "valor_total_pendente": 11504.22,
+  "valor_total_descontado": 0.0,
+  "valor_total_pendente": 12438.22,
   "por_unidade": [
     {
       "unidade": "Caxias",
@@ -66,7 +66,7 @@
     {
       "doutor": "Thiany Cristofoli",
       "quantidade": 11,
-      "valor_descontado": 934.0
+      "valor_descontado": 0.0
     },
     {
       "doutor": "Valter Baldissera",
