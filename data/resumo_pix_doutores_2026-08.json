@@ -1,15 +1,20 @@
 {
   "competencia": "2026-08",
-  "gerado_em": "2026-08-05T19:01:30.382018",
-  "quantidade_total": 48,
-  "valor_total": 8780.0,
-  "valor_total_descontado": 0.0,
-  "valor_total_pendente": 8780.0,
+  "gerado_em": "2026-08-05T19:59:17.200803",
+  "quantidade_total": 51,
+  "valor_total": 9385.0,
+  "valor_total_descontado": 105.0,
+  "valor_total_pendente": 9280.0,
   "por_unidade": [
     {
       "unidade": "Caxias",
-      "quantidade": 8,
-      "valor": 3968.0
+      "quantidade": 10,
+      "valor": 4468.0
+    },
+    {
+      "unidade": "Encantado",
+      "quantidade": 1,
+      "valor": 105.0
     },
     {
       "unidade": "Farroupilha",
@@ -40,7 +45,7 @@
     },
     {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 9,
+      "quantidade": 11,
       "valor_descontado": 0.0
     },
     {
@@ -57,6 +62,11 @@
       "doutor": "Tamara Macanan",
       "quantidade": 7,
       "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Thiany Cristofoli",
+      "quantidade": 1,
+      "valor_descontado": 105.0
     },
     {
       "doutor": "Valter Baldissera",
