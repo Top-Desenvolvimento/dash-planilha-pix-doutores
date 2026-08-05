@@ -363,8 +363,8 @@
     "doutor_id": "44",
     "doutor": "Thiany Cristofoli",
     "credito_inicial": 4000.0,
-    "utilizado": 3066.0,
-    "credito_disponivel": 934.0,
+    "utilizado": 4000.0,
+    "credito_disponivel": 0.0,
     "pix_key": ""
   }
 ]
