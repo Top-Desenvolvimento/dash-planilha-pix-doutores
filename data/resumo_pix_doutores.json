@@ -9,7 +9,7 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-08-05T13:51:10.926314",
+    "gerado_em": "2026-08-06T20:45:27.725582",
     "quantidade_total": 622,
     "valor_total": 83899.09,
     "valor_total_descontado": 0.0,
@@ -221,7 +221,7 @@
   },
   "2026-05": {
     "competencia": "2026-05",
-    "gerado_em": "2026-08-05T13:59:35.293742",
+    "gerado_em": "2026-08-06T20:54:06.421246",
     "quantidade_total": 639,
     "valor_total": 94043.49,
     "valor_total_descontado": 0.0,
@@ -438,7 +438,7 @@
   },
   "2026-01": {
     "competencia": "2026-01",
-    "gerado_em": "2026-08-05T13:25:16.721875",
+    "gerado_em": "2026-08-06T20:18:56.399172",
     "quantidade_total": 631,
     "valor_total": 80218.48,
     "valor_total_descontado": 0.0,
@@ -645,7 +645,7 @@
   },
   "2026-02": {
     "competencia": "2026-02",
-    "gerado_em": "2026-08-05T13:33:57.510602",
+    "gerado_em": "2026-08-06T20:27:49.703852",
     "quantidade_total": 592,
     "valor_total": 79847.59,
     "valor_total_descontado": 0.0,
@@ -832,7 +832,7 @@
   },
   "2026-03": {
     "competencia": "2026-03",
-    "gerado_em": "2026-08-05T13:42:44.157547",
+    "gerado_em": "2026-08-06T20:36:48.630830",
     "quantidade_total": 586,
     "valor_total": 80692.51,
     "valor_total_descontado": 432.0,
@@ -1044,7 +1044,7 @@
   },
   "2026-06": {
     "competencia": "2026-06",
-    "gerado_em": "2026-08-05T14:07:50.577423",
+    "gerado_em": "2026-08-06T21:02:36.869455",
     "quantidade_total": 559,
     "valor_total": 73830.55,
     "valor_total_descontado": 0.0,
@@ -1261,11 +1261,11 @@
   },
   "2026-07": {
     "competencia": "2026-07",
-    "gerado_em": "2026-08-05T14:15:58.055471",
-    "quantidade_total": 595,
-    "valor_total": 84673.72,
+    "gerado_em": "2026-08-06T21:11:10.835958",
+    "quantidade_total": 594,
+    "valor_total": 84515.72,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 84673.72,
+    "valor_total_pendente": 84515.72,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1299,8 +1299,8 @@
       },
       {
         "unidade": "Veranopolis",
-        "quantidade": 52,
-        "valor": 10909.22
+        "quantidade": 51,
+        "valor": 10751.22
       }
     ],
     "por_doutor": [
@@ -1421,7 +1421,7 @@
       },
       {
         "doutor": "Morgana Zambiasi",
-        "quantidade": 15,
+        "quantidade": 14,
         "valor_descontado": 0.0
       },
       {
