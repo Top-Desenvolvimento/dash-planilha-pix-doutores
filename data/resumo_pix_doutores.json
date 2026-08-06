@@ -1493,16 +1493,16 @@
   },
   "2026-08": {
     "competencia": "2026-08",
-    "gerado_em": "2026-08-06T14:48:04.647649",
-    "quantidade_total": 74,
-    "valor_total": 13322.22,
+    "gerado_em": "2026-08-06T19:57:01.779165",
+    "quantidade_total": 83,
+    "valor_total": 14533.22,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 13322.22,
+    "valor_total_pendente": 14533.22,
     "por_unidade": [
       {
         "unidade": "Caxias",
-        "quantidade": 16,
-        "valor": 5352.0
+        "quantidade": 19,
+        "valor": 5793.0
       },
       {
         "unidade": "Encantado",
@@ -1521,13 +1521,13 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 26,
-        "valor": 3191.0
+        "quantidade": 27,
+        "valor": 3296.0
       },
       {
         "unidade": "Veranopolis",
-        "quantidade": 5,
-        "valor": 1010.22
+        "quantidade": 10,
+        "valor": 1675.22
       }
     ],
     "por_doutor": [
@@ -1538,7 +1538,7 @@
       },
       {
         "doutor": "Franciele Pedrotti",
-        "quantidade": 17,
+        "quantidade": 20,
         "valor_descontado": 0.0
       },
       {
@@ -1548,7 +1548,7 @@
       },
       {
         "doutor": "Luisa Moraes Lucas",
-        "quantidade": 9,
+        "quantidade": 10,
         "valor_descontado": 0.0
       },
       {
@@ -1562,8 +1562,13 @@
         "valor_descontado": 0.0
       },
       {
+        "doutor": "TOP",
+        "quantidade": 1,
+        "valor_descontado": 0.0
+      },
+      {
         "doutor": "Valter Baldissera",
-        "quantidade": 5,
+        "quantidade": 9,
         "valor_descontado": 0.0
       }
     ]
