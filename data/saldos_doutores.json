@@ -2594,8 +2594,8 @@
       "doutor_id": "1",
       "doutor": "Adriele da Silva",
       "credito_inicial": 3000.0,
-      "utilizado": 1752.0,
-      "credito_disponivel": 1248.0,
+      "utilizado": 1971.0,
+      "credito_disponivel": 1029.0,
       "pix_key": ""
     },
     {
@@ -2674,8 +2674,8 @@
       "doutor_id": "12",
       "doutor": "Dionathan Pohlmann",
       "credito_inicial": 6000.0,
-      "utilizado": 1890.0,
-      "credito_disponivel": 4110.0,
+      "utilizado": 2100.0,
+      "credito_disponivel": 3900.0,
       "pix_key": ""
     },
     {
