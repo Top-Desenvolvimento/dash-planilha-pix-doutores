@@ -1,18 +1,6 @@
 [
   {
     "unidade": "Garibaldi",
-    "competencia": "2026-08",
-    "erro": "Menu Finanças não encontrado.",
-    "coletado_em": "2026-08-06T19:54:59.323621"
-  },
-  {
-    "unidade": "Ssdocai",
-    "competencia": "2026-08",
-    "erro": "Menu Finanças não encontrado.",
-    "coletado_em": "2026-08-06T19:56:01.009912"
-  },
-  {
-    "unidade": "Garibaldi",
     "competencia": "2026-01",
     "erro": "Menu Finanças não encontrado.",
     "coletado_em": "2026-08-06T20:16:32.221781"
@@ -94,5 +82,17 @@
     "competencia": "2026-07",
     "erro": "Menu Finanças não encontrado.",
     "coletado_em": "2026-08-06T21:09:59.941591"
+  },
+  {
+    "unidade": "Garibaldi",
+    "competencia": "2026-08",
+    "erro": "Menu Finanças não encontrado.",
+    "coletado_em": "2026-08-07T00:24:27.441666"
+  },
+  {
+    "unidade": "Ssdocai",
+    "competencia": "2026-08",
+    "erro": "Menu Finanças não encontrado.",
+    "coletado_em": "2026-08-07T00:25:29.296099"
   }
 ]
