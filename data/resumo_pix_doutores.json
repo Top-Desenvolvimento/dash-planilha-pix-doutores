@@ -1493,11 +1493,11 @@
   },
   "2026-08": {
     "competencia": "2026-08",
-    "gerado_em": "2026-08-07T21:14:36.348057",
-    "quantidade_total": 118,
-    "valor_total": 20152.22,
+    "gerado_em": "2026-08-07T22:02:43.682000",
+    "quantidade_total": 120,
+    "valor_total": 20362.22,
     "valor_total_descontado": 210.0,
-    "valor_total_pendente": 19942.22,
+    "valor_total_pendente": 20152.22,
     "por_unidade": [
       {
         "unidade": "Caxias",
@@ -1506,8 +1506,8 @@
       },
       {
         "unidade": "Encantado",
-        "quantidade": 16,
-        "valor": 2483.0
+        "quantidade": 17,
+        "valor": 2588.0
       },
       {
         "unidade": "Farroupilha",
@@ -1521,8 +1521,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 41,
-        "valor": 4735.0
+        "quantidade": 42,
+        "valor": 4840.0
       },
       {
         "unidade": "Veranopolis",
@@ -1563,7 +1563,7 @@
       },
       {
         "doutor": "Luisa Moraes Lucas",
-        "quantidade": 24,
+        "quantidade": 25,
         "valor_descontado": 0.0
       },
       {
@@ -1573,7 +1573,7 @@
       },
       {
         "doutor": "Thiany Cristofoli",
-        "quantidade": 16,
+        "quantidade": 17,
         "valor_descontado": 0.0
       },
       {
