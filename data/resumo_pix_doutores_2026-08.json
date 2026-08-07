@@ -1,10 +1,10 @@
 {
   "competencia": "2026-08",
-  "gerado_em": "2026-08-07T13:31:44.131187",
-  "quantidade_total": 100,
-  "valor_total": 17786.22,
+  "gerado_em": "2026-08-07T14:41:33.277893",
+  "quantidade_total": 102,
+  "valor_total": 18091.22,
   "valor_total_descontado": 429.0,
-  "valor_total_pendente": 17357.22,
+  "valor_total_pendente": 17662.22,
   "por_unidade": [
     {
       "unidade": "Caxias",
@@ -23,13 +23,13 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 8,
-      "valor": 954.0
+      "quantidade": 9,
+      "valor": 1154.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 31,
-      "valor": 3827.0
+      "quantidade": 32,
+      "valor": 3932.0
     },
     {
       "unidade": "Veranopolis",
@@ -64,8 +64,13 @@
       "valor_descontado": 0.0
     },
     {
+      "doutor": "Karen Ramona Kuwer",
+      "quantidade": 1,
+      "valor_descontado": 0.0
+    },
+    {
       "doutor": "Luisa Moraes Lucas",
-      "quantidade": 14,
+      "quantidade": 15,
       "valor_descontado": 0.0
     },
     {
