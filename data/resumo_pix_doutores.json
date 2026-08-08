@@ -1493,16 +1493,16 @@
   },
   "2026-08": {
     "competencia": "2026-08",
-    "gerado_em": "2026-08-08T15:20:06.558849",
-    "quantidade_total": 148,
-    "valor_total": 25713.22,
-    "valor_total_descontado": 529.0,
-    "valor_total_pendente": 25184.22,
+    "gerado_em": "2026-08-08T15:57:30.530116",
+    "quantidade_total": 154,
+    "valor_total": 26639.22,
+    "valor_total_descontado": 969.0,
+    "valor_total_pendente": 25670.22,
     "por_unidade": [
       {
         "unidade": "Caxias",
-        "quantidade": 35,
-        "valor": 9416.0
+        "quantidade": 36,
+        "valor": 9622.0
       },
       {
         "unidade": "Encantado",
@@ -1511,8 +1511,8 @@
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 13,
-        "valor": 1675.0
+        "quantidade": 18,
+        "valor": 2395.0
       },
       {
         "unidade": "FloresDaCunha",
@@ -1548,7 +1548,7 @@
       },
       {
         "doutor": "Franciele Pedrotti",
-        "quantidade": 34,
+        "quantidade": 36,
         "valor_descontado": 0.0
       },
       {
@@ -1573,12 +1573,17 @@
       },
       {
         "doutor": "Thalia Vezzosi",
-        "quantidade": 3,
-        "valor_descontado": 529.0
+        "quantidade": 6,
+        "valor_descontado": 969.0
       },
       {
         "doutor": "Thiany Cristofoli",
         "quantidade": 18,
+        "valor_descontado": 0.0
+      },
+      {
+        "doutor": "TOP",
+        "quantidade": 1,
         "valor_descontado": 0.0
       },
       {
