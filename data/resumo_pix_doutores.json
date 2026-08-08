@@ -1493,11 +1493,11 @@
   },
   "2026-08": {
     "competencia": "2026-08",
-    "gerado_em": "2026-08-08T13:17:24.828084",
-    "quantidade_total": 140,
-    "valor_total": 24489.22,
+    "gerado_em": "2026-08-08T14:05:49.686340",
+    "quantidade_total": 143,
+    "valor_total": 24959.22,
     "valor_total_descontado": 300.0,
-    "valor_total_pendente": 24189.22,
+    "valor_total_pendente": 24659.22,
     "por_unidade": [
       {
         "unidade": "Caxias",
@@ -1521,13 +1521,13 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 44,
-        "valor": 5012.0
+        "quantidade": 45,
+        "valor": 5132.0
       },
       {
         "unidade": "Veranopolis",
-        "quantidade": 15,
-        "valor": 2606.22
+        "quantidade": 17,
+        "valor": 2956.22
       }
     ],
     "por_doutor": [
@@ -1563,7 +1563,7 @@
       },
       {
         "doutor": "Luisa Moraes Lucas",
-        "quantidade": 27,
+        "quantidade": 28,
         "valor_descontado": 0.0
       },
       {
@@ -1583,7 +1583,7 @@
       },
       {
         "doutor": "Valter Baldissera",
-        "quantidade": 15,
+        "quantidade": 17,
         "valor_descontado": 0.0
       }
     ]
