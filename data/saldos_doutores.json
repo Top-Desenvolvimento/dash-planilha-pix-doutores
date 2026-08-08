@@ -2674,8 +2674,8 @@
       "doutor_id": "12",
       "doutor": "Dionathan Pohlmann",
       "credito_inicial": 6000.0,
-      "utilizado": 5880.0,
-      "credito_disponivel": 120.0,
+      "utilizado": 6000.0,
+      "credito_disponivel": 0.0,
       "pix_key": ""
     },
     {
