@@ -1493,21 +1493,16 @@
   },
   "2026-08": {
     "competencia": "2026-08",
-    "gerado_em": "2026-08-09T04:21:19.984333",
-    "quantidade_total": 155,
-    "valor_total": 26876.22,
+    "gerado_em": "2026-08-09T05:32:49.805932",
+    "quantidade_total": 137,
+    "valor_total": 24168.22,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 26876.22,
+    "valor_total_pendente": 24168.22,
     "por_unidade": [
       {
         "unidade": "Caxias",
         "quantidade": 36,
         "valor": 9622.0
-      },
-      {
-        "unidade": "Encantado",
-        "quantidade": 18,
-        "valor": 2708.0
       },
       {
         "unidade": "Farroupilha",
@@ -1574,11 +1569,6 @@
       {
         "doutor": "Thalia Vezzosi",
         "quantidade": 6,
-        "valor_descontado": 0.0
-      },
-      {
-        "doutor": "Thiany Cristofoli",
-        "quantidade": 18,
         "valor_descontado": 0.0
       },
       {
