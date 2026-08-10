@@ -1,10 +1,10 @@
 {
   "competencia": "2026-08",
-  "gerado_em": "2026-08-10T22:09:19.951305",
-  "quantidade_total": 173,
-  "valor_total": 30636.22,
+  "gerado_em": "2026-08-10T23:00:55.237050",
+  "quantidade_total": 174,
+  "valor_total": 30761.22,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 30636.22,
+  "valor_total_pendente": 30761.22,
   "por_unidade": [
     {
       "unidade": "Caxias",
@@ -33,8 +33,8 @@
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 23,
-      "valor": 3823.22
+      "quantidade": 24,
+      "valor": 3948.22
     }
   ],
   "por_doutor": [
@@ -95,7 +95,7 @@
     },
     {
       "doutor": "Valter Baldissera",
-      "quantidade": 23,
+      "quantidade": 24,
       "valor_descontado": 0.0
     }
   ]
