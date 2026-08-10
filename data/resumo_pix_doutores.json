@@ -1493,16 +1493,16 @@
   },
   "2026-08": {
     "competencia": "2026-08",
-    "gerado_em": "2026-08-10T12:08:15.365533",
-    "quantidade_total": 155,
-    "valor_total": 26876.22,
-    "valor_total_descontado": 0.0,
-    "valor_total_pendente": 26876.22,
+    "gerado_em": "2026-08-10T13:45:20.181968",
+    "quantidade_total": 157,
+    "valor_total": 27867.22,
+    "valor_total_descontado": 886.0,
+    "valor_total_pendente": 26981.22,
     "por_unidade": [
       {
         "unidade": "Caxias",
-        "quantidade": 36,
-        "valor": 9622.0
+        "quantidade": 37,
+        "valor": 10508.0
       },
       {
         "unidade": "Encantado",
@@ -1521,8 +1521,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 45,
-        "valor": 5132.0
+        "quantidade": 46,
+        "valor": 5237.0
       },
       {
         "unidade": "Veranopolis",
@@ -1563,13 +1563,18 @@
       },
       {
         "doutor": "Luisa Moraes Lucas",
-        "quantidade": 28,
+        "quantidade": 29,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Tamara Macanan",
         "quantidade": 16,
         "valor_descontado": 0.0
+      },
+      {
+        "doutor": "Thalia Tessaro",
+        "quantidade": 1,
+        "valor_descontado": 886.0
       },
       {
         "doutor": "Thalia Vezzosi",
