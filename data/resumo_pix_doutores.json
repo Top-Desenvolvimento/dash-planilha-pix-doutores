@@ -1493,16 +1493,16 @@
   },
   "2026-08": {
     "competencia": "2026-08",
-    "gerado_em": "2026-08-10T18:41:26.277780",
-    "quantidade_total": 163,
-    "valor_total": 28696.22,
+    "gerado_em": "2026-08-10T19:24:59.615797",
+    "quantidade_total": 166,
+    "valor_total": 28979.22,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 28696.22,
+    "valor_total_pendente": 28979.22,
     "por_unidade": [
       {
         "unidade": "Caxias",
-        "quantidade": 40,
-        "valor": 10921.0
+        "quantidade": 42,
+        "valor": 11105.0
       },
       {
         "unidade": "Encantado",
@@ -1521,8 +1521,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 47,
-        "valor": 5443.0
+        "quantidade": 48,
+        "valor": 5542.0
       },
       {
         "unidade": "Veranopolis",
@@ -1548,7 +1548,7 @@
       },
       {
         "doutor": "Franciele Pedrotti",
-        "quantidade": 36,
+        "quantidade": 38,
         "valor_descontado": 0.0
       },
       {
@@ -1563,7 +1563,7 @@
       },
       {
         "doutor": "Luisa Moraes Lucas",
-        "quantidade": 30,
+        "quantidade": 31,
         "valor_descontado": 0.0
       },
       {
