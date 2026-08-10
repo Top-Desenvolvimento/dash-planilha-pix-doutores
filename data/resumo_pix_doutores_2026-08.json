@@ -1,15 +1,15 @@
 {
   "competencia": "2026-08",
-  "gerado_em": "2026-08-10T20:31:03.640426",
-  "quantidade_total": 166,
-  "valor_total": 28979.22,
+  "gerado_em": "2026-08-10T20:57:50.814936",
+  "quantidade_total": 168,
+  "valor_total": 30016.22,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 28979.22,
+  "valor_total_pendente": 30016.22,
   "por_unidade": [
     {
       "unidade": "Caxias",
-      "quantidade": 42,
-      "valor": 11105.0
+      "quantidade": 44,
+      "valor": 12142.0
     },
     {
       "unidade": "Encantado",
@@ -80,7 +80,7 @@
     },
     {
       "doutor": "Thalia Tessaro",
-      "quantidade": 4,
+      "quantidade": 6,
       "valor_descontado": 0.0
     },
     {
