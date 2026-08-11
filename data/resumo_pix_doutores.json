@@ -1493,16 +1493,16 @@
   },
   "2026-08": {
     "competencia": "2026-08",
-    "gerado_em": "2026-08-11T18:20:11.438401",
-    "quantidade_total": 201,
-    "valor_total": 34486.22,
+    "gerado_em": "2026-08-11T19:36:51.173250",
+    "quantidade_total": 206,
+    "valor_total": 35394.22,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 34486.22,
+    "valor_total_pendente": 35394.22,
     "por_unidade": [
       {
         "unidade": "Caxias",
-        "quantidade": 52,
-        "valor": 13419.0
+        "quantidade": 53,
+        "valor": 13734.0
       },
       {
         "unidade": "Encantado",
@@ -1511,18 +1511,18 @@
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 28,
-        "valor": 3750.0
+        "quantidade": 29,
+        "valor": 3908.0
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 25,
-        "valor": 4439.0
+        "quantidade": 27,
+        "valor": 4679.0
       },
       {
         "unidade": "Soledade",
-        "quantidade": 54,
-        "valor": 6235.0
+        "quantidade": 55,
+        "valor": 6430.0
       },
       {
         "unidade": "Veranopolis",
@@ -1538,12 +1538,12 @@
       },
       {
         "doutor": "Dionathan Pohlmann",
-        "quantidade": 6,
+        "quantidade": 7,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Felipe Lino",
-        "quantidade": 17,
+        "quantidade": 18,
         "valor_descontado": 0.0
       },
       {
@@ -1573,7 +1573,7 @@
       },
       {
         "doutor": "Tamara Macanan",
-        "quantidade": 24,
+        "quantidade": 26,
         "valor_descontado": 0.0
       },
       {
@@ -1583,7 +1583,7 @@
       },
       {
         "doutor": "Thalia Vezzosi",
-        "quantidade": 17,
+        "quantidade": 18,
         "valor_descontado": 0.0
       },
       {
