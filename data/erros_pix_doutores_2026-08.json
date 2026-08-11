@@ -1,14 +1,20 @@
 [
   {
+    "unidade": "Farroupilha",
+    "competencia": "2026-08",
+    "erro": "Menu Finanças não encontrado.",
+    "coletado_em": "2026-08-11T20:21:12.538176"
+  },
+  {
     "unidade": "Garibaldi",
     "competencia": "2026-08",
     "erro": "Menu Finanças não encontrado.",
-    "coletado_em": "2026-08-11T19:34:39.341691"
+    "coletado_em": "2026-08-11T20:24:13.651572"
   },
   {
     "unidade": "Ssdocai",
     "competencia": "2026-08",
     "erro": "Menu Finanças não encontrado.",
-    "coletado_em": "2026-08-11T19:35:42.743622"
+    "coletado_em": "2026-08-11T20:25:15.229042"
   }
 ]
