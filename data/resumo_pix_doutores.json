@@ -1493,16 +1493,16 @@
   },
   "2026-08": {
     "competencia": "2026-08",
-    "gerado_em": "2026-08-11T17:24:18.362549",
-    "quantidade_total": 197,
-    "valor_total": 34067.22,
+    "gerado_em": "2026-08-11T18:20:11.438401",
+    "quantidade_total": 201,
+    "valor_total": 34486.22,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 34067.22,
+    "valor_total_pendente": 34486.22,
     "por_unidade": [
       {
         "unidade": "Caxias",
-        "quantidade": 51,
-        "valor": 13299.0
+        "quantidade": 52,
+        "valor": 13419.0
       },
       {
         "unidade": "Encantado",
@@ -1511,13 +1511,13 @@
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 26,
-        "valor": 3566.0
+        "quantidade": 28,
+        "valor": 3750.0
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 24,
-        "valor": 4324.0
+        "quantidade": 25,
+        "valor": 4439.0
       },
       {
         "unidade": "Soledade",
@@ -1538,7 +1538,7 @@
       },
       {
         "doutor": "Dionathan Pohlmann",
-        "quantidade": 5,
+        "quantidade": 6,
         "valor_descontado": 0.0
       },
       {
@@ -1573,7 +1573,7 @@
       },
       {
         "doutor": "Tamara Macanan",
-        "quantidade": 23,
+        "quantidade": 24,
         "valor_descontado": 0.0
       },
       {
@@ -1583,7 +1583,7 @@
       },
       {
         "doutor": "Thalia Vezzosi",
-        "quantidade": 15,
+        "quantidade": 17,
         "valor_descontado": 0.0
       },
       {
