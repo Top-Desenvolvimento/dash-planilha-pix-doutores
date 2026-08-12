@@ -1493,11 +1493,11 @@
   },
   "2026-08": {
     "competencia": "2026-08",
-    "gerado_em": "2026-08-12T19:58:54.996803",
-    "quantidade_total": 252,
-    "valor_total": 43168.22,
-    "valor_total_descontado": 887.0,
-    "valor_total_pendente": 42281.22,
+    "gerado_em": "2026-08-12T20:49:32.970722",
+    "quantidade_total": 259,
+    "valor_total": 44027.22,
+    "valor_total_descontado": 297.0,
+    "valor_total_pendente": 43730.22,
     "por_unidade": [
       {
         "unidade": "Caxias",
@@ -1506,8 +1506,8 @@
       },
       {
         "unidade": "Encantado",
-        "quantidade": 24,
-        "valor": 3483.0
+        "quantidade": 25,
+        "valor": 3743.0
       },
       {
         "unidade": "Farroupilha",
@@ -1516,18 +1516,18 @@
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 41,
-        "valor": 7974.0
+        "quantidade": 44,
+        "valor": 8278.0
       },
       {
         "unidade": "Soledade",
-        "quantidade": 68,
-        "valor": 7935.0
+        "quantidade": 69,
+        "valor": 8040.0
       },
       {
         "unidade": "Veranopolis",
-        "quantidade": 25,
-        "valor": 4040.22
+        "quantidade": 27,
+        "valor": 4230.22
       }
     ],
     "por_doutor": [
@@ -1538,8 +1538,8 @@
       },
       {
         "doutor": "Alexandre Favero",
-        "quantidade": 6,
-        "valor_descontado": 788.0
+        "quantidade": 7,
+        "valor_descontado": 297.0
       },
       {
         "doutor": "Ana Cristina Corso",
@@ -1548,7 +1548,7 @@
       },
       {
         "doutor": "Dionathan Pohlmann",
-        "quantidade": 13,
+        "quantidade": 14,
         "valor_descontado": 0.0
       },
       {
@@ -1568,7 +1568,7 @@
       },
       {
         "doutor": "Indiamara Rech",
-        "quantidade": 9,
+        "quantidade": 12,
         "valor_descontado": 0.0
       },
       {
@@ -1578,18 +1578,13 @@
       },
       {
         "doutor": "Leticia Canabarro",
-        "quantidade": 18,
+        "quantidade": 19,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Luisa Moraes Lucas",
         "quantidade": 32,
         "valor_descontado": 0.0
-      },
-      {
-        "doutor": "Nelson Vaccari",
-        "quantidade": 1,
-        "valor_descontado": 99.0
       },
       {
         "doutor": "Tamara Macanan",
@@ -1613,7 +1608,7 @@
       },
       {
         "doutor": "Valter Baldissera",
-        "quantidade": 25,
+        "quantidade": 27,
         "valor_descontado": 0.0
       }
     ]
