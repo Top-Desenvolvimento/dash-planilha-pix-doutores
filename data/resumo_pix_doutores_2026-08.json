@@ -1,10 +1,10 @@
 {
   "competencia": "2026-08",
-  "gerado_em": "2026-08-12T22:29:31.355626",
-  "quantidade_total": 266,
-  "valor_total": 44606.22,
+  "gerado_em": "2026-08-12T23:17:13.520015",
+  "quantidade_total": 267,
+  "valor_total": 44701.22,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 44606.22,
+  "valor_total_pendente": 44701.22,
   "por_unidade": [
     {
       "unidade": "Caxias",
@@ -23,8 +23,8 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 48,
-      "valor": 8632.0
+      "quantidade": 49,
+      "valor": 8727.0
     },
     {
       "unidade": "Soledade",
@@ -75,7 +75,7 @@
     },
     {
       "doutor": "Indiamara Rech",
-      "quantidade": 16,
+      "quantidade": 17,
       "valor_descontado": 0.0
     },
     {
