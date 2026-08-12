@@ -1,9 +1,9 @@
 {
   "competencia": "2026-08",
-  "gerado_em": "2026-08-12T12:10:52.841548",
-  "quantidade_total": 230,
-  "valor_total": 38748.22,
-  "valor_total_descontado": 99.0,
+  "gerado_em": "2026-08-12T13:48:42.687635",
+  "quantidade_total": 231,
+  "valor_total": 40248.22,
+  "valor_total_descontado": 1599.0,
   "valor_total_pendente": 38649.22,
   "por_unidade": [
     {
@@ -23,8 +23,8 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 30,
-      "valor": 5018.0
+      "quantidade": 31,
+      "valor": 6518.0
     },
     {
       "unidade": "Soledade",
@@ -42,6 +42,11 @@
       "doutor": "Adriele da Silva",
       "quantidade": 2,
       "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Ana Cristina Corso",
+      "quantidade": 1,
+      "valor_descontado": 1500.0
     },
     {
       "doutor": "Dionathan Pohlmann",
