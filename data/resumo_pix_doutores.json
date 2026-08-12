@@ -1493,11 +1493,11 @@
   },
   "2026-08": {
     "competencia": "2026-08",
-    "gerado_em": "2026-08-12T18:49:06.499390",
-    "quantidade_total": 244,
-    "valor_total": 41897.22,
-    "valor_total_descontado": 514.0,
-    "valor_total_pendente": 41383.22,
+    "gerado_em": "2026-08-12T19:58:54.996803",
+    "quantidade_total": 252,
+    "valor_total": 43168.22,
+    "valor_total_descontado": 887.0,
+    "valor_total_pendente": 42281.22,
     "por_unidade": [
       {
         "unidade": "Caxias",
@@ -1506,8 +1506,8 @@
       },
       {
         "unidade": "Encantado",
-        "quantidade": 22,
-        "valor": 3110.0
+        "quantidade": 24,
+        "valor": 3483.0
       },
       {
         "unidade": "Farroupilha",
@@ -1516,8 +1516,8 @@
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 35,
-        "valor": 7076.0
+        "quantidade": 41,
+        "valor": 7974.0
       },
       {
         "unidade": "Soledade",
@@ -1538,8 +1538,8 @@
       },
       {
         "doutor": "Alexandre Favero",
-        "quantidade": 4,
-        "valor_descontado": 415.0
+        "quantidade": 6,
+        "valor_descontado": 788.0
       },
       {
         "doutor": "Ana Cristina Corso",
@@ -1568,7 +1568,7 @@
       },
       {
         "doutor": "Indiamara Rech",
-        "quantidade": 3,
+        "quantidade": 9,
         "valor_descontado": 0.0
       },
       {
