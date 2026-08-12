@@ -1,10 +1,10 @@
 {
   "competencia": "2026-08",
-  "gerado_em": "2026-08-12T21:38:19.814972",
-  "quantidade_total": 260,
-  "valor_total": 44147.22,
+  "gerado_em": "2026-08-12T22:29:31.355626",
+  "quantidade_total": 266,
+  "valor_total": 44606.22,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 44147.22,
+  "valor_total_pendente": 44606.22,
   "por_unidade": [
     {
       "unidade": "Caxias",
@@ -13,8 +13,8 @@
     },
     {
       "unidade": "Encantado",
-      "quantidade": 25,
-      "valor": 3743.0
+      "quantidade": 27,
+      "valor": 3883.0
     },
     {
       "unidade": "Farroupilha",
@@ -23,13 +23,13 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 45,
-      "valor": 8398.0
+      "quantidade": 48,
+      "valor": 8632.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 69,
-      "valor": 8040.0
+      "quantidade": 70,
+      "valor": 8125.0
     },
     {
       "unidade": "Veranopolis",
@@ -45,7 +45,7 @@
     },
     {
       "doutor": "Alexandre Favero",
-      "quantidade": 7,
+      "quantidade": 9,
       "valor_descontado": 0.0
     },
     {
@@ -75,7 +75,7 @@
     },
     {
       "doutor": "Indiamara Rech",
-      "quantidade": 13,
+      "quantidade": 16,
       "valor_descontado": 0.0
     },
     {
@@ -85,7 +85,7 @@
     },
     {
       "doutor": "Leticia Canabarro",
-      "quantidade": 19,
+      "quantidade": 20,
       "valor_descontado": 0.0
     },
     {
