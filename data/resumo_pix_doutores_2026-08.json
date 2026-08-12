@@ -1,10 +1,10 @@
 {
   "competencia": "2026-08",
-  "gerado_em": "2026-08-12T20:49:32.970722",
-  "quantidade_total": 259,
-  "valor_total": 44027.22,
-  "valor_total_descontado": 297.0,
-  "valor_total_pendente": 43730.22,
+  "gerado_em": "2026-08-12T21:38:19.814972",
+  "quantidade_total": 260,
+  "valor_total": 44147.22,
+  "valor_total_descontado": 0.0,
+  "valor_total_pendente": 44147.22,
   "por_unidade": [
     {
       "unidade": "Caxias",
@@ -23,8 +23,8 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 44,
-      "valor": 8278.0
+      "quantidade": 45,
+      "valor": 8398.0
     },
     {
       "unidade": "Soledade",
@@ -46,7 +46,7 @@
     {
       "doutor": "Alexandre Favero",
       "quantidade": 7,
-      "valor_descontado": 297.0
+      "valor_descontado": 0.0
     },
     {
       "doutor": "Ana Cristina Corso",
@@ -65,7 +65,7 @@
     },
     {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 42,
+      "quantidade": 43,
       "valor_descontado": 0.0
     },
     {
@@ -75,7 +75,7 @@
     },
     {
       "doutor": "Indiamara Rech",
-      "quantidade": 12,
+      "quantidade": 13,
       "valor_descontado": 0.0
     },
     {
@@ -105,7 +105,7 @@
     },
     {
       "doutor": "Thalia Vezzosi",
-      "quantidade": 22,
+      "quantidade": 21,
       "valor_descontado": 0.0
     },
     {
