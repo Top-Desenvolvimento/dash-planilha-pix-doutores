@@ -1,15 +1,15 @@
 {
   "competencia": "2026-08",
-  "gerado_em": "2026-08-13T21:32:24.858948",
-  "quantidade_total": 286,
-  "valor_total": 47517.66,
-  "valor_total_descontado": 0.0,
-  "valor_total_pendente": 47517.66,
+  "gerado_em": "2026-08-13T22:20:39.810380",
+  "quantidade_total": 292,
+  "valor_total": 48265.66,
+  "valor_total_descontado": 324.0,
+  "valor_total_pendente": 47941.66,
   "por_unidade": [
     {
       "unidade": "Caxias",
-      "quantidade": 63,
-      "valor": 15541.0
+      "quantidade": 65,
+      "valor": 15865.0
     },
     {
       "unidade": "Encantado",
@@ -18,18 +18,18 @@
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 40,
-      "valor": 5314.0
+      "quantidade": 42,
+      "valor": 5554.0
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 50,
-      "valor": 8847.0
+      "quantidade": 51,
+      "valor": 8932.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 74,
-      "valor": 8648.0
+      "quantidade": 75,
+      "valor": 8747.0
     },
     {
       "unidade": "Veranopolis",
@@ -60,7 +60,7 @@
     },
     {
       "doutor": "Everlize Cipriani",
-      "quantidade": 6,
+      "quantidade": 8,
       "valor_descontado": 0.0
     },
     {
@@ -80,7 +80,7 @@
     },
     {
       "doutor": "Indiamara Rech",
-      "quantidade": 18,
+      "quantidade": 19,
       "valor_descontado": 0.0
     },
     {
@@ -90,13 +90,18 @@
     },
     {
       "doutor": "Leticia Canabarro",
-      "quantidade": 22,
+      "quantidade": 23,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Luisa Moraes Lucas",
       "quantidade": 32,
       "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Nelson Vaccari",
+      "quantidade": 2,
+      "valor_descontado": 324.0
     },
     {
       "doutor": "Tamara Macanan",
