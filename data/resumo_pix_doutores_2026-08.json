@@ -1,15 +1,15 @@
 {
   "competencia": "2026-08",
-  "gerado_em": "2026-08-13T13:50:36.101463",
-  "quantidade_total": 269,
-  "valor_total": 44921.22,
-  "valor_total_descontado": 100.0,
-  "valor_total_pendente": 44821.22,
+  "gerado_em": "2026-08-13T14:55:19.192285",
+  "quantidade_total": 270,
+  "valor_total": 45111.22,
+  "valor_total_descontado": 185.0,
+  "valor_total_pendente": 44926.22,
   "por_unidade": [
     {
       "unidade": "Caxias",
-      "quantidade": 61,
-      "valor": 15301.0
+      "quantidade": 62,
+      "valor": 15421.0
     },
     {
       "unidade": "Encantado",
@@ -18,13 +18,13 @@
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 34,
-      "valor": 4535.0
+      "quantidade": 35,
+      "valor": 4620.0
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 49,
-      "valor": 8727.0
+      "quantidade": 48,
+      "valor": 8712.0
     },
     {
       "unidade": "Soledade",
@@ -55,13 +55,13 @@
     },
     {
       "doutor": "Dionathan Pohlmann",
-      "quantidade": 14,
+      "quantidade": 15,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Everlize Cipriani",
-      "quantidade": 1,
-      "valor_descontado": 100.0
+      "quantidade": 2,
+      "valor_descontado": 185.0
     },
     {
       "doutor": "Felipe Lino",
@@ -80,7 +80,7 @@
     },
     {
       "doutor": "Indiamara Rech",
-      "quantidade": 17,
+      "quantidade": 16,
       "valor_descontado": 0.0
     },
     {
