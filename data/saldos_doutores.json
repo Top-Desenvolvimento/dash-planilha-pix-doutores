@@ -2690,8 +2690,8 @@
       "doutor_id": "14",
       "doutor": "Everlize Cipriani",
       "credito_inicial": 2000.0,
-      "utilizado": 0.0,
-      "credito_disponivel": 2000.0,
+      "utilizado": 100.0,
+      "credito_disponivel": 1900.0,
       "pix_key": ""
     },
     {
