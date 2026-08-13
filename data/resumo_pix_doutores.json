@@ -1493,11 +1493,11 @@
   },
   "2026-08": {
     "competencia": "2026-08",
-    "gerado_em": "2026-08-13T19:54:38.522329",
-    "quantidade_total": 284,
-    "valor_total": 47258.66,
+    "gerado_em": "2026-08-13T20:33:49.850919",
+    "quantidade_total": 285,
+    "valor_total": 47378.66,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 47258.66,
+    "valor_total_pendente": 47378.66,
     "por_unidade": [
       {
         "unidade": "Caxias",
@@ -1521,8 +1521,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 73,
-        "valor": 8528.0
+        "quantidade": 74,
+        "valor": 8648.0
       },
       {
         "unidade": "Veranopolis",
@@ -1583,7 +1583,7 @@
       },
       {
         "doutor": "Leticia Canabarro",
-        "quantidade": 21,
+        "quantidade": 22,
         "valor_descontado": 0.0
       },
       {
