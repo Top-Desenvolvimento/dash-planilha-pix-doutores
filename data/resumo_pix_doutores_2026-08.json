@@ -1,10 +1,10 @@
 {
   "competencia": "2026-08",
-  "gerado_em": "2026-08-13T14:55:19.192285",
-  "quantidade_total": 270,
-  "valor_total": 45111.22,
+  "gerado_em": "2026-08-13T15:52:30.905232",
+  "quantidade_total": 272,
+  "valor_total": 45281.22,
   "valor_total_descontado": 185.0,
-  "valor_total_pendente": 44926.22,
+  "valor_total_pendente": 45096.22,
   "por_unidade": [
     {
       "unidade": "Caxias",
@@ -18,13 +18,13 @@
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 35,
-      "valor": 4620.0
+      "quantidade": 36,
+      "valor": 4775.0
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 48,
-      "valor": 8712.0
+      "quantidade": 49,
+      "valor": 8727.0
     },
     {
       "unidade": "Soledade",
@@ -75,12 +75,12 @@
     },
     {
       "doutor": "Giovana Gasparini",
-      "quantidade": 7,
+      "quantidade": 8,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Indiamara Rech",
-      "quantidade": 16,
+      "quantidade": 17,
       "valor_descontado": 0.0
     },
     {
