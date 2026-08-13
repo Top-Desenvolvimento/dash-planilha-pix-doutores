@@ -1,10 +1,10 @@
 {
   "competencia": "2026-08",
-  "gerado_em": "2026-08-13T17:53:04.133188",
-  "quantidade_total": 279,
-  "valor_total": 46063.22,
-  "valor_total_descontado": 414.0,
-  "valor_total_pendente": 45649.22,
+  "gerado_em": "2026-08-13T18:11:27.258170",
+  "quantidade_total": 253,
+  "valor_total": 42113.0,
+  "valor_total_descontado": 128.0,
+  "valor_total_pendente": 41985.0,
   "por_unidade": [
     {
       "unidade": "Caxias",
@@ -18,8 +18,8 @@
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 38,
-      "valor": 5004.0
+      "quantidade": 40,
+      "valor": 5314.0
     },
     {
       "unidade": "FloresDaCunha",
@@ -30,11 +30,6 @@
       "unidade": "Soledade",
       "quantidade": 73,
       "valor": 8528.0
-    },
-    {
-      "unidade": "Veranopolis",
-      "quantidade": 28,
-      "valor": 4260.22
     }
   ],
   "por_doutor": [
@@ -60,8 +55,8 @@
     },
     {
       "doutor": "Everlize Cipriani",
-      "quantidade": 4,
-      "valor_descontado": 414.0
+      "quantidade": 6,
+      "valor_descontado": 128.0
     },
     {
       "doutor": "Felipe Lino",
@@ -116,11 +111,6 @@
     {
       "doutor": "Thiany Cristofoli",
       "quantidade": 18,
-      "valor_descontado": 0.0
-    },
-    {
-      "doutor": "Valter Baldissera",
-      "quantidade": 28,
       "valor_descontado": 0.0
     }
   ]
