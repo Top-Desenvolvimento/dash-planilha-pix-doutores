@@ -1493,11 +1493,11 @@
   },
   "2026-08": {
     "competencia": "2026-08",
-    "gerado_em": "2026-08-14T15:34:51.052588",
-    "quantidade_total": 294,
-    "valor_total": 48685.66,
+    "gerado_em": "2026-08-14T16:35:37.079685",
+    "quantidade_total": 295,
+    "valor_total": 48805.66,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 48685.66,
+    "valor_total_pendente": 48805.66,
     "por_unidade": [
       {
         "unidade": "Caxias",
@@ -1521,8 +1521,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 75,
-        "valor": 8747.0
+        "quantidade": 76,
+        "valor": 8867.0
       },
       {
         "unidade": "Veranopolis",
@@ -1588,7 +1588,7 @@
       },
       {
         "doutor": "Luisa Moraes Lucas",
-        "quantidade": 32,
+        "quantidade": 33,
         "valor_descontado": 0.0
       },
       {
