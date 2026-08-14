@@ -1493,11 +1493,11 @@
   },
   "2026-08": {
     "competencia": "2026-08",
-    "gerado_em": "2026-08-14T10:07:05.531348",
-    "quantidade_total": 243,
-    "valor_total": 39753.66,
+    "gerado_em": "2026-08-14T11:14:32.639637",
+    "quantidade_total": 294,
+    "valor_total": 48685.66,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 39753.66,
+    "valor_total_pendente": 48685.66,
     "por_unidade": [
       {
         "unidade": "Caxias",
@@ -1513,6 +1513,11 @@
         "unidade": "Farroupilha",
         "quantidade": 42,
         "valor": 5554.0
+      },
+      {
+        "unidade": "FloresDaCunha",
+        "quantidade": 51,
+        "valor": 8932.0
       },
       {
         "unidade": "Soledade",
@@ -1534,6 +1539,11 @@
       {
         "doutor": "Alexandre Favero",
         "quantidade": 9,
+        "valor_descontado": 0.0
+      },
+      {
+        "doutor": "Ana Cristina Corso",
+        "quantidade": 1,
         "valor_descontado": 0.0
       },
       {
@@ -1562,6 +1572,16 @@
         "valor_descontado": 0.0
       },
       {
+        "doutor": "Indiamara Rech",
+        "quantidade": 19,
+        "valor_descontado": 0.0
+      },
+      {
+        "doutor": "Karen Ramona Kuwer",
+        "quantidade": 1,
+        "valor_descontado": 0.0
+      },
+      {
         "doutor": "Leticia Canabarro",
         "quantidade": 23,
         "valor_descontado": 0.0
@@ -1574,6 +1594,11 @@
       {
         "doutor": "Nelson Vaccari",
         "quantidade": 2,
+        "valor_descontado": 0.0
+      },
+      {
+        "doutor": "Tamara Macanan",
+        "quantidade": 30,
         "valor_descontado": 0.0
       },
       {
