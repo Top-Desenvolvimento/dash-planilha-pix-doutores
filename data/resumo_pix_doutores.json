@@ -1493,16 +1493,16 @@
   },
   "2026-08": {
     "competencia": "2026-08",
-    "gerado_em": "2026-08-14T19:46:33.276975",
-    "quantidade_total": 302,
-    "valor_total": 49992.66,
+    "gerado_em": "2026-08-14T20:16:39.406774",
+    "quantidade_total": 303,
+    "valor_total": 50087.66,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 49992.66,
+    "valor_total_pendente": 50087.66,
     "por_unidade": [
       {
         "unidade": "Caxias",
-        "quantidade": 68,
-        "valor": 16143.0
+        "quantidade": 69,
+        "valor": 16238.0
       },
       {
         "unidade": "Encantado",
@@ -1598,7 +1598,7 @@
       },
       {
         "doutor": "Nelson Vaccari",
-        "quantidade": 4,
+        "quantidade": 5,
         "valor_descontado": 0.0
       },
       {
