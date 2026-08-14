@@ -1,6 +1,6 @@
 {
   "competencia": "2026-08",
-  "gerado_em": "2026-08-14T18:38:33.005471",
+  "gerado_em": "2026-08-14T18:51:19.646597",
   "quantidade_total": 298,
   "valor_total": 49085.66,
   "valor_total_descontado": 185.0,
@@ -75,7 +75,7 @@
     },
     {
       "doutor": "Giovana Gasparini",
-      "quantidade": 8,
+      "quantidade": 9,
       "valor_descontado": 0.0
     },
     {
@@ -120,7 +120,7 @@
     },
     {
       "doutor": "Thalia Vezzosi",
-      "quantidade": 21,
+      "quantidade": 20,
       "valor_descontado": 0.0
     },
     {
