@@ -1,10 +1,10 @@
 {
   "competencia": "2026-08",
-  "gerado_em": "2026-08-14T17:50:59.098034",
-  "quantidade_total": 295,
-  "valor_total": 48805.66,
-  "valor_total_descontado": 0.0,
-  "valor_total_pendente": 48805.66,
+  "gerado_em": "2026-08-14T18:38:33.005471",
+  "quantidade_total": 298,
+  "valor_total": 49085.66,
+  "valor_total_descontado": 185.0,
+  "valor_total_pendente": 48900.66,
   "por_unidade": [
     {
       "unidade": "Caxias",
@@ -28,8 +28,8 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 76,
-      "valor": 8867.0
+      "quantidade": 79,
+      "valor": 9147.0
     },
     {
       "unidade": "Veranopolis",
@@ -90,13 +90,18 @@
     },
     {
       "doutor": "Leticia Canabarro",
-      "quantidade": 23,
+      "quantidade": 24,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Luisa Moraes Lucas",
       "quantidade": 33,
       "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Murilo Debortoli",
+      "quantidade": 2,
+      "valor_descontado": 185.0
     },
     {
       "doutor": "Nelson Vaccari",
