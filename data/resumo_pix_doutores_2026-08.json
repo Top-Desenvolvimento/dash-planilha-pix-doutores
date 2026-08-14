@@ -1,10 +1,10 @@
 {
   "competencia": "2026-08",
-  "gerado_em": "2026-08-14T07:54:47.872055",
+  "gerado_em": "2026-08-14T09:01:08.957265",
   "quantidade_total": 294,
   "valor_total": 48685.66,
-  "valor_total_descontado": 274.0,
-  "valor_total_pendente": 48411.66,
+  "valor_total_descontado": 0.0,
+  "valor_total_pendente": 48685.66,
   "por_unidade": [
     {
       "unidade": "Caxias",
@@ -101,7 +101,7 @@
     {
       "doutor": "Nelson Vaccari",
       "quantidade": 2,
-      "valor_descontado": 274.0
+      "valor_descontado": 0.0
     },
     {
       "doutor": "Tamara Macanan",
