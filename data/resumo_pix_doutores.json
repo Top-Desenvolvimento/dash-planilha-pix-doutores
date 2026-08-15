@@ -1493,10 +1493,10 @@
   },
   "2026-08": {
     "competencia": "2026-08",
-    "gerado_em": "2026-08-15T15:06:40.454883",
-    "quantidade_total": 342,
-    "valor_total": 54969.66,
-    "valor_total_descontado": 152.0,
+    "gerado_em": "2026-08-15T15:38:46.618571",
+    "quantidade_total": 343,
+    "valor_total": 55169.66,
+    "valor_total_descontado": 352.0,
     "valor_total_pendente": 54817.66,
     "por_unidade": [
       {
@@ -1531,8 +1531,8 @@
       },
       {
         "unidade": "Veranopolis",
-        "quantidade": 35,
-        "valor": 5856.66
+        "quantidade": 36,
+        "valor": 6056.66
       }
     ],
     "por_doutor": [
@@ -1598,8 +1598,8 @@
       },
       {
         "doutor": "Morgana Zambiasi",
-        "quantidade": 1,
-        "valor_descontado": 152.0
+        "quantidade": 2,
+        "valor_descontado": 352.0
       },
       {
         "doutor": "Murilo Debortoli",
