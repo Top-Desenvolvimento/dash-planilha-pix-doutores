@@ -1,10 +1,10 @@
 {
   "competencia": "2026-08",
-  "gerado_em": "2026-08-15T13:11:43.370805",
-  "quantidade_total": 304,
-  "valor_total": 49573.66,
-  "valor_total_descontado": 710.0,
-  "valor_total_pendente": 48863.66,
+  "gerado_em": "2026-08-15T13:49:55.512208",
+  "quantidade_total": 335,
+  "valor_total": 53986.66,
+  "valor_total_descontado": 290.0,
+  "valor_total_pendente": 53696.66,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -17,19 +17,24 @@
       "valor": 17661.0
     },
     {
+      "unidade": "Encantado",
+      "quantidade": 27,
+      "valor": 3883.0
+    },
+    {
       "unidade": "Farroupilha",
-      "quantidade": 43,
-      "valor": 5669.0
+      "quantidade": 44,
+      "valor": 5834.0
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 55,
-      "valor": 9906.0
+      "quantidade": 56,
+      "valor": 10026.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 84,
-      "valor": 9923.0
+      "quantidade": 86,
+      "valor": 10168.0
     },
     {
       "unidade": "Veranopolis",
@@ -44,6 +49,11 @@
       "valor_descontado": 0.0
     },
     {
+      "doutor": "Alexandre Favero",
+      "quantidade": 9,
+      "valor_descontado": 0.0
+    },
+    {
       "doutor": "Ana Cristina Corso",
       "quantidade": 1,
       "valor_descontado": 0.0
@@ -55,7 +65,7 @@
     },
     {
       "doutor": "Everlize Cipriani",
-      "quantidade": 9,
+      "quantidade": 10,
       "valor_descontado": 0.0
     },
     {
@@ -80,7 +90,7 @@
     },
     {
       "doutor": "Karen Ramona Kuwer",
-      "quantidade": 5,
+      "quantidade": 6,
       "valor_descontado": 0.0
     },
     {
@@ -95,13 +105,13 @@
     },
     {
       "doutor": "Murilo Debortoli",
-      "quantidade": 5,
+      "quantidade": 7,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Naiane Pieta",
       "quantidade": 6,
-      "valor_descontado": 710.0
+      "valor_descontado": 290.0
     },
     {
       "doutor": "Nelson Vaccari",
@@ -121,6 +131,11 @@
     {
       "doutor": "Thalia Vezzosi",
       "quantidade": 20,
+      "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Thiany Cristofoli",
+      "quantidade": 18,
       "valor_descontado": 0.0
     },
     {
