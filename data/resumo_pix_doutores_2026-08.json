@@ -1,15 +1,15 @@
 {
   "competencia": "2026-08",
-  "gerado_em": "2026-08-15T11:36:06.026652",
-  "quantidade_total": 312,
-  "valor_total": 51189.66,
+  "gerado_em": "2026-08-15T11:58:20.571206",
+  "quantidade_total": 315,
+  "valor_total": 51524.66,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 51189.66,
+  "valor_total_pendente": 51524.66,
   "por_unidade": [
     {
       "unidade": "Caxias",
-      "quantidade": 76,
-      "valor": 16978.0
+      "quantidade": 78,
+      "valor": 17193.0
     },
     {
       "unidade": "Encantado",
@@ -28,8 +28,8 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 81,
-      "valor": 9509.0
+      "quantidade": 82,
+      "valor": 9629.0
     },
     {
       "unidade": "Veranopolis",
@@ -100,12 +100,12 @@
     },
     {
       "doutor": "Murilo Debortoli",
-      "quantidade": 2,
+      "quantidade": 3,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Nelson Vaccari",
-      "quantidade": 12,
+      "quantidade": 14,
       "valor_descontado": 0.0
     },
     {
