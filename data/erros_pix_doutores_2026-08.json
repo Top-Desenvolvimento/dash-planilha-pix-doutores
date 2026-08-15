@@ -1,14 +1,20 @@
 [
   {
+    "unidade": "Soledade",
+    "competencia": "2026-08",
+    "erro": "Menu Finanças não encontrado.",
+    "coletado_em": "2026-08-15T03:30:16.561150"
+  },
+  {
     "unidade": "Garibaldi",
     "competencia": "2026-08",
     "erro": "Menu Finanças não encontrado.",
-    "coletado_em": "2026-08-15T02:46:11.400568"
+    "coletado_em": "2026-08-15T03:30:18.636954"
   },
   {
     "unidade": "Ssdocai",
     "competencia": "2026-08",
     "erro": "Menu Finanças não encontrado.",
-    "coletado_em": "2026-08-15T02:47:12.403245"
+    "coletado_em": "2026-08-15T03:31:21.002940"
   }
 ]
