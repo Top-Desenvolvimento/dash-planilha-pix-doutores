@@ -1493,16 +1493,16 @@
   },
   "2026-08": {
     "competencia": "2026-08",
-    "gerado_em": "2026-08-15T11:58:20.571206",
-    "quantidade_total": 315,
-    "valor_total": 51524.66,
+    "gerado_em": "2026-08-15T12:26:11.451592",
+    "quantidade_total": 317,
+    "valor_total": 51793.66,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 51524.66,
+    "valor_total_pendente": 51793.66,
     "por_unidade": [
       {
         "unidade": "Caxias",
-        "quantidade": 78,
-        "valor": 17193.0
+        "quantidade": 79,
+        "valor": 17362.0
       },
       {
         "unidade": "Encantado",
@@ -1516,8 +1516,8 @@
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 52,
-        "valor": 9561.0
+        "quantidade": 53,
+        "valor": 9661.0
       },
       {
         "unidade": "Soledade",
@@ -1578,7 +1578,7 @@
       },
       {
         "doutor": "Karen Ramona Kuwer",
-        "quantidade": 2,
+        "quantidade": 3,
         "valor_descontado": 0.0
       },
       {
@@ -1598,7 +1598,7 @@
       },
       {
         "doutor": "Nelson Vaccari",
-        "quantidade": 14,
+        "quantidade": 15,
         "valor_descontado": 0.0
       },
       {
