@@ -1,10 +1,10 @@
 {
   "competencia": "2026-08",
-  "gerado_em": "2026-08-15T08:09:47.140996",
-  "quantidade_total": 310,
-  "valor_total": 50984.66,
+  "gerado_em": "2026-08-15T08:49:23.367689",
+  "quantidade_total": 276,
+  "valor_total": 45280.0,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 50984.66,
+  "valor_total_pendente": 45280.0,
   "por_unidade": [
     {
       "unidade": "Caxias",
@@ -30,11 +30,6 @@
       "unidade": "Soledade",
       "quantidade": 81,
       "valor": 9509.0
-    },
-    {
-      "unidade": "Veranopolis",
-      "quantidade": 34,
-      "valor": 5704.66
     }
   ],
   "por_doutor": [
@@ -126,16 +121,6 @@
     {
       "doutor": "Thiany Cristofoli",
       "quantidade": 18,
-      "valor_descontado": 0.0
-    },
-    {
-      "doutor": "TOP",
-      "quantidade": 1,
-      "valor_descontado": 0.0
-    },
-    {
-      "doutor": "Valter Baldissera",
-      "quantidade": 33,
       "valor_descontado": 0.0
     }
   ]
