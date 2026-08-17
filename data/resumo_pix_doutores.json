@@ -1493,11 +1493,11 @@
   },
   "2026-08": {
     "competencia": "2026-08",
-    "gerado_em": "2026-08-17T16:28:20.991801",
-    "quantidade_total": 345,
-    "valor_total": 55448.66,
+    "gerado_em": "2026-08-17T17:01:40.209502",
+    "quantidade_total": 349,
+    "valor_total": 56237.66,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 55448.66,
+    "valor_total_pendente": 56237.66,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1506,13 +1506,13 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 86,
-        "valor": 18227.0
+        "quantidade": 88,
+        "valor": 18616.0
       },
       {
         "unidade": "Encantado",
-        "quantidade": 27,
-        "valor": 3883.0
+        "quantidade": 29,
+        "valor": 4283.0
       },
       {
         "unidade": "Farroupilha",
@@ -1554,6 +1554,11 @@
       {
         "doutor": "Dionathan Pohlmann",
         "quantidade": 15,
+        "valor_descontado": 0.0
+      },
+      {
+        "doutor": "Dra.Júlia Raquel Nardi",
+        "quantidade": 2,
         "valor_descontado": 0.0
       },
       {
@@ -1613,7 +1618,7 @@
       },
       {
         "doutor": "Nelson Vaccari",
-        "quantidade": 21,
+        "quantidade": 23,
         "valor_descontado": 0.0
       },
       {
