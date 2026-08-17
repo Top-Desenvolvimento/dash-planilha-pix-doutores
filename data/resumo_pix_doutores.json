@@ -1493,11 +1493,11 @@
   },
   "2026-08": {
     "competencia": "2026-08",
-    "gerado_em": "2026-08-17T21:03:44.824067",
-    "quantidade_total": 357,
-    "valor_total": 57274.66,
+    "gerado_em": "2026-08-17T21:37:01.842261",
+    "quantidade_total": 362,
+    "valor_total": 57902.66,
     "valor_total_descontado": 98.0,
-    "valor_total_pendente": 57176.66,
+    "valor_total_pendente": 57804.66,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1506,8 +1506,8 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 92,
-        "valor": 19175.0
+        "quantidade": 95,
+        "valor": 19669.0
       },
       {
         "unidade": "Encantado",
@@ -1526,13 +1526,13 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 87,
-        "valor": 10267.0
+        "quantidade": 88,
+        "valor": 10366.0
       },
       {
         "unidade": "Veranopolis",
-        "quantidade": 38,
-        "valor": 6337.66
+        "quantidade": 39,
+        "valor": 6372.66
       }
     ],
     "por_doutor": [
@@ -1578,7 +1578,7 @@
       },
       {
         "doutor": "Giovana Gasparini",
-        "quantidade": 9,
+        "quantidade": 12,
         "valor_descontado": 0.0
       },
       {
@@ -1602,8 +1602,13 @@
         "valor_descontado": 0.0
       },
       {
+        "doutor": "Marina Alievi",
+        "quantidade": 1,
+        "valor_descontado": 0.0
+      },
+      {
         "doutor": "Morgana Zambiasi",
-        "quantidade": 4,
+        "quantidade": 5,
         "valor_descontado": 0.0
       },
       {
