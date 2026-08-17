@@ -1493,10 +1493,10 @@
   },
   "2026-08": {
     "competencia": "2026-08",
-    "gerado_em": "2026-08-17T21:37:01.842261",
-    "quantidade_total": 362,
-    "valor_total": 57902.66,
-    "valor_total_descontado": 98.0,
+    "gerado_em": "2026-08-17T22:13:04.780915",
+    "quantidade_total": 363,
+    "valor_total": 57997.66,
+    "valor_total_descontado": 193.0,
     "valor_total_pendente": 57804.66,
     "por_unidade": [
       {
@@ -1511,8 +1511,8 @@
       },
       {
         "unidade": "Encantado",
-        "quantidade": 30,
-        "valor": 4381.0
+        "quantidade": 31,
+        "valor": 4476.0
       },
       {
         "unidade": "Farroupilha",
@@ -1628,8 +1628,8 @@
       },
       {
         "doutor": "Nicoli Weber",
-        "quantidade": 1,
-        "valor_descontado": 98.0
+        "quantidade": 2,
+        "valor_descontado": 193.0
       },
       {
         "doutor": "Tamara Macanan",
