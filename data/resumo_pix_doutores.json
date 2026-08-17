@@ -1493,11 +1493,11 @@
   },
   "2026-08": {
     "competencia": "2026-08",
-    "gerado_em": "2026-08-17T19:33:55.520549",
-    "quantidade_total": 351,
-    "valor_total": 56631.66,
-    "valor_total_descontado": 0.0,
-    "valor_total_pendente": 56631.66,
+    "gerado_em": "2026-08-17T20:02:02.711214",
+    "quantidade_total": 353,
+    "valor_total": 56885.66,
+    "valor_total_descontado": 98.0,
+    "valor_total_pendente": 56787.66,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1511,8 +1511,8 @@
       },
       {
         "unidade": "Encantado",
-        "quantidade": 29,
-        "valor": 4283.0
+        "quantidade": 30,
+        "valor": 4381.0
       },
       {
         "unidade": "Farroupilha",
@@ -1531,8 +1531,8 @@
       },
       {
         "unidade": "Veranopolis",
-        "quantidade": 37,
-        "valor": 6181.66
+        "quantidade": 38,
+        "valor": 6337.66
       }
     ],
     "por_doutor": [
@@ -1603,7 +1603,7 @@
       },
       {
         "doutor": "Morgana Zambiasi",
-        "quantidade": 3,
+        "quantidade": 4,
         "valor_descontado": 0.0
       },
       {
@@ -1620,6 +1620,11 @@
         "doutor": "Nelson Vaccari",
         "quantidade": 23,
         "valor_descontado": 0.0
+      },
+      {
+        "doutor": "Nicoli Weber",
+        "quantidade": 1,
+        "valor_descontado": 98.0
       },
       {
         "doutor": "Tamara Macanan",
