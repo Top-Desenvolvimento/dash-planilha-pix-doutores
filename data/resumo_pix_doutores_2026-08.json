@@ -1,10 +1,10 @@
 {
   "competencia": "2026-08",
-  "gerado_em": "2026-08-17T23:01:57.458455",
+  "gerado_em": "2026-08-17T23:30:05.182590",
   "quantidade_total": 364,
   "valor_total": 58067.66,
-  "valor_total_descontado": 193.0,
-  "valor_total_pendente": 57874.66,
+  "valor_total_descontado": 29.0,
+  "valor_total_pendente": 58038.66,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -136,7 +136,7 @@
     {
       "doutor": "Nicoli Weber",
       "quantidade": 2,
-      "valor_descontado": 193.0
+      "valor_descontado": 29.0
     },
     {
       "doutor": "Tamara Macanan",
