@@ -1493,11 +1493,11 @@
   },
   "2026-08": {
     "competencia": "2026-08",
-    "gerado_em": "2026-08-18T18:16:45.964311",
-    "quantidade_total": 377,
-    "valor_total": 59711.66,
-    "valor_total_descontado": 450.0,
-    "valor_total_pendente": 59261.66,
+    "gerado_em": "2026-08-18T19:05:29.755904",
+    "quantidade_total": 379,
+    "valor_total": 60078.66,
+    "valor_total_descontado": 715.0,
+    "valor_total_pendente": 59363.66,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1506,8 +1506,8 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 103,
-        "valor": 20819.0
+        "quantidade": 105,
+        "valor": 21186.0
       },
       {
         "unidade": "Encantado",
@@ -1593,8 +1593,8 @@
       },
       {
         "doutor": "Jéssica Barreto",
-        "quantidade": 2,
-        "valor_descontado": 315.0
+        "quantidade": 4,
+        "valor_descontado": 580.0
       },
       {
         "doutor": "Karen Ramona Kuwer",
