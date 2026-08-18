@@ -1,10 +1,10 @@
 {
   "competencia": "2026-08",
-  "gerado_em": "2026-08-18T21:25:10.712855",
-  "quantidade_total": 382,
-  "valor_total": 60959.66,
+  "gerado_em": "2026-08-18T21:52:44.063646",
+  "quantidade_total": 384,
+  "valor_total": 61178.66,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 60959.66,
+  "valor_total_pendente": 61178.66,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -28,8 +28,8 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 60,
-      "valor": 11009.0
+      "quantidade": 62,
+      "valor": 11228.0
     },
     {
       "unidade": "Soledade",
@@ -80,7 +80,7 @@
     },
     {
       "doutor": "Fernana Sozo",
-      "quantidade": 3,
+      "quantidade": 5,
       "valor_descontado": 0.0
     },
     {
