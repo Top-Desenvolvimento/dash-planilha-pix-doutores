@@ -1,10 +1,10 @@
 {
   "competencia": "2026-08",
-  "gerado_em": "2026-08-18T19:05:29.755904",
-  "quantidade_total": 379,
-  "valor_total": 60078.66,
-  "valor_total_descontado": 715.0,
-  "valor_total_pendente": 59363.66,
+  "gerado_em": "2026-08-18T19:39:25.937383",
+  "quantidade_total": 380,
+  "valor_total": 60767.66,
+  "valor_total_descontado": 824.0,
+  "valor_total_pendente": 59943.66,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -28,8 +28,8 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 59,
-      "valor": 10320.0
+      "quantidade": 60,
+      "valor": 11009.0
     },
     {
       "unidade": "Soledade",
@@ -80,8 +80,8 @@
     },
     {
       "doutor": "Fernana Sozo",
-      "quantidade": 2,
-      "valor_descontado": 135.0
+      "quantidade": 3,
+      "valor_descontado": 824.0
     },
     {
       "doutor": "Franciele Pedrotti",
@@ -101,7 +101,7 @@
     {
       "doutor": "Jéssica Barreto",
       "quantidade": 4,
-      "valor_descontado": 580.0
+      "valor_descontado": 0.0
     },
     {
       "doutor": "Karen Ramona Kuwer",
