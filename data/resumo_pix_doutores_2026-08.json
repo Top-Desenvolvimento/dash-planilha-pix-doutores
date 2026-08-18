@@ -1,10 +1,10 @@
 {
   "competencia": "2026-08",
-  "gerado_em": "2026-08-18T11:58:38.638749",
-  "quantidade_total": 364,
-  "valor_total": 58067.66,
+  "gerado_em": "2026-08-18T12:28:14.003788",
+  "quantidade_total": 365,
+  "valor_total": 58187.66,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 58067.66,
+  "valor_total_pendente": 58187.66,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,8 +13,8 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 95,
-      "valor": 19669.0
+      "quantidade": 96,
+      "valor": 19789.0
     },
     {
       "unidade": "Encantado",
@@ -85,7 +85,7 @@
     },
     {
       "doutor": "Giovana Gasparini",
-      "quantidade": 12,
+      "quantidade": 13,
       "valor_descontado": 0.0
     },
     {
