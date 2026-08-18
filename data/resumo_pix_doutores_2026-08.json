@@ -1,10 +1,10 @@
 {
   "competencia": "2026-08",
-  "gerado_em": "2026-08-18T21:52:44.063646",
-  "quantidade_total": 384,
-  "valor_total": 61178.66,
+  "gerado_em": "2026-08-18T22:11:42.592662",
+  "quantidade_total": 387,
+  "valor_total": 61517.66,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 61178.66,
+  "valor_total_pendente": 61517.66,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,8 +13,8 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 106,
-      "valor": 21306.0
+      "quantidade": 107,
+      "valor": 21405.0
     },
     {
       "unidade": "Encantado",
@@ -28,8 +28,8 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 62,
-      "valor": 11228.0
+      "quantidade": 64,
+      "valor": 11468.0
     },
     {
       "unidade": "Soledade",
@@ -80,7 +80,7 @@
     },
     {
       "doutor": "Fernana Sozo",
-      "quantidade": 5,
+      "quantidade": 7,
       "valor_descontado": 0.0
     },
     {
@@ -100,7 +100,7 @@
     },
     {
       "doutor": "Jéssica Barreto",
-      "quantidade": 5,
+      "quantidade": 6,
       "valor_descontado": 0.0
     },
     {
