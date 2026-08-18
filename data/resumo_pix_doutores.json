@@ -1493,11 +1493,11 @@
   },
   "2026-08": {
     "competencia": "2026-08",
-    "gerado_em": "2026-08-18T16:05:15.909900",
-    "quantidade_total": 372,
-    "valor_total": 58980.66,
-    "valor_total_descontado": 30.0,
-    "valor_total_pendente": 58950.66,
+    "gerado_em": "2026-08-18T17:19:04.316098",
+    "quantidade_total": 374,
+    "valor_total": 59177.66,
+    "valor_total_descontado": 135.0,
+    "valor_total_pendente": 59042.66,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1506,13 +1506,13 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 99,
-        "valor": 20193.0
+        "quantidade": 102,
+        "valor": 20609.0
       },
       {
         "unidade": "Encantado",
-        "quantidade": 31,
-        "valor": 4476.0
+        "quantidade": 30,
+        "valor": 4257.0
       },
       {
         "unidade": "Farroupilha",
@@ -1558,7 +1558,7 @@
       },
       {
         "doutor": "Dra.Júlia Raquel Nardi",
-        "quantidade": 2,
+        "quantidade": 1,
         "valor_descontado": 0.0
       },
       {
@@ -1583,13 +1583,18 @@
       },
       {
         "doutor": "Giovana Gasparini",
-        "quantidade": 16,
+        "quantidade": 18,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Indiamara Rech",
         "quantidade": 19,
         "valor_descontado": 0.0
+      },
+      {
+        "doutor": "Jéssica Barreto",
+        "quantidade": 1,
+        "valor_descontado": 105.0
       },
       {
         "doutor": "Karen Ramona Kuwer",
