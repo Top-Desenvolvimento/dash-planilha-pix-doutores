@@ -1493,11 +1493,11 @@
   },
   "2026-08": {
     "competencia": "2026-08",
-    "gerado_em": "2026-08-18T20:03:25.196931",
+    "gerado_em": "2026-08-18T20:32:38.477999",
     "quantidade_total": 380,
     "valor_total": 60767.66,
-    "valor_total_descontado": 346.0,
-    "valor_total_pendente": 60421.66,
+    "valor_total_descontado": 0.0,
+    "valor_total_pendente": 60767.66,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1574,7 +1574,7 @@
       {
         "doutor": "Fernana Sozo",
         "quantidade": 3,
-        "valor_descontado": 346.0
+        "valor_descontado": 0.0
       },
       {
         "doutor": "Franciele Pedrotti",
