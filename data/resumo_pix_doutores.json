@@ -1493,11 +1493,11 @@
   },
   "2026-08": {
     "competencia": "2026-08",
-    "gerado_em": "2026-08-19T21:59:02.220175",
-    "quantidade_total": 410,
-    "valor_total": 64884.66,
-    "valor_total_descontado": 455.0,
-    "valor_total_pendente": 64429.66,
+    "gerado_em": "2026-08-19T22:20:33.469213",
+    "quantidade_total": 414,
+    "valor_total": 65381.66,
+    "valor_total_descontado": 540.0,
+    "valor_total_pendente": 64841.66,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1511,8 +1511,8 @@
       },
       {
         "unidade": "Encantado",
-        "quantidade": 38,
-        "valor": 5563.0
+        "quantidade": 40,
+        "valor": 5756.0
       },
       {
         "unidade": "Farroupilha",
@@ -1521,8 +1521,8 @@
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 74,
-        "valor": 12712.0
+        "quantidade": 75,
+        "valor": 12797.0
       },
       {
         "unidade": "Soledade",
@@ -1531,8 +1531,8 @@
       },
       {
         "unidade": "Veranopolis",
-        "quantidade": 44,
-        "valor": 7060.66
+        "quantidade": 45,
+        "valor": 7279.66
       }
     ],
     "por_doutor": [
@@ -1608,8 +1608,8 @@
       },
       {
         "doutor": "Letícia Cauzzi",
-        "quantidade": 5,
-        "valor_descontado": 455.0
+        "quantidade": 6,
+        "valor_descontado": 540.0
       },
       {
         "doutor": "Luisa Moraes Lucas",
@@ -1623,7 +1623,7 @@
       },
       {
         "doutor": "Morgana Zambiasi",
-        "quantidade": 10,
+        "quantidade": 11,
         "valor_descontado": 0.0
       },
       {
@@ -1648,7 +1648,7 @@
       },
       {
         "doutor": "Renata Protto",
-        "quantidade": 2,
+        "quantidade": 4,
         "valor_descontado": 0.0
       },
       {
