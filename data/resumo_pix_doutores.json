@@ -1493,10 +1493,10 @@
   },
   "2026-08": {
     "competencia": "2026-08",
-    "gerado_em": "2026-08-19T19:29:24.354490",
-    "quantidade_total": 401,
-    "valor_total": 63554.66,
-    "valor_total_descontado": 95.0,
+    "gerado_em": "2026-08-19T20:23:34.597199",
+    "quantidade_total": 403,
+    "valor_total": 63734.66,
+    "valor_total_descontado": 275.0,
     "valor_total_pendente": 63459.66,
     "por_unidade": [
       {
@@ -1521,8 +1521,8 @@
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 69,
-        "valor": 12253.0
+        "quantidade": 71,
+        "valor": 12433.0
       },
       {
         "unidade": "Soledade",
@@ -1608,8 +1608,8 @@
       },
       {
         "doutor": "Letícia Cauzzi",
-        "quantidade": 1,
-        "valor_descontado": 95.0
+        "quantidade": 3,
+        "valor_descontado": 275.0
       },
       {
         "doutor": "Luisa Moraes Lucas",
