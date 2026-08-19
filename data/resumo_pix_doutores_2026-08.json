@@ -1,10 +1,10 @@
 {
   "competencia": "2026-08",
-  "gerado_em": "2026-08-19T18:57:45.714003",
-  "quantidade_total": 400,
-  "valor_total": 63434.66,
+  "gerado_em": "2026-08-19T19:29:24.354490",
+  "quantidade_total": 401,
+  "valor_total": 63554.66,
   "valor_total_descontado": 95.0,
-  "valor_total_pendente": 63339.66,
+  "valor_total_pendente": 63459.66,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -38,8 +38,8 @@
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 42,
-      "valor": 6820.66
+      "quantidade": 43,
+      "valor": 6940.66
     }
   ],
   "por_doutor": [
@@ -130,7 +130,7 @@
     },
     {
       "doutor": "Morgana Zambiasi",
-      "quantidade": 8,
+      "quantidade": 9,
       "valor_descontado": 0.0
     },
     {
