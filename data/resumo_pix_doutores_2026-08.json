@@ -1,11 +1,16 @@
 {
   "competencia": "2026-08",
-  "gerado_em": "2026-08-19T12:54:27.805550",
-  "quantidade_total": 381,
-  "valor_total": 61033.66,
+  "gerado_em": "2026-08-19T13:15:01.919164",
+  "quantidade_total": 389,
+  "valor_total": 61963.66,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 61033.66,
+  "valor_total_pendente": 61963.66,
   "por_unidade": [
+    {
+      "unidade": "Bento",
+      "quantidade": 8,
+      "valor": 930.0
+    },
     {
       "unidade": "Caxias",
       "quantidade": 107,
@@ -125,6 +130,11 @@
     },
     {
       "doutor": "Murilo Debortoli",
+      "quantidade": 8,
+      "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Naiane Pieta",
       "quantidade": 8,
       "valor_descontado": 0.0
     },
