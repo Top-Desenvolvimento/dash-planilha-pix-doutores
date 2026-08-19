@@ -235,8 +235,8 @@
     "doutor_id": "29",
     "doutor": "Letícia Cauzzi",
     "credito_inicial": 4000.0,
-    "utilizado": 0.0,
-    "credito_disponivel": 4000.0,
+    "utilizado": 95.0,
+    "credito_disponivel": 3905.0,
     "pix_key": ""
   },
   {
