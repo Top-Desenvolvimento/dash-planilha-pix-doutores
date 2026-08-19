@@ -1493,11 +1493,11 @@
   },
   "2026-08": {
     "competencia": "2026-08",
-    "gerado_em": "2026-08-19T20:58:14.547129",
-    "quantidade_total": 406,
-    "valor_total": 64034.66,
+    "gerado_em": "2026-08-19T21:59:02.220175",
+    "quantidade_total": 410,
+    "valor_total": 64884.66,
     "valor_total_descontado": 455.0,
-    "valor_total_pendente": 63579.66,
+    "valor_total_pendente": 64429.66,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1506,13 +1506,13 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 107,
-        "valor": 21405.0
+        "quantidade": 108,
+        "valor": 21726.0
       },
       {
         "unidade": "Encantado",
-        "quantidade": 36,
-        "valor": 5133.0
+        "quantidade": 38,
+        "valor": 5563.0
       },
       {
         "unidade": "Farroupilha",
@@ -1521,8 +1521,8 @@
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 73,
-        "valor": 12613.0
+        "quantidade": 74,
+        "valor": 12712.0
       },
       {
         "unidade": "Soledade",
@@ -1593,7 +1593,7 @@
       },
       {
         "doutor": "Jéssica Barreto",
-        "quantidade": 6,
+        "quantidade": 7,
         "valor_descontado": 0.0
       },
       {
@@ -1647,6 +1647,11 @@
         "valor_descontado": 0.0
       },
       {
+        "doutor": "Renata Protto",
+        "quantidade": 2,
+        "valor_descontado": 0.0
+      },
+      {
         "doutor": "Tamara Macanan",
         "quantidade": 32,
         "valor_descontado": 0.0
@@ -1664,6 +1669,11 @@
       {
         "doutor": "Thiany Cristofoli",
         "quantidade": 18,
+        "valor_descontado": 0.0
+      },
+      {
+        "doutor": "TOP",
+        "quantidade": 1,
         "valor_descontado": 0.0
       },
       {
