@@ -1,10 +1,10 @@
 {
   "competencia": "2026-08",
-  "gerado_em": "2026-08-19T17:48:56.720751",
-  "quantidade_total": 395,
-  "valor_total": 62542.66,
+  "gerado_em": "2026-08-19T18:08:27.374082",
+  "quantidade_total": 399,
+  "valor_total": 63335.66,
   "valor_total_descontado": 95.0,
-  "valor_total_pendente": 62447.66,
+  "valor_total_pendente": 63240.66,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -18,8 +18,8 @@
     },
     {
       "unidade": "Encantado",
-      "quantidade": 33,
-      "valor": 4676.0
+      "quantidade": 35,
+      "valor": 5034.0
     },
     {
       "unidade": "Farroupilha",
@@ -28,8 +28,8 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 68,
-      "valor": 12158.0
+      "quantidade": 69,
+      "valor": 12253.0
     },
     {
       "unidade": "Soledade",
@@ -38,8 +38,8 @@
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 41,
-      "valor": 6480.66
+      "quantidade": 42,
+      "valor": 6820.66
     }
   ],
   "por_doutor": [
@@ -80,7 +80,7 @@
     },
     {
       "doutor": "Fernana Sozo",
-      "quantidade": 10,
+      "quantidade": 11,
       "valor_descontado": 0.0
     },
     {
@@ -130,7 +130,7 @@
     },
     {
       "doutor": "Morgana Zambiasi",
-      "quantidade": 7,
+      "quantidade": 8,
       "valor_descontado": 0.0
     },
     {
@@ -150,7 +150,7 @@
     },
     {
       "doutor": "Nicoli Weber",
-      "quantidade": 4,
+      "quantidade": 6,
       "valor_descontado": 0.0
     },
     {
