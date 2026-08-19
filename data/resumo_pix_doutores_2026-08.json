@@ -1,10 +1,10 @@
 {
   "competencia": "2026-08",
-  "gerado_em": "2026-08-19T20:23:34.597199",
-  "quantidade_total": 403,
-  "valor_total": 63734.66,
-  "valor_total_descontado": 275.0,
-  "valor_total_pendente": 63459.66,
+  "gerado_em": "2026-08-19T20:58:14.547129",
+  "quantidade_total": 406,
+  "valor_total": 64034.66,
+  "valor_total_descontado": 455.0,
+  "valor_total_pendente": 63579.66,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -28,8 +28,8 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 71,
-      "valor": 12433.0
+      "quantidade": 73,
+      "valor": 12613.0
     },
     {
       "unidade": "Soledade",
@@ -38,8 +38,8 @@
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 43,
-      "valor": 6940.66
+      "quantidade": 44,
+      "valor": 7060.66
     }
   ],
   "por_doutor": [
@@ -115,8 +115,8 @@
     },
     {
       "doutor": "Letícia Cauzzi",
-      "quantidade": 3,
-      "valor_descontado": 275.0
+      "quantidade": 5,
+      "valor_descontado": 455.0
     },
     {
       "doutor": "Luisa Moraes Lucas",
@@ -130,7 +130,7 @@
     },
     {
       "doutor": "Morgana Zambiasi",
-      "quantidade": 9,
+      "quantidade": 10,
       "valor_descontado": 0.0
     },
     {
