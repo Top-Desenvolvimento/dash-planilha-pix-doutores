@@ -1,6 +1,6 @@
 {
   "competencia": "2026-08",
-  "gerado_em": "2026-08-20T12:25:11.352024",
+  "gerado_em": "2026-08-20T13:31:14.290595",
   "quantidade_total": 414,
   "valor_total": 65381.66,
   "valor_total_descontado": 0.0,
@@ -115,7 +115,7 @@
     },
     {
       "doutor": "Letícia Cauzzi",
-      "quantidade": 6,
+      "quantidade": 7,
       "valor_descontado": 0.0
     },
     {
@@ -176,11 +176,6 @@
     {
       "doutor": "Thiany Cristofoli",
       "quantidade": 18,
-      "valor_descontado": 0.0
-    },
-    {
-      "doutor": "TOP",
-      "quantidade": 1,
       "valor_descontado": 0.0
     },
     {
