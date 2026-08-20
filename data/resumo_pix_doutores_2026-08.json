@@ -1,10 +1,10 @@
 {
   "competencia": "2026-08",
-  "gerado_em": "2026-08-20T22:20:49.906623",
-  "quantidade_total": 429,
-  "valor_total": 67622.66,
+  "gerado_em": "2026-08-20T22:56:39.158753",
+  "quantidade_total": 431,
+  "valor_total": 67776.66,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 67622.66,
+  "valor_total_pendente": 67776.66,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -38,8 +38,8 @@
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 50,
-      "valor": 8277.66
+      "quantidade": 52,
+      "valor": 8431.66
     }
   ],
   "por_doutor": [
@@ -115,7 +115,7 @@
     },
     {
       "doutor": "Letícia Cauzzi",
-      "quantidade": 14,
+      "quantidade": 16,
       "valor_descontado": 0.0
     },
     {
