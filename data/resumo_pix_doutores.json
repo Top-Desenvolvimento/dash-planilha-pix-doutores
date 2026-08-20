@@ -1493,11 +1493,11 @@
   },
   "2026-08": {
     "competencia": "2026-08",
-    "gerado_em": "2026-08-20T20:50:05.538920",
-    "quantidade_total": 426,
-    "valor_total": 67198.66,
+    "gerado_em": "2026-08-20T21:21:01.115619",
+    "quantidade_total": 427,
+    "valor_total": 67313.66,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 67198.66,
+    "valor_total_pendente": 67313.66,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1526,8 +1526,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 93,
-        "valor": 10770.0
+        "quantidade": 94,
+        "valor": 10885.0
       },
       {
         "unidade": "Veranopolis",
@@ -1618,7 +1618,7 @@
       },
       {
         "doutor": "Marina Alievi",
-        "quantidade": 2,
+        "quantidade": 3,
         "valor_descontado": 0.0
       },
       {
