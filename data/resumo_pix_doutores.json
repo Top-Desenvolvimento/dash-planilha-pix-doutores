@@ -1493,11 +1493,11 @@
   },
   "2026-08": {
     "competencia": "2026-08",
-    "gerado_em": "2026-08-20T21:55:43.801954",
-    "quantidade_total": 427,
-    "valor_total": 67313.66,
+    "gerado_em": "2026-08-20T22:20:49.906623",
+    "quantidade_total": 429,
+    "valor_total": 67622.66,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 67313.66,
+    "valor_total_pendente": 67622.66,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1521,8 +1521,8 @@
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 77,
-        "valor": 13007.0
+        "quantidade": 79,
+        "valor": 13316.0
       },
       {
         "unidade": "Soledade",
@@ -1608,7 +1608,7 @@
       },
       {
         "doutor": "Letícia Cauzzi",
-        "quantidade": 12,
+        "quantidade": 14,
         "valor_descontado": 0.0
       },
       {
