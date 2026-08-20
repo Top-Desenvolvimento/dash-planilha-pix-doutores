@@ -1493,11 +1493,11 @@
   },
   "2026-08": {
     "competencia": "2026-08",
-    "gerado_em": "2026-08-20T19:45:17.435833",
-    "quantidade_total": 421,
-    "valor_total": 66372.66,
-    "valor_total_descontado": 243.0,
-    "valor_total_pendente": 66129.66,
+    "gerado_em": "2026-08-20T20:19:07.689840",
+    "quantidade_total": 423,
+    "valor_total": 66615.66,
+    "valor_total_descontado": 0.0,
+    "valor_total_pendente": 66615.66,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1526,13 +1526,13 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 92,
-        "valor": 10685.0
+        "quantidade": 93,
+        "valor": 10770.0
       },
       {
         "unidade": "Veranopolis",
-        "quantidade": 46,
-        "valor": 7536.66
+        "quantidade": 47,
+        "valor": 7694.66
       }
     ],
     "por_doutor": [
@@ -1618,7 +1618,7 @@
       },
       {
         "doutor": "Marina Alievi",
-        "quantidade": 1,
+        "quantidade": 2,
         "valor_descontado": 0.0
       },
       {
@@ -1649,7 +1649,7 @@
       {
         "doutor": "Norberto Filipe",
         "quantidade": 1,
-        "valor_descontado": 243.0
+        "valor_descontado": 0.0
       },
       {
         "doutor": "Renata Protto",
@@ -1678,7 +1678,7 @@
       },
       {
         "doutor": "Valter Baldissera",
-        "quantidade": 34,
+        "quantidade": 35,
         "valor_descontado": 0.0
       }
     ]
