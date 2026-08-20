@@ -1,10 +1,10 @@
 {
   "competencia": "2026-08",
-  "gerado_em": "2026-08-20T19:03:44.188011",
-  "quantidade_total": 420,
-  "valor_total": 66277.66,
-  "valor_total_descontado": 257.0,
-  "valor_total_pendente": 66020.66,
+  "gerado_em": "2026-08-20T19:45:17.435833",
+  "quantidade_total": 421,
+  "valor_total": 66372.66,
+  "valor_total_descontado": 243.0,
+  "valor_total_pendente": 66129.66,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -28,8 +28,8 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 76,
-      "valor": 12912.0
+      "quantidade": 77,
+      "valor": 13007.0
     },
     {
       "unidade": "Soledade",
@@ -115,7 +115,7 @@
     },
     {
       "doutor": "Letícia Cauzzi",
-      "quantidade": 8,
+      "quantidade": 9,
       "valor_descontado": 0.0
     },
     {
@@ -156,7 +156,7 @@
     {
       "doutor": "Norberto Filipe",
       "quantidade": 1,
-      "valor_descontado": 257.0
+      "valor_descontado": 243.0
     },
     {
       "doutor": "Renata Protto",
