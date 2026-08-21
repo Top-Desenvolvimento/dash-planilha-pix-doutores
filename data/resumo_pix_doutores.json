@@ -1493,11 +1493,11 @@
   },
   "2026-08": {
     "competencia": "2026-08",
-    "gerado_em": "2026-08-21T16:50:16.128327",
-    "quantidade_total": 435,
-    "valor_total": 68224.66,
+    "gerado_em": "2026-08-21T17:22:29.306282",
+    "quantidade_total": 438,
+    "valor_total": 68618.66,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 68224.66,
+    "valor_total_pendente": 68618.66,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1506,8 +1506,8 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 110,
-        "valor": 22121.0
+        "quantidade": 111,
+        "valor": 22220.0
       },
       {
         "unidade": "Encantado",
@@ -1526,8 +1526,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 96,
-        "valor": 11090.0
+        "quantidade": 98,
+        "valor": 11385.0
       },
       {
         "unidade": "Veranopolis",
@@ -1598,7 +1598,7 @@
       },
       {
         "doutor": "Jéssica Barreto",
-        "quantidade": 8,
+        "quantidade": 9,
         "valor_descontado": 0.0
       },
       {
@@ -1623,7 +1623,7 @@
       },
       {
         "doutor": "Marina Alievi",
-        "quantidade": 5,
+        "quantidade": 7,
         "valor_descontado": 0.0
       },
       {
