@@ -1,10 +1,10 @@
 {
   "competencia": "2026-08",
-  "gerado_em": "2026-08-21T17:22:29.306282",
-  "quantidade_total": 438,
-  "valor_total": 68618.66,
+  "gerado_em": "2026-08-21T17:58:10.546814",
+  "quantidade_total": 439,
+  "valor_total": 68738.66,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 68618.66,
+  "valor_total_pendente": 68738.66,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -18,8 +18,8 @@
     },
     {
       "unidade": "Encantado",
-      "quantidade": 40,
-      "valor": 5809.0
+      "quantidade": 41,
+      "valor": 5929.0
     },
     {
       "unidade": "Farroupilha",
@@ -55,7 +55,7 @@
     },
     {
       "doutor": "Alexandre Orlandini",
-      "quantidade": 1,
+      "quantidade": 2,
       "valor_descontado": 0.0
     },
     {
