@@ -1493,11 +1493,11 @@
   },
   "2026-08": {
     "competencia": "2026-08",
-    "gerado_em": "2026-08-21T16:03:37.804439",
-    "quantidade_total": 433,
-    "valor_total": 67956.66,
+    "gerado_em": "2026-08-21T16:50:16.128327",
+    "quantidade_total": 435,
+    "valor_total": 68224.66,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 67956.66,
+    "valor_total_pendente": 68224.66,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1511,8 +1511,8 @@
       },
       {
         "unidade": "Encantado",
-        "quantidade": 39,
-        "valor": 5661.0
+        "quantidade": 40,
+        "valor": 5809.0
       },
       {
         "unidade": "Farroupilha",
@@ -1526,8 +1526,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 95,
-        "valor": 10970.0
+        "quantidade": 96,
+        "valor": 11090.0
       },
       {
         "unidade": "Veranopolis",
@@ -1544,6 +1544,11 @@
       {
         "doutor": "Alexandre Favero",
         "quantidade": 9,
+        "valor_descontado": 0.0
+      },
+      {
+        "doutor": "Alexandre Orlandini",
+        "quantidade": 1,
         "valor_descontado": 0.0
       },
       {
@@ -1618,7 +1623,7 @@
       },
       {
         "doutor": "Marina Alievi",
-        "quantidade": 4,
+        "quantidade": 5,
         "valor_descontado": 0.0
       },
       {
