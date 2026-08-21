@@ -1493,11 +1493,11 @@
   },
   "2026-08": {
     "competencia": "2026-08",
-    "gerado_em": "2026-08-21T21:06:40.386008",
-    "quantidade_total": 454,
-    "valor_total": 70493.66,
+    "gerado_em": "2026-08-21T21:41:48.662426",
+    "quantidade_total": 463,
+    "valor_total": 71361.66,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 70493.66,
+    "valor_total_pendente": 71361.66,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1506,13 +1506,13 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 115,
-        "valor": 22609.0
+        "quantidade": 118,
+        "valor": 22913.0
       },
       {
         "unidade": "Encantado",
-        "quantidade": 50,
-        "valor": 7101.0
+        "quantidade": 53,
+        "valor": 7415.0
       },
       {
         "unidade": "Farroupilha",
@@ -1526,8 +1526,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 99,
-        "valor": 11480.0
+        "quantidade": 102,
+        "valor": 11730.0
       },
       {
         "unidade": "Veranopolis",
@@ -1623,7 +1623,7 @@
       },
       {
         "doutor": "Marina Alievi",
-        "quantidade": 8,
+        "quantidade": 11,
         "valor_descontado": 0.0
       },
       {
@@ -1668,7 +1668,7 @@
       },
       {
         "doutor": "Thalia Tessaro",
-        "quantidade": 12,
+        "quantidade": 15,
         "valor_descontado": 0.0
       },
       {
@@ -1678,7 +1678,7 @@
       },
       {
         "doutor": "Thiany Cristofoli",
-        "quantidade": 21,
+        "quantidade": 24,
         "valor_descontado": 0.0
       },
       {
