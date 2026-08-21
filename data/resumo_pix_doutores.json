@@ -1493,26 +1493,26 @@
   },
   "2026-08": {
     "competencia": "2026-08",
-    "gerado_em": "2026-08-21T19:15:32.284766",
-    "quantidade_total": 445,
-    "valor_total": 69446.66,
+    "gerado_em": "2026-08-21T19:34:07.149023",
+    "quantidade_total": 449,
+    "valor_total": 69830.66,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 69446.66,
+    "valor_total_pendente": 69830.66,
     "por_unidade": [
       {
         "unidade": "Bento",
-        "quantidade": 8,
-        "valor": 930.0
+        "quantidade": 9,
+        "valor": 1029.0
       },
       {
         "unidade": "Caxias",
-        "quantidade": 113,
-        "valor": 22425.0
+        "quantidade": 114,
+        "valor": 22510.0
       },
       {
         "unidade": "Encantado",
-        "quantidade": 45,
-        "valor": 6432.0
+        "quantidade": 46,
+        "valor": 6537.0
       },
       {
         "unidade": "Farroupilha",
@@ -1526,8 +1526,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 98,
-        "valor": 11385.0
+        "quantidade": 99,
+        "valor": 11480.0
       },
       {
         "unidade": "Veranopolis",
@@ -1548,7 +1548,7 @@
       },
       {
         "doutor": "Alexandre Orlandini",
-        "quantidade": 6,
+        "quantidade": 7,
         "valor_descontado": 0.0
       },
       {
@@ -1598,7 +1598,7 @@
       },
       {
         "doutor": "Jéssica Barreto",
-        "quantidade": 11,
+        "quantidade": 12,
         "valor_descontado": 0.0
       },
       {
@@ -1623,7 +1623,7 @@
       },
       {
         "doutor": "Marina Alievi",
-        "quantidade": 7,
+        "quantidade": 8,
         "valor_descontado": 0.0
       },
       {
@@ -1679,6 +1679,11 @@
       {
         "doutor": "Thiany Cristofoli",
         "quantidade": 18,
+        "valor_descontado": 0.0
+      },
+      {
+        "doutor": "TOP",
+        "quantidade": 1,
         "valor_descontado": 0.0
       },
       {
