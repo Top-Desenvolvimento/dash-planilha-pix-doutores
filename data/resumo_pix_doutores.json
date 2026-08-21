@@ -1493,11 +1493,11 @@
   },
   "2026-08": {
     "competencia": "2026-08",
-    "gerado_em": "2026-08-21T18:59:19.042459",
-    "quantidade_total": 442,
-    "valor_total": 69093.66,
+    "gerado_em": "2026-08-21T19:15:32.284766",
+    "quantidade_total": 445,
+    "valor_total": 69446.66,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 69093.66,
+    "valor_total_pendente": 69446.66,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1506,13 +1506,13 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 111,
-        "valor": 22220.0
+        "quantidade": 113,
+        "valor": 22425.0
       },
       {
         "unidade": "Encantado",
-        "quantidade": 44,
-        "valor": 6284.0
+        "quantidade": 45,
+        "valor": 6432.0
       },
       {
         "unidade": "Farroupilha",
@@ -1548,7 +1548,7 @@
       },
       {
         "doutor": "Alexandre Orlandini",
-        "quantidade": 5,
+        "quantidade": 6,
         "valor_descontado": 0.0
       },
       {
@@ -1598,7 +1598,7 @@
       },
       {
         "doutor": "Jéssica Barreto",
-        "quantidade": 9,
+        "quantidade": 11,
         "valor_descontado": 0.0
       },
       {
