@@ -1493,11 +1493,11 @@
   },
   "2026-08": {
     "competencia": "2026-08",
-    "gerado_em": "2026-08-22T11:20:00.843970",
-    "quantidade_total": 466,
-    "valor_total": 71696.66,
+    "gerado_em": "2026-08-22T11:37:57.991356",
+    "quantidade_total": 469,
+    "valor_total": 71981.66,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 71696.66,
+    "valor_total_pendente": 71981.66,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1511,8 +1511,8 @@
       },
       {
         "unidade": "Encantado",
-        "quantidade": 55,
-        "valor": 7630.0
+        "quantidade": 57,
+        "valor": 7810.0
       },
       {
         "unidade": "Farroupilha",
@@ -1526,8 +1526,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 103,
-        "valor": 11850.0
+        "quantidade": 104,
+        "valor": 11955.0
       },
       {
         "unidade": "Veranopolis",
@@ -1608,7 +1608,7 @@
       },
       {
         "doutor": "Leticia Canabarro",
-        "quantidade": 30,
+        "quantidade": 31,
         "valor_descontado": 0.0
       },
       {
@@ -1678,7 +1678,7 @@
       },
       {
         "doutor": "Thiany Cristofoli",
-        "quantidade": 26,
+        "quantidade": 28,
         "valor_descontado": 0.0
       },
       {
