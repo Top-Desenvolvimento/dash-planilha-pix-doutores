@@ -1,20 +1,20 @@
 {
   "competencia": "2026-08",
-  "gerado_em": "2026-08-22T14:19:07.712090",
-  "quantidade_total": 484,
-  "valor_total": 73619.66,
-  "valor_total_descontado": 429.0,
-  "valor_total_pendente": 73190.66,
+  "gerado_em": "2026-08-22T14:49:11.273661",
+  "quantidade_total": 488,
+  "valor_total": 73993.66,
+  "valor_total_descontado": 619.0,
+  "valor_total_pendente": 73374.66,
   "por_unidade": [
     {
       "unidade": "Bento",
-      "quantidade": 12,
-      "valor": 1338.0
+      "quantidade": 14,
+      "valor": 1528.0
     },
     {
       "unidade": "Caxias",
-      "quantidade": 125,
-      "valor": 23692.0
+      "quantidade": 126,
+      "valor": 23777.0
     },
     {
       "unidade": "Encantado",
@@ -33,8 +33,8 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 105,
-      "valor": 12075.0
+      "quantidade": 106,
+      "valor": 12174.0
     },
     {
       "unidade": "Veranopolis",
@@ -115,7 +115,7 @@
     },
     {
       "doutor": "Leticia Canabarro",
-      "quantidade": 32,
+      "quantidade": 33,
       "valor_descontado": 0.0
     },
     {
@@ -130,8 +130,8 @@
     },
     {
       "doutor": "Luiz Henrique",
-      "quantidade": 4,
-      "valor_descontado": 429.0
+      "quantidade": 6,
+      "valor_descontado": 619.0
     },
     {
       "doutor": "Marina Alievi",
@@ -175,7 +175,7 @@
     },
     {
       "doutor": "Tamara Macanan",
-      "quantidade": 34,
+      "quantidade": 35,
       "valor_descontado": 0.0
     },
     {
