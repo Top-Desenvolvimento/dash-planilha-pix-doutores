@@ -1,10 +1,10 @@
 {
   "competencia": "2026-08",
-  "gerado_em": "2026-08-22T18:08:55.918435",
-  "quantidade_total": 384,
-  "valor_total": 62048.66,
+  "gerado_em": "2026-08-22T18:54:27.361113",
+  "quantidade_total": 490,
+  "valor_total": 74222.66,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 62048.66,
+  "valor_total_pendente": 74222.66,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -30,6 +30,11 @@
       "unidade": "FloresDaCunha",
       "quantidade": 79,
       "valor": 13316.0
+    },
+    {
+      "unidade": "Soledade",
+      "quantidade": 106,
+      "valor": 12174.0
     },
     {
       "unidade": "Veranopolis",
@@ -69,6 +74,11 @@
       "valor_descontado": 0.0
     },
     {
+      "doutor": "Felipe Lino",
+      "quantidade": 20,
+      "valor_descontado": 0.0
+    },
+    {
       "doutor": "Fernanda Sozo",
       "quantidade": 11,
       "valor_descontado": 0.0
@@ -104,8 +114,18 @@
       "valor_descontado": 0.0
     },
     {
+      "doutor": "Leticia Canabarro",
+      "quantidade": 33,
+      "valor_descontado": 0.0
+    },
+    {
       "doutor": "Letícia Cauzzi",
       "quantidade": 16,
+      "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Luisa Moraes Lucas",
+      "quantidade": 34,
       "valor_descontado": 0.0
     },
     {
@@ -114,8 +134,18 @@
       "valor_descontado": 0.0
     },
     {
+      "doutor": "Marina Alievi",
+      "quantidade": 11,
+      "valor_descontado": 0.0
+    },
+    {
       "doutor": "Morgana Zambiasi",
       "quantidade": 11,
+      "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Murilo Debortoli",
+      "quantidade": 8,
       "valor_descontado": 0.0
     },
     {
