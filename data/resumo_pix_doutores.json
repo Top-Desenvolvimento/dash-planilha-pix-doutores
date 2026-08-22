@@ -1493,11 +1493,11 @@
   },
   "2026-08": {
     "competencia": "2026-08",
-    "gerado_em": "2026-08-22T15:09:27.522670",
+    "gerado_em": "2026-08-22T15:40:28.283053",
     "quantidade_total": 488,
     "valor_total": 73993.66,
-    "valor_total_descontado": 81.0,
-    "valor_total_pendente": 73912.66,
+    "valor_total_descontado": 0.0,
+    "valor_total_pendente": 73993.66,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1624,7 +1624,7 @@
       {
         "doutor": "Luiz Henrique",
         "quantidade": 6,
-        "valor_descontado": 81.0
+        "valor_descontado": 0.0
       },
       {
         "doutor": "Marina Alievi",
