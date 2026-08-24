@@ -1,15 +1,15 @@
 {
   "competencia": "2026-08",
-  "gerado_em": "2026-08-24T17:14:10.530867",
-  "quantidade_total": 495,
-  "valor_total": 74724.66,
+  "gerado_em": "2026-08-24T17:53:42.304791",
+  "quantidade_total": 496,
+  "valor_total": 74844.66,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 74724.66,
+  "valor_total_pendente": 74844.66,
   "por_unidade": [
     {
       "unidade": "Bento",
-      "quantidade": 18,
-      "valor": 1911.0
+      "quantidade": 19,
+      "valor": 2031.0
     },
     {
       "unidade": "Caxias",
@@ -195,7 +195,7 @@
     },
     {
       "doutor": "TOP",
-      "quantidade": 2,
+      "quantidade": 3,
       "valor_descontado": 0.0
     },
     {
