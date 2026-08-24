@@ -1493,11 +1493,11 @@
   },
   "2026-08": {
     "competencia": "2026-08",
-    "gerado_em": "2026-08-24T17:53:42.304791",
-    "quantidade_total": 496,
-    "valor_total": 74844.66,
+    "gerado_em": "2026-08-24T18:05:35.647267",
+    "quantidade_total": 417,
+    "valor_total": 61528.66,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 74844.66,
+    "valor_total_pendente": 61528.66,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1518,11 +1518,6 @@
         "unidade": "Farroupilha",
         "quantidade": 51,
         "valor": 6647.0
-      },
-      {
-        "unidade": "FloresDaCunha",
-        "quantidade": 79,
-        "valor": 13316.0
       },
       {
         "unidade": "Soledade",
@@ -1552,11 +1547,6 @@
         "valor_descontado": 0.0
       },
       {
-        "doutor": "Ana Cristina Corso",
-        "quantidade": 1,
-        "valor_descontado": 0.0
-      },
-      {
         "doutor": "Dionathan Pohlmann",
         "quantidade": 15,
         "valor_descontado": 0.0
@@ -1572,11 +1562,6 @@
         "valor_descontado": 0.0
       },
       {
-        "doutor": "Fernanda Sozo",
-        "quantidade": 11,
-        "valor_descontado": 0.0
-      },
-      {
         "doutor": "Franciele Pedrotti",
         "quantidade": 43,
         "valor_descontado": 0.0
@@ -1584,11 +1569,6 @@
       {
         "doutor": "Giovana Gasparini",
         "quantidade": 18,
-        "valor_descontado": 0.0
-      },
-      {
-        "doutor": "Indiamara Rech",
-        "quantidade": 19,
         "valor_descontado": 0.0
       },
       {
@@ -1602,18 +1582,13 @@
         "valor_descontado": 0.0
       },
       {
-        "doutor": "Karen Ramona Kuwer",
-        "quantidade": 6,
-        "valor_descontado": 0.0
-      },
-      {
         "doutor": "Leticia Canabarro",
         "quantidade": 33,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Letícia Cauzzi",
-        "quantidade": 16,
+        "quantidade": 5,
         "valor_descontado": 0.0
       },
       {
@@ -1668,7 +1643,7 @@
       },
       {
         "doutor": "Tamara Macanan",
-        "quantidade": 37,
+        "quantidade": 6,
         "valor_descontado": 0.0
       },
       {
