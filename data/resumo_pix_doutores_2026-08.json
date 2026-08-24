@@ -1,10 +1,10 @@
 {
   "competencia": "2026-08",
-  "gerado_em": "2026-08-24T21:00:33.306821",
-  "quantidade_total": 498,
-  "valor_total": 75059.66,
+  "gerado_em": "2026-08-24T21:34:06.500091",
+  "quantidade_total": 500,
+  "valor_total": 75233.66,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 75059.66,
+  "valor_total_pendente": 75233.66,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,8 +13,8 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 130,
-      "valor": 24221.0
+      "quantidade": 132,
+      "valor": 24395.0
     },
     {
       "unidade": "Encantado",
@@ -175,7 +175,7 @@
     },
     {
       "doutor": "Tamara Macanan",
-      "quantidade": 39,
+      "quantidade": 41,
       "valor_descontado": 0.0
     },
     {
