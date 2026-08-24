@@ -1493,16 +1493,16 @@
   },
   "2026-08": {
     "competencia": "2026-08",
-    "gerado_em": "2026-08-24T15:57:38.512848",
-    "quantidade_total": 492,
-    "valor_total": 74440.66,
+    "gerado_em": "2026-08-24T16:33:16.408375",
+    "quantidade_total": 495,
+    "valor_total": 74724.66,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 74440.66,
+    "valor_total_pendente": 74724.66,
     "por_unidade": [
       {
         "unidade": "Bento",
-        "quantidade": 15,
-        "valor": 1627.0
+        "quantidade": 18,
+        "valor": 1911.0
       },
       {
         "unidade": "Caxias",
@@ -1623,7 +1623,7 @@
       },
       {
         "doutor": "Luiz Henrique",
-        "quantidade": 7,
+        "quantidade": 10,
         "valor_descontado": 0.0
       },
       {
