@@ -1493,11 +1493,11 @@
   },
   "2026-08": {
     "competencia": "2026-08",
-    "gerado_em": "2026-08-25T22:05:13.945130",
-    "quantidade_total": 528,
-    "valor_total": 78433.66,
+    "gerado_em": "2026-08-25T22:45:00.589813",
+    "quantidade_total": 530,
+    "valor_total": 78718.66,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 78433.66,
+    "valor_total_pendente": 78718.66,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1516,13 +1516,13 @@
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 54,
-        "valor": 6921.0
+        "quantidade": 55,
+        "valor": 7086.0
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 85,
-        "valor": 14050.0
+        "quantidade": 86,
+        "valor": 14170.0
       },
       {
         "unidade": "Soledade",
@@ -1538,7 +1538,7 @@
     "por_doutor": [
       {
         "doutor": "Adriele da Silva",
-        "quantidade": 5,
+        "quantidade": 6,
         "valor_descontado": 0.0
       },
       {
@@ -1573,7 +1573,7 @@
       },
       {
         "doutor": "Fernanda Sozo",
-        "quantidade": 17,
+        "quantidade": 18,
         "valor_descontado": 0.0
       },
       {
