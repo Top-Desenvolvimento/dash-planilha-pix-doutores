@@ -1493,11 +1493,11 @@
   },
   "2026-08": {
     "competencia": "2026-08",
-    "gerado_em": "2026-08-25T20:29:46.672230",
-    "quantidade_total": 517,
-    "valor_total": 77210.66,
-    "valor_total_descontado": 435.0,
-    "valor_total_pendente": 76775.66,
+    "gerado_em": "2026-08-25T21:02:56.559227",
+    "quantidade_total": 521,
+    "valor_total": 77616.66,
+    "valor_total_descontado": 125.0,
+    "valor_total_pendente": 77491.66,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1516,18 +1516,18 @@
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 53,
-        "valor": 6872.0
+        "quantidade": 54,
+        "valor": 6921.0
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 80,
-        "valor": 13441.0
+        "quantidade": 81,
+        "valor": 13578.0
       },
       {
         "unidade": "Soledade",
-        "quantidade": 118,
-        "valor": 13323.0
+        "quantidade": 120,
+        "valor": 13543.0
       },
       {
         "unidade": "Veranopolis",
@@ -1538,7 +1538,7 @@
     "por_doutor": [
       {
         "doutor": "Adriele da Silva",
-        "quantidade": 4,
+        "quantidade": 5,
         "valor_descontado": 0.0
       },
       {
@@ -1573,7 +1573,7 @@
       },
       {
         "doutor": "Fernanda Sozo",
-        "quantidade": 12,
+        "quantidade": 13,
         "valor_descontado": 0.0
       },
       {
@@ -1588,8 +1588,8 @@
       },
       {
         "doutor": "Gustavo Lourenço Ongaratto",
-        "quantidade": 5,
-        "valor_descontado": 435.0
+        "quantidade": 7,
+        "valor_descontado": 125.0
       },
       {
         "doutor": "Indiamara Rech",
