@@ -1,10 +1,10 @@
 {
   "competencia": "2026-08",
-  "gerado_em": "2026-08-25T21:39:16.077351",
-  "quantidade_total": 524,
-  "valor_total": 77935.66,
+  "gerado_em": "2026-08-25T22:05:13.945130",
+  "quantidade_total": 528,
+  "valor_total": 78433.66,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 77935.66,
+  "valor_total_pendente": 78433.66,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,8 +13,8 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 135,
-      "valor": 24992.0
+      "quantidade": 136,
+      "valor": 25107.0
     },
     {
       "unidade": "Encantado",
@@ -28,13 +28,13 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 83,
-      "valor": 13772.0
+      "quantidade": 85,
+      "valor": 14050.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 121,
-      "valor": 13668.0
+      "quantidade": 122,
+      "valor": 13773.0
     },
     {
       "unidade": "Veranopolis",
@@ -80,7 +80,7 @@
     },
     {
       "doutor": "Fernanda Sozo",
-      "quantidade": 15,
+      "quantidade": 17,
       "valor_descontado": 0.0
     },
     {
@@ -95,7 +95,7 @@
     },
     {
       "doutor": "Gustavo Lourenço Ongaratto",
-      "quantidade": 8,
+      "quantidade": 9,
       "valor_descontado": 0.0
     },
     {
@@ -180,7 +180,7 @@
     },
     {
       "doutor": "Tamara Macanan",
-      "quantidade": 44,
+      "quantidade": 45,
       "valor_descontado": 0.0
     },
     {
