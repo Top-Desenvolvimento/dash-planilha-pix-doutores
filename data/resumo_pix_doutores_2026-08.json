@@ -1,10 +1,10 @@
 {
   "competencia": "2026-08",
-  "gerado_em": "2026-08-25T21:02:56.559227",
-  "quantidade_total": 521,
-  "valor_total": 77616.66,
-  "valor_total_descontado": 125.0,
-  "valor_total_pendente": 77491.66,
+  "gerado_em": "2026-08-25T21:39:16.077351",
+  "quantidade_total": 524,
+  "valor_total": 77935.66,
+  "valor_total_descontado": 0.0,
+  "valor_total_pendente": 77935.66,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -28,13 +28,13 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 81,
-      "valor": 13578.0
+      "quantidade": 83,
+      "valor": 13772.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 120,
-      "valor": 13543.0
+      "quantidade": 121,
+      "valor": 13668.0
     },
     {
       "unidade": "Veranopolis",
@@ -80,7 +80,7 @@
     },
     {
       "doutor": "Fernanda Sozo",
-      "quantidade": 13,
+      "quantidade": 15,
       "valor_descontado": 0.0
     },
     {
@@ -95,8 +95,8 @@
     },
     {
       "doutor": "Gustavo Lourenço Ongaratto",
-      "quantidade": 7,
-      "valor_descontado": 125.0
+      "quantidade": 8,
+      "valor_descontado": 0.0
     },
     {
       "doutor": "Indiamara Rech",
