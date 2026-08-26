@@ -1493,11 +1493,11 @@
   },
   "2026-08": {
     "competencia": "2026-08",
-    "gerado_em": "2026-08-26T20:02:52.327190",
-    "quantidade_total": 550,
-    "valor_total": 82247.66,
-    "valor_total_descontado": 620.0,
-    "valor_total_pendente": 81627.66,
+    "gerado_em": "2026-08-26T20:49:46.672017",
+    "quantidade_total": 551,
+    "valor_total": 82342.66,
+    "valor_total_descontado": 215.0,
+    "valor_total_pendente": 82127.66,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1511,8 +1511,8 @@
       },
       {
         "unidade": "Encantado",
-        "quantidade": 62,
-        "valor": 8332.0
+        "quantidade": 63,
+        "valor": 8427.0
       },
       {
         "unidade": "Farroupilha",
@@ -1594,7 +1594,7 @@
       {
         "doutor": "Greici Matiello",
         "quantidade": 1,
-        "valor_descontado": 500.0
+        "valor_descontado": 0.0
       },
       {
         "doutor": "Gustavo Lourenço Ongaratto",
@@ -1683,8 +1683,8 @@
       },
       {
         "doutor": "Sara Trevisol",
-        "quantidade": 1,
-        "valor_descontado": 120.0
+        "quantidade": 2,
+        "valor_descontado": 215.0
       },
       {
         "doutor": "Tamara Macanan",
