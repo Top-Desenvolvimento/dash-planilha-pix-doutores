@@ -84,15 +84,21 @@
     "coletado_em": "2026-08-06T21:09:59.941591"
   },
   {
+    "unidade": "Caxias",
+    "competencia": "2026-08",
+    "erro": "Timeout ao acessar sistema",
+    "coletado_em": "2026-08-26T06:05:15.797831"
+  },
+  {
     "unidade": "Garibaldi",
     "competencia": "2026-08",
     "erro": "Menu Finanças não encontrado.",
-    "coletado_em": "2026-08-26T05:36:16.071469"
+    "coletado_em": "2026-08-26T06:11:26.910971"
   },
   {
     "unidade": "Ssdocai",
     "competencia": "2026-08",
     "erro": "Menu Finanças não encontrado.",
-    "coletado_em": "2026-08-26T05:37:18.815975"
+    "coletado_em": "2026-08-26T06:12:31.236746"
   }
 ]
