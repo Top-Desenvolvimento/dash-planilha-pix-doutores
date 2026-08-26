@@ -1,10 +1,10 @@
 {
   "competencia": "2026-08",
-  "gerado_em": "2026-08-26T19:15:33.492133",
-  "quantidade_total": 546,
-  "valor_total": 80366.66,
-  "valor_total_descontado": 120.0,
-  "valor_total_pendente": 80246.66,
+  "gerado_em": "2026-08-26T20:02:52.327190",
+  "quantidade_total": 550,
+  "valor_total": 82247.66,
+  "valor_total_descontado": 620.0,
+  "valor_total_pendente": 81627.66,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,8 +13,8 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 145,
-      "valor": 26046.0
+      "quantidade": 147,
+      "valor": 27632.0
     },
     {
       "unidade": "Encantado",
@@ -28,8 +28,8 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 87,
-      "valor": 14269.0
+      "quantidade": 89,
+      "valor": 14564.0
     },
     {
       "unidade": "Soledade",
@@ -60,7 +60,7 @@
     },
     {
       "doutor": "Ana Cristina Corso",
-      "quantidade": 1,
+      "quantidade": 3,
       "valor_descontado": 0.0
     },
     {
@@ -92,6 +92,16 @@
       "doutor": "Giovana Gasparini",
       "quantidade": 18,
       "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Gisela Gregio",
+      "quantidade": 1,
+      "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Greici Matiello",
+      "quantidade": 1,
+      "valor_descontado": 500.0
     },
     {
       "doutor": "Gustavo Lourenço Ongaratto",
