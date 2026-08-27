@@ -1493,21 +1493,21 @@
   },
   "2026-08": {
     "competencia": "2026-08",
-    "gerado_em": "2026-08-27T16:56:10.298660",
-    "quantidade_total": 565,
-    "valor_total": 84311.66,
-    "valor_total_descontado": 85.0,
-    "valor_total_pendente": 84226.66,
+    "gerado_em": "2026-08-27T21:29:43.971683",
+    "quantidade_total": 577,
+    "valor_total": 85704.66,
+    "valor_total_descontado": 194.0,
+    "valor_total_pendente": 85510.66,
     "por_unidade": [
       {
         "unidade": "Bento",
-        "quantidade": 21,
-        "valor": 2225.0
+        "quantidade": 24,
+        "valor": 2567.0
       },
       {
         "unidade": "Caxias",
-        "quantidade": 148,
-        "valor": 27717.0
+        "quantidade": 149,
+        "valor": 27826.0
       },
       {
         "unidade": "Encantado",
@@ -1516,13 +1516,13 @@
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 57,
-        "valor": 7291.0
+        "quantidade": 64,
+        "valor": 8040.0
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 94,
-        "valor": 15093.0
+        "quantidade": 95,
+        "valor": 15286.0
       },
       {
         "unidade": "Soledade",
@@ -1538,7 +1538,7 @@
     "por_doutor": [
       {
         "doutor": "Adriele da Silva",
-        "quantidade": 6,
+        "quantidade": 10,
         "valor_descontado": 0.0
       },
       {
@@ -1553,7 +1553,7 @@
       },
       {
         "doutor": "Ana Cristina Corso",
-        "quantidade": 6,
+        "quantidade": 7,
         "valor_descontado": 0.0
       },
       {
@@ -1613,8 +1613,8 @@
       },
       {
         "doutor": "Joana Sganzerla",
-        "quantidade": 1,
-        "valor_descontado": 85.0
+        "quantidade": 2,
+        "valor_descontado": 194.0
       },
       {
         "doutor": "Julia Nardi",
@@ -1648,7 +1648,7 @@
       },
       {
         "doutor": "Luiz Henrique",
-        "quantidade": 13,
+        "quantidade": 18,
         "valor_descontado": 0.0
       },
       {
@@ -1718,7 +1718,7 @@
       },
       {
         "doutor": "TOP",
-        "quantidade": 4,
+        "quantidade": 5,
         "valor_descontado": 0.0
       },
       {
