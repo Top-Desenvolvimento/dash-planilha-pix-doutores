@@ -1493,21 +1493,21 @@
   },
   "2026-08": {
     "competencia": "2026-08",
-    "gerado_em": "2026-08-27T13:59:44.241432",
-    "quantidade_total": 560,
-    "valor_total": 83806.66,
-    "valor_total_descontado": 0.0,
-    "valor_total_pendente": 83806.66,
+    "gerado_em": "2026-08-27T16:56:10.298660",
+    "quantidade_total": 565,
+    "valor_total": 84311.66,
+    "valor_total_descontado": 85.0,
+    "valor_total_pendente": 84226.66,
     "por_unidade": [
       {
         "unidade": "Bento",
-        "quantidade": 20,
-        "valor": 2130.0
+        "quantidade": 21,
+        "valor": 2225.0
       },
       {
         "unidade": "Caxias",
-        "quantidade": 147,
-        "valor": 27632.0
+        "quantidade": 148,
+        "valor": 27717.0
       },
       {
         "unidade": "Encantado",
@@ -1516,13 +1516,13 @@
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 55,
-        "valor": 7086.0
+        "quantidade": 57,
+        "valor": 7291.0
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 93,
-        "valor": 14973.0
+        "quantidade": 94,
+        "valor": 15093.0
       },
       {
         "unidade": "Soledade",
@@ -1568,7 +1568,7 @@
       },
       {
         "doutor": "Everlize Cipriani",
-        "quantidade": 16,
+        "quantidade": 17,
         "valor_descontado": 0.0
       },
       {
@@ -1578,7 +1578,7 @@
       },
       {
         "doutor": "Fernanda Sozo",
-        "quantidade": 19,
+        "quantidade": 20,
         "valor_descontado": 0.0
       },
       {
@@ -1612,6 +1612,11 @@
         "valor_descontado": 0.0
       },
       {
+        "doutor": "Joana Sganzerla",
+        "quantidade": 1,
+        "valor_descontado": 85.0
+      },
+      {
         "doutor": "Julia Nardi",
         "quantidade": 2,
         "valor_descontado": 0.0
@@ -1643,7 +1648,7 @@
       },
       {
         "doutor": "Luiz Henrique",
-        "quantidade": 11,
+        "quantidade": 13,
         "valor_descontado": 0.0
       },
       {
