@@ -2914,8 +2914,8 @@
       "doutor_id": "40",
       "doutor": "Sara Trevisol",
       "credito_inicial": 1000.0,
-      "utilizado": 885.0,
-      "credito_disponivel": 115.0,
+      "utilizado": 1000.0,
+      "credito_disponivel": 0.0,
       "pix_key": ""
     },
     {

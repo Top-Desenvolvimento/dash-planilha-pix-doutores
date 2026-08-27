@@ -1493,11 +1493,11 @@
   },
   "2026-08": {
     "competencia": "2026-08",
-    "gerado_em": "2026-08-26T21:59:06.515032",
-    "quantidade_total": 554,
-    "valor_total": 82631.66,
-    "valor_total_descontado": 215.0,
-    "valor_total_pendente": 82416.66,
+    "gerado_em": "2026-08-27T02:55:37.418822",
+    "quantidade_total": 556,
+    "valor_total": 83366.66,
+    "valor_total_descontado": 115.0,
+    "valor_total_pendente": 83251.66,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1526,13 +1526,13 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 126,
-        "valor": 14177.0
+        "quantidade": 127,
+        "valor": 14346.0
       },
       {
         "unidade": "Veranopolis",
-        "quantidade": 52,
-        "valor": 8431.66
+        "quantidade": 53,
+        "valor": 8997.66
       }
     ],
     "por_doutor": [
@@ -1559,6 +1559,11 @@
       {
         "doutor": "Dionathan Pohlmann",
         "quantidade": 15,
+        "valor_descontado": 0.0
+      },
+      {
+        "doutor": "Dra.Ana Cristina Corso",
+        "quantidade": 1,
         "valor_descontado": 0.0
       },
       {
@@ -1633,7 +1638,7 @@
       },
       {
         "doutor": "Luisa Moraes Lucas",
-        "quantidade": 35,
+        "quantidade": 36,
         "valor_descontado": 0.0
       },
       {
@@ -1684,7 +1689,7 @@
       {
         "doutor": "Sara Trevisol",
         "quantidade": 2,
-        "valor_descontado": 215.0
+        "valor_descontado": 115.0
       },
       {
         "doutor": "Tamara Macanan",
