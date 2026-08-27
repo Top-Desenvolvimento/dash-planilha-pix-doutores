@@ -1,10 +1,10 @@
 {
   "competencia": "2026-08",
-  "gerado_em": "2026-08-27T02:55:37.418822",
-  "quantidade_total": 556,
-  "valor_total": 83366.66,
-  "valor_total_descontado": 115.0,
-  "valor_total_pendente": 83251.66,
+  "gerado_em": "2026-08-27T13:17:21.248186",
+  "quantidade_total": 558,
+  "valor_total": 83591.66,
+  "valor_total_descontado": 0.0,
+  "valor_total_pendente": 83591.66,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -28,8 +28,8 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 91,
-      "valor": 14748.0
+      "quantidade": 93,
+      "valor": 14973.0
     },
     {
       "unidade": "Soledade",
@@ -60,7 +60,7 @@
     },
     {
       "doutor": "Ana Cristina Corso",
-      "quantidade": 5,
+      "quantidade": 6,
       "valor_descontado": 0.0
     },
     {
@@ -140,7 +140,7 @@
     },
     {
       "doutor": "Letícia Cauzzi",
-      "quantidade": 16,
+      "quantidade": 17,
       "valor_descontado": 0.0
     },
     {
@@ -196,7 +196,7 @@
     {
       "doutor": "Sara Trevisol",
       "quantidade": 2,
-      "valor_descontado": 115.0
+      "valor_descontado": 0.0
     },
     {
       "doutor": "Tamara Macanan",
