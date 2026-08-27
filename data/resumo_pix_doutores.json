@@ -1493,11 +1493,11 @@
   },
   "2026-08": {
     "competencia": "2026-08",
-    "gerado_em": "2026-08-27T21:29:43.971683",
-    "quantidade_total": 577,
-    "valor_total": 85704.66,
+    "gerado_em": "2026-08-27T21:40:45.758331",
+    "quantidade_total": 578,
+    "valor_total": 85831.66,
     "valor_total_descontado": 194.0,
-    "valor_total_pendente": 85510.66,
+    "valor_total_pendente": 85637.66,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1516,8 +1516,8 @@
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 64,
-        "valor": 8040.0
+        "quantidade": 65,
+        "valor": 8167.0
       },
       {
         "unidade": "FloresDaCunha",
@@ -1538,7 +1538,7 @@
     "por_doutor": [
       {
         "doutor": "Adriele da Silva",
-        "quantidade": 10,
+        "quantidade": 11,
         "valor_descontado": 0.0
       },
       {
