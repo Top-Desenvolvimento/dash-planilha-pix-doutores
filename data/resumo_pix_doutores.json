@@ -1493,11 +1493,11 @@
   },
   "2026-08": {
     "competencia": "2026-08",
-    "gerado_em": "2026-08-27T23:06:48.214858",
+    "gerado_em": "2026-08-28T07:02:10.419398",
     "quantidade_total": 578,
     "valor_total": 85831.66,
-    "valor_total_descontado": 27.0,
-    "valor_total_pendente": 85804.66,
+    "valor_total_descontado": 0.0,
+    "valor_total_pendente": 85831.66,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1614,7 +1614,7 @@
       {
         "doutor": "Joana Sganzerla",
         "quantidade": 2,
-        "valor_descontado": 27.0
+        "valor_descontado": 0.0
       },
       {
         "doutor": "Julia Nardi",
