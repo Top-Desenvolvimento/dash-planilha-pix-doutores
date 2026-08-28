@@ -1,10 +1,10 @@
 {
   "competencia": "2026-08",
-  "gerado_em": "2026-08-28T18:10:29.941104",
-  "quantidade_total": 588,
-  "valor_total": 87052.66,
+  "gerado_em": "2026-08-28T19:02:48.626651",
+  "quantidade_total": 589,
+  "valor_total": 87147.66,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 87052.66,
+  "valor_total_pendente": 87147.66,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -18,8 +18,8 @@
     },
     {
       "unidade": "Encantado",
-      "quantidade": 66,
-      "valor": 8899.0
+      "quantidade": 67,
+      "valor": 8994.0
     },
     {
       "unidade": "Farroupilha",
@@ -205,7 +205,7 @@
     },
     {
       "doutor": "Sara Trevisol",
-      "quantidade": 5,
+      "quantidade": 6,
       "valor_descontado": 0.0
     },
     {
