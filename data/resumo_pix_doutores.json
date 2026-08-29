@@ -1493,11 +1493,11 @@
   },
   "2026-08": {
     "competencia": "2026-08",
-    "gerado_em": "2026-08-29T14:42:33.175891",
-    "quantidade_total": 605,
-    "valor_total": 89482.66,
+    "gerado_em": "2026-08-29T18:02:35.115325",
+    "quantidade_total": 606,
+    "valor_total": 89611.66,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 89482.66,
+    "valor_total_pendente": 89611.66,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1506,8 +1506,8 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 150,
-        "valor": 27930.0
+        "quantidade": 151,
+        "valor": 28059.0
       },
       {
         "unidade": "Encantado",
@@ -1613,7 +1613,7 @@
       },
       {
         "doutor": "Joana Sganzerla",
-        "quantidade": 3,
+        "quantidade": 4,
         "valor_descontado": 0.0
       },
       {
