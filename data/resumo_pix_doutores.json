@@ -1493,26 +1493,26 @@
   },
   "2026-08": {
     "competencia": "2026-08",
-    "gerado_em": "2026-08-31T20:48:53.288276",
-    "quantidade_total": 638,
-    "valor_total": 93260.66,
+    "gerado_em": "2026-08-31T23:35:32.298714",
+    "quantidade_total": 648,
+    "valor_total": 94322.66,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 93260.66,
+    "valor_total_pendente": 94322.66,
     "por_unidade": [
       {
         "unidade": "Bento",
-        "quantidade": 30,
-        "valor": 3365.0
+        "quantidade": 31,
+        "valor": 3464.0
       },
       {
         "unidade": "Caxias",
-        "quantidade": 153,
-        "valor": 28374.0
+        "quantidade": 156,
+        "valor": 28655.0
       },
       {
         "unidade": "Encantado",
-        "quantidade": 81,
-        "valor": 10451.0
+        "quantidade": 82,
+        "valor": 10571.0
       },
       {
         "unidade": "Farroupilha",
@@ -1521,13 +1521,13 @@
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 95,
-        "valor": 15286.0
+        "quantidade": 96,
+        "valor": 15386.0
       },
       {
         "unidade": "Soledade",
-        "quantidade": 157,
-        "valor": 17590.0
+        "quantidade": 161,
+        "valor": 18052.0
       },
       {
         "unidade": "Veranopolis",
@@ -1558,7 +1558,7 @@
       },
       {
         "doutor": "Dionathan Pohlmann",
-        "quantidade": 16,
+        "quantidade": 19,
         "valor_descontado": 0.0
       },
       {
@@ -1608,7 +1608,7 @@
       },
       {
         "doutor": "Indiamara Rech",
-        "quantidade": 19,
+        "quantidade": 20,
         "valor_descontado": 0.0
       },
       {
@@ -1618,7 +1618,7 @@
       },
       {
         "doutor": "Julia Nardi",
-        "quantidade": 9,
+        "quantidade": 10,
         "valor_descontado": 0.0
       },
       {
@@ -1633,7 +1633,7 @@
       },
       {
         "doutor": "Leticia Canabarro",
-        "quantidade": 40,
+        "quantidade": 42,
         "valor_descontado": 0.0
       },
       {
@@ -1648,7 +1648,7 @@
       },
       {
         "doutor": "Luiz Henrique",
-        "quantidade": 27,
+        "quantidade": 28,
         "valor_descontado": 0.0
       },
       {
@@ -1728,7 +1728,7 @@
       },
       {
         "doutor": "Vitoria de Brito",
-        "quantidade": 7,
+        "quantidade": 9,
         "valor_descontado": 0.0
       }
     ]
