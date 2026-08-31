@@ -1,10 +1,10 @@
 {
   "competencia": "2026-08",
-  "gerado_em": "2026-08-31T14:38:03.984800",
-  "quantidade_total": 614,
-  "valor_total": 90475.66,
+  "gerado_em": "2026-08-31T19:49:30.227617",
+  "quantidade_total": 632,
+  "valor_total": 92396.66,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 90475.66,
+  "valor_total_pendente": 92396.66,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,13 +13,13 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 151,
-      "valor": 28059.0
+      "quantidade": 152,
+      "valor": 28164.0
     },
     {
       "unidade": "Encantado",
-      "quantidade": 71,
-      "valor": 9339.0
+      "quantidade": 78,
+      "valor": 10127.0
     },
     {
       "unidade": "Farroupilha",
@@ -33,8 +33,8 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 147,
-      "valor": 16562.0
+      "quantidade": 157,
+      "valor": 17590.0
     },
     {
       "unidade": "Veranopolis",
@@ -95,7 +95,7 @@
     },
     {
       "doutor": "Giovana Gasparini",
-      "quantidade": 18,
+      "quantidade": 19,
       "valor_descontado": 0.0
     },
     {
@@ -125,7 +125,7 @@
     },
     {
       "doutor": "Julia Nardi",
-      "quantidade": 2,
+      "quantidade": 7,
       "valor_descontado": 0.0
     },
     {
@@ -150,7 +150,7 @@
     },
     {
       "doutor": "Luisa Moraes Lucas",
-      "quantidade": 42,
+      "quantidade": 44,
       "valor_descontado": 0.0
     },
     {
@@ -160,7 +160,7 @@
     },
     {
       "doutor": "Marina Alievi",
-      "quantidade": 20,
+      "quantidade": 21,
       "valor_descontado": 0.0
     },
     {
@@ -200,7 +200,7 @@
     },
     {
       "doutor": "Sara Trevisol",
-      "quantidade": 10,
+      "quantidade": 12,
       "valor_descontado": 0.0
     },
     {
@@ -231,6 +231,11 @@
     {
       "doutor": "Valter Baldissera",
       "quantidade": 35,
+      "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Vitoria de Brito",
+      "quantidade": 7,
       "valor_descontado": 0.0
     }
   ]
