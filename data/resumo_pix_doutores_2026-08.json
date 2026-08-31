@@ -1,25 +1,25 @@
 {
   "competencia": "2026-08",
-  "gerado_em": "2026-08-31T19:49:30.227617",
-  "quantidade_total": 632,
-  "valor_total": 92396.66,
+  "gerado_em": "2026-08-31T20:48:53.288276",
+  "quantidade_total": 638,
+  "valor_total": 93260.66,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 92396.66,
+  "valor_total_pendente": 93260.66,
   "por_unidade": [
     {
       "unidade": "Bento",
-      "quantidade": 29,
-      "valor": 3245.0
+      "quantidade": 30,
+      "valor": 3365.0
     },
     {
       "unidade": "Caxias",
-      "quantidade": 152,
-      "valor": 28164.0
+      "quantidade": 153,
+      "valor": 28374.0
     },
     {
       "unidade": "Encantado",
-      "quantidade": 78,
-      "valor": 10127.0
+      "quantidade": 81,
+      "valor": 10451.0
     },
     {
       "unidade": "Farroupilha",
@@ -38,8 +38,8 @@
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 53,
-      "valor": 8997.66
+      "quantidade": 54,
+      "valor": 9207.66
     }
   ],
   "por_doutor": [
@@ -50,7 +50,7 @@
     },
     {
       "doutor": "Alexandre Favero",
-      "quantidade": 9,
+      "quantidade": 10,
       "valor_descontado": 0.0
     },
     {
@@ -65,7 +65,7 @@
     },
     {
       "doutor": "Dionathan Pohlmann",
-      "quantidade": 15,
+      "quantidade": 16,
       "valor_descontado": 0.0
     },
     {
@@ -125,7 +125,7 @@
     },
     {
       "doutor": "Julia Nardi",
-      "quantidade": 7,
+      "quantidade": 9,
       "valor_descontado": 0.0
     },
     {
@@ -155,7 +155,7 @@
     },
     {
       "doutor": "Luiz Henrique",
-      "quantidade": 26,
+      "quantidade": 27,
       "valor_descontado": 0.0
     },
     {
@@ -225,7 +225,7 @@
     },
     {
       "doutor": "TOP",
-      "quantidade": 2,
+      "quantidade": 3,
       "valor_descontado": 0.0
     },
     {
