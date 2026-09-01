@@ -3,7 +3,7 @@
   "titulo_dashboard": "PIX Doutores",
   "arquivo_origem": "pix_doutores.json",
   "ano_referencia": 2026,
-  "gerado_em": "01/09/2026 04:51",
+  "gerado_em": "01/09/2026 09:56",
   "meses_disponiveis": [
     "2026-01",
     "2026-02",
@@ -112049,6 +112049,29 @@
       "pendente": 100.0,
       "linha_original": "31/08/2026\tPix Doutores\nIndiamara Rech\tRecebido de Harthur de Quadros Camargo de Oliveira (19196) (Parcela 28/48) Pago por: Evandro Camargo de Oliveira\t100,00 C\t100,00 C\t1\t\t0\t63.068,45\t62.636,71",
       "coletado_em": "2026-08-31T23:35:32.121688"
+    },
+    {
+      "unidade": "Farroupilha",
+      "data": "01/09/2026",
+      "competencia": "2026-09",
+      "metodo_pagamento": "Pix Doutores",
+      "responsavel_fiscal_lido": "Everlize Cipriani",
+      "doutor_id": "14",
+      "doutor_final": "Everlize Cipriani",
+      "doutor_encontrado": true,
+      "paciente": "Recebido de Bruno Provensi De Jesus Pago por: O paciente",
+      "codigo_origem": "4752",
+      "parcela": "36/48",
+      "origem": "Recebido de Bruno Provensi De Jesus (4752) (Parcela 36/48) Pago por: O paciente",
+      "valor": 99.0,
+      "valor_com_descontos": 99.0,
+      "credito_antes": 2000.0,
+      "valor_descontado": 99.0,
+      "credito_depois": 1901.0,
+      "utilizado_depois": 99.0,
+      "pendente": 0.0,
+      "linha_original": "01/09/2026\tPix Doutores\nEverlize Cipriani\tRecebido de Bruno Provensi De Jesus (4752) (Parcela 36/48) Pago por: O paciente\t99,00 C\t99,00 C\t1\t\t\t487,00\t487,00",
+      "coletado_em": "2026-09-01T12:51:05.208834"
     }
   ],
   "erros": [
@@ -112152,13 +112175,13 @@
       "unidade": "Garibaldi",
       "competencia": "2026-09",
       "erro": "Menu Finanças não encontrado.",
-      "coletado_em": "2026-09-01T07:49:41.328471"
+      "coletado_em": "2026-09-01T12:54:04.537387"
     },
     {
       "unidade": "Ssdocai",
       "competencia": "2026-09",
       "erro": "Menu Finanças não encontrado.",
-      "coletado_em": "2026-09-01T07:50:42.734850"
+      "coletado_em": "2026-09-01T12:55:07.056521"
     }
   ],
   "registros_por_competencia": {
@@ -224211,7 +224234,31 @@
         "coletado_em": "2026-08-31T23:35:32.121688"
       }
     ],
-    "2026-09": []
+    "2026-09": [
+      {
+        "unidade": "Farroupilha",
+        "data": "01/09/2026",
+        "competencia": "2026-09",
+        "metodo_pagamento": "Pix Doutores",
+        "responsavel_fiscal_lido": "Everlize Cipriani",
+        "doutor_id": "14",
+        "doutor_final": "Everlize Cipriani",
+        "doutor_encontrado": true,
+        "paciente": "Recebido de Bruno Provensi De Jesus Pago por: O paciente",
+        "codigo_origem": "4752",
+        "parcela": "36/48",
+        "origem": "Recebido de Bruno Provensi De Jesus (4752) (Parcela 36/48) Pago por: O paciente",
+        "valor": 99.0,
+        "valor_com_descontos": 99.0,
+        "credito_antes": 2000.0,
+        "valor_descontado": 99.0,
+        "credito_depois": 1901.0,
+        "utilizado_depois": 99.0,
+        "pendente": 0.0,
+        "linha_original": "01/09/2026\tPix Doutores\nEverlize Cipriani\tRecebido de Bruno Provensi De Jesus (4752) (Parcela 36/48) Pago por: O paciente\t99,00 C\t99,00 C\t1\t\t\t487,00\t487,00",
+        "coletado_em": "2026-09-01T12:51:05.208834"
+      }
+    ]
   },
   "erros_por_competencia": {
     "2026-01": [
@@ -224331,13 +224378,13 @@
         "unidade": "Garibaldi",
         "competencia": "2026-09",
         "erro": "Menu Finanças não encontrado.",
-        "coletado_em": "2026-09-01T07:49:41.328471"
+        "coletado_em": "2026-09-01T12:54:04.537387"
       },
       {
         "unidade": "Ssdocai",
         "competencia": "2026-09",
         "erro": "Menu Finanças não encontrado.",
-        "coletado_em": "2026-09-01T07:50:42.734850"
+        "coletado_em": "2026-09-01T12:55:07.056521"
       }
     ]
   },
@@ -228543,9 +228590,9 @@
         "doutor_id": "14",
         "doutor": "Everlize Cipriani",
         "credito_inicial": 2000.0,
-        "utilizado": 0.0,
-        "credito_disponivel": 2000.0,
-        "credito_final": 2000.0,
+        "utilizado": 99.0,
+        "credito_disponivel": 1901.0,
+        "credito_final": 1901.0,
         "pix_key": "",
         "updated_by_email": null,
         "updated_by_nome": null
@@ -231288,12 +231335,28 @@
     },
     "2026-09": {
       "competencia": "2026-09",
-      "quantidade_total": 0,
-      "valor_total": 0,
-      "valor_total_descontado": 0,
-      "valor_total_pendente": 0,
-      "por_unidade": [],
-      "por_doutor": []
+      "quantidade_total": 1,
+      "valor_total": 99.0,
+      "valor_total_descontado": 99.0,
+      "valor_total_pendente": 0.0,
+      "por_unidade": [
+        {
+          "unidade": "Farroupilha",
+          "quantidade": 1,
+          "valor": 99.0,
+          "descontado": 99.0,
+          "pendente": 0.0
+        }
+      ],
+      "por_doutor": [
+        {
+          "doutor": "Everlize Cipriani",
+          "quantidade": 1,
+          "valor": 99.0,
+          "descontado": 99.0,
+          "pendente": 0.0
+        }
+      ]
     }
   }
 }

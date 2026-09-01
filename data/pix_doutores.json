@@ -112036,5 +112036,28 @@
     "pendente": 100.0,
     "linha_original": "31/08/2026\tPix Doutores\nIndiamara Rech\tRecebido de Harthur de Quadros Camargo de Oliveira (19196) (Parcela 28/48) Pago por: Evandro Camargo de Oliveira\t100,00 C\t100,00 C\t1\t\t0\t63.068,45\t62.636,71",
     "coletado_em": "2026-08-31T23:35:32.121688"
+  },
+  {
+    "unidade": "Farroupilha",
+    "data": "01/09/2026",
+    "competencia": "2026-09",
+    "metodo_pagamento": "Pix Doutores",
+    "responsavel_fiscal_lido": "Everlize Cipriani",
+    "doutor_id": "14",
+    "doutor_final": "Everlize Cipriani",
+    "doutor_encontrado": true,
+    "paciente": "Recebido de Bruno Provensi De Jesus Pago por: O paciente",
+    "codigo_origem": "4752",
+    "parcela": "36/48",
+    "origem": "Recebido de Bruno Provensi De Jesus (4752) (Parcela 36/48) Pago por: O paciente",
+    "valor": 99.0,
+    "valor_com_descontos": 99.0,
+    "credito_antes": 2000.0,
+    "valor_descontado": 99.0,
+    "credito_depois": 1901.0,
+    "utilizado_depois": 99.0,
+    "pendente": 0.0,
+    "linha_original": "01/09/2026\tPix Doutores\nEverlize Cipriani\tRecebido de Bruno Provensi De Jesus (4752) (Parcela 36/48) Pago por: O paciente\t99,00 C\t99,00 C\t1\t\t\t487,00\t487,00",
+    "coletado_em": "2026-09-01T12:51:05.208834"
   }
 ]

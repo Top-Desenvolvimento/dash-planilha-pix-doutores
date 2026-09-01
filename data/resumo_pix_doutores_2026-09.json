@@ -1,10 +1,22 @@
 {
   "competencia": "2026-09",
-  "gerado_em": "2026-09-01T07:51:41.108457",
-  "quantidade_total": 0,
-  "valor_total": 0,
-  "valor_total_descontado": 0,
-  "valor_total_pendente": 0,
-  "por_unidade": [],
-  "por_doutor": []
+  "gerado_em": "2026-09-01T12:56:06.248666",
+  "quantidade_total": 1,
+  "valor_total": 99.0,
+  "valor_total_descontado": 99.0,
+  "valor_total_pendente": 0.0,
+  "por_unidade": [
+    {
+      "unidade": "Farroupilha",
+      "quantidade": 1,
+      "valor": 99.0
+    }
+  ],
+  "por_doutor": [
+    {
+      "doutor": "Everlize Cipriani",
+      "quantidade": 1,
+      "valor_descontado": 99.0
+    }
+  ]
 }
