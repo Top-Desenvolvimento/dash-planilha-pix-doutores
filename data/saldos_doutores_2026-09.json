@@ -1,232 +1,370 @@
 [
   {
+    "doutor_id": "1",
     "doutor": "Adriele da Silva",
     "credito_inicial": 3000.0,
-    "credito_disponivel": 3000.0
+    "utilizado": 0.0,
+    "credito_disponivel": 3000.0,
+    "pix_key": ""
   },
   {
+    "doutor_id": "2",
     "doutor": "Alan Sechin",
     "credito_inicial": 0.0,
-    "credito_disponivel": 0.0
+    "utilizado": 0.0,
+    "credito_disponivel": 0.0,
+    "pix_key": ""
   },
   {
+    "doutor_id": "3",
     "doutor": "Alexandre Favero",
     "credito_inicial": 1500.0,
-    "credito_disponivel": 1500.0
+    "utilizado": 0.0,
+    "credito_disponivel": 1500.0,
+    "pix_key": ""
   },
   {
+    "doutor_id": "4",
     "doutor": "Ana Carolina Portes",
     "credito_inicial": 1200.0,
-    "credito_disponivel": 1200.0
+    "utilizado": 0.0,
+    "credito_disponivel": 1200.0,
+    "pix_key": ""
   },
   {
+    "doutor_id": "5",
     "doutor": "Ana Cristina Corso",
     "credito_inicial": 1500.0,
-    "credito_disponivel": 1500.0
+    "utilizado": 0.0,
+    "credito_disponivel": 1500.0,
+    "pix_key": ""
   },
   {
+    "doutor_id": "6",
     "doutor": "Andrielli Caxambu",
     "credito_inicial": 0.0,
-    "credito_disponivel": 0.0
+    "utilizado": 0.0,
+    "credito_disponivel": 0.0,
+    "pix_key": ""
   },
   {
+    "doutor_id": "7",
     "doutor": "Bianca Hofman",
     "credito_inicial": 0.0,
-    "credito_disponivel": 0.0
+    "utilizado": 0.0,
+    "credito_disponivel": 0.0,
+    "pix_key": ""
   },
   {
+    "doutor_id": "8",
     "doutor": "Bruno Castellan",
     "credito_inicial": 600.0,
-    "credito_disponivel": 600.0
+    "utilizado": 0.0,
+    "credito_disponivel": 600.0,
+    "pix_key": ""
   },
   {
+    "doutor_id": "9",
     "doutor": "Bruno Lorenzoni",
     "credito_inicial": 0.0,
-    "credito_disponivel": 0.0
+    "utilizado": 0.0,
+    "credito_disponivel": 0.0,
+    "pix_key": ""
   },
   {
-    "doutor": "CIR.Dionathan Paim Pohlmann",
-    "credito_inicial": 6000.0,
-    "credito_disponivel": 6000.0
-  },
-  {
+    "doutor_id": "10",
     "doutor": "Cristian Pressi",
     "credito_inicial": 8000.0,
-    "credito_disponivel": 8000.0
+    "utilizado": 0.0,
+    "credito_disponivel": 8000.0,
+    "pix_key": ""
   },
   {
+    "doutor_id": "12",
+    "doutor": "Dionathan Pohlmann",
+    "credito_inicial": 6000.0,
+    "utilizado": 0.0,
+    "credito_disponivel": 6000.0,
+    "pix_key": ""
+  },
+  {
+    "doutor_id": "38",
     "doutor": "Evalda Baldissera",
     "credito_inicial": 5604.82,
-    "credito_disponivel": 5604.82
+    "utilizado": 0.0,
+    "credito_disponivel": 5604.82,
+    "pix_key": ""
   },
   {
+    "doutor_id": "14",
     "doutor": "Everlize Cipriani",
     "credito_inicial": 2000.0,
-    "credito_disponivel": 2000.0
+    "utilizado": 0.0,
+    "credito_disponivel": 2000.0,
+    "pix_key": ""
   },
   {
+    "doutor_id": "15",
     "doutor": "Fernana Sozo",
     "credito_inicial": 1500.0,
-    "credito_disponivel": 1500.0
+    "utilizado": 0.0,
+    "credito_disponivel": 1500.0,
+    "pix_key": ""
   },
   {
+    "doutor_id": "16",
     "doutor": "Franciele Pedrotti",
     "credito_inicial": 10000.0,
-    "credito_disponivel": 10000.0
+    "utilizado": 0.0,
+    "credito_disponivel": 10000.0,
+    "pix_key": ""
   },
   {
+    "doutor_id": "18",
     "doutor": "Gabrielli Fabonato",
     "credito_inicial": 4000.0,
-    "credito_disponivel": 4000.0
+    "utilizado": 0.0,
+    "credito_disponivel": 4000.0,
+    "pix_key": ""
   },
   {
+    "doutor_id": "19",
     "doutor": "Giovana Gasparini",
     "credito_inicial": 1000.0,
-    "credito_disponivel": 1000.0
+    "utilizado": 0.0,
+    "credito_disponivel": 1000.0,
+    "pix_key": ""
   },
   {
+    "doutor_id": "20",
     "doutor": "Gislaine Santos",
     "credito_inicial": 1000.0,
-    "credito_disponivel": 1000.0
+    "utilizado": 0.0,
+    "credito_disponivel": 1000.0,
+    "pix_key": ""
   },
   {
+    "doutor_id": "21",
     "doutor": "Greici Matiello",
     "credito_inicial": 500.0,
-    "credito_disponivel": 500.0
+    "utilizado": 0.0,
+    "credito_disponivel": 500.0,
+    "pix_key": ""
   },
   {
+    "doutor_id": "43",
     "doutor": "Gustavo Lourenço Ongaratto",
     "credito_inicial": 3000.0,
-    "credito_disponivel": 3000.0
+    "utilizado": 0.0,
+    "credito_disponivel": 3000.0,
+    "pix_key": ""
   },
   {
+    "doutor_id": "22",
     "doutor": "Indiamara Rech",
     "credito_inicial": 0.0,
-    "credito_disponivel": 0.0
+    "utilizado": 0.0,
+    "credito_disponivel": 0.0,
+    "pix_key": ""
   },
   {
+    "doutor_id": "24",
     "doutor": "Joana Sganzerla",
     "credito_inicial": 500.0,
-    "credito_disponivel": 500.0
+    "utilizado": 0.0,
+    "credito_disponivel": 500.0,
+    "pix_key": ""
   },
   {
+    "doutor_id": "25",
     "doutor": "João Augusto Keler",
     "credito_inicial": 1000.0,
-    "credito_disponivel": 1000.0
+    "utilizado": 0.0,
+    "credito_disponivel": 1000.0,
+    "pix_key": ""
   },
   {
+    "doutor_id": "26",
     "doutor": "Juana Billig",
     "credito_inicial": 2500.0,
-    "credito_disponivel": 2500.0
+    "utilizado": 0.0,
+    "credito_disponivel": 2500.0,
+    "pix_key": ""
   },
   {
+    "doutor_id": "23",
     "doutor": "Jéssica Barreto",
     "credito_inicial": 1000.0,
-    "credito_disponivel": 1000.0
+    "utilizado": 0.0,
+    "credito_disponivel": 1000.0,
+    "pix_key": ""
   },
   {
+    "doutor_id": "13",
     "doutor": "Keyla Daniele",
     "credito_inicial": 500.0,
-    "credito_disponivel": 500.0
+    "utilizado": 0.0,
+    "credito_disponivel": 500.0,
+    "pix_key": ""
   },
   {
+    "doutor_id": "27",
     "doutor": "Laura Luiza Cimolin",
     "credito_inicial": 0.0,
-    "credito_disponivel": 0.0
+    "utilizado": 0.0,
+    "credito_disponivel": 0.0,
+    "pix_key": ""
   },
   {
+    "doutor_id": "28",
     "doutor": "Leandro Diniz",
     "credito_inicial": 400.0,
-    "credito_disponivel": 400.0
+    "utilizado": 0.0,
+    "credito_disponivel": 400.0,
+    "pix_key": ""
   },
   {
+    "doutor_id": "31",
     "doutor": "Leticia Canabarro (SOL)",
     "credito_inicial": 900.0,
-    "credito_disponivel": 900.0
+    "utilizado": 0.0,
+    "credito_disponivel": 900.0,
+    "pix_key": ""
   },
   {
+    "doutor_id": "29",
     "doutor": "Letícia Cauzzi",
     "credito_inicial": 4000.0,
-    "credito_disponivel": 4000.0
+    "utilizado": 0.0,
+    "credito_disponivel": 4000.0,
+    "pix_key": ""
   },
   {
+    "doutor_id": "30",
     "doutor": "Luiz Henrique",
     "credito_inicial": 2500.0,
-    "credito_disponivel": 2500.0
+    "utilizado": 0.0,
+    "credito_disponivel": 2500.0,
+    "pix_key": ""
   },
   {
+    "doutor_id": "32",
     "doutor": "Marcella Zancanaro",
     "credito_inicial": 1200.0,
-    "credito_disponivel": 1200.0
+    "utilizado": 0.0,
+    "credito_disponivel": 1200.0,
+    "pix_key": ""
   },
   {
+    "doutor_id": "33",
     "doutor": "Matheus Strapasson",
     "credito_inicial": 1000.0,
-    "credito_disponivel": 1000.0
+    "utilizado": 0.0,
+    "credito_disponivel": 1000.0,
+    "pix_key": ""
   },
   {
+    "doutor_id": "34",
     "doutor": "Morgana Zambiasi",
     "credito_inicial": 1500.0,
-    "credito_disponivel": 1500.0
+    "utilizado": 0.0,
+    "credito_disponivel": 1500.0,
+    "pix_key": ""
   },
   {
+    "doutor_id": "11",
     "doutor": "Murilo Debortoli",
     "credito_inicial": 500.0,
-    "credito_disponivel": 500.0
+    "utilizado": 0.0,
+    "credito_disponivel": 500.0,
+    "pix_key": ""
   },
   {
+    "doutor_id": "35",
     "doutor": "Naiane Pieta",
     "credito_inicial": 1000.0,
-    "credito_disponivel": 1000.0
+    "utilizado": 0.0,
+    "credito_disponivel": 1000.0,
+    "pix_key": ""
   },
   {
+    "doutor_id": "36",
     "doutor": "Nelson Vaccari",
     "credito_inicial": 4000.0,
-    "credito_disponivel": 4000.0
+    "utilizado": 0.0,
+    "credito_disponivel": 4000.0,
+    "pix_key": ""
   },
   {
+    "doutor_id": "37",
     "doutor": "Nicoli Weber",
     "credito_inicial": 1000.0,
-    "credito_disponivel": 1000.0
+    "utilizado": 0.0,
+    "credito_disponivel": 1000.0,
+    "pix_key": ""
   },
   {
+    "doutor_id": "17",
     "doutor": "Norberto Filipe",
     "credito_inicial": 500.0,
-    "credito_disponivel": 500.0
+    "utilizado": 0.0,
+    "credito_disponivel": 500.0,
+    "pix_key": ""
   },
   {
+    "doutor_id": "39",
     "doutor": "Rodrigo Silveira",
     "credito_inicial": 458.0,
-    "credito_disponivel": 458.0
+    "utilizado": 0.0,
+    "credito_disponivel": 458.0,
+    "pix_key": ""
   },
   {
+    "doutor_id": "40",
     "doutor": "Sara Trevisol",
     "credito_inicial": 1000.0,
-    "credito_disponivel": 1000.0
+    "utilizado": 0.0,
+    "credito_disponivel": 1000.0,
+    "pix_key": ""
   },
   {
+    "doutor_id": "41",
     "doutor": "Sofie Owens",
     "credito_inicial": 3500.0,
-    "credito_disponivel": 3500.0
+    "utilizado": 0.0,
+    "credito_disponivel": 3500.0,
+    "pix_key": ""
   },
   {
+    "doutor_id": "42",
     "doutor": "Tamara Macanan",
     "credito_inicial": 5000.0,
-    "credito_disponivel": 5000.0
+    "utilizado": 0.0,
+    "credito_disponivel": 5000.0,
+    "pix_key": ""
   },
   {
+    "doutor_id": "45",
     "doutor": "Thalia Tessaro",
     "credito_inicial": 2700.0,
-    "credito_disponivel": 2700.0
+    "utilizado": 0.0,
+    "credito_disponivel": 2700.0,
+    "pix_key": ""
   },
   {
+    "doutor_id": "46",
     "doutor": "Thalia Vezzosi",
     "credito_inicial": 2500.0,
-    "credito_disponivel": 2500.0
+    "utilizado": 0.0,
+    "credito_disponivel": 2500.0,
+    "pix_key": ""
   },
   {
+    "doutor_id": "44",
     "doutor": "Thiany Cristofoli",
     "credito_inicial": 4000.0,
-    "credito_disponivel": 4000.0
+    "utilizado": 0.0,
+    "credito_disponivel": 4000.0,
+    "pix_key": ""
   }
 ]
