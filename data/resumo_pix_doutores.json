@@ -1735,21 +1735,21 @@
   },
   "2026-09": {
     "competencia": "2026-09",
-    "gerado_em": "2026-09-01T20:02:18.054604",
-    "quantidade_total": 7,
-    "valor_total": 762.0,
-    "valor_total_descontado": 377.0,
-    "valor_total_pendente": 385.0,
+    "gerado_em": "2026-09-01T22:37:41.846279",
+    "quantidade_total": 14,
+    "valor_total": 1754.0,
+    "valor_total_descontado": 712.0,
+    "valor_total_pendente": 1042.0,
     "por_unidade": [
       {
         "unidade": "Farroupilha",
-        "quantidade": 3,
-        "valor": 377.0
+        "quantidade": 4,
+        "valor": 712.0
       },
       {
         "unidade": "Soledade",
-        "quantidade": 4,
-        "valor": 385.0
+        "quantidade": 10,
+        "valor": 1042.0
       }
     ],
     "por_doutor": [
@@ -1760,7 +1760,7 @@
       },
       {
         "doutor": "Luisa Moraes Lucas",
-        "quantidade": 3,
+        "quantidade": 9,
         "valor_descontado": 0.0
       },
       {
@@ -1770,8 +1770,8 @@
       },
       {
         "doutor": "Thalia Vezzosi",
-        "quantidade": 2,
-        "valor_descontado": 278.0
+        "quantidade": 3,
+        "valor_descontado": 613.0
       }
     ]
   }
