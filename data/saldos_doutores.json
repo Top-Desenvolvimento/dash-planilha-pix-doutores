@@ -3060,8 +3060,8 @@
       "doutor_id": "14",
       "doutor": "Everlize Cipriani",
       "credito_inicial": 2000.0,
-      "utilizado": 594.0,
-      "credito_disponivel": 1406.0,
+      "utilizado": 693.0,
+      "credito_disponivel": 1307.0,
       "pix_key": ""
     },
     {
@@ -3316,8 +3316,8 @@
       "doutor_id": "46",
       "doutor": "Thalia Vezzosi",
       "credito_inicial": 2500.0,
-      "utilizado": 2491.0,
-      "credito_disponivel": 9.0,
+      "utilizado": 2500.0,
+      "credito_disponivel": 0.0,
       "pix_key": ""
     },
     {
