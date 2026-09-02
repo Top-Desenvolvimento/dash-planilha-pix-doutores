@@ -1,15 +1,15 @@
 {
   "competencia": "2026-09",
-  "gerado_em": "2026-09-01T22:37:41.846279",
-  "quantidade_total": 14,
-  "valor_total": 1754.0,
-  "valor_total_descontado": 712.0,
+  "gerado_em": "2026-09-02T00:37:35.950462",
+  "quantidade_total": 15,
+  "valor_total": 1862.0,
+  "valor_total_descontado": 820.0,
   "valor_total_pendente": 1042.0,
   "por_unidade": [
     {
       "unidade": "Farroupilha",
-      "quantidade": 4,
-      "valor": 712.0
+      "quantidade": 5,
+      "valor": 820.0
     },
     {
       "unidade": "Soledade",
@@ -35,8 +35,8 @@
     },
     {
       "doutor": "Thalia Vezzosi",
-      "quantidade": 3,
-      "valor_descontado": 613.0
+      "quantidade": 4,
+      "valor_descontado": 721.0
     }
   ]
 }
