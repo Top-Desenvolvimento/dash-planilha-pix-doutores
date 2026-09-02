@@ -1,30 +1,30 @@
 {
   "competencia": "2026-08",
-  "gerado_em": "2026-08-31T23:35:32.298714",
-  "quantidade_total": 648,
-  "valor_total": 94322.66,
+  "gerado_em": "2026-09-02T19:54:40.075096",
+  "quantidade_total": 654,
+  "valor_total": 94915.66,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 94322.66,
+  "valor_total_pendente": 94915.66,
   "por_unidade": [
     {
       "unidade": "Bento",
-      "quantidade": 31,
-      "valor": 3464.0
+      "quantidade": 32,
+      "valor": 3534.0
     },
     {
       "unidade": "Caxias",
-      "quantidade": 156,
-      "valor": 28655.0
+      "quantidade": 157,
+      "valor": 28775.0
     },
     {
       "unidade": "Encantado",
-      "quantidade": 82,
-      "valor": 10571.0
+      "quantidade": 84,
+      "valor": 10786.0
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 68,
-      "valor": 8987.0
+      "quantidade": 69,
+      "valor": 9086.0
     },
     {
       "unidade": "FloresDaCunha",
@@ -34,12 +34,12 @@
     {
       "unidade": "Soledade",
       "quantidade": 161,
-      "valor": 18052.0
+      "valor": 18056.0
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 54,
-      "valor": 9207.66
+      "quantidade": 55,
+      "valor": 9292.66
     }
   ],
   "por_doutor": [
@@ -60,17 +60,12 @@
     },
     {
       "doutor": "Ana Cristina Corso",
-      "quantidade": 7,
+      "quantidade": 8,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Dionathan Pohlmann",
       "quantidade": 19,
-      "valor_descontado": 0.0
-    },
-    {
-      "doutor": "Dra.Ana Cristina Corso",
-      "quantidade": 1,
       "valor_descontado": 0.0
     },
     {
@@ -120,12 +115,12 @@
     },
     {
       "doutor": "Joana Sganzerla",
-      "quantidade": 4,
+      "quantidade": 5,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Julia Nardi",
-      "quantidade": 10,
+      "quantidade": 12,
       "valor_descontado": 0.0
     },
     {
@@ -155,7 +150,7 @@
     },
     {
       "doutor": "Luiz Henrique",
-      "quantidade": 28,
+      "quantidade": 29,
       "valor_descontado": 0.0
     },
     {
@@ -175,7 +170,7 @@
     },
     {
       "doutor": "Naiane Pieta",
-      "quantidade": 9,
+      "quantidade": 10,
       "valor_descontado": 0.0
     },
     {
@@ -185,7 +180,7 @@
     },
     {
       "doutor": "Nicoli Weber",
-      "quantidade": 7,
+      "quantidade": 6,
       "valor_descontado": 0.0
     },
     {
@@ -195,12 +190,12 @@
     },
     {
       "doutor": "Renata Protto",
-      "quantidade": 3,
+      "quantidade": 4,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Sara Trevisol",
-      "quantidade": 12,
+      "quantidade": 13,
       "valor_descontado": 0.0
     },
     {
@@ -225,12 +220,12 @@
     },
     {
       "doutor": "TOP",
-      "quantidade": 3,
+      "quantidade": 2,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Valter Baldissera",
-      "quantidade": 35,
+      "quantidade": 36,
       "valor_descontado": 0.0
     },
     {

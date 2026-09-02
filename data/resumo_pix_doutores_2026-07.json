@@ -1,10 +1,10 @@
 {
   "competencia": "2026-07",
-  "gerado_em": "2026-08-06T21:11:10.835958",
-  "quantidade_total": 594,
-  "valor_total": 84515.72,
+  "gerado_em": "2026-09-02T19:46:25.183400",
+  "quantidade_total": 593,
+  "valor_total": 84357.72,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 84515.72,
+  "valor_total_pendente": 84357.72,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -38,8 +38,8 @@
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 51,
-      "valor": 10751.22
+      "quantidade": 50,
+      "valor": 10593.22
     }
   ],
   "por_doutor": [
@@ -79,7 +79,7 @@
       "valor_descontado": 0.0
     },
     {
-      "doutor": "Fernana Sozo",
+      "doutor": "Fernanda Sozo",
       "quantidade": 12,
       "valor_descontado": 0.0
     },
@@ -170,7 +170,7 @@
     },
     {
       "doutor": "Naiane Pieta",
-      "quantidade": 5,
+      "quantidade": 4,
       "valor_descontado": 0.0
     },
     {
