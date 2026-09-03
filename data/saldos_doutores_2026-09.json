@@ -19,8 +19,8 @@
     "doutor_id": "3",
     "doutor": "Alexandre Favero",
     "credito_inicial": 1500.0,
-    "utilizado": 456.0,
-    "credito_disponivel": 1044.0,
+    "utilizado": 608.0,
+    "credito_disponivel": 892.0,
     "pix_key": ""
   },
   {
@@ -83,8 +83,8 @@
     "doutor_id": "12",
     "doutor": "Dionathan Pohlmann",
     "credito_inicial": 6000.0,
-    "utilizado": 630.0,
-    "credito_disponivel": 5370.0,
+    "utilizado": 840.0,
+    "credito_disponivel": 5160.0,
     "pix_key": ""
   },
   {
@@ -99,8 +99,8 @@
     "doutor_id": "14",
     "doutor": "Everlize Cipriani",
     "credito_inicial": 2000.0,
-    "utilizado": 1881.0,
-    "credito_disponivel": 119.0,
+    "utilizado": 1980.0,
+    "credito_disponivel": 20.0,
     "pix_key": ""
   },
   {
@@ -115,8 +115,8 @@
     "doutor_id": "16",
     "doutor": "Franciele Pedrotti",
     "credito_inicial": 10000.0,
-    "utilizado": 4128.0,
-    "credito_disponivel": 5872.0,
+    "utilizado": 4644.0,
+    "credito_disponivel": 5356.0,
     "pix_key": ""
   },
   {
@@ -339,8 +339,8 @@
     "doutor_id": "42",
     "doutor": "Tamara Macanan",
     "credito_inicial": 5000.0,
-    "utilizado": 0.0,
-    "credito_disponivel": 5000.0,
+    "utilizado": 309.0,
+    "credito_disponivel": 4691.0,
     "pix_key": ""
   },
   {

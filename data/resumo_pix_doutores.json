@@ -1730,10 +1730,10 @@
   },
   "2026-09": {
     "competencia": "2026-09",
-    "gerado_em": "2026-09-03T19:48:59.638535",
-    "quantidade_total": 28,
-    "valor_total": 3863.0,
-    "valor_total_descontado": 977.0,
+    "gerado_em": "2026-09-03T21:02:52.203680",
+    "quantidade_total": 30,
+    "valor_total": 4172.0,
+    "valor_total_descontado": 1286.0,
     "valor_total_pendente": 2886.0,
     "por_unidade": [
       {
@@ -1745,6 +1745,11 @@
         "unidade": "Farroupilha",
         "quantidade": 5,
         "valor": 820.0
+      },
+      {
+        "unidade": "FloresDaCunha",
+        "quantidade": 2,
+        "valor": 309.0
       },
       {
         "unidade": "Soledade",
@@ -1782,6 +1787,11 @@
         "doutor": "Luisa Moraes Lucas",
         "quantidade": 19,
         "valor_descontado": 0.0
+      },
+      {
+        "doutor": "Tamara Macanan",
+        "quantidade": 2,
+        "valor_descontado": 309.0
       },
       {
         "doutor": "Thalia Vezzosi",
