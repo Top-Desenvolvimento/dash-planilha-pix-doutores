@@ -1730,11 +1730,11 @@
   },
   "2026-09": {
     "competencia": "2026-09",
-    "gerado_em": "2026-09-03T21:02:52.203680",
-    "quantidade_total": 30,
-    "valor_total": 4172.0,
-    "valor_total_descontado": 1286.0,
-    "valor_total_pendente": 2886.0,
+    "gerado_em": "2026-09-03T23:18:04.546319",
+    "quantidade_total": 36,
+    "valor_total": 4856.0,
+    "valor_total_descontado": 1891.0,
+    "valor_total_pendente": 2965.0,
     "por_unidade": [
       {
         "unidade": "Caxias",
@@ -1758,15 +1758,15 @@
       },
       {
         "unidade": "Veranopolis",
-        "quantidade": 1,
-        "valor": 152.0
+        "quantidade": 7,
+        "valor": 836.0
       }
     ],
     "por_doutor": [
       {
         "doutor": "Alexandre Favero",
-        "quantidade": 1,
-        "valor_descontado": 152.0
+        "quantidade": 7,
+        "valor_descontado": 836.0
       },
       {
         "doutor": "Dionathan Pohlmann",
@@ -1776,7 +1776,7 @@
       {
         "doutor": "Everlize Cipriani",
         "quantidade": 1,
-        "valor_descontado": 99.0
+        "valor_descontado": 20.0
       },
       {
         "doutor": "Franciele Pedrotti",
