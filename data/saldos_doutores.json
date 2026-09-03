@@ -3060,8 +3060,8 @@
       "doutor_id": "14",
       "doutor": "Everlize Cipriani",
       "credito_inicial": 2000.0,
-      "utilizado": 1188.0,
-      "credito_disponivel": 812.0,
+      "utilizado": 1287.0,
+      "credito_disponivel": 713.0,
       "pix_key": ""
     },
     {
@@ -3076,8 +3076,8 @@
       "doutor_id": "16",
       "doutor": "Franciele Pedrotti",
       "credito_inicial": 10000.0,
-      "utilizado": 516.0,
-      "credito_disponivel": 9484.0,
+      "utilizado": 1032.0,
+      "credito_disponivel": 8968.0,
       "pix_key": ""
     },
     {
