@@ -1730,16 +1730,16 @@
   },
   "2026-09": {
     "competencia": "2026-09",
-    "gerado_em": "2026-09-04T14:32:01.750793",
-    "quantidade_total": 37,
-    "valor_total": 4955.0,
-    "valor_total_descontado": 1035.0,
-    "valor_total_pendente": 3920.0,
+    "gerado_em": "2026-09-04T17:13:53.618072",
+    "quantidade_total": 44,
+    "valor_total": 5644.0,
+    "valor_total_descontado": 1269.0,
+    "valor_total_pendente": 4375.0,
     "por_unidade": [
       {
         "unidade": "Caxias",
-        "quantidade": 3,
-        "valor": 726.0
+        "quantidade": 5,
+        "valor": 960.0
       },
       {
         "unidade": "Farroupilha",
@@ -1753,8 +1753,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 20,
-        "valor": 2264.0
+        "quantidade": 25,
+        "valor": 2719.0
       },
       {
         "unidade": "Veranopolis",
@@ -1780,8 +1780,13 @@
       },
       {
         "doutor": "Franciele Pedrotti",
-        "quantidade": 1,
-        "valor_descontado": 516.0
+        "quantidade": 2,
+        "valor_descontado": 631.0
+      },
+      {
+        "doutor": "Leticia Canabarro",
+        "quantidade": 5,
+        "valor_descontado": 0.0
       },
       {
         "doutor": "Luisa Moraes Lucas",
@@ -1792,6 +1797,11 @@
         "doutor": "Tamara Macanan",
         "quantidade": 2,
         "valor_descontado": 309.0
+      },
+      {
+        "doutor": "Thalia Tessaro",
+        "quantidade": 1,
+        "valor_descontado": 119.0
       },
       {
         "doutor": "Thalia Vezzosi",
