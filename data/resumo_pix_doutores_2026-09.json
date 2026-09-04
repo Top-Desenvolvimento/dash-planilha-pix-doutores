@@ -1,10 +1,10 @@
 {
   "competencia": "2026-09",
-  "gerado_em": "2026-09-04T01:09:10.379078",
+  "gerado_em": "2026-09-04T05:56:35.756768",
   "quantidade_total": 36,
   "valor_total": 4856.0,
-  "valor_total_descontado": 1091.0,
-  "valor_total_pendente": 3765.0,
+  "valor_total_descontado": 1035.0,
+  "valor_total_pendente": 3821.0,
   "por_unidade": [
     {
       "unidade": "Caxias",
@@ -36,7 +36,7 @@
     {
       "doutor": "Alexandre Favero",
       "quantidade": 7,
-      "valor_descontado": 56.0
+      "valor_descontado": 0.0
     },
     {
       "doutor": "Dionathan Pohlmann",
