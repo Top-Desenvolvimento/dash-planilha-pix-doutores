@@ -1,15 +1,15 @@
 {
   "competencia": "2026-09",
-  "gerado_em": "2026-09-04T17:13:53.618072",
-  "quantidade_total": 44,
-  "valor_total": 5644.0,
-  "valor_total_descontado": 1269.0,
-  "valor_total_pendente": 4375.0,
+  "gerado_em": "2026-09-04T17:51:01.523514",
+  "quantidade_total": 46,
+  "valor_total": 5884.0,
+  "valor_total_descontado": 1389.0,
+  "valor_total_pendente": 4495.0,
   "por_unidade": [
     {
       "unidade": "Caxias",
-      "quantidade": 5,
-      "valor": 960.0
+      "quantidade": 6,
+      "valor": 1080.0
     },
     {
       "unidade": "Farroupilha",
@@ -23,8 +23,8 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 25,
-      "valor": 2719.0
+      "quantidade": 26,
+      "valor": 2839.0
     },
     {
       "unidade": "Veranopolis",
@@ -50,12 +50,12 @@
     },
     {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 2,
-      "valor_descontado": 631.0
+      "quantidade": 3,
+      "valor_descontado": 751.0
     },
     {
       "doutor": "Leticia Canabarro",
-      "quantidade": 5,
+      "quantidade": 6,
       "valor_descontado": 0.0
     },
     {
