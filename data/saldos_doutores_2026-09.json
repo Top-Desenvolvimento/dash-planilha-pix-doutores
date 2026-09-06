@@ -83,8 +83,8 @@
     "doutor_id": "12",
     "doutor": "Dionathan Pohlmann",
     "credito_inicial": 6000.0,
-    "utilizado": 5460.0,
-    "credito_disponivel": 540.0,
+    "utilizado": 5670.0,
+    "credito_disponivel": 330.0,
     "pix_key": ""
   },
   {
@@ -347,8 +347,8 @@
     "doutor_id": "45",
     "doutor": "Thalia Tessaro",
     "credito_inicial": 2700.0,
-    "utilizado": 2023.0,
-    "credito_disponivel": 677.0,
+    "utilizado": 2142.0,
+    "credito_disponivel": 558.0,
     "pix_key": ""
   },
   {
