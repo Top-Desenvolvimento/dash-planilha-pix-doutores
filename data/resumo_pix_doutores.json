@@ -1730,11 +1730,11 @@
   },
   "2026-09": {
     "competencia": "2026-09",
-    "gerado_em": "2026-09-06T22:43:54.459994",
+    "gerado_em": "2026-09-07T00:28:20.369518",
     "quantidade_total": 100,
     "valor_total": 13264.22,
-    "valor_total_descontado": 119.0,
-    "valor_total_pendente": 13145.22,
+    "valor_total_descontado": 82.0,
+    "valor_total_pendente": 13182.22,
     "por_unidade": [
       {
         "unidade": "Caxias",
@@ -1806,7 +1806,7 @@
       {
         "doutor": "Thalia Tessaro",
         "quantidade": 1,
-        "valor_descontado": 119.0
+        "valor_descontado": 82.0
       },
       {
         "doutor": "Thalia Vezzosi",
