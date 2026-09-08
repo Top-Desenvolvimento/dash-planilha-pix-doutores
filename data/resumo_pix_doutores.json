@@ -1730,36 +1730,36 @@
   },
   "2026-09": {
     "competencia": "2026-09",
-    "gerado_em": "2026-09-08T17:59:49.226166",
-    "quantidade_total": 119,
-    "valor_total": 15723.22,
-    "valor_total_descontado": 0.0,
-    "valor_total_pendente": 15723.22,
+    "gerado_em": "2026-09-08T20:51:13.490692",
+    "quantidade_total": 126,
+    "valor_total": 16824.22,
+    "valor_total_descontado": 120.0,
+    "valor_total_pendente": 16704.22,
     "por_unidade": [
       {
         "unidade": "Caxias",
-        "quantidade": 10,
-        "valor": 1868.0
+        "quantidade": 11,
+        "valor": 1963.0
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 21,
-        "valor": 2876.0
+        "quantidade": 23,
+        "valor": 3161.0
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 21,
-        "valor": 2909.0
+        "quantidade": 22,
+        "valor": 3022.0
       },
       {
         "unidade": "Soledade",
-        "quantidade": 47,
-        "valor": 5074.0
+        "quantidade": 48,
+        "valor": 5194.0
       },
       {
         "unidade": "Veranopolis",
-        "quantidade": 20,
-        "valor": 2996.22
+        "quantidade": 22,
+        "valor": 3484.22
       }
     ],
     "por_doutor": [
@@ -1785,12 +1785,17 @@
       },
       {
         "doutor": "Franciele Pedrotti",
-        "quantidade": 9,
+        "quantidade": 10,
         "valor_descontado": 0.0
       },
       {
+        "doutor": "Giovana Gasparini",
+        "quantidade": 1,
+        "valor_descontado": 120.0
+      },
+      {
         "doutor": "Leticia Canabarro",
-        "quantidade": 25,
+        "quantidade": 26,
         "valor_descontado": 0.0
       },
       {
@@ -1810,12 +1815,17 @@
       },
       {
         "doutor": "Thalia Vezzosi",
-        "quantidade": 18,
+        "quantidade": 19,
+        "valor_descontado": 0.0
+      },
+      {
+        "doutor": "TOP",
+        "quantidade": 1,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Valter Baldissera",
-        "quantidade": 11,
+        "quantidade": 13,
         "valor_descontado": 0.0
       }
     ]
