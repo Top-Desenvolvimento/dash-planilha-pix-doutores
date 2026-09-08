@@ -1730,11 +1730,11 @@
   },
   "2026-09": {
     "competencia": "2026-09",
-    "gerado_em": "2026-09-08T14:03:14.274371",
-    "quantidade_total": 107,
-    "valor_total": 14290.22,
+    "gerado_em": "2026-09-08T17:59:49.226166",
+    "quantidade_total": 119,
+    "valor_total": 15723.22,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 14290.22,
+    "valor_total_pendente": 15723.22,
     "por_unidade": [
       {
         "unidade": "Caxias",
@@ -1743,18 +1743,18 @@
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 16,
-        "valor": 2177.0
+        "quantidade": 21,
+        "valor": 2876.0
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 16,
-        "valor": 2280.0
+        "quantidade": 21,
+        "valor": 2909.0
       },
       {
         "unidade": "Soledade",
-        "quantidade": 45,
-        "valor": 4969.0
+        "quantidade": 47,
+        "valor": 5074.0
       },
       {
         "unidade": "Veranopolis",
@@ -1790,7 +1790,7 @@
       },
       {
         "doutor": "Leticia Canabarro",
-        "quantidade": 23,
+        "quantidade": 25,
         "valor_descontado": 0.0
       },
       {
@@ -1800,7 +1800,7 @@
       },
       {
         "doutor": "Tamara Macanan",
-        "quantidade": 16,
+        "quantidade": 21,
         "valor_descontado": 0.0
       },
       {
@@ -1810,7 +1810,7 @@
       },
       {
         "doutor": "Thalia Vezzosi",
-        "quantidade": 13,
+        "quantidade": 18,
         "valor_descontado": 0.0
       },
       {
