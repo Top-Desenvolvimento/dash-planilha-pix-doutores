@@ -1,10 +1,10 @@
 {
   "competencia": "2026-09",
-  "gerado_em": "2026-09-09T21:22:47.425114",
-  "quantidade_total": 150,
-  "valor_total": 20157.1,
+  "gerado_em": "2026-09-09T23:29:17.895420",
+  "quantidade_total": 154,
+  "valor_total": 20638.1,
   "valor_total_descontado": 120.0,
-  "valor_total_pendente": 20037.1,
+  "valor_total_pendente": 20518.1,
   "por_unidade": [
     {
       "unidade": "Caxias",
@@ -23,13 +23,13 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 53,
-      "valor": 5735.0
+      "quantidade": 55,
+      "valor": 5933.0
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 31,
-      "valor": 4969.1
+      "quantidade": 33,
+      "valor": 5252.1
     }
   ],
   "por_doutor": [
@@ -55,7 +55,7 @@
     },
     {
       "doutor": "Felipe Lino",
-      "quantidade": 6,
+      "quantidade": 8,
       "valor_descontado": 0.0
     },
     {
@@ -95,7 +95,7 @@
     },
     {
       "doutor": "Valter Baldissera",
-      "quantidade": 21,
+      "quantidade": 23,
       "valor_descontado": 0.0
     }
   ]
