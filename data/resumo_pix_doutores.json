@@ -1730,11 +1730,11 @@
   },
   "2026-09": {
     "competencia": "2026-09",
-    "gerado_em": "2026-09-09T01:20:35.456877",
+    "gerado_em": "2026-09-09T06:12:43.835955",
     "quantidade_total": 135,
     "valor_total": 18033.22,
-    "valor_total_descontado": 206.0,
-    "valor_total_pendente": 17827.22,
+    "valor_total_descontado": 0.0,
+    "valor_total_pendente": 18033.22,
     "por_unidade": [
       {
         "unidade": "Caxias",
@@ -1791,7 +1791,7 @@
       {
         "doutor": "Giovana Gasparini",
         "quantidade": 5,
-        "valor_descontado": 206.0
+        "valor_descontado": 0.0
       },
       {
         "doutor": "Leticia Canabarro",
