@@ -1730,11 +1730,11 @@
   },
   "2026-09": {
     "competencia": "2026-09",
-    "gerado_em": "2026-09-09T11:25:34.322974",
-    "quantidade_total": 135,
-    "valor_total": 18033.22,
+    "gerado_em": "2026-09-09T15:19:22.409742",
+    "quantidade_total": 137,
+    "valor_total": 18231.22,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 18033.22,
+    "valor_total_pendente": 18231.22,
     "por_unidade": [
       {
         "unidade": "Caxias",
@@ -1753,8 +1753,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 49,
-        "valor": 5314.0
+        "quantidade": 51,
+        "valor": 5512.0
       },
       {
         "unidade": "Veranopolis",
@@ -1780,7 +1780,7 @@
       },
       {
         "doutor": "Felipe Lino",
-        "quantidade": 2,
+        "quantidade": 4,
         "valor_descontado": 0.0
       },
       {
@@ -1805,7 +1805,7 @@
       },
       {
         "doutor": "Tamara Macanan",
-        "quantidade": 24,
+        "quantidade": 25,
         "valor_descontado": 0.0
       },
       {
@@ -1816,11 +1816,6 @@
       {
         "doutor": "Thalia Vezzosi",
         "quantidade": 19,
-        "valor_descontado": 0.0
-      },
-      {
-        "doutor": "TOP",
-        "quantidade": 1,
         "valor_descontado": 0.0
       },
       {
