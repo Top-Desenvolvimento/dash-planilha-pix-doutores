@@ -1,20 +1,20 @@
 {
   "competencia": "2026-09",
-  "gerado_em": "2026-09-10T11:24:52.251649",
-  "quantidade_total": 154,
-  "valor_total": 20638.1,
+  "gerado_em": "2026-09-10T15:11:18.403583",
+  "quantidade_total": 160,
+  "valor_total": 21410.1,
   "valor_total_descontado": 120.0,
-  "valor_total_pendente": 20518.1,
+  "valor_total_pendente": 21290.1,
   "por_unidade": [
     {
       "unidade": "Caxias",
-      "quantidade": 12,
-      "valor": 2078.0
+      "quantidade": 16,
+      "valor": 2568.0
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 27,
-      "valor": 3715.0
+      "quantidade": 29,
+      "valor": 3997.0
     },
     {
       "unidade": "FloresDaCunha",
@@ -60,12 +60,12 @@
     },
     {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 11,
+      "quantidade": 15,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Giovana Gasparini",
-      "quantidade": 5,
+      "quantidade": 7,
       "valor_descontado": 0.0
     },
     {
