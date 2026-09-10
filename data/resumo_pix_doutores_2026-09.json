@@ -1,25 +1,25 @@
 {
   "competencia": "2026-09",
-  "gerado_em": "2026-09-10T18:31:59.166484",
-  "quantidade_total": 162,
-  "valor_total": 21570.1,
-  "valor_total_descontado": 120.0,
-  "valor_total_pendente": 21450.1,
+  "gerado_em": "2026-09-10T21:14:02.965677",
+  "quantidade_total": 177,
+  "valor_total": 23395.1,
+  "valor_total_descontado": 0.0,
+  "valor_total_pendente": 23395.1,
   "por_unidade": [
     {
       "unidade": "Caxias",
-      "quantidade": 17,
-      "valor": 2573.0
+      "quantidade": 20,
+      "valor": 2933.0
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 30,
-      "valor": 4152.0
+      "quantidade": 32,
+      "valor": 4356.0
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 27,
-      "valor": 3660.0
+      "quantidade": 33,
+      "valor": 4393.0
     },
     {
       "unidade": "Soledade",
@@ -28,8 +28,8 @@
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 33,
-      "valor": 5252.1
+      "quantidade": 37,
+      "valor": 5780.1
     }
   ],
   "por_doutor": [
@@ -44,13 +44,8 @@
       "valor_descontado": 0.0
     },
     {
-      "doutor": "Evalda Baldissera",
-      "quantidade": 1,
-      "valor_descontado": 120.0
-    },
-    {
       "doutor": "Everlize Cipriani",
-      "quantidade": 1,
+      "quantidade": 2,
       "valor_descontado": 0.0
     },
     {
@@ -60,7 +55,7 @@
     },
     {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 16,
+      "quantidade": 19,
       "valor_descontado": 0.0
     },
     {
@@ -80,7 +75,7 @@
     },
     {
       "doutor": "Tamara Macanan",
-      "quantidade": 27,
+      "quantidade": 33,
       "valor_descontado": 0.0
     },
     {
@@ -94,8 +89,13 @@
       "valor_descontado": 0.0
     },
     {
+      "doutor": "TOP",
+      "quantidade": 1,
+      "valor_descontado": 0.0
+    },
+    {
       "doutor": "Valter Baldissera",
-      "quantidade": 23,
+      "quantidade": 28,
       "valor_descontado": 0.0
     }
   ]
