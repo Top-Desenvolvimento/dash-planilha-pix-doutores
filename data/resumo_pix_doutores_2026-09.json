@@ -1,6 +1,6 @@
 {
   "competencia": "2026-09",
-  "gerado_em": "2026-09-10T23:16:55.659061",
+  "gerado_em": "2026-09-11T01:15:07.108096",
   "quantidade_total": 186,
   "valor_total": 24362.1,
   "valor_total_descontado": 0.0,
@@ -90,12 +90,12 @@
     },
     {
       "doutor": "TOP",
-      "quantidade": 2,
+      "quantidade": 1,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Valter Baldissera",
-      "quantidade": 32,
+      "quantidade": 33,
       "valor_descontado": 0.0
     }
   ]
