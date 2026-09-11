@@ -3,7 +3,7 @@
   "titulo_dashboard": "PIX Doutores",
   "arquivo_origem": "pix_doutores.json",
   "ano_referencia": 2026,
-  "gerado_em": "11/09/2026 12:11",
+  "gerado_em": "11/09/2026 15:35",
   "meses_disponiveis": [
     "2026-01",
     "2026-02",
@@ -112186,7 +112186,7 @@
       "utilizado_depois": 10000.0,
       "pendente": 516.0,
       "linha_original": "02/09/2026\tPix Doutores\nFranciele Pedrotti\tRecebido de Ezequiel Rediss (23064) (Parcela 1/1) Pago por: O paciente\t516,00 C\t516,00 C\t1\t\t\t2.389,00\t2.365,81",
-      "coletado_em": "2026-09-11T15:05:09.653953"
+      "coletado_em": "2026-09-11T18:29:36.784036"
     },
     {
       "unidade": "Caxias",
@@ -112209,7 +112209,7 @@
       "utilizado_depois": 6000.0,
       "pendente": 105.0,
       "linha_original": "03/09/2026\tPix Doutores\nDionathan Pohlmann\tRecebido de Karen Sakszewski Franco (45365) (Parcela 32/48) Pago por: O paciente\t105,00 C\t105,00 C\t1\t\t\t2.494,00\t2.470,81",
-      "coletado_em": "2026-09-11T15:05:09.670812"
+      "coletado_em": "2026-09-11T18:29:36.802387"
     },
     {
       "unidade": "Caxias",
@@ -112232,7 +112232,7 @@
       "utilizado_depois": 6000.0,
       "pendente": 105.0,
       "linha_original": "03/09/2026\tPix Doutores\nDionathan Pohlmann\tRecebido de Rebeca Franco dos Santos (46715) (Parcela 23/48) Pago por: Karen Sakszewski Franco\t105,00 C\t105,00 C\t1\t\t\t2.599,00\t2.575,81",
-      "coletado_em": "2026-09-11T15:05:09.688328"
+      "coletado_em": "2026-09-11T18:29:36.820642"
     },
     {
       "unidade": "Caxias",
@@ -112255,7 +112255,7 @@
       "utilizado_depois": 10000.0,
       "pendente": 115.0,
       "linha_original": "04/09/2026\tPix Doutores\nFranciele Pedrotti\tRecebido de Gabriele Fagundes Pinto (50510) (Parcela 3/48) Pago por: O paciente\t115,00 C\t115,00 C\t1\t\t\t2.485,85\t2.462,66",
-      "coletado_em": "2026-09-11T15:05:09.808458"
+      "coletado_em": "2026-09-11T18:29:36.943592"
     },
     {
       "unidade": "Caxias",
@@ -112278,7 +112278,7 @@
       "utilizado_depois": 2700.0,
       "pendente": 119.0,
       "linha_original": "04/09/2026\tPix Doutores\nThalia Tessaro\tRecebido de Huelinton Xavier Teixeira (40484) (Parcela 5/48) Pago por: O paciente\t119,00 C\t119,00 C\t1\t\t\t2.604,85\t2.581,66",
-      "coletado_em": "2026-09-11T15:05:09.834060"
+      "coletado_em": "2026-09-11T18:29:36.962019"
     },
     {
       "unidade": "Caxias",
@@ -112301,7 +112301,7 @@
       "utilizado_depois": 10000.0,
       "pendente": 120.0,
       "linha_original": "04/09/2026\tPix Doutores\nFranciele Pedrotti\tRecebido de Maria Alice Gonçalves Pires Leite (50465) (Parcela 1/48) Pago por: Neidivan da Silva Leite\t120,00 C\t120,00 C\t1\t\t\t2.724,85\t2.701,66",
-      "coletado_em": "2026-09-11T15:05:09.850168"
+      "coletado_em": "2026-09-11T18:29:36.988183"
     },
     {
       "unidade": "Caxias",
@@ -112324,7 +112324,7 @@
       "utilizado_depois": 10000.0,
       "pendente": 321.0,
       "linha_original": "04/09/2026\tPix Doutores\nFranciele Pedrotti\tRecebido de Lucilene da Silva Borges (48675) (Parcela 1/1) Pago por: O paciente\t321,00 C\t321,00 C\t1\t\t\t3.812,25\t3.767,84",
-      "coletado_em": "2026-09-11T15:05:09.931916"
+      "coletado_em": "2026-09-11T18:29:37.075053"
     },
     {
       "unidade": "Caxias",
@@ -112347,7 +112347,7 @@
       "utilizado_depois": 10000.0,
       "pendente": 210.0,
       "linha_original": "05/09/2026\tPix Doutores\nFranciele Pedrotti\tRecebido de Andriel da Costa Serpa (49913) (Parcela 1/48) Pago por: O paciente\t210,00 C\t210,00 C\t1\t\t\t4.670,25\t4.618,41",
-      "coletado_em": "2026-09-11T15:05:10.014386"
+      "coletado_em": "2026-09-11T18:29:37.159837"
     },
     {
       "unidade": "Caxias",
@@ -112370,7 +112370,7 @@
       "utilizado_depois": 10000.0,
       "pendente": 137.0,
       "linha_original": "05/09/2026\tPix Doutores\nFranciele Pedrotti\tRecebido de Aidanny Sair Urriola (48507) (Parcela 20/48) Pago por: O paciente\t137,00 C\t137,00 C\t1\t\t\t5.254,75\t5.192,99",
-      "coletado_em": "2026-09-11T15:05:10.095642"
+      "coletado_em": "2026-09-11T18:29:37.249907"
     },
     {
       "unidade": "Caxias",
@@ -112393,7 +112393,7 @@
       "utilizado_depois": 10000.0,
       "pendente": 120.0,
       "linha_original": "05/09/2026\tPix Doutores\nFranciele Pedrotti\tRecebido de Brunela Borf (47301) (Parcela 7/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t5.584,75\t5.518,39",
-      "coletado_em": "2026-09-11T15:05:10.128950"
+      "coletado_em": "2026-09-11T18:29:37.283515"
     },
     {
       "unidade": "Caxias",
@@ -112416,7 +112416,7 @@
       "utilizado_depois": 10000.0,
       "pendente": 95.0,
       "linha_original": "08/09/2026\tPix Doutores\nFranciele Pedrotti\tRecebido de Cristiane Rech Boeira (48048) (Parcela 21/48) Pago por: O paciente\t95,00 C\t95,00 C\t1\t\t\t6.479,80\t6.376,41",
-      "coletado_em": "2026-09-11T15:05:10.305636"
+      "coletado_em": "2026-09-11T18:29:37.465413"
     },
     {
       "unidade": "Caxias",
@@ -112439,7 +112439,7 @@
       "utilizado_depois": 10000.0,
       "pendente": 115.0,
       "linha_original": "08/09/2026\tPix Doutores\nFranciele Pedrotti\tRecebido de Crislaine Da Silva (48222) (Parcela 12/48) Pago por: O paciente\t115,00 C\t115,00 C\t1\t\t\t7.460,80\t7.355,56",
-      "coletado_em": "2026-09-11T15:05:10.369288"
+      "coletado_em": "2026-09-11T18:29:37.531993"
     },
     {
       "unidade": "Caxias",
@@ -112462,7 +112462,7 @@
       "utilizado_depois": 10000.0,
       "pendente": 120.0,
       "linha_original": "10/09/2026\tPix Doutores\nFranciele Pedrotti\tRecebido de Inara Naylanny Nunes Barbosa (49618) (Parcela 11/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t1.692,81\t1.579,82",
-      "coletado_em": "2026-09-11T15:05:10.484306"
+      "coletado_em": "2026-09-11T18:29:37.652313"
     },
     {
       "unidade": "Caxias",
@@ -112485,7 +112485,7 @@
       "utilizado_depois": 10000.0,
       "pendente": 120.0,
       "linha_original": "10/09/2026\tPix Doutores\nFranciele Pedrotti\tRecebido de Vilma Maria Monteiro Prudêncio (49673) (Parcela 11/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t1.560,78\t1.440,35",
-      "coletado_em": "2026-09-11T15:05:10.649178"
+      "coletado_em": "2026-09-11T18:29:37.826301"
     },
     {
       "unidade": "Caxias",
@@ -112508,7 +112508,7 @@
       "utilizado_depois": 10000.0,
       "pendente": 130.0,
       "linha_original": "10/09/2026\tPix Doutores\nFranciele Pedrotti\tRecebido de Alberth Jose Alvarez Hernandez (47513) (Parcela 26/48) Pago por: O paciente\t130,00 C\t130,00 C\t1\t\t\t248,09\t127,66",
-      "coletado_em": "2026-09-11T15:05:10.681333"
+      "coletado_em": "2026-09-11T18:29:37.859053"
     },
     {
       "unidade": "Caxias",
@@ -112531,7 +112531,7 @@
       "utilizado_depois": 10000.0,
       "pendente": 120.0,
       "linha_original": "10/09/2026\tPix Doutores\nFranciele Pedrotti\tRecebido de Cristopher Adrian Campos Aguirre (49575) (Parcela 12/48) Pago por: Alberth Jose Alvarez Hernandez\t120,00 C\t120,00 C\t1\t\t\t368,09\t247,66",
-      "coletado_em": "2026-09-11T15:05:10.698131"
+      "coletado_em": "2026-09-11T18:29:37.876278"
     },
     {
       "unidade": "Caxias",
@@ -112554,7 +112554,7 @@
       "utilizado_depois": 10000.0,
       "pendente": 5.0,
       "linha_original": "10/09/2026\tPix Doutores\nFranciele Pedrotti\tRecebido de Kaio Diones Rodrigues (43398) (Parcela 1/1) Pago por: Jessica Adriane Barbosa Rodrigues\t5,00 C\t5,00 C\t1\t\t\t-31.227,42\t-31.454,67",
-      "coletado_em": "2026-09-11T15:05:11.305557"
+      "coletado_em": "2026-09-11T18:29:38.500184"
     },
     {
       "unidade": "Caxias",
@@ -112577,7 +112577,7 @@
       "utilizado_depois": 10000.0,
       "pendente": 85.0,
       "linha_original": "10/09/2026\tPix Doutores\nFranciele Pedrotti\tRecebido de Nicolas Elesbão Rosa (33789) (Parcela 18/48) Pago por: Luciano Amaral Rosa\t85,00 C\t85,00 C\t1\t\t\t-34.915,65\t-35.159,91",
-      "coletado_em": "2026-09-11T15:05:11.496923"
+      "coletado_em": "2026-09-11T18:29:38.696422"
     },
     {
       "unidade": "Caxias",
@@ -112600,7 +112600,7 @@
       "utilizado_depois": 10000.0,
       "pendente": 155.0,
       "linha_original": "10/09/2026\tPix Doutores\nFranciele Pedrotti\tRecebido de Isaac de Lima da Silva (49436) (Parcela 12/48) Pago por: O paciente\t155,00 C\t155,00 C\t1\t\t\t-45.458,61\t-45.705,57",
-      "coletado_em": "2026-09-11T15:05:11.705653"
+      "coletado_em": "2026-09-11T18:29:38.909441"
     },
     {
       "unidade": "Caxias",
@@ -112623,7 +112623,7 @@
       "utilizado_depois": 10000.0,
       "pendente": 120.0,
       "linha_original": "10/09/2026\tPix Doutores\nFranciele Pedrotti\tRecebido de Nariely Backes Lara (48990) (Parcela 17/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t-45.223,61\t-45.470,57",
-      "coletado_em": "2026-09-11T15:05:11.738026"
+      "coletado_em": "2026-09-11T18:29:38.941861"
     },
     {
       "unidade": "Caxias",
@@ -112646,7 +112646,7 @@
       "utilizado_depois": 10000.0,
       "pendente": 85.0,
       "linha_original": "10/09/2026\tPix Doutores\nFranciele Pedrotti\tRecebido de Morgana de Jesus Rodrigues (38577) (Parcela 18/48) Pago por: O paciente\t85,00 C\t85,00 C\t1\t\t\t-44.260,61\t-44.521,92",
-      "coletado_em": "2026-09-11T15:05:11.832549"
+      "coletado_em": "2026-09-11T18:29:39.039801"
     },
     {
       "unidade": "Caxias",
@@ -112669,7 +112669,76 @@
       "utilizado_depois": 10000.0,
       "pendente": 120.0,
       "linha_original": "10/09/2026\tPix Doutores\nFranciele Pedrotti\tRecebido de Cristian Daro Gomaes (49102) (Parcela 15/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t-44.140,61\t-44.401,92",
-      "coletado_em": "2026-09-11T15:05:11.848047"
+      "coletado_em": "2026-09-11T18:29:39.056487"
+    },
+    {
+      "unidade": "Caxias",
+      "data": "11/09/2026",
+      "competencia": "2026-09",
+      "metodo_pagamento": "Pix Doutores",
+      "responsavel_fiscal_lido": "Franciele Pedrotti",
+      "doutor_id": "16",
+      "doutor_final": "Franciele Pedrotti",
+      "doutor_encontrado": true,
+      "paciente": "Recebido de Ketlin Gabriela Souza de Jesus Godoy Pago por: Kely de Jesus Monteiro",
+      "codigo_origem": "45315",
+      "parcela": "38/48",
+      "origem": "Recebido de Ketlin Gabriela Souza de Jesus Godoy (45315) (Parcela 38/48) Pago por: Kely de Jesus Monteiro",
+      "valor": 99.0,
+      "valor_com_descontos": 99.0,
+      "credito_antes": 0.0,
+      "valor_descontado": 0.0,
+      "credito_depois": 0.0,
+      "utilizado_depois": 10000.0,
+      "pendente": 99.0,
+      "linha_original": "11/09/2026\tPix Doutores\nFranciele Pedrotti\tRecebido de Ketlin Gabriela Souza de Jesus Godoy (45315) (Parcela 38/48) Pago por: Kely de Jesus Monteiro\t99,00 C\t99,00 C\t1\t\t\t-42.633,61\t-42.918,34",
+      "coletado_em": "2026-09-11T18:29:39.145406"
+    },
+    {
+      "unidade": "Caxias",
+      "data": "11/09/2026",
+      "competencia": "2026-09",
+      "metodo_pagamento": "Pix Doutores",
+      "responsavel_fiscal_lido": "Franciele Pedrotti",
+      "doutor_id": "16",
+      "doutor_final": "Franciele Pedrotti",
+      "doutor_encontrado": true,
+      "paciente": "Recebido de Sophia Mello de Oliveira Pago por: Lisiane Pereira de Mello",
+      "codigo_origem": "43332",
+      "parcela": "18/48",
+      "origem": "Recebido de Sophia Mello de Oliveira (43332) (Parcela 18/48) Pago por: Lisiane Pereira de Mello",
+      "valor": 85.0,
+      "valor_com_descontos": 85.0,
+      "credito_antes": 0.0,
+      "valor_descontado": 0.0,
+      "credito_depois": 0.0,
+      "utilizado_depois": 10000.0,
+      "pendente": 85.0,
+      "linha_original": "11/09/2026\tPix Doutores\nFranciele Pedrotti\tRecebido de Sophia Mello de Oliveira (43332) (Parcela 18/48) Pago por: Lisiane Pereira de Mello\t85,00 C\t85,00 C\t1\t\t\t-42.463,61\t-42.748,34",
+      "coletado_em": "2026-09-11T18:29:39.178666"
+    },
+    {
+      "unidade": "Caxias",
+      "data": "11/09/2026",
+      "competencia": "2026-09",
+      "metodo_pagamento": "Pix Doutores",
+      "responsavel_fiscal_lido": "Franciele Pedrotti",
+      "doutor_id": "16",
+      "doutor_final": "Franciele Pedrotti",
+      "doutor_encontrado": true,
+      "paciente": "Recebido de Renan Cardoso Damin Pago por: O paciente",
+      "codigo_origem": "42370",
+      "parcela": "9/48",
+      "origem": "Recebido de Renan Cardoso Damin (42370) (Parcela 9/48) Pago por: O paciente",
+      "valor": 95.0,
+      "valor_com_descontos": 95.0,
+      "credito_antes": 0.0,
+      "valor_descontado": 0.0,
+      "credito_depois": 0.0,
+      "utilizado_depois": 10000.0,
+      "pendente": 95.0,
+      "linha_original": "11/09/2026\tPix Doutores\nFranciele Pedrotti\tRecebido de Renan Cardoso Damin (42370) (Parcela 9/48) Pago por: O paciente\t95,00 C\t95,00 C\t1\t\t\t-41.649,61\t-41.942,54",
+      "coletado_em": "2026-09-11T18:29:39.305928"
     },
     {
       "unidade": "Farroupilha",
@@ -112692,7 +112761,7 @@
       "utilizado_depois": 2000.0,
       "pendente": 99.0,
       "linha_original": "01/09/2026\tPix Doutores\nEverlize Cipriani\tRecebido de Bruno Provensi De Jesus (4752) (Parcela 36/48) Pago por: O paciente\t99,00 C\t99,00 C\t1\t\t\t487,00\t487,00",
-      "coletado_em": "2026-09-11T15:06:11.129479"
+      "coletado_em": "2026-09-11T18:30:36.895902"
     },
     {
       "unidade": "Farroupilha",
@@ -112715,7 +112784,7 @@
       "utilizado_depois": 2500.0,
       "pendente": 158.0,
       "linha_original": "01/09/2026\tPix Doutores\nThalia Vezzosi\tRecebido de Anny Stefania Rodriguez Palmares (152696) (Parcela 11/48) Pago por: O paciente\t158,00 C\t158,00 C\t1\t\t\t645,00\t645,00",
-      "coletado_em": "2026-09-11T15:06:11.146089"
+      "coletado_em": "2026-09-11T18:30:36.912579"
     },
     {
       "unidade": "Farroupilha",
@@ -112738,7 +112807,7 @@
       "utilizado_depois": 2500.0,
       "pendente": 120.0,
       "linha_original": "01/09/2026\tPix Doutores\nThalia Vezzosi\tRecebido de Emilly Padilha Dutra (152873) (Parcela 5/48) Pago por: Marta padilha\t120,00 C\t120,00 C\t1\t\t\t1.503,00\t1.503,00",
-      "coletado_em": "2026-09-11T15:06:11.244769"
+      "coletado_em": "2026-09-11T18:30:37.011161"
     },
     {
       "unidade": "Farroupilha",
@@ -112761,7 +112830,7 @@
       "utilizado_depois": 2500.0,
       "pendente": 335.0,
       "linha_original": "01/09/2026\tPix Doutores\nThalia Vezzosi\tRecebido de Engerbert Argenis Salazar Blanca (153062) (Parcela 1/1) Pago por: O paciente\t335,00 C\t335,00 C\t1\t\t\t2.204,00\t2.200,48",
-      "coletado_em": "2026-09-11T15:06:11.309428"
+      "coletado_em": "2026-09-11T18:30:37.075494"
     },
     {
       "unidade": "Farroupilha",
@@ -112784,7 +112853,7 @@
       "utilizado_depois": 2500.0,
       "pendente": 108.0,
       "linha_original": "01/09/2026\tPix Doutores\nThalia Vezzosi\tRecebido de Klaiton De Maman Da Costa (146765) (Parcela 18/48) Pago por: O paciente\t108,00 C\t108,00 C\t1\t\t\t2.312,00\t2.308,48",
-      "coletado_em": "2026-09-11T15:06:11.326076"
+      "coletado_em": "2026-09-11T18:30:37.091459"
     },
     {
       "unidade": "Farroupilha",
@@ -112807,7 +112876,7 @@
       "utilizado_depois": 2500.0,
       "pendente": 99.0,
       "linha_original": "04/09/2026\tPix Doutores\nThalia Vezzosi\tRecebido de Lauana de Fatima (150603) (Parcela 38/48) Pago por: O paciente\t99,00 C\t99,00 C\t1\t\t\t2.960,00\t2.945,77",
-      "coletado_em": "2026-09-11T15:06:11.405861"
+      "coletado_em": "2026-09-11T18:30:37.180662"
     },
     {
       "unidade": "Farroupilha",
@@ -112830,7 +112899,7 @@
       "utilizado_depois": 2500.0,
       "pendente": 120.0,
       "linha_original": "04/09/2026\tPix Doutores\nThalia Vezzosi\tRecebido de Ledinara Carla Brizola (152366) (Parcela 16/48) Pago por: Lauana Brizola\t120,00 C\t120,00 C\t1\t\t\t3.080,00\t3.065,77",
-      "coletado_em": "2026-09-11T15:06:11.424513"
+      "coletado_em": "2026-09-11T18:30:37.196713"
     },
     {
       "unidade": "Farroupilha",
@@ -112853,7 +112922,7 @@
       "utilizado_depois": 2500.0,
       "pendente": 115.0,
       "linha_original": "05/09/2026\tPix Doutores\nThalia Vezzosi\tRecebido de Matheus Taques do Santos (150583) (Parcela 34/48) Pago por: O paciente\t115,00 C\t115,00 C\t1\t\t\t3.818,00\t3.796,55",
-      "coletado_em": "2026-09-11T15:06:11.512166"
+      "coletado_em": "2026-09-11T18:30:37.274259"
     },
     {
       "unidade": "Farroupilha",
@@ -112876,7 +112945,7 @@
       "utilizado_depois": 2500.0,
       "pendente": 165.0,
       "linha_original": "05/09/2026\tPix Doutores\nThalia Vezzosi\tRecebido de Janieli Moraes Dos Santos (152540) (Parcela 3/48) Pago por: O paciente\t165,00 C\t165,00 C\t1\t\t\t4.683,00\t4.657,73",
-      "coletado_em": "2026-09-11T15:06:11.604984"
+      "coletado_em": "2026-09-11T18:30:37.368087"
     },
     {
       "unidade": "Farroupilha",
@@ -112899,7 +112968,7 @@
       "utilizado_depois": 2500.0,
       "pendente": 99.0,
       "linha_original": "05/09/2026\tPix Doutores\nThalia Vezzosi\tRecebido de Sarah Martins Da silva (142326) (Parcela 1/48) Pago por: O paciente\t99,00 C\t99,00 C\t1\t\t\t4.782,00\t4.756,73",
-      "coletado_em": "2026-09-11T15:06:11.622305"
+      "coletado_em": "2026-09-11T18:30:37.385368"
     },
     {
       "unidade": "Farroupilha",
@@ -112922,7 +112991,7 @@
       "utilizado_depois": 2500.0,
       "pendente": 102.0,
       "linha_original": "05/09/2026\tPix Doutores\nThalia Vezzosi\tRecebido de Maicon Adelar Perreira (146401) (Parcela 18/48) Pago por: O paciente\t102,00 C\t102,00 C\t1\t\t\t4.884,00\t4.858,73",
-      "coletado_em": "2026-09-11T15:06:11.638171"
+      "coletado_em": "2026-09-11T18:30:37.401147"
     },
     {
       "unidade": "Farroupilha",
@@ -112945,7 +113014,7 @@
       "utilizado_depois": 2500.0,
       "pendente": 105.0,
       "linha_original": "05/09/2026\tPix Doutores\nThalia Vezzosi\tRecebido de Erick Fagundes Pereira Pinto (152091) (Parcela 18/48) Pago por: O paciente\t105,00 C\t105,00 C\t1\t\t\t5.091,00\t5.063,80",
-      "coletado_em": "2026-09-11T15:06:11.669510"
+      "coletado_em": "2026-09-11T18:30:37.431972"
     },
     {
       "unidade": "Farroupilha",
@@ -112968,7 +113037,7 @@
       "utilizado_depois": 2500.0,
       "pendente": 124.0,
       "linha_original": "08/09/2026\tPix Doutores\nThalia Vezzosi\tRecebido de Eloise Bacelar Lucas Alho (152975) (Parcela 3/48) Pago por: Anne Michele Bacelar Lucas\t124,00 C\t124,00 C\t1\t\t\t5.330,00\t5.302,80",
-      "coletado_em": "2026-09-11T15:06:11.700443"
+      "coletado_em": "2026-09-11T18:30:37.463221"
     },
     {
       "unidade": "Farroupilha",
@@ -112991,7 +113060,7 @@
       "utilizado_depois": 10000.0,
       "pendente": 120.0,
       "linha_original": "08/09/2026\tPix Doutores\nFranciele Pedrotti\tRecebido de Elizandra Carmen Grandi Luz (152346) (Parcela 15/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t1075\t5.450,00\t5.422,80",
-      "coletado_em": "2026-09-11T15:06:11.715881"
+      "coletado_em": "2026-09-11T18:30:37.478985"
     },
     {
       "unidade": "Farroupilha",
@@ -113014,7 +113083,7 @@
       "utilizado_depois": 10000.0,
       "pendente": 120.0,
       "linha_original": "08/09/2026\tPix Doutores\nFranciele Pedrotti\tRecebido de Vinicius Grandi Luz (152737) (Parcela 2/48) Pago por: Elizandra Carmen Grandi\t120,00 C\t120,00 C\t1\t\t1075\t5.570,00\t5.542,80",
-      "coletado_em": "2026-09-11T15:06:11.731280"
+      "coletado_em": "2026-09-11T18:30:37.494921"
     },
     {
       "unidade": "Farroupilha",
@@ -113037,7 +113106,7 @@
       "utilizado_depois": 2500.0,
       "pendente": 188.0,
       "linha_original": "08/09/2026\tPix Doutores\nThalia Vezzosi\tRecebido de Ketlyn Stefany Da Costa Vargas (152997) (Parcela 1/1) Pago por: O paciente\t188,00 C\t188,00 C\t1\t\t\t5.758,00\t5.730,80",
-      "coletado_em": "2026-09-11T15:06:11.747549"
+      "coletado_em": "2026-09-11T18:30:37.513383"
     },
     {
       "unidade": "Farroupilha",
@@ -113060,7 +113129,7 @@
       "utilizado_depois": 2500.0,
       "pendente": 120.0,
       "linha_original": "08/09/2026\tPix Doutores\nThalia Vezzosi\tRecebido de Eduarda Zinn Lara (147324) (Parcela 6/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t5.878,00\t5.850,80",
-      "coletado_em": "2026-09-11T15:06:11.763719"
+      "coletado_em": "2026-09-11T18:30:37.529857"
     },
     {
       "unidade": "Farroupilha",
@@ -113083,7 +113152,7 @@
       "utilizado_depois": 2500.0,
       "pendente": 20.0,
       "linha_original": "05/09/2026\tPix Doutores\nThalia Vezzosi\tRecebido de Erick Fagundes Pereira Pinto (152091) (Parcela 1/1) Pago por: O paciente\t20,00 C\t20,00 C\t1\t\t\t5.898,00\t5.870,80",
-      "coletado_em": "2026-09-11T15:06:11.779940"
+      "coletado_em": "2026-09-11T18:30:37.545639"
     },
     {
       "unidade": "Farroupilha",
@@ -113106,7 +113175,7 @@
       "utilizado_depois": 2500.0,
       "pendente": 155.0,
       "linha_original": "08/09/2026\tPix Doutores\nThalia Vezzosi\tRecebido de Vanderson da Silva chaúl (152313) (Parcela 17/48) Pago por: O paciente\t155,00 C\t155,00 C\t1\t\t\t6.192,00\t6.164,80",
-      "coletado_em": "2026-09-11T15:06:11.810868"
+      "coletado_em": "2026-09-11T18:30:37.576456"
     },
     {
       "unidade": "Farroupilha",
@@ -113129,7 +113198,7 @@
       "utilizado_depois": 2500.0,
       "pendente": 269.0,
       "linha_original": "08/09/2026\tPix Doutores\nThalia Vezzosi\tRecebido de Francisco Jose Herrera (152436) (Parcela 1/1) Pago por: O paciente\t269,00 C\t269,00 C\t1\t\t\t6.666,00\t6.637,06",
-      "coletado_em": "2026-09-11T15:06:11.857970"
+      "coletado_em": "2026-09-11T18:30:37.623053"
     },
     {
       "unidade": "Farroupilha",
@@ -113152,7 +113221,7 @@
       "utilizado_depois": 2500.0,
       "pendente": 135.0,
       "linha_original": "08/09/2026\tPix Doutores\nThalia Vezzosi\tRecebido de Gabriel Souza da Silva (149585) (Parcela 21/48) Pago por: O paciente\t135,00 C\t135,00 C\t1\t\t\t7.115,00\t7.086,06",
-      "coletado_em": "2026-09-11T15:06:11.904928"
+      "coletado_em": "2026-09-11T18:30:37.670112"
     },
     {
       "unidade": "Farroupilha",
@@ -113175,7 +113244,7 @@
       "utilizado_depois": 2500.0,
       "pendente": 165.0,
       "linha_original": "08/09/2026\tPix Doutores\nThalia Vezzosi\tRecebido de Juliana Oliveira Dos Santos (152875) (Parcela 5/48) Pago por: O paciente\t165,00 C\t165,00 C\t1\t\t\t7.889,00\t7.855,81",
-      "coletado_em": "2026-09-11T15:06:11.997655"
+      "coletado_em": "2026-09-11T18:30:37.764143"
     },
     {
       "unidade": "Farroupilha",
@@ -113198,7 +113267,7 @@
       "utilizado_depois": 1000.0,
       "pendente": 120.0,
       "linha_original": "08/09/2026\tPix Doutores\nGiovana Gasparini\tRecebido de Yasmin Ramineli Zanella (152961) (Parcela 3/48) Pago por: Bruno de souza zanella\t120,00 C\t120,00 C\t1\t\t\t8.413,00\t8.376,37",
-      "coletado_em": "2026-09-11T15:06:12.045045"
+      "coletado_em": "2026-09-11T18:30:37.810956"
     },
     {
       "unidade": "Farroupilha",
@@ -113221,7 +113290,7 @@
       "utilizado_depois": 1000.0,
       "pendente": 125.0,
       "linha_original": "08/09/2026\tPix Doutores\nGiovana Gasparini\tRecebido de Edivan Caceres Alves (149731) (Parcela 1/48) Pago por: O paciente\t125,00 C\t125,00 C\t1\t\t\t9.469,00\t9.405,53",
-      "coletado_em": "2026-09-11T15:06:12.171911"
+      "coletado_em": "2026-09-11T18:30:37.935432"
     },
     {
       "unidade": "Farroupilha",
@@ -113244,7 +113313,7 @@
       "utilizado_depois": 1000.0,
       "pendente": 105.0,
       "linha_original": "08/09/2026\tPix Doutores\nGiovana Gasparini\tRecebido de Clara Ribeiro da Silva (151458) (Parcela 23/48) Pago por: Bruna Ribeiro Da Silva\t105,00 C\t105,00 C\t1\t\t\t9.721,00\t9.657,53",
-      "coletado_em": "2026-09-11T15:06:12.202599"
+      "coletado_em": "2026-09-11T18:30:37.977962"
     },
     {
       "unidade": "Farroupilha",
@@ -113267,7 +113336,7 @@
       "utilizado_depois": 1000.0,
       "pendente": 199.0,
       "linha_original": "08/09/2026\tPix Doutores\nGiovana Gasparini\tRecebido de Guilherme Da Silva Claudino (6843) (Parcela 1/1) Pago por: O paciente\t199,00 C\t199,00 C\t1\t\t\t9.920,00\t9.856,53",
-      "coletado_em": "2026-09-11T15:06:12.218121"
+      "coletado_em": "2026-09-11T18:30:37.993730"
     },
     {
       "unidade": "Farroupilha",
@@ -113290,7 +113359,7 @@
       "utilizado_depois": 1000.0,
       "pendente": 125.0,
       "linha_original": "08/09/2026\tPix Doutores\nGiovana Gasparini\tRecebido de Antonella Ziero (152862) (Parcela 1/1) Pago por: Ana Paula Viera Ziero\t125,00 C\t125,00 C\t1\t\t\t10.147,00\t10.081,60",
-      "coletado_em": "2026-09-11T15:06:12.249896"
+      "coletado_em": "2026-09-11T18:30:38.025300"
     },
     {
       "unidade": "Farroupilha",
@@ -113313,7 +113382,7 @@
       "utilizado_depois": 1000.0,
       "pendente": 155.0,
       "linha_original": "10/09/2026\tPix Doutores\nGiovana Gasparini\tRecebido de Felipe de Lima Silva (144073) (Parcela 17/48) Pago por: O paciente\t155,00 C\t155,00 C\t1\t\t\t14.601,00\t14.494,91",
-      "coletado_em": "2026-09-11T15:06:12.446785"
+      "coletado_em": "2026-09-11T18:30:38.217666"
     },
     {
       "unidade": "Farroupilha",
@@ -113336,7 +113405,7 @@
       "utilizado_depois": 1000.0,
       "pendente": 127.0,
       "linha_original": "10/09/2026\tPix Doutores\nGiovana Gasparini\tRecebido de Mateus Lopes Reche (151694) (Parcela 24/48) Pago por: Luciana Albano Lopes\t127,00 C\t127,00 C\t1\t\t\t15.073,00\t14.965,05",
-      "coletado_em": "2026-09-11T15:06:12.492924"
+      "coletado_em": "2026-09-11T18:30:38.263524"
     },
     {
       "unidade": "Farroupilha",
@@ -113359,7 +113428,7 @@
       "utilizado_depois": 1000.0,
       "pendente": 155.0,
       "linha_original": "10/09/2026\tPix Doutores\nGiovana Gasparini\tRecebido de Renata Toffanim Cavada (152515) (Parcela 13/48) Pago por: Cristiane Milbradth\t155,00 C\t155,00 C\t1\t\t\t15.558,00\t15.450,05",
-      "coletado_em": "2026-09-11T15:06:12.555184"
+      "coletado_em": "2026-09-11T18:30:38.324741"
     },
     {
       "unidade": "Farroupilha",
@@ -113382,7 +113451,7 @@
       "utilizado_depois": 0.0,
       "pendente": 102.0,
       "linha_original": "10/09/2026\tPix Doutores\nTOP\tRecebido de Liliane Lopes Brum (4514) (Parcela 18/48) Pago por: O paciente\t102,00 C\t102,00 C\t1\t\t\t15.917,00\t15.809,05",
-      "coletado_em": "2026-09-11T15:06:12.586676"
+      "coletado_em": "2026-09-11T18:30:38.362034"
     },
     {
       "unidade": "Farroupilha",
@@ -113405,7 +113474,7 @@
       "utilizado_depois": 2000.0,
       "pendente": 102.0,
       "linha_original": "10/09/2026\tPix Doutores\nEverlize Cipriani\tRecebido de Odolir Decol (546) (Parcela 18/48) Pago por: O paciente\t102,00 C\t102,00 C\t1\t\t\t20.783,00\t20.578,03",
-      "coletado_em": "2026-09-11T15:06:12.825559"
+      "coletado_em": "2026-09-11T18:30:38.593177"
     },
     {
       "unidade": "Farroupilha",
@@ -113428,7 +113497,30 @@
       "utilizado_depois": 2000.0,
       "pendente": 85.0,
       "linha_original": "10/09/2026\tPix Doutores\nEverlize Cipriani\tRecebido de Arthur Dewes (150060) (Parcela 18/48) Pago por: O paciente\t85,00 C\t85,00 C\t1\t\t\t22.358,00\t22.146,12",
-      "coletado_em": "2026-09-11T15:06:12.947446"
+      "coletado_em": "2026-09-11T18:30:38.713097"
+    },
+    {
+      "unidade": "Bento",
+      "data": "11/09/2026",
+      "competencia": "2026-09",
+      "metodo_pagamento": "Pix Doutores",
+      "responsavel_fiscal_lido": "Jéssica Barreto",
+      "doutor_id": "23",
+      "doutor_final": "Jéssica Barreto",
+      "doutor_encontrado": true,
+      "paciente": "Recebido de Luís Eduardo Nunes Albuquerque Pago por: O paciente",
+      "codigo_origem": "10547",
+      "parcela": "1/1",
+      "origem": "Recebido de Luís Eduardo Nunes Albuquerque (10547) (Parcela 1/1) Pago por: O paciente",
+      "valor": 516.0,
+      "valor_com_descontos": 516.0,
+      "credito_antes": 1000.0,
+      "valor_descontado": 516.0,
+      "credito_depois": 484.0,
+      "utilizado_depois": 516.0,
+      "pendente": 0.0,
+      "linha_original": "11/09/2026\tPix Doutores\nJéssica Barreto\tRecebido de Luís Eduardo Nunes Albuquerque (10547) (Parcela 1/1) Pago por: O paciente\t516,00 C\t516,00 C\t1\t\t\t7.876,00\t7.818,32",
+      "coletado_em": "2026-09-11T18:31:37.161921"
     },
     {
       "unidade": "Soledade",
@@ -113451,7 +113543,7 @@
       "utilizado_depois": 0.0,
       "pendente": 95.0,
       "linha_original": "01/09/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Maria Alejandra Maceo Maceo (9225) (Parcela 16/48) Pago por: O paciente\t95,00 C\t95,00 C\t1\t\t\t-4,00\t-4,00",
-      "coletado_em": "2026-09-11T15:09:10.857777"
+      "coletado_em": "2026-09-11T18:33:33.835084"
     },
     {
       "unidade": "Soledade",
@@ -113474,7 +113566,7 @@
       "utilizado_depois": 0.0,
       "pendente": 60.0,
       "linha_original": "01/09/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de João Mateus Dutra da Silva (11676) (Parcela 16/48) Pago por: O paciente\t60,00 C\t60,00 C\t1\t\t\t526,00\t526,00",
-      "coletado_em": "2026-09-11T15:09:10.971913"
+      "coletado_em": "2026-09-11T18:33:33.952830"
     },
     {
       "unidade": "Soledade",
@@ -113497,7 +113589,7 @@
       "utilizado_depois": 0.0,
       "pendente": 105.0,
       "linha_original": "01/09/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Alberto Jesus Belarmin do Amarante (11480) (Parcela 19/48) Pago por: O paciente\t105,00 C\t105,00 C\t1\t\t\t1.048,00\t1.046,03",
-      "coletado_em": "2026-09-11T15:09:11.076224"
+      "coletado_em": "2026-09-11T18:33:34.055214"
     },
     {
       "unidade": "Soledade",
@@ -113520,7 +113612,7 @@
       "utilizado_depois": 0.0,
       "pendente": 115.0,
       "linha_original": "01/09/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Elisa Camini Silva (12272) (Parcela 6/48) Pago por: O paciente\t115,00 C\t115,00 C\t1\t\t\t1.163,00\t1.161,03",
-      "coletado_em": "2026-09-11T15:09:11.094404"
+      "coletado_em": "2026-09-11T18:33:34.085009"
     },
     {
       "unidade": "Soledade",
@@ -113543,7 +113635,7 @@
       "utilizado_depois": 0.0,
       "pendente": 99.0,
       "linha_original": "01/09/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Alana Luiza dos Reis da Silva (8363) (Parcela 27/48) Pago por: O paciente\t99,00 C\t99,00 C\t1\t\t\t1.461,00\t1.457,06",
-      "coletado_em": "2026-09-11T15:09:11.148315"
+      "coletado_em": "2026-09-11T18:33:34.142416"
     },
     {
       "unidade": "Soledade",
@@ -113566,7 +113658,7 @@
       "utilizado_depois": 0.0,
       "pendente": 125.0,
       "linha_original": "01/09/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Rafael Borges dos Santos (12275) (Parcela 6/48) Pago por: O paciente\t125,00 C\t125,00 C\t1\t\t\t1.586,00\t1.582,06",
-      "coletado_em": "2026-09-11T15:09:11.166057"
+      "coletado_em": "2026-09-11T18:33:34.160936"
     },
     {
       "unidade": "Soledade",
@@ -113589,7 +113681,7 @@
       "utilizado_depois": 0.0,
       "pendente": 115.0,
       "linha_original": "01/09/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Patricio Bernardo da Silva Neto (12400) (Parcela 3/48) Pago por: O paciente\t115,00 C\t115,00 C\t1\t\t\t1.891,00\t1.885,36",
-      "coletado_em": "2026-09-11T15:09:11.219215"
+      "coletado_em": "2026-09-11T18:33:34.216392"
     },
     {
       "unidade": "Soledade",
@@ -113612,7 +113704,7 @@
       "utilizado_depois": 0.0,
       "pendente": 98.0,
       "linha_original": "01/09/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Fernanda De Fatima Da Silva Araujo (8434) (Parcela 1/1) Pago por: O paciente\t98,00 C\t98,00 C\t1\t\t\t2.468,00\t2.457,63",
-      "coletado_em": "2026-09-11T15:09:11.309365"
+      "coletado_em": "2026-09-11T18:33:34.309355"
     },
     {
       "unidade": "Soledade",
@@ -113635,7 +113727,7 @@
       "utilizado_depois": 0.0,
       "pendente": 105.0,
       "linha_original": "01/09/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Dhafyny Araujo Cardoso (9901) (Parcela 31/48) Pago por: O paciente\t105,00 C\t105,00 C\t1\t\t\t2.573,00\t2.562,63",
-      "coletado_em": "2026-09-11T15:09:11.327180"
+      "coletado_em": "2026-09-11T18:33:34.328594"
     },
     {
       "unidade": "Soledade",
@@ -113658,7 +113750,7 @@
       "utilizado_depois": 0.0,
       "pendente": 120.0,
       "linha_original": "02/09/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Roniele Marquette (4437) (Parcela 2/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t2.808,00\t2.797,63",
-      "coletado_em": "2026-09-11T15:09:11.363113"
+      "coletado_em": "2026-09-11T18:33:34.370007"
     },
     {
       "unidade": "Soledade",
@@ -113681,7 +113773,7 @@
       "utilizado_depois": 0.0,
       "pendente": 120.0,
       "linha_original": "02/09/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Denise da Silva França (11796) (Parcela 15/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t2.928,00\t2.917,63",
-      "coletado_em": "2026-09-11T15:09:11.382650"
+      "coletado_em": "2026-09-11T18:33:34.389225"
     },
     {
       "unidade": "Soledade",
@@ -113704,7 +113796,7 @@
       "utilizado_depois": 0.0,
       "pendente": 125.0,
       "linha_original": "01/09/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Cassiane dos Santos da Silva (4407) (Parcela 5/48) Pago por: O paciente\t125,00 C\t125,00 C\t1\t\t\t3.510,00\t3.496,68",
-      "coletado_em": "2026-09-11T15:09:11.454350"
+      "coletado_em": "2026-09-11T18:33:34.463530"
     },
     {
       "unidade": "Soledade",
@@ -113727,7 +113819,7 @@
       "utilizado_depois": 0.0,
       "pendente": 115.0,
       "linha_original": "02/09/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Tatiane Moraes de Oliveira (9884) (Parcela 3/48) Pago por: O paciente\t115,00 C\t115,00 C\t1\t\t\t5.032,00\t4.990,47",
-      "coletado_em": "2026-09-11T15:09:11.599225"
+      "coletado_em": "2026-09-11T18:33:34.614991"
     },
     {
       "unidade": "Soledade",
@@ -113750,7 +113842,7 @@
       "utilizado_depois": 0.0,
       "pendente": 125.0,
       "linha_original": "02/09/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Angelita Trindade Geraldo (2264) (Parcela 3/48) Pago por: O paciente\t125,00 C\t125,00 C\t1\t\t\t5.157,00\t5.115,47",
-      "coletado_em": "2026-09-11T15:09:11.617345"
+      "coletado_em": "2026-09-11T18:33:34.633214"
     },
     {
       "unidade": "Soledade",
@@ -113773,7 +113865,7 @@
       "utilizado_depois": 0.0,
       "pendente": 59.0,
       "linha_original": "02/09/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Paloma Schmith Silva (8737) (Parcela 1/1) Pago por: O paciente\t59,00 C\t59,00 C\t1\t\t\t6.055,00\t5.999,98",
-      "coletado_em": "2026-09-11T15:09:11.690707"
+      "coletado_em": "2026-09-11T18:33:34.707515"
     },
     {
       "unidade": "Soledade",
@@ -113796,7 +113888,7 @@
       "utilizado_depois": 0.0,
       "pendente": 125.0,
       "linha_original": "02/09/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Victor Danyel Vieira da Silva (3307) (Parcela 8/48) Pago por: Daniela Claus Vieira\t125,00 C\t125,00 C\t1\t\t\t7.588,00\t7.524,74",
-      "coletado_em": "2026-09-11T15:09:11.817427"
+      "coletado_em": "2026-09-11T18:33:34.837188"
     },
     {
       "unidade": "Soledade",
@@ -113819,7 +113911,7 @@
       "utilizado_depois": 0.0,
       "pendente": 115.0,
       "linha_original": "02/09/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Ruan Morais Brum do Prado (10532) (Parcela 2/48) Pago por: O paciente\t115,00 C\t115,00 C\t1\t\t\t7.803,00\t7.739,74",
-      "coletado_em": "2026-09-11T15:09:11.853886"
+      "coletado_em": "2026-09-11T18:33:34.874021"
     },
     {
       "unidade": "Soledade",
@@ -113842,7 +113934,7 @@
       "utilizado_depois": 0.0,
       "pendente": 125.0,
       "linha_original": "02/09/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Ryan Santos Souza (12274) (Parcela 6/48) Pago por: O paciente\t125,00 C\t125,00 C\t1\t\t\t8.027,00\t7.961,77",
-      "coletado_em": "2026-09-11T15:09:11.890053"
+      "coletado_em": "2026-09-11T18:33:34.911850"
     },
     {
       "unidade": "Soledade",
@@ -113865,7 +113957,7 @@
       "utilizado_depois": 0.0,
       "pendente": 219.0,
       "linha_original": "02/09/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Ryan Santos Souza (12274) (Parcela 1/1) Pago por: O paciente\t219,00 C\t219,00 C\t1\t\t\t8.246,00\t8.180,77",
-      "coletado_em": "2026-09-11T15:09:11.907812"
+      "coletado_em": "2026-09-11T18:33:34.929875"
     },
     {
       "unidade": "Soledade",
@@ -113888,7 +113980,7 @@
       "utilizado_depois": 0.0,
       "pendente": 99.0,
       "linha_original": "02/09/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Paloma Schmith Silva (8737) (Parcela 1/48) Pago por: O paciente\t99,00 C\t99,00 C\t1\t\t\t8.470,00\t8.402,28",
-      "coletado_em": "2026-09-11T15:09:11.951210"
+      "coletado_em": "2026-09-11T18:33:34.966533"
     },
     {
       "unidade": "Soledade",
@@ -113911,7 +114003,7 @@
       "utilizado_depois": 0.0,
       "pendente": 96.0,
       "linha_original": "04/09/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Fernanda dos Santos Ritter (9478) (Parcela 34/48) Pago por: O paciente\t96,00 C\t96,00 C\t1\t\t\t9.638,00\t9.543,97",
-      "coletado_em": "2026-09-11T15:09:12.025449"
+      "coletado_em": "2026-09-11T18:33:35.048820"
     },
     {
       "unidade": "Soledade",
@@ -113934,7 +114026,7 @@
       "utilizado_depois": 0.0,
       "pendente": 20.0,
       "linha_original": "04/09/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Guilherme Moraes Neves (3224) (Parcela 14/48) Pago por: O paciente\t20,00 C\t20,00 C\t1\t\t\t9.758,00\t9.663,97",
-      "coletado_em": "2026-09-11T15:09:12.062076"
+      "coletado_em": "2026-09-11T18:33:35.087405"
     },
     {
       "unidade": "Soledade",
@@ -113957,7 +114049,7 @@
       "utilizado_depois": 0.0,
       "pendente": 99.0,
       "linha_original": "04/09/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Deidilara Hesper dos Santos Hoffmann (4458) (Parcela 17/48) Pago por: O paciente\t99,00 C\t99,00 C\t1\t\t\t9.857,00\t9.762,97",
-      "coletado_em": "2026-09-11T15:09:12.080074"
+      "coletado_em": "2026-09-11T18:33:35.107360"
     },
     {
       "unidade": "Soledade",
@@ -113980,7 +114072,7 @@
       "utilizado_depois": 0.0,
       "pendente": 120.0,
       "linha_original": "04/09/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Michele Bassanesi (4857) (Parcela 17/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t9.977,00\t9.882,97",
-      "coletado_em": "2026-09-11T15:09:12.097472"
+      "coletado_em": "2026-09-11T18:33:35.126071"
     },
     {
       "unidade": "Soledade",
@@ -114003,7 +114095,7 @@
       "utilizado_depois": 0.0,
       "pendente": 120.0,
       "linha_original": "04/09/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Isabelli Bassanessi de Aquino (11832) (Parcela 13/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t10.097,00\t10.002,97",
-      "coletado_em": "2026-09-11T15:09:12.115484"
+      "coletado_em": "2026-09-11T18:33:35.144162"
     },
     {
       "unidade": "Soledade",
@@ -114026,7 +114118,7 @@
       "utilizado_depois": 0.0,
       "pendente": 120.0,
       "linha_original": "04/09/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Natali de Oliveira (10429) (Parcela 15/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t10.404,25\t10.310,22",
-      "coletado_em": "2026-09-11T15:09:12.188188"
+      "coletado_em": "2026-09-11T18:33:35.219188"
     },
     {
       "unidade": "Soledade",
@@ -114049,7 +114141,7 @@
       "utilizado_depois": 0.0,
       "pendente": 125.0,
       "linha_original": "04/09/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Ana Julia dos Santos Ferreira Rodrigues (12224) (Parcela 6/48) Pago por: Daiane Dos Santos Ferreira\t125,00 C\t125,00 C\t1\t\t\t10.634,25\t10.540,22",
-      "coletado_em": "2026-09-11T15:09:12.223054"
+      "coletado_em": "2026-09-11T18:33:35.255725"
     },
     {
       "unidade": "Soledade",
@@ -114072,7 +114164,7 @@
       "utilizado_depois": 0.0,
       "pendente": 120.0,
       "linha_original": "04/09/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Leonardo Rodrigues Fagundes (10925) (Parcela 12/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t10.754,25\t10.660,22",
-      "coletado_em": "2026-09-11T15:09:12.240846"
+      "coletado_em": "2026-09-11T18:33:35.273646"
     },
     {
       "unidade": "Soledade",
@@ -114095,7 +114187,7 @@
       "utilizado_depois": 0.0,
       "pendente": 120.0,
       "linha_original": "04/09/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Gustavo Jubelli Rodrigues (5254) (Parcela 16/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t11.779,25\t11.671,15",
-      "coletado_em": "2026-09-11T15:09:12.328580"
+      "coletado_em": "2026-09-11T18:33:35.363863"
     },
     {
       "unidade": "Soledade",
@@ -114118,7 +114210,7 @@
       "utilizado_depois": 0.0,
       "pendente": 95.0,
       "linha_original": "04/09/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Gabriel Silveira da Silva (9610) (Parcela 36/48) Pago por: O paciente\t95,00 C\t95,00 C\t1\t\t\t12.093,25\t11.980,13",
-      "coletado_em": "2026-09-11T15:09:12.364511"
+      "coletado_em": "2026-09-11T18:33:35.400670"
     },
     {
       "unidade": "Soledade",
@@ -114141,7 +114233,7 @@
       "utilizado_depois": 0.0,
       "pendente": 85.0,
       "linha_original": "04/09/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Gustavo Morais Silveira (4887) (Parcela 1/1) Pago por: O paciente\t85,00 C\t85,00 C\t1\t\t\t12.178,25\t12.065,13",
-      "coletado_em": "2026-09-11T15:09:12.382079"
+      "coletado_em": "2026-09-11T18:33:35.419243"
     },
     {
       "unidade": "Soledade",
@@ -114164,7 +114256,7 @@
       "utilizado_depois": 0.0,
       "pendente": 105.0,
       "linha_original": "05/09/2026\tPix Doutores\nFelipe Lino\tRecebido de Elias dos Santos (9912) (Parcela 31/48) Pago por: O paciente\t105,00 C\t105,00 C\t1\t\t\t12.594,25\t12.478,41",
-      "coletado_em": "2026-09-11T15:09:12.435218"
+      "coletado_em": "2026-09-11T18:33:35.473828"
     },
     {
       "unidade": "Soledade",
@@ -114187,7 +114279,7 @@
       "utilizado_depois": 0.0,
       "pendente": 120.0,
       "linha_original": "04/09/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Crislaine Borges da Silva (11769) (Parcela 16/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t12.934,25\t12.814,03",
-      "coletado_em": "2026-09-11T15:09:12.488001"
+      "coletado_em": "2026-09-11T18:33:35.528179"
     },
     {
       "unidade": "Soledade",
@@ -114210,7 +114302,7 @@
       "utilizado_depois": 0.0,
       "pendente": 95.0,
       "linha_original": "05/09/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Bianca de Moraes (7071) (Parcela 17/48) Pago por: O paciente\t95,00 C\t95,00 C\t1\t\t\t13.154,25\t13.032,92",
-      "coletado_em": "2026-09-11T15:09:12.524293"
+      "coletado_em": "2026-09-11T18:33:35.564370"
     },
     {
       "unidade": "Soledade",
@@ -114233,7 +114325,7 @@
       "utilizado_depois": 0.0,
       "pendente": 95.0,
       "linha_original": "05/09/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Leticia Gomes Rodrigues (8154) (Parcela 39/48) Pago por: O paciente\t95,00 C\t95,00 C\t1\t\t\t14.454,25\t14.332,92",
-      "coletado_em": "2026-09-11T15:09:12.595777"
+      "coletado_em": "2026-09-11T18:33:35.637535"
     },
     {
       "unidade": "Soledade",
@@ -114256,7 +114348,7 @@
       "utilizado_depois": 0.0,
       "pendente": 85.0,
       "linha_original": "05/09/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Alexandre Rodrigues (1131) (Parcela 18/48) Pago por: O paciente\t85,00 C\t85,00 C\t1\t\t\t14.664,25\t14.541,81",
-      "coletado_em": "2026-09-11T15:09:12.631374"
+      "coletado_em": "2026-09-11T18:33:35.673100"
     },
     {
       "unidade": "Soledade",
@@ -114279,7 +114371,7 @@
       "utilizado_depois": 0.0,
       "pendente": 95.0,
       "linha_original": "05/09/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Adriana dos Santos Oliveira (9248) (Parcela 41/48) Pago por: O paciente\t95,00 C\t95,00 C\t1\t\t\t14.884,25\t14.761,81",
-      "coletado_em": "2026-09-11T15:09:12.667005"
+      "coletado_em": "2026-09-11T18:33:35.711820"
     },
     {
       "unidade": "Soledade",
@@ -114302,7 +114394,7 @@
       "utilizado_depois": 0.0,
       "pendente": 99.0,
       "linha_original": "05/09/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Debora Rosemara Balbinot (11205) (Parcela 22/48) Pago por: Luiz Maicon Martins da Rosa\t99,00 C\t99,00 C\t1\t\t\t15.163,25\t15.040,81",
-      "coletado_em": "2026-09-11T15:09:12.722526"
+      "coletado_em": "2026-09-11T18:33:35.766162"
     },
     {
       "unidade": "Soledade",
@@ -114325,7 +114417,7 @@
       "utilizado_depois": 0.0,
       "pendente": 99.0,
       "linha_original": "05/09/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Ricardo Régis do Nascimento Brasilio (7290) (Parcela 22/48) Pago por: Luiz Maicon Martins da Rosa\t99,00 C\t99,00 C\t1\t\t\t15.262,25\t15.139,81",
-      "coletado_em": "2026-09-11T15:09:12.741500"
+      "coletado_em": "2026-09-11T18:33:35.784802"
     },
     {
       "unidade": "Soledade",
@@ -114348,7 +114440,7 @@
       "utilizado_depois": 0.0,
       "pendente": 99.0,
       "linha_original": "05/09/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Alexandra Rodrigues dos Santos (12098) (Parcela 1/48) Pago por: O paciente\t99,00 C\t99,00 C\t1\t\t\t15.720,25\t15.595,42",
-      "coletado_em": "2026-09-11T15:09:12.796224"
+      "coletado_em": "2026-09-11T18:33:35.840086"
     },
     {
       "unidade": "Soledade",
@@ -114371,7 +114463,7 @@
       "utilizado_depois": 0.0,
       "pendente": 99.0,
       "linha_original": "05/09/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Esmael Borges da Silva (8877) (Parcela 33/48) Pago por: O paciente\t99,00 C\t99,00 C\t1\t\t\t16.889,25\t16.764,42",
-      "coletado_em": "2026-09-11T15:09:12.849372"
+      "coletado_em": "2026-09-11T18:33:35.895172"
     },
     {
       "unidade": "Soledade",
@@ -114394,7 +114486,7 @@
       "utilizado_depois": 0.0,
       "pendente": 120.0,
       "linha_original": "05/09/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Alessandro dos Santos (11355) (Parcela 15/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t17.009,25\t16.884,42",
-      "coletado_em": "2026-09-11T15:09:12.867561"
+      "coletado_em": "2026-09-11T18:33:35.914515"
     },
     {
       "unidade": "Soledade",
@@ -114417,7 +114509,7 @@
       "utilizado_depois": 0.0,
       "pendente": 120.0,
       "linha_original": "05/09/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Alessandro dos Santos (11355) (Parcela 7/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t17.129,25\t17.004,42",
-      "coletado_em": "2026-09-11T15:09:12.885353"
+      "coletado_em": "2026-09-11T18:33:35.933994"
     },
     {
       "unidade": "Soledade",
@@ -114440,7 +114532,7 @@
       "utilizado_depois": 0.0,
       "pendente": 148.0,
       "linha_original": "08/09/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Tamara De Oliveira Silveira Portela (10869) (Parcela 24/48) Pago por: O paciente\t148,00 C\t148,00 C\t1\t\t\t17.306,25\t17.180,54",
-      "coletado_em": "2026-09-11T15:09:12.957120"
+      "coletado_em": "2026-09-11T18:33:36.008209"
     },
     {
       "unidade": "Soledade",
@@ -114463,7 +114555,7 @@
       "utilizado_depois": 0.0,
       "pendente": 206.0,
       "linha_original": "08/09/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Emanuelly Benvinda Avila Dos Santos (11358) (Parcela 1/1) Pago por: O paciente\t206,00 C\t206,00 C\t1\t\t\t17.632,25\t17.506,54",
-      "coletado_em": "2026-09-11T15:09:12.992280"
+      "coletado_em": "2026-09-11T18:33:36.045537"
     },
     {
       "unidade": "Soledade",
@@ -114486,7 +114578,7 @@
       "utilizado_depois": 0.0,
       "pendente": 85.0,
       "linha_original": "08/09/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Marciele Nunes Dos Santos (3878) (Parcela 18/48) Pago por: O paciente\t85,00 C\t85,00 C\t1\t\t\t19.501,25\t19.332,51",
-      "coletado_em": "2026-09-11T15:09:13.187108"
+      "coletado_em": "2026-09-11T18:33:36.245630"
     },
     {
       "unidade": "Soledade",
@@ -114509,7 +114601,7 @@
       "utilizado_depois": 0.0,
       "pendente": 20.0,
       "linha_original": "08/09/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Alana dos Santos (11738) (Parcela 16/48) Pago por: O paciente\t20,00 C\t20,00 C\t1\t\t\t19.621,25\t19.452,51",
-      "coletado_em": "2026-09-11T15:09:13.222769"
+      "coletado_em": "2026-09-11T18:33:36.281868"
     },
     {
       "unidade": "Soledade",
@@ -114532,7 +114624,7 @@
       "utilizado_depois": 0.0,
       "pendente": 120.0,
       "linha_original": "08/09/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Kemilin Eduarda Araujo da Silva (7783) (Parcela 14/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t20.868,25\t20.688,44",
-      "coletado_em": "2026-09-11T15:09:13.366003"
+      "coletado_em": "2026-09-11T18:33:36.447947"
     },
     {
       "unidade": "Soledade",
@@ -114555,7 +114647,7 @@
       "utilizado_depois": 0.0,
       "pendente": 120.0,
       "linha_original": "08/09/2026\tPix Doutores\nFelipe Lino\tRecebido de Veridiane Dos Santos Bleil (8213) (Parcela 14/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t21.208,25\t21.026,05",
-      "coletado_em": "2026-09-11T15:09:13.439376"
+      "coletado_em": "2026-09-11T18:33:36.500590"
     },
     {
       "unidade": "Soledade",
@@ -114578,7 +114670,7 @@
       "utilizado_depois": 0.0,
       "pendente": 99.0,
       "linha_original": "09/09/2026\tPix Doutores\nFelipe Lino\tRecebido de Ester Schuster Gomez (9739) (Parcela 34/48) Pago por: O paciente\t99,00 C\t99,00 C\t1\t\t\t22.020,25\t21.836,94",
-      "coletado_em": "2026-09-11T15:09:13.576188"
+      "coletado_em": "2026-09-11T18:33:36.633911"
     },
     {
       "unidade": "Soledade",
@@ -114601,7 +114693,7 @@
       "utilizado_depois": 0.0,
       "pendente": 99.0,
       "linha_original": "09/09/2026\tPix Doutores\nFelipe Lino\tRecebido de Murilo Oliveira da Rosa (3916) (Parcela 19/48) Pago por: Paulo Sergio Pedroso\t99,00 C\t99,00 C\t1\t\t\t22.239,25\t22.055,94",
-      "coletado_em": "2026-09-11T15:09:13.612560"
+      "coletado_em": "2026-09-11T18:33:36.685028"
     },
     {
       "unidade": "Soledade",
@@ -114624,7 +114716,7 @@
       "utilizado_depois": 0.0,
       "pendente": 125.0,
       "linha_original": "09/09/2026\tPix Doutores\nFelipe Lino\tRecebido de Francisco Cavalcante de Lima (12389) (Parcela 2/48) Pago por: O paciente\t125,00 C\t125,00 C\t1\t\t\t22.461,25\t22.275,97",
-      "coletado_em": "2026-09-11T15:09:13.817799"
+      "coletado_em": "2026-09-11T18:33:36.890729"
     },
     {
       "unidade": "Soledade",
@@ -114647,7 +114739,7 @@
       "utilizado_depois": 0.0,
       "pendente": 98.0,
       "linha_original": "09/09/2026\tPix Doutores\nFelipe Lino\tRecebido de Lucia Malaquias (2932) (Parcela 27/48) Pago por: O paciente\t98,00 C\t98,00 C\t1\t\t\t23.314,25\t23.117,54",
-      "coletado_em": "2026-09-11T15:09:13.948832"
+      "coletado_em": "2026-09-11T18:33:37.017060"
     },
     {
       "unidade": "Soledade",
@@ -114670,7 +114762,7 @@
       "utilizado_depois": 0.0,
       "pendente": 99.0,
       "linha_original": "09/09/2026\tPix Doutores\nFelipe Lino\tRecebido de Raimundo Rodrigues Franco (9854) (Parcela 32/48) Pago por: O paciente\t99,00 C\t99,00 C\t1\t\t\t23.413,25\t23.216,54",
-      "coletado_em": "2026-09-11T15:09:13.967968"
+      "coletado_em": "2026-09-11T18:33:37.035361"
     },
     {
       "unidade": "Soledade",
@@ -114693,7 +114785,7 @@
       "utilizado_depois": 0.0,
       "pendente": 99.0,
       "linha_original": "09/09/2026\tPix Doutores\nFelipe Lino\tRecebido de Amanda Muniz (2100) (Parcela 16/48) Pago por: O paciente\t99,00 C\t99,00 C\t1\t\t\t23.512,25\t23.315,54",
-      "coletado_em": "2026-09-11T15:09:13.985627"
+      "coletado_em": "2026-09-11T18:33:37.053120"
     },
     {
       "unidade": "Soledade",
@@ -114716,7 +114808,7 @@
       "utilizado_depois": 0.0,
       "pendente": 85.0,
       "linha_original": "11/09/2026\tPix Doutores\nFelipe Lino\tRecebido de Dienifer Souto de Freitas (2469) (Parcela 19/48) Pago por: O paciente\t85,00 C\t85,00 C\t1\t\t\t24.199,60\t23.998,40",
-      "coletado_em": "2026-09-11T15:09:14.110638"
+      "coletado_em": "2026-09-11T18:33:37.177854"
     },
     {
       "unidade": "Soledade",
@@ -114733,13 +114825,13 @@
       "origem": "Recebido de Maiara dos Santos (2084) (Parcela 26/48) Pago por: O paciente",
       "valor": 85.0,
       "valor_com_descontos": 85.0,
-      "credito_antes": 500.0,
+      "credito_antes": 330.0,
       "valor_descontado": 85.0,
-      "credito_depois": 415.0,
-      "utilizado_depois": 85.0,
+      "credito_depois": 245.0,
+      "utilizado_depois": 255.0,
       "pendente": 0.0,
       "linha_original": "11/09/2026\tPix Doutores\nMurilo Debortoli\tRecebido de Maiara dos Santos (2084) (Parcela 26/48) Pago por: O paciente\t85,00 C\t85,00 C\t1\t\t\t24.284,60\t24.083,40",
-      "coletado_em": "2026-09-11T15:09:14.128308"
+      "coletado_em": "2026-09-11T18:33:37.195702"
     },
     {
       "unidade": "Soledade",
@@ -114756,13 +114848,13 @@
       "origem": "Recebido de Gavilan da Silva Padilha (5242) (Parcela 19/48) Pago por: O paciente",
       "valor": 85.0,
       "valor_com_descontos": 85.0,
-      "credito_antes": 415.0,
+      "credito_antes": 245.0,
       "valor_descontado": 85.0,
-      "credito_depois": 330.0,
-      "utilizado_depois": 170.0,
+      "credito_depois": 160.0,
+      "utilizado_depois": 340.0,
       "pendente": 0.0,
       "linha_original": "11/09/2026\tPix Doutores\nMurilo Debortoli\tRecebido de Gavilan da Silva Padilha (5242) (Parcela 19/48) Pago por: O paciente\t85,00 C\t85,00 C\t1\t\t\t24.369,60\t24.168,40",
-      "coletado_em": "2026-09-11T15:09:14.145508"
+      "coletado_em": "2026-09-11T18:33:37.213137"
     },
     {
       "unidade": "Soledade",
@@ -114785,7 +114877,53 @@
       "utilizado_depois": 0.0,
       "pendente": 120.0,
       "linha_original": "11/09/2026\tPix Doutores\nFelipe Lino\tRecebido de Arthur Luis Moraes Machado (11568) (Parcela 18/48) Pago por: Darlene Brandao Rodrigues Moraes Machado\t120,00 C\t120,00 C\t1\t\t\t24.574,60\t24.373,40",
-      "coletado_em": "2026-09-11T15:09:14.180335"
+      "coletado_em": "2026-09-11T18:33:37.248515"
+    },
+    {
+      "unidade": "Soledade",
+      "data": "11/09/2026",
+      "competencia": "2026-09",
+      "metodo_pagamento": "Pix Doutores",
+      "responsavel_fiscal_lido": "Felipe Lino",
+      "doutor_id": null,
+      "doutor_final": "Felipe Lino",
+      "doutor_encontrado": false,
+      "paciente": "Recebido de Luan da Silva Ramos Pago por: O paciente",
+      "codigo_origem": "10191",
+      "parcela": "15/48",
+      "origem": "Recebido de Luan da Silva Ramos (10191) (Parcela 15/48) Pago por: O paciente",
+      "valor": 120.0,
+      "valor_com_descontos": 120.0,
+      "credito_antes": 0.0,
+      "valor_descontado": 0.0,
+      "credito_depois": 0.0,
+      "utilizado_depois": 0.0,
+      "pendente": 120.0,
+      "linha_original": "11/09/2026\tPix Doutores\nFelipe Lino\tRecebido de Luan da Silva Ramos (10191) (Parcela 15/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t24.779,60\t24.578,40",
+      "coletado_em": "2026-09-11T18:33:37.283637"
+    },
+    {
+      "unidade": "Soledade",
+      "data": "11/09/2026",
+      "competencia": "2026-09",
+      "metodo_pagamento": "Pix Doutores",
+      "responsavel_fiscal_lido": "Murilo Debortoli",
+      "doutor_id": "11",
+      "doutor_final": "Murilo Debortoli",
+      "doutor_encontrado": true,
+      "paciente": "Recebido de Lucas Dieter Moraes Pago por: O paciente",
+      "codigo_origem": "9560",
+      "parcela": "36/48",
+      "origem": "Recebido de Lucas Dieter Moraes (9560) (Parcela 36/48) Pago por: O paciente",
+      "valor": 99.0,
+      "valor_com_descontos": 99.0,
+      "credito_antes": 160.0,
+      "valor_descontado": 99.0,
+      "credito_depois": 61.0,
+      "utilizado_depois": 439.0,
+      "pendente": 0.0,
+      "linha_original": "11/09/2026\tPix Doutores\nMurilo Debortoli\tRecebido de Lucas Dieter Moraes (9560) (Parcela 36/48) Pago por: O paciente\t99,00 C\t99,00 C\t1\t\t\t25.073,60\t24.872,40",
+      "coletado_em": "2026-09-11T18:33:37.337285"
     },
     {
       "unidade": "Veranopolis",
@@ -114808,7 +114946,7 @@
       "utilizado_depois": 1500.0,
       "pendente": 152.0,
       "linha_original": "03/09/2026\tPix Doutores\nAlexandre Favero\tRecebido de Jean dos Santos Barbosa (7936) (Parcela 13/48) Pago por: O paciente\t152,00 C\t152,00 C\t1\t\t\t1.071,00\t1.068,96",
-      "coletado_em": "2026-09-11T15:10:15.495656"
+      "coletado_em": "2026-09-11T18:34:36.807974"
     },
     {
       "unidade": "Veranopolis",
@@ -114831,7 +114969,7 @@
       "utilizado_depois": 1500.0,
       "pendente": 99.0,
       "linha_original": "03/09/2026\tPix Doutores\nAlexandre Favero\tRecebido de Jamilly Alves do Nascimento (8378) (Parcela 1/48) Pago por: O paciente\t99,00 C\t99,00 C\t1\t\t\t2.312,00\t2.309,96",
-      "coletado_em": "2026-09-11T15:10:15.542116"
+      "coletado_em": "2026-09-11T18:34:36.855042"
     },
     {
       "unidade": "Veranopolis",
@@ -114854,7 +114992,7 @@
       "utilizado_depois": 1500.0,
       "pendente": 158.0,
       "linha_original": "03/09/2026\tPix Doutores\nAlexandre Favero\tRecebido de Talita Maria dos Santos Dias (5714) (Parcela 13/48) Pago por: O paciente\t158,00 C\t158,00 C\t1\t\t\t2.470,00\t2.467,96",
-      "coletado_em": "2026-09-11T15:10:15.558196"
+      "coletado_em": "2026-09-11T18:34:36.870506"
     },
     {
       "unidade": "Veranopolis",
@@ -114877,7 +115015,7 @@
       "utilizado_depois": 1500.0,
       "pendente": 110.0,
       "linha_original": "03/09/2026\tPix Doutores\nAlexandre Favero\tRecebido de Gabriel Paixão Tomás (5777) (Parcela 8/48) Pago por: O paciente\t110,00 C\t110,00 C\t1\t\t\t2.580,00\t2.577,96",
-      "coletado_em": "2026-09-11T15:10:15.573922"
+      "coletado_em": "2026-09-11T18:34:36.887292"
     },
     {
       "unidade": "Veranopolis",
@@ -114900,7 +115038,7 @@
       "utilizado_depois": 1500.0,
       "pendente": 119.0,
       "linha_original": "03/09/2026\tPix Doutores\nAlexandre Favero\tRecebido de Cícero Pereira de Sousa (7939) (Parcela 1/1) Pago por: O paciente\t119,00 C\t119,00 C\t1\t\t\t2.699,00\t2.696,96",
-      "coletado_em": "2026-09-11T15:10:15.593504"
+      "coletado_em": "2026-09-11T18:34:36.902352"
     },
     {
       "unidade": "Veranopolis",
@@ -114923,7 +115061,7 @@
       "utilizado_depois": 1500.0,
       "pendente": 99.0,
       "linha_original": "03/09/2026\tPix Doutores\nAlexandre Favero\tRecebido de João Pedro Bezerra da Silva (8376) (Parcela 1/48) Pago por: O paciente\t99,00 C\t99,00 C\t1\t\t\t2.798,00\t2.795,96",
-      "coletado_em": "2026-09-11T15:10:15.610609"
+      "coletado_em": "2026-09-11T18:34:36.918437"
     },
     {
       "unidade": "Veranopolis",
@@ -114946,7 +115084,7 @@
       "utilizado_depois": 1500.0,
       "pendente": 127.0,
       "linha_original": "05/09/2026\tPix Doutores\nAlexandre Favero\tRecebido de Carolaine de Alburquerque Gabriel (6686) (Parcela 29/48) Pago por: O paciente\t127,00 C\t127,00 C\t1\t\t\t3.772,00\t3.769,03",
-      "coletado_em": "2026-09-11T15:10:15.747778"
+      "coletado_em": "2026-09-11T18:34:37.043095"
     },
     {
       "unidade": "Veranopolis",
@@ -114969,7 +115107,7 @@
       "utilizado_depois": 0.0,
       "pendente": 120.0,
       "linha_original": "05/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Tamires Gaeski (8167) (Parcela 6/48) Pago por: TATIANE GAYESKI\t120,00 C\t120,00 C\t1\t\t\t3.892,00\t3.889,03",
-      "coletado_em": "2026-09-11T15:10:15.762556"
+      "coletado_em": "2026-09-11T18:34:37.059481"
     },
     {
       "unidade": "Veranopolis",
@@ -114992,7 +115130,7 @@
       "utilizado_depois": 0.0,
       "pendente": 120.0,
       "linha_original": "05/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Isabelli Gayeski Rodrigues (8282) (Parcela 3/48) Pago por: TATIANE GAYESKI\t120,00 C\t120,00 C\t1\t\t\t4.012,00\t4.009,03",
-      "coletado_em": "2026-09-11T15:10:15.777376"
+      "coletado_em": "2026-09-11T18:34:37.075066"
     },
     {
       "unidade": "Veranopolis",
@@ -115015,7 +115153,7 @@
       "utilizado_depois": 0.0,
       "pendente": 100.0,
       "linha_original": "05/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Darlyn Polliana Guedes Flores (6422) (Parcela 20/48) Pago por: O paciente\t100,00 C\t100,00 C\t1\t\t\t4.112,00\t4.109,03",
-      "coletado_em": "2026-09-11T15:10:15.792522"
+      "coletado_em": "2026-09-11T18:34:37.091186"
     },
     {
       "unidade": "Veranopolis",
@@ -115038,7 +115176,7 @@
       "utilizado_depois": 0.0,
       "pendente": 379.16,
       "linha_original": "05/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Elizandra Siqueira Bernardi (8064) (Parcela 11/48) Pago por: O paciente\t379,16 C\t379,16 C\t1\t\t\t4.491,16\t4.488,19",
-      "coletado_em": "2026-09-11T15:10:15.808116"
+      "coletado_em": "2026-09-11T18:34:37.115032"
     },
     {
       "unidade": "Veranopolis",
@@ -115061,7 +115199,7 @@
       "utilizado_depois": 0.0,
       "pendente": 268.06,
       "linha_original": "05/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Luciano da Silva (8062) (Parcela 11/48) Pago por: Elizandra Siqueira Bernadi\t268,06 C\t268,06 C\t1\t\t\t4.759,22\t4.756,25",
-      "coletado_em": "2026-09-11T15:10:15.823142"
+      "coletado_em": "2026-09-11T18:34:37.130911"
     },
     {
       "unidade": "Veranopolis",
@@ -115084,7 +115222,7 @@
       "utilizado_depois": 0.0,
       "pendente": 152.0,
       "linha_original": "05/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Jhosnery Alexandra Campos Romero (8329) (Parcela 2/48) Pago por: O paciente\t152,00 C\t152,00 C\t1\t\t\t5.011,22\t5.008,25",
-      "coletado_em": "2026-09-11T15:10:15.853607"
+      "coletado_em": "2026-09-11T18:34:37.161661"
     },
     {
       "unidade": "Veranopolis",
@@ -115107,7 +115245,7 @@
       "utilizado_depois": 0.0,
       "pendente": 127.0,
       "linha_original": "05/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Fernanda Ferreira Amaral (6803) (Parcela 27/48) Pago por: O paciente\t127,00 C\t127,00 C\t1\t\t\t5.138,22\t5.135,25",
-      "coletado_em": "2026-09-11T15:10:15.869131"
+      "coletado_em": "2026-09-11T18:34:37.177133"
     },
     {
       "unidade": "Veranopolis",
@@ -115130,7 +115268,7 @@
       "utilizado_depois": 0.0,
       "pendente": 152.0,
       "linha_original": "05/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Luis Juares Soares de Oliveira (7904) (Parcela 14/48) Pago por: Fernanda Ferreira Amaral\t152,00 C\t152,00 C\t1\t\t\t5.290,22\t5.287,25",
-      "coletado_em": "2026-09-11T15:10:15.884578"
+      "coletado_em": "2026-09-11T18:34:37.191793"
     },
     {
       "unidade": "Veranopolis",
@@ -115153,7 +115291,7 @@
       "utilizado_depois": 0.0,
       "pendente": 219.0,
       "linha_original": "05/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Edilmar Lencina Carneiro (1280) (Parcela 1/1) Pago por: O paciente\t219,00 C\t219,00 C\t1\t\t\t5.509,22\t5.506,25",
-      "coletado_em": "2026-09-11T15:10:15.899733"
+      "coletado_em": "2026-09-11T18:34:37.207088"
     },
     {
       "unidade": "Veranopolis",
@@ -115176,7 +115314,7 @@
       "utilizado_depois": 0.0,
       "pendente": 99.0,
       "linha_original": "05/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Edilmar Lencina Carneiro (1280) (Parcela 1/48) Pago por: O paciente\t99,00 C\t99,00 C\t1\t\t\t5.608,22\t5.605,25",
-      "coletado_em": "2026-09-11T15:10:15.915489"
+      "coletado_em": "2026-09-11T18:34:37.222637"
     },
     {
       "unidade": "Veranopolis",
@@ -115199,7 +115337,7 @@
       "utilizado_depois": 0.0,
       "pendente": 139.0,
       "linha_original": "05/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Paula Renata Brum Fortes (5360) (Parcela 1/48) Pago por: Edilmar Lencina Carneiro\t139,00 C\t139,00 C\t1\t\t\t5.747,22\t5.744,25",
-      "coletado_em": "2026-09-11T15:10:15.930543"
+      "coletado_em": "2026-09-11T18:34:37.237345"
     },
     {
       "unidade": "Veranopolis",
@@ -115222,7 +115360,7 @@
       "utilizado_depois": 1500.0,
       "pendente": 158.0,
       "linha_original": "05/09/2026\tPix Doutores\nAlexandre Favero\tRecebido de Rosemari dos Santos Pezzin (6002) (Parcela 7/48) Pago por: O paciente\t158,00 C\t158,00 C\t1\t\t\t5.905,22\t5.902,25",
-      "coletado_em": "2026-09-11T15:10:15.945147"
+      "coletado_em": "2026-09-11T18:34:37.252770"
     },
     {
       "unidade": "Veranopolis",
@@ -115245,7 +115383,7 @@
       "utilizado_depois": 0.0,
       "pendente": 269.0,
       "linha_original": "08/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Neusa Rodrigues de Brito (7601) (Parcela 1/1) Pago por: O paciente\t269,00 C\t269,00 C\t1\t\t\t15.435,72\t15.282,87",
-      "coletado_em": "2026-09-11T15:10:16.052883"
+      "coletado_em": "2026-09-11T18:34:37.358498"
     },
     {
       "unidade": "Veranopolis",
@@ -115268,7 +115406,7 @@
       "utilizado_depois": 0.0,
       "pendente": 219.0,
       "linha_original": "08/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Maria Clara Tessaro Mesquita de Lima (6844) (Parcela 1/1) Pago por: Elaine Mara Tessaro\t219,00 C\t219,00 C\t1\t\t\t15.654,72\t15.501,87",
-      "coletado_em": "2026-09-11T15:10:16.067991"
+      "coletado_em": "2026-09-11T18:34:37.373828"
     },
     {
       "unidade": "Veranopolis",
@@ -115291,7 +115429,7 @@
       "utilizado_depois": 0.0,
       "pendente": 305.0,
       "linha_original": "09/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Osmar Junior Pimentel (7987) (Parcela 1/1) Pago por: O paciente\t305,00 C\t305,00 C\t1\t\t\t16.493,72\t16.336,12",
-      "coletado_em": "2026-09-11T15:10:16.128865"
+      "coletado_em": "2026-09-11T18:34:37.433914"
     },
     {
       "unidade": "Veranopolis",
@@ -115314,7 +115452,7 @@
       "utilizado_depois": 0.0,
       "pendente": 152.0,
       "linha_original": "09/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Osmar Junior Pimentel (7987) (Parcela 13/48) Pago por: O paciente\t152,00 C\t152,00 C\t1\t\t\t16.645,72\t16.488,12",
-      "coletado_em": "2026-09-11T15:10:16.145591"
+      "coletado_em": "2026-09-11T18:34:37.450099"
     },
     {
       "unidade": "Veranopolis",
@@ -115337,7 +115475,7 @@
       "utilizado_depois": 0.0,
       "pendente": 148.0,
       "linha_original": "09/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Graciele Sinigaglia (2954) (Parcela 25/48) Pago por: O paciente\t148,00 C\t148,00 C\t1\t\t\t16.793,72\t16.636,12",
-      "coletado_em": "2026-09-11T15:10:16.160895"
+      "coletado_em": "2026-09-11T18:34:37.465094"
     },
     {
       "unidade": "Veranopolis",
@@ -115360,7 +115498,7 @@
       "utilizado_depois": 0.0,
       "pendente": 210.0,
       "linha_original": "09/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Eliane Carvalho da Cruz (6113) (Parcela 1/1) Pago por: O paciente\t210,00 C\t210,00 C\t1\t\t\t17.003,72\t16.846,12",
-      "coletado_em": "2026-09-11T15:10:16.175729"
+      "coletado_em": "2026-09-11T18:34:37.479965"
     },
     {
       "unidade": "Veranopolis",
@@ -115383,7 +115521,7 @@
       "utilizado_depois": 0.0,
       "pendente": 95.0,
       "linha_original": "09/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Eliane Carvalho da Cruz (6113) (Parcela 1/1) Pago por: O paciente\t95,00 C\t95,00 C\t1\t\t\t17.098,72\t16.941,12",
-      "coletado_em": "2026-09-11T15:10:16.190747"
+      "coletado_em": "2026-09-11T18:34:37.494936"
     },
     {
       "unidade": "Veranopolis",
@@ -115406,7 +115544,7 @@
       "utilizado_depois": 0.0,
       "pendente": 158.0,
       "linha_original": "09/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Graciele Escobar (8334) (Parcela 3/48) Pago por: O paciente\t158,00 C\t158,00 C\t1\t\t\t18.538,44\t18.365,62",
-      "coletado_em": "2026-09-11T15:10:16.310538"
+      "coletado_em": "2026-09-11T18:34:37.615226"
     },
     {
       "unidade": "Veranopolis",
@@ -115429,7 +115567,7 @@
       "utilizado_depois": 0.0,
       "pendente": 148.0,
       "linha_original": "09/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Larissa Cardoso Rodrigues (6741) (Parcela 26/48) Pago por: Fagner de Barros Silveira\t148,00 C\t148,00 C\t1\t\t\t19.236,44\t19.061,23",
-      "coletado_em": "2026-09-11T15:10:16.369892"
+      "coletado_em": "2026-09-11T18:34:37.675836"
     },
     {
       "unidade": "Veranopolis",
@@ -115452,7 +115590,7 @@
       "utilizado_depois": 0.0,
       "pendente": 148.0,
       "linha_original": "09/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Larissa Cardoso Rodrigues (6741) (Parcela 27/48) Pago por: O paciente\t148,00 C\t148,00 C\t1\t\t\t19.384,44\t19.209,23",
-      "coletado_em": "2026-09-11T15:10:16.384985"
+      "coletado_em": "2026-09-11T18:34:37.690939"
     },
     {
       "unidade": "Veranopolis",
@@ -115475,7 +115613,7 @@
       "utilizado_depois": 1500.0,
       "pendente": 99.88,
       "linha_original": "03/09/2026\tPix Doutores\nAlexandre Favero\tRecebido de Cícero Pereira de Sousa (7939) (Parcela 1/48) Pago por: O paciente\t99,88 C\t99,88 C\t1\t\t\t19.484,32\t19.309,11",
-      "coletado_em": "2026-09-11T15:10:16.399970"
+      "coletado_em": "2026-09-11T18:34:37.706112"
     },
     {
       "unidade": "Veranopolis",
@@ -115498,7 +115636,7 @@
       "utilizado_depois": 0.0,
       "pendente": 125.0,
       "linha_original": "09/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Bernardo Dall Agnol Ramos (6509) (Parcela 34/48) Pago por: Ana Paula Dall Agnol\t125,00 C\t125,00 C\t1\t\t\t20.088,32\t19.909,34",
-      "coletado_em": "2026-09-11T15:10:16.474751"
+      "coletado_em": "2026-09-11T18:34:37.781639"
     },
     {
       "unidade": "Veranopolis",
@@ -115521,7 +115659,7 @@
       "utilizado_depois": 0.0,
       "pendente": 158.0,
       "linha_original": "09/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Juarez Oliveira Gomes (7978) (Parcela 13/48) Pago por: O paciente\t158,00 C\t158,00 C\t1\t\t\t20.246,32\t20.067,34",
-      "coletado_em": "2026-09-11T15:10:16.489428"
+      "coletado_em": "2026-09-11T18:34:37.796970"
     },
     {
       "unidade": "Veranopolis",
@@ -115544,7 +115682,7 @@
       "utilizado_depois": 0.0,
       "pendente": 185.0,
       "linha_original": "10/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Elinéia Galvan Surtiqua (7413) (Parcela 23/48) Pago por: O paciente\t185,00 C\t185,00 C\t1\t\t\t24.225,32\t23.976,46",
-      "coletado_em": "2026-09-11T15:10:16.726767"
+      "coletado_em": "2026-09-11T18:34:38.029541"
     },
     {
       "unidade": "Veranopolis",
@@ -115567,7 +115705,7 @@
       "utilizado_depois": 0.0,
       "pendente": 95.0,
       "linha_original": "10/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Janaina Rubia Del Savio (2605) (Parcela 1/1) Pago por: O paciente\t95,00 C\t95,00 C\t1\t\t\t24.320,32\t24.071,46",
-      "coletado_em": "2026-09-11T15:10:16.742091"
+      "coletado_em": "2026-09-11T18:34:38.044336"
     },
     {
       "unidade": "Veranopolis",
@@ -115590,7 +115728,7 @@
       "utilizado_depois": 0.0,
       "pendente": 100.0,
       "linha_original": "10/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Cícero Pereira de Sousa (7939) (Parcela 1/1) Pago por: O paciente\t100,00 C\t100,00 C\t1\t\t\t24.420,32\t24.171,46",
-      "coletado_em": "2026-09-11T15:10:16.757592"
+      "coletado_em": "2026-09-11T18:34:38.059957"
     },
     {
       "unidade": "Veranopolis",
@@ -115613,7 +115751,7 @@
       "utilizado_depois": 0.0,
       "pendente": 148.0,
       "linha_original": "10/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Gabriela Laíz Zanin (7503) (Parcela 21/48) Pago por: O paciente\t148,00 C\t148,00 C\t1\t\t\t24.568,32\t24.319,46",
-      "coletado_em": "2026-09-11T15:10:16.772894"
+      "coletado_em": "2026-09-11T18:34:38.075243"
     },
     {
       "unidade": "Veranopolis",
@@ -115636,7 +115774,7 @@
       "utilizado_depois": 0.0,
       "pendente": 120.0,
       "linha_original": "09/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Gustavo Henrique de Souza Ferreira (7741) (Parcela 18/48) Pago por: Gilvan Nascimento Ferreira\t120,00 C\t120,00 C\t1\t\t\t26.134,94\t25.867,26",
-      "coletado_em": "2026-09-11T15:10:16.905713"
+      "coletado_em": "2026-09-11T18:34:38.209933"
     },
     {
       "unidade": "Veranopolis",
@@ -115659,7 +115797,7 @@
       "utilizado_depois": 0.0,
       "pendente": 120.0,
       "linha_original": "10/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Samuel Fagundes vieira (7969) (Parcela 1/1) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t27.556,94\t27.283,82",
-      "coletado_em": "2026-09-11T15:10:17.008635"
+      "coletado_em": "2026-09-11T18:34:38.314722"
     },
     {
       "unidade": "Veranopolis",
@@ -115682,7 +115820,7 @@
       "utilizado_depois": 0.0,
       "pendente": 120.0,
       "linha_original": "10/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Samuel Fagundes vieira (7969) (Parcela 13/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t27.676,94\t27.403,82",
-      "coletado_em": "2026-09-11T15:10:17.023232"
+      "coletado_em": "2026-09-11T18:34:38.329469"
     },
     {
       "unidade": "Veranopolis",
@@ -115705,7 +115843,7 @@
       "utilizado_depois": 0.0,
       "pendente": 99.0,
       "linha_original": "10/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Paula Cristina Maran (6279) (Parcela 38/48) Pago por: O paciente\t99,00 C\t99,00 C\t1\t\t\t27.775,94\t27.502,82",
-      "coletado_em": "2026-09-11T15:10:17.037592"
+      "coletado_em": "2026-09-11T18:34:38.344881"
     },
     {
       "unidade": "Veranopolis",
@@ -115728,7 +115866,7 @@
       "utilizado_depois": 0.0,
       "pendente": 120.0,
       "linha_original": "10/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Bruno Pagnooncelli (8249) (Parcela 4/48) Pago por: Leila Telles\t120,00 C\t120,00 C\t1\t\t\t27.895,94\t27.622,82",
-      "coletado_em": "2026-09-11T15:10:17.052513"
+      "coletado_em": "2026-09-11T18:34:38.360393"
     },
     {
       "unidade": "Veranopolis",
@@ -115751,7 +115889,7 @@
       "utilizado_depois": 0.0,
       "pendente": 120.0,
       "linha_original": "10/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Siumara da Silva (6010) (Parcela 2/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t28.015,94\t27.742,82",
-      "coletado_em": "2026-09-11T15:10:17.067318"
+      "coletado_em": "2026-09-11T18:34:38.375292"
     },
     {
       "unidade": "FloresDaCunha",
@@ -115774,7 +115912,7 @@
       "utilizado_depois": 5000.0,
       "pendente": 210.0,
       "linha_original": "03/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Ana Anelise Oliveira Moreira (20505) (Parcela 1/1) Pago por: O paciente\t210,00 C\t210,00 C\t1\t\t0\t2.200,00\t2.194,04",
-      "coletado_em": "2026-09-11T15:11:19.197172"
+      "coletado_em": "2026-09-11T18:35:38.164895"
     },
     {
       "unidade": "FloresDaCunha",
@@ -115797,7 +115935,7 @@
       "utilizado_depois": 5000.0,
       "pendente": 99.0,
       "linha_original": "03/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Ana Anelise Oliveira Moreira (20505) (Parcela 1/1) Pago por: O paciente\t99,00 C\t99,00 C\t1\t\t0\t2.299,00\t2.293,04",
-      "coletado_em": "2026-09-11T15:11:19.212344"
+      "coletado_em": "2026-09-11T18:35:38.180757"
     },
     {
       "unidade": "FloresDaCunha",
@@ -115820,7 +115958,7 @@
       "utilizado_depois": 5000.0,
       "pendente": 210.0,
       "linha_original": "04/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Gabriela Machado Vais (20728) (Parcela 1/1) Pago por: Janete Machado\t210,00 C\t210,00 C\t1\t\t0\t3.027,00\t3.014,03",
-      "coletado_em": "2026-09-11T15:11:19.271101"
+      "coletado_em": "2026-09-11T18:35:38.241215"
     },
     {
       "unidade": "FloresDaCunha",
@@ -115843,7 +115981,7 @@
       "utilizado_depois": 5000.0,
       "pendente": 125.0,
       "linha_original": "04/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Mateus Luzni (18555) (Parcela 8/48) Pago por: O paciente\t125,00 C\t125,00 C\t1\t\t0\t4.350,00\t4.307,20",
-      "coletado_em": "2026-09-11T15:11:19.302558"
+      "coletado_em": "2026-09-11T18:35:38.271394"
     },
     {
       "unidade": "FloresDaCunha",
@@ -115866,7 +116004,7 @@
       "utilizado_depois": 5000.0,
       "pendente": 210.0,
       "linha_original": "04/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Fatima Ceccato (15312) (Parcela 1/1) Pago por: O paciente\t210,00 C\t210,00 C\t1\t\t0\t3.672,00\t3.625,50",
-      "coletado_em": "2026-09-11T15:11:19.377428"
+      "coletado_em": "2026-09-11T18:35:38.345697"
     },
     {
       "unidade": "FloresDaCunha",
@@ -115889,7 +116027,7 @@
       "utilizado_depois": 5000.0,
       "pendente": 219.0,
       "linha_original": "05/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Josué Pereira Alves (20655) (Parcela 1/1) Pago por: O paciente\t219,00 C\t219,00 C\t1\t\t0\t4.016,00\t3.969,50",
-      "coletado_em": "2026-09-11T15:11:19.406444"
+      "coletado_em": "2026-09-11T18:35:38.375336"
     },
     {
       "unidade": "FloresDaCunha",
@@ -115912,7 +116050,7 @@
       "utilizado_depois": 5000.0,
       "pendente": 125.0,
       "linha_original": "05/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Josué Pereira Alves (20655) (Parcela 9/48) Pago por: O paciente\t125,00 C\t125,00 C\t1\t\t0\t4.141,00\t4.094,50",
-      "coletado_em": "2026-09-11T15:11:19.420662"
+      "coletado_em": "2026-09-11T18:35:38.390271"
     },
     {
       "unidade": "FloresDaCunha",
@@ -115935,7 +116073,7 @@
       "utilizado_depois": 5000.0,
       "pendente": 125.0,
       "linha_original": "05/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Pedro Ribeiro (20668) (Parcela 7/48) Pago por: Mobilidade Urbana 77 ltda\t125,00 C\t125,00 C\t1\t\t0\t4.266,00\t4.219,50",
-      "coletado_em": "2026-09-11T15:11:19.436030"
+      "coletado_em": "2026-09-11T18:35:38.405346"
     },
     {
       "unidade": "FloresDaCunha",
@@ -115958,7 +116096,7 @@
       "utilizado_depois": 5000.0,
       "pendente": 99.0,
       "linha_original": "05/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Bryan Rodrigues Back (16355) (Parcela 31/48) Pago por: O paciente\t99,00 C\t99,00 C\t1\t\t0\t4.365,00\t4.318,50",
-      "coletado_em": "2026-09-11T15:11:19.450873"
+      "coletado_em": "2026-09-11T18:35:38.420290"
     },
     {
       "unidade": "FloresDaCunha",
@@ -115981,7 +116119,7 @@
       "utilizado_depois": 5000.0,
       "pendente": 195.0,
       "linha_original": "05/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Isequias de Almeida Noronha (20177) (Parcela 1/1) Pago por: O paciente\t195,00 C\t195,00 C\t1\t\t0\t4.915,00\t4.868,50",
-      "coletado_em": "2026-09-11T15:11:19.504580"
+      "coletado_em": "2026-09-11T18:35:38.473450"
     },
     {
       "unidade": "FloresDaCunha",
@@ -116004,7 +116142,7 @@
       "utilizado_depois": 5000.0,
       "pendente": 120.0,
       "linha_original": "05/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Isequias de Almeida Noronha (20177) (Parcela 17/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t0\t5.035,00\t4.988,50",
-      "coletado_em": "2026-09-11T15:11:19.519637"
+      "coletado_em": "2026-09-11T18:35:38.489663"
     },
     {
       "unidade": "FloresDaCunha",
@@ -116027,7 +116165,7 @@
       "utilizado_depois": 5000.0,
       "pendente": 99.0,
       "linha_original": "05/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Luiz Henrique Schenkel (18497) (Parcela 19/48) Pago por: O paciente\t99,00 C\t99,00 C\t1\t\t0\t5.134,00\t5.087,50",
-      "coletado_em": "2026-09-11T15:11:19.533869"
+      "coletado_em": "2026-09-11T18:35:38.505826"
     },
     {
       "unidade": "FloresDaCunha",
@@ -116050,7 +116188,7 @@
       "utilizado_depois": 5000.0,
       "pendente": 105.0,
       "linha_original": "05/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Isaac Americano Maia (20027) (Parcela 19/48) Pago por: O paciente\t105,00 C\t105,00 C\t1\t\t0\t5.239,00\t5.192,50",
-      "coletado_em": "2026-09-11T15:11:19.548823"
+      "coletado_em": "2026-09-11T18:35:38.521654"
     },
     {
       "unidade": "FloresDaCunha",
@@ -116073,7 +116211,7 @@
       "utilizado_depois": 5000.0,
       "pendente": 120.0,
       "linha_original": "05/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Leandro Tafarel Dias Jardim (19300) (Parcela 10/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t0\t5.359,00\t5.312,50",
-      "coletado_em": "2026-09-11T15:11:19.563031"
+      "coletado_em": "2026-09-11T18:35:38.536950"
     },
     {
       "unidade": "FloresDaCunha",
@@ -116096,7 +116234,7 @@
       "utilizado_depois": 5000.0,
       "pendente": 120.0,
       "linha_original": "05/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Evellyn Laura Monteiro Neres (18437) (Parcela 12/48) Pago por: Deisiane Carolina Monteiro\t120,00 C\t120,00 C\t1\t\t0\t5.479,00\t5.432,50",
-      "coletado_em": "2026-09-11T15:11:19.577745"
+      "coletado_em": "2026-09-11T18:35:38.552093"
     },
     {
       "unidade": "FloresDaCunha",
@@ -116119,7 +116257,7 @@
       "utilizado_depois": 5000.0,
       "pendente": 125.0,
       "linha_original": "05/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Emilyn Moura da Silva (20235) (Parcela 3/48) Pago por: Jonatas Isaias da Silva\t125,00 C\t125,00 C\t1\t\t0\t5.604,00\t5.557,50",
-      "coletado_em": "2026-09-11T15:11:19.591701"
+      "coletado_em": "2026-09-11T18:35:38.567891"
     },
     {
       "unidade": "FloresDaCunha",
@@ -116142,7 +116280,7 @@
       "utilizado_depois": 5000.0,
       "pendente": 99.0,
       "linha_original": "04/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Gabriela Machado Vais (20728) (Parcela 1/1) Pago por: JANETE MACHADO\t99,00 C\t99,00 C\t1\t\t000\t5.703,00\t5.656,50",
-      "coletado_em": "2026-09-11T15:11:19.606428"
+      "coletado_em": "2026-09-11T18:35:38.583808"
     },
     {
       "unidade": "FloresDaCunha",
@@ -116165,7 +116303,7 @@
       "utilizado_depois": 5000.0,
       "pendente": 160.0,
       "linha_original": "08/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Elenice Alvez da Silva (13592) (Parcela 1/1) Pago por: O paciente\t160,00 C\t160,00 C\t1\t\t0\t5.770,50\t5.724,00",
-      "coletado_em": "2026-09-11T15:11:19.634717"
+      "coletado_em": "2026-09-11T18:35:38.612788"
     },
     {
       "unidade": "FloresDaCunha",
@@ -116188,7 +116326,7 @@
       "utilizado_depois": 5000.0,
       "pendente": 120.0,
       "linha_original": "08/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Bruna Cristina da Luz (17996) (Parcela 1/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t0\t5.990,50\t5.944,00",
-      "coletado_em": "2026-09-11T15:11:19.662893"
+      "coletado_em": "2026-09-11T18:35:38.642736"
     },
     {
       "unidade": "FloresDaCunha",
@@ -116211,7 +116349,7 @@
       "utilizado_depois": 5000.0,
       "pendente": 125.0,
       "linha_original": "08/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Bruna Regina de Souza (16293) (Parcela 3/48) Pago por: O paciente\t125,00 C\t125,00 C\t1\t\t0\t6.425,50\t6.374,62",
-      "coletado_em": "2026-09-11T15:11:19.719487"
+      "coletado_em": "2026-09-11T18:35:38.701532"
     },
     {
       "unidade": "FloresDaCunha",
@@ -116234,7 +116372,7 @@
       "utilizado_depois": 5000.0,
       "pendente": 201.0,
       "linha_original": "08/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Carenz Angelina Capriata Lozada (20574) (Parcela 1/1) Pago por: O paciente\t201,00 C\t201,00 C\t1\t\t0\t7.459,50\t7.403,34",
-      "coletado_em": "2026-09-11T15:11:19.834875"
+      "coletado_em": "2026-09-11T18:35:38.820842"
     },
     {
       "unidade": "FloresDaCunha",
@@ -116257,7 +116395,7 @@
       "utilizado_depois": 5000.0,
       "pendente": 99.0,
       "linha_original": "08/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Carenz Angelina Capriata Lozada (20574) (Parcela 1/1) Pago por: O paciente\t99,00 C\t99,00 C\t1\t\t0\t7.558,50\t7.502,34",
-      "coletado_em": "2026-09-11T15:11:19.849370"
+      "coletado_em": "2026-09-11T18:35:38.835298"
     },
     {
       "unidade": "FloresDaCunha",
@@ -116280,7 +116418,7 @@
       "utilizado_depois": 5000.0,
       "pendente": 120.0,
       "linha_original": "08/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Andrieli da Rosa (14292) (Parcela 17/48) Pago por: Luan Elicker Correa\t120,00 C\t120,00 C\t1\t\t0\t7.678,50\t7.622,34",
-      "coletado_em": "2026-09-11T15:11:19.863473"
+      "coletado_em": "2026-09-11T18:35:38.849716"
     },
     {
       "unidade": "FloresDaCunha",
@@ -116303,7 +116441,7 @@
       "utilizado_depois": 5000.0,
       "pendente": 113.0,
       "linha_original": "08/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Guilherme Biazus (20772) (Parcela 6/48) Pago por: Cerilda Leiva Pacheco de Ataide Biazus\t113,00 C\t113,00 C\t1\t\t000\t8.429,50\t8.369,52",
-      "coletado_em": "2026-09-11T15:11:19.949547"
+      "coletado_em": "2026-09-11T18:35:38.940210"
     },
     {
       "unidade": "FloresDaCunha",
@@ -116326,7 +116464,7 @@
       "utilizado_depois": 5000.0,
       "pendente": 120.0,
       "linha_original": "09/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Vanderlei dos Santos Araujo (17545) (Parcela 1/1) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t0\t8.450,49\t8.390,51",
-      "coletado_em": "2026-09-11T15:11:20.006466"
+      "coletado_em": "2026-09-11T18:35:38.999000"
     },
     {
       "unidade": "FloresDaCunha",
@@ -116349,7 +116487,7 @@
       "utilizado_depois": 5000.0,
       "pendente": 98.0,
       "linha_original": "09/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Maiara Gabi Pereira Da Cunha Estoquero (20350) (Parcela 1/1) Pago por: Janete Aparecida Pereira da Cunha\t98,00 C\t98,00 C\t1\t\t0\t8.748,49\t8.688,51",
-      "coletado_em": "2026-09-11T15:11:20.035448"
+      "coletado_em": "2026-09-11T18:35:39.028983"
     },
     {
       "unidade": "FloresDaCunha",
@@ -116372,7 +116510,7 @@
       "utilizado_depois": 5000.0,
       "pendente": 120.0,
       "linha_original": "10/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Yamila Adriana Pereira (20411) (Parcela 13/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t000\t11.954,52\t11.835,02",
-      "coletado_em": "2026-09-11T15:11:20.243590"
+      "coletado_em": "2026-09-11T18:35:39.235261"
     },
     {
       "unidade": "FloresDaCunha",
@@ -116395,7 +116533,7 @@
       "utilizado_depois": 5000.0,
       "pendente": 69.0,
       "linha_original": "10/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Jaqueline da Silva Lorenzo (21052) (Parcela 1/1) Pago por: O paciente\t69,00 C\t69,00 C\t1\t\t000\t12.615,52\t12.496,02",
-      "coletado_em": "2026-09-11T15:11:20.322465"
+      "coletado_em": "2026-09-11T18:35:39.308759"
     },
     {
       "unidade": "FloresDaCunha",
@@ -116418,7 +116556,7 @@
       "utilizado_depois": 5000.0,
       "pendente": 100.0,
       "linha_original": "10/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Andriel dos Santos Vieira (19540) (Parcela 1/1) Pago por: O paciente\t100,00 C\t100,00 C\t1\t\t000\t12.830,52\t12.711,02",
-      "coletado_em": "2026-09-11T15:11:20.350246"
+      "coletado_em": "2026-09-11T18:35:39.339189"
     },
     {
       "unidade": "FloresDaCunha",
@@ -116441,7 +116579,7 @@
       "utilizado_depois": 5000.0,
       "pendente": 100.0,
       "linha_original": "10/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Andriel dos Santos Vieira (19540) (Parcela 26/48) Pago por: O paciente\t100,00 C\t100,00 C\t1\t\t000\t12.930,52\t12.811,02",
-      "coletado_em": "2026-09-11T15:11:20.364405"
+      "coletado_em": "2026-09-11T18:35:39.354764"
     },
     {
       "unidade": "FloresDaCunha",
@@ -116464,7 +116602,7 @@
       "utilizado_depois": 5000.0,
       "pendente": 249.0,
       "linha_original": "10/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Luan Pedroso Abreu (17492) (Parcela 1/1) Pago por: O paciente\t249,00 C\t249,00 C\t1\t\t000\t13.179,52\t13.060,02",
-      "coletado_em": "2026-09-11T15:11:20.378078"
+      "coletado_em": "2026-09-11T18:35:39.369548"
     },
     {
       "unidade": "FloresDaCunha",
@@ -116487,7 +116625,7 @@
       "utilizado_depois": 5000.0,
       "pendente": 95.0,
       "linha_original": "10/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Luan Pedroso Abreu (17492) (Parcela 16/48) Pago por: O paciente\t95,00 C\t95,00 C\t1\t\t000\t13.274,52\t13.155,02",
-      "coletado_em": "2026-09-11T15:11:20.392463"
+      "coletado_em": "2026-09-11T18:35:39.390354"
     },
     {
       "unidade": "FloresDaCunha",
@@ -116510,7 +116648,7 @@
       "utilizado_depois": 5000.0,
       "pendente": 98.0,
       "linha_original": "10/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Gustavo Cirilo Lanzzarini (15306) (Parcela 20/48) Pago por: O paciente\t98,00 C\t98,00 C\t1\t\t000\t13.497,52\t13.378,02",
-      "coletado_em": "2026-09-11T15:11:20.421014"
+      "coletado_em": "2026-09-11T18:35:39.423289"
     }
   ],
   "erros": [
@@ -116614,13 +116752,13 @@
       "unidade": "Garibaldi",
       "competencia": "2026-09",
       "erro": "Menu Finanças não encontrado.",
-      "coletado_em": "2026-09-11T15:09:16.565775"
+      "coletado_em": "2026-09-11T18:33:39.212714"
     },
     {
       "unidade": "Ssdocai",
       "competencia": "2026-09",
       "erro": "Menu Finanças não encontrado.",
-      "coletado_em": "2026-09-11T15:10:20.205429"
+      "coletado_em": "2026-09-11T18:34:40.311540"
     }
   ],
   "registros_por_competencia": {
@@ -228810,7 +228948,7 @@
         "utilizado_depois": 10000.0,
         "pendente": 516.0,
         "linha_original": "02/09/2026\tPix Doutores\nFranciele Pedrotti\tRecebido de Ezequiel Rediss (23064) (Parcela 1/1) Pago por: O paciente\t516,00 C\t516,00 C\t1\t\t\t2.389,00\t2.365,81",
-        "coletado_em": "2026-09-11T15:05:09.653953"
+        "coletado_em": "2026-09-11T18:29:36.784036"
       },
       {
         "unidade": "Caxias",
@@ -228833,7 +228971,7 @@
         "utilizado_depois": 6000.0,
         "pendente": 105.0,
         "linha_original": "03/09/2026\tPix Doutores\nDionathan Pohlmann\tRecebido de Karen Sakszewski Franco (45365) (Parcela 32/48) Pago por: O paciente\t105,00 C\t105,00 C\t1\t\t\t2.494,00\t2.470,81",
-        "coletado_em": "2026-09-11T15:05:09.670812"
+        "coletado_em": "2026-09-11T18:29:36.802387"
       },
       {
         "unidade": "Caxias",
@@ -228856,7 +228994,7 @@
         "utilizado_depois": 6000.0,
         "pendente": 105.0,
         "linha_original": "03/09/2026\tPix Doutores\nDionathan Pohlmann\tRecebido de Rebeca Franco dos Santos (46715) (Parcela 23/48) Pago por: Karen Sakszewski Franco\t105,00 C\t105,00 C\t1\t\t\t2.599,00\t2.575,81",
-        "coletado_em": "2026-09-11T15:05:09.688328"
+        "coletado_em": "2026-09-11T18:29:36.820642"
       },
       {
         "unidade": "Caxias",
@@ -228879,7 +229017,7 @@
         "utilizado_depois": 10000.0,
         "pendente": 115.0,
         "linha_original": "04/09/2026\tPix Doutores\nFranciele Pedrotti\tRecebido de Gabriele Fagundes Pinto (50510) (Parcela 3/48) Pago por: O paciente\t115,00 C\t115,00 C\t1\t\t\t2.485,85\t2.462,66",
-        "coletado_em": "2026-09-11T15:05:09.808458"
+        "coletado_em": "2026-09-11T18:29:36.943592"
       },
       {
         "unidade": "Caxias",
@@ -228902,7 +229040,7 @@
         "utilizado_depois": 2700.0,
         "pendente": 119.0,
         "linha_original": "04/09/2026\tPix Doutores\nThalia Tessaro\tRecebido de Huelinton Xavier Teixeira (40484) (Parcela 5/48) Pago por: O paciente\t119,00 C\t119,00 C\t1\t\t\t2.604,85\t2.581,66",
-        "coletado_em": "2026-09-11T15:05:09.834060"
+        "coletado_em": "2026-09-11T18:29:36.962019"
       },
       {
         "unidade": "Caxias",
@@ -228925,7 +229063,7 @@
         "utilizado_depois": 10000.0,
         "pendente": 120.0,
         "linha_original": "04/09/2026\tPix Doutores\nFranciele Pedrotti\tRecebido de Maria Alice Gonçalves Pires Leite (50465) (Parcela 1/48) Pago por: Neidivan da Silva Leite\t120,00 C\t120,00 C\t1\t\t\t2.724,85\t2.701,66",
-        "coletado_em": "2026-09-11T15:05:09.850168"
+        "coletado_em": "2026-09-11T18:29:36.988183"
       },
       {
         "unidade": "Caxias",
@@ -228948,7 +229086,7 @@
         "utilizado_depois": 10000.0,
         "pendente": 321.0,
         "linha_original": "04/09/2026\tPix Doutores\nFranciele Pedrotti\tRecebido de Lucilene da Silva Borges (48675) (Parcela 1/1) Pago por: O paciente\t321,00 C\t321,00 C\t1\t\t\t3.812,25\t3.767,84",
-        "coletado_em": "2026-09-11T15:05:09.931916"
+        "coletado_em": "2026-09-11T18:29:37.075053"
       },
       {
         "unidade": "Caxias",
@@ -228971,7 +229109,7 @@
         "utilizado_depois": 10000.0,
         "pendente": 210.0,
         "linha_original": "05/09/2026\tPix Doutores\nFranciele Pedrotti\tRecebido de Andriel da Costa Serpa (49913) (Parcela 1/48) Pago por: O paciente\t210,00 C\t210,00 C\t1\t\t\t4.670,25\t4.618,41",
-        "coletado_em": "2026-09-11T15:05:10.014386"
+        "coletado_em": "2026-09-11T18:29:37.159837"
       },
       {
         "unidade": "Caxias",
@@ -228994,7 +229132,7 @@
         "utilizado_depois": 10000.0,
         "pendente": 137.0,
         "linha_original": "05/09/2026\tPix Doutores\nFranciele Pedrotti\tRecebido de Aidanny Sair Urriola (48507) (Parcela 20/48) Pago por: O paciente\t137,00 C\t137,00 C\t1\t\t\t5.254,75\t5.192,99",
-        "coletado_em": "2026-09-11T15:05:10.095642"
+        "coletado_em": "2026-09-11T18:29:37.249907"
       },
       {
         "unidade": "Caxias",
@@ -229017,7 +229155,7 @@
         "utilizado_depois": 10000.0,
         "pendente": 120.0,
         "linha_original": "05/09/2026\tPix Doutores\nFranciele Pedrotti\tRecebido de Brunela Borf (47301) (Parcela 7/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t5.584,75\t5.518,39",
-        "coletado_em": "2026-09-11T15:05:10.128950"
+        "coletado_em": "2026-09-11T18:29:37.283515"
       },
       {
         "unidade": "Caxias",
@@ -229040,7 +229178,7 @@
         "utilizado_depois": 10000.0,
         "pendente": 95.0,
         "linha_original": "08/09/2026\tPix Doutores\nFranciele Pedrotti\tRecebido de Cristiane Rech Boeira (48048) (Parcela 21/48) Pago por: O paciente\t95,00 C\t95,00 C\t1\t\t\t6.479,80\t6.376,41",
-        "coletado_em": "2026-09-11T15:05:10.305636"
+        "coletado_em": "2026-09-11T18:29:37.465413"
       },
       {
         "unidade": "Caxias",
@@ -229063,7 +229201,7 @@
         "utilizado_depois": 10000.0,
         "pendente": 115.0,
         "linha_original": "08/09/2026\tPix Doutores\nFranciele Pedrotti\tRecebido de Crislaine Da Silva (48222) (Parcela 12/48) Pago por: O paciente\t115,00 C\t115,00 C\t1\t\t\t7.460,80\t7.355,56",
-        "coletado_em": "2026-09-11T15:05:10.369288"
+        "coletado_em": "2026-09-11T18:29:37.531993"
       },
       {
         "unidade": "Caxias",
@@ -229086,7 +229224,7 @@
         "utilizado_depois": 10000.0,
         "pendente": 120.0,
         "linha_original": "10/09/2026\tPix Doutores\nFranciele Pedrotti\tRecebido de Inara Naylanny Nunes Barbosa (49618) (Parcela 11/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t1.692,81\t1.579,82",
-        "coletado_em": "2026-09-11T15:05:10.484306"
+        "coletado_em": "2026-09-11T18:29:37.652313"
       },
       {
         "unidade": "Caxias",
@@ -229109,7 +229247,7 @@
         "utilizado_depois": 10000.0,
         "pendente": 120.0,
         "linha_original": "10/09/2026\tPix Doutores\nFranciele Pedrotti\tRecebido de Vilma Maria Monteiro Prudêncio (49673) (Parcela 11/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t1.560,78\t1.440,35",
-        "coletado_em": "2026-09-11T15:05:10.649178"
+        "coletado_em": "2026-09-11T18:29:37.826301"
       },
       {
         "unidade": "Caxias",
@@ -229132,7 +229270,7 @@
         "utilizado_depois": 10000.0,
         "pendente": 130.0,
         "linha_original": "10/09/2026\tPix Doutores\nFranciele Pedrotti\tRecebido de Alberth Jose Alvarez Hernandez (47513) (Parcela 26/48) Pago por: O paciente\t130,00 C\t130,00 C\t1\t\t\t248,09\t127,66",
-        "coletado_em": "2026-09-11T15:05:10.681333"
+        "coletado_em": "2026-09-11T18:29:37.859053"
       },
       {
         "unidade": "Caxias",
@@ -229155,7 +229293,7 @@
         "utilizado_depois": 10000.0,
         "pendente": 120.0,
         "linha_original": "10/09/2026\tPix Doutores\nFranciele Pedrotti\tRecebido de Cristopher Adrian Campos Aguirre (49575) (Parcela 12/48) Pago por: Alberth Jose Alvarez Hernandez\t120,00 C\t120,00 C\t1\t\t\t368,09\t247,66",
-        "coletado_em": "2026-09-11T15:05:10.698131"
+        "coletado_em": "2026-09-11T18:29:37.876278"
       },
       {
         "unidade": "Caxias",
@@ -229178,7 +229316,7 @@
         "utilizado_depois": 10000.0,
         "pendente": 5.0,
         "linha_original": "10/09/2026\tPix Doutores\nFranciele Pedrotti\tRecebido de Kaio Diones Rodrigues (43398) (Parcela 1/1) Pago por: Jessica Adriane Barbosa Rodrigues\t5,00 C\t5,00 C\t1\t\t\t-31.227,42\t-31.454,67",
-        "coletado_em": "2026-09-11T15:05:11.305557"
+        "coletado_em": "2026-09-11T18:29:38.500184"
       },
       {
         "unidade": "Caxias",
@@ -229201,7 +229339,7 @@
         "utilizado_depois": 10000.0,
         "pendente": 85.0,
         "linha_original": "10/09/2026\tPix Doutores\nFranciele Pedrotti\tRecebido de Nicolas Elesbão Rosa (33789) (Parcela 18/48) Pago por: Luciano Amaral Rosa\t85,00 C\t85,00 C\t1\t\t\t-34.915,65\t-35.159,91",
-        "coletado_em": "2026-09-11T15:05:11.496923"
+        "coletado_em": "2026-09-11T18:29:38.696422"
       },
       {
         "unidade": "Caxias",
@@ -229224,7 +229362,7 @@
         "utilizado_depois": 10000.0,
         "pendente": 155.0,
         "linha_original": "10/09/2026\tPix Doutores\nFranciele Pedrotti\tRecebido de Isaac de Lima da Silva (49436) (Parcela 12/48) Pago por: O paciente\t155,00 C\t155,00 C\t1\t\t\t-45.458,61\t-45.705,57",
-        "coletado_em": "2026-09-11T15:05:11.705653"
+        "coletado_em": "2026-09-11T18:29:38.909441"
       },
       {
         "unidade": "Caxias",
@@ -229247,7 +229385,7 @@
         "utilizado_depois": 10000.0,
         "pendente": 120.0,
         "linha_original": "10/09/2026\tPix Doutores\nFranciele Pedrotti\tRecebido de Nariely Backes Lara (48990) (Parcela 17/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t-45.223,61\t-45.470,57",
-        "coletado_em": "2026-09-11T15:05:11.738026"
+        "coletado_em": "2026-09-11T18:29:38.941861"
       },
       {
         "unidade": "Caxias",
@@ -229270,7 +229408,7 @@
         "utilizado_depois": 10000.0,
         "pendente": 85.0,
         "linha_original": "10/09/2026\tPix Doutores\nFranciele Pedrotti\tRecebido de Morgana de Jesus Rodrigues (38577) (Parcela 18/48) Pago por: O paciente\t85,00 C\t85,00 C\t1\t\t\t-44.260,61\t-44.521,92",
-        "coletado_em": "2026-09-11T15:05:11.832549"
+        "coletado_em": "2026-09-11T18:29:39.039801"
       },
       {
         "unidade": "Caxias",
@@ -229293,7 +229431,76 @@
         "utilizado_depois": 10000.0,
         "pendente": 120.0,
         "linha_original": "10/09/2026\tPix Doutores\nFranciele Pedrotti\tRecebido de Cristian Daro Gomaes (49102) (Parcela 15/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t-44.140,61\t-44.401,92",
-        "coletado_em": "2026-09-11T15:05:11.848047"
+        "coletado_em": "2026-09-11T18:29:39.056487"
+      },
+      {
+        "unidade": "Caxias",
+        "data": "11/09/2026",
+        "competencia": "2026-09",
+        "metodo_pagamento": "Pix Doutores",
+        "responsavel_fiscal_lido": "Franciele Pedrotti",
+        "doutor_id": "16",
+        "doutor_final": "Franciele Pedrotti",
+        "doutor_encontrado": true,
+        "paciente": "Recebido de Ketlin Gabriela Souza de Jesus Godoy Pago por: Kely de Jesus Monteiro",
+        "codigo_origem": "45315",
+        "parcela": "38/48",
+        "origem": "Recebido de Ketlin Gabriela Souza de Jesus Godoy (45315) (Parcela 38/48) Pago por: Kely de Jesus Monteiro",
+        "valor": 99.0,
+        "valor_com_descontos": 99.0,
+        "credito_antes": 0.0,
+        "valor_descontado": 0.0,
+        "credito_depois": 0.0,
+        "utilizado_depois": 10000.0,
+        "pendente": 99.0,
+        "linha_original": "11/09/2026\tPix Doutores\nFranciele Pedrotti\tRecebido de Ketlin Gabriela Souza de Jesus Godoy (45315) (Parcela 38/48) Pago por: Kely de Jesus Monteiro\t99,00 C\t99,00 C\t1\t\t\t-42.633,61\t-42.918,34",
+        "coletado_em": "2026-09-11T18:29:39.145406"
+      },
+      {
+        "unidade": "Caxias",
+        "data": "11/09/2026",
+        "competencia": "2026-09",
+        "metodo_pagamento": "Pix Doutores",
+        "responsavel_fiscal_lido": "Franciele Pedrotti",
+        "doutor_id": "16",
+        "doutor_final": "Franciele Pedrotti",
+        "doutor_encontrado": true,
+        "paciente": "Recebido de Sophia Mello de Oliveira Pago por: Lisiane Pereira de Mello",
+        "codigo_origem": "43332",
+        "parcela": "18/48",
+        "origem": "Recebido de Sophia Mello de Oliveira (43332) (Parcela 18/48) Pago por: Lisiane Pereira de Mello",
+        "valor": 85.0,
+        "valor_com_descontos": 85.0,
+        "credito_antes": 0.0,
+        "valor_descontado": 0.0,
+        "credito_depois": 0.0,
+        "utilizado_depois": 10000.0,
+        "pendente": 85.0,
+        "linha_original": "11/09/2026\tPix Doutores\nFranciele Pedrotti\tRecebido de Sophia Mello de Oliveira (43332) (Parcela 18/48) Pago por: Lisiane Pereira de Mello\t85,00 C\t85,00 C\t1\t\t\t-42.463,61\t-42.748,34",
+        "coletado_em": "2026-09-11T18:29:39.178666"
+      },
+      {
+        "unidade": "Caxias",
+        "data": "11/09/2026",
+        "competencia": "2026-09",
+        "metodo_pagamento": "Pix Doutores",
+        "responsavel_fiscal_lido": "Franciele Pedrotti",
+        "doutor_id": "16",
+        "doutor_final": "Franciele Pedrotti",
+        "doutor_encontrado": true,
+        "paciente": "Recebido de Renan Cardoso Damin Pago por: O paciente",
+        "codigo_origem": "42370",
+        "parcela": "9/48",
+        "origem": "Recebido de Renan Cardoso Damin (42370) (Parcela 9/48) Pago por: O paciente",
+        "valor": 95.0,
+        "valor_com_descontos": 95.0,
+        "credito_antes": 0.0,
+        "valor_descontado": 0.0,
+        "credito_depois": 0.0,
+        "utilizado_depois": 10000.0,
+        "pendente": 95.0,
+        "linha_original": "11/09/2026\tPix Doutores\nFranciele Pedrotti\tRecebido de Renan Cardoso Damin (42370) (Parcela 9/48) Pago por: O paciente\t95,00 C\t95,00 C\t1\t\t\t-41.649,61\t-41.942,54",
+        "coletado_em": "2026-09-11T18:29:39.305928"
       },
       {
         "unidade": "Farroupilha",
@@ -229316,7 +229523,7 @@
         "utilizado_depois": 2000.0,
         "pendente": 99.0,
         "linha_original": "01/09/2026\tPix Doutores\nEverlize Cipriani\tRecebido de Bruno Provensi De Jesus (4752) (Parcela 36/48) Pago por: O paciente\t99,00 C\t99,00 C\t1\t\t\t487,00\t487,00",
-        "coletado_em": "2026-09-11T15:06:11.129479"
+        "coletado_em": "2026-09-11T18:30:36.895902"
       },
       {
         "unidade": "Farroupilha",
@@ -229339,7 +229546,7 @@
         "utilizado_depois": 2500.0,
         "pendente": 158.0,
         "linha_original": "01/09/2026\tPix Doutores\nThalia Vezzosi\tRecebido de Anny Stefania Rodriguez Palmares (152696) (Parcela 11/48) Pago por: O paciente\t158,00 C\t158,00 C\t1\t\t\t645,00\t645,00",
-        "coletado_em": "2026-09-11T15:06:11.146089"
+        "coletado_em": "2026-09-11T18:30:36.912579"
       },
       {
         "unidade": "Farroupilha",
@@ -229362,7 +229569,7 @@
         "utilizado_depois": 2500.0,
         "pendente": 120.0,
         "linha_original": "01/09/2026\tPix Doutores\nThalia Vezzosi\tRecebido de Emilly Padilha Dutra (152873) (Parcela 5/48) Pago por: Marta padilha\t120,00 C\t120,00 C\t1\t\t\t1.503,00\t1.503,00",
-        "coletado_em": "2026-09-11T15:06:11.244769"
+        "coletado_em": "2026-09-11T18:30:37.011161"
       },
       {
         "unidade": "Farroupilha",
@@ -229385,7 +229592,7 @@
         "utilizado_depois": 2500.0,
         "pendente": 335.0,
         "linha_original": "01/09/2026\tPix Doutores\nThalia Vezzosi\tRecebido de Engerbert Argenis Salazar Blanca (153062) (Parcela 1/1) Pago por: O paciente\t335,00 C\t335,00 C\t1\t\t\t2.204,00\t2.200,48",
-        "coletado_em": "2026-09-11T15:06:11.309428"
+        "coletado_em": "2026-09-11T18:30:37.075494"
       },
       {
         "unidade": "Farroupilha",
@@ -229408,7 +229615,7 @@
         "utilizado_depois": 2500.0,
         "pendente": 108.0,
         "linha_original": "01/09/2026\tPix Doutores\nThalia Vezzosi\tRecebido de Klaiton De Maman Da Costa (146765) (Parcela 18/48) Pago por: O paciente\t108,00 C\t108,00 C\t1\t\t\t2.312,00\t2.308,48",
-        "coletado_em": "2026-09-11T15:06:11.326076"
+        "coletado_em": "2026-09-11T18:30:37.091459"
       },
       {
         "unidade": "Farroupilha",
@@ -229431,7 +229638,7 @@
         "utilizado_depois": 2500.0,
         "pendente": 99.0,
         "linha_original": "04/09/2026\tPix Doutores\nThalia Vezzosi\tRecebido de Lauana de Fatima (150603) (Parcela 38/48) Pago por: O paciente\t99,00 C\t99,00 C\t1\t\t\t2.960,00\t2.945,77",
-        "coletado_em": "2026-09-11T15:06:11.405861"
+        "coletado_em": "2026-09-11T18:30:37.180662"
       },
       {
         "unidade": "Farroupilha",
@@ -229454,7 +229661,7 @@
         "utilizado_depois": 2500.0,
         "pendente": 120.0,
         "linha_original": "04/09/2026\tPix Doutores\nThalia Vezzosi\tRecebido de Ledinara Carla Brizola (152366) (Parcela 16/48) Pago por: Lauana Brizola\t120,00 C\t120,00 C\t1\t\t\t3.080,00\t3.065,77",
-        "coletado_em": "2026-09-11T15:06:11.424513"
+        "coletado_em": "2026-09-11T18:30:37.196713"
       },
       {
         "unidade": "Farroupilha",
@@ -229477,7 +229684,7 @@
         "utilizado_depois": 2500.0,
         "pendente": 115.0,
         "linha_original": "05/09/2026\tPix Doutores\nThalia Vezzosi\tRecebido de Matheus Taques do Santos (150583) (Parcela 34/48) Pago por: O paciente\t115,00 C\t115,00 C\t1\t\t\t3.818,00\t3.796,55",
-        "coletado_em": "2026-09-11T15:06:11.512166"
+        "coletado_em": "2026-09-11T18:30:37.274259"
       },
       {
         "unidade": "Farroupilha",
@@ -229500,7 +229707,7 @@
         "utilizado_depois": 2500.0,
         "pendente": 165.0,
         "linha_original": "05/09/2026\tPix Doutores\nThalia Vezzosi\tRecebido de Janieli Moraes Dos Santos (152540) (Parcela 3/48) Pago por: O paciente\t165,00 C\t165,00 C\t1\t\t\t4.683,00\t4.657,73",
-        "coletado_em": "2026-09-11T15:06:11.604984"
+        "coletado_em": "2026-09-11T18:30:37.368087"
       },
       {
         "unidade": "Farroupilha",
@@ -229523,7 +229730,7 @@
         "utilizado_depois": 2500.0,
         "pendente": 99.0,
         "linha_original": "05/09/2026\tPix Doutores\nThalia Vezzosi\tRecebido de Sarah Martins Da silva (142326) (Parcela 1/48) Pago por: O paciente\t99,00 C\t99,00 C\t1\t\t\t4.782,00\t4.756,73",
-        "coletado_em": "2026-09-11T15:06:11.622305"
+        "coletado_em": "2026-09-11T18:30:37.385368"
       },
       {
         "unidade": "Farroupilha",
@@ -229546,7 +229753,7 @@
         "utilizado_depois": 2500.0,
         "pendente": 102.0,
         "linha_original": "05/09/2026\tPix Doutores\nThalia Vezzosi\tRecebido de Maicon Adelar Perreira (146401) (Parcela 18/48) Pago por: O paciente\t102,00 C\t102,00 C\t1\t\t\t4.884,00\t4.858,73",
-        "coletado_em": "2026-09-11T15:06:11.638171"
+        "coletado_em": "2026-09-11T18:30:37.401147"
       },
       {
         "unidade": "Farroupilha",
@@ -229569,7 +229776,7 @@
         "utilizado_depois": 2500.0,
         "pendente": 105.0,
         "linha_original": "05/09/2026\tPix Doutores\nThalia Vezzosi\tRecebido de Erick Fagundes Pereira Pinto (152091) (Parcela 18/48) Pago por: O paciente\t105,00 C\t105,00 C\t1\t\t\t5.091,00\t5.063,80",
-        "coletado_em": "2026-09-11T15:06:11.669510"
+        "coletado_em": "2026-09-11T18:30:37.431972"
       },
       {
         "unidade": "Farroupilha",
@@ -229592,7 +229799,7 @@
         "utilizado_depois": 2500.0,
         "pendente": 124.0,
         "linha_original": "08/09/2026\tPix Doutores\nThalia Vezzosi\tRecebido de Eloise Bacelar Lucas Alho (152975) (Parcela 3/48) Pago por: Anne Michele Bacelar Lucas\t124,00 C\t124,00 C\t1\t\t\t5.330,00\t5.302,80",
-        "coletado_em": "2026-09-11T15:06:11.700443"
+        "coletado_em": "2026-09-11T18:30:37.463221"
       },
       {
         "unidade": "Farroupilha",
@@ -229615,7 +229822,7 @@
         "utilizado_depois": 10000.0,
         "pendente": 120.0,
         "linha_original": "08/09/2026\tPix Doutores\nFranciele Pedrotti\tRecebido de Elizandra Carmen Grandi Luz (152346) (Parcela 15/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t1075\t5.450,00\t5.422,80",
-        "coletado_em": "2026-09-11T15:06:11.715881"
+        "coletado_em": "2026-09-11T18:30:37.478985"
       },
       {
         "unidade": "Farroupilha",
@@ -229638,7 +229845,7 @@
         "utilizado_depois": 10000.0,
         "pendente": 120.0,
         "linha_original": "08/09/2026\tPix Doutores\nFranciele Pedrotti\tRecebido de Vinicius Grandi Luz (152737) (Parcela 2/48) Pago por: Elizandra Carmen Grandi\t120,00 C\t120,00 C\t1\t\t1075\t5.570,00\t5.542,80",
-        "coletado_em": "2026-09-11T15:06:11.731280"
+        "coletado_em": "2026-09-11T18:30:37.494921"
       },
       {
         "unidade": "Farroupilha",
@@ -229661,7 +229868,7 @@
         "utilizado_depois": 2500.0,
         "pendente": 188.0,
         "linha_original": "08/09/2026\tPix Doutores\nThalia Vezzosi\tRecebido de Ketlyn Stefany Da Costa Vargas (152997) (Parcela 1/1) Pago por: O paciente\t188,00 C\t188,00 C\t1\t\t\t5.758,00\t5.730,80",
-        "coletado_em": "2026-09-11T15:06:11.747549"
+        "coletado_em": "2026-09-11T18:30:37.513383"
       },
       {
         "unidade": "Farroupilha",
@@ -229684,7 +229891,7 @@
         "utilizado_depois": 2500.0,
         "pendente": 120.0,
         "linha_original": "08/09/2026\tPix Doutores\nThalia Vezzosi\tRecebido de Eduarda Zinn Lara (147324) (Parcela 6/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t5.878,00\t5.850,80",
-        "coletado_em": "2026-09-11T15:06:11.763719"
+        "coletado_em": "2026-09-11T18:30:37.529857"
       },
       {
         "unidade": "Farroupilha",
@@ -229707,7 +229914,7 @@
         "utilizado_depois": 2500.0,
         "pendente": 20.0,
         "linha_original": "05/09/2026\tPix Doutores\nThalia Vezzosi\tRecebido de Erick Fagundes Pereira Pinto (152091) (Parcela 1/1) Pago por: O paciente\t20,00 C\t20,00 C\t1\t\t\t5.898,00\t5.870,80",
-        "coletado_em": "2026-09-11T15:06:11.779940"
+        "coletado_em": "2026-09-11T18:30:37.545639"
       },
       {
         "unidade": "Farroupilha",
@@ -229730,7 +229937,7 @@
         "utilizado_depois": 2500.0,
         "pendente": 155.0,
         "linha_original": "08/09/2026\tPix Doutores\nThalia Vezzosi\tRecebido de Vanderson da Silva chaúl (152313) (Parcela 17/48) Pago por: O paciente\t155,00 C\t155,00 C\t1\t\t\t6.192,00\t6.164,80",
-        "coletado_em": "2026-09-11T15:06:11.810868"
+        "coletado_em": "2026-09-11T18:30:37.576456"
       },
       {
         "unidade": "Farroupilha",
@@ -229753,7 +229960,7 @@
         "utilizado_depois": 2500.0,
         "pendente": 269.0,
         "linha_original": "08/09/2026\tPix Doutores\nThalia Vezzosi\tRecebido de Francisco Jose Herrera (152436) (Parcela 1/1) Pago por: O paciente\t269,00 C\t269,00 C\t1\t\t\t6.666,00\t6.637,06",
-        "coletado_em": "2026-09-11T15:06:11.857970"
+        "coletado_em": "2026-09-11T18:30:37.623053"
       },
       {
         "unidade": "Farroupilha",
@@ -229776,7 +229983,7 @@
         "utilizado_depois": 2500.0,
         "pendente": 135.0,
         "linha_original": "08/09/2026\tPix Doutores\nThalia Vezzosi\tRecebido de Gabriel Souza da Silva (149585) (Parcela 21/48) Pago por: O paciente\t135,00 C\t135,00 C\t1\t\t\t7.115,00\t7.086,06",
-        "coletado_em": "2026-09-11T15:06:11.904928"
+        "coletado_em": "2026-09-11T18:30:37.670112"
       },
       {
         "unidade": "Farroupilha",
@@ -229799,7 +230006,7 @@
         "utilizado_depois": 2500.0,
         "pendente": 165.0,
         "linha_original": "08/09/2026\tPix Doutores\nThalia Vezzosi\tRecebido de Juliana Oliveira Dos Santos (152875) (Parcela 5/48) Pago por: O paciente\t165,00 C\t165,00 C\t1\t\t\t7.889,00\t7.855,81",
-        "coletado_em": "2026-09-11T15:06:11.997655"
+        "coletado_em": "2026-09-11T18:30:37.764143"
       },
       {
         "unidade": "Farroupilha",
@@ -229822,7 +230029,7 @@
         "utilizado_depois": 1000.0,
         "pendente": 120.0,
         "linha_original": "08/09/2026\tPix Doutores\nGiovana Gasparini\tRecebido de Yasmin Ramineli Zanella (152961) (Parcela 3/48) Pago por: Bruno de souza zanella\t120,00 C\t120,00 C\t1\t\t\t8.413,00\t8.376,37",
-        "coletado_em": "2026-09-11T15:06:12.045045"
+        "coletado_em": "2026-09-11T18:30:37.810956"
       },
       {
         "unidade": "Farroupilha",
@@ -229845,7 +230052,7 @@
         "utilizado_depois": 1000.0,
         "pendente": 125.0,
         "linha_original": "08/09/2026\tPix Doutores\nGiovana Gasparini\tRecebido de Edivan Caceres Alves (149731) (Parcela 1/48) Pago por: O paciente\t125,00 C\t125,00 C\t1\t\t\t9.469,00\t9.405,53",
-        "coletado_em": "2026-09-11T15:06:12.171911"
+        "coletado_em": "2026-09-11T18:30:37.935432"
       },
       {
         "unidade": "Farroupilha",
@@ -229868,7 +230075,7 @@
         "utilizado_depois": 1000.0,
         "pendente": 105.0,
         "linha_original": "08/09/2026\tPix Doutores\nGiovana Gasparini\tRecebido de Clara Ribeiro da Silva (151458) (Parcela 23/48) Pago por: Bruna Ribeiro Da Silva\t105,00 C\t105,00 C\t1\t\t\t9.721,00\t9.657,53",
-        "coletado_em": "2026-09-11T15:06:12.202599"
+        "coletado_em": "2026-09-11T18:30:37.977962"
       },
       {
         "unidade": "Farroupilha",
@@ -229891,7 +230098,7 @@
         "utilizado_depois": 1000.0,
         "pendente": 199.0,
         "linha_original": "08/09/2026\tPix Doutores\nGiovana Gasparini\tRecebido de Guilherme Da Silva Claudino (6843) (Parcela 1/1) Pago por: O paciente\t199,00 C\t199,00 C\t1\t\t\t9.920,00\t9.856,53",
-        "coletado_em": "2026-09-11T15:06:12.218121"
+        "coletado_em": "2026-09-11T18:30:37.993730"
       },
       {
         "unidade": "Farroupilha",
@@ -229914,7 +230121,7 @@
         "utilizado_depois": 1000.0,
         "pendente": 125.0,
         "linha_original": "08/09/2026\tPix Doutores\nGiovana Gasparini\tRecebido de Antonella Ziero (152862) (Parcela 1/1) Pago por: Ana Paula Viera Ziero\t125,00 C\t125,00 C\t1\t\t\t10.147,00\t10.081,60",
-        "coletado_em": "2026-09-11T15:06:12.249896"
+        "coletado_em": "2026-09-11T18:30:38.025300"
       },
       {
         "unidade": "Farroupilha",
@@ -229937,7 +230144,7 @@
         "utilizado_depois": 1000.0,
         "pendente": 155.0,
         "linha_original": "10/09/2026\tPix Doutores\nGiovana Gasparini\tRecebido de Felipe de Lima Silva (144073) (Parcela 17/48) Pago por: O paciente\t155,00 C\t155,00 C\t1\t\t\t14.601,00\t14.494,91",
-        "coletado_em": "2026-09-11T15:06:12.446785"
+        "coletado_em": "2026-09-11T18:30:38.217666"
       },
       {
         "unidade": "Farroupilha",
@@ -229960,7 +230167,7 @@
         "utilizado_depois": 1000.0,
         "pendente": 127.0,
         "linha_original": "10/09/2026\tPix Doutores\nGiovana Gasparini\tRecebido de Mateus Lopes Reche (151694) (Parcela 24/48) Pago por: Luciana Albano Lopes\t127,00 C\t127,00 C\t1\t\t\t15.073,00\t14.965,05",
-        "coletado_em": "2026-09-11T15:06:12.492924"
+        "coletado_em": "2026-09-11T18:30:38.263524"
       },
       {
         "unidade": "Farroupilha",
@@ -229983,7 +230190,7 @@
         "utilizado_depois": 1000.0,
         "pendente": 155.0,
         "linha_original": "10/09/2026\tPix Doutores\nGiovana Gasparini\tRecebido de Renata Toffanim Cavada (152515) (Parcela 13/48) Pago por: Cristiane Milbradth\t155,00 C\t155,00 C\t1\t\t\t15.558,00\t15.450,05",
-        "coletado_em": "2026-09-11T15:06:12.555184"
+        "coletado_em": "2026-09-11T18:30:38.324741"
       },
       {
         "unidade": "Farroupilha",
@@ -230006,7 +230213,7 @@
         "utilizado_depois": 0.0,
         "pendente": 102.0,
         "linha_original": "10/09/2026\tPix Doutores\nTOP\tRecebido de Liliane Lopes Brum (4514) (Parcela 18/48) Pago por: O paciente\t102,00 C\t102,00 C\t1\t\t\t15.917,00\t15.809,05",
-        "coletado_em": "2026-09-11T15:06:12.586676"
+        "coletado_em": "2026-09-11T18:30:38.362034"
       },
       {
         "unidade": "Farroupilha",
@@ -230029,7 +230236,7 @@
         "utilizado_depois": 2000.0,
         "pendente": 102.0,
         "linha_original": "10/09/2026\tPix Doutores\nEverlize Cipriani\tRecebido de Odolir Decol (546) (Parcela 18/48) Pago por: O paciente\t102,00 C\t102,00 C\t1\t\t\t20.783,00\t20.578,03",
-        "coletado_em": "2026-09-11T15:06:12.825559"
+        "coletado_em": "2026-09-11T18:30:38.593177"
       },
       {
         "unidade": "Farroupilha",
@@ -230052,7 +230259,30 @@
         "utilizado_depois": 2000.0,
         "pendente": 85.0,
         "linha_original": "10/09/2026\tPix Doutores\nEverlize Cipriani\tRecebido de Arthur Dewes (150060) (Parcela 18/48) Pago por: O paciente\t85,00 C\t85,00 C\t1\t\t\t22.358,00\t22.146,12",
-        "coletado_em": "2026-09-11T15:06:12.947446"
+        "coletado_em": "2026-09-11T18:30:38.713097"
+      },
+      {
+        "unidade": "Bento",
+        "data": "11/09/2026",
+        "competencia": "2026-09",
+        "metodo_pagamento": "Pix Doutores",
+        "responsavel_fiscal_lido": "Jéssica Barreto",
+        "doutor_id": "23",
+        "doutor_final": "Jéssica Barreto",
+        "doutor_encontrado": true,
+        "paciente": "Recebido de Luís Eduardo Nunes Albuquerque Pago por: O paciente",
+        "codigo_origem": "10547",
+        "parcela": "1/1",
+        "origem": "Recebido de Luís Eduardo Nunes Albuquerque (10547) (Parcela 1/1) Pago por: O paciente",
+        "valor": 516.0,
+        "valor_com_descontos": 516.0,
+        "credito_antes": 1000.0,
+        "valor_descontado": 516.0,
+        "credito_depois": 484.0,
+        "utilizado_depois": 516.0,
+        "pendente": 0.0,
+        "linha_original": "11/09/2026\tPix Doutores\nJéssica Barreto\tRecebido de Luís Eduardo Nunes Albuquerque (10547) (Parcela 1/1) Pago por: O paciente\t516,00 C\t516,00 C\t1\t\t\t7.876,00\t7.818,32",
+        "coletado_em": "2026-09-11T18:31:37.161921"
       },
       {
         "unidade": "Soledade",
@@ -230075,7 +230305,7 @@
         "utilizado_depois": 0.0,
         "pendente": 95.0,
         "linha_original": "01/09/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Maria Alejandra Maceo Maceo (9225) (Parcela 16/48) Pago por: O paciente\t95,00 C\t95,00 C\t1\t\t\t-4,00\t-4,00",
-        "coletado_em": "2026-09-11T15:09:10.857777"
+        "coletado_em": "2026-09-11T18:33:33.835084"
       },
       {
         "unidade": "Soledade",
@@ -230098,7 +230328,7 @@
         "utilizado_depois": 0.0,
         "pendente": 60.0,
         "linha_original": "01/09/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de João Mateus Dutra da Silva (11676) (Parcela 16/48) Pago por: O paciente\t60,00 C\t60,00 C\t1\t\t\t526,00\t526,00",
-        "coletado_em": "2026-09-11T15:09:10.971913"
+        "coletado_em": "2026-09-11T18:33:33.952830"
       },
       {
         "unidade": "Soledade",
@@ -230121,7 +230351,7 @@
         "utilizado_depois": 0.0,
         "pendente": 105.0,
         "linha_original": "01/09/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Alberto Jesus Belarmin do Amarante (11480) (Parcela 19/48) Pago por: O paciente\t105,00 C\t105,00 C\t1\t\t\t1.048,00\t1.046,03",
-        "coletado_em": "2026-09-11T15:09:11.076224"
+        "coletado_em": "2026-09-11T18:33:34.055214"
       },
       {
         "unidade": "Soledade",
@@ -230144,7 +230374,7 @@
         "utilizado_depois": 0.0,
         "pendente": 115.0,
         "linha_original": "01/09/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Elisa Camini Silva (12272) (Parcela 6/48) Pago por: O paciente\t115,00 C\t115,00 C\t1\t\t\t1.163,00\t1.161,03",
-        "coletado_em": "2026-09-11T15:09:11.094404"
+        "coletado_em": "2026-09-11T18:33:34.085009"
       },
       {
         "unidade": "Soledade",
@@ -230167,7 +230397,7 @@
         "utilizado_depois": 0.0,
         "pendente": 99.0,
         "linha_original": "01/09/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Alana Luiza dos Reis da Silva (8363) (Parcela 27/48) Pago por: O paciente\t99,00 C\t99,00 C\t1\t\t\t1.461,00\t1.457,06",
-        "coletado_em": "2026-09-11T15:09:11.148315"
+        "coletado_em": "2026-09-11T18:33:34.142416"
       },
       {
         "unidade": "Soledade",
@@ -230190,7 +230420,7 @@
         "utilizado_depois": 0.0,
         "pendente": 125.0,
         "linha_original": "01/09/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Rafael Borges dos Santos (12275) (Parcela 6/48) Pago por: O paciente\t125,00 C\t125,00 C\t1\t\t\t1.586,00\t1.582,06",
-        "coletado_em": "2026-09-11T15:09:11.166057"
+        "coletado_em": "2026-09-11T18:33:34.160936"
       },
       {
         "unidade": "Soledade",
@@ -230213,7 +230443,7 @@
         "utilizado_depois": 0.0,
         "pendente": 115.0,
         "linha_original": "01/09/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Patricio Bernardo da Silva Neto (12400) (Parcela 3/48) Pago por: O paciente\t115,00 C\t115,00 C\t1\t\t\t1.891,00\t1.885,36",
-        "coletado_em": "2026-09-11T15:09:11.219215"
+        "coletado_em": "2026-09-11T18:33:34.216392"
       },
       {
         "unidade": "Soledade",
@@ -230236,7 +230466,7 @@
         "utilizado_depois": 0.0,
         "pendente": 98.0,
         "linha_original": "01/09/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Fernanda De Fatima Da Silva Araujo (8434) (Parcela 1/1) Pago por: O paciente\t98,00 C\t98,00 C\t1\t\t\t2.468,00\t2.457,63",
-        "coletado_em": "2026-09-11T15:09:11.309365"
+        "coletado_em": "2026-09-11T18:33:34.309355"
       },
       {
         "unidade": "Soledade",
@@ -230259,7 +230489,7 @@
         "utilizado_depois": 0.0,
         "pendente": 105.0,
         "linha_original": "01/09/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Dhafyny Araujo Cardoso (9901) (Parcela 31/48) Pago por: O paciente\t105,00 C\t105,00 C\t1\t\t\t2.573,00\t2.562,63",
-        "coletado_em": "2026-09-11T15:09:11.327180"
+        "coletado_em": "2026-09-11T18:33:34.328594"
       },
       {
         "unidade": "Soledade",
@@ -230282,7 +230512,7 @@
         "utilizado_depois": 0.0,
         "pendente": 120.0,
         "linha_original": "02/09/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Roniele Marquette (4437) (Parcela 2/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t2.808,00\t2.797,63",
-        "coletado_em": "2026-09-11T15:09:11.363113"
+        "coletado_em": "2026-09-11T18:33:34.370007"
       },
       {
         "unidade": "Soledade",
@@ -230305,7 +230535,7 @@
         "utilizado_depois": 0.0,
         "pendente": 120.0,
         "linha_original": "02/09/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Denise da Silva França (11796) (Parcela 15/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t2.928,00\t2.917,63",
-        "coletado_em": "2026-09-11T15:09:11.382650"
+        "coletado_em": "2026-09-11T18:33:34.389225"
       },
       {
         "unidade": "Soledade",
@@ -230328,7 +230558,7 @@
         "utilizado_depois": 0.0,
         "pendente": 125.0,
         "linha_original": "01/09/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Cassiane dos Santos da Silva (4407) (Parcela 5/48) Pago por: O paciente\t125,00 C\t125,00 C\t1\t\t\t3.510,00\t3.496,68",
-        "coletado_em": "2026-09-11T15:09:11.454350"
+        "coletado_em": "2026-09-11T18:33:34.463530"
       },
       {
         "unidade": "Soledade",
@@ -230351,7 +230581,7 @@
         "utilizado_depois": 0.0,
         "pendente": 115.0,
         "linha_original": "02/09/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Tatiane Moraes de Oliveira (9884) (Parcela 3/48) Pago por: O paciente\t115,00 C\t115,00 C\t1\t\t\t5.032,00\t4.990,47",
-        "coletado_em": "2026-09-11T15:09:11.599225"
+        "coletado_em": "2026-09-11T18:33:34.614991"
       },
       {
         "unidade": "Soledade",
@@ -230374,7 +230604,7 @@
         "utilizado_depois": 0.0,
         "pendente": 125.0,
         "linha_original": "02/09/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Angelita Trindade Geraldo (2264) (Parcela 3/48) Pago por: O paciente\t125,00 C\t125,00 C\t1\t\t\t5.157,00\t5.115,47",
-        "coletado_em": "2026-09-11T15:09:11.617345"
+        "coletado_em": "2026-09-11T18:33:34.633214"
       },
       {
         "unidade": "Soledade",
@@ -230397,7 +230627,7 @@
         "utilizado_depois": 0.0,
         "pendente": 59.0,
         "linha_original": "02/09/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Paloma Schmith Silva (8737) (Parcela 1/1) Pago por: O paciente\t59,00 C\t59,00 C\t1\t\t\t6.055,00\t5.999,98",
-        "coletado_em": "2026-09-11T15:09:11.690707"
+        "coletado_em": "2026-09-11T18:33:34.707515"
       },
       {
         "unidade": "Soledade",
@@ -230420,7 +230650,7 @@
         "utilizado_depois": 0.0,
         "pendente": 125.0,
         "linha_original": "02/09/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Victor Danyel Vieira da Silva (3307) (Parcela 8/48) Pago por: Daniela Claus Vieira\t125,00 C\t125,00 C\t1\t\t\t7.588,00\t7.524,74",
-        "coletado_em": "2026-09-11T15:09:11.817427"
+        "coletado_em": "2026-09-11T18:33:34.837188"
       },
       {
         "unidade": "Soledade",
@@ -230443,7 +230673,7 @@
         "utilizado_depois": 0.0,
         "pendente": 115.0,
         "linha_original": "02/09/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Ruan Morais Brum do Prado (10532) (Parcela 2/48) Pago por: O paciente\t115,00 C\t115,00 C\t1\t\t\t7.803,00\t7.739,74",
-        "coletado_em": "2026-09-11T15:09:11.853886"
+        "coletado_em": "2026-09-11T18:33:34.874021"
       },
       {
         "unidade": "Soledade",
@@ -230466,7 +230696,7 @@
         "utilizado_depois": 0.0,
         "pendente": 125.0,
         "linha_original": "02/09/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Ryan Santos Souza (12274) (Parcela 6/48) Pago por: O paciente\t125,00 C\t125,00 C\t1\t\t\t8.027,00\t7.961,77",
-        "coletado_em": "2026-09-11T15:09:11.890053"
+        "coletado_em": "2026-09-11T18:33:34.911850"
       },
       {
         "unidade": "Soledade",
@@ -230489,7 +230719,7 @@
         "utilizado_depois": 0.0,
         "pendente": 219.0,
         "linha_original": "02/09/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Ryan Santos Souza (12274) (Parcela 1/1) Pago por: O paciente\t219,00 C\t219,00 C\t1\t\t\t8.246,00\t8.180,77",
-        "coletado_em": "2026-09-11T15:09:11.907812"
+        "coletado_em": "2026-09-11T18:33:34.929875"
       },
       {
         "unidade": "Soledade",
@@ -230512,7 +230742,7 @@
         "utilizado_depois": 0.0,
         "pendente": 99.0,
         "linha_original": "02/09/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Paloma Schmith Silva (8737) (Parcela 1/48) Pago por: O paciente\t99,00 C\t99,00 C\t1\t\t\t8.470,00\t8.402,28",
-        "coletado_em": "2026-09-11T15:09:11.951210"
+        "coletado_em": "2026-09-11T18:33:34.966533"
       },
       {
         "unidade": "Soledade",
@@ -230535,7 +230765,7 @@
         "utilizado_depois": 0.0,
         "pendente": 96.0,
         "linha_original": "04/09/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Fernanda dos Santos Ritter (9478) (Parcela 34/48) Pago por: O paciente\t96,00 C\t96,00 C\t1\t\t\t9.638,00\t9.543,97",
-        "coletado_em": "2026-09-11T15:09:12.025449"
+        "coletado_em": "2026-09-11T18:33:35.048820"
       },
       {
         "unidade": "Soledade",
@@ -230558,7 +230788,7 @@
         "utilizado_depois": 0.0,
         "pendente": 20.0,
         "linha_original": "04/09/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Guilherme Moraes Neves (3224) (Parcela 14/48) Pago por: O paciente\t20,00 C\t20,00 C\t1\t\t\t9.758,00\t9.663,97",
-        "coletado_em": "2026-09-11T15:09:12.062076"
+        "coletado_em": "2026-09-11T18:33:35.087405"
       },
       {
         "unidade": "Soledade",
@@ -230581,7 +230811,7 @@
         "utilizado_depois": 0.0,
         "pendente": 99.0,
         "linha_original": "04/09/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Deidilara Hesper dos Santos Hoffmann (4458) (Parcela 17/48) Pago por: O paciente\t99,00 C\t99,00 C\t1\t\t\t9.857,00\t9.762,97",
-        "coletado_em": "2026-09-11T15:09:12.080074"
+        "coletado_em": "2026-09-11T18:33:35.107360"
       },
       {
         "unidade": "Soledade",
@@ -230604,7 +230834,7 @@
         "utilizado_depois": 0.0,
         "pendente": 120.0,
         "linha_original": "04/09/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Michele Bassanesi (4857) (Parcela 17/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t9.977,00\t9.882,97",
-        "coletado_em": "2026-09-11T15:09:12.097472"
+        "coletado_em": "2026-09-11T18:33:35.126071"
       },
       {
         "unidade": "Soledade",
@@ -230627,7 +230857,7 @@
         "utilizado_depois": 0.0,
         "pendente": 120.0,
         "linha_original": "04/09/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Isabelli Bassanessi de Aquino (11832) (Parcela 13/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t10.097,00\t10.002,97",
-        "coletado_em": "2026-09-11T15:09:12.115484"
+        "coletado_em": "2026-09-11T18:33:35.144162"
       },
       {
         "unidade": "Soledade",
@@ -230650,7 +230880,7 @@
         "utilizado_depois": 0.0,
         "pendente": 120.0,
         "linha_original": "04/09/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Natali de Oliveira (10429) (Parcela 15/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t10.404,25\t10.310,22",
-        "coletado_em": "2026-09-11T15:09:12.188188"
+        "coletado_em": "2026-09-11T18:33:35.219188"
       },
       {
         "unidade": "Soledade",
@@ -230673,7 +230903,7 @@
         "utilizado_depois": 0.0,
         "pendente": 125.0,
         "linha_original": "04/09/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Ana Julia dos Santos Ferreira Rodrigues (12224) (Parcela 6/48) Pago por: Daiane Dos Santos Ferreira\t125,00 C\t125,00 C\t1\t\t\t10.634,25\t10.540,22",
-        "coletado_em": "2026-09-11T15:09:12.223054"
+        "coletado_em": "2026-09-11T18:33:35.255725"
       },
       {
         "unidade": "Soledade",
@@ -230696,7 +230926,7 @@
         "utilizado_depois": 0.0,
         "pendente": 120.0,
         "linha_original": "04/09/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Leonardo Rodrigues Fagundes (10925) (Parcela 12/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t10.754,25\t10.660,22",
-        "coletado_em": "2026-09-11T15:09:12.240846"
+        "coletado_em": "2026-09-11T18:33:35.273646"
       },
       {
         "unidade": "Soledade",
@@ -230719,7 +230949,7 @@
         "utilizado_depois": 0.0,
         "pendente": 120.0,
         "linha_original": "04/09/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Gustavo Jubelli Rodrigues (5254) (Parcela 16/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t11.779,25\t11.671,15",
-        "coletado_em": "2026-09-11T15:09:12.328580"
+        "coletado_em": "2026-09-11T18:33:35.363863"
       },
       {
         "unidade": "Soledade",
@@ -230742,7 +230972,7 @@
         "utilizado_depois": 0.0,
         "pendente": 95.0,
         "linha_original": "04/09/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Gabriel Silveira da Silva (9610) (Parcela 36/48) Pago por: O paciente\t95,00 C\t95,00 C\t1\t\t\t12.093,25\t11.980,13",
-        "coletado_em": "2026-09-11T15:09:12.364511"
+        "coletado_em": "2026-09-11T18:33:35.400670"
       },
       {
         "unidade": "Soledade",
@@ -230765,7 +230995,7 @@
         "utilizado_depois": 0.0,
         "pendente": 85.0,
         "linha_original": "04/09/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Gustavo Morais Silveira (4887) (Parcela 1/1) Pago por: O paciente\t85,00 C\t85,00 C\t1\t\t\t12.178,25\t12.065,13",
-        "coletado_em": "2026-09-11T15:09:12.382079"
+        "coletado_em": "2026-09-11T18:33:35.419243"
       },
       {
         "unidade": "Soledade",
@@ -230788,7 +231018,7 @@
         "utilizado_depois": 0.0,
         "pendente": 105.0,
         "linha_original": "05/09/2026\tPix Doutores\nFelipe Lino\tRecebido de Elias dos Santos (9912) (Parcela 31/48) Pago por: O paciente\t105,00 C\t105,00 C\t1\t\t\t12.594,25\t12.478,41",
-        "coletado_em": "2026-09-11T15:09:12.435218"
+        "coletado_em": "2026-09-11T18:33:35.473828"
       },
       {
         "unidade": "Soledade",
@@ -230811,7 +231041,7 @@
         "utilizado_depois": 0.0,
         "pendente": 120.0,
         "linha_original": "04/09/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Crislaine Borges da Silva (11769) (Parcela 16/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t12.934,25\t12.814,03",
-        "coletado_em": "2026-09-11T15:09:12.488001"
+        "coletado_em": "2026-09-11T18:33:35.528179"
       },
       {
         "unidade": "Soledade",
@@ -230834,7 +231064,7 @@
         "utilizado_depois": 0.0,
         "pendente": 95.0,
         "linha_original": "05/09/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Bianca de Moraes (7071) (Parcela 17/48) Pago por: O paciente\t95,00 C\t95,00 C\t1\t\t\t13.154,25\t13.032,92",
-        "coletado_em": "2026-09-11T15:09:12.524293"
+        "coletado_em": "2026-09-11T18:33:35.564370"
       },
       {
         "unidade": "Soledade",
@@ -230857,7 +231087,7 @@
         "utilizado_depois": 0.0,
         "pendente": 95.0,
         "linha_original": "05/09/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Leticia Gomes Rodrigues (8154) (Parcela 39/48) Pago por: O paciente\t95,00 C\t95,00 C\t1\t\t\t14.454,25\t14.332,92",
-        "coletado_em": "2026-09-11T15:09:12.595777"
+        "coletado_em": "2026-09-11T18:33:35.637535"
       },
       {
         "unidade": "Soledade",
@@ -230880,7 +231110,7 @@
         "utilizado_depois": 0.0,
         "pendente": 85.0,
         "linha_original": "05/09/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Alexandre Rodrigues (1131) (Parcela 18/48) Pago por: O paciente\t85,00 C\t85,00 C\t1\t\t\t14.664,25\t14.541,81",
-        "coletado_em": "2026-09-11T15:09:12.631374"
+        "coletado_em": "2026-09-11T18:33:35.673100"
       },
       {
         "unidade": "Soledade",
@@ -230903,7 +231133,7 @@
         "utilizado_depois": 0.0,
         "pendente": 95.0,
         "linha_original": "05/09/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Adriana dos Santos Oliveira (9248) (Parcela 41/48) Pago por: O paciente\t95,00 C\t95,00 C\t1\t\t\t14.884,25\t14.761,81",
-        "coletado_em": "2026-09-11T15:09:12.667005"
+        "coletado_em": "2026-09-11T18:33:35.711820"
       },
       {
         "unidade": "Soledade",
@@ -230926,7 +231156,7 @@
         "utilizado_depois": 0.0,
         "pendente": 99.0,
         "linha_original": "05/09/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Debora Rosemara Balbinot (11205) (Parcela 22/48) Pago por: Luiz Maicon Martins da Rosa\t99,00 C\t99,00 C\t1\t\t\t15.163,25\t15.040,81",
-        "coletado_em": "2026-09-11T15:09:12.722526"
+        "coletado_em": "2026-09-11T18:33:35.766162"
       },
       {
         "unidade": "Soledade",
@@ -230949,7 +231179,7 @@
         "utilizado_depois": 0.0,
         "pendente": 99.0,
         "linha_original": "05/09/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Ricardo Régis do Nascimento Brasilio (7290) (Parcela 22/48) Pago por: Luiz Maicon Martins da Rosa\t99,00 C\t99,00 C\t1\t\t\t15.262,25\t15.139,81",
-        "coletado_em": "2026-09-11T15:09:12.741500"
+        "coletado_em": "2026-09-11T18:33:35.784802"
       },
       {
         "unidade": "Soledade",
@@ -230972,7 +231202,7 @@
         "utilizado_depois": 0.0,
         "pendente": 99.0,
         "linha_original": "05/09/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Alexandra Rodrigues dos Santos (12098) (Parcela 1/48) Pago por: O paciente\t99,00 C\t99,00 C\t1\t\t\t15.720,25\t15.595,42",
-        "coletado_em": "2026-09-11T15:09:12.796224"
+        "coletado_em": "2026-09-11T18:33:35.840086"
       },
       {
         "unidade": "Soledade",
@@ -230995,7 +231225,7 @@
         "utilizado_depois": 0.0,
         "pendente": 99.0,
         "linha_original": "05/09/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Esmael Borges da Silva (8877) (Parcela 33/48) Pago por: O paciente\t99,00 C\t99,00 C\t1\t\t\t16.889,25\t16.764,42",
-        "coletado_em": "2026-09-11T15:09:12.849372"
+        "coletado_em": "2026-09-11T18:33:35.895172"
       },
       {
         "unidade": "Soledade",
@@ -231018,7 +231248,7 @@
         "utilizado_depois": 0.0,
         "pendente": 120.0,
         "linha_original": "05/09/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Alessandro dos Santos (11355) (Parcela 15/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t17.009,25\t16.884,42",
-        "coletado_em": "2026-09-11T15:09:12.867561"
+        "coletado_em": "2026-09-11T18:33:35.914515"
       },
       {
         "unidade": "Soledade",
@@ -231041,7 +231271,7 @@
         "utilizado_depois": 0.0,
         "pendente": 120.0,
         "linha_original": "05/09/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Alessandro dos Santos (11355) (Parcela 7/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t17.129,25\t17.004,42",
-        "coletado_em": "2026-09-11T15:09:12.885353"
+        "coletado_em": "2026-09-11T18:33:35.933994"
       },
       {
         "unidade": "Soledade",
@@ -231064,7 +231294,7 @@
         "utilizado_depois": 0.0,
         "pendente": 148.0,
         "linha_original": "08/09/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Tamara De Oliveira Silveira Portela (10869) (Parcela 24/48) Pago por: O paciente\t148,00 C\t148,00 C\t1\t\t\t17.306,25\t17.180,54",
-        "coletado_em": "2026-09-11T15:09:12.957120"
+        "coletado_em": "2026-09-11T18:33:36.008209"
       },
       {
         "unidade": "Soledade",
@@ -231087,7 +231317,7 @@
         "utilizado_depois": 0.0,
         "pendente": 206.0,
         "linha_original": "08/09/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Emanuelly Benvinda Avila Dos Santos (11358) (Parcela 1/1) Pago por: O paciente\t206,00 C\t206,00 C\t1\t\t\t17.632,25\t17.506,54",
-        "coletado_em": "2026-09-11T15:09:12.992280"
+        "coletado_em": "2026-09-11T18:33:36.045537"
       },
       {
         "unidade": "Soledade",
@@ -231110,7 +231340,7 @@
         "utilizado_depois": 0.0,
         "pendente": 85.0,
         "linha_original": "08/09/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Marciele Nunes Dos Santos (3878) (Parcela 18/48) Pago por: O paciente\t85,00 C\t85,00 C\t1\t\t\t19.501,25\t19.332,51",
-        "coletado_em": "2026-09-11T15:09:13.187108"
+        "coletado_em": "2026-09-11T18:33:36.245630"
       },
       {
         "unidade": "Soledade",
@@ -231133,7 +231363,7 @@
         "utilizado_depois": 0.0,
         "pendente": 20.0,
         "linha_original": "08/09/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Alana dos Santos (11738) (Parcela 16/48) Pago por: O paciente\t20,00 C\t20,00 C\t1\t\t\t19.621,25\t19.452,51",
-        "coletado_em": "2026-09-11T15:09:13.222769"
+        "coletado_em": "2026-09-11T18:33:36.281868"
       },
       {
         "unidade": "Soledade",
@@ -231156,7 +231386,7 @@
         "utilizado_depois": 0.0,
         "pendente": 120.0,
         "linha_original": "08/09/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Kemilin Eduarda Araujo da Silva (7783) (Parcela 14/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t20.868,25\t20.688,44",
-        "coletado_em": "2026-09-11T15:09:13.366003"
+        "coletado_em": "2026-09-11T18:33:36.447947"
       },
       {
         "unidade": "Soledade",
@@ -231179,7 +231409,7 @@
         "utilizado_depois": 0.0,
         "pendente": 120.0,
         "linha_original": "08/09/2026\tPix Doutores\nFelipe Lino\tRecebido de Veridiane Dos Santos Bleil (8213) (Parcela 14/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t21.208,25\t21.026,05",
-        "coletado_em": "2026-09-11T15:09:13.439376"
+        "coletado_em": "2026-09-11T18:33:36.500590"
       },
       {
         "unidade": "Soledade",
@@ -231202,7 +231432,7 @@
         "utilizado_depois": 0.0,
         "pendente": 99.0,
         "linha_original": "09/09/2026\tPix Doutores\nFelipe Lino\tRecebido de Ester Schuster Gomez (9739) (Parcela 34/48) Pago por: O paciente\t99,00 C\t99,00 C\t1\t\t\t22.020,25\t21.836,94",
-        "coletado_em": "2026-09-11T15:09:13.576188"
+        "coletado_em": "2026-09-11T18:33:36.633911"
       },
       {
         "unidade": "Soledade",
@@ -231225,7 +231455,7 @@
         "utilizado_depois": 0.0,
         "pendente": 99.0,
         "linha_original": "09/09/2026\tPix Doutores\nFelipe Lino\tRecebido de Murilo Oliveira da Rosa (3916) (Parcela 19/48) Pago por: Paulo Sergio Pedroso\t99,00 C\t99,00 C\t1\t\t\t22.239,25\t22.055,94",
-        "coletado_em": "2026-09-11T15:09:13.612560"
+        "coletado_em": "2026-09-11T18:33:36.685028"
       },
       {
         "unidade": "Soledade",
@@ -231248,7 +231478,7 @@
         "utilizado_depois": 0.0,
         "pendente": 125.0,
         "linha_original": "09/09/2026\tPix Doutores\nFelipe Lino\tRecebido de Francisco Cavalcante de Lima (12389) (Parcela 2/48) Pago por: O paciente\t125,00 C\t125,00 C\t1\t\t\t22.461,25\t22.275,97",
-        "coletado_em": "2026-09-11T15:09:13.817799"
+        "coletado_em": "2026-09-11T18:33:36.890729"
       },
       {
         "unidade": "Soledade",
@@ -231271,7 +231501,7 @@
         "utilizado_depois": 0.0,
         "pendente": 98.0,
         "linha_original": "09/09/2026\tPix Doutores\nFelipe Lino\tRecebido de Lucia Malaquias (2932) (Parcela 27/48) Pago por: O paciente\t98,00 C\t98,00 C\t1\t\t\t23.314,25\t23.117,54",
-        "coletado_em": "2026-09-11T15:09:13.948832"
+        "coletado_em": "2026-09-11T18:33:37.017060"
       },
       {
         "unidade": "Soledade",
@@ -231294,7 +231524,7 @@
         "utilizado_depois": 0.0,
         "pendente": 99.0,
         "linha_original": "09/09/2026\tPix Doutores\nFelipe Lino\tRecebido de Raimundo Rodrigues Franco (9854) (Parcela 32/48) Pago por: O paciente\t99,00 C\t99,00 C\t1\t\t\t23.413,25\t23.216,54",
-        "coletado_em": "2026-09-11T15:09:13.967968"
+        "coletado_em": "2026-09-11T18:33:37.035361"
       },
       {
         "unidade": "Soledade",
@@ -231317,7 +231547,7 @@
         "utilizado_depois": 0.0,
         "pendente": 99.0,
         "linha_original": "09/09/2026\tPix Doutores\nFelipe Lino\tRecebido de Amanda Muniz (2100) (Parcela 16/48) Pago por: O paciente\t99,00 C\t99,00 C\t1\t\t\t23.512,25\t23.315,54",
-        "coletado_em": "2026-09-11T15:09:13.985627"
+        "coletado_em": "2026-09-11T18:33:37.053120"
       },
       {
         "unidade": "Soledade",
@@ -231340,7 +231570,7 @@
         "utilizado_depois": 0.0,
         "pendente": 85.0,
         "linha_original": "11/09/2026\tPix Doutores\nFelipe Lino\tRecebido de Dienifer Souto de Freitas (2469) (Parcela 19/48) Pago por: O paciente\t85,00 C\t85,00 C\t1\t\t\t24.199,60\t23.998,40",
-        "coletado_em": "2026-09-11T15:09:14.110638"
+        "coletado_em": "2026-09-11T18:33:37.177854"
       },
       {
         "unidade": "Soledade",
@@ -231357,13 +231587,13 @@
         "origem": "Recebido de Maiara dos Santos (2084) (Parcela 26/48) Pago por: O paciente",
         "valor": 85.0,
         "valor_com_descontos": 85.0,
-        "credito_antes": 500.0,
+        "credito_antes": 330.0,
         "valor_descontado": 85.0,
-        "credito_depois": 415.0,
-        "utilizado_depois": 85.0,
+        "credito_depois": 245.0,
+        "utilizado_depois": 255.0,
         "pendente": 0.0,
         "linha_original": "11/09/2026\tPix Doutores\nMurilo Debortoli\tRecebido de Maiara dos Santos (2084) (Parcela 26/48) Pago por: O paciente\t85,00 C\t85,00 C\t1\t\t\t24.284,60\t24.083,40",
-        "coletado_em": "2026-09-11T15:09:14.128308"
+        "coletado_em": "2026-09-11T18:33:37.195702"
       },
       {
         "unidade": "Soledade",
@@ -231380,13 +231610,13 @@
         "origem": "Recebido de Gavilan da Silva Padilha (5242) (Parcela 19/48) Pago por: O paciente",
         "valor": 85.0,
         "valor_com_descontos": 85.0,
-        "credito_antes": 415.0,
+        "credito_antes": 245.0,
         "valor_descontado": 85.0,
-        "credito_depois": 330.0,
-        "utilizado_depois": 170.0,
+        "credito_depois": 160.0,
+        "utilizado_depois": 340.0,
         "pendente": 0.0,
         "linha_original": "11/09/2026\tPix Doutores\nMurilo Debortoli\tRecebido de Gavilan da Silva Padilha (5242) (Parcela 19/48) Pago por: O paciente\t85,00 C\t85,00 C\t1\t\t\t24.369,60\t24.168,40",
-        "coletado_em": "2026-09-11T15:09:14.145508"
+        "coletado_em": "2026-09-11T18:33:37.213137"
       },
       {
         "unidade": "Soledade",
@@ -231409,7 +231639,53 @@
         "utilizado_depois": 0.0,
         "pendente": 120.0,
         "linha_original": "11/09/2026\tPix Doutores\nFelipe Lino\tRecebido de Arthur Luis Moraes Machado (11568) (Parcela 18/48) Pago por: Darlene Brandao Rodrigues Moraes Machado\t120,00 C\t120,00 C\t1\t\t\t24.574,60\t24.373,40",
-        "coletado_em": "2026-09-11T15:09:14.180335"
+        "coletado_em": "2026-09-11T18:33:37.248515"
+      },
+      {
+        "unidade": "Soledade",
+        "data": "11/09/2026",
+        "competencia": "2026-09",
+        "metodo_pagamento": "Pix Doutores",
+        "responsavel_fiscal_lido": "Felipe Lino",
+        "doutor_id": null,
+        "doutor_final": "Felipe Lino",
+        "doutor_encontrado": false,
+        "paciente": "Recebido de Luan da Silva Ramos Pago por: O paciente",
+        "codigo_origem": "10191",
+        "parcela": "15/48",
+        "origem": "Recebido de Luan da Silva Ramos (10191) (Parcela 15/48) Pago por: O paciente",
+        "valor": 120.0,
+        "valor_com_descontos": 120.0,
+        "credito_antes": 0.0,
+        "valor_descontado": 0.0,
+        "credito_depois": 0.0,
+        "utilizado_depois": 0.0,
+        "pendente": 120.0,
+        "linha_original": "11/09/2026\tPix Doutores\nFelipe Lino\tRecebido de Luan da Silva Ramos (10191) (Parcela 15/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t24.779,60\t24.578,40",
+        "coletado_em": "2026-09-11T18:33:37.283637"
+      },
+      {
+        "unidade": "Soledade",
+        "data": "11/09/2026",
+        "competencia": "2026-09",
+        "metodo_pagamento": "Pix Doutores",
+        "responsavel_fiscal_lido": "Murilo Debortoli",
+        "doutor_id": "11",
+        "doutor_final": "Murilo Debortoli",
+        "doutor_encontrado": true,
+        "paciente": "Recebido de Lucas Dieter Moraes Pago por: O paciente",
+        "codigo_origem": "9560",
+        "parcela": "36/48",
+        "origem": "Recebido de Lucas Dieter Moraes (9560) (Parcela 36/48) Pago por: O paciente",
+        "valor": 99.0,
+        "valor_com_descontos": 99.0,
+        "credito_antes": 160.0,
+        "valor_descontado": 99.0,
+        "credito_depois": 61.0,
+        "utilizado_depois": 439.0,
+        "pendente": 0.0,
+        "linha_original": "11/09/2026\tPix Doutores\nMurilo Debortoli\tRecebido de Lucas Dieter Moraes (9560) (Parcela 36/48) Pago por: O paciente\t99,00 C\t99,00 C\t1\t\t\t25.073,60\t24.872,40",
+        "coletado_em": "2026-09-11T18:33:37.337285"
       },
       {
         "unidade": "Veranopolis",
@@ -231432,7 +231708,7 @@
         "utilizado_depois": 1500.0,
         "pendente": 152.0,
         "linha_original": "03/09/2026\tPix Doutores\nAlexandre Favero\tRecebido de Jean dos Santos Barbosa (7936) (Parcela 13/48) Pago por: O paciente\t152,00 C\t152,00 C\t1\t\t\t1.071,00\t1.068,96",
-        "coletado_em": "2026-09-11T15:10:15.495656"
+        "coletado_em": "2026-09-11T18:34:36.807974"
       },
       {
         "unidade": "Veranopolis",
@@ -231455,7 +231731,7 @@
         "utilizado_depois": 1500.0,
         "pendente": 99.0,
         "linha_original": "03/09/2026\tPix Doutores\nAlexandre Favero\tRecebido de Jamilly Alves do Nascimento (8378) (Parcela 1/48) Pago por: O paciente\t99,00 C\t99,00 C\t1\t\t\t2.312,00\t2.309,96",
-        "coletado_em": "2026-09-11T15:10:15.542116"
+        "coletado_em": "2026-09-11T18:34:36.855042"
       },
       {
         "unidade": "Veranopolis",
@@ -231478,7 +231754,7 @@
         "utilizado_depois": 1500.0,
         "pendente": 158.0,
         "linha_original": "03/09/2026\tPix Doutores\nAlexandre Favero\tRecebido de Talita Maria dos Santos Dias (5714) (Parcela 13/48) Pago por: O paciente\t158,00 C\t158,00 C\t1\t\t\t2.470,00\t2.467,96",
-        "coletado_em": "2026-09-11T15:10:15.558196"
+        "coletado_em": "2026-09-11T18:34:36.870506"
       },
       {
         "unidade": "Veranopolis",
@@ -231501,7 +231777,7 @@
         "utilizado_depois": 1500.0,
         "pendente": 110.0,
         "linha_original": "03/09/2026\tPix Doutores\nAlexandre Favero\tRecebido de Gabriel Paixão Tomás (5777) (Parcela 8/48) Pago por: O paciente\t110,00 C\t110,00 C\t1\t\t\t2.580,00\t2.577,96",
-        "coletado_em": "2026-09-11T15:10:15.573922"
+        "coletado_em": "2026-09-11T18:34:36.887292"
       },
       {
         "unidade": "Veranopolis",
@@ -231524,7 +231800,7 @@
         "utilizado_depois": 1500.0,
         "pendente": 119.0,
         "linha_original": "03/09/2026\tPix Doutores\nAlexandre Favero\tRecebido de Cícero Pereira de Sousa (7939) (Parcela 1/1) Pago por: O paciente\t119,00 C\t119,00 C\t1\t\t\t2.699,00\t2.696,96",
-        "coletado_em": "2026-09-11T15:10:15.593504"
+        "coletado_em": "2026-09-11T18:34:36.902352"
       },
       {
         "unidade": "Veranopolis",
@@ -231547,7 +231823,7 @@
         "utilizado_depois": 1500.0,
         "pendente": 99.0,
         "linha_original": "03/09/2026\tPix Doutores\nAlexandre Favero\tRecebido de João Pedro Bezerra da Silva (8376) (Parcela 1/48) Pago por: O paciente\t99,00 C\t99,00 C\t1\t\t\t2.798,00\t2.795,96",
-        "coletado_em": "2026-09-11T15:10:15.610609"
+        "coletado_em": "2026-09-11T18:34:36.918437"
       },
       {
         "unidade": "Veranopolis",
@@ -231570,7 +231846,7 @@
         "utilizado_depois": 1500.0,
         "pendente": 127.0,
         "linha_original": "05/09/2026\tPix Doutores\nAlexandre Favero\tRecebido de Carolaine de Alburquerque Gabriel (6686) (Parcela 29/48) Pago por: O paciente\t127,00 C\t127,00 C\t1\t\t\t3.772,00\t3.769,03",
-        "coletado_em": "2026-09-11T15:10:15.747778"
+        "coletado_em": "2026-09-11T18:34:37.043095"
       },
       {
         "unidade": "Veranopolis",
@@ -231593,7 +231869,7 @@
         "utilizado_depois": 0.0,
         "pendente": 120.0,
         "linha_original": "05/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Tamires Gaeski (8167) (Parcela 6/48) Pago por: TATIANE GAYESKI\t120,00 C\t120,00 C\t1\t\t\t3.892,00\t3.889,03",
-        "coletado_em": "2026-09-11T15:10:15.762556"
+        "coletado_em": "2026-09-11T18:34:37.059481"
       },
       {
         "unidade": "Veranopolis",
@@ -231616,7 +231892,7 @@
         "utilizado_depois": 0.0,
         "pendente": 120.0,
         "linha_original": "05/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Isabelli Gayeski Rodrigues (8282) (Parcela 3/48) Pago por: TATIANE GAYESKI\t120,00 C\t120,00 C\t1\t\t\t4.012,00\t4.009,03",
-        "coletado_em": "2026-09-11T15:10:15.777376"
+        "coletado_em": "2026-09-11T18:34:37.075066"
       },
       {
         "unidade": "Veranopolis",
@@ -231639,7 +231915,7 @@
         "utilizado_depois": 0.0,
         "pendente": 100.0,
         "linha_original": "05/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Darlyn Polliana Guedes Flores (6422) (Parcela 20/48) Pago por: O paciente\t100,00 C\t100,00 C\t1\t\t\t4.112,00\t4.109,03",
-        "coletado_em": "2026-09-11T15:10:15.792522"
+        "coletado_em": "2026-09-11T18:34:37.091186"
       },
       {
         "unidade": "Veranopolis",
@@ -231662,7 +231938,7 @@
         "utilizado_depois": 0.0,
         "pendente": 379.16,
         "linha_original": "05/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Elizandra Siqueira Bernardi (8064) (Parcela 11/48) Pago por: O paciente\t379,16 C\t379,16 C\t1\t\t\t4.491,16\t4.488,19",
-        "coletado_em": "2026-09-11T15:10:15.808116"
+        "coletado_em": "2026-09-11T18:34:37.115032"
       },
       {
         "unidade": "Veranopolis",
@@ -231685,7 +231961,7 @@
         "utilizado_depois": 0.0,
         "pendente": 268.06,
         "linha_original": "05/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Luciano da Silva (8062) (Parcela 11/48) Pago por: Elizandra Siqueira Bernadi\t268,06 C\t268,06 C\t1\t\t\t4.759,22\t4.756,25",
-        "coletado_em": "2026-09-11T15:10:15.823142"
+        "coletado_em": "2026-09-11T18:34:37.130911"
       },
       {
         "unidade": "Veranopolis",
@@ -231708,7 +231984,7 @@
         "utilizado_depois": 0.0,
         "pendente": 152.0,
         "linha_original": "05/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Jhosnery Alexandra Campos Romero (8329) (Parcela 2/48) Pago por: O paciente\t152,00 C\t152,00 C\t1\t\t\t5.011,22\t5.008,25",
-        "coletado_em": "2026-09-11T15:10:15.853607"
+        "coletado_em": "2026-09-11T18:34:37.161661"
       },
       {
         "unidade": "Veranopolis",
@@ -231731,7 +232007,7 @@
         "utilizado_depois": 0.0,
         "pendente": 127.0,
         "linha_original": "05/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Fernanda Ferreira Amaral (6803) (Parcela 27/48) Pago por: O paciente\t127,00 C\t127,00 C\t1\t\t\t5.138,22\t5.135,25",
-        "coletado_em": "2026-09-11T15:10:15.869131"
+        "coletado_em": "2026-09-11T18:34:37.177133"
       },
       {
         "unidade": "Veranopolis",
@@ -231754,7 +232030,7 @@
         "utilizado_depois": 0.0,
         "pendente": 152.0,
         "linha_original": "05/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Luis Juares Soares de Oliveira (7904) (Parcela 14/48) Pago por: Fernanda Ferreira Amaral\t152,00 C\t152,00 C\t1\t\t\t5.290,22\t5.287,25",
-        "coletado_em": "2026-09-11T15:10:15.884578"
+        "coletado_em": "2026-09-11T18:34:37.191793"
       },
       {
         "unidade": "Veranopolis",
@@ -231777,7 +232053,7 @@
         "utilizado_depois": 0.0,
         "pendente": 219.0,
         "linha_original": "05/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Edilmar Lencina Carneiro (1280) (Parcela 1/1) Pago por: O paciente\t219,00 C\t219,00 C\t1\t\t\t5.509,22\t5.506,25",
-        "coletado_em": "2026-09-11T15:10:15.899733"
+        "coletado_em": "2026-09-11T18:34:37.207088"
       },
       {
         "unidade": "Veranopolis",
@@ -231800,7 +232076,7 @@
         "utilizado_depois": 0.0,
         "pendente": 99.0,
         "linha_original": "05/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Edilmar Lencina Carneiro (1280) (Parcela 1/48) Pago por: O paciente\t99,00 C\t99,00 C\t1\t\t\t5.608,22\t5.605,25",
-        "coletado_em": "2026-09-11T15:10:15.915489"
+        "coletado_em": "2026-09-11T18:34:37.222637"
       },
       {
         "unidade": "Veranopolis",
@@ -231823,7 +232099,7 @@
         "utilizado_depois": 0.0,
         "pendente": 139.0,
         "linha_original": "05/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Paula Renata Brum Fortes (5360) (Parcela 1/48) Pago por: Edilmar Lencina Carneiro\t139,00 C\t139,00 C\t1\t\t\t5.747,22\t5.744,25",
-        "coletado_em": "2026-09-11T15:10:15.930543"
+        "coletado_em": "2026-09-11T18:34:37.237345"
       },
       {
         "unidade": "Veranopolis",
@@ -231846,7 +232122,7 @@
         "utilizado_depois": 1500.0,
         "pendente": 158.0,
         "linha_original": "05/09/2026\tPix Doutores\nAlexandre Favero\tRecebido de Rosemari dos Santos Pezzin (6002) (Parcela 7/48) Pago por: O paciente\t158,00 C\t158,00 C\t1\t\t\t5.905,22\t5.902,25",
-        "coletado_em": "2026-09-11T15:10:15.945147"
+        "coletado_em": "2026-09-11T18:34:37.252770"
       },
       {
         "unidade": "Veranopolis",
@@ -231869,7 +232145,7 @@
         "utilizado_depois": 0.0,
         "pendente": 269.0,
         "linha_original": "08/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Neusa Rodrigues de Brito (7601) (Parcela 1/1) Pago por: O paciente\t269,00 C\t269,00 C\t1\t\t\t15.435,72\t15.282,87",
-        "coletado_em": "2026-09-11T15:10:16.052883"
+        "coletado_em": "2026-09-11T18:34:37.358498"
       },
       {
         "unidade": "Veranopolis",
@@ -231892,7 +232168,7 @@
         "utilizado_depois": 0.0,
         "pendente": 219.0,
         "linha_original": "08/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Maria Clara Tessaro Mesquita de Lima (6844) (Parcela 1/1) Pago por: Elaine Mara Tessaro\t219,00 C\t219,00 C\t1\t\t\t15.654,72\t15.501,87",
-        "coletado_em": "2026-09-11T15:10:16.067991"
+        "coletado_em": "2026-09-11T18:34:37.373828"
       },
       {
         "unidade": "Veranopolis",
@@ -231915,7 +232191,7 @@
         "utilizado_depois": 0.0,
         "pendente": 305.0,
         "linha_original": "09/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Osmar Junior Pimentel (7987) (Parcela 1/1) Pago por: O paciente\t305,00 C\t305,00 C\t1\t\t\t16.493,72\t16.336,12",
-        "coletado_em": "2026-09-11T15:10:16.128865"
+        "coletado_em": "2026-09-11T18:34:37.433914"
       },
       {
         "unidade": "Veranopolis",
@@ -231938,7 +232214,7 @@
         "utilizado_depois": 0.0,
         "pendente": 152.0,
         "linha_original": "09/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Osmar Junior Pimentel (7987) (Parcela 13/48) Pago por: O paciente\t152,00 C\t152,00 C\t1\t\t\t16.645,72\t16.488,12",
-        "coletado_em": "2026-09-11T15:10:16.145591"
+        "coletado_em": "2026-09-11T18:34:37.450099"
       },
       {
         "unidade": "Veranopolis",
@@ -231961,7 +232237,7 @@
         "utilizado_depois": 0.0,
         "pendente": 148.0,
         "linha_original": "09/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Graciele Sinigaglia (2954) (Parcela 25/48) Pago por: O paciente\t148,00 C\t148,00 C\t1\t\t\t16.793,72\t16.636,12",
-        "coletado_em": "2026-09-11T15:10:16.160895"
+        "coletado_em": "2026-09-11T18:34:37.465094"
       },
       {
         "unidade": "Veranopolis",
@@ -231984,7 +232260,7 @@
         "utilizado_depois": 0.0,
         "pendente": 210.0,
         "linha_original": "09/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Eliane Carvalho da Cruz (6113) (Parcela 1/1) Pago por: O paciente\t210,00 C\t210,00 C\t1\t\t\t17.003,72\t16.846,12",
-        "coletado_em": "2026-09-11T15:10:16.175729"
+        "coletado_em": "2026-09-11T18:34:37.479965"
       },
       {
         "unidade": "Veranopolis",
@@ -232007,7 +232283,7 @@
         "utilizado_depois": 0.0,
         "pendente": 95.0,
         "linha_original": "09/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Eliane Carvalho da Cruz (6113) (Parcela 1/1) Pago por: O paciente\t95,00 C\t95,00 C\t1\t\t\t17.098,72\t16.941,12",
-        "coletado_em": "2026-09-11T15:10:16.190747"
+        "coletado_em": "2026-09-11T18:34:37.494936"
       },
       {
         "unidade": "Veranopolis",
@@ -232030,7 +232306,7 @@
         "utilizado_depois": 0.0,
         "pendente": 158.0,
         "linha_original": "09/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Graciele Escobar (8334) (Parcela 3/48) Pago por: O paciente\t158,00 C\t158,00 C\t1\t\t\t18.538,44\t18.365,62",
-        "coletado_em": "2026-09-11T15:10:16.310538"
+        "coletado_em": "2026-09-11T18:34:37.615226"
       },
       {
         "unidade": "Veranopolis",
@@ -232053,7 +232329,7 @@
         "utilizado_depois": 0.0,
         "pendente": 148.0,
         "linha_original": "09/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Larissa Cardoso Rodrigues (6741) (Parcela 26/48) Pago por: Fagner de Barros Silveira\t148,00 C\t148,00 C\t1\t\t\t19.236,44\t19.061,23",
-        "coletado_em": "2026-09-11T15:10:16.369892"
+        "coletado_em": "2026-09-11T18:34:37.675836"
       },
       {
         "unidade": "Veranopolis",
@@ -232076,7 +232352,7 @@
         "utilizado_depois": 0.0,
         "pendente": 148.0,
         "linha_original": "09/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Larissa Cardoso Rodrigues (6741) (Parcela 27/48) Pago por: O paciente\t148,00 C\t148,00 C\t1\t\t\t19.384,44\t19.209,23",
-        "coletado_em": "2026-09-11T15:10:16.384985"
+        "coletado_em": "2026-09-11T18:34:37.690939"
       },
       {
         "unidade": "Veranopolis",
@@ -232099,7 +232375,7 @@
         "utilizado_depois": 1500.0,
         "pendente": 99.88,
         "linha_original": "03/09/2026\tPix Doutores\nAlexandre Favero\tRecebido de Cícero Pereira de Sousa (7939) (Parcela 1/48) Pago por: O paciente\t99,88 C\t99,88 C\t1\t\t\t19.484,32\t19.309,11",
-        "coletado_em": "2026-09-11T15:10:16.399970"
+        "coletado_em": "2026-09-11T18:34:37.706112"
       },
       {
         "unidade": "Veranopolis",
@@ -232122,7 +232398,7 @@
         "utilizado_depois": 0.0,
         "pendente": 125.0,
         "linha_original": "09/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Bernardo Dall Agnol Ramos (6509) (Parcela 34/48) Pago por: Ana Paula Dall Agnol\t125,00 C\t125,00 C\t1\t\t\t20.088,32\t19.909,34",
-        "coletado_em": "2026-09-11T15:10:16.474751"
+        "coletado_em": "2026-09-11T18:34:37.781639"
       },
       {
         "unidade": "Veranopolis",
@@ -232145,7 +232421,7 @@
         "utilizado_depois": 0.0,
         "pendente": 158.0,
         "linha_original": "09/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Juarez Oliveira Gomes (7978) (Parcela 13/48) Pago por: O paciente\t158,00 C\t158,00 C\t1\t\t\t20.246,32\t20.067,34",
-        "coletado_em": "2026-09-11T15:10:16.489428"
+        "coletado_em": "2026-09-11T18:34:37.796970"
       },
       {
         "unidade": "Veranopolis",
@@ -232168,7 +232444,7 @@
         "utilizado_depois": 0.0,
         "pendente": 185.0,
         "linha_original": "10/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Elinéia Galvan Surtiqua (7413) (Parcela 23/48) Pago por: O paciente\t185,00 C\t185,00 C\t1\t\t\t24.225,32\t23.976,46",
-        "coletado_em": "2026-09-11T15:10:16.726767"
+        "coletado_em": "2026-09-11T18:34:38.029541"
       },
       {
         "unidade": "Veranopolis",
@@ -232191,7 +232467,7 @@
         "utilizado_depois": 0.0,
         "pendente": 95.0,
         "linha_original": "10/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Janaina Rubia Del Savio (2605) (Parcela 1/1) Pago por: O paciente\t95,00 C\t95,00 C\t1\t\t\t24.320,32\t24.071,46",
-        "coletado_em": "2026-09-11T15:10:16.742091"
+        "coletado_em": "2026-09-11T18:34:38.044336"
       },
       {
         "unidade": "Veranopolis",
@@ -232214,7 +232490,7 @@
         "utilizado_depois": 0.0,
         "pendente": 100.0,
         "linha_original": "10/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Cícero Pereira de Sousa (7939) (Parcela 1/1) Pago por: O paciente\t100,00 C\t100,00 C\t1\t\t\t24.420,32\t24.171,46",
-        "coletado_em": "2026-09-11T15:10:16.757592"
+        "coletado_em": "2026-09-11T18:34:38.059957"
       },
       {
         "unidade": "Veranopolis",
@@ -232237,7 +232513,7 @@
         "utilizado_depois": 0.0,
         "pendente": 148.0,
         "linha_original": "10/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Gabriela Laíz Zanin (7503) (Parcela 21/48) Pago por: O paciente\t148,00 C\t148,00 C\t1\t\t\t24.568,32\t24.319,46",
-        "coletado_em": "2026-09-11T15:10:16.772894"
+        "coletado_em": "2026-09-11T18:34:38.075243"
       },
       {
         "unidade": "Veranopolis",
@@ -232260,7 +232536,7 @@
         "utilizado_depois": 0.0,
         "pendente": 120.0,
         "linha_original": "09/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Gustavo Henrique de Souza Ferreira (7741) (Parcela 18/48) Pago por: Gilvan Nascimento Ferreira\t120,00 C\t120,00 C\t1\t\t\t26.134,94\t25.867,26",
-        "coletado_em": "2026-09-11T15:10:16.905713"
+        "coletado_em": "2026-09-11T18:34:38.209933"
       },
       {
         "unidade": "Veranopolis",
@@ -232283,7 +232559,7 @@
         "utilizado_depois": 0.0,
         "pendente": 120.0,
         "linha_original": "10/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Samuel Fagundes vieira (7969) (Parcela 1/1) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t27.556,94\t27.283,82",
-        "coletado_em": "2026-09-11T15:10:17.008635"
+        "coletado_em": "2026-09-11T18:34:38.314722"
       },
       {
         "unidade": "Veranopolis",
@@ -232306,7 +232582,7 @@
         "utilizado_depois": 0.0,
         "pendente": 120.0,
         "linha_original": "10/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Samuel Fagundes vieira (7969) (Parcela 13/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t27.676,94\t27.403,82",
-        "coletado_em": "2026-09-11T15:10:17.023232"
+        "coletado_em": "2026-09-11T18:34:38.329469"
       },
       {
         "unidade": "Veranopolis",
@@ -232329,7 +232605,7 @@
         "utilizado_depois": 0.0,
         "pendente": 99.0,
         "linha_original": "10/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Paula Cristina Maran (6279) (Parcela 38/48) Pago por: O paciente\t99,00 C\t99,00 C\t1\t\t\t27.775,94\t27.502,82",
-        "coletado_em": "2026-09-11T15:10:17.037592"
+        "coletado_em": "2026-09-11T18:34:38.344881"
       },
       {
         "unidade": "Veranopolis",
@@ -232352,7 +232628,7 @@
         "utilizado_depois": 0.0,
         "pendente": 120.0,
         "linha_original": "10/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Bruno Pagnooncelli (8249) (Parcela 4/48) Pago por: Leila Telles\t120,00 C\t120,00 C\t1\t\t\t27.895,94\t27.622,82",
-        "coletado_em": "2026-09-11T15:10:17.052513"
+        "coletado_em": "2026-09-11T18:34:38.360393"
       },
       {
         "unidade": "Veranopolis",
@@ -232375,7 +232651,7 @@
         "utilizado_depois": 0.0,
         "pendente": 120.0,
         "linha_original": "10/09/2026\tPix Doutores\nValter Baldissera\tRecebido de Siumara da Silva (6010) (Parcela 2/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t28.015,94\t27.742,82",
-        "coletado_em": "2026-09-11T15:10:17.067318"
+        "coletado_em": "2026-09-11T18:34:38.375292"
       },
       {
         "unidade": "FloresDaCunha",
@@ -232398,7 +232674,7 @@
         "utilizado_depois": 5000.0,
         "pendente": 210.0,
         "linha_original": "03/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Ana Anelise Oliveira Moreira (20505) (Parcela 1/1) Pago por: O paciente\t210,00 C\t210,00 C\t1\t\t0\t2.200,00\t2.194,04",
-        "coletado_em": "2026-09-11T15:11:19.197172"
+        "coletado_em": "2026-09-11T18:35:38.164895"
       },
       {
         "unidade": "FloresDaCunha",
@@ -232421,7 +232697,7 @@
         "utilizado_depois": 5000.0,
         "pendente": 99.0,
         "linha_original": "03/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Ana Anelise Oliveira Moreira (20505) (Parcela 1/1) Pago por: O paciente\t99,00 C\t99,00 C\t1\t\t0\t2.299,00\t2.293,04",
-        "coletado_em": "2026-09-11T15:11:19.212344"
+        "coletado_em": "2026-09-11T18:35:38.180757"
       },
       {
         "unidade": "FloresDaCunha",
@@ -232444,7 +232720,7 @@
         "utilizado_depois": 5000.0,
         "pendente": 210.0,
         "linha_original": "04/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Gabriela Machado Vais (20728) (Parcela 1/1) Pago por: Janete Machado\t210,00 C\t210,00 C\t1\t\t0\t3.027,00\t3.014,03",
-        "coletado_em": "2026-09-11T15:11:19.271101"
+        "coletado_em": "2026-09-11T18:35:38.241215"
       },
       {
         "unidade": "FloresDaCunha",
@@ -232467,7 +232743,7 @@
         "utilizado_depois": 5000.0,
         "pendente": 125.0,
         "linha_original": "04/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Mateus Luzni (18555) (Parcela 8/48) Pago por: O paciente\t125,00 C\t125,00 C\t1\t\t0\t4.350,00\t4.307,20",
-        "coletado_em": "2026-09-11T15:11:19.302558"
+        "coletado_em": "2026-09-11T18:35:38.271394"
       },
       {
         "unidade": "FloresDaCunha",
@@ -232490,7 +232766,7 @@
         "utilizado_depois": 5000.0,
         "pendente": 210.0,
         "linha_original": "04/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Fatima Ceccato (15312) (Parcela 1/1) Pago por: O paciente\t210,00 C\t210,00 C\t1\t\t0\t3.672,00\t3.625,50",
-        "coletado_em": "2026-09-11T15:11:19.377428"
+        "coletado_em": "2026-09-11T18:35:38.345697"
       },
       {
         "unidade": "FloresDaCunha",
@@ -232513,7 +232789,7 @@
         "utilizado_depois": 5000.0,
         "pendente": 219.0,
         "linha_original": "05/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Josué Pereira Alves (20655) (Parcela 1/1) Pago por: O paciente\t219,00 C\t219,00 C\t1\t\t0\t4.016,00\t3.969,50",
-        "coletado_em": "2026-09-11T15:11:19.406444"
+        "coletado_em": "2026-09-11T18:35:38.375336"
       },
       {
         "unidade": "FloresDaCunha",
@@ -232536,7 +232812,7 @@
         "utilizado_depois": 5000.0,
         "pendente": 125.0,
         "linha_original": "05/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Josué Pereira Alves (20655) (Parcela 9/48) Pago por: O paciente\t125,00 C\t125,00 C\t1\t\t0\t4.141,00\t4.094,50",
-        "coletado_em": "2026-09-11T15:11:19.420662"
+        "coletado_em": "2026-09-11T18:35:38.390271"
       },
       {
         "unidade": "FloresDaCunha",
@@ -232559,7 +232835,7 @@
         "utilizado_depois": 5000.0,
         "pendente": 125.0,
         "linha_original": "05/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Pedro Ribeiro (20668) (Parcela 7/48) Pago por: Mobilidade Urbana 77 ltda\t125,00 C\t125,00 C\t1\t\t0\t4.266,00\t4.219,50",
-        "coletado_em": "2026-09-11T15:11:19.436030"
+        "coletado_em": "2026-09-11T18:35:38.405346"
       },
       {
         "unidade": "FloresDaCunha",
@@ -232582,7 +232858,7 @@
         "utilizado_depois": 5000.0,
         "pendente": 99.0,
         "linha_original": "05/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Bryan Rodrigues Back (16355) (Parcela 31/48) Pago por: O paciente\t99,00 C\t99,00 C\t1\t\t0\t4.365,00\t4.318,50",
-        "coletado_em": "2026-09-11T15:11:19.450873"
+        "coletado_em": "2026-09-11T18:35:38.420290"
       },
       {
         "unidade": "FloresDaCunha",
@@ -232605,7 +232881,7 @@
         "utilizado_depois": 5000.0,
         "pendente": 195.0,
         "linha_original": "05/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Isequias de Almeida Noronha (20177) (Parcela 1/1) Pago por: O paciente\t195,00 C\t195,00 C\t1\t\t0\t4.915,00\t4.868,50",
-        "coletado_em": "2026-09-11T15:11:19.504580"
+        "coletado_em": "2026-09-11T18:35:38.473450"
       },
       {
         "unidade": "FloresDaCunha",
@@ -232628,7 +232904,7 @@
         "utilizado_depois": 5000.0,
         "pendente": 120.0,
         "linha_original": "05/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Isequias de Almeida Noronha (20177) (Parcela 17/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t0\t5.035,00\t4.988,50",
-        "coletado_em": "2026-09-11T15:11:19.519637"
+        "coletado_em": "2026-09-11T18:35:38.489663"
       },
       {
         "unidade": "FloresDaCunha",
@@ -232651,7 +232927,7 @@
         "utilizado_depois": 5000.0,
         "pendente": 99.0,
         "linha_original": "05/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Luiz Henrique Schenkel (18497) (Parcela 19/48) Pago por: O paciente\t99,00 C\t99,00 C\t1\t\t0\t5.134,00\t5.087,50",
-        "coletado_em": "2026-09-11T15:11:19.533869"
+        "coletado_em": "2026-09-11T18:35:38.505826"
       },
       {
         "unidade": "FloresDaCunha",
@@ -232674,7 +232950,7 @@
         "utilizado_depois": 5000.0,
         "pendente": 105.0,
         "linha_original": "05/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Isaac Americano Maia (20027) (Parcela 19/48) Pago por: O paciente\t105,00 C\t105,00 C\t1\t\t0\t5.239,00\t5.192,50",
-        "coletado_em": "2026-09-11T15:11:19.548823"
+        "coletado_em": "2026-09-11T18:35:38.521654"
       },
       {
         "unidade": "FloresDaCunha",
@@ -232697,7 +232973,7 @@
         "utilizado_depois": 5000.0,
         "pendente": 120.0,
         "linha_original": "05/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Leandro Tafarel Dias Jardim (19300) (Parcela 10/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t0\t5.359,00\t5.312,50",
-        "coletado_em": "2026-09-11T15:11:19.563031"
+        "coletado_em": "2026-09-11T18:35:38.536950"
       },
       {
         "unidade": "FloresDaCunha",
@@ -232720,7 +232996,7 @@
         "utilizado_depois": 5000.0,
         "pendente": 120.0,
         "linha_original": "05/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Evellyn Laura Monteiro Neres (18437) (Parcela 12/48) Pago por: Deisiane Carolina Monteiro\t120,00 C\t120,00 C\t1\t\t0\t5.479,00\t5.432,50",
-        "coletado_em": "2026-09-11T15:11:19.577745"
+        "coletado_em": "2026-09-11T18:35:38.552093"
       },
       {
         "unidade": "FloresDaCunha",
@@ -232743,7 +233019,7 @@
         "utilizado_depois": 5000.0,
         "pendente": 125.0,
         "linha_original": "05/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Emilyn Moura da Silva (20235) (Parcela 3/48) Pago por: Jonatas Isaias da Silva\t125,00 C\t125,00 C\t1\t\t0\t5.604,00\t5.557,50",
-        "coletado_em": "2026-09-11T15:11:19.591701"
+        "coletado_em": "2026-09-11T18:35:38.567891"
       },
       {
         "unidade": "FloresDaCunha",
@@ -232766,7 +233042,7 @@
         "utilizado_depois": 5000.0,
         "pendente": 99.0,
         "linha_original": "04/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Gabriela Machado Vais (20728) (Parcela 1/1) Pago por: JANETE MACHADO\t99,00 C\t99,00 C\t1\t\t000\t5.703,00\t5.656,50",
-        "coletado_em": "2026-09-11T15:11:19.606428"
+        "coletado_em": "2026-09-11T18:35:38.583808"
       },
       {
         "unidade": "FloresDaCunha",
@@ -232789,7 +233065,7 @@
         "utilizado_depois": 5000.0,
         "pendente": 160.0,
         "linha_original": "08/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Elenice Alvez da Silva (13592) (Parcela 1/1) Pago por: O paciente\t160,00 C\t160,00 C\t1\t\t0\t5.770,50\t5.724,00",
-        "coletado_em": "2026-09-11T15:11:19.634717"
+        "coletado_em": "2026-09-11T18:35:38.612788"
       },
       {
         "unidade": "FloresDaCunha",
@@ -232812,7 +233088,7 @@
         "utilizado_depois": 5000.0,
         "pendente": 120.0,
         "linha_original": "08/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Bruna Cristina da Luz (17996) (Parcela 1/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t0\t5.990,50\t5.944,00",
-        "coletado_em": "2026-09-11T15:11:19.662893"
+        "coletado_em": "2026-09-11T18:35:38.642736"
       },
       {
         "unidade": "FloresDaCunha",
@@ -232835,7 +233111,7 @@
         "utilizado_depois": 5000.0,
         "pendente": 125.0,
         "linha_original": "08/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Bruna Regina de Souza (16293) (Parcela 3/48) Pago por: O paciente\t125,00 C\t125,00 C\t1\t\t0\t6.425,50\t6.374,62",
-        "coletado_em": "2026-09-11T15:11:19.719487"
+        "coletado_em": "2026-09-11T18:35:38.701532"
       },
       {
         "unidade": "FloresDaCunha",
@@ -232858,7 +233134,7 @@
         "utilizado_depois": 5000.0,
         "pendente": 201.0,
         "linha_original": "08/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Carenz Angelina Capriata Lozada (20574) (Parcela 1/1) Pago por: O paciente\t201,00 C\t201,00 C\t1\t\t0\t7.459,50\t7.403,34",
-        "coletado_em": "2026-09-11T15:11:19.834875"
+        "coletado_em": "2026-09-11T18:35:38.820842"
       },
       {
         "unidade": "FloresDaCunha",
@@ -232881,7 +233157,7 @@
         "utilizado_depois": 5000.0,
         "pendente": 99.0,
         "linha_original": "08/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Carenz Angelina Capriata Lozada (20574) (Parcela 1/1) Pago por: O paciente\t99,00 C\t99,00 C\t1\t\t0\t7.558,50\t7.502,34",
-        "coletado_em": "2026-09-11T15:11:19.849370"
+        "coletado_em": "2026-09-11T18:35:38.835298"
       },
       {
         "unidade": "FloresDaCunha",
@@ -232904,7 +233180,7 @@
         "utilizado_depois": 5000.0,
         "pendente": 120.0,
         "linha_original": "08/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Andrieli da Rosa (14292) (Parcela 17/48) Pago por: Luan Elicker Correa\t120,00 C\t120,00 C\t1\t\t0\t7.678,50\t7.622,34",
-        "coletado_em": "2026-09-11T15:11:19.863473"
+        "coletado_em": "2026-09-11T18:35:38.849716"
       },
       {
         "unidade": "FloresDaCunha",
@@ -232927,7 +233203,7 @@
         "utilizado_depois": 5000.0,
         "pendente": 113.0,
         "linha_original": "08/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Guilherme Biazus (20772) (Parcela 6/48) Pago por: Cerilda Leiva Pacheco de Ataide Biazus\t113,00 C\t113,00 C\t1\t\t000\t8.429,50\t8.369,52",
-        "coletado_em": "2026-09-11T15:11:19.949547"
+        "coletado_em": "2026-09-11T18:35:38.940210"
       },
       {
         "unidade": "FloresDaCunha",
@@ -232950,7 +233226,7 @@
         "utilizado_depois": 5000.0,
         "pendente": 120.0,
         "linha_original": "09/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Vanderlei dos Santos Araujo (17545) (Parcela 1/1) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t0\t8.450,49\t8.390,51",
-        "coletado_em": "2026-09-11T15:11:20.006466"
+        "coletado_em": "2026-09-11T18:35:38.999000"
       },
       {
         "unidade": "FloresDaCunha",
@@ -232973,7 +233249,7 @@
         "utilizado_depois": 5000.0,
         "pendente": 98.0,
         "linha_original": "09/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Maiara Gabi Pereira Da Cunha Estoquero (20350) (Parcela 1/1) Pago por: Janete Aparecida Pereira da Cunha\t98,00 C\t98,00 C\t1\t\t0\t8.748,49\t8.688,51",
-        "coletado_em": "2026-09-11T15:11:20.035448"
+        "coletado_em": "2026-09-11T18:35:39.028983"
       },
       {
         "unidade": "FloresDaCunha",
@@ -232996,7 +233272,7 @@
         "utilizado_depois": 5000.0,
         "pendente": 120.0,
         "linha_original": "10/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Yamila Adriana Pereira (20411) (Parcela 13/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t000\t11.954,52\t11.835,02",
-        "coletado_em": "2026-09-11T15:11:20.243590"
+        "coletado_em": "2026-09-11T18:35:39.235261"
       },
       {
         "unidade": "FloresDaCunha",
@@ -233019,7 +233295,7 @@
         "utilizado_depois": 5000.0,
         "pendente": 69.0,
         "linha_original": "10/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Jaqueline da Silva Lorenzo (21052) (Parcela 1/1) Pago por: O paciente\t69,00 C\t69,00 C\t1\t\t000\t12.615,52\t12.496,02",
-        "coletado_em": "2026-09-11T15:11:20.322465"
+        "coletado_em": "2026-09-11T18:35:39.308759"
       },
       {
         "unidade": "FloresDaCunha",
@@ -233042,7 +233318,7 @@
         "utilizado_depois": 5000.0,
         "pendente": 100.0,
         "linha_original": "10/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Andriel dos Santos Vieira (19540) (Parcela 1/1) Pago por: O paciente\t100,00 C\t100,00 C\t1\t\t000\t12.830,52\t12.711,02",
-        "coletado_em": "2026-09-11T15:11:20.350246"
+        "coletado_em": "2026-09-11T18:35:39.339189"
       },
       {
         "unidade": "FloresDaCunha",
@@ -233065,7 +233341,7 @@
         "utilizado_depois": 5000.0,
         "pendente": 100.0,
         "linha_original": "10/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Andriel dos Santos Vieira (19540) (Parcela 26/48) Pago por: O paciente\t100,00 C\t100,00 C\t1\t\t000\t12.930,52\t12.811,02",
-        "coletado_em": "2026-09-11T15:11:20.364405"
+        "coletado_em": "2026-09-11T18:35:39.354764"
       },
       {
         "unidade": "FloresDaCunha",
@@ -233088,7 +233364,7 @@
         "utilizado_depois": 5000.0,
         "pendente": 249.0,
         "linha_original": "10/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Luan Pedroso Abreu (17492) (Parcela 1/1) Pago por: O paciente\t249,00 C\t249,00 C\t1\t\t000\t13.179,52\t13.060,02",
-        "coletado_em": "2026-09-11T15:11:20.378078"
+        "coletado_em": "2026-09-11T18:35:39.369548"
       },
       {
         "unidade": "FloresDaCunha",
@@ -233111,7 +233387,7 @@
         "utilizado_depois": 5000.0,
         "pendente": 95.0,
         "linha_original": "10/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Luan Pedroso Abreu (17492) (Parcela 16/48) Pago por: O paciente\t95,00 C\t95,00 C\t1\t\t000\t13.274,52\t13.155,02",
-        "coletado_em": "2026-09-11T15:11:20.392463"
+        "coletado_em": "2026-09-11T18:35:39.390354"
       },
       {
         "unidade": "FloresDaCunha",
@@ -233134,7 +233410,7 @@
         "utilizado_depois": 5000.0,
         "pendente": 98.0,
         "linha_original": "10/09/2026\tPix Doutores\nTamara Macanan\tRecebido de Gustavo Cirilo Lanzzarini (15306) (Parcela 20/48) Pago por: O paciente\t98,00 C\t98,00 C\t1\t\t000\t13.497,52\t13.378,02",
-        "coletado_em": "2026-09-11T15:11:20.421014"
+        "coletado_em": "2026-09-11T18:35:39.423289"
       }
     ]
   },
@@ -233256,13 +233532,13 @@
         "unidade": "Garibaldi",
         "competencia": "2026-09",
         "erro": "Menu Finanças não encontrado.",
-        "coletado_em": "2026-09-11T15:09:16.565775"
+        "coletado_em": "2026-09-11T18:33:39.212714"
       },
       {
         "unidade": "Ssdocai",
         "competencia": "2026-09",
         "erro": "Menu Finanças não encontrado.",
-        "coletado_em": "2026-09-11T15:10:20.205429"
+        "coletado_em": "2026-09-11T18:34:40.311540"
       }
     ]
   },
@@ -237490,9 +237766,9 @@
         "doutor_id": "16",
         "doutor": "Franciele Pedrotti",
         "credito_inicial": 10000.0,
-        "utilizado": 3049.0,
-        "credito_disponivel": 6951.0,
-        "credito_final": 6951.0,
+        "utilizado": 3328.0,
+        "credito_disponivel": 6672.0,
+        "credito_final": 6672.0,
         "pix_key": "",
         "updated_by_email": null,
         "updated_by_nome": null
@@ -237567,9 +237843,9 @@
         "doutor_id": "23",
         "doutor": "Jéssica Barreto",
         "credito_inicial": 1000.0,
-        "utilizado": 0.0,
-        "credito_disponivel": 1000.0,
-        "credito_final": 1000.0,
+        "utilizado": 516.0,
+        "credito_disponivel": 484.0,
+        "credito_final": 484.0,
         "pix_key": "",
         "updated_by_email": null,
         "updated_by_nome": null
@@ -237710,9 +237986,9 @@
         "doutor_id": "11",
         "doutor": "Murilo Debortoli",
         "credito_inicial": 500.0,
-        "utilizado": 170.0,
-        "credito_disponivel": 330.0,
-        "credito_final": 330.0,
+        "utilizado": 269.0,
+        "credito_disponivel": 231.0,
+        "credito_final": 231.0,
         "pix_key": "",
         "updated_by_email": null,
         "updated_by_nome": null
@@ -240206,17 +240482,24 @@
     },
     "2026-09": {
       "competencia": "2026-09",
-      "quantidade_total": 189,
-      "valor_total": 24638.1,
-      "valor_total_descontado": 170.0,
-      "valor_total_pendente": 24468.1,
+      "quantidade_total": 195,
+      "valor_total": 25652.1,
+      "valor_total_descontado": 785.0,
+      "valor_total_pendente": 24867.1,
       "por_unidade": [
         {
+          "unidade": "Bento",
+          "quantidade": 1,
+          "valor": 516.0,
+          "descontado": 516.0,
+          "pendente": 0.0
+        },
+        {
           "unidade": "Caxias",
-          "quantidade": 22,
-          "valor": 3138.0,
+          "quantidade": 25,
+          "valor": 3417.0,
           "descontado": 0.0,
-          "pendente": 3138.0
+          "pendente": 3417.0
         },
         {
           "unidade": "Farroupilha",
@@ -240234,10 +240517,10 @@
         },
         {
           "unidade": "Soledade",
-          "quantidade": 59,
-          "valor": 6308.0,
-          "descontado": 170.0,
-          "pendente": 6138.0
+          "quantidade": 61,
+          "valor": 6527.0,
+          "descontado": 269.0,
+          "pendente": 6258.0
         },
         {
           "unidade": "Veranopolis",
@@ -240271,17 +240554,17 @@
         },
         {
           "doutor": "Felipe Lino",
-          "quantidade": 10,
-          "valor": 1049.0,
+          "quantidade": 11,
+          "valor": 1169.0,
           "descontado": 0.0,
-          "pendente": 1049.0
+          "pendente": 1169.0
         },
         {
           "doutor": "Franciele Pedrotti",
-          "quantidade": 21,
-          "valor": 3049.0,
+          "quantidade": 24,
+          "valor": 3328.0,
           "descontado": 0.0,
-          "pendente": 3049.0
+          "pendente": 3328.0
         },
         {
           "doutor": "Giovana Gasparini",
@@ -240289,6 +240572,13 @@
           "valor": 1111.0,
           "descontado": 0.0,
           "pendente": 1111.0
+        },
+        {
+          "doutor": "Jéssica Barreto",
+          "quantidade": 1,
+          "valor": 516.0,
+          "descontado": 516.0,
+          "pendente": 0.0
         },
         {
           "doutor": "Leticia Canabarro",
@@ -240306,9 +240596,9 @@
         },
         {
           "doutor": "Murilo Debortoli",
-          "quantidade": 2,
-          "valor": 170.0,
-          "descontado": 170.0,
+          "quantidade": 3,
+          "valor": 269.0,
+          "descontado": 269.0,
           "pendente": 0.0
         },
         {

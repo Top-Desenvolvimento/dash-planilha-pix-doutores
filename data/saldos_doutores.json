@@ -3156,8 +3156,8 @@
       "doutor_id": "23",
       "doutor": "Jéssica Barreto",
       "credito_inicial": 1000.0,
-      "utilizado": 0.0,
-      "credito_disponivel": 1000.0,
+      "utilizado": 516.0,
+      "credito_disponivel": 484.0,
       "pix_key": ""
     },
     {
@@ -3236,8 +3236,8 @@
       "doutor_id": "11",
       "doutor": "Murilo Debortoli",
       "credito_inicial": 500.0,
-      "utilizado": 170.0,
-      "credito_disponivel": 330.0,
+      "utilizado": 439.0,
+      "credito_disponivel": 61.0,
       "pix_key": ""
     },
     {
