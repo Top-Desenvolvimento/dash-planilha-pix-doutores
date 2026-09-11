@@ -1,10 +1,10 @@
 {
   "competencia": "2026-09",
-  "gerado_em": "2026-09-11T21:21:25.792162",
-  "quantidade_total": 217,
-  "valor_total": 28299.1,
+  "gerado_em": "2026-09-11T23:29:06.210921",
+  "quantidade_total": 220,
+  "valor_total": 28708.1,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 28299.1,
+  "valor_total_pendente": 28708.1,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,8 +13,8 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 38,
-      "valor": 4941.0
+      "quantidade": 40,
+      "valor": 5265.0
     },
     {
       "unidade": "Farroupilha",
@@ -28,8 +28,8 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 66,
-      "valor": 7110.0
+      "quantidade": 67,
+      "valor": 7195.0
     },
     {
       "unidade": "Veranopolis",
@@ -60,7 +60,7 @@
     },
     {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 37,
+      "quantidade": 39,
       "valor_descontado": 0.0
     },
     {
@@ -85,7 +85,7 @@
     },
     {
       "doutor": "Murilo Debortoli",
-      "quantidade": 4,
+      "quantidade": 5,
       "valor_descontado": 0.0
     },
     {
