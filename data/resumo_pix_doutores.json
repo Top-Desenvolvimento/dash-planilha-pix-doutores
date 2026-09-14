@@ -1730,11 +1730,11 @@
   },
   "2026-09": {
     "competencia": "2026-09",
-    "gerado_em": "2026-09-14T16:59:16.774691",
-    "quantidade_total": 239,
-    "valor_total": 31402.1,
+    "gerado_em": "2026-09-14T20:51:47.551664",
+    "quantidade_total": 245,
+    "valor_total": 32310.1,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 31402.1,
+    "valor_total_pendente": 32310.1,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1743,8 +1743,8 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 44,
-        "valor": 5849.0
+        "quantidade": 47,
+        "valor": 6159.0
       },
       {
         "unidade": "Farroupilha",
@@ -1753,13 +1753,13 @@
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 40,
-        "valor": 5654.0
+        "quantidade": 41,
+        "valor": 5873.0
       },
       {
         "unidade": "Soledade",
-        "quantidade": 72,
-        "valor": 7790.0
+        "quantidade": 74,
+        "valor": 8169.0
       },
       {
         "unidade": "Veranopolis",
@@ -1785,12 +1785,12 @@
       },
       {
         "doutor": "Felipe Lino",
-        "quantidade": 13,
+        "quantidade": 14,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Franciele Pedrotti",
-        "quantidade": 43,
+        "quantidade": 46,
         "valor_descontado": 0.0
       },
       {
@@ -1820,7 +1820,7 @@
       },
       {
         "doutor": "Tamara Macanan",
-        "quantidade": 40,
+        "quantidade": 41,
         "valor_descontado": 0.0
       },
       {
@@ -1845,7 +1845,7 @@
       },
       {
         "doutor": "Vitoria de Brito",
-        "quantidade": 3,
+        "quantidade": 4,
         "valor_descontado": 0.0
       }
     ]
