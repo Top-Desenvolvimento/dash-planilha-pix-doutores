@@ -1730,21 +1730,21 @@
   },
   "2026-09": {
     "competencia": "2026-09",
-    "gerado_em": "2026-09-14T11:02:12.974207",
-    "quantidade_total": 235,
-    "valor_total": 30963.1,
+    "gerado_em": "2026-09-14T16:59:16.774691",
+    "quantidade_total": 239,
+    "valor_total": 31402.1,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 30963.1,
+    "valor_total_pendente": 31402.1,
     "por_unidade": [
       {
         "unidade": "Bento",
-        "quantidade": 4,
-        "valor": 846.0
+        "quantidade": 5,
+        "valor": 946.0
       },
       {
         "unidade": "Caxias",
-        "quantidade": 42,
-        "valor": 5605.0
+        "quantidade": 44,
+        "valor": 5849.0
       },
       {
         "unidade": "Farroupilha",
@@ -1758,8 +1758,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 71,
-        "valor": 7695.0
+        "quantidade": 72,
+        "valor": 7790.0
       },
       {
         "unidade": "Veranopolis",
@@ -1780,7 +1780,7 @@
       },
       {
         "doutor": "Everlize Cipriani",
-        "quantidade": 5,
+        "quantidade": 6,
         "valor_descontado": 0.0
       },
       {
@@ -1790,7 +1790,7 @@
       },
       {
         "doutor": "Franciele Pedrotti",
-        "quantidade": 41,
+        "quantidade": 43,
         "valor_descontado": 0.0
       },
       {
@@ -1800,7 +1800,7 @@
       },
       {
         "doutor": "Jéssica Barreto",
-        "quantidade": 4,
+        "quantidade": 5,
         "valor_descontado": 0.0
       },
       {
@@ -1835,7 +1835,7 @@
       },
       {
         "doutor": "TOP",
-        "quantidade": 2,
+        "quantidade": 1,
         "valor_descontado": 0.0
       },
       {
@@ -1845,7 +1845,7 @@
       },
       {
         "doutor": "Vitoria de Brito",
-        "quantidade": 2,
+        "quantidade": 3,
         "valor_descontado": 0.0
       }
     ]
