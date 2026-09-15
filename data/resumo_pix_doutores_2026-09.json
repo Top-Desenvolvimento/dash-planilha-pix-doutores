@@ -1,10 +1,10 @@
 {
   "competencia": "2026-09",
-  "gerado_em": "2026-09-15T12:53:46.852500",
-  "quantidade_total": 253,
-  "valor_total": 33513.1,
-  "valor_total_descontado": 0.0,
-  "valor_total_pendente": 33513.1,
+  "gerado_em": "2026-09-15T14:44:32.373403",
+  "quantidade_total": 261,
+  "valor_total": 34673.1,
+  "valor_total_descontado": 155.0,
+  "valor_total_pendente": 34518.1,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,18 +13,18 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 52,
-      "valor": 6883.0
+      "quantidade": 56,
+      "valor": 7340.0
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 36,
-      "valor": 4804.0
+      "quantidade": 39,
+      "valor": 5317.0
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 42,
-      "valor": 6112.0
+      "quantidade": 43,
+      "valor": 6302.0
     },
     {
       "unidade": "Soledade",
@@ -60,12 +60,12 @@
     },
     {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 51,
+      "quantidade": 56,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Giovana Gasparini",
-      "quantidade": 8,
+      "quantidade": 9,
       "valor_descontado": 0.0
     },
     {
@@ -84,13 +84,18 @@
       "valor_descontado": 0.0
     },
     {
+      "doutor": "Luiz Henrique",
+      "quantidade": 1,
+      "valor_descontado": 155.0
+    },
+    {
       "doutor": "Murilo Debortoli",
       "quantidade": 9,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Tamara Macanan",
-      "quantidade": 42,
+      "quantidade": 43,
       "valor_descontado": 0.0
     },
     {
