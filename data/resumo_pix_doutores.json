@@ -1730,16 +1730,16 @@
   },
   "2026-09": {
     "competencia": "2026-09",
-    "gerado_em": "2026-09-16T12:05:41.056556",
-    "quantidade_total": 280,
-    "valor_total": 36873.1,
+    "gerado_em": "2026-09-16T16:34:46.372418",
+    "quantidade_total": 288,
+    "valor_total": 38272.1,
     "valor_total_descontado": 155.0,
-    "valor_total_pendente": 36718.1,
+    "valor_total_pendente": 38117.1,
     "por_unidade": [
       {
         "unidade": "Bento",
-        "quantidade": 12,
-        "valor": 1720.0
+        "quantidade": 14,
+        "valor": 1930.0
       },
       {
         "unidade": "Caxias",
@@ -1753,8 +1753,8 @@
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 52,
-        "valor": 7475.0
+        "quantidade": 53,
+        "valor": 7570.0
       },
       {
         "unidade": "Soledade",
@@ -1763,8 +1763,8 @@
       },
       {
         "unidade": "Veranopolis",
-        "quantidade": 43,
-        "valor": 6479.1
+        "quantidade": 48,
+        "valor": 7573.1
       }
     ],
     "por_doutor": [
@@ -1780,7 +1780,7 @@
       },
       {
         "doutor": "Everlize Cipriani",
-        "quantidade": 8,
+        "quantidade": 9,
         "valor_descontado": 0.0
       },
       {
@@ -1800,7 +1800,7 @@
       },
       {
         "doutor": "Jéssica Barreto",
-        "quantidade": 12,
+        "quantidade": 14,
         "valor_descontado": 0.0
       },
       {
@@ -1825,7 +1825,7 @@
       },
       {
         "doutor": "Tamara Macanan",
-        "quantidade": 51,
+        "quantidade": 53,
         "valor_descontado": 0.0
       },
       {
@@ -1840,12 +1840,12 @@
       },
       {
         "doutor": "TOP",
-        "quantidade": 2,
+        "quantidade": 1,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Valter Baldissera",
-        "quantidade": 34,
+        "quantidade": 38,
         "valor_descontado": 0.0
       },
       {
