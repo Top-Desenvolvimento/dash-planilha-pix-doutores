@@ -1,20 +1,25 @@
 {
   "competencia": "2026-09",
-  "gerado_em": "2026-09-16T19:53:44.650499",
-  "quantidade_total": 304,
-  "valor_total": 40482.1,
-  "valor_total_descontado": 497.0,
-  "valor_total_pendente": 39985.1,
+  "gerado_em": "2026-09-16T21:01:30.959620",
+  "quantidade_total": 313,
+  "valor_total": 41668.1,
+  "valor_total_descontado": 978.0,
+  "valor_total_pendente": 40690.1,
   "por_unidade": [
     {
       "unidade": "Bento",
-      "quantidade": 17,
-      "valor": 2275.0
+      "quantidade": 21,
+      "valor": 2740.0
     },
     {
       "unidade": "Caxias",
       "quantidade": 57,
       "valor": 7425.0
+    },
+    {
+      "unidade": "Encantado",
+      "quantidade": 2,
+      "valor": 240.0
     },
     {
       "unidade": "Farroupilha",
@@ -33,8 +38,8 @@
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 52,
-      "valor": 8035.1
+      "quantidade": 55,
+      "valor": 8516.1
     }
   ],
   "por_doutor": [
@@ -75,7 +80,7 @@
     },
     {
       "doutor": "Jéssica Barreto",
-      "quantidade": 16,
+      "quantidade": 20,
       "valor_descontado": 0.0
     },
     {
@@ -95,8 +100,8 @@
     },
     {
       "doutor": "Morgana Zambiasi",
-      "quantidade": 3,
-      "valor_descontado": 342.0
+      "quantidade": 6,
+      "valor_descontado": 823.0
     },
     {
       "doutor": "Murilo Debortoli",
@@ -120,7 +125,7 @@
     },
     {
       "doutor": "TOP",
-      "quantidade": 2,
+      "quantidade": 4,
       "valor_descontado": 0.0
     },
     {
