@@ -1730,11 +1730,11 @@
   },
   "2026-09": {
     "competencia": "2026-09",
-    "gerado_em": "2026-09-16T22:32:58.517889",
+    "gerado_em": "2026-09-17T00:57:05.366534",
     "quantidade_total": 324,
     "valor_total": 42845.1,
-    "valor_total_descontado": 490.0,
-    "valor_total_pendente": 42355.1,
+    "valor_total_descontado": 155.0,
+    "valor_total_pendente": 42690.1,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1836,7 +1836,7 @@
       {
         "doutor": "Morgana Zambiasi",
         "quantidade": 9,
-        "valor_descontado": 335.0
+        "valor_descontado": 0.0
       },
       {
         "doutor": "Murilo Debortoli",
@@ -1860,12 +1860,12 @@
       },
       {
         "doutor": "TOP",
-        "quantidade": 4,
+        "quantidade": 3,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Valter Baldissera",
-        "quantidade": 39,
+        "quantidade": 40,
         "valor_descontado": 0.0
       },
       {
