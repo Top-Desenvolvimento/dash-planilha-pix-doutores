@@ -1,10 +1,10 @@
 {
   "competencia": "2026-09",
-  "gerado_em": "2026-09-17T13:56:54.765649",
+  "gerado_em": "2026-09-17T15:24:11.508017",
   "quantidade_total": 325,
   "valor_total": 43045.1,
-  "valor_total_descontado": 155.0,
-  "valor_total_pendente": 42890.1,
+  "valor_total_descontado": 20.0,
+  "valor_total_pendente": 43025.1,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -101,7 +101,7 @@
     {
       "doutor": "Luiz Henrique",
       "quantidade": 1,
-      "valor_descontado": 155.0
+      "valor_descontado": 20.0
     },
     {
       "doutor": "Morgana Zambiasi",
