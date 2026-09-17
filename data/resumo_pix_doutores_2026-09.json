@@ -1,20 +1,20 @@
 {
   "competencia": "2026-09",
-  "gerado_em": "2026-09-17T19:15:02.529137",
-  "quantidade_total": 326,
-  "valor_total": 43165.1,
-  "valor_total_descontado": 120.0,
-  "valor_total_pendente": 43045.1,
+  "gerado_em": "2026-09-17T22:17:35.182313",
+  "quantidade_total": 333,
+  "valor_total": 44331.1,
+  "valor_total_descontado": 579.0,
+  "valor_total_pendente": 43752.1,
   "por_unidade": [
     {
       "unidade": "Bento",
-      "quantidade": 22,
-      "valor": 2860.0
+      "quantidade": 25,
+      "valor": 3319.0
     },
     {
       "unidade": "Caxias",
-      "quantidade": 58,
-      "valor": 7625.0
+      "quantidade": 59,
+      "valor": 7745.0
     },
     {
       "unidade": "Encantado",
@@ -28,8 +28,8 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 68,
-      "valor": 9615.0
+      "quantidade": 69,
+      "valor": 9834.0
     },
     {
       "unidade": "Soledade",
@@ -38,8 +38,8 @@
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 58,
-      "valor": 8858.1
+      "quantidade": 60,
+      "valor": 9226.1
     }
   ],
   "por_doutor": [
@@ -70,7 +70,7 @@
     },
     {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 59,
+      "quantidade": 60,
       "valor_descontado": 0.0
     },
     {
@@ -86,6 +86,11 @@
     {
       "doutor": "Jéssica Barreto",
       "quantidade": 20,
+      "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Karen Ramona Kuwer",
+      "quantidade": 1,
       "valor_descontado": 0.0
     },
     {
@@ -105,7 +110,7 @@
     },
     {
       "doutor": "Morgana Zambiasi",
-      "quantidade": 9,
+      "quantidade": 11,
       "valor_descontado": 0.0
     },
     {
@@ -115,8 +120,8 @@
     },
     {
       "doutor": "Naiane Pieta",
-      "quantidade": 1,
-      "valor_descontado": 120.0
+      "quantidade": 4,
+      "valor_descontado": 579.0
     },
     {
       "doutor": "Tamara Macanan",
