@@ -1,25 +1,25 @@
 {
   "competencia": "2026-09",
-  "gerado_em": "2026-09-18T20:04:57.315829",
-  "quantidade_total": 356,
-  "valor_total": 47923.1,
-  "valor_total_descontado": 901.0,
-  "valor_total_pendente": 47022.1,
+  "gerado_em": "2026-09-18T22:37:09.618700",
+  "quantidade_total": 375,
+  "valor_total": 50213.1,
+  "valor_total_descontado": 738.0,
+  "valor_total_pendente": 49475.1,
   "por_unidade": [
     {
       "unidade": "Bento",
-      "quantidade": 30,
-      "valor": 4617.0
+      "quantidade": 32,
+      "valor": 4955.0
     },
     {
       "unidade": "Caxias",
-      "quantidade": 59,
-      "valor": 7745.0
+      "quantidade": 66,
+      "valor": 8463.0
     },
     {
       "unidade": "Encantado",
-      "quantidade": 11,
-      "valor": 1654.0
+      "quantidade": 15,
+      "valor": 2069.0
     },
     {
       "unidade": "Farroupilha",
@@ -28,13 +28,13 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 72,
-      "valor": 10084.0
+      "quantidade": 77,
+      "valor": 10818.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 82,
-      "valor": 8992.0
+      "quantidade": 83,
+      "valor": 9077.0
     },
     {
       "unidade": "Veranopolis",
@@ -70,7 +70,7 @@
     },
     {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 60,
+      "quantidade": 67,
       "valor_descontado": 0.0
     },
     {
@@ -86,7 +86,7 @@
     {
       "doutor": "João Augusto Keler",
       "quantidade": 6,
-      "valor_descontado": 483.0
+      "valor_descontado": 0.0
     },
     {
       "doutor": "Jéssica Barreto",
@@ -95,7 +95,7 @@
     },
     {
       "doutor": "Karen Ramona Kuwer",
-      "quantidade": 4,
+      "quantidade": 9,
       "valor_descontado": 0.0
     },
     {
@@ -110,7 +110,7 @@
     },
     {
       "doutor": "Luiz Henrique",
-      "quantidade": 5,
+      "quantidade": 6,
       "valor_descontado": 0.0
     },
     {
@@ -120,7 +120,7 @@
     },
     {
       "doutor": "Murilo Debortoli",
-      "quantidade": 11,
+      "quantidade": 12,
       "valor_descontado": 0.0
     },
     {
@@ -150,12 +150,12 @@
     },
     {
       "doutor": "Thiany Cristofoli",
-      "quantidade": 3,
-      "valor_descontado": 323.0
+      "quantidade": 6,
+      "valor_descontado": 643.0
     },
     {
       "doutor": "TOP",
-      "quantidade": 5,
+      "quantidade": 7,
       "valor_descontado": 0.0
     },
     {
