@@ -1730,11 +1730,11 @@
   },
   "2026-09": {
     "competencia": "2026-09",
-    "gerado_em": "2026-09-17T22:17:35.182313",
+    "gerado_em": "2026-09-18T00:29:57.315473",
     "quantidade_total": 333,
     "valor_total": 44331.1,
-    "valor_total_descontado": 579.0,
-    "valor_total_pendente": 43752.1,
+    "valor_total_descontado": 301.0,
+    "valor_total_pendente": 44030.1,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1851,7 +1851,7 @@
       {
         "doutor": "Naiane Pieta",
         "quantidade": 4,
-        "valor_descontado": 579.0
+        "valor_descontado": 301.0
       },
       {
         "doutor": "Tamara Macanan",
