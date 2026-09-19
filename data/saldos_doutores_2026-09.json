@@ -35,8 +35,8 @@
     "doutor_id": "5",
     "doutor": "Ana Cristina Corso",
     "credito_inicial": 1500.0,
-    "utilizado": 714.0,
-    "credito_disponivel": 786.0,
+    "utilizado": 1032.0,
+    "credito_disponivel": 468.0,
     "pix_key": ""
   },
   {
@@ -291,8 +291,8 @@
     "doutor_id": "36",
     "doutor": "Nelson Vaccari",
     "credito_inicial": 4000.0,
-    "utilizado": 855.0,
-    "credito_disponivel": 3145.0,
+    "utilizado": 950.0,
+    "credito_disponivel": 3050.0,
     "pix_key": ""
   },
   {
