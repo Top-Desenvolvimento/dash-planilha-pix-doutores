@@ -1,10 +1,10 @@
 {
   "competencia": "2026-09",
-  "gerado_em": "2026-09-19T21:33:19.325178",
+  "gerado_em": "2026-09-19T23:33:28.204648",
   "quantidade_total": 395,
   "valor_total": 52602.1,
-  "valor_total_descontado": 413.0,
-  "valor_total_pendente": 52189.1,
+  "valor_total_descontado": 245.0,
+  "valor_total_pendente": 52357.1,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -56,7 +56,7 @@
     {
       "doutor": "Ana Cristina Corso",
       "quantidade": 3,
-      "valor_descontado": 318.0
+      "valor_descontado": 150.0
     },
     {
       "doutor": "Dionathan Pohlmann",
