@@ -291,8 +291,8 @@
     "doutor_id": "36",
     "doutor": "Nelson Vaccari",
     "credito_inicial": 4000.0,
-    "utilizado": 475.0,
-    "credito_disponivel": 3525.0,
+    "utilizado": 570.0,
+    "credito_disponivel": 3430.0,
     "pix_key": ""
   },
   {
@@ -363,8 +363,8 @@
     "doutor_id": "44",
     "doutor": "Thiany Cristofoli",
     "credito_inicial": 4000.0,
-    "utilizado": 2252.0,
-    "credito_disponivel": 1748.0,
+    "utilizado": 2895.0,
+    "credito_disponivel": 1105.0,
     "pix_key": ""
   }
 ]
