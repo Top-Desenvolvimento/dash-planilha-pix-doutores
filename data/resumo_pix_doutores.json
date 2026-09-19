@@ -1730,21 +1730,21 @@
   },
   "2026-09": {
     "competencia": "2026-09",
-    "gerado_em": "2026-09-19T11:24:47.189271",
-    "quantidade_total": 378,
-    "valor_total": 50496.1,
-    "valor_total_descontado": 936.0,
-    "valor_total_pendente": 49560.1,
+    "gerado_em": "2026-09-19T13:29:34.629642",
+    "quantidade_total": 387,
+    "valor_total": 51717.1,
+    "valor_total_descontado": 755.0,
+    "valor_total_pendente": 50962.1,
     "por_unidade": [
       {
         "unidade": "Bento",
-        "quantidade": 32,
-        "valor": 4955.0
+        "quantidade": 35,
+        "valor": 5464.0
       },
       {
         "unidade": "Caxias",
-        "quantidade": 67,
-        "valor": 8548.0
+        "quantidade": 71,
+        "valor": 8986.0
       },
       {
         "unidade": "Encantado",
@@ -1753,8 +1753,8 @@
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 42,
-        "valor": 5605.0
+        "quantidade": 44,
+        "valor": 5879.0
       },
       {
         "unidade": "FloresDaCunha",
@@ -1795,7 +1795,7 @@
       },
       {
         "doutor": "Everlize Cipriani",
-        "quantidade": 9,
+        "quantidade": 11,
         "valor_descontado": 0.0
       },
       {
@@ -1805,7 +1805,7 @@
       },
       {
         "doutor": "Franciele Pedrotti",
-        "quantidade": 68,
+        "quantidade": 72,
         "valor_descontado": 0.0
       },
       {
@@ -1845,7 +1845,7 @@
       },
       {
         "doutor": "Luiz Henrique",
-        "quantidade": 6,
+        "quantidade": 9,
         "valor_descontado": 0.0
       },
       {
@@ -1886,7 +1886,7 @@
       {
         "doutor": "Thiany Cristofoli",
         "quantidade": 6,
-        "valor_descontado": 643.0
+        "valor_descontado": 462.0
       },
       {
         "doutor": "TOP",
