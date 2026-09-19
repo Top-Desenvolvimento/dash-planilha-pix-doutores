@@ -1730,10 +1730,10 @@
   },
   "2026-09": {
     "competencia": "2026-09",
-    "gerado_em": "2026-09-19T09:35:13.780624",
-    "quantidade_total": 376,
-    "valor_total": 50298.1,
-    "valor_total_descontado": 738.0,
+    "gerado_em": "2026-09-19T11:24:47.189271",
+    "quantidade_total": 378,
+    "valor_total": 50496.1,
+    "valor_total_descontado": 936.0,
     "valor_total_pendente": 49560.1,
     "por_unidade": [
       {
@@ -1758,8 +1758,8 @@
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 77,
-        "valor": 10818.0
+        "quantidade": 79,
+        "valor": 11016.0
       },
       {
         "unidade": "Soledade",
@@ -1782,6 +1782,11 @@
         "doutor": "Alexandre Orlandini",
         "quantidade": 4,
         "valor_descontado": 0.0
+      },
+      {
+        "doutor": "Ana Cristina Corso",
+        "quantidade": 2,
+        "valor_descontado": 198.0
       },
       {
         "doutor": "Dionathan Pohlmann",
