@@ -1730,11 +1730,11 @@
   },
   "2026-09": {
     "competencia": "2026-09",
-    "gerado_em": "2026-09-22T11:49:36.294003",
-    "quantidade_total": 411,
-    "valor_total": 55393.6,
+    "gerado_em": "2026-09-22T15:53:26.849210",
+    "quantidade_total": 423,
+    "valor_total": 57208.6,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 55393.6,
+    "valor_total_pendente": 57208.6,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1743,8 +1743,8 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 78,
-        "valor": 10638.5
+        "quantidade": 81,
+        "valor": 11118.5
       },
       {
         "unidade": "Encantado",
@@ -1753,23 +1753,23 @@
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 46,
-        "valor": 6079.0
+        "quantidade": 50,
+        "valor": 6536.0
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 80,
-        "valor": 11136.0
+        "quantidade": 81,
+        "valor": 11256.0
       },
       {
         "unidade": "Soledade",
-        "quantidade": 84,
-        "valor": 9202.0
+        "quantidade": 87,
+        "valor": 9660.0
       },
       {
         "unidade": "Veranopolis",
-        "quantidade": 64,
-        "valor": 9776.1
+        "quantidade": 65,
+        "valor": 10076.1
       }
     ],
     "por_doutor": [
@@ -1785,17 +1785,17 @@
       },
       {
         "doutor": "Ana Cristina Corso",
-        "quantidade": 3,
+        "quantidade": 4,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Dionathan Pohlmann",
-        "quantidade": 5,
+        "quantidade": 8,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Everlize Cipriani",
-        "quantidade": 12,
+        "quantidade": 16,
         "valor_descontado": 0.0
       },
       {
@@ -1820,7 +1820,7 @@
       },
       {
         "doutor": "João Augusto Keler",
-        "quantidade": 6,
+        "quantidade": 9,
         "valor_descontado": 0.0
       },
       {
@@ -1865,7 +1865,7 @@
       },
       {
         "doutor": "Nelson Vaccari",
-        "quantidade": 5,
+        "quantidade": 6,
         "valor_descontado": 0.0
       },
       {
