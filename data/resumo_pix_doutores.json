@@ -1730,11 +1730,11 @@
   },
   "2026-09": {
     "competencia": "2026-09",
-    "gerado_em": "2026-09-23T10:16:24.055867",
-    "quantidade_total": 449,
-    "valor_total": 60253.65,
-    "valor_total_descontado": 283.0,
-    "valor_total_pendente": 59970.65,
+    "gerado_em": "2026-09-23T15:10:38.352597",
+    "quantidade_total": 454,
+    "valor_total": 60912.65,
+    "valor_total_descontado": 628.0,
+    "valor_total_pendente": 60284.65,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1743,8 +1743,8 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 84,
-        "valor": 11492.5
+        "quantidade": 85,
+        "valor": 11587.5
       },
       {
         "unidade": "Encantado",
@@ -1763,8 +1763,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 99,
-        "valor": 11042.0
+        "quantidade": 103,
+        "valor": 11606.0
       },
       {
         "unidade": "Veranopolis",
@@ -1815,8 +1815,8 @@
       },
       {
         "doutor": "Gustavo Lourenço Ongaratto",
-        "quantidade": 3,
-        "valor_descontado": 283.0
+        "quantidade": 6,
+        "valor_descontado": 628.0
       },
       {
         "doutor": "Indiamara Rech",
@@ -1825,7 +1825,7 @@
       },
       {
         "doutor": "João Augusto Keler",
-        "quantidade": 18,
+        "quantidade": 19,
         "valor_descontado": 0.0
       },
       {
@@ -1880,7 +1880,7 @@
       },
       {
         "doutor": "Thalia Tessaro",
-        "quantidade": 2,
+        "quantidade": 3,
         "valor_descontado": 0.0
       },
       {
