@@ -1,10 +1,10 @@
 {
   "competencia": "2026-09",
-  "gerado_em": "2026-09-23T15:10:38.352597",
-  "quantidade_total": 454,
-  "valor_total": 60912.65,
+  "gerado_em": "2026-09-23T19:09:54.586914",
+  "quantidade_total": 472,
+  "valor_total": 63296.66,
   "valor_total_descontado": 628.0,
-  "valor_total_pendente": 60284.65,
+  "valor_total_pendente": 62668.66,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,28 +13,28 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 85,
-      "valor": 11587.5
+      "quantidade": 87,
+      "valor": 11792.5
     },
     {
       "unidade": "Encantado",
-      "quantidade": 19,
-      "valor": 2498.0
+      "quantidade": 23,
+      "valor": 3233.0
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 53,
-      "valor": 6945.05
+      "quantidade": 54,
+      "valor": 7060.06
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 88,
-      "valor": 12116.0
+      "quantidade": 90,
+      "valor": 12330.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 103,
-      "valor": 11606.0
+      "quantidade": 112,
+      "valor": 12721.0
     },
     {
       "unidade": "Veranopolis",
@@ -55,7 +55,7 @@
     },
     {
       "doutor": "Ana Cristina Corso",
-      "quantidade": 11,
+      "quantidade": 13,
       "valor_descontado": 0.0
     },
     {
@@ -65,12 +65,12 @@
     },
     {
       "doutor": "Everlize Cipriani",
-      "quantidade": 19,
+      "quantidade": 20,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Felipe Lino",
-      "quantidade": 14,
+      "quantidade": 22,
       "valor_descontado": 0.0
     },
     {
@@ -115,7 +115,7 @@
     },
     {
       "doutor": "Luisa Moraes Lucas",
-      "quantidade": 21,
+      "quantidade": 22,
       "valor_descontado": 0.0
     },
     {
@@ -150,7 +150,7 @@
     },
     {
       "doutor": "Thalia Tessaro",
-      "quantidade": 3,
+      "quantidade": 5,
       "valor_descontado": 0.0
     },
     {
@@ -160,12 +160,12 @@
     },
     {
       "doutor": "Thiany Cristofoli",
-      "quantidade": 10,
+      "quantidade": 12,
       "valor_descontado": 0.0
     },
     {
       "doutor": "TOP",
-      "quantidade": 8,
+      "quantidade": 10,
       "valor_descontado": 0.0
     },
     {
