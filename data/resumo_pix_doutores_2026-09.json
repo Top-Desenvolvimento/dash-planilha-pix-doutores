@@ -1,15 +1,15 @@
 {
   "competencia": "2026-09",
-  "gerado_em": "2026-09-24T19:37:08.130436",
-  "quantidade_total": 520,
-  "valor_total": 68626.66,
+  "gerado_em": "2026-09-24T22:51:12.051074",
+  "quantidade_total": 533,
+  "valor_total": 70358.66,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 68626.66,
+  "valor_total_pendente": 70358.66,
   "por_unidade": [
     {
       "unidade": "Bento",
-      "quantidade": 46,
-      "valor": 6588.0
+      "quantidade": 47,
+      "valor": 6687.0
     },
     {
       "unidade": "Caxias",
@@ -23,23 +23,23 @@
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 57,
-      "valor": 7475.06
+      "quantidade": 61,
+      "valor": 7996.06
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 102,
-      "valor": 13670.0
+      "quantidade": 107,
+      "valor": 14193.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 123,
-      "valor": 14023.0
+      "quantidade": 124,
+      "valor": 14292.0
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 74,
-      "valor": 11071.1
+      "quantidade": 76,
+      "valor": 11391.1
     }
   ],
   "por_doutor": [
@@ -55,7 +55,7 @@
     },
     {
       "doutor": "Ana Cristina Corso",
-      "quantidade": 25,
+      "quantidade": 30,
       "valor_descontado": 0.0
     },
     {
@@ -65,7 +65,7 @@
     },
     {
       "doutor": "Everlize Cipriani",
-      "quantidade": 23,
+      "quantidade": 26,
       "valor_descontado": 0.0
     },
     {
@@ -75,7 +75,7 @@
     },
     {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 76,
+      "quantidade": 77,
       "valor_descontado": 0.0
     },
     {
@@ -120,12 +120,12 @@
     },
     {
       "doutor": "Luiz Henrique",
-      "quantidade": 17,
+      "quantidade": 18,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Marina Alievi",
-      "quantidade": 8,
+      "quantidade": 9,
       "valor_descontado": 0.0
     },
     {
@@ -145,7 +145,7 @@
     },
     {
       "doutor": "Nelson Vaccari",
-      "quantidade": 15,
+      "quantidade": 17,
       "valor_descontado": 0.0
     },
     {
