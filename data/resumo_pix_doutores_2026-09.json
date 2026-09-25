@@ -1,10 +1,10 @@
 {
   "competencia": "2026-09",
-  "gerado_em": "2026-09-24T22:51:12.051074",
-  "quantidade_total": 533,
-  "valor_total": 70358.66,
+  "gerado_em": "2026-09-25T01:04:31.684993",
+  "quantidade_total": 534,
+  "valor_total": 70443.66,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 70358.66,
+  "valor_total_pendente": 70443.66,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -38,8 +38,8 @@
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 76,
-      "valor": 11391.1
+      "quantidade": 77,
+      "valor": 11476.1
     }
   ],
   "por_doutor": [
@@ -170,7 +170,7 @@
     },
     {
       "doutor": "TOP",
-      "quantidade": 3,
+      "quantidade": 4,
       "valor_descontado": 0.0
     },
     {
