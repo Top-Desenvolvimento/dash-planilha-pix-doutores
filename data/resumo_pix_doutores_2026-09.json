@@ -1,10 +1,10 @@
 {
   "competencia": "2026-09",
-  "gerado_em": "2026-09-25T11:53:53.013445",
-  "quantidade_total": 534,
-  "valor_total": 70443.66,
+  "gerado_em": "2026-09-25T16:06:01.831750",
+  "quantidade_total": 539,
+  "valor_total": 70993.66,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 70443.66,
+  "valor_total_pendente": 70993.66,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -18,8 +18,8 @@
     },
     {
       "unidade": "Encantado",
-      "quantidade": 27,
-      "valor": 3572.0
+      "quantidade": 28,
+      "valor": 3677.0
     },
     {
       "unidade": "Farroupilha",
@@ -28,18 +28,18 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 107,
-      "valor": 14193.0
+      "quantidade": 109,
+      "valor": 14408.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 124,
-      "valor": 14292.0
+      "quantidade": 125,
+      "valor": 14412.0
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 77,
-      "valor": 11476.1
+      "quantidade": 78,
+      "valor": 11586.1
     }
   ],
   "por_doutor": [
@@ -55,7 +55,7 @@
     },
     {
       "doutor": "Ana Cristina Corso",
-      "quantidade": 30,
+      "quantidade": 31,
       "valor_descontado": 0.0
     },
     {
@@ -71,6 +71,11 @@
     {
       "doutor": "Felipe Lino",
       "quantidade": 24,
+      "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Fernanda Sozo",
+      "quantidade": 1,
       "valor_descontado": 0.0
     },
     {
@@ -110,7 +115,7 @@
     },
     {
       "doutor": "Leticia Canabarro",
-      "quantidade": 26,
+      "quantidade": 27,
       "valor_descontado": 0.0
     },
     {
@@ -145,7 +150,7 @@
     },
     {
       "doutor": "Nelson Vaccari",
-      "quantidade": 17,
+      "quantidade": 19,
       "valor_descontado": 0.0
     },
     {
@@ -165,12 +170,12 @@
     },
     {
       "doutor": "Thiany Cristofoli",
-      "quantidade": 18,
+      "quantidade": 19,
       "valor_descontado": 0.0
     },
     {
       "doutor": "TOP",
-      "quantidade": 4,
+      "quantidade": 3,
       "valor_descontado": 0.0
     },
     {
