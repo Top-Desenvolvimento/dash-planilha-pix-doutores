@@ -1,25 +1,25 @@
 {
   "competencia": "2026-09",
-  "gerado_em": "2026-09-25T16:06:01.831750",
-  "quantidade_total": 539,
-  "valor_total": 70993.66,
+  "gerado_em": "2026-09-25T20:07:06.855458",
+  "quantidade_total": 555,
+  "valor_total": 72627.65,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 70993.66,
+  "valor_total_pendente": 72627.65,
   "por_unidade": [
     {
       "unidade": "Bento",
-      "quantidade": 47,
-      "valor": 6687.0
+      "quantidade": 49,
+      "valor": 6927.0
     },
     {
       "unidade": "Caxias",
-      "quantidade": 91,
-      "valor": 12227.5
+      "quantidade": 94,
+      "valor": 12516.5
     },
     {
       "unidade": "Encantado",
-      "quantidade": 28,
-      "valor": 3677.0
+      "quantidade": 32,
+      "valor": 4091.99
     },
     {
       "unidade": "Farroupilha",
@@ -28,13 +28,13 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 109,
-      "valor": 14408.0
+      "quantidade": 110,
+      "valor": 14488.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 125,
-      "valor": 14412.0
+      "quantidade": 131,
+      "valor": 15022.0
     },
     {
       "unidade": "Veranopolis",
@@ -59,6 +59,11 @@
       "valor_descontado": 0.0
     },
     {
+      "doutor": "Diogo Cemin Amarante",
+      "quantidade": 1,
+      "valor_descontado": 0.0
+    },
+    {
       "doutor": "Dionathan Pohlmann",
       "quantidade": 11,
       "valor_descontado": 0.0
@@ -75,12 +80,12 @@
     },
     {
       "doutor": "Fernanda Sozo",
-      "quantidade": 1,
+      "quantidade": 2,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 77,
+      "quantidade": 78,
       "valor_descontado": 0.0
     },
     {
@@ -100,7 +105,7 @@
     },
     {
       "doutor": "João Augusto Keler",
-      "quantidade": 19,
+      "quantidade": 20,
       "valor_descontado": 0.0
     },
     {
@@ -115,7 +120,7 @@
     },
     {
       "doutor": "Leticia Canabarro",
-      "quantidade": 27,
+      "quantidade": 31,
       "valor_descontado": 0.0
     },
     {
@@ -125,7 +130,7 @@
     },
     {
       "doutor": "Luiz Henrique",
-      "quantidade": 18,
+      "quantidade": 20,
       "valor_descontado": 0.0
     },
     {
@@ -160,7 +165,7 @@
     },
     {
       "doutor": "Thalia Tessaro",
-      "quantidade": 9,
+      "quantidade": 11,
       "valor_descontado": 0.0
     },
     {
@@ -170,12 +175,12 @@
     },
     {
       "doutor": "Thiany Cristofoli",
-      "quantidade": 19,
+      "quantidade": 22,
       "valor_descontado": 0.0
     },
     {
       "doutor": "TOP",
-      "quantidade": 3,
+      "quantidade": 4,
       "valor_descontado": 0.0
     },
     {
