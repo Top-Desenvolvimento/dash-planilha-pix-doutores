@@ -1,40 +1,40 @@
 {
   "competencia": "2026-09",
-  "gerado_em": "2026-09-26T11:59:30.633623",
-  "quantidade_total": 571,
-  "valor_total": 74775.65,
+  "gerado_em": "2026-09-26T15:45:39.251527",
+  "quantidade_total": 594,
+  "valor_total": 77470.65,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 74775.65,
+  "valor_total_pendente": 77470.65,
   "por_unidade": [
     {
       "unidade": "Bento",
-      "quantidade": 50,
-      "valor": 7012.0
+      "quantidade": 53,
+      "valor": 7496.0
     },
     {
       "unidade": "Caxias",
-      "quantidade": 96,
-      "valor": 12721.5
+      "quantidade": 101,
+      "valor": 13211.5
     },
     {
       "unidade": "Encantado",
-      "quantidade": 40,
-      "valor": 5030.99
+      "quantidade": 44,
+      "valor": 5495.99
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 61,
-      "valor": 7996.06
+      "quantidade": 62,
+      "valor": 8215.06
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 110,
-      "valor": 14488.0
+      "quantidade": 112,
+      "valor": 14678.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 136,
-      "valor": 15941.0
+      "quantidade": 144,
+      "valor": 16788.0
     },
     {
       "unidade": "Veranopolis",
@@ -70,12 +70,12 @@
     },
     {
       "doutor": "Dra.Júlia Raquel Nardi",
-      "quantidade": 6,
+      "quantidade": 9,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Everlize Cipriani",
-      "quantidade": 26,
+      "quantidade": 27,
       "valor_descontado": 0.0
     },
     {
@@ -85,7 +85,7 @@
     },
     {
       "doutor": "Fernanda Sozo",
-      "quantidade": 2,
+      "quantidade": 4,
       "valor_descontado": 0.0
     },
     {
@@ -130,7 +130,7 @@
     },
     {
       "doutor": "Luisa Moraes Lucas",
-      "quantidade": 26,
+      "quantidade": 28,
       "valor_descontado": 0.0
     },
     {
@@ -140,7 +140,7 @@
     },
     {
       "doutor": "Marina Alievi",
-      "quantidade": 10,
+      "quantidade": 12,
       "valor_descontado": 0.0
     },
     {
@@ -150,7 +150,7 @@
     },
     {
       "doutor": "Murilo Debortoli",
-      "quantidade": 12,
+      "quantidade": 16,
       "valor_descontado": 0.0
     },
     {
@@ -165,7 +165,7 @@
     },
     {
       "doutor": "Renata Protto",
-      "quantidade": 1,
+      "quantidade": 3,
       "valor_descontado": 0.0
     },
     {
@@ -175,7 +175,7 @@
     },
     {
       "doutor": "Thalia Tessaro",
-      "quantidade": 12,
+      "quantidade": 17,
       "valor_descontado": 0.0
     },
     {
@@ -190,7 +190,7 @@
     },
     {
       "doutor": "TOP",
-      "quantidade": 5,
+      "quantidade": 7,
       "valor_descontado": 0.0
     },
     {
