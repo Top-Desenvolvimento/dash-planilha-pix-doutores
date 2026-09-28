@@ -1730,11 +1730,11 @@
   },
   "2026-09": {
     "competencia": "2026-09",
-    "gerado_em": "2026-09-28T13:52:19.390995",
-    "quantidade_total": 594,
-    "valor_total": 77470.65,
-    "valor_total_descontado": 0.0,
-    "valor_total_pendente": 77470.65,
+    "gerado_em": "2026-09-28T20:25:01.965257",
+    "quantidade_total": 606,
+    "valor_total": 79005.65,
+    "valor_total_descontado": 528.0,
+    "valor_total_pendente": 78477.65,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1743,13 +1743,13 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 101,
-        "valor": 13211.5
+        "quantidade": 105,
+        "valor": 13724.5
       },
       {
         "unidade": "Encantado",
-        "quantidade": 44,
-        "valor": 5495.99
+        "quantidade": 48,
+        "valor": 5903.99
       },
       {
         "unidade": "Farroupilha",
@@ -1763,13 +1763,13 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 144,
-        "valor": 16788.0
+        "quantidade": 147,
+        "valor": 17133.0
       },
       {
         "unidade": "Veranopolis",
-        "quantidade": 78,
-        "valor": 11586.1
+        "quantidade": 79,
+        "valor": 11855.1
       }
     ],
     "por_doutor": [
@@ -1844,6 +1844,11 @@
         "valor_descontado": 0.0
       },
       {
+        "doutor": "Julia Nardi",
+        "quantidade": 1,
+        "valor_descontado": 0.0
+      },
+      {
         "doutor": "Jéssica Barreto",
         "quantidade": 19,
         "valor_descontado": 0.0
@@ -1870,7 +1875,7 @@
       },
       {
         "doutor": "Marina Alievi",
-        "quantidade": 12,
+        "quantidade": 13,
         "valor_descontado": 0.0
       },
       {
@@ -1890,8 +1895,18 @@
       },
       {
         "doutor": "Nelson Vaccari",
-        "quantidade": 19,
+        "quantidade": 20,
         "valor_descontado": 0.0
+      },
+      {
+        "doutor": "Nicoli Weber",
+        "quantidade": 3,
+        "valor_descontado": 303.0
+      },
+      {
+        "doutor": "Norberto Filipe",
+        "quantidade": 2,
+        "valor_descontado": 225.0
       },
       {
         "doutor": "Renata Protto",
@@ -1905,7 +1920,7 @@
       },
       {
         "doutor": "Thalia Tessaro",
-        "quantidade": 17,
+        "quantidade": 21,
         "valor_descontado": 0.0
       },
       {
