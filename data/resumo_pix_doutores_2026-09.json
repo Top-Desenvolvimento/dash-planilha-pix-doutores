@@ -1,10 +1,10 @@
 {
   "competencia": "2026-09",
-  "gerado_em": "2026-09-28T20:25:01.965257",
-  "quantidade_total": 606,
-  "valor_total": 79005.65,
-  "valor_total_descontado": 528.0,
-  "valor_total_pendente": 78477.65,
+  "gerado_em": "2026-09-29T00:34:53.558159",
+  "quantidade_total": 614,
+  "valor_total": 80306.65,
+  "valor_total_descontado": 867.0,
+  "valor_total_pendente": 79439.65,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,13 +13,13 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 105,
-      "valor": 13724.5
+      "quantidade": 109,
+      "valor": 14182.5
     },
     {
       "unidade": "Encantado",
-      "quantidade": 48,
-      "valor": 5903.99
+      "quantidade": 49,
+      "valor": 6023.99
     },
     {
       "unidade": "Farroupilha",
@@ -38,8 +38,8 @@
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 79,
-      "valor": 11855.1
+      "quantidade": 82,
+      "valor": 12578.1
     }
   ],
   "por_doutor": [
@@ -134,6 +134,11 @@
       "valor_descontado": 0.0
     },
     {
+      "doutor": "Letícia Cauzzi",
+      "quantidade": 2,
+      "valor_descontado": 219.0
+    },
+    {
       "doutor": "Luisa Moraes Lucas",
       "quantidade": 28,
       "valor_descontado": 0.0
@@ -165,13 +170,13 @@
     },
     {
       "doutor": "Nelson Vaccari",
-      "quantidade": 20,
+      "quantidade": 21,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Nicoli Weber",
-      "quantidade": 3,
-      "valor_descontado": 303.0
+      "quantidade": 4,
+      "valor_descontado": 423.0
     },
     {
       "doutor": "Norberto Filipe",
@@ -190,7 +195,7 @@
     },
     {
       "doutor": "Thalia Tessaro",
-      "quantidade": 21,
+      "quantidade": 25,
       "valor_descontado": 0.0
     },
     {
