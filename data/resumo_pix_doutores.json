@@ -1730,11 +1730,11 @@
   },
   "2026-09": {
     "competencia": "2026-09",
-    "gerado_em": "2026-09-29T12:56:17.239491",
-    "quantidade_total": 615,
-    "valor_total": 80426.65,
+    "gerado_em": "2026-09-29T18:29:33.232233",
+    "quantidade_total": 626,
+    "valor_total": 81640.65,
     "valor_total_descontado": 219.0,
-    "valor_total_pendente": 80207.65,
+    "valor_total_pendente": 81421.65,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1743,8 +1743,8 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 110,
-        "valor": 14302.5
+        "quantidade": 111,
+        "valor": 14422.5
       },
       {
         "unidade": "Encantado",
@@ -1758,13 +1758,13 @@
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 112,
-        "valor": 14678.0
+        "quantidade": 114,
+        "valor": 14883.0
       },
       {
         "unidade": "Soledade",
-        "quantidade": 147,
-        "valor": 17133.0
+        "quantidade": 155,
+        "valor": 18022.0
       },
       {
         "unidade": "Veranopolis",
@@ -1815,7 +1815,7 @@
       },
       {
         "doutor": "Fernanda Sozo",
-        "quantidade": 4,
+        "quantidade": 6,
         "valor_descontado": 0.0
       },
       {
@@ -1880,7 +1880,7 @@
       },
       {
         "doutor": "Marina Alievi",
-        "quantidade": 13,
+        "quantidade": 14,
         "valor_descontado": 0.0
       },
       {
@@ -1910,7 +1910,7 @@
       },
       {
         "doutor": "Norberto Filipe",
-        "quantidade": 2,
+        "quantidade": 9,
         "valor_descontado": 0.0
       },
       {
@@ -1925,7 +1925,7 @@
       },
       {
         "doutor": "Thalia Tessaro",
-        "quantidade": 26,
+        "quantidade": 27,
         "valor_descontado": 0.0
       },
       {
