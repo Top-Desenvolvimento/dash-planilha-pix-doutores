@@ -1,10 +1,10 @@
 {
   "competencia": "2026-09",
-  "gerado_em": "2026-09-29T00:34:53.558159",
+  "gerado_em": "2026-09-29T06:13:48.559745",
   "quantidade_total": 614,
   "valor_total": 80306.65,
-  "valor_total_descontado": 867.0,
-  "valor_total_pendente": 79439.65,
+  "valor_total_descontado": 543.0,
+  "valor_total_pendente": 79763.65,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -176,12 +176,12 @@
     {
       "doutor": "Nicoli Weber",
       "quantidade": 4,
-      "valor_descontado": 423.0
+      "valor_descontado": 274.0
     },
     {
       "doutor": "Norberto Filipe",
       "quantidade": 2,
-      "valor_descontado": 225.0
+      "valor_descontado": 50.0
     },
     {
       "doutor": "Renata Protto",
