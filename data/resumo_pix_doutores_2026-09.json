@@ -1,10 +1,10 @@
 {
   "competencia": "2026-09",
-  "gerado_em": "2026-09-29T18:29:33.232233",
-  "quantidade_total": 626,
-  "valor_total": 81640.65,
-  "valor_total_descontado": 219.0,
-  "valor_total_pendente": 81421.65,
+  "gerado_em": "2026-09-29T22:37:23.310718",
+  "quantidade_total": 642,
+  "valor_total": 84561.65,
+  "valor_total_descontado": 1157.0,
+  "valor_total_pendente": 83404.65,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,13 +13,13 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 111,
-      "valor": 14422.5
+      "quantidade": 115,
+      "valor": 14722.5
     },
     {
       "unidade": "Encantado",
-      "quantidade": 49,
-      "valor": 6023.99
+      "quantidade": 50,
+      "valor": 6077.99
     },
     {
       "unidade": "Farroupilha",
@@ -28,18 +28,18 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 114,
-      "valor": 14883.0
+      "quantidade": 120,
+      "valor": 16097.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 155,
-      "valor": 18022.0
+      "quantidade": 159,
+      "valor": 18437.0
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 82,
-      "valor": 12578.1
+      "quantidade": 83,
+      "valor": 13516.1
     }
   ],
   "por_doutor": [
@@ -85,7 +85,7 @@
     },
     {
       "doutor": "Fernanda Sozo",
-      "quantidade": 6,
+      "quantidade": 12,
       "valor_descontado": 0.0
     },
     {
@@ -135,8 +135,8 @@
     },
     {
       "doutor": "Letícia Cauzzi",
-      "quantidade": 2,
-      "valor_descontado": 219.0
+      "quantidade": 3,
+      "valor_descontado": 1157.0
     },
     {
       "doutor": "Luisa Moraes Lucas",
@@ -175,12 +175,12 @@
     },
     {
       "doutor": "Nicoli Weber",
-      "quantidade": 4,
+      "quantidade": 5,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Norberto Filipe",
-      "quantidade": 9,
+      "quantidade": 13,
       "valor_descontado": 0.0
     },
     {
@@ -195,7 +195,7 @@
     },
     {
       "doutor": "Thalia Tessaro",
-      "quantidade": 27,
+      "quantidade": 31,
       "valor_descontado": 0.0
     },
     {
