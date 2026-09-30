@@ -1,10 +1,10 @@
 {
   "competencia": "2026-09",
-  "gerado_em": "2026-09-30T16:58:52.376446",
-  "quantidade_total": 664,
-  "valor_total": 87521.65,
-  "valor_total_descontado": 0.0,
-  "valor_total_pendente": 87521.65,
+  "gerado_em": "2026-09-30T19:22:36.408152",
+  "quantidade_total": 678,
+  "valor_total": 91369.65,
+  "valor_total_descontado": 326.0,
+  "valor_total_pendente": 91043.65,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,28 +13,28 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 115,
-      "valor": 14722.5
+      "quantidade": 116,
+      "valor": 17057.5
     },
     {
       "unidade": "Encantado",
-      "quantidade": 52,
-      "valor": 6277.99
+      "quantidade": 54,
+      "valor": 6603.99
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 63,
-      "valor": 8303.06
+      "quantidade": 64,
+      "valor": 8408.06
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 122,
-      "valor": 16789.0
+      "quantidade": 125,
+      "valor": 17098.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 174,
-      "valor": 20122.0
+      "quantidade": 181,
+      "valor": 20895.0
     },
     {
       "unidade": "Veranopolis",
@@ -75,7 +75,7 @@
     },
     {
       "doutor": "Everlize Cipriani",
-      "quantidade": 28,
+      "quantidade": 29,
       "valor_descontado": 0.0
     },
     {
@@ -85,7 +85,7 @@
     },
     {
       "doutor": "Fernanda Sozo",
-      "quantidade": 14,
+      "quantidade": 17,
       "valor_descontado": 0.0
     },
     {
@@ -140,7 +140,7 @@
     },
     {
       "doutor": "Luisa Moraes Lucas",
-      "quantidade": 28,
+      "quantidade": 30,
       "valor_descontado": 0.0
     },
     {
@@ -180,13 +180,18 @@
     },
     {
       "doutor": "Norberto Filipe",
-      "quantidade": 21,
+      "quantidade": 22,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Renata Protto",
       "quantidade": 3,
       "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Sara Trevisol",
+      "quantidade": 2,
+      "valor_descontado": 326.0
     },
     {
       "doutor": "Tamara Macanan",
@@ -210,7 +215,7 @@
     },
     {
       "doutor": "TOP",
-      "quantidade": 7,
+      "quantidade": 8,
       "valor_descontado": 0.0
     },
     {
@@ -220,7 +225,7 @@
     },
     {
       "doutor": "Vitoria de Brito",
-      "quantidade": 8,
+      "quantidade": 12,
       "valor_descontado": 0.0
     }
   ]
