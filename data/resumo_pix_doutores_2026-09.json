@@ -1,10 +1,10 @@
 {
   "competencia": "2026-09",
-  "gerado_em": "2026-09-30T14:12:02.294093",
-  "quantidade_total": 647,
-  "valor_total": 85137.65,
+  "gerado_em": "2026-09-30T16:58:52.376446",
+  "quantidade_total": 664,
+  "valor_total": 87521.65,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 85137.65,
+  "valor_total_pendente": 87521.65,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -18,28 +18,28 @@
     },
     {
       "unidade": "Encantado",
-      "quantidade": 50,
-      "valor": 6077.99
+      "quantidade": 52,
+      "valor": 6277.99
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 62,
-      "valor": 8215.06
+      "quantidade": 63,
+      "valor": 8303.06
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 120,
-      "valor": 16097.0
+      "quantidade": 122,
+      "valor": 16789.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 164,
-      "valor": 19013.0
+      "quantidade": 174,
+      "valor": 20122.0
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 83,
-      "valor": 13516.1
+      "quantidade": 85,
+      "valor": 13811.1
     }
   ],
   "por_doutor": [
@@ -65,7 +65,7 @@
     },
     {
       "doutor": "Dionathan Pohlmann",
-      "quantidade": 11,
+      "quantidade": 9,
       "valor_descontado": 0.0
     },
     {
@@ -75,7 +75,7 @@
     },
     {
       "doutor": "Everlize Cipriani",
-      "quantidade": 27,
+      "quantidade": 28,
       "valor_descontado": 0.0
     },
     {
@@ -85,7 +85,7 @@
     },
     {
       "doutor": "Fernanda Sozo",
-      "quantidade": 12,
+      "quantidade": 14,
       "valor_descontado": 0.0
     },
     {
@@ -130,12 +130,12 @@
     },
     {
       "doutor": "Leticia Canabarro",
-      "quantidade": 31,
+      "quantidade": 32,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Letícia Cauzzi",
-      "quantidade": 3,
+      "quantidade": 5,
       "valor_descontado": 0.0
     },
     {
@@ -160,7 +160,7 @@
     },
     {
       "doutor": "Murilo Debortoli",
-      "quantidade": 16,
+      "quantidade": 17,
       "valor_descontado": 0.0
     },
     {
@@ -175,12 +175,12 @@
     },
     {
       "doutor": "Nicoli Weber",
-      "quantidade": 5,
+      "quantidade": 7,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Norberto Filipe",
-      "quantidade": 16,
+      "quantidade": 21,
       "valor_descontado": 0.0
     },
     {
@@ -195,7 +195,7 @@
     },
     {
       "doutor": "Thalia Tessaro",
-      "quantidade": 31,
+      "quantidade": 33,
       "valor_descontado": 0.0
     },
     {
@@ -220,7 +220,7 @@
     },
     {
       "doutor": "Vitoria de Brito",
-      "quantidade": 5,
+      "quantidade": 8,
       "valor_descontado": 0.0
     }
   ]
