@@ -1959,5 +1959,15 @@
         "valor_descontado": 0.0
       }
     ]
+  },
+  "2026-10": {
+    "competencia": "2026-10",
+    "gerado_em": "2026-10-01T02:14:38.596159",
+    "quantidade_total": 0,
+    "valor_total": 0,
+    "valor_total_descontado": 0,
+    "valor_total_pendente": 0,
+    "por_unidade": [],
+    "por_doutor": []
   }
 }
