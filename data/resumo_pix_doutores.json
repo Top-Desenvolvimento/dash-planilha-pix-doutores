@@ -1962,12 +1962,29 @@
   },
   "2026-10": {
     "competencia": "2026-10",
-    "gerado_em": "2026-10-01T16:24:54.940336",
-    "quantidade_total": 0,
-    "valor_total": 0,
-    "valor_total_descontado": 0,
-    "valor_total_pendente": 0,
-    "por_unidade": [],
-    "por_doutor": []
+    "gerado_em": "2026-10-01T21:14:39.491989",
+    "quantidade_total": 5,
+    "valor_total": 555.0,
+    "valor_total_descontado": 0.0,
+    "valor_total_pendente": 555.0,
+    "por_unidade": [
+      {
+        "unidade": "Soledade",
+        "quantidade": 5,
+        "valor": 555.0
+      }
+    ],
+    "por_doutor": [
+      {
+        "doutor": "Leticia Canabarro",
+        "quantidade": 3,
+        "valor_descontado": 0.0
+      },
+      {
+        "doutor": "Luisa Moraes Lucas",
+        "quantidade": 2,
+        "valor_descontado": 0.0
+      }
+    ]
   }
 }

@@ -3,7 +3,7 @@
   "titulo_dashboard": "PIX Doutores",
   "arquivo_origem": "pix_doutores.json",
   "ano_referencia": 2026,
-  "gerado_em": "01/10/2026 13:24",
+  "gerado_em": "01/10/2026 18:14",
   "meses_disponiveis": [
     "2026-01",
     "2026-02",
@@ -128311,6 +128311,121 @@
       "pendente": 99.0,
       "linha_original": "30/09/2026\tPix Doutores\nFernanda Sozo\tRecebido de Taila Emanuele Terres de Almeida (20001) (Parcela 10/48) Pago por: josemar batista\t99,00 C\t99,00 C\t1\t\t000\t62.068,61\t61.651,01",
       "coletado_em": "2026-09-30T23:14:14.827413"
+    },
+    {
+      "unidade": "Soledade",
+      "data": "01/10/2026",
+      "competencia": "2026-10",
+      "metodo_pagamento": "Pix Doutores",
+      "responsavel_fiscal_lido": "Leticia Canabarro",
+      "doutor_id": null,
+      "doutor_final": "Leticia Canabarro",
+      "doutor_encontrado": false,
+      "paciente": "Recebido de Natali de Oliveira Pago por: O paciente",
+      "codigo_origem": "10429",
+      "parcela": "16/48",
+      "origem": "Recebido de Natali de Oliveira (10429) (Parcela 16/48) Pago por: O paciente",
+      "valor": 120.0,
+      "valor_com_descontos": 120.0,
+      "credito_antes": 0.0,
+      "valor_descontado": 0.0,
+      "credito_depois": 0.0,
+      "utilizado_depois": 0.0,
+      "pendente": 120.0,
+      "linha_original": "01/10/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Natali de Oliveira (10429) (Parcela 16/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t240,00\t240,00",
+      "coletado_em": "2026-10-01T21:12:40.536837"
+    },
+    {
+      "unidade": "Soledade",
+      "data": "01/10/2026",
+      "competencia": "2026-10",
+      "metodo_pagamento": "Pix Doutores",
+      "responsavel_fiscal_lido": "Luisa Moraes Lucas",
+      "doutor_id": null,
+      "doutor_final": "Luisa Moraes Lucas",
+      "doutor_encontrado": false,
+      "paciente": "Recebido de Crislaine Borges da Silva Pago por: O paciente",
+      "codigo_origem": "11769",
+      "parcela": "17/48",
+      "origem": "Recebido de Crislaine Borges da Silva (11769) (Parcela 17/48) Pago por: O paciente",
+      "valor": 120.0,
+      "valor_com_descontos": 120.0,
+      "credito_antes": 0.0,
+      "valor_descontado": 0.0,
+      "credito_depois": 0.0,
+      "utilizado_depois": 0.0,
+      "pendente": 120.0,
+      "linha_original": "01/10/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Crislaine Borges da Silva (11769) (Parcela 17/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t360,00\t360,00",
+      "coletado_em": "2026-10-01T21:12:40.553479"
+    },
+    {
+      "unidade": "Soledade",
+      "data": "01/10/2026",
+      "competencia": "2026-10",
+      "metodo_pagamento": "Pix Doutores",
+      "responsavel_fiscal_lido": "Luisa Moraes Lucas",
+      "doutor_id": null,
+      "doutor_final": "Luisa Moraes Lucas",
+      "doutor_encontrado": false,
+      "paciente": "Recebido de Raiany dos Santos da Silva Pago por: O paciente",
+      "codigo_origem": "1314",
+      "parcela": "3/48",
+      "origem": "Recebido de Raiany dos Santos da Silva (1314) (Parcela 3/48) Pago por: O paciente",
+      "valor": 125.0,
+      "valor_com_descontos": 125.0,
+      "credito_antes": 0.0,
+      "valor_descontado": 0.0,
+      "credito_depois": 0.0,
+      "utilizado_depois": 0.0,
+      "pendente": 125.0,
+      "linha_original": "01/10/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Raiany dos Santos da Silva (1314) (Parcela 3/48) Pago por: O paciente\t125,00 C\t125,00 C\t1\t\t\t485,00\t485,00",
+      "coletado_em": "2026-10-01T21:12:40.567873"
+    },
+    {
+      "unidade": "Soledade",
+      "data": "01/10/2026",
+      "competencia": "2026-10",
+      "metodo_pagamento": "Pix Doutores",
+      "responsavel_fiscal_lido": "Leticia Canabarro",
+      "doutor_id": null,
+      "doutor_final": "Leticia Canabarro",
+      "doutor_encontrado": false,
+      "paciente": "Recebido de Mateus Trisch De Modesto Pago por: O paciente",
+      "codigo_origem": "7311",
+      "parcela": "1/1",
+      "origem": "Recebido de Mateus Trisch De Modesto (7311) (Parcela 1/1) Pago por: O paciente",
+      "valor": 95.0,
+      "valor_com_descontos": 95.0,
+      "credito_antes": 0.0,
+      "valor_descontado": 0.0,
+      "credito_depois": 0.0,
+      "utilizado_depois": 0.0,
+      "pendente": 95.0,
+      "linha_original": "01/10/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Mateus Trisch De Modesto (7311) (Parcela 1/1) Pago por: O paciente\t95,00 C\t95,00 C\t1\t\t\t700,00\t700,00",
+      "coletado_em": "2026-10-01T21:12:40.585454"
+    },
+    {
+      "unidade": "Soledade",
+      "data": "01/10/2026",
+      "competencia": "2026-10",
+      "metodo_pagamento": "Pix Doutores",
+      "responsavel_fiscal_lido": "Leticia Canabarro",
+      "doutor_id": null,
+      "doutor_final": "Leticia Canabarro",
+      "doutor_encontrado": false,
+      "paciente": "Recebido de Gabriel Silveira da Silva Pago por: O paciente",
+      "codigo_origem": "9610",
+      "parcela": "37/48",
+      "origem": "Recebido de Gabriel Silveira da Silva (9610) (Parcela 37/48) Pago por: O paciente",
+      "valor": 95.0,
+      "valor_com_descontos": 95.0,
+      "credito_antes": 0.0,
+      "valor_descontado": 0.0,
+      "credito_depois": 0.0,
+      "utilizado_depois": 0.0,
+      "pendente": 95.0,
+      "linha_original": "01/10/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Gabriel Silveira da Silva (9610) (Parcela 37/48) Pago por: O paciente\t95,00 C\t95,00 C\t1\t\t\t795,00\t795,00",
+      "coletado_em": "2026-10-01T21:12:40.594759"
     }
   ],
   "erros": [
@@ -128426,13 +128541,13 @@
       "unidade": "Garibaldi",
       "competencia": "2026-10",
       "erro": "Menu Finanças não encontrado.",
-      "coletado_em": "2026-10-01T16:22:55.173203"
+      "coletado_em": "2026-10-01T21:12:42.427722"
     },
     {
       "unidade": "Ssdocai",
       "competencia": "2026-10",
       "erro": "Menu Finanças não encontrado.",
-      "coletado_em": "2026-10-01T16:23:56.353611"
+      "coletado_em": "2026-10-01T21:13:42.037999"
     }
   ],
   "registros_por_competencia": {
@@ -256748,7 +256863,123 @@
         "coletado_em": "2026-09-30T23:14:14.827413"
       }
     ],
-    "2026-10": []
+    "2026-10": [
+      {
+        "unidade": "Soledade",
+        "data": "01/10/2026",
+        "competencia": "2026-10",
+        "metodo_pagamento": "Pix Doutores",
+        "responsavel_fiscal_lido": "Leticia Canabarro",
+        "doutor_id": null,
+        "doutor_final": "Leticia Canabarro",
+        "doutor_encontrado": false,
+        "paciente": "Recebido de Natali de Oliveira Pago por: O paciente",
+        "codigo_origem": "10429",
+        "parcela": "16/48",
+        "origem": "Recebido de Natali de Oliveira (10429) (Parcela 16/48) Pago por: O paciente",
+        "valor": 120.0,
+        "valor_com_descontos": 120.0,
+        "credito_antes": 0.0,
+        "valor_descontado": 0.0,
+        "credito_depois": 0.0,
+        "utilizado_depois": 0.0,
+        "pendente": 120.0,
+        "linha_original": "01/10/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Natali de Oliveira (10429) (Parcela 16/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t240,00\t240,00",
+        "coletado_em": "2026-10-01T21:12:40.536837"
+      },
+      {
+        "unidade": "Soledade",
+        "data": "01/10/2026",
+        "competencia": "2026-10",
+        "metodo_pagamento": "Pix Doutores",
+        "responsavel_fiscal_lido": "Luisa Moraes Lucas",
+        "doutor_id": null,
+        "doutor_final": "Luisa Moraes Lucas",
+        "doutor_encontrado": false,
+        "paciente": "Recebido de Crislaine Borges da Silva Pago por: O paciente",
+        "codigo_origem": "11769",
+        "parcela": "17/48",
+        "origem": "Recebido de Crislaine Borges da Silva (11769) (Parcela 17/48) Pago por: O paciente",
+        "valor": 120.0,
+        "valor_com_descontos": 120.0,
+        "credito_antes": 0.0,
+        "valor_descontado": 0.0,
+        "credito_depois": 0.0,
+        "utilizado_depois": 0.0,
+        "pendente": 120.0,
+        "linha_original": "01/10/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Crislaine Borges da Silva (11769) (Parcela 17/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t360,00\t360,00",
+        "coletado_em": "2026-10-01T21:12:40.553479"
+      },
+      {
+        "unidade": "Soledade",
+        "data": "01/10/2026",
+        "competencia": "2026-10",
+        "metodo_pagamento": "Pix Doutores",
+        "responsavel_fiscal_lido": "Luisa Moraes Lucas",
+        "doutor_id": null,
+        "doutor_final": "Luisa Moraes Lucas",
+        "doutor_encontrado": false,
+        "paciente": "Recebido de Raiany dos Santos da Silva Pago por: O paciente",
+        "codigo_origem": "1314",
+        "parcela": "3/48",
+        "origem": "Recebido de Raiany dos Santos da Silva (1314) (Parcela 3/48) Pago por: O paciente",
+        "valor": 125.0,
+        "valor_com_descontos": 125.0,
+        "credito_antes": 0.0,
+        "valor_descontado": 0.0,
+        "credito_depois": 0.0,
+        "utilizado_depois": 0.0,
+        "pendente": 125.0,
+        "linha_original": "01/10/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Raiany dos Santos da Silva (1314) (Parcela 3/48) Pago por: O paciente\t125,00 C\t125,00 C\t1\t\t\t485,00\t485,00",
+        "coletado_em": "2026-10-01T21:12:40.567873"
+      },
+      {
+        "unidade": "Soledade",
+        "data": "01/10/2026",
+        "competencia": "2026-10",
+        "metodo_pagamento": "Pix Doutores",
+        "responsavel_fiscal_lido": "Leticia Canabarro",
+        "doutor_id": null,
+        "doutor_final": "Leticia Canabarro",
+        "doutor_encontrado": false,
+        "paciente": "Recebido de Mateus Trisch De Modesto Pago por: O paciente",
+        "codigo_origem": "7311",
+        "parcela": "1/1",
+        "origem": "Recebido de Mateus Trisch De Modesto (7311) (Parcela 1/1) Pago por: O paciente",
+        "valor": 95.0,
+        "valor_com_descontos": 95.0,
+        "credito_antes": 0.0,
+        "valor_descontado": 0.0,
+        "credito_depois": 0.0,
+        "utilizado_depois": 0.0,
+        "pendente": 95.0,
+        "linha_original": "01/10/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Mateus Trisch De Modesto (7311) (Parcela 1/1) Pago por: O paciente\t95,00 C\t95,00 C\t1\t\t\t700,00\t700,00",
+        "coletado_em": "2026-10-01T21:12:40.585454"
+      },
+      {
+        "unidade": "Soledade",
+        "data": "01/10/2026",
+        "competencia": "2026-10",
+        "metodo_pagamento": "Pix Doutores",
+        "responsavel_fiscal_lido": "Leticia Canabarro",
+        "doutor_id": null,
+        "doutor_final": "Leticia Canabarro",
+        "doutor_encontrado": false,
+        "paciente": "Recebido de Gabriel Silveira da Silva Pago por: O paciente",
+        "codigo_origem": "9610",
+        "parcela": "37/48",
+        "origem": "Recebido de Gabriel Silveira da Silva (9610) (Parcela 37/48) Pago por: O paciente",
+        "valor": 95.0,
+        "valor_com_descontos": 95.0,
+        "credito_antes": 0.0,
+        "valor_descontado": 0.0,
+        "credito_depois": 0.0,
+        "utilizado_depois": 0.0,
+        "pendente": 95.0,
+        "linha_original": "01/10/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Gabriel Silveira da Silva (9610) (Parcela 37/48) Pago por: O paciente\t95,00 C\t95,00 C\t1\t\t\t795,00\t795,00",
+        "coletado_em": "2026-10-01T21:12:40.594759"
+      }
+    ]
   },
   "erros_por_competencia": {
     "2026-01": [
@@ -256882,13 +257113,13 @@
         "unidade": "Garibaldi",
         "competencia": "2026-10",
         "erro": "Menu Finanças não encontrado.",
-        "coletado_em": "2026-10-01T16:22:55.173203"
+        "coletado_em": "2026-10-01T21:12:42.427722"
       },
       {
         "unidade": "Ssdocai",
         "competencia": "2026-10",
         "erro": "Menu Finanças não encontrado.",
-        "coletado_em": "2026-10-01T16:23:56.353611"
+        "coletado_em": "2026-10-01T21:13:42.037999"
       }
     ]
   },
@@ -264659,12 +264890,35 @@
     },
     "2026-10": {
       "competencia": "2026-10",
-      "quantidade_total": 0,
-      "valor_total": 0,
-      "valor_total_descontado": 0,
-      "valor_total_pendente": 0,
-      "por_unidade": [],
-      "por_doutor": []
+      "quantidade_total": 5,
+      "valor_total": 555.0,
+      "valor_total_descontado": 0.0,
+      "valor_total_pendente": 555.0,
+      "por_unidade": [
+        {
+          "unidade": "Soledade",
+          "quantidade": 5,
+          "valor": 555.0,
+          "descontado": 0.0,
+          "pendente": 555.0
+        }
+      ],
+      "por_doutor": [
+        {
+          "doutor": "Leticia Canabarro",
+          "quantidade": 3,
+          "valor": 310.0,
+          "descontado": 0.0,
+          "pendente": 310.0
+        },
+        {
+          "doutor": "Luisa Moraes Lucas",
+          "quantidade": 2,
+          "valor": 245.0,
+          "descontado": 0.0,
+          "pendente": 245.0
+        }
+      ]
     }
   }
 }
