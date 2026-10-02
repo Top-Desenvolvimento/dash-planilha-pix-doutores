@@ -3,7 +3,7 @@
   "titulo_dashboard": "PIX Doutores",
   "arquivo_origem": "pix_doutores.json",
   "ano_referencia": 2026,
-  "gerado_em": "01/10/2026 18:14",
+  "gerado_em": "01/10/2026 21:54",
   "meses_disponiveis": [
     "2026-01",
     "2026-02",
@@ -128333,7 +128333,7 @@
       "utilizado_depois": 0.0,
       "pendente": 120.0,
       "linha_original": "01/10/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Natali de Oliveira (10429) (Parcela 16/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t240,00\t240,00",
-      "coletado_em": "2026-10-01T21:12:40.536837"
+      "coletado_em": "2026-10-02T00:52:59.121534"
     },
     {
       "unidade": "Soledade",
@@ -128356,7 +128356,7 @@
       "utilizado_depois": 0.0,
       "pendente": 120.0,
       "linha_original": "01/10/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Crislaine Borges da Silva (11769) (Parcela 17/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t360,00\t360,00",
-      "coletado_em": "2026-10-01T21:12:40.553479"
+      "coletado_em": "2026-10-02T00:52:59.130783"
     },
     {
       "unidade": "Soledade",
@@ -128379,7 +128379,7 @@
       "utilizado_depois": 0.0,
       "pendente": 125.0,
       "linha_original": "01/10/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Raiany dos Santos da Silva (1314) (Parcela 3/48) Pago por: O paciente\t125,00 C\t125,00 C\t1\t\t\t485,00\t485,00",
-      "coletado_em": "2026-10-01T21:12:40.567873"
+      "coletado_em": "2026-10-02T00:52:59.139342"
     },
     {
       "unidade": "Soledade",
@@ -128402,7 +128402,7 @@
       "utilizado_depois": 0.0,
       "pendente": 95.0,
       "linha_original": "01/10/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Mateus Trisch De Modesto (7311) (Parcela 1/1) Pago por: O paciente\t95,00 C\t95,00 C\t1\t\t\t700,00\t700,00",
-      "coletado_em": "2026-10-01T21:12:40.585454"
+      "coletado_em": "2026-10-02T00:52:59.156448"
     },
     {
       "unidade": "Soledade",
@@ -128425,7 +128425,7 @@
       "utilizado_depois": 0.0,
       "pendente": 95.0,
       "linha_original": "01/10/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Gabriel Silveira da Silva (9610) (Parcela 37/48) Pago por: O paciente\t95,00 C\t95,00 C\t1\t\t\t795,00\t795,00",
-      "coletado_em": "2026-10-01T21:12:40.594759"
+      "coletado_em": "2026-10-02T00:52:59.165496"
     }
   ],
   "erros": [
@@ -128541,13 +128541,13 @@
       "unidade": "Garibaldi",
       "competencia": "2026-10",
       "erro": "Menu Finanças não encontrado.",
-      "coletado_em": "2026-10-01T21:12:42.427722"
+      "coletado_em": "2026-10-02T00:53:01.035841"
     },
     {
       "unidade": "Ssdocai",
       "competencia": "2026-10",
       "erro": "Menu Finanças não encontrado.",
-      "coletado_em": "2026-10-01T21:13:42.037999"
+      "coletado_em": "2026-10-02T00:54:00.290231"
     }
   ],
   "registros_por_competencia": {
@@ -256885,7 +256885,7 @@
         "utilizado_depois": 0.0,
         "pendente": 120.0,
         "linha_original": "01/10/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Natali de Oliveira (10429) (Parcela 16/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t240,00\t240,00",
-        "coletado_em": "2026-10-01T21:12:40.536837"
+        "coletado_em": "2026-10-02T00:52:59.121534"
       },
       {
         "unidade": "Soledade",
@@ -256908,7 +256908,7 @@
         "utilizado_depois": 0.0,
         "pendente": 120.0,
         "linha_original": "01/10/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Crislaine Borges da Silva (11769) (Parcela 17/48) Pago por: O paciente\t120,00 C\t120,00 C\t1\t\t\t360,00\t360,00",
-        "coletado_em": "2026-10-01T21:12:40.553479"
+        "coletado_em": "2026-10-02T00:52:59.130783"
       },
       {
         "unidade": "Soledade",
@@ -256931,7 +256931,7 @@
         "utilizado_depois": 0.0,
         "pendente": 125.0,
         "linha_original": "01/10/2026\tPix Doutores\nLuisa Moraes Lucas\tRecebido de Raiany dos Santos da Silva (1314) (Parcela 3/48) Pago por: O paciente\t125,00 C\t125,00 C\t1\t\t\t485,00\t485,00",
-        "coletado_em": "2026-10-01T21:12:40.567873"
+        "coletado_em": "2026-10-02T00:52:59.139342"
       },
       {
         "unidade": "Soledade",
@@ -256954,7 +256954,7 @@
         "utilizado_depois": 0.0,
         "pendente": 95.0,
         "linha_original": "01/10/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Mateus Trisch De Modesto (7311) (Parcela 1/1) Pago por: O paciente\t95,00 C\t95,00 C\t1\t\t\t700,00\t700,00",
-        "coletado_em": "2026-10-01T21:12:40.585454"
+        "coletado_em": "2026-10-02T00:52:59.156448"
       },
       {
         "unidade": "Soledade",
@@ -256977,7 +256977,7 @@
         "utilizado_depois": 0.0,
         "pendente": 95.0,
         "linha_original": "01/10/2026\tPix Doutores\nLeticia Canabarro\tRecebido de Gabriel Silveira da Silva (9610) (Parcela 37/48) Pago por: O paciente\t95,00 C\t95,00 C\t1\t\t\t795,00\t795,00",
-        "coletado_em": "2026-10-01T21:12:40.594759"
+        "coletado_em": "2026-10-02T00:52:59.165496"
       }
     ]
   },
@@ -257113,13 +257113,13 @@
         "unidade": "Garibaldi",
         "competencia": "2026-10",
         "erro": "Menu Finanças não encontrado.",
-        "coletado_em": "2026-10-01T21:12:42.427722"
+        "coletado_em": "2026-10-02T00:53:01.035841"
       },
       {
         "unidade": "Ssdocai",
         "competencia": "2026-10",
         "erro": "Menu Finanças não encontrado.",
-        "coletado_em": "2026-10-01T21:13:42.037999"
+        "coletado_em": "2026-10-02T00:54:00.290231"
       }
     ]
   },
