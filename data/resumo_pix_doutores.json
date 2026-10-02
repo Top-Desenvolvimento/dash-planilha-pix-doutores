@@ -1962,16 +1962,21 @@
   },
   "2026-10": {
     "competencia": "2026-10",
-    "gerado_em": "2026-10-02T19:37:36.375200",
+    "gerado_em": "2026-10-02T22:33:13.476435",
     "quantidade_total": 8,
-    "valor_total": 915.0,
+    "valor_total": 1034.0,
     "valor_total_descontado": 240.0,
-    "valor_total_pendente": 675.0,
+    "valor_total_pendente": 794.0,
     "por_unidade": [
       {
         "unidade": "Bento",
-        "quantidade": 2,
-        "valor": 240.0
+        "quantidade": 1,
+        "valor": 120.0
+      },
+      {
+        "unidade": "Encantado",
+        "quantidade": 1,
+        "valor": 239.0
       },
       {
         "unidade": "Farroupilha",
@@ -1991,6 +1996,11 @@
         "valor_descontado": 120.0
       },
       {
+        "doutor": "Julia Nardi",
+        "quantidade": 1,
+        "valor_descontado": 0.0
+      },
+      {
         "doutor": "Leticia Canabarro",
         "quantidade": 3,
         "valor_descontado": 0.0
@@ -2004,11 +2014,6 @@
         "doutor": "Nelson Vaccari",
         "quantidade": 1,
         "valor_descontado": 120.0
-      },
-      {
-        "doutor": "TOP",
-        "quantidade": 1,
-        "valor_descontado": 0.0
       }
     ]
   }

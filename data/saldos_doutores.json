@@ -3430,8 +3430,8 @@
       "doutor_id": "14",
       "doutor": "Everlize Cipriani",
       "credito_inicial": 2000.0,
-      "utilizado": 240.0,
-      "credito_disponivel": 1760.0,
+      "utilizado": 360.0,
+      "credito_disponivel": 1640.0,
       "pix_key": ""
     },
     {
@@ -3622,8 +3622,8 @@
       "doutor_id": "36",
       "doutor": "Nelson Vaccari",
       "credito_inicial": 4000.0,
-      "utilizado": 240.0,
-      "credito_disponivel": 3760.0,
+      "utilizado": 360.0,
+      "credito_disponivel": 3640.0,
       "pix_key": ""
     },
     {
