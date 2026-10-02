@@ -1962,12 +1962,22 @@
   },
   "2026-10": {
     "competencia": "2026-10",
-    "gerado_em": "2026-10-02T13:05:29.017961",
-    "quantidade_total": 5,
-    "valor_total": 555.0,
-    "valor_total_descontado": 0.0,
-    "valor_total_pendente": 555.0,
+    "gerado_em": "2026-10-02T18:28:39.025417",
+    "quantidade_total": 8,
+    "valor_total": 915.0,
+    "valor_total_descontado": 240.0,
+    "valor_total_pendente": 675.0,
     "por_unidade": [
+      {
+        "unidade": "Bento",
+        "quantidade": 2,
+        "valor": 240.0
+      },
+      {
+        "unidade": "Farroupilha",
+        "quantidade": 1,
+        "valor": 120.0
+      },
       {
         "unidade": "Soledade",
         "quantidade": 5,
@@ -1976,6 +1986,11 @@
     ],
     "por_doutor": [
       {
+        "doutor": "Everlize Cipriani",
+        "quantidade": 1,
+        "valor_descontado": 120.0
+      },
+      {
         "doutor": "Leticia Canabarro",
         "quantidade": 3,
         "valor_descontado": 0.0
@@ -1983,6 +1998,16 @@
       {
         "doutor": "Luisa Moraes Lucas",
         "quantidade": 2,
+        "valor_descontado": 0.0
+      },
+      {
+        "doutor": "Nelson Vaccari",
+        "quantidade": 1,
+        "valor_descontado": 120.0
+      },
+      {
+        "doutor": "TOP",
+        "quantidade": 1,
         "valor_descontado": 0.0
       }
     ]
