@@ -3430,8 +3430,8 @@
       "doutor_id": "14",
       "doutor": "Everlize Cipriani",
       "credito_inicial": 2000.0,
-      "utilizado": 1680.0,
-      "credito_disponivel": 320.0,
+      "utilizado": 1800.0,
+      "credito_disponivel": 200.0,
       "pix_key": ""
     },
     {
@@ -3622,8 +3622,8 @@
       "doutor_id": "36",
       "doutor": "Nelson Vaccari",
       "credito_inicial": 4000.0,
-      "utilizado": 1680.0,
-      "credito_disponivel": 2320.0,
+      "utilizado": 1800.0,
+      "credito_disponivel": 2200.0,
       "pix_key": ""
     },
     {
@@ -3670,8 +3670,8 @@
       "doutor_id": "42",
       "doutor": "Tamara Macanan",
       "credito_inicial": 5000.0,
-      "utilizado": 3800.0,
-      "credito_disponivel": 1200.0,
+      "utilizado": 4275.0,
+      "credito_disponivel": 725.0,
       "pix_key": ""
     },
     {
