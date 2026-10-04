@@ -1,10 +1,10 @@
 {
   "competencia": "2026-10",
-  "gerado_em": "2026-10-04T13:30:18.147473",
+  "gerado_em": "2026-10-04T17:52:29.383399",
   "quantidade_total": 14,
   "valor_total": 2025.0,
-  "valor_total_descontado": 835.0,
-  "valor_total_pendente": 1190.0,
+  "valor_total_descontado": 715.0,
+  "valor_total_pendente": 1310.0,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -71,7 +71,7 @@
     {
       "doutor": "Thalia Tessaro",
       "quantidade": 2,
-      "valor_descontado": 120.0
+      "valor_descontado": 0.0
     }
   ]
 }
