@@ -1,10 +1,10 @@
 {
   "competencia": "2026-10",
-  "gerado_em": "2026-10-05T16:40:48.962060",
-  "quantidade_total": 19,
-  "valor_total": 3032.0,
-  "valor_total_descontado": 1366.0,
-  "valor_total_pendente": 1666.0,
+  "gerado_em": "2026-10-05T18:56:25.220069",
+  "quantidade_total": 27,
+  "valor_total": 3955.0,
+  "valor_total_descontado": 802.0,
+  "valor_total_pendente": 3153.0,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,13 +13,13 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 3,
-      "valor": 615.0
+      "quantidade": 6,
+      "valor": 904.0
     },
     {
       "unidade": "Encantado",
-      "quantidade": 4,
-      "valor": 989.0
+      "quantidade": 5,
+      "valor": 1109.0
     },
     {
       "unidade": "Farroupilha",
@@ -28,18 +28,18 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 4,
-      "valor": 475.0
+      "quantidade": 5,
+      "valor": 600.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 5,
-      "valor": 555.0
+      "quantidade": 7,
+      "valor": 819.0
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 1,
-      "valor": 158.0
+      "quantidade": 2,
+      "valor": 283.0
     }
   ],
   "por_doutor": [
@@ -50,8 +50,8 @@
     },
     {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 1,
-      "valor_descontado": 99.0
+      "quantidade": 4,
+      "valor_descontado": 388.0
     },
     {
       "doutor": "Leticia Canabarro",
@@ -60,13 +60,13 @@
     },
     {
       "doutor": "Luisa Moraes Lucas",
-      "quantidade": 2,
+      "quantidade": 4,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Morgana Zambiasi",
-      "quantidade": 1,
-      "valor_descontado": 158.0
+      "quantidade": 2,
+      "valor_descontado": 283.0
     },
     {
       "doutor": "Nelson Vaccari",
@@ -76,16 +76,21 @@
     {
       "doutor": "Nicoli Weber",
       "quantidade": 4,
-      "valor_descontado": 989.0
+      "valor_descontado": 11.0
     },
     {
       "doutor": "Tamara Macanan",
-      "quantidade": 4,
+      "quantidade": 5,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Thalia Tessaro",
       "quantidade": 2,
+      "valor_descontado": 0.0
+    },
+    {
+      "doutor": "TOP",
+      "quantidade": 1,
       "valor_descontado": 0.0
     }
   ]
