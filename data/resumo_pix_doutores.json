@@ -1962,11 +1962,11 @@
   },
   "2026-10": {
     "competencia": "2026-10",
-    "gerado_em": "2026-10-05T09:38:02.147971",
-    "quantidade_total": 14,
-    "valor_total": 2025.0,
-    "valor_total_descontado": 450.0,
-    "valor_total_pendente": 1575.0,
+    "gerado_em": "2026-10-05T16:40:48.962060",
+    "quantidade_total": 19,
+    "valor_total": 3032.0,
+    "valor_total_descontado": 1366.0,
+    "valor_total_pendente": 1666.0,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1975,13 +1975,13 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 2,
-        "valor": 516.0
+        "quantidade": 3,
+        "valor": 615.0
       },
       {
         "unidade": "Encantado",
-        "quantidade": 1,
-        "valor": 239.0
+        "quantidade": 4,
+        "valor": 989.0
       },
       {
         "unidade": "Farroupilha",
@@ -1997,18 +1997,23 @@
         "unidade": "Soledade",
         "quantidade": 5,
         "valor": 555.0
+      },
+      {
+        "unidade": "Veranopolis",
+        "quantidade": 1,
+        "valor": 158.0
       }
     ],
     "por_doutor": [
       {
         "doutor": "Everlize Cipriani",
         "quantidade": 1,
-        "valor_descontado": 80.0
+        "valor_descontado": 0.0
       },
       {
-        "doutor": "Julia Nardi",
+        "doutor": "Franciele Pedrotti",
         "quantidade": 1,
-        "valor_descontado": 0.0
+        "valor_descontado": 99.0
       },
       {
         "doutor": "Leticia Canabarro",
@@ -2021,14 +2026,24 @@
         "valor_descontado": 0.0
       },
       {
+        "doutor": "Morgana Zambiasi",
+        "quantidade": 1,
+        "valor_descontado": 158.0
+      },
+      {
         "doutor": "Nelson Vaccari",
         "quantidade": 1,
         "valor_descontado": 120.0
       },
       {
+        "doutor": "Nicoli Weber",
+        "quantidade": 4,
+        "valor_descontado": 989.0
+      },
+      {
         "doutor": "Tamara Macanan",
         "quantidade": 4,
-        "valor_descontado": 250.0
+        "valor_descontado": 0.0
       },
       {
         "doutor": "Thalia Tessaro",
