@@ -1962,11 +1962,11 @@
   },
   "2026-10": {
     "competencia": "2026-10",
-    "gerado_em": "2026-10-05T02:31:12.517966",
+    "gerado_em": "2026-10-05T09:38:02.147971",
     "quantidade_total": 14,
     "valor_total": 2025.0,
-    "valor_total_descontado": 715.0,
-    "valor_total_pendente": 1310.0,
+    "valor_total_descontado": 450.0,
+    "valor_total_pendente": 1575.0,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -2003,7 +2003,7 @@
       {
         "doutor": "Everlize Cipriani",
         "quantidade": 1,
-        "valor_descontado": 120.0
+        "valor_descontado": 80.0
       },
       {
         "doutor": "Julia Nardi",
@@ -2028,7 +2028,7 @@
       {
         "doutor": "Tamara Macanan",
         "quantidade": 4,
-        "valor_descontado": 475.0
+        "valor_descontado": 250.0
       },
       {
         "doutor": "Thalia Tessaro",
