@@ -1,10 +1,10 @@
 {
   "competencia": "2026-10",
-  "gerado_em": "2026-10-06T06:56:05.642945",
-  "quantidade_total": 49,
-  "valor_total": 8123.0,
-  "valor_total_descontado": 3603.0,
-  "valor_total_pendente": 4520.0,
+  "gerado_em": "2026-10-06T13:48:38.648116",
+  "quantidade_total": 54,
+  "valor_total": 8909.0,
+  "valor_total_descontado": 4044.0,
+  "valor_total_pendente": 4865.0,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,8 +13,8 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 12,
-      "valor": 1564.0
+      "quantidade": 14,
+      "valor": 2005.0
     },
     {
       "unidade": "Encantado",
@@ -33,8 +33,8 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 8,
-      "valor": 884.0
+      "quantidade": 11,
+      "valor": 1229.0
     },
     {
       "unidade": "Veranopolis",
@@ -65,8 +65,8 @@
     },
     {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 8,
-      "valor_descontado": 838.0
+      "quantidade": 10,
+      "valor_descontado": 1279.0
     },
     {
       "doutor": "Leticia Canabarro",
@@ -75,7 +75,7 @@
     },
     {
       "doutor": "Luisa Moraes Lucas",
-      "quantidade": 5,
+      "quantidade": 8,
       "valor_descontado": 0.0
     },
     {
