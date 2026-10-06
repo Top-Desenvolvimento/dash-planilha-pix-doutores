@@ -9,7 +9,7 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-10-06T15:08:40.280816",
+    "gerado_em": "2026-10-06T19:27:21.577866",
     "quantidade_total": 622,
     "valor_total": 83899.09,
     "valor_total_descontado": 0.0,
@@ -221,7 +221,7 @@
   },
   "2026-05": {
     "competencia": "2026-05",
-    "gerado_em": "2026-10-06T15:17:00.527132",
+    "gerado_em": "2026-10-06T19:36:05.418045",
     "quantidade_total": 639,
     "valor_total": 94043.49,
     "valor_total_descontado": 0.0,
@@ -438,7 +438,7 @@
   },
   "2026-01": {
     "competencia": "2026-01",
-    "gerado_em": "2026-10-06T14:43:14.827527",
+    "gerado_em": "2026-10-06T19:00:35.644416",
     "quantidade_total": 631,
     "valor_total": 80218.48,
     "valor_total_descontado": 0.0,
@@ -645,7 +645,7 @@
   },
   "2026-02": {
     "competencia": "2026-02",
-    "gerado_em": "2026-10-06T14:51:43.434230",
+    "gerado_em": "2026-10-06T19:09:33.670190",
     "quantidade_total": 592,
     "valor_total": 79847.59,
     "valor_total_descontado": 0.0,
@@ -832,11 +832,11 @@
   },
   "2026-03": {
     "competencia": "2026-03",
-    "gerado_em": "2026-10-06T15:00:16.706124",
+    "gerado_em": "2026-10-06T19:18:36.632308",
     "quantidade_total": 586,
     "valor_total": 80692.51,
-    "valor_total_descontado": 382.0,
-    "valor_total_pendente": 80310.51,
+    "valor_total_descontado": 327.0,
+    "valor_total_pendente": 80365.51,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1018,7 +1018,7 @@
       {
         "doutor": "Matheus Strapasson",
         "quantidade": 1,
-        "valor_descontado": 55.0
+        "valor_descontado": 0.0
       },
       {
         "doutor": "MEI",
@@ -1044,7 +1044,7 @@
   },
   "2026-06": {
     "competencia": "2026-06",
-    "gerado_em": "2026-10-06T15:25:11.693282",
+    "gerado_em": "2026-10-06T19:44:39.071019",
     "quantidade_total": 559,
     "valor_total": 73830.55,
     "valor_total_descontado": 0.0,
@@ -1261,7 +1261,7 @@
   },
   "2026-07": {
     "competencia": "2026-07",
-    "gerado_em": "2026-10-06T15:33:22.951439",
+    "gerado_em": "2026-10-06T19:53:16.804552",
     "quantidade_total": 593,
     "valor_total": 84357.72,
     "valor_total_descontado": 0.0,
@@ -1493,7 +1493,7 @@
   },
   "2026-08": {
     "competencia": "2026-08",
-    "gerado_em": "2026-10-06T15:41:31.627484",
+    "gerado_em": "2026-10-06T20:01:48.210882",
     "quantidade_total": 662,
     "valor_total": 96119.66,
     "valor_total_descontado": 0.0,
@@ -1725,16 +1725,16 @@
   },
   "2026-09": {
     "competencia": "2026-09",
-    "gerado_em": "2026-10-06T15:49:38.916406",
-    "quantidade_total": 705,
-    "valor_total": 92450.65,
+    "gerado_em": "2026-10-06T20:10:18.810986",
+    "quantidade_total": 706,
+    "valor_total": 92555.65,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 92450.65,
+    "valor_total_pendente": 92555.65,
     "por_unidade": [
       {
         "unidade": "Bento",
-        "quantidade": 56,
-        "valor": 7930.0
+        "quantidade": 57,
+        "valor": 8035.0
       },
       {
         "unidade": "Caxias",
@@ -1905,7 +1905,7 @@
       },
       {
         "doutor": "Renata Protto",
-        "quantidade": 5,
+        "quantidade": 6,
         "valor_descontado": 0.0
       },
       {

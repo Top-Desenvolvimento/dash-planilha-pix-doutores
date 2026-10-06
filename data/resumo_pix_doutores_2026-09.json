@@ -1,15 +1,15 @@
 {
   "competencia": "2026-09",
-  "gerado_em": "2026-10-06T15:49:38.916406",
-  "quantidade_total": 705,
-  "valor_total": 92450.65,
+  "gerado_em": "2026-10-06T20:10:18.810986",
+  "quantidade_total": 706,
+  "valor_total": 92555.65,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 92450.65,
+  "valor_total_pendente": 92555.65,
   "por_unidade": [
     {
       "unidade": "Bento",
-      "quantidade": 56,
-      "valor": 7930.0
+      "quantidade": 57,
+      "valor": 8035.0
     },
     {
       "unidade": "Caxias",
@@ -180,7 +180,7 @@
     },
     {
       "doutor": "Renata Protto",
-      "quantidade": 5,
+      "quantidade": 6,
       "valor_descontado": 0.0
     },
     {
