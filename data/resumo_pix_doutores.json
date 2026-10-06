@@ -1947,11 +1947,11 @@
   },
   "2026-10": {
     "competencia": "2026-10",
-    "gerado_em": "2026-10-06T17:42:00.446720",
-    "quantidade_total": 70,
-    "valor_total": 10678.0,
-    "valor_total_descontado": 3224.82,
-    "valor_total_pendente": 7453.18,
+    "gerado_em": "2026-10-06T23:11:01.784640",
+    "quantidade_total": 104,
+    "valor_total": 15477.0,
+    "valor_total_descontado": 4403.0,
+    "valor_total_pendente": 11074.0,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1960,28 +1960,28 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 18,
-        "valor": 2542.0
+        "quantidade": 23,
+        "valor": 3225.0
       },
       {
         "unidade": "Encantado",
-        "quantidade": 10,
-        "valor": 1711.0
+        "quantidade": 12,
+        "valor": 2265.0
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 4,
-        "valor": 465.0
+        "quantidade": 15,
+        "valor": 2379.0
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 10,
-        "valor": 1533.0
+        "quantidade": 17,
+        "valor": 2231.0
       },
       {
         "unidade": "Soledade",
-        "quantidade": 18,
-        "valor": 1857.0
+        "quantidade": 27,
+        "valor": 2807.0
       },
       {
         "unidade": "Veranopolis",
@@ -1992,13 +1992,13 @@
     "por_doutor": [
       {
         "doutor": "Adriele da Silva",
-        "quantidade": 2,
-        "valor_descontado": 220.0
+        "quantidade": 6,
+        "valor_descontado": 1178.0
       },
       {
         "doutor": "Alexandre Favero",
-        "quantidade": 5,
-        "valor_descontado": 111.0
+        "quantidade": 7,
+        "valor_descontado": 0.0
       },
       {
         "doutor": "Dionathan Pohlmann",
@@ -2008,17 +2008,17 @@
       {
         "doutor": "Evalda Baldissera",
         "quantidade": 4,
-        "valor_descontado": 537.82
+        "valor_descontado": 0.0
       },
       {
         "doutor": "Everlize Cipriani",
-        "quantidade": 2,
+        "quantidade": 6,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Franciele Pedrotti",
-        "quantidade": 14,
-        "valor_descontado": 1816.0
+        "quantidade": 22,
+        "valor_descontado": 2895.0
       },
       {
         "doutor": "Leticia Canabarro",
@@ -2027,13 +2027,13 @@
       },
       {
         "doutor": "Luisa Moraes Lucas",
-        "quantidade": 14,
+        "quantidade": 23,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Morgana Zambiasi",
         "quantidade": 2,
-        "valor_descontado": 210.0
+        "valor_descontado": 0.0
       },
       {
         "doutor": "Nelson Vaccari",
@@ -2047,7 +2047,7 @@
       },
       {
         "doutor": "Tamara Macanan",
-        "quantidade": 10,
+        "quantidade": 17,
         "valor_descontado": 0.0
       },
       {
