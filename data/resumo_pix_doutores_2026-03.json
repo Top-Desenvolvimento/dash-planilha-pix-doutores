@@ -1,10 +1,10 @@
 {
   "competencia": "2026-03",
-  "gerado_em": "2026-09-02T19:12:22.770413",
+  "gerado_em": "2026-10-06T15:00:16.706124",
   "quantidade_total": 586,
   "valor_total": 80692.51,
-  "valor_total_descontado": 432.0,
-  "valor_total_pendente": 80260.51,
+  "valor_total_descontado": 382.0,
+  "valor_total_pendente": 80310.51,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -186,7 +186,7 @@
     {
       "doutor": "Matheus Strapasson",
       "quantidade": 1,
-      "valor_descontado": 105.0
+      "valor_descontado": 55.0
     },
     {
       "doutor": "MEI",

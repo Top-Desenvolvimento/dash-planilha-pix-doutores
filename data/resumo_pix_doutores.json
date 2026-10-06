@@ -9,7 +9,7 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-09-02T19:20:51.536807",
+    "gerado_em": "2026-10-06T15:08:40.280816",
     "quantidade_total": 622,
     "valor_total": 83899.09,
     "valor_total_descontado": 0.0,
@@ -221,7 +221,7 @@
   },
   "2026-05": {
     "competencia": "2026-05",
-    "gerado_em": "2026-09-02T19:29:17.630009",
+    "gerado_em": "2026-10-06T15:17:00.527132",
     "quantidade_total": 639,
     "valor_total": 94043.49,
     "valor_total_descontado": 0.0,
@@ -438,7 +438,7 @@
   },
   "2026-01": {
     "competencia": "2026-01",
-    "gerado_em": "2026-09-02T18:54:50.560987",
+    "gerado_em": "2026-10-06T14:43:14.827527",
     "quantidade_total": 631,
     "valor_total": 80218.48,
     "valor_total_descontado": 0.0,
@@ -645,7 +645,7 @@
   },
   "2026-02": {
     "competencia": "2026-02",
-    "gerado_em": "2026-09-02T19:03:34.428202",
+    "gerado_em": "2026-10-06T14:51:43.434230",
     "quantidade_total": 592,
     "valor_total": 79847.59,
     "valor_total_descontado": 0.0,
@@ -832,11 +832,11 @@
   },
   "2026-03": {
     "competencia": "2026-03",
-    "gerado_em": "2026-09-02T19:12:22.770413",
+    "gerado_em": "2026-10-06T15:00:16.706124",
     "quantidade_total": 586,
     "valor_total": 80692.51,
-    "valor_total_descontado": 432.0,
-    "valor_total_pendente": 80260.51,
+    "valor_total_descontado": 382.0,
+    "valor_total_pendente": 80310.51,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1018,7 +1018,7 @@
       {
         "doutor": "Matheus Strapasson",
         "quantidade": 1,
-        "valor_descontado": 105.0
+        "valor_descontado": 55.0
       },
       {
         "doutor": "MEI",
@@ -1044,7 +1044,7 @@
   },
   "2026-06": {
     "competencia": "2026-06",
-    "gerado_em": "2026-09-02T19:37:54.532566",
+    "gerado_em": "2026-10-06T15:25:11.693282",
     "quantidade_total": 559,
     "valor_total": 73830.55,
     "valor_total_descontado": 0.0,
@@ -1261,7 +1261,7 @@
   },
   "2026-07": {
     "competencia": "2026-07",
-    "gerado_em": "2026-09-02T19:46:25.183400",
+    "gerado_em": "2026-10-06T15:33:22.951439",
     "quantidade_total": 593,
     "valor_total": 84357.72,
     "valor_total_descontado": 0.0,
@@ -1493,16 +1493,16 @@
   },
   "2026-08": {
     "competencia": "2026-08",
-    "gerado_em": "2026-09-02T19:54:40.075096",
-    "quantidade_total": 654,
-    "valor_total": 94915.66,
+    "gerado_em": "2026-10-06T15:41:31.627484",
+    "quantidade_total": 662,
+    "valor_total": 96119.66,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 94915.66,
+    "valor_total_pendente": 96119.66,
     "por_unidade": [
       {
         "unidade": "Bento",
-        "quantidade": 32,
-        "valor": 3534.0
+        "quantidade": 40,
+        "valor": 4743.0
       },
       {
         "unidade": "Caxias",
@@ -1527,7 +1527,7 @@
       {
         "unidade": "Soledade",
         "quantidade": 161,
-        "valor": 18056.0
+        "valor": 18051.0
       },
       {
         "unidade": "Veranopolis",
@@ -1643,7 +1643,7 @@
       },
       {
         "doutor": "Luiz Henrique",
-        "quantidade": 29,
+        "quantidade": 39,
         "valor_descontado": 0.0
       },
       {
@@ -1712,11 +1712,6 @@
         "valor_descontado": 0.0
       },
       {
-        "doutor": "TOP",
-        "quantidade": 2,
-        "valor_descontado": 0.0
-      },
-      {
         "doutor": "Valter Baldissera",
         "quantidade": 36,
         "valor_descontado": 0.0
@@ -1730,21 +1725,21 @@
   },
   "2026-09": {
     "competencia": "2026-09",
-    "gerado_em": "2026-09-30T23:14:15.038884",
-    "quantidade_total": 702,
-    "valor_total": 94241.65,
-    "valor_total_descontado": 674.0,
-    "valor_total_pendente": 93567.65,
+    "gerado_em": "2026-10-06T15:49:38.916406",
+    "quantidade_total": 705,
+    "valor_total": 92450.65,
+    "valor_total_descontado": 0.0,
+    "valor_total_pendente": 92450.65,
     "por_unidade": [
       {
         "unidade": "Bento",
-        "quantidade": 53,
-        "valor": 7496.0
+        "quantidade": 56,
+        "valor": 7930.0
       },
       {
         "unidade": "Caxias",
-        "quantidade": 119,
-        "valor": 17506.5
+        "quantidade": 118,
+        "valor": 15171.5
       },
       {
         "unidade": "Encantado",
@@ -1763,13 +1758,13 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 188,
-        "valor": 21700.0
+        "quantidade": 189,
+        "valor": 21820.0
       },
       {
         "unidade": "Veranopolis",
         "quantidade": 86,
-        "valor": 13896.1
+        "valor": 13886.1
       }
     ],
     "por_doutor": [
@@ -1780,7 +1775,7 @@
       },
       {
         "doutor": "Alexandre Orlandini",
-        "quantidade": 9,
+        "quantidade": 8,
         "valor_descontado": 0.0
       },
       {
@@ -1795,11 +1790,6 @@
       },
       {
         "doutor": "Dionathan Pohlmann",
-        "quantidade": 9,
-        "valor_descontado": 0.0
-      },
-      {
-        "doutor": "Dra.Júlia Raquel Nardi",
         "quantidade": 9,
         "valor_descontado": 0.0
       },
@@ -1845,12 +1835,12 @@
       },
       {
         "doutor": "Julia Nardi",
-        "quantidade": 1,
+        "quantidade": 12,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Jéssica Barreto",
-        "quantidade": 19,
+        "quantidade": 21,
         "valor_descontado": 0.0
       },
       {
@@ -1870,12 +1860,12 @@
       },
       {
         "doutor": "Luisa Moraes Lucas",
-        "quantidade": 33,
+        "quantidade": 34,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Luiz Henrique",
-        "quantidade": 20,
+        "quantidade": 24,
         "valor_descontado": 0.0
       },
       {
@@ -1895,7 +1885,7 @@
       },
       {
         "doutor": "Naiane Pieta",
-        "quantidade": 7,
+        "quantidade": 6,
         "valor_descontado": 0.0
       },
       {
@@ -1915,13 +1905,13 @@
       },
       {
         "doutor": "Renata Protto",
-        "quantidade": 3,
+        "quantidade": 5,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Sara Trevisol",
         "quantidade": 6,
-        "valor_descontado": 674.0
+        "valor_descontado": 0.0
       },
       {
         "doutor": "Tamara Macanan",
@@ -1940,12 +1930,7 @@
       },
       {
         "doutor": "Thiany Cristofoli",
-        "quantidade": 23,
-        "valor_descontado": 0.0
-      },
-      {
-        "doutor": "TOP",
-        "quantidade": 8,
+        "quantidade": 25,
         "valor_descontado": 0.0
       },
       {

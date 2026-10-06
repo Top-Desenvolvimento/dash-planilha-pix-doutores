@@ -1,15 +1,15 @@
 {
   "competencia": "2026-08",
-  "gerado_em": "2026-09-02T19:54:40.075096",
-  "quantidade_total": 654,
-  "valor_total": 94915.66,
+  "gerado_em": "2026-10-06T15:41:31.627484",
+  "quantidade_total": 662,
+  "valor_total": 96119.66,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 94915.66,
+  "valor_total_pendente": 96119.66,
   "por_unidade": [
     {
       "unidade": "Bento",
-      "quantidade": 32,
-      "valor": 3534.0
+      "quantidade": 40,
+      "valor": 4743.0
     },
     {
       "unidade": "Caxias",
@@ -34,7 +34,7 @@
     {
       "unidade": "Soledade",
       "quantidade": 161,
-      "valor": 18056.0
+      "valor": 18051.0
     },
     {
       "unidade": "Veranopolis",
@@ -150,7 +150,7 @@
     },
     {
       "doutor": "Luiz Henrique",
-      "quantidade": 29,
+      "quantidade": 39,
       "valor_descontado": 0.0
     },
     {
@@ -216,11 +216,6 @@
     {
       "doutor": "Thiany Cristofoli",
       "quantidade": 32,
-      "valor_descontado": 0.0
-    },
-    {
-      "doutor": "TOP",
-      "quantidade": 2,
       "valor_descontado": 0.0
     },
     {
