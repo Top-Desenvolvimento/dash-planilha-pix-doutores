@@ -1,10 +1,10 @@
 {
   "competencia": "2026-10",
-  "gerado_em": "2026-10-07T02:27:33.755286",
+  "gerado_em": "2026-10-07T09:08:14.281410",
   "quantidade_total": 105,
   "valor_total": 15592.0,
-  "valor_total_descontado": 3355.0,
-  "valor_total_pendente": 12237.0,
+  "valor_total_descontado": 754.0,
+  "valor_total_pendente": 14838.0,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -46,7 +46,7 @@
     {
       "doutor": "Adriele da Silva",
       "quantidade": 6,
-      "valor_descontado": 1178.0
+      "valor_descontado": 424.0
     },
     {
       "doutor": "Alexandre Favero",
@@ -71,7 +71,7 @@
     {
       "doutor": "Franciele Pedrotti",
       "quantidade": 23,
-      "valor_descontado": 1847.0
+      "valor_descontado": 0.0
     },
     {
       "doutor": "Leticia Canabarro",
