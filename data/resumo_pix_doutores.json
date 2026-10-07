@@ -1947,11 +1947,11 @@
   },
   "2026-10": {
     "competencia": "2026-10",
-    "gerado_em": "2026-10-06T23:11:01.784640",
-    "quantidade_total": 104,
-    "valor_total": 15477.0,
-    "valor_total_descontado": 4403.0,
-    "valor_total_pendente": 11074.0,
+    "gerado_em": "2026-10-07T02:27:33.755286",
+    "quantidade_total": 105,
+    "valor_total": 15592.0,
+    "valor_total_descontado": 3355.0,
+    "valor_total_pendente": 12237.0,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1960,8 +1960,8 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 23,
-        "valor": 3225.0
+        "quantidade": 24,
+        "valor": 3340.0
       },
       {
         "unidade": "Encantado",
@@ -2017,8 +2017,8 @@
       },
       {
         "doutor": "Franciele Pedrotti",
-        "quantidade": 22,
-        "valor_descontado": 2895.0
+        "quantidade": 23,
+        "valor_descontado": 1847.0
       },
       {
         "doutor": "Leticia Canabarro",
