@@ -1,20 +1,20 @@
 {
   "competencia": "2026-10",
-  "gerado_em": "2026-10-07T09:08:14.281410",
-  "quantidade_total": 105,
-  "valor_total": 15592.0,
-  "valor_total_descontado": 754.0,
-  "valor_total_pendente": 14838.0,
+  "gerado_em": "2026-10-07T16:29:59.516826",
+  "quantidade_total": 109,
+  "valor_total": 16046.0,
+  "valor_total_descontado": 450.0,
+  "valor_total_pendente": 15596.0,
   "por_unidade": [
     {
       "unidade": "Bento",
-      "quantidade": 1,
-      "valor": 120.0
+      "quantidade": 2,
+      "valor": 240.0
     },
     {
       "unidade": "Caxias",
-      "quantidade": 24,
-      "valor": 3340.0
+      "quantidade": 26,
+      "valor": 3559.0
     },
     {
       "unidade": "Encantado",
@@ -24,12 +24,12 @@
     {
       "unidade": "Farroupilha",
       "quantidade": 15,
-      "valor": 2379.0
+      "valor": 2369.0
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 17,
-      "valor": 2231.0
+      "quantidade": 18,
+      "valor": 2356.0
     },
     {
       "unidade": "Soledade",
@@ -46,7 +46,7 @@
     {
       "doutor": "Adriele da Silva",
       "quantidade": 6,
-      "valor_descontado": 424.0
+      "valor_descontado": 0.0
     },
     {
       "doutor": "Alexandre Favero",
@@ -70,7 +70,7 @@
     },
     {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 23,
+      "quantidade": 25,
       "valor_descontado": 0.0
     },
     {
@@ -82,6 +82,11 @@
       "doutor": "Luisa Moraes Lucas",
       "quantidade": 23,
       "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Luiz Henrique",
+      "quantidade": 1,
+      "valor_descontado": 120.0
     },
     {
       "doutor": "Morgana Zambiasi",
@@ -100,7 +105,7 @@
     },
     {
       "doutor": "Tamara Macanan",
-      "quantidade": 17,
+      "quantidade": 18,
       "valor_descontado": 0.0
     },
     {
