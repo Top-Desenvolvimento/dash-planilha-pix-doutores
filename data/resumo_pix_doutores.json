@@ -1947,11 +1947,11 @@
   },
   "2026-10": {
     "competencia": "2026-10",
-    "gerado_em": "2026-10-08T19:23:38.551537",
-    "quantidade_total": 158,
-    "valor_total": 23162.5,
+    "gerado_em": "2026-10-08T20:43:00.901425",
+    "quantidade_total": 165,
+    "valor_total": 24159.5,
     "valor_total_descontado": 754.0,
-    "valor_total_pendente": 22408.5,
+    "valor_total_pendente": 23405.5,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1960,8 +1960,8 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 35,
-        "valor": 4677.0
+        "quantidade": 37,
+        "valor": 5051.0
       },
       {
         "unidade": "Encantado",
@@ -1980,13 +1980,13 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 49,
-        "valor": 5308.0
+        "quantidade": 51,
+        "valor": 5572.0
       },
       {
         "unidade": "Veranopolis",
-        "quantidade": 21,
-        "valor": 5134.5
+        "quantidade": 24,
+        "valor": 5493.5
       }
     ],
     "por_doutor": [
@@ -2012,12 +2012,12 @@
       },
       {
         "doutor": "Franciele Pedrotti",
-        "quantidade": 34,
+        "quantidade": 36,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Leticia Canabarro",
-        "quantidade": 12,
+        "quantidade": 14,
         "valor_descontado": 0.0
       },
       {
@@ -2062,12 +2062,12 @@
       },
       {
         "doutor": "TOP",
-        "quantidade": 1,
+        "quantidade": 2,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Valter Baldissera",
-        "quantidade": 19,
+        "quantidade": 21,
         "valor_descontado": 0.0
       }
     ]

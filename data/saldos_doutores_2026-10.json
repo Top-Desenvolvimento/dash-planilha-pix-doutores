@@ -83,8 +83,8 @@
     "doutor_id": "12",
     "doutor": "Dionathan Pohlmann",
     "credito_inicial": 6000.0,
-    "utilizado": 2730.0,
-    "credito_disponivel": 3270.0,
+    "utilizado": 2940.0,
+    "credito_disponivel": 3060.0,
     "pix_key": ""
   },
   {
@@ -243,8 +243,8 @@
     "doutor_id": "30",
     "doutor": "Luiz Henrique",
     "credito_inicial": 2500.0,
-    "utilizado": 720.0,
-    "credito_disponivel": 1780.0,
+    "utilizado": 840.0,
+    "credito_disponivel": 1660.0,
     "pix_key": ""
   },
   {
@@ -291,8 +291,8 @@
     "doutor_id": "36",
     "doutor": "Nelson Vaccari",
     "credito_inicial": 4000.0,
-    "utilizado": 3840.0,
-    "credito_disponivel": 160.0,
+    "utilizado": 3960.0,
+    "credito_disponivel": 40.0,
     "pix_key": ""
   },
   {
@@ -363,8 +363,8 @@
     "doutor_id": "44",
     "doutor": "Thiany Cristofoli",
     "credito_inicial": 4000.0,
-    "utilizado": 1520.0,
-    "credito_disponivel": 2480.0,
+    "utilizado": 1824.0,
+    "credito_disponivel": 2176.0,
     "pix_key": ""
   }
 ]
