@@ -1,10 +1,10 @@
 {
   "competencia": "2026-10",
-  "gerado_em": "2026-10-10T14:17:04.272950",
-  "quantidade_total": 254,
-  "valor_total": 36617.5,
+  "gerado_em": "2026-10-10T15:22:06.553610",
+  "quantidade_total": 258,
+  "valor_total": 36990.5,
   "valor_total_descontado": 210.0,
-  "valor_total_pendente": 36407.5,
+  "valor_total_pendente": 36780.5,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,8 +13,8 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 47,
-      "valor": 6837.0
+      "quantidade": 49,
+      "valor": 6996.0
     },
     {
       "unidade": "Encantado",
@@ -23,8 +23,8 @@
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 22,
-      "valor": 3391.0
+      "quantidade": 24,
+      "valor": 3605.0
     },
     {
       "unidade": "FloresDaCunha",
@@ -60,12 +60,12 @@
     },
     {
       "doutor": "Everlize Cipriani",
-      "quantidade": 9,
+      "quantidade": 11,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 50,
+      "quantidade": 52,
       "valor_descontado": 0.0
     },
     {
