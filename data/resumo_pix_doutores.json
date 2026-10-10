@@ -1947,11 +1947,11 @@
   },
   "2026-10": {
     "competencia": "2026-10",
-    "gerado_em": "2026-10-10T09:04:54.783940",
-    "quantidade_total": 222,
-    "valor_total": 32340.5,
+    "gerado_em": "2026-10-10T14:17:04.272950",
+    "quantidade_total": 254,
+    "valor_total": 36617.5,
     "valor_total_descontado": 210.0,
-    "valor_total_pendente": 32130.5,
+    "valor_total_pendente": 36407.5,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1960,18 +1960,18 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 43,
-        "valor": 6393.0
+        "quantidade": 47,
+        "valor": 6837.0
       },
       {
         "unidade": "Encantado",
-        "quantidade": 32,
-        "valor": 4424.0
+        "quantidade": 43,
+        "valor": 6039.0
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 18,
-        "valor": 2859.0
+        "quantidade": 22,
+        "valor": 3391.0
       },
       {
         "unidade": "FloresDaCunha",
@@ -1980,13 +1980,13 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 54,
-        "valor": 6576.0
+        "quantidade": 59,
+        "valor": 7124.0
       },
       {
         "unidade": "Veranopolis",
-        "quantidade": 26,
-        "valor": 5991.5
+        "quantidade": 34,
+        "valor": 7129.5
       }
     ],
     "por_doutor": [
@@ -1997,7 +1997,7 @@
       },
       {
         "doutor": "Alexandre Favero",
-        "quantidade": 10,
+        "quantidade": 12,
         "valor_descontado": 0.0
       },
       {
@@ -2007,17 +2007,17 @@
       },
       {
         "doutor": "Everlize Cipriani",
-        "quantidade": 7,
+        "quantidade": 9,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Franciele Pedrotti",
-        "quantidade": 44,
+        "quantidade": 50,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Leticia Canabarro",
-        "quantidade": 17,
+        "quantidade": 22,
         "valor_descontado": 0.0
       },
       {
@@ -2057,7 +2057,7 @@
       },
       {
         "doutor": "Thiany Cristofoli",
-        "quantidade": 17,
+        "quantidade": 26,
         "valor_descontado": 0.0
       },
       {
@@ -2067,7 +2067,7 @@
       },
       {
         "doutor": "Valter Baldissera",
-        "quantidade": 23,
+        "quantidade": 31,
         "valor_descontado": 0.0
       }
     ]
