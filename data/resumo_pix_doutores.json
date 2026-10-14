@@ -1947,11 +1947,11 @@
   },
   "2026-10": {
     "competencia": "2026-10",
-    "gerado_em": "2026-10-13T21:20:48.829318",
-    "quantidade_total": 285,
-    "valor_total": 40976.5,
+    "gerado_em": "2026-10-14T00:30:09.280400",
+    "quantidade_total": 291,
+    "valor_total": 41654.5,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 40976.5,
+    "valor_total_pendente": 41654.5,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1960,8 +1960,8 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 54,
-        "valor": 7708.0
+        "quantidade": 58,
+        "valor": 8196.0
       },
       {
         "unidade": "Encantado",
@@ -1970,13 +1970,13 @@
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 28,
-        "valor": 4084.0
+        "quantidade": 29,
+        "valor": 4189.0
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 35,
-        "valor": 5007.0
+        "quantidade": 36,
+        "valor": 5092.0
       },
       {
         "unidade": "Soledade",
@@ -2012,7 +2012,7 @@
       },
       {
         "doutor": "Franciele Pedrotti",
-        "quantidade": 60,
+        "quantidade": 65,
         "valor_descontado": 0.0
       },
       {
@@ -2052,7 +2052,7 @@
       },
       {
         "doutor": "Tamara Macanan",
-        "quantidade": 35,
+        "quantidade": 36,
         "valor_descontado": 0.0
       },
       {
