@@ -1,10 +1,10 @@
 {
   "competencia": "2026-10",
-  "gerado_em": "2026-10-14T15:23:05.379253",
-  "quantidade_total": 297,
-  "valor_total": 42783.71,
-  "valor_total_descontado": 0.0,
-  "valor_total_pendente": 42783.71,
+  "gerado_em": "2026-10-14T19:39:42.468615",
+  "quantidade_total": 313,
+  "valor_total": 44848.71,
+  "valor_total_descontado": 105.0,
+  "valor_total_pendente": 44743.71,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -18,18 +18,18 @@
     },
     {
       "unidade": "Encantado",
-      "quantidade": 43,
-      "valor": 6014.0
+      "quantidade": 47,
+      "valor": 6439.0
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 31,
-      "valor": 4327.0
+      "quantidade": 34,
+      "valor": 4735.0
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 36,
-      "valor": 5092.0
+      "quantidade": 39,
+      "valor": 5511.0
     },
     {
       "unidade": "Soledade",
@@ -38,8 +38,8 @@
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 36,
-      "valor": 7776.72
+      "quantidade": 42,
+      "valor": 8589.72
     }
   ],
   "por_doutor": [
@@ -60,7 +60,7 @@
     },
     {
       "doutor": "Everlize Cipriani",
-      "quantidade": 14,
+      "quantidade": 17,
       "valor_descontado": 0.0
     },
     {
@@ -95,7 +95,7 @@
     },
     {
       "doutor": "Nelson Vaccari",
-      "quantidade": 1,
+      "quantidade": 7,
       "valor_descontado": 0.0
     },
     {
@@ -104,8 +104,13 @@
       "valor_descontado": 0.0
     },
     {
+      "doutor": "Sara Trevisol",
+      "quantidade": 1,
+      "valor_descontado": 105.0
+    },
+    {
       "doutor": "Tamara Macanan",
-      "quantidade": 36,
+      "quantidade": 39,
       "valor_descontado": 0.0
     },
     {
@@ -115,7 +120,7 @@
     },
     {
       "doutor": "Thiany Cristofoli",
-      "quantidade": 27,
+      "quantidade": 30,
       "valor_descontado": 0.0
     },
     {
