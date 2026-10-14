@@ -1,10 +1,10 @@
 {
   "competencia": "2026-10",
-  "gerado_em": "2026-10-14T19:39:42.468615",
-  "quantidade_total": 313,
-  "valor_total": 44848.71,
-  "valor_total_descontado": 105.0,
-  "valor_total_pendente": 44743.71,
+  "gerado_em": "2026-10-14T22:43:20.010730",
+  "quantidade_total": 328,
+  "valor_total": 46418.71,
+  "valor_total_descontado": 225.0,
+  "valor_total_pendente": 46193.71,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -18,28 +18,28 @@
     },
     {
       "unidade": "Encantado",
-      "quantidade": 47,
-      "valor": 6439.0
+      "quantidade": 48,
+      "valor": 6559.0
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 34,
-      "valor": 4735.0
+      "quantidade": 35,
+      "valor": 4855.0
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 39,
-      "valor": 5511.0
+      "quantidade": 47,
+      "valor": 6324.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 70,
-      "valor": 8480.0
+      "quantidade": 71,
+      "valor": 8605.0
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 42,
-      "valor": 8589.72
+      "quantidade": 46,
+      "valor": 8981.72
     }
   ],
   "por_doutor": [
@@ -60,7 +60,7 @@
     },
     {
       "doutor": "Everlize Cipriani",
-      "quantidade": 17,
+      "quantidade": 18,
       "valor_descontado": 0.0
     },
     {
@@ -70,7 +70,7 @@
     },
     {
       "doutor": "Leticia Canabarro",
-      "quantidade": 24,
+      "quantidade": 25,
       "valor_descontado": 0.0
     },
     {
@@ -95,7 +95,7 @@
     },
     {
       "doutor": "Nelson Vaccari",
-      "quantidade": 7,
+      "quantidade": 11,
       "valor_descontado": 0.0
     },
     {
@@ -105,12 +105,12 @@
     },
     {
       "doutor": "Sara Trevisol",
-      "quantidade": 1,
-      "valor_descontado": 105.0
+      "quantidade": 2,
+      "valor_descontado": 225.0
     },
     {
       "doutor": "Tamara Macanan",
-      "quantidade": 39,
+      "quantidade": 47,
       "valor_descontado": 0.0
     },
     {
