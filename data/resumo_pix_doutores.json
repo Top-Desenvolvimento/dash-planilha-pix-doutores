@@ -1947,11 +1947,11 @@
   },
   "2026-10": {
     "competencia": "2026-10",
-    "gerado_em": "2026-10-15T05:40:21.157957",
+    "gerado_em": "2026-10-15T10:25:20.097301",
     "quantidade_total": 328,
     "valor_total": 46418.71,
-    "valor_total_descontado": 225.0,
-    "valor_total_pendente": 46193.71,
+    "valor_total_descontado": 220.0,
+    "valor_total_pendente": 46198.71,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -2053,7 +2053,7 @@
       {
         "doutor": "Sara Trevisol",
         "quantidade": 2,
-        "valor_descontado": 225.0
+        "valor_descontado": 220.0
       },
       {
         "doutor": "Tamara Macanan",
