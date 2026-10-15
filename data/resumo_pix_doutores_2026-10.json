@@ -1,10 +1,10 @@
 {
   "competencia": "2026-10",
-  "gerado_em": "2026-10-15T17:46:36.109299",
-  "quantidade_total": 346,
-  "valor_total": 48668.71,
-  "valor_total_descontado": 799.0,
-  "valor_total_pendente": 47869.71,
+  "gerado_em": "2026-10-15T18:35:02.531822",
+  "quantidade_total": 350,
+  "valor_total": 49261.71,
+  "valor_total_descontado": 468.0,
+  "valor_total_pendente": 48793.71,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -28,13 +28,13 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 49,
-      "valor": 6514.0
+      "quantidade": 52,
+      "valor": 6987.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 76,
-      "valor": 9198.0
+      "quantidade": 77,
+      "valor": 9318.0
     },
     {
       "unidade": "Veranopolis",
@@ -95,8 +95,8 @@
     },
     {
       "doutor": "Murilo Debortoli",
-      "quantidade": 5,
-      "valor_descontado": 331.0
+      "quantidade": 6,
+      "valor_descontado": 0.0
     },
     {
       "doutor": "Nelson Vaccari",
@@ -115,7 +115,7 @@
     },
     {
       "doutor": "Tamara Macanan",
-      "quantidade": 49,
+      "quantidade": 52,
       "valor_descontado": 0.0
     },
     {
