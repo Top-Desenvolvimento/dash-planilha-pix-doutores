@@ -1947,11 +1947,11 @@
   },
   "2026-10": {
     "competencia": "2026-10",
-    "gerado_em": "2026-10-15T18:35:02.531822",
-    "quantidade_total": 350,
-    "valor_total": 49261.71,
-    "valor_total_descontado": 468.0,
-    "valor_total_pendente": 48793.71,
+    "gerado_em": "2026-10-15T19:16:43.389328",
+    "quantidade_total": 353,
+    "valor_total": 49564.71,
+    "valor_total_descontado": 566.0,
+    "valor_total_pendente": 48998.71,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1960,8 +1960,8 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 67,
-        "valor": 9408.99
+        "quantidade": 68,
+        "valor": 9493.99
       },
       {
         "unidade": "Encantado",
@@ -1970,13 +1970,13 @@
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 39,
-        "valor": 5478.0
+        "quantidade": 40,
+        "valor": 5576.0
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 52,
-        "valor": 6987.0
+        "quantidade": 53,
+        "valor": 7107.0
       },
       {
         "unidade": "Soledade",
@@ -2062,18 +2062,18 @@
       },
       {
         "doutor": "Tamara Macanan",
-        "quantidade": 52,
+        "quantidade": 53,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Thalia Tessaro",
-        "quantidade": 3,
+        "quantidade": 4,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Thalia Vezzosi",
-        "quantidade": 3,
-        "valor_descontado": 468.0
+        "quantidade": 4,
+        "valor_descontado": 566.0
       },
       {
         "doutor": "Thiany Cristofoli",
