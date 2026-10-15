@@ -3606,8 +3606,8 @@
       "doutor_id": "11",
       "doutor": "Murilo Debortoli",
       "credito_inicial": 500.0,
-      "utilizado": 169.0,
-      "credito_disponivel": 331.0,
+      "utilizado": 500.0,
+      "credito_disponivel": 0.0,
       "pix_key": ""
     },
     {
@@ -3686,8 +3686,8 @@
       "doutor_id": "46",
       "doutor": "Thalia Vezzosi",
       "credito_inicial": 2500.0,
-      "utilizado": 468.0,
-      "credito_disponivel": 2032.0,
+      "utilizado": 936.0,
+      "credito_disponivel": 1564.0,
       "pix_key": ""
     },
     {

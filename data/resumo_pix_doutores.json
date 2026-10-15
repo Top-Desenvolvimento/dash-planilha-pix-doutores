@@ -1947,11 +1947,11 @@
   },
   "2026-10": {
     "competencia": "2026-10",
-    "gerado_em": "2026-10-15T15:16:59.215281",
-    "quantidade_total": 335,
-    "valor_total": 47515.71,
-    "valor_total_descontado": 637.0,
-    "valor_total_pendente": 46878.71,
+    "gerado_em": "2026-10-15T17:46:36.109299",
+    "quantidade_total": 346,
+    "valor_total": 48668.71,
+    "valor_total_descontado": 799.0,
+    "valor_total_pendente": 47869.71,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1960,8 +1960,8 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 62,
-        "valor": 8869.99
+        "quantidade": 67,
+        "valor": 9408.99
       },
       {
         "unidade": "Encantado",
@@ -1975,18 +1975,18 @@
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 48,
-        "valor": 6419.0
+        "quantidade": 49,
+        "valor": 6514.0
       },
       {
         "unidade": "Soledade",
-        "quantidade": 72,
-        "valor": 8774.0
+        "quantidade": 76,
+        "valor": 9198.0
       },
       {
         "unidade": "Veranopolis",
-        "quantidade": 46,
-        "valor": 8981.72
+        "quantidade": 47,
+        "valor": 9076.72
       }
     ],
     "por_doutor": [
@@ -2012,7 +2012,7 @@
       },
       {
         "doutor": "Franciele Pedrotti",
-        "quantidade": 69,
+        "quantidade": 74,
         "valor_descontado": 0.0
       },
       {
@@ -2042,12 +2042,12 @@
       },
       {
         "doutor": "Murilo Debortoli",
-        "quantidade": 1,
-        "valor_descontado": 169.0
+        "quantidade": 5,
+        "valor_descontado": 331.0
       },
       {
         "doutor": "Nelson Vaccari",
-        "quantidade": 11,
+        "quantidade": 12,
         "valor_descontado": 0.0
       },
       {
@@ -2062,7 +2062,7 @@
       },
       {
         "doutor": "Tamara Macanan",
-        "quantidade": 48,
+        "quantidade": 49,
         "valor_descontado": 0.0
       },
       {
