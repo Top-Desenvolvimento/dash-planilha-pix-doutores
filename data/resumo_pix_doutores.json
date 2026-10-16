@@ -1947,11 +1947,11 @@
   },
   "2026-10": {
     "competencia": "2026-10",
-    "gerado_em": "2026-10-16T20:47:25.874980",
-    "quantidade_total": 400,
-    "valor_total": 56985.51,
+    "gerado_em": "2026-10-16T21:30:09.495748",
+    "quantidade_total": 402,
+    "valor_total": 57204.51,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 56985.51,
+    "valor_total_pendente": 57204.51,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1960,13 +1960,13 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 82,
-        "valor": 12694.99
+        "quantidade": 83,
+        "valor": 12814.99
       },
       {
         "unidade": "Encantado",
-        "quantidade": 50,
-        "valor": 6689.0
+        "quantidade": 51,
+        "valor": 6788.0
       },
       {
         "unidade": "Farroupilha",
@@ -2072,7 +2072,7 @@
       },
       {
         "doutor": "Sara Trevisol",
-        "quantidade": 4,
+        "quantidade": 5,
         "valor_descontado": 0.0
       },
       {
@@ -2082,7 +2082,7 @@
       },
       {
         "doutor": "Thalia Tessaro",
-        "quantidade": 15,
+        "quantidade": 16,
         "valor_descontado": 0.0
       },
       {
