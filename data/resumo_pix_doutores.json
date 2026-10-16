@@ -1947,16 +1947,16 @@
   },
   "2026-10": {
     "competencia": "2026-10",
-    "gerado_em": "2026-10-16T21:55:48.650167",
-    "quantidade_total": 409,
-    "valor_total": 57961.51,
+    "gerado_em": "2026-10-16T23:53:36.783868",
+    "quantidade_total": 413,
+    "valor_total": 58446.51,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 57961.51,
+    "valor_total_pendente": 58446.51,
     "por_unidade": [
       {
         "unidade": "Bento",
-        "quantidade": 32,
-        "valor": 3823.0
+        "quantidade": 35,
+        "valor": 4183.0
       },
       {
         "unidade": "Caxias",
@@ -1975,8 +1975,8 @@
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 66,
-        "valor": 8527.0
+        "quantidade": 67,
+        "valor": 8652.0
       },
       {
         "unidade": "Soledade",
@@ -1992,7 +1992,7 @@
     "por_doutor": [
       {
         "doutor": ".Greici Matiello",
-        "quantidade": 1,
+        "quantidade": 4,
         "valor_descontado": 0.0
       },
       {
@@ -2027,7 +2027,7 @@
       },
       {
         "doutor": "Karen Ramona Kuwer",
-        "quantidade": 7,
+        "quantidade": 8,
         "valor_descontado": 0.0
       },
       {
