@@ -1947,11 +1947,11 @@
   },
   "2026-10": {
     "competencia": "2026-10",
-    "gerado_em": "2026-10-16T21:30:09.495748",
-    "quantidade_total": 402,
-    "valor_total": 57204.51,
+    "gerado_em": "2026-10-16T21:55:48.650167",
+    "quantidade_total": 409,
+    "valor_total": 57961.51,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 57204.51,
+    "valor_total_pendente": 57961.51,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1960,13 +1960,13 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 83,
-        "valor": 12814.99
+        "quantidade": 84,
+        "valor": 12899.99
       },
       {
         "unidade": "Encantado",
-        "quantidade": 51,
-        "valor": 6788.0
+        "quantidade": 52,
+        "valor": 6883.0
       },
       {
         "unidade": "Farroupilha",
@@ -1975,8 +1975,8 @@
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 61,
-        "valor": 7950.0
+        "quantidade": 66,
+        "valor": 8527.0
       },
       {
         "unidade": "Soledade",
@@ -2027,7 +2027,7 @@
       },
       {
         "doutor": "Karen Ramona Kuwer",
-        "quantidade": 2,
+        "quantidade": 7,
         "valor_descontado": 0.0
       },
       {
@@ -2072,7 +2072,7 @@
       },
       {
         "doutor": "Sara Trevisol",
-        "quantidade": 5,
+        "quantidade": 6,
         "valor_descontado": 0.0
       },
       {
@@ -2082,7 +2082,7 @@
       },
       {
         "doutor": "Thalia Tessaro",
-        "quantidade": 16,
+        "quantidade": 17,
         "valor_descontado": 0.0
       },
       {
