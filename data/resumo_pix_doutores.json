@@ -1947,26 +1947,26 @@
   },
   "2026-10": {
     "competencia": "2026-10",
-    "gerado_em": "2026-10-16T14:28:00.040455",
-    "quantidade_total": 366,
-    "valor_total": 51147.71,
+    "gerado_em": "2026-10-16T18:28:50.164276",
+    "quantidade_total": 380,
+    "valor_total": 52695.71,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 51147.71,
+    "valor_total_pendente": 52695.71,
     "por_unidade": [
       {
         "unidade": "Bento",
-        "quantidade": 20,
-        "valor": 2434.0
+        "quantidade": 29,
+        "valor": 3585.0
       },
       {
         "unidade": "Caxias",
-        "quantidade": 69,
-        "valor": 9613.99
+        "quantidade": 71,
+        "valor": 9791.99
       },
       {
         "unidade": "Encantado",
-        "quantidade": 48,
-        "valor": 6559.0
+        "quantidade": 49,
+        "valor": 6569.0
       },
       {
         "unidade": "Farroupilha",
@@ -1975,13 +1975,13 @@
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 59,
-        "valor": 7829.0
+        "quantidade": 60,
+        "valor": 7928.0
       },
       {
         "unidade": "Soledade",
-        "quantidade": 78,
-        "valor": 9457.0
+        "quantidade": 79,
+        "valor": 9567.0
       },
       {
         "unidade": "Veranopolis",
@@ -2021,6 +2021,11 @@
         "valor_descontado": 0.0
       },
       {
+        "doutor": "Karen Ramona Kuwer",
+        "quantidade": 1,
+        "valor_descontado": 0.0
+      },
+      {
         "doutor": "Leticia Canabarro",
         "quantidade": 25,
         "valor_descontado": 0.0
@@ -2032,7 +2037,7 @@
       },
       {
         "doutor": "Luiz Henrique",
-        "quantidade": 19,
+        "quantidade": 28,
         "valor_descontado": 0.0
       },
       {
@@ -2062,7 +2067,7 @@
       },
       {
         "doutor": "Sara Trevisol",
-        "quantidade": 2,
+        "quantidade": 3,
         "valor_descontado": 0.0
       },
       {
@@ -2072,12 +2077,12 @@
       },
       {
         "doutor": "Thalia Tessaro",
-        "quantidade": 5,
+        "quantidade": 8,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Thalia Vezzosi",
-        "quantidade": 6,
+        "quantidade": 5,
         "valor_descontado": 0.0
       },
       {
@@ -2088,6 +2093,11 @@
       {
         "doutor": "Valter Baldissera",
         "quantidade": 34,
+        "valor_descontado": 0.0
+      },
+      {
+        "doutor": "Vitoria de Brito",
+        "quantidade": 1,
         "valor_descontado": 0.0
       }
     ]
