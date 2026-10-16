@@ -1947,11 +1947,11 @@
   },
   "2026-10": {
     "competencia": "2026-10",
-    "gerado_em": "2026-10-15T22:28:25.884118",
-    "quantidade_total": 365,
-    "valor_total": 51047.71,
-    "valor_total_descontado": 530.0,
-    "valor_total_pendente": 50517.71,
+    "gerado_em": "2026-10-16T00:40:15.763561",
+    "quantidade_total": 366,
+    "valor_total": 51147.71,
+    "valor_total_descontado": 0.0,
+    "valor_total_pendente": 51147.71,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1985,8 +1985,8 @@
       },
       {
         "unidade": "Veranopolis",
-        "quantidade": 49,
-        "valor": 9373.72
+        "quantidade": 50,
+        "valor": 9473.72
       }
     ],
     "por_doutor": [
@@ -2052,7 +2052,7 @@
       },
       {
         "doutor": "Nelson Vaccari",
-        "quantidade": 14,
+        "quantidade": 15,
         "valor_descontado": 0.0
       },
       {
@@ -2078,7 +2078,7 @@
       {
         "doutor": "Thalia Vezzosi",
         "quantidade": 6,
-        "valor_descontado": 530.0
+        "valor_descontado": 0.0
       },
       {
         "doutor": "Thiany Cristofoli",
