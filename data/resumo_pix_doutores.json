@@ -1947,11 +1947,11 @@
   },
   "2026-10": {
     "competencia": "2026-10",
-    "gerado_em": "2026-10-17T14:17:18.132702",
-    "quantidade_total": 436,
-    "valor_total": 61523.51,
+    "gerado_em": "2026-10-17T17:19:49.794389",
+    "quantidade_total": 440,
+    "valor_total": 62157.51,
     "valor_total_descontado": 315.0,
-    "valor_total_pendente": 61208.51,
+    "valor_total_pendente": 61842.51,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1960,8 +1960,8 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 89,
-        "valor": 13739.99
+        "quantidade": 93,
+        "valor": 14373.99
       },
       {
         "unidade": "Encantado",
@@ -2017,7 +2017,7 @@
       },
       {
         "doutor": "Dionathan Pohlmann",
-        "quantidade": 10,
+        "quantidade": 14,
         "valor_descontado": 0.0
       },
       {
