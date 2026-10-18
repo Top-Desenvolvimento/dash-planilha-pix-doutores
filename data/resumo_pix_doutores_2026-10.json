@@ -1,10 +1,10 @@
 {
   "competencia": "2026-10",
-  "gerado_em": "2026-10-17T23:38:00.155513",
+  "gerado_em": "2026-10-18T01:37:12.606489",
   "quantidade_total": 440,
   "valor_total": 62157.51,
-  "valor_total_descontado": 240.0,
-  "valor_total_pendente": 61917.51,
+  "valor_total_descontado": 0.0,
+  "valor_total_pendente": 62157.51,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -61,7 +61,7 @@
     {
       "doutor": "Ana Cristina Corso",
       "quantidade": 3,
-      "valor_descontado": 240.0
+      "valor_descontado": 0.0
     },
     {
       "doutor": "Diogo Cemin Amarante",
