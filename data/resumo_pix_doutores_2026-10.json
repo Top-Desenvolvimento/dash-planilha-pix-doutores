@@ -1,15 +1,20 @@
 {
   "competencia": "2026-10",
-  "gerado_em": "2026-10-18T11:47:34.723566",
-  "quantidade_total": 347,
-  "valor_total": 47783.52,
+  "gerado_em": "2026-10-18T15:00:40.213334",
+  "quantidade_total": 440,
+  "valor_total": 62157.51,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 47783.52,
+  "valor_total_pendente": 62157.51,
   "por_unidade": [
     {
       "unidade": "Bento",
       "quantidade": 41,
       "valor": 4956.0
+    },
+    {
+      "unidade": "Caxias",
+      "quantidade": 93,
+      "valor": 14373.99
     },
     {
       "unidade": "Encantado",
@@ -64,13 +69,18 @@
       "valor_descontado": 0.0
     },
     {
+      "doutor": "Dionathan Pohlmann",
+      "quantidade": 14,
+      "valor_descontado": 0.0
+    },
+    {
       "doutor": "Everlize Cipriani",
       "quantidade": 18,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 11,
+      "quantidade": 74,
       "valor_descontado": 0.0
     },
     {
@@ -130,7 +140,7 @@
     },
     {
       "doutor": "Thalia Tessaro",
-      "quantidade": 2,
+      "quantidade": 18,
       "valor_descontado": 0.0
     },
     {
