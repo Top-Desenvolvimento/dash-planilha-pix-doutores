@@ -1947,16 +1947,16 @@
   },
   "2026-10": {
     "competencia": "2026-10",
-    "gerado_em": "2026-10-19T16:52:58.903804",
-    "quantidade_total": 451,
-    "valor_total": 63983.51,
+    "gerado_em": "2026-10-19T17:19:33.973496",
+    "quantidade_total": 452,
+    "valor_total": 64103.51,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 63983.51,
+    "valor_total_pendente": 64103.51,
     "por_unidade": [
       {
         "unidade": "Bento",
-        "quantidade": 41,
-        "valor": 4956.0
+        "quantidade": 42,
+        "valor": 5076.0
       },
       {
         "unidade": "Caxias",
@@ -1992,7 +1992,7 @@
     "por_doutor": [
       {
         "doutor": ".Greici Matiello",
-        "quantidade": 10,
+        "quantidade": 11,
         "valor_descontado": 0.0
       },
       {
