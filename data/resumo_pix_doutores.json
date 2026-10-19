@@ -1947,11 +1947,11 @@
   },
   "2026-10": {
     "competencia": "2026-10",
-    "gerado_em": "2026-10-19T17:19:33.973496",
-    "quantidade_total": 452,
-    "valor_total": 64103.51,
+    "gerado_em": "2026-10-19T19:27:58.753158",
+    "quantidade_total": 457,
+    "valor_total": 64613.51,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 64103.51,
+    "valor_total_pendente": 64613.51,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1960,8 +1960,8 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 95,
-        "valor": 15162.99
+        "quantidade": 96,
+        "valor": 15282.99
       },
       {
         "unidade": "Encantado",
@@ -1980,8 +1980,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 93,
-        "valor": 11281.0
+        "quantidade": 97,
+        "valor": 11671.0
       },
       {
         "unidade": "Veranopolis",
@@ -2017,7 +2017,7 @@
       },
       {
         "doutor": "Dionathan Pohlmann",
-        "quantidade": 16,
+        "quantidade": 17,
         "valor_descontado": 0.0
       },
       {
@@ -2037,7 +2037,7 @@
       },
       {
         "doutor": "Gabrielle Marchezan",
-        "quantidade": 4,
+        "quantidade": 7,
         "valor_descontado": 0.0
       },
       {
@@ -2047,7 +2047,7 @@
       },
       {
         "doutor": "Leticia Canabarro",
-        "quantidade": 33,
+        "quantidade": 34,
         "valor_descontado": 0.0
       },
       {
