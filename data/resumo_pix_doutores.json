@@ -1947,26 +1947,26 @@
   },
   "2026-10": {
     "competencia": "2026-10",
-    "gerado_em": "2026-10-19T19:37:58.112381",
-    "quantidade_total": 457,
-    "valor_total": 64613.51,
-    "valor_total_descontado": 0.0,
-    "valor_total_pendente": 64613.51,
+    "gerado_em": "2026-10-19T21:43:00.227133",
+    "quantidade_total": 474,
+    "valor_total": 66713.51,
+    "valor_total_descontado": 120.0,
+    "valor_total_pendente": 66593.51,
     "por_unidade": [
       {
         "unidade": "Bento",
-        "quantidade": 42,
-        "valor": 5076.0
+        "quantidade": 46,
+        "valor": 5659.0
       },
       {
         "unidade": "Caxias",
-        "quantidade": 96,
-        "valor": 15282.99
+        "quantidade": 97,
+        "valor": 15402.99
       },
       {
         "unidade": "Encantado",
-        "quantidade": 54,
-        "valor": 6998.0
+        "quantidade": 60,
+        "valor": 7682.0
       },
       {
         "unidade": "Farroupilha",
@@ -1975,13 +1975,13 @@
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 73,
-        "valor": 9444.0
+        "quantidade": 75,
+        "valor": 9757.0
       },
       {
         "unidade": "Soledade",
-        "quantidade": 97,
-        "valor": 11671.0
+        "quantidade": 101,
+        "valor": 12071.0
       },
       {
         "unidade": "Veranopolis",
@@ -1991,8 +1991,13 @@
     ],
     "por_doutor": [
       {
+        "doutor": ".Gabrielle Marchezan",
+        "quantidade": 1,
+        "valor_descontado": 0.0
+      },
+      {
         "doutor": ".Greici Matiello",
-        "quantidade": 11,
+        "quantidade": 15,
         "valor_descontado": 0.0
       },
       {
@@ -2007,7 +2012,7 @@
       },
       {
         "doutor": "Ana Cristina Corso",
-        "quantidade": 3,
+        "quantidade": 5,
         "valor_descontado": 0.0
       },
       {
@@ -2036,9 +2041,14 @@
         "valor_descontado": 0.0
       },
       {
-        "doutor": "Gabrielle Marchezan",
-        "quantidade": 7,
+        "doutor": "Gabrielle Marchezann",
+        "quantidade": 10,
         "valor_descontado": 0.0
+      },
+      {
+        "doutor": "Giovana Gasparini",
+        "quantidade": 1,
+        "valor_descontado": 120.0
       },
       {
         "doutor": "Karen Ramona Kuwer",
@@ -2087,7 +2097,7 @@
       },
       {
         "doutor": "Renata Protto",
-        "quantidade": 1,
+        "quantidade": 7,
         "valor_descontado": 0.0
       },
       {
