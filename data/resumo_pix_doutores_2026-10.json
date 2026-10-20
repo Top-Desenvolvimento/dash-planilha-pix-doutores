@@ -1,20 +1,20 @@
 {
   "competencia": "2026-10",
-  "gerado_em": "2026-10-20T17:14:26.479908",
-  "quantidade_total": 488,
-  "valor_total": 68419.51,
+  "gerado_em": "2026-10-20T19:29:57.751031",
+  "quantidade_total": 497,
+  "valor_total": 69632.51,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 68419.51,
+  "valor_total_pendente": 69632.51,
   "por_unidade": [
     {
       "unidade": "Bento",
-      "quantidade": 46,
-      "valor": 5659.0
+      "quantidade": 48,
+      "valor": 6034.0
     },
     {
       "unidade": "Caxias",
-      "quantidade": 108,
-      "valor": 16729.99
+      "quantidade": 110,
+      "valor": 16863.99
     },
     {
       "unidade": "Encantado",
@@ -23,13 +23,13 @@
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 44,
-      "valor": 6015.0
+      "quantidade": 45,
+      "valor": 6170.0
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 77,
-      "valor": 9987.0
+      "quantidade": 81,
+      "valor": 10536.0
     },
     {
       "unidade": "Soledade",
@@ -50,7 +50,7 @@
     },
     {
       "doutor": ".Greici Matiello",
-      "quantidade": 15,
+      "quantidade": 17,
       "valor_descontado": 0.0
     },
     {
@@ -65,7 +65,7 @@
     },
     {
       "doutor": "Ana Cristina Corso",
-      "quantidade": 7,
+      "quantidade": 11,
       "valor_descontado": 0.0
     },
     {
@@ -100,7 +100,7 @@
     },
     {
       "doutor": "Giovana Gasparini",
-      "quantidade": 10,
+      "quantidade": 12,
       "valor_descontado": 0.0
     },
     {
@@ -170,7 +170,7 @@
     },
     {
       "doutor": "Thalia Vezzosi",
-      "quantidade": 7,
+      "quantidade": 8,
       "valor_descontado": 0.0
     },
     {
