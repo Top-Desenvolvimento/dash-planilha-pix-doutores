@@ -1,10 +1,10 @@
 {
   "competencia": "2026-10",
-  "gerado_em": "2026-10-20T15:21:08.823583",
-  "quantidade_total": 485,
-  "valor_total": 68040.51,
+  "gerado_em": "2026-10-20T16:47:55.411332",
+  "quantidade_total": 488,
+  "valor_total": 68419.51,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 68040.51,
+  "valor_total_pendente": 68419.51,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -23,13 +23,13 @@
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 43,
-      "valor": 5866.0
+      "quantidade": 44,
+      "valor": 6015.0
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 75,
-      "valor": 9757.0
+      "quantidade": 77,
+      "valor": 9987.0
     },
     {
       "unidade": "Soledade",
@@ -65,7 +65,7 @@
     },
     {
       "doutor": "Ana Cristina Corso",
-      "quantidade": 5,
+      "quantidade": 7,
       "valor_descontado": 0.0
     },
     {
@@ -170,7 +170,7 @@
     },
     {
       "doutor": "Thalia Vezzosi",
-      "quantidade": 6,
+      "quantidade": 7,
       "valor_descontado": 0.0
     },
     {
