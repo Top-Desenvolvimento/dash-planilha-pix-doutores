@@ -1947,11 +1947,11 @@
   },
   "2026-10": {
     "competencia": "2026-10",
-    "gerado_em": "2026-10-19T21:43:00.227133",
-    "quantidade_total": 474,
-    "valor_total": 66713.51,
-    "valor_total_descontado": 120.0,
-    "valor_total_pendente": 66593.51,
+    "gerado_em": "2026-10-20T00:47:05.699706",
+    "quantidade_total": 479,
+    "valor_total": 67261.51,
+    "valor_total_descontado": 569.0,
+    "valor_total_pendente": 66692.51,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1960,8 +1960,8 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 97,
-        "valor": 15402.99
+        "quantidade": 102,
+        "valor": 15950.99
       },
       {
         "unidade": "Encantado",
@@ -2022,7 +2022,7 @@
       },
       {
         "doutor": "Dionathan Pohlmann",
-        "quantidade": 17,
+        "quantidade": 18,
         "valor_descontado": 0.0
       },
       {
@@ -2047,8 +2047,8 @@
       },
       {
         "doutor": "Giovana Gasparini",
-        "quantidade": 1,
-        "valor_descontado": 120.0
+        "quantidade": 5,
+        "valor_descontado": 569.0
       },
       {
         "doutor": "Karen Ramona Kuwer",
