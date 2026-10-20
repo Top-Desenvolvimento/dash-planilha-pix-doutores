@@ -1947,21 +1947,21 @@
   },
   "2026-10": {
     "competencia": "2026-10",
-    "gerado_em": "2026-10-20T19:29:57.751031",
-    "quantidade_total": 497,
-    "valor_total": 69632.51,
+    "gerado_em": "2026-10-20T21:04:08.406727",
+    "quantidade_total": 504,
+    "valor_total": 70493.51,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 69632.51,
+    "valor_total_pendente": 70493.51,
     "por_unidade": [
       {
         "unidade": "Bento",
-        "quantidade": 48,
-        "valor": 6034.0
+        "quantidade": 49,
+        "valor": 6154.0
       },
       {
         "unidade": "Caxias",
-        "quantidade": 110,
-        "valor": 16863.99
+        "quantidade": 112,
+        "valor": 17127.99
       },
       {
         "unidade": "Encantado",
@@ -1975,8 +1975,8 @@
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 81,
-        "valor": 10536.0
+        "quantidade": 85,
+        "valor": 11013.0
       },
       {
         "unidade": "Soledade",
@@ -1997,7 +1997,7 @@
       },
       {
         "doutor": ".Greici Matiello",
-        "quantidade": 17,
+        "quantidade": 18,
         "valor_descontado": 0.0
       },
       {
@@ -2012,7 +2012,7 @@
       },
       {
         "doutor": "Ana Cristina Corso",
-        "quantidade": 11,
+        "quantidade": 15,
         "valor_descontado": 0.0
       },
       {
@@ -2047,7 +2047,7 @@
       },
       {
         "doutor": "Giovana Gasparini",
-        "quantidade": 12,
+        "quantidade": 14,
         "valor_descontado": 0.0
       },
       {
