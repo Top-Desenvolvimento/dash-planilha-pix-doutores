@@ -1,15 +1,15 @@
 {
   "competencia": "2026-10",
-  "gerado_em": "2026-10-21T10:46:43.618542",
-  "quantidade_total": 518,
-  "valor_total": 72281.01,
+  "gerado_em": "2026-10-21T19:47:46.027777",
+  "quantidade_total": 531,
+  "valor_total": 74347.01,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 72281.01,
+  "valor_total_pendente": 74347.01,
   "por_unidade": [
     {
       "unidade": "Bento",
-      "quantidade": 49,
-      "valor": 6154.0
+      "quantidade": 50,
+      "valor": 6576.0
     },
     {
       "unidade": "Caxias",
@@ -18,8 +18,8 @@
     },
     {
       "unidade": "Encantado",
-      "quantidade": 60,
-      "valor": 7682.0
+      "quantidade": 64,
+      "valor": 8200.0
     },
     {
       "unidade": "Farroupilha",
@@ -28,8 +28,8 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 91,
-      "valor": 11725.0
+      "quantidade": 94,
+      "valor": 12095.0
     },
     {
       "unidade": "Soledade",
@@ -38,8 +38,8 @@
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 52,
-      "valor": 10275.52
+      "quantidade": 57,
+      "valor": 11031.52
     }
   ],
   "por_doutor": [
@@ -79,6 +79,11 @@
       "valor_descontado": 0.0
     },
     {
+      "doutor": "Dra.Laís Dias",
+      "quantidade": 3,
+      "valor_descontado": 0.0
+    },
+    {
       "doutor": "Everlize Cipriani",
       "quantidade": 18,
       "valor_descontado": 0.0
@@ -105,7 +110,7 @@
     },
     {
       "doutor": "Indiamara Rech",
-      "quantidade": 3,
+      "quantidade": 6,
       "valor_descontado": 0.0
     },
     {
@@ -135,7 +140,7 @@
     },
     {
       "doutor": "Morgana Zambiasi",
-      "quantidade": 2,
+      "quantidade": 3,
       "valor_descontado": 0.0
     },
     {
@@ -145,12 +150,17 @@
     },
     {
       "doutor": "Nelson Vaccari",
-      "quantidade": 17,
+      "quantidade": 18,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Nicoli Weber",
       "quantidade": 4,
+      "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Notuen Boniati",
+      "quantidade": 1,
       "valor_descontado": 0.0
     },
     {
@@ -181,6 +191,11 @@
     {
       "doutor": "Thiany Cristofoli",
       "quantidade": 30,
+      "valor_descontado": 0.0
+    },
+    {
+      "doutor": "TOP",
+      "quantidade": 4,
       "valor_descontado": 0.0
     },
     {
