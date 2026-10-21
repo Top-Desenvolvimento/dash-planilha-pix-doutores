@@ -1,15 +1,15 @@
 {
   "competencia": "2026-09",
-  "gerado_em": "2026-10-06T20:10:18.810986",
-  "quantidade_total": 706,
-  "valor_total": 92555.65,
+  "gerado_em": "2026-10-21T15:39:18.710263",
+  "quantidade_total": 705,
+  "valor_total": 92420.65,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 92555.65,
+  "valor_total_pendente": 92420.65,
   "por_unidade": [
     {
       "unidade": "Bento",
-      "quantidade": 57,
-      "valor": 8035.0
+      "quantidade": 56,
+      "valor": 7900.0
     },
     {
       "unidade": "Caxias",
@@ -115,7 +115,7 @@
     },
     {
       "doutor": "Jéssica Barreto",
-      "quantidade": 21,
+      "quantidade": 20,
       "valor_descontado": 0.0
     },
     {
