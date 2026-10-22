@@ -3,12 +3,18 @@
     "unidade": "Garibaldi",
     "competencia": "2026-10",
     "erro": "Menu Finanças não encontrado.",
-    "coletado_em": "2026-10-22T14:02:10.200294"
+    "coletado_em": "2026-10-22T16:11:27.111232"
+  },
+  {
+    "unidade": "Veranopolis",
+    "competencia": "2026-10",
+    "erro": "Menu Finanças não encontrado.",
+    "coletado_em": "2026-10-22T16:11:28.843107"
   },
   {
     "unidade": "Ssdocai",
     "competencia": "2026-10",
     "erro": "Timeout ao acessar sistema",
-    "coletado_em": "2026-10-22T14:03:57.591864"
+    "coletado_em": "2026-10-22T16:12:13.871657"
   }
 ]
