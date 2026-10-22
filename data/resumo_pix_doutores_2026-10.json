@@ -1,10 +1,10 @@
 {
   "competencia": "2026-10",
-  "gerado_em": "2026-10-22T20:25:25.934884",
-  "quantidade_total": 552,
-  "valor_total": 77167.01,
+  "gerado_em": "2026-10-22T23:29:32.250785",
+  "quantidade_total": 555,
+  "valor_total": 77516.01,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 77167.01,
+  "valor_total_pendente": 77516.01,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,8 +13,8 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 117,
-      "valor": 17928.49
+      "quantidade": 119,
+      "valor": 18192.49
     },
     {
       "unidade": "Encantado",
@@ -33,8 +33,8 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 110,
-      "valor": 13083.0
+      "quantidade": 111,
+      "valor": 13168.0
     },
     {
       "unidade": "Veranopolis",
@@ -65,7 +65,7 @@
     },
     {
       "doutor": "Ana Cristina Corso",
-      "quantidade": 18,
+      "quantidade": 20,
       "valor_descontado": 0.0
     },
     {
@@ -145,7 +145,7 @@
     },
     {
       "doutor": "Murilo Debortoli",
-      "quantidade": 10,
+      "quantidade": 11,
       "valor_descontado": 0.0
     },
     {
