@@ -1,10 +1,10 @@
 {
   "competencia": "2026-10",
-  "gerado_em": "2026-10-22T06:12:23.193630",
-  "quantidade_total": 547,
-  "valor_total": 76633.01,
+  "gerado_em": "2026-10-22T11:51:09.312706",
+  "quantidade_total": 378,
+  "valor_total": 54625.01,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 76633.01,
+  "valor_total_pendente": 54625.01,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -17,19 +17,9 @@
       "valor": 17928.49
     },
     {
-      "unidade": "Encantado",
-      "quantidade": 68,
-      "valor": 9019.0
-    },
-    {
       "unidade": "Farroupilha",
       "quantidade": 48,
       "valor": 6445.0
-    },
-    {
-      "unidade": "FloresDaCunha",
-      "quantidade": 101,
-      "valor": 12989.0
     },
     {
       "unidade": "Soledade",
@@ -59,16 +49,6 @@
       "valor_descontado": 0.0
     },
     {
-      "doutor": "Alexandre Favero",
-      "quantidade": 12,
-      "valor_descontado": 0.0
-    },
-    {
-      "doutor": "Ana Cristina Corso",
-      "quantidade": 18,
-      "valor_descontado": 0.0
-    },
-    {
       "doutor": "Diogo Cemin Amarante",
       "quantidade": 1,
       "valor_descontado": 0.0
@@ -84,11 +64,6 @@
       "valor_descontado": 0.0
     },
     {
-      "doutor": "Fernanda Sozo",
-      "quantidade": 1,
-      "valor_descontado": 0.0
-    },
-    {
       "doutor": "Franciele Pedrotti",
       "quantidade": 74,
       "valor_descontado": 0.0
@@ -101,16 +76,6 @@
     {
       "doutor": "Giovana Gasparini",
       "quantidade": 19,
-      "valor_descontado": 0.0
-    },
-    {
-      "doutor": "Indiamara Rech",
-      "quantidade": 13,
-      "valor_descontado": 0.0
-    },
-    {
-      "doutor": "Karen Ramona Kuwer",
-      "quantidade": 10,
       "valor_descontado": 0.0
     },
     {
@@ -154,28 +119,8 @@
       "valor_descontado": 0.0
     },
     {
-      "doutor": "Nicoli Weber",
-      "quantidade": 4,
-      "valor_descontado": 0.0
-    },
-    {
       "doutor": "Notuen Boniati",
       "quantidade": 2,
-      "valor_descontado": 0.0
-    },
-    {
-      "doutor": "Renata Protto",
-      "quantidade": 7,
-      "valor_descontado": 0.0
-    },
-    {
-      "doutor": "Sara Trevisol",
-      "quantidade": 7,
-      "valor_descontado": 0.0
-    },
-    {
-      "doutor": "Tamara Macanan",
-      "quantidade": 59,
       "valor_descontado": 0.0
     },
     {
@@ -186,16 +131,6 @@
     {
       "doutor": "Thalia Vezzosi",
       "quantidade": 11,
-      "valor_descontado": 0.0
-    },
-    {
-      "doutor": "Thiany Cristofoli",
-      "quantidade": 30,
-      "valor_descontado": 0.0
-    },
-    {
-      "doutor": "TOP",
-      "quantidade": 8,
       "valor_descontado": 0.0
     },
     {
