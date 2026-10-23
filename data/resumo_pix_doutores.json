@@ -1947,11 +1947,11 @@
   },
   "2026-10": {
     "competencia": "2026-10",
-    "gerado_em": "2026-10-23T12:15:23.047536",
-    "quantidade_total": 555,
-    "valor_total": 77516.01,
+    "gerado_em": "2026-10-23T14:50:07.524019",
+    "quantidade_total": 557,
+    "valor_total": 77696.01,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 77516.01,
+    "valor_total_pendente": 77696.01,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1980,8 +1980,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 111,
-        "valor": 13168.0
+        "quantidade": 113,
+        "valor": 13348.0
       },
       {
         "unidade": "Veranopolis",
@@ -2092,7 +2092,7 @@
       },
       {
         "doutor": "Murilo Debortoli",
-        "quantidade": 11,
+        "quantidade": 13,
         "valor_descontado": 0.0
       },
       {
