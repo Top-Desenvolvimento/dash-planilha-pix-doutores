@@ -1947,26 +1947,26 @@
   },
   "2026-10": {
     "competencia": "2026-10",
-    "gerado_em": "2026-10-23T14:50:07.524019",
-    "quantidade_total": 557,
-    "valor_total": 77696.01,
+    "gerado_em": "2026-10-23T17:23:16.362772",
+    "quantidade_total": 561,
+    "valor_total": 80178.01,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 77696.01,
+    "valor_total_pendente": 80178.01,
     "por_unidade": [
       {
         "unidade": "Bento",
-        "quantidade": 51,
-        "valor": 6671.0
+        "quantidade": 52,
+        "valor": 6769.0
       },
       {
         "unidade": "Caxias",
-        "quantidade": 119,
-        "valor": 18192.49
+        "quantidade": 120,
+        "valor": 18287.49
       },
       {
         "unidade": "Encantado",
-        "quantidade": 68,
-        "valor": 9019.0
+        "quantidade": 69,
+        "valor": 11198.0
       },
       {
         "unidade": "Farroupilha",
@@ -1980,8 +1980,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 113,
-        "valor": 13348.0
+        "quantidade": 114,
+        "valor": 13458.0
       },
       {
         "unidade": "Veranopolis",
@@ -2012,7 +2012,7 @@
       },
       {
         "doutor": "Ana Cristina Corso",
-        "quantidade": 20,
+        "quantidade": 21,
         "valor_descontado": 0.0
       },
       {
@@ -2092,7 +2092,7 @@
       },
       {
         "doutor": "Murilo Debortoli",
-        "quantidade": 13,
+        "quantidade": 14,
         "valor_descontado": 0.0
       },
       {
@@ -2107,7 +2107,7 @@
       },
       {
         "doutor": "Notuen Boniati",
-        "quantidade": 2,
+        "quantidade": 3,
         "valor_descontado": 0.0
       },
       {
@@ -2142,7 +2142,7 @@
       },
       {
         "doutor": "TOP",
-        "quantidade": 8,
+        "quantidade": 9,
         "valor_descontado": 0.0
       },
       {
