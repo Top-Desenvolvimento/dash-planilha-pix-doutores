@@ -1,10 +1,10 @@
 {
   "competencia": "2026-10",
-  "gerado_em": "2026-10-23T20:35:07.423032",
-  "quantidade_total": 576,
-  "valor_total": 81753.01,
+  "gerado_em": "2026-10-23T23:32:30.715115",
+  "quantidade_total": 585,
+  "valor_total": 82641.01,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 81753.01,
+  "valor_total_pendente": 82641.01,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,13 +13,13 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 127,
-      "valor": 18981.49
+      "quantidade": 131,
+      "valor": 19311.49
     },
     {
       "unidade": "Encantado",
-      "quantidade": 71,
-      "valor": 11402.0
+      "quantidade": 74,
+      "valor": 11725.0
     },
     {
       "unidade": "Farroupilha",
@@ -28,13 +28,13 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 102,
-      "valor": 13088.0
+      "quantidade": 103,
+      "valor": 13203.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 118,
-      "valor": 13916.0
+      "quantidade": 119,
+      "valor": 14036.0
     },
     {
       "unidade": "Veranopolis",
@@ -65,7 +65,7 @@
     },
     {
       "doutor": "Ana Cristina Corso",
-      "quantidade": 28,
+      "quantidade": 32,
       "valor_descontado": 0.0
     },
     {
@@ -105,7 +105,7 @@
     },
     {
       "doutor": "Indiamara Rech",
-      "quantidade": 14,
+      "quantidade": 15,
       "valor_descontado": 0.0
     },
     {
@@ -135,7 +135,7 @@
     },
     {
       "doutor": "Marina Alievi",
-      "quantidade": 5,
+      "quantidade": 6,
       "valor_descontado": 0.0
     },
     {
@@ -195,7 +195,7 @@
     },
     {
       "doutor": "TOP",
-      "quantidade": 11,
+      "quantidade": 14,
       "valor_descontado": 0.0
     },
     {
