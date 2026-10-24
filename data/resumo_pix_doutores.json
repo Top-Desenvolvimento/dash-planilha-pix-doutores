@@ -1947,26 +1947,26 @@
   },
   "2026-10": {
     "competencia": "2026-10",
-    "gerado_em": "2026-10-24T11:50:36.904865",
-    "quantidade_total": 592,
-    "valor_total": 83369.01,
+    "gerado_em": "2026-10-24T13:56:19.844272",
+    "quantidade_total": 607,
+    "valor_total": 84962.01,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 83369.01,
+    "valor_total_pendente": 84962.01,
     "por_unidade": [
       {
         "unidade": "Bento",
-        "quantidade": 53,
-        "valor": 6889.0
+        "quantidade": 55,
+        "valor": 7029.0
       },
       {
         "unidade": "Caxias",
-        "quantidade": 133,
-        "valor": 19551.49
+        "quantidade": 136,
+        "valor": 19971.49
       },
       {
         "unidade": "Encantado",
-        "quantidade": 74,
-        "valor": 11725.0
+        "quantidade": 80,
+        "valor": 12299.0
       },
       {
         "unidade": "Farroupilha",
@@ -1975,13 +1975,13 @@
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 105,
-        "valor": 13401.0
+        "quantidade": 106,
+        "valor": 13500.0
       },
       {
         "unidade": "Soledade",
-        "quantidade": 122,
-        "valor": 14326.0
+        "quantidade": 125,
+        "valor": 14686.0
       },
       {
         "unidade": "Veranopolis",
@@ -2012,7 +2012,7 @@
       },
       {
         "doutor": "Ana Cristina Corso",
-        "quantidade": 34,
+        "quantidade": 37,
         "valor_descontado": 0.0
       },
       {
@@ -2052,7 +2052,7 @@
       },
       {
         "doutor": "Indiamara Rech",
-        "quantidade": 17,
+        "quantidade": 18,
         "valor_descontado": 0.0
       },
       {
@@ -2082,7 +2082,7 @@
       },
       {
         "doutor": "Marina Alievi",
-        "quantidade": 8,
+        "quantidade": 11,
         "valor_descontado": 0.0
       },
       {
@@ -2107,7 +2107,7 @@
       },
       {
         "doutor": "Notuen Boniati",
-        "quantidade": 4,
+        "quantidade": 5,
         "valor_descontado": 0.0
       },
       {
@@ -2142,7 +2142,7 @@
       },
       {
         "doutor": "TOP",
-        "quantidade": 14,
+        "quantidade": 21,
         "valor_descontado": 0.0
       },
       {
