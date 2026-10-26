@@ -1947,11 +1947,11 @@
   },
   "2026-10": {
     "competencia": "2026-10",
-    "gerado_em": "2026-10-26T11:37:27.996830",
-    "quantidade_total": 609,
-    "valor_total": 85227.01,
+    "gerado_em": "2026-10-26T17:55:35.868399",
+    "quantidade_total": 621,
+    "valor_total": 86616.01,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 85227.01,
+    "valor_total_pendente": 86616.01,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1960,13 +1960,13 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 136,
-        "valor": 19971.49
+        "quantidade": 138,
+        "valor": 20220.49
       },
       {
         "unidade": "Encantado",
-        "quantidade": 81,
-        "valor": 12459.0
+        "quantidade": 83,
+        "valor": 12669.0
       },
       {
         "unidade": "Farroupilha",
@@ -1975,13 +1975,13 @@
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 106,
-        "valor": 13500.0
+        "quantidade": 113,
+        "valor": 14305.0
       },
       {
         "unidade": "Soledade",
-        "quantidade": 126,
-        "valor": 14791.0
+        "quantidade": 127,
+        "valor": 14916.0
       },
       {
         "unidade": "Veranopolis",
@@ -2012,7 +2012,7 @@
       },
       {
         "doutor": "Ana Cristina Corso",
-        "quantidade": 37,
+        "quantidade": 39,
         "valor_descontado": 0.0
       },
       {
@@ -2052,7 +2052,7 @@
       },
       {
         "doutor": "Indiamara Rech",
-        "quantidade": 18,
+        "quantidade": 23,
         "valor_descontado": 0.0
       },
       {
@@ -2087,12 +2087,12 @@
       },
       {
         "doutor": "Morgana Zambiasi",
-        "quantidade": 3,
+        "quantidade": 10,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Murilo Debortoli",
-        "quantidade": 16,
+        "quantidade": 17,
         "valor_descontado": 0.0
       },
       {
@@ -2122,7 +2122,7 @@
       },
       {
         "doutor": "Tamara Macanan",
-        "quantidade": 59,
+        "quantidade": 61,
         "valor_descontado": 0.0
       },
       {
@@ -2142,12 +2142,12 @@
       },
       {
         "doutor": "TOP",
-        "quantidade": 22,
+        "quantidade": 24,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Valter Baldissera",
-        "quantidade": 34,
+        "quantidade": 27,
         "valor_descontado": 0.0
       },
       {
