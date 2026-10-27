@@ -1,10 +1,10 @@
 {
   "competencia": "2026-10",
-  "gerado_em": "2026-10-26T22:01:54.998944",
-  "quantidade_total": 632,
-  "valor_total": 87816.01,
+  "gerado_em": "2026-10-27T01:25:31.484332",
+  "quantidade_total": 633,
+  "valor_total": 87901.01,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 87816.01,
+  "valor_total_pendente": 87901.01,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,8 +13,8 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 144,
-      "valor": 20799.49
+      "quantidade": 145,
+      "valor": 20884.49
     },
     {
       "unidade": "Encantado",
@@ -70,7 +70,7 @@
     },
     {
       "doutor": "Ana Cristina Corso",
-      "quantidade": 45,
+      "quantidade": 46,
       "valor_descontado": 0.0
     },
     {
