@@ -1,10 +1,10 @@
 {
   "competencia": "2026-10",
-  "gerado_em": "2026-10-28T19:51:14.185236",
-  "quantidade_total": 680,
-  "valor_total": 96966.01,
-  "valor_total_descontado": 219.0,
-  "valor_total_pendente": 96747.01,
+  "gerado_em": "2026-10-28T23:46:40.150570",
+  "quantidade_total": 695,
+  "valor_total": 102617.01,
+  "valor_total_descontado": 281.0,
+  "valor_total_pendente": 102336.01,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -18,8 +18,8 @@
     },
     {
       "unidade": "Encantado",
-      "quantidade": 90,
-      "valor": 13586.0
+      "quantidade": 93,
+      "valor": 17880.0
     },
     {
       "unidade": "Farroupilha",
@@ -28,18 +28,18 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 124,
-      "valor": 16154.0
+      "quantidade": 132,
+      "valor": 17026.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 150,
-      "valor": 17370.0
+      "quantidade": 152,
+      "valor": 17565.0
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 57,
-      "valor": 11031.52
+      "quantidade": 59,
+      "valor": 11321.52
     }
   ],
   "por_doutor": [
@@ -90,17 +90,17 @@
     },
     {
       "doutor": "Fernanda Sozo",
-      "quantidade": 12,
+      "quantidade": 19,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 74,
+      "quantidade": 75,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Gabrielle Marchezann",
-      "quantidade": 15,
+      "quantidade": 16,
       "valor_descontado": 0.0
     },
     {
@@ -160,7 +160,7 @@
     },
     {
       "doutor": "Nelson Vaccari",
-      "quantidade": 18,
+      "quantidade": 19,
       "valor_descontado": 0.0
     },
     {
@@ -170,8 +170,8 @@
     },
     {
       "doutor": "Norberto Filipe",
-      "quantidade": 2,
-      "valor_descontado": 219.0
+      "quantidade": 3,
+      "valor_descontado": 281.0
     },
     {
       "doutor": "Notuen Boniati",
@@ -185,7 +185,7 @@
     },
     {
       "doutor": "Sara Trevisol",
-      "quantidade": 7,
+      "quantidade": 8,
       "valor_descontado": 0.0
     },
     {
@@ -210,7 +210,12 @@
     },
     {
       "doutor": "TOP",
-      "quantidade": 27,
+      "quantidade": 29,
+      "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Valdemir Luiz Abatti",
+      "quantidade": 1,
       "valor_descontado": 0.0
     },
     {
