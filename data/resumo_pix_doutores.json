@@ -1947,11 +1947,11 @@
   },
   "2026-10": {
     "competencia": "2026-10",
-    "gerado_em": "2026-10-28T14:27:53.675150",
-    "quantidade_total": 672,
-    "valor_total": 96133.01,
-    "valor_total_descontado": 352.0,
-    "valor_total_pendente": 95781.01,
+    "gerado_em": "2026-10-28T19:51:14.185236",
+    "quantidade_total": 680,
+    "valor_total": 96966.01,
+    "valor_total_descontado": 219.0,
+    "valor_total_pendente": 96747.01,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1960,13 +1960,13 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 150,
-        "valor": 21548.49
+        "quantidade": 151,
+        "valor": 21678.49
       },
       {
         "unidade": "Encantado",
-        "quantidade": 87,
-        "valor": 13241.0
+        "quantidade": 90,
+        "valor": 13586.0
       },
       {
         "unidade": "Farroupilha",
@@ -1975,13 +1975,13 @@
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 123,
-        "valor": 16069.0
+        "quantidade": 124,
+        "valor": 16154.0
       },
       {
         "unidade": "Soledade",
-        "quantidade": 147,
-        "valor": 17097.0
+        "quantidade": 150,
+        "valor": 17370.0
       },
       {
         "unidade": "Veranopolis",
@@ -2012,12 +2012,12 @@
       },
       {
         "doutor": "Alexandre Orlandini",
-        "quantidade": 4,
+        "quantidade": 5,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Ana Cristina Corso",
-        "quantidade": 51,
+        "quantidade": 52,
         "valor_descontado": 0.0
       },
       {
@@ -2037,7 +2037,7 @@
       },
       {
         "doutor": "Fernanda Sozo",
-        "quantidade": 11,
+        "quantidade": 12,
         "valor_descontado": 0.0
       },
       {
@@ -2058,7 +2058,7 @@
       {
         "doutor": "Gustavo Lourenço Ongaratto",
         "quantidade": 7,
-        "valor_descontado": 352.0
+        "valor_descontado": 0.0
       },
       {
         "doutor": "Indiamara Rech",
@@ -2077,7 +2077,7 @@
       },
       {
         "doutor": "Leticia Canabarro",
-        "quantidade": 35,
+        "quantidade": 36,
         "valor_descontado": 0.0
       },
       {
@@ -2116,6 +2116,11 @@
         "valor_descontado": 0.0
       },
       {
+        "doutor": "Norberto Filipe",
+        "quantidade": 2,
+        "valor_descontado": 219.0
+      },
+      {
         "doutor": "Notuen Boniati",
         "quantidade": 5,
         "valor_descontado": 0.0
@@ -2152,7 +2157,7 @@
       },
       {
         "doutor": "TOP",
-        "quantidade": 25,
+        "quantidade": 27,
         "valor_descontado": 0.0
       },
       {
