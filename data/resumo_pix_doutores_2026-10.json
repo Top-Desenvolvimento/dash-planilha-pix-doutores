@@ -1,10 +1,10 @@
 {
   "competencia": "2026-10",
-  "gerado_em": "2026-10-28T07:32:45.634098",
-  "quantidade_total": 671,
-  "valor_total": 96013.01,
-  "valor_total_descontado": 738.0,
-  "valor_total_pendente": 95275.01,
+  "gerado_em": "2026-10-28T14:27:53.675150",
+  "quantidade_total": 672,
+  "valor_total": 96133.01,
+  "valor_total_descontado": 352.0,
+  "valor_total_pendente": 95781.01,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -33,8 +33,8 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 146,
-      "valor": 16977.0
+      "quantidade": 147,
+      "valor": 17097.0
     },
     {
       "unidade": "Veranopolis",
@@ -111,7 +111,7 @@
     {
       "doutor": "Gustavo Lourenço Ongaratto",
       "quantidade": 7,
-      "valor_descontado": 738.0
+      "valor_descontado": 352.0
     },
     {
       "doutor": "Indiamara Rech",
@@ -130,7 +130,7 @@
     },
     {
       "doutor": "Leticia Canabarro",
-      "quantidade": 34,
+      "quantidade": 35,
       "valor_descontado": 0.0
     },
     {
