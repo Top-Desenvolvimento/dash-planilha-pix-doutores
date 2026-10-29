@@ -9,7 +9,7 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-10-21T14:56:45.089609",
+    "gerado_em": "2026-10-29T20:47:14.885738",
     "quantidade_total": 622,
     "valor_total": 83899.09,
     "valor_total_descontado": 0.0,
@@ -221,7 +221,7 @@
   },
   "2026-05": {
     "competencia": "2026-05",
-    "gerado_em": "2026-10-21T15:05:20.629353",
+    "gerado_em": "2026-10-29T20:55:46.018522",
     "quantidade_total": 639,
     "valor_total": 94043.49,
     "valor_total_descontado": 0.0,
@@ -438,7 +438,7 @@
   },
   "2026-01": {
     "competencia": "2026-01",
-    "gerado_em": "2026-10-21T14:30:38.149573",
+    "gerado_em": "2026-10-29T20:21:17.713425",
     "quantidade_total": 631,
     "valor_total": 80218.48,
     "valor_total_descontado": 0.0,
@@ -645,7 +645,7 @@
   },
   "2026-02": {
     "competencia": "2026-02",
-    "gerado_em": "2026-10-21T14:39:19.958676",
+    "gerado_em": "2026-10-29T20:29:58.020779",
     "quantidade_total": 592,
     "valor_total": 79847.59,
     "valor_total_descontado": 0.0,
@@ -832,11 +832,11 @@
   },
   "2026-03": {
     "competencia": "2026-03",
-    "gerado_em": "2026-10-21T14:48:12.382912",
+    "gerado_em": "2026-10-29T20:38:44.686438",
     "quantidade_total": 586,
     "valor_total": 80692.51,
-    "valor_total_descontado": 327.0,
-    "valor_total_pendente": 80365.51,
+    "valor_total_descontado": 76.0,
+    "valor_total_pendente": 80616.51,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1028,7 +1028,7 @@
       {
         "doutor": "Nelson Vaccari",
         "quantidade": 2,
-        "valor_descontado": 327.0
+        "valor_descontado": 76.0
       },
       {
         "doutor": "PEDI.Giovana Gasparini",
@@ -1044,7 +1044,7 @@
   },
   "2026-06": {
     "competencia": "2026-06",
-    "gerado_em": "2026-10-21T15:13:50.565336",
+    "gerado_em": "2026-10-29T21:04:12.889173",
     "quantidade_total": 559,
     "valor_total": 73830.55,
     "valor_total_descontado": 0.0,
@@ -1261,7 +1261,7 @@
   },
   "2026-07": {
     "competencia": "2026-07",
-    "gerado_em": "2026-10-21T15:22:26.572193",
+    "gerado_em": "2026-10-29T21:12:48.461502",
     "quantidade_total": 593,
     "valor_total": 84357.72,
     "valor_total_descontado": 0.0,
@@ -1493,7 +1493,7 @@
   },
   "2026-08": {
     "competencia": "2026-08",
-    "gerado_em": "2026-10-21T15:30:51.789782",
+    "gerado_em": "2026-10-29T21:21:14.585990",
     "quantidade_total": 662,
     "valor_total": 96119.66,
     "valor_total_descontado": 0.0,
@@ -1725,7 +1725,7 @@
   },
   "2026-09": {
     "competencia": "2026-09",
-    "gerado_em": "2026-10-21T15:39:18.710263",
+    "gerado_em": "2026-10-29T21:29:40.998089",
     "quantidade_total": 705,
     "valor_total": 92420.65,
     "valor_total_descontado": 0.0,

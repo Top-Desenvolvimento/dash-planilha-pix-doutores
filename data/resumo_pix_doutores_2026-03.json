@@ -1,10 +1,10 @@
 {
   "competencia": "2026-03",
-  "gerado_em": "2026-10-21T14:48:12.382912",
+  "gerado_em": "2026-10-29T20:38:44.686438",
   "quantidade_total": 586,
   "valor_total": 80692.51,
-  "valor_total_descontado": 327.0,
-  "valor_total_pendente": 80365.51,
+  "valor_total_descontado": 76.0,
+  "valor_total_pendente": 80616.51,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -196,7 +196,7 @@
     {
       "doutor": "Nelson Vaccari",
       "quantidade": 2,
-      "valor_descontado": 327.0
+      "valor_descontado": 76.0
     },
     {
       "doutor": "PEDI.Giovana Gasparini",
