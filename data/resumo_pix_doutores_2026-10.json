@@ -1,10 +1,10 @@
 {
   "competencia": "2026-10",
-  "gerado_em": "2026-10-29T09:45:58.920429",
-  "quantidade_total": 695,
-  "valor_total": 102617.01,
+  "gerado_em": "2026-10-29T16:34:13.297535",
+  "quantidade_total": 700,
+  "valor_total": 103140.01,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 102617.01,
+  "valor_total_pendente": 103140.01,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,8 +13,8 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 151,
-      "valor": 21678.49
+      "quantidade": 154,
+      "valor": 22011.49
     },
     {
       "unidade": "Encantado",
@@ -28,13 +28,13 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 132,
-      "valor": 17026.0
+      "quantidade": 133,
+      "valor": 17131.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 152,
-      "valor": 17565.0
+      "quantidade": 153,
+      "valor": 17650.0
     },
     {
       "unidade": "Veranopolis",
@@ -70,7 +70,7 @@
     },
     {
       "doutor": "Ana Cristina Corso",
-      "quantidade": 52,
+      "quantidade": 55,
       "valor_descontado": 0.0
     },
     {
@@ -90,17 +90,17 @@
     },
     {
       "doutor": "Fernanda Sozo",
-      "quantidade": 19,
+      "quantidade": 21,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 75,
+      "quantidade": 74,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Gabrielle Marchezann",
-      "quantidade": 16,
+      "quantidade": 17,
       "valor_descontado": 0.0
     },
     {
