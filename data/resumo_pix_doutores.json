@@ -1947,11 +1947,11 @@
   },
   "2026-10": {
     "competencia": "2026-10",
-    "gerado_em": "2026-10-29T19:12:08.565022",
-    "quantidade_total": 713,
-    "valor_total": 104368.01,
-    "valor_total_descontado": 0.0,
-    "valor_total_pendente": 104368.01,
+    "gerado_em": "2026-10-30T01:22:37.202177",
+    "quantidade_total": 721,
+    "valor_total": 105339.01,
+    "valor_total_descontado": 235.0,
+    "valor_total_pendente": 105104.01,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1970,18 +1970,18 @@
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 58,
-        "valor": 10742.0
+        "quantidade": 59,
+        "valor": 10844.0
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 133,
-        "valor": 17131.0
+        "quantidade": 134,
+        "valor": 17251.0
       },
       {
         "unidade": "Soledade",
-        "quantidade": 156,
-        "valor": 17955.0
+        "quantidade": 162,
+        "valor": 18704.0
       },
       {
         "unidade": "Veranopolis",
@@ -2042,7 +2042,7 @@
       },
       {
         "doutor": "Fernanda Sozo",
-        "quantidade": 21,
+        "quantidade": 22,
         "valor_descontado": 0.0
       },
       {
@@ -2051,13 +2051,8 @@
         "valor_descontado": 0.0
       },
       {
-        "doutor": "Gabrielle Marchezan",
-        "quantidade": 1,
-        "valor_descontado": 0.0
-      },
-      {
         "doutor": "Gabrielle Marchezann",
-        "quantidade": 19,
+        "quantidade": 21,
         "valor_descontado": 0.0
       },
       {
@@ -2074,6 +2069,21 @@
         "doutor": "Indiamara Rech",
         "quantidade": 23,
         "valor_descontado": 0.0
+      },
+      {
+        "doutor": "Itacir Borges Silva",
+        "quantidade": 1,
+        "valor_descontado": 0.0
+      },
+      {
+        "doutor": "Jessica Bertozzo",
+        "quantidade": 3,
+        "valor_descontado": 0.0
+      },
+      {
+        "doutor": "João Augusto Keler",
+        "quantidade": 1,
+        "valor_descontado": 235.0
       },
       {
         "doutor": "Karen Ramona Kuwer",
@@ -2132,7 +2142,7 @@
       },
       {
         "doutor": "Notuen Boniati",
-        "quantidade": 5,
+        "quantidade": 6,
         "valor_descontado": 0.0
       },
       {
