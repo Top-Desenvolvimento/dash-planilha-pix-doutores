@@ -1,10 +1,10 @@
 {
   "competencia": "2026-10",
-  "gerado_em": "2026-10-30T14:31:02.880594",
-  "quantidade_total": 725,
-  "valor_total": 105716.01,
+  "gerado_em": "2026-10-30T19:43:19.789182",
+  "quantidade_total": 735,
+  "valor_total": 106884.01,
   "valor_total_descontado": 235.0,
-  "valor_total_pendente": 105481.01,
+  "valor_total_pendente": 106649.01,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,8 +13,8 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 159,
-      "valor": 22464.49
+      "quantidade": 162,
+      "valor": 22719.49
     },
     {
       "unidade": "Encantado",
@@ -24,17 +24,17 @@
     {
       "unidade": "Farroupilha",
       "quantidade": 59,
-      "valor": 10844.0
+      "valor": 10849.0
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 134,
-      "valor": 17251.0
+      "quantidade": 136,
+      "valor": 17581.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 166,
-      "valor": 19081.0
+      "quantidade": 171,
+      "valor": 19659.0
     },
     {
       "unidade": "Veranopolis",
@@ -80,12 +80,7 @@
     },
     {
       "doutor": "Dionathan Pohlmann",
-      "quantidade": 19,
-      "valor_descontado": 0.0
-    },
-    {
-      "doutor": "Dra.Notuen Eduarda Boniati dos Santos",
-      "quantidade": 2,
+      "quantidade": 21,
       "valor_descontado": 0.0
     },
     {
@@ -95,17 +90,17 @@
     },
     {
       "doutor": "Fernanda Sozo",
-      "quantidade": 22,
+      "quantidade": 24,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 74,
+      "quantidade": 75,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Gabrielle Marchezann",
-      "quantidade": 26,
+      "quantidade": 28,
       "valor_descontado": 0.0
     },
     {
@@ -130,7 +125,7 @@
     },
     {
       "doutor": "Jessica Bertozzo",
-      "quantidade": 2,
+      "quantidade": 4,
       "valor_descontado": 0.0
     },
     {
@@ -190,12 +185,12 @@
     },
     {
       "doutor": "Norberto Filipe",
-      "quantidade": 3,
+      "quantidade": 4,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Notuen Boniati",
-      "quantidade": 8,
+      "quantidade": 11,
       "valor_descontado": 0.0
     },
     {
@@ -230,7 +225,7 @@
     },
     {
       "doutor": "TOP",
-      "quantidade": 27,
+      "quantidade": 26,
       "valor_descontado": 0.0
     },
     {
