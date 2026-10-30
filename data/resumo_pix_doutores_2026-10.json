@@ -1,10 +1,10 @@
 {
   "competencia": "2026-10",
-  "gerado_em": "2026-10-30T19:43:19.789182",
-  "quantidade_total": 735,
-  "valor_total": 106884.01,
-  "valor_total_descontado": 235.0,
-  "valor_total_pendente": 106649.01,
+  "gerado_em": "2026-10-30T23:22:01.282665",
+  "quantidade_total": 742,
+  "valor_total": 107696.01,
+  "valor_total_descontado": 60.0,
+  "valor_total_pendente": 107636.01,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,8 +13,8 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 162,
-      "valor": 22719.49
+      "quantidade": 166,
+      "valor": 23208.49
     },
     {
       "unidade": "Encantado",
@@ -33,8 +33,8 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 171,
-      "valor": 19659.0
+      "quantidade": 174,
+      "valor": 19982.0
     },
     {
       "unidade": "Veranopolis",
@@ -80,7 +80,7 @@
     },
     {
       "doutor": "Dionathan Pohlmann",
-      "quantidade": 21,
+      "quantidade": 25,
       "valor_descontado": 0.0
     },
     {
@@ -131,7 +131,7 @@
     {
       "doutor": "João Augusto Keler",
       "quantidade": 1,
-      "valor_descontado": 235.0
+      "valor_descontado": 60.0
     },
     {
       "doutor": "Karen Ramona Kuwer",
@@ -145,7 +145,7 @@
     },
     {
       "doutor": "Leticia Canabarro",
-      "quantidade": 36,
+      "quantidade": 37,
       "valor_descontado": 0.0
     },
     {
@@ -170,7 +170,7 @@
     },
     {
       "doutor": "Murilo Debortoli",
-      "quantidade": 18,
+      "quantidade": 19,
       "valor_descontado": 0.0
     },
     {
@@ -185,7 +185,7 @@
     },
     {
       "doutor": "Norberto Filipe",
-      "quantidade": 4,
+      "quantidade": 5,
       "valor_descontado": 0.0
     },
     {
