@@ -1,10 +1,10 @@
 {
   "competencia": "2026-10",
-  "gerado_em": "2026-10-30T23:22:01.282665",
+  "gerado_em": "2026-10-31T02:38:20.593403",
   "quantidade_total": 742,
   "valor_total": 107696.01,
-  "valor_total_descontado": 60.0,
-  "valor_total_pendente": 107636.01,
+  "valor_total_descontado": 0.0,
+  "valor_total_pendente": 107696.01,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -131,7 +131,7 @@
     {
       "doutor": "João Augusto Keler",
       "quantidade": 1,
-      "valor_descontado": 60.0
+      "valor_descontado": 0.0
     },
     {
       "doutor": "Karen Ramona Kuwer",
