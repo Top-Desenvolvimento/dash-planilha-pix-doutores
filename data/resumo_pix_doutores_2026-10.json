@@ -1,10 +1,10 @@
 {
   "competencia": "2026-10",
-  "gerado_em": "2026-10-31T08:58:13.152330",
-  "quantidade_total": 742,
-  "valor_total": 107696.01,
+  "gerado_em": "2026-10-31T12:15:39.231536",
+  "quantidade_total": 752,
+  "valor_total": 108905.56,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 107696.01,
+  "valor_total_pendente": 108905.56,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,8 +13,8 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 166,
-      "valor": 23208.49
+      "quantidade": 171,
+      "valor": 23872.49
     },
     {
       "unidade": "Encantado",
@@ -28,13 +28,13 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 136,
-      "valor": 17581.0
+      "quantidade": 139,
+      "valor": 17911.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 174,
-      "valor": 19982.0
+      "quantidade": 176,
+      "valor": 20197.55
     },
     {
       "unidade": "Veranopolis",
@@ -80,7 +80,7 @@
     },
     {
       "doutor": "Dionathan Pohlmann",
-      "quantidade": 25,
+      "quantidade": 27,
       "valor_descontado": 0.0
     },
     {
@@ -90,7 +90,7 @@
     },
     {
       "doutor": "Fernanda Sozo",
-      "quantidade": 24,
+      "quantidade": 27,
       "valor_descontado": 0.0
     },
     {
@@ -130,7 +130,7 @@
     },
     {
       "doutor": "João Augusto Keler",
-      "quantidade": 1,
+      "quantidade": 2,
       "valor_descontado": 0.0
     },
     {
@@ -170,7 +170,7 @@
     },
     {
       "doutor": "Murilo Debortoli",
-      "quantidade": 19,
+      "quantidade": 20,
       "valor_descontado": 0.0
     },
     {
@@ -210,7 +210,7 @@
     },
     {
       "doutor": "Thalia Tessaro",
-      "quantidade": 18,
+      "quantidade": 21,
       "valor_descontado": 0.0
     },
     {
