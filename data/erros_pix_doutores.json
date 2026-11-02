@@ -123,12 +123,12 @@
     "unidade": "Garibaldi",
     "competencia": "2026-11",
     "erro": "Menu Finanças não encontrado.",
-    "coletado_em": "2026-11-02T02:32:20.585698"
+    "coletado_em": "2026-11-02T09:58:24.500720"
   },
   {
     "unidade": "Ssdocai",
     "competencia": "2026-11",
     "erro": "Page.goto: net::ERR_CONNECTION_REFUSED at http://ssdocai.topesteticabucal.com.br/sistema\nCall log:\n  - navigating to \"http://ssdocai.topesteticabucal.com.br/sistema\", waiting until \"domcontentloaded\"\n",
-    "coletado_em": "2026-11-02T02:33:18.108113"
+    "coletado_em": "2026-11-02T09:59:22.739489"
   }
 ]
