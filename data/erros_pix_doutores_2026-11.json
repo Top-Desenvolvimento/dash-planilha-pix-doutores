@@ -1,14 +1,20 @@
 [
   {
+    "unidade": "Caxias",
+    "competencia": "2026-11",
+    "erro": "Menu Finanças não encontrado.",
+    "coletado_em": "2026-11-02T20:00:41.264986"
+  },
+  {
     "unidade": "Garibaldi",
     "competencia": "2026-11",
     "erro": "Menu Finanças não encontrado.",
-    "coletado_em": "2026-11-02T09:58:24.500720"
+    "coletado_em": "2026-11-02T20:04:34.584657"
   },
   {
     "unidade": "Ssdocai",
     "competencia": "2026-11",
     "erro": "Page.goto: net::ERR_CONNECTION_REFUSED at http://ssdocai.topesteticabucal.com.br/sistema\nCall log:\n  - navigating to \"http://ssdocai.topesteticabucal.com.br/sistema\", waiting until \"domcontentloaded\"\n",
-    "coletado_em": "2026-11-02T09:59:22.739489"
+    "coletado_em": "2026-11-02T20:05:33.112279"
   }
 ]
