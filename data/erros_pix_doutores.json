@@ -1,126 +1,6 @@
 [
   {
     "unidade": "Garibaldi",
-    "competencia": "2026-01",
-    "erro": "Menu Finanças não encontrado.",
-    "coletado_em": "2026-10-29T20:18:24.071018"
-  },
-  {
-    "unidade": "Ssdocai",
-    "competencia": "2026-01",
-    "erro": "Timeout ao acessar sistema",
-    "coletado_em": "2026-10-29T20:20:11.288280"
-  },
-  {
-    "unidade": "Garibaldi",
-    "competencia": "2026-02",
-    "erro": "Menu Finanças não encontrado.",
-    "coletado_em": "2026-10-29T20:27:05.752565"
-  },
-  {
-    "unidade": "Ssdocai",
-    "competencia": "2026-02",
-    "erro": "Timeout ao acessar sistema",
-    "coletado_em": "2026-10-29T20:28:52.453641"
-  },
-  {
-    "unidade": "Garibaldi",
-    "competencia": "2026-03",
-    "erro": "Menu Finanças não encontrado.",
-    "coletado_em": "2026-10-29T20:35:51.357134"
-  },
-  {
-    "unidade": "Ssdocai",
-    "competencia": "2026-03",
-    "erro": "Timeout ao acessar sistema",
-    "coletado_em": "2026-10-29T20:37:38.856517"
-  },
-  {
-    "unidade": "Garibaldi",
-    "competencia": "2026-04",
-    "erro": "Menu Finanças não encontrado.",
-    "coletado_em": "2026-10-29T20:44:25.492828"
-  },
-  {
-    "unidade": "Ssdocai",
-    "competencia": "2026-04",
-    "erro": "Timeout ao acessar sistema",
-    "coletado_em": "2026-10-29T20:46:10.998982"
-  },
-  {
-    "unidade": "Garibaldi",
-    "competencia": "2026-05",
-    "erro": "Menu Finanças não encontrado.",
-    "coletado_em": "2026-10-29T20:52:55.928778"
-  },
-  {
-    "unidade": "Ssdocai",
-    "competencia": "2026-05",
-    "erro": "Timeout ao acessar sistema",
-    "coletado_em": "2026-10-29T20:54:42.151592"
-  },
-  {
-    "unidade": "Garibaldi",
-    "competencia": "2026-06",
-    "erro": "Menu Finanças não encontrado.",
-    "coletado_em": "2026-10-29T21:01:22.706437"
-  },
-  {
-    "unidade": "Ssdocai",
-    "competencia": "2026-06",
-    "erro": "Timeout ao acessar sistema",
-    "coletado_em": "2026-10-29T21:03:08.230897"
-  },
-  {
-    "unidade": "Garibaldi",
-    "competencia": "2026-07",
-    "erro": "Menu Finanças não encontrado.",
-    "coletado_em": "2026-10-29T21:09:57.281522"
-  },
-  {
-    "unidade": "Ssdocai",
-    "competencia": "2026-07",
-    "erro": "Timeout ao acessar sistema",
-    "coletado_em": "2026-10-29T21:11:43.673624"
-  },
-  {
-    "unidade": "Garibaldi",
-    "competencia": "2026-08",
-    "erro": "Menu Finanças não encontrado.",
-    "coletado_em": "2026-10-29T21:18:24.980988"
-  },
-  {
-    "unidade": "Ssdocai",
-    "competencia": "2026-08",
-    "erro": "Timeout ao acessar sistema",
-    "coletado_em": "2026-10-29T21:20:10.837264"
-  },
-  {
-    "unidade": "Garibaldi",
-    "competencia": "2026-09",
-    "erro": "Menu Finanças não encontrado.",
-    "coletado_em": "2026-10-29T21:26:50.507556"
-  },
-  {
-    "unidade": "Ssdocai",
-    "competencia": "2026-09",
-    "erro": "Timeout ao acessar sistema",
-    "coletado_em": "2026-10-29T21:28:37.015491"
-  },
-  {
-    "unidade": "Garibaldi",
-    "competencia": "2026-10",
-    "erro": "Menu Finanças não encontrado.",
-    "coletado_em": "2026-10-31T22:37:04.115368"
-  },
-  {
-    "unidade": "Ssdocai",
-    "competencia": "2026-10",
-    "erro": "Timeout ao acessar sistema",
-    "coletado_em": "2026-10-31T22:38:53.006541"
-  },
-  {
-    "unidade": "Garibaldi",
     "competencia": "2026-11",
     "erro": "Menu Finanças não encontrado.",
     "coletado_em": "2026-11-04T18:02:44.160275"
@@ -130,5 +10,125 @@
     "competencia": "2026-11",
     "erro": "Timeout ao acessar sistema",
     "coletado_em": "2026-11-04T18:04:28.138509"
+  },
+  {
+    "unidade": "Garibaldi",
+    "competencia": "2026-01",
+    "erro": "Menu Finanças não encontrado.",
+    "coletado_em": "2026-11-04T20:53:32.400880"
+  },
+  {
+    "unidade": "Ssdocai",
+    "competencia": "2026-01",
+    "erro": "Timeout ao acessar sistema",
+    "coletado_em": "2026-11-04T20:55:22.796066"
+  },
+  {
+    "unidade": "Garibaldi",
+    "competencia": "2026-02",
+    "erro": "Menu Finanças não encontrado.",
+    "coletado_em": "2026-11-04T21:03:07.645804"
+  },
+  {
+    "unidade": "Ssdocai",
+    "competencia": "2026-02",
+    "erro": "Timeout ao acessar sistema",
+    "coletado_em": "2026-11-04T21:04:56.948350"
+  },
+  {
+    "unidade": "Garibaldi",
+    "competencia": "2026-03",
+    "erro": "Menu Finanças não encontrado.",
+    "coletado_em": "2026-11-04T21:12:45.018211"
+  },
+  {
+    "unidade": "Ssdocai",
+    "competencia": "2026-03",
+    "erro": "Timeout ao acessar sistema",
+    "coletado_em": "2026-11-04T21:14:35.180681"
+  },
+  {
+    "unidade": "Garibaldi",
+    "competencia": "2026-04",
+    "erro": "Menu Finanças não encontrado.",
+    "coletado_em": "2026-11-04T21:22:10.946848"
+  },
+  {
+    "unidade": "Ssdocai",
+    "competencia": "2026-04",
+    "erro": "Timeout ao acessar sistema",
+    "coletado_em": "2026-11-04T21:23:58.583519"
+  },
+  {
+    "unidade": "Garibaldi",
+    "competencia": "2026-05",
+    "erro": "Menu Finanças não encontrado.",
+    "coletado_em": "2026-11-04T21:31:29.559871"
+  },
+  {
+    "unidade": "Ssdocai",
+    "competencia": "2026-05",
+    "erro": "Timeout ao acessar sistema",
+    "coletado_em": "2026-11-04T21:33:17.677280"
+  },
+  {
+    "unidade": "Garibaldi",
+    "competencia": "2026-06",
+    "erro": "Menu Finanças não encontrado.",
+    "coletado_em": "2026-11-04T21:40:38.186109"
+  },
+  {
+    "unidade": "Ssdocai",
+    "competencia": "2026-06",
+    "erro": "Timeout ao acessar sistema",
+    "coletado_em": "2026-11-04T21:42:25.887902"
+  },
+  {
+    "unidade": "Garibaldi",
+    "competencia": "2026-07",
+    "erro": "Menu Finanças não encontrado.",
+    "coletado_em": "2026-11-04T21:49:52.349165"
+  },
+  {
+    "unidade": "Ssdocai",
+    "competencia": "2026-07",
+    "erro": "Timeout ao acessar sistema",
+    "coletado_em": "2026-11-04T21:51:40.954199"
+  },
+  {
+    "unidade": "Garibaldi",
+    "competencia": "2026-08",
+    "erro": "Menu Finanças não encontrado.",
+    "coletado_em": "2026-11-04T21:59:04.793981"
+  },
+  {
+    "unidade": "Ssdocai",
+    "competencia": "2026-08",
+    "erro": "Timeout ao acessar sistema",
+    "coletado_em": "2026-11-04T22:00:53.164333"
+  },
+  {
+    "unidade": "Garibaldi",
+    "competencia": "2026-09",
+    "erro": "Menu Finanças não encontrado.",
+    "coletado_em": "2026-11-04T22:08:10.801852"
+  },
+  {
+    "unidade": "Ssdocai",
+    "competencia": "2026-09",
+    "erro": "Timeout ao acessar sistema",
+    "coletado_em": "2026-11-04T22:09:59.588232"
+  },
+  {
+    "unidade": "Garibaldi",
+    "competencia": "2026-10",
+    "erro": "Menu Finanças não encontrado.",
+    "coletado_em": "2026-11-04T22:17:10.015131"
+  },
+  {
+    "unidade": "Ssdocai",
+    "competencia": "2026-10",
+    "erro": "Timeout ao acessar sistema",
+    "coletado_em": "2026-11-04T22:18:57.321807"
   }
 ]

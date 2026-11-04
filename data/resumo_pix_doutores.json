@@ -9,7 +9,7 @@
   "por_doutor": [],
   "2026-04": {
     "competencia": "2026-04",
-    "gerado_em": "2026-10-29T20:47:14.885738",
+    "gerado_em": "2026-11-04T21:25:07.883079",
     "quantidade_total": 622,
     "valor_total": 83899.09,
     "valor_total_descontado": 0.0,
@@ -221,7 +221,7 @@
   },
   "2026-05": {
     "competencia": "2026-05",
-    "gerado_em": "2026-10-29T20:55:46.018522",
+    "gerado_em": "2026-11-04T21:34:25.557361",
     "quantidade_total": 639,
     "valor_total": 94043.49,
     "valor_total_descontado": 0.0,
@@ -438,7 +438,7 @@
   },
   "2026-01": {
     "competencia": "2026-01",
-    "gerado_em": "2026-10-29T20:21:17.713425",
+    "gerado_em": "2026-11-04T20:56:36.089815",
     "quantidade_total": 631,
     "valor_total": 80218.48,
     "valor_total_descontado": 0.0,
@@ -645,7 +645,7 @@
   },
   "2026-02": {
     "competencia": "2026-02",
-    "gerado_em": "2026-10-29T20:29:58.020779",
+    "gerado_em": "2026-11-04T21:06:09.177382",
     "quantidade_total": 592,
     "valor_total": 79847.59,
     "valor_total_descontado": 0.0,
@@ -832,11 +832,11 @@
   },
   "2026-03": {
     "competencia": "2026-03",
-    "gerado_em": "2026-10-29T20:38:44.686438",
+    "gerado_em": "2026-11-04T21:15:48.037379",
     "quantidade_total": 586,
     "valor_total": 80692.51,
-    "valor_total_descontado": 76.0,
-    "valor_total_pendente": 80616.51,
+    "valor_total_descontado": 0.0,
+    "valor_total_pendente": 80692.51,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -1028,7 +1028,7 @@
       {
         "doutor": "Nelson Vaccari",
         "quantidade": 2,
-        "valor_descontado": 76.0
+        "valor_descontado": 0.0
       },
       {
         "doutor": "PEDI.Giovana Gasparini",
@@ -1044,7 +1044,7 @@
   },
   "2026-06": {
     "competencia": "2026-06",
-    "gerado_em": "2026-10-29T21:04:12.889173",
+    "gerado_em": "2026-11-04T21:43:35.083349",
     "quantidade_total": 559,
     "valor_total": 73830.55,
     "valor_total_descontado": 0.0,
@@ -1261,7 +1261,7 @@
   },
   "2026-07": {
     "competencia": "2026-07",
-    "gerado_em": "2026-10-29T21:12:48.461502",
+    "gerado_em": "2026-11-04T21:52:52.085645",
     "quantidade_total": 593,
     "valor_total": 84357.72,
     "valor_total_descontado": 0.0,
@@ -1493,7 +1493,7 @@
   },
   "2026-08": {
     "competencia": "2026-08",
-    "gerado_em": "2026-10-29T21:21:14.585990",
+    "gerado_em": "2026-11-04T22:02:02.364939",
     "quantidade_total": 662,
     "valor_total": 96119.66,
     "valor_total_descontado": 0.0,
@@ -1725,7 +1725,7 @@
   },
   "2026-09": {
     "competencia": "2026-09",
-    "gerado_em": "2026-10-29T21:29:40.998089",
+    "gerado_em": "2026-11-04T22:11:08.819971",
     "quantidade_total": 705,
     "valor_total": 92420.65,
     "valor_total_descontado": 0.0,
@@ -1947,16 +1947,16 @@
   },
   "2026-10": {
     "competencia": "2026-10",
-    "gerado_em": "2026-10-31T22:40:03.585097",
-    "quantidade_total": 762,
-    "valor_total": 110011.56,
+    "gerado_em": "2026-11-04T22:20:06.164836",
+    "quantidade_total": 744,
+    "valor_total": 101542.56,
     "valor_total_descontado": 0.0,
-    "valor_total_pendente": 110011.56,
+    "valor_total_pendente": 101542.56,
     "por_unidade": [
       {
         "unidade": "Bento",
-        "quantidade": 54,
-        "valor": 6760.0
+        "quantidade": 55,
+        "valor": 6859.0
       },
       {
         "unidade": "Caxias",
@@ -1965,8 +1965,8 @@
       },
       {
         "unidade": "Encantado",
-        "quantidade": 94,
-        "valor": 17994.0
+        "quantidade": 72,
+        "valor": 9116.0
       },
       {
         "unidade": "Farroupilha",
@@ -1980,8 +1980,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 184,
-        "valor": 21051.55
+        "quantidade": 187,
+        "valor": 21361.55
       },
       {
         "unidade": "Veranopolis",
@@ -1990,11 +1990,6 @@
       }
     ],
     "por_doutor": [
-      {
-        "doutor": ".Gabrielle Marchezan",
-        "quantidade": 1,
-        "valor_descontado": 0.0
-      },
       {
         "doutor": ".Greici Matiello",
         "quantidade": 18,
@@ -2007,7 +2002,7 @@
       },
       {
         "doutor": "Alexandre Favero",
-        "quantidade": 12,
+        "quantidade": 11,
         "valor_descontado": 0.0
       },
       {
@@ -2047,7 +2042,7 @@
       },
       {
         "doutor": "Gabrielle Marchezann",
-        "quantidade": 28,
+        "quantidade": 29,
         "valor_descontado": 0.0
       },
       {
@@ -2082,7 +2077,7 @@
       },
       {
         "doutor": "João Augusto Keler",
-        "quantidade": 10,
+        "quantidade": 12,
         "valor_descontado": 0.0
       },
       {
@@ -2097,7 +2092,7 @@
       },
       {
         "doutor": "Leticia Canabarro",
-        "quantidade": 37,
+        "quantidade": 38,
         "valor_descontado": 0.0
       },
       {
@@ -2142,7 +2137,7 @@
       },
       {
         "doutor": "Notuen Boniati",
-        "quantidade": 11,
+        "quantidade": 13,
         "valor_descontado": 0.0
       },
       {
@@ -2177,7 +2172,7 @@
       },
       {
         "doutor": "TOP",
-        "quantidade": 26,
+        "quantidade": 4,
         "valor_descontado": 0.0
       },
       {

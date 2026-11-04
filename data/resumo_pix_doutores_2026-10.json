@@ -1,15 +1,15 @@
 {
   "competencia": "2026-10",
-  "gerado_em": "2026-10-31T22:40:03.585097",
-  "quantidade_total": 762,
-  "valor_total": 110011.56,
+  "gerado_em": "2026-11-04T22:20:06.164836",
+  "quantidade_total": 744,
+  "valor_total": 101542.56,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 110011.56,
+  "valor_total_pendente": 101542.56,
   "por_unidade": [
     {
       "unidade": "Bento",
-      "quantidade": 54,
-      "valor": 6760.0
+      "quantidade": 55,
+      "valor": 6859.0
     },
     {
       "unidade": "Caxias",
@@ -18,8 +18,8 @@
     },
     {
       "unidade": "Encantado",
-      "quantidade": 94,
-      "valor": 17994.0
+      "quantidade": 72,
+      "valor": 9116.0
     },
     {
       "unidade": "Farroupilha",
@@ -33,8 +33,8 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 184,
-      "valor": 21051.55
+      "quantidade": 187,
+      "valor": 21361.55
     },
     {
       "unidade": "Veranopolis",
@@ -43,11 +43,6 @@
     }
   ],
   "por_doutor": [
-    {
-      "doutor": ".Gabrielle Marchezan",
-      "quantidade": 1,
-      "valor_descontado": 0.0
-    },
     {
       "doutor": ".Greici Matiello",
       "quantidade": 18,
@@ -60,7 +55,7 @@
     },
     {
       "doutor": "Alexandre Favero",
-      "quantidade": 12,
+      "quantidade": 11,
       "valor_descontado": 0.0
     },
     {
@@ -100,7 +95,7 @@
     },
     {
       "doutor": "Gabrielle Marchezann",
-      "quantidade": 28,
+      "quantidade": 29,
       "valor_descontado": 0.0
     },
     {
@@ -135,7 +130,7 @@
     },
     {
       "doutor": "João Augusto Keler",
-      "quantidade": 10,
+      "quantidade": 12,
       "valor_descontado": 0.0
     },
     {
@@ -150,7 +145,7 @@
     },
     {
       "doutor": "Leticia Canabarro",
-      "quantidade": 37,
+      "quantidade": 38,
       "valor_descontado": 0.0
     },
     {
@@ -195,7 +190,7 @@
     },
     {
       "doutor": "Notuen Boniati",
-      "quantidade": 11,
+      "quantidade": 13,
       "valor_descontado": 0.0
     },
     {
@@ -230,7 +225,7 @@
     },
     {
       "doutor": "TOP",
-      "quantidade": 26,
+      "quantidade": 4,
       "valor_descontado": 0.0
     },
     {
