@@ -3800,8 +3800,8 @@
       "doutor_id": "14",
       "doutor": "Everlize Cipriani",
       "credito_inicial": 2000.0,
-      "utilizado": 1094.0,
-      "credito_disponivel": 906.0,
+      "utilizado": 1532.0,
+      "credito_disponivel": 468.0,
       "pix_key": ""
     },
     {
@@ -3816,8 +3816,8 @@
       "doutor_id": "16",
       "doutor": "Franciele Pedrotti",
       "credito_inicial": 10000.0,
-      "utilizado": 420.0,
-      "credito_disponivel": 9580.0,
+      "utilizado": 525.0,
+      "credito_disponivel": 9475.0,
       "pix_key": ""
     },
     {
@@ -4040,8 +4040,8 @@
       "doutor_id": "42",
       "doutor": "Tamara Macanan",
       "credito_inicial": 5000.0,
-      "utilizado": 1074.0,
-      "credito_disponivel": 3926.0,
+      "utilizado": 1531.0,
+      "credito_disponivel": 3469.0,
       "pix_key": ""
     },
     {
