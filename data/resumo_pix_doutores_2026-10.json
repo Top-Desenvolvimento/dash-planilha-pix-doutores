@@ -1,15 +1,15 @@
 {
   "competencia": "2026-10",
-  "gerado_em": "2026-11-05T13:44:39.507353",
-  "quantidade_total": 744,
-  "valor_total": 101542.56,
+  "gerado_em": "2026-11-05T21:13:15.540570",
+  "quantidade_total": 738,
+  "valor_total": 100952.56,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 101542.56,
+  "valor_total_pendente": 100952.56,
   "por_unidade": [
     {
       "unidade": "Bento",
-      "quantidade": 55,
-      "valor": 6859.0
+      "quantidade": 53,
+      "valor": 6604.0
     },
     {
       "unidade": "Caxias",
@@ -18,8 +18,8 @@
     },
     {
       "unidade": "Encantado",
-      "quantidade": 72,
-      "valor": 9116.0
+      "quantidade": 68,
+      "valor": 8781.0
     },
     {
       "unidade": "Farroupilha",
@@ -155,7 +155,7 @@
     },
     {
       "doutor": "Luiz Henrique",
-      "quantidade": 29,
+      "quantidade": 27,
       "valor_descontado": 0.0
     },
     {
@@ -221,11 +221,6 @@
     {
       "doutor": "Thiany Cristofoli",
       "quantidade": 31,
-      "valor_descontado": 0.0
-    },
-    {
-      "doutor": "TOP",
-      "quantidade": 4,
       "valor_descontado": 0.0
     },
     {
