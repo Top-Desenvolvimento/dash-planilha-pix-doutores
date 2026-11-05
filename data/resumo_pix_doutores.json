@@ -2194,11 +2194,11 @@
   },
   "2026-11": {
     "competencia": "2026-11",
-    "gerado_em": "2026-11-04T23:06:55.814627",
+    "gerado_em": "2026-11-05T03:34:19.583115",
     "quantidade_total": 37,
     "valor_total": 4692.55,
-    "valor_total_descontado": 1210.0,
-    "valor_total_pendente": 3482.55,
+    "valor_total_descontado": 802.0,
+    "valor_total_pendente": 3890.55,
     "por_unidade": [
       {
         "unidade": "Caxias",
@@ -2230,7 +2230,7 @@
       {
         "doutor": "Everlize Cipriani",
         "quantidade": 3,
-        "valor_descontado": 438.0
+        "valor_descontado": 30.0
       },
       {
         "doutor": "Franciele Pedrotti",
