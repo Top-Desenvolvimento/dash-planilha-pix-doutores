@@ -3816,8 +3816,8 @@
       "doutor_id": "16",
       "doutor": "Franciele Pedrotti",
       "credito_inicial": 10000.0,
-      "utilizado": 4368.0,
-      "credito_disponivel": 5632.0,
+      "utilizado": 5663.0,
+      "credito_disponivel": 4337.0,
       "pix_key": ""
     },
     {
@@ -3944,8 +3944,8 @@
       "doutor_id": "30",
       "doutor": "Luiz Henrique",
       "credito_inicial": 2500.0,
-      "utilizado": 1734.0,
-      "credito_disponivel": 766.0,
+      "utilizado": 2392.0,
+      "credito_disponivel": 108.0,
       "pix_key": ""
     },
     {
@@ -4064,8 +4064,8 @@
       "doutor_id": "44",
       "doutor": "Thiany Cristofoli",
       "credito_inicial": 4000.0,
-      "utilizado": 0.0,
-      "credito_disponivel": 4000.0,
+      "utilizado": 225.0,
+      "credito_disponivel": 3775.0,
       "pix_key": ""
     }
   ]
