@@ -1,20 +1,20 @@
 {
   "competencia": "2026-11",
-  "gerado_em": "2026-11-06T06:38:18.409258",
-  "quantidade_total": 73,
-  "valor_total": 9402.22,
-  "valor_total_descontado": 1524.0,
-  "valor_total_pendente": 7878.22,
+  "gerado_em": "2026-11-06T14:41:58.282086",
+  "quantidade_total": 75,
+  "valor_total": 9642.22,
+  "valor_total_descontado": 1630.0,
+  "valor_total_pendente": 8012.22,
   "por_unidade": [
     {
       "unidade": "Bento",
-      "quantidade": 5,
-      "valor": 538.0
+      "quantidade": 6,
+      "valor": 658.0
     },
     {
       "unidade": "Caxias",
-      "quantidade": 7,
-      "valor": 852.0
+      "quantidade": 8,
+      "valor": 972.0
     },
     {
       "unidade": "Farroupilha",
@@ -45,8 +45,8 @@
     },
     {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 7,
-      "valor_descontado": 852.0
+      "quantidade": 8,
+      "valor_descontado": 972.0
     },
     {
       "doutor": "Gabrielle Marchezann",
@@ -65,13 +65,13 @@
     },
     {
       "doutor": "Luiz Henrique",
-      "quantidade": 5,
-      "valor_descontado": 538.0
+      "quantidade": 6,
+      "valor_descontado": 658.0
     },
     {
       "doutor": "Tamara Macanan",
       "quantidade": 4,
-      "valor_descontado": 134.0
+      "valor_descontado": 0.0
     },
     {
       "doutor": "TOP",

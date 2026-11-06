@@ -115,8 +115,8 @@
     "doutor_id": "16",
     "doutor": "Franciele Pedrotti",
     "credito_inicial": 10000.0,
-    "utilizado": 3396.0,
-    "credito_disponivel": 6604.0,
+    "utilizado": 4368.0,
+    "credito_disponivel": 5632.0,
     "pix_key": ""
   },
   {
@@ -243,8 +243,8 @@
     "doutor_id": "30",
     "doutor": "Luiz Henrique",
     "credito_inicial": 2500.0,
-    "utilizado": 1076.0,
-    "credito_disponivel": 1424.0,
+    "utilizado": 1734.0,
+    "credito_disponivel": 766.0,
     "pix_key": ""
   },
   {
