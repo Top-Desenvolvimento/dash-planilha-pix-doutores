@@ -1,10 +1,10 @@
 {
   "competencia": "2026-11",
-  "gerado_em": "2026-11-06T00:09:27.311468",
+  "gerado_em": "2026-11-06T06:38:18.409258",
   "quantidade_total": 73,
   "valor_total": 9402.22,
-  "valor_total_descontado": 2057.0,
-  "valor_total_pendente": 7345.22,
+  "valor_total_descontado": 1524.0,
+  "valor_total_pendente": 7878.22,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -71,7 +71,7 @@
     {
       "doutor": "Tamara Macanan",
       "quantidade": 4,
-      "valor_descontado": 667.0
+      "valor_descontado": 134.0
     },
     {
       "doutor": "TOP",
