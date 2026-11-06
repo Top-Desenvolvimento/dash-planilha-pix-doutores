@@ -1,11 +1,16 @@
 {
   "competencia": "2026-11",
-  "gerado_em": "2026-11-05T19:03:45.192122",
-  "quantidade_total": 53,
-  "valor_total": 6596.05,
-  "valor_total_descontado": 1519.0,
-  "valor_total_pendente": 5077.05,
+  "gerado_em": "2026-11-06T00:09:27.311468",
+  "quantidade_total": 73,
+  "valor_total": 9402.22,
+  "valor_total_descontado": 2057.0,
+  "valor_total_pendente": 7345.22,
   "por_unidade": [
+    {
+      "unidade": "Bento",
+      "quantidade": 5,
+      "valor": 538.0
+    },
     {
       "unidade": "Caxias",
       "quantidade": 7,
@@ -23,13 +28,13 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 28,
-      "valor": 3046.0
+      "quantidade": 34,
+      "valor": 3709.0
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 11,
-      "valor": 1593.05
+      "quantidade": 20,
+      "valor": 3198.22
     }
   ],
   "por_doutor": [
@@ -55,8 +60,13 @@
     },
     {
       "doutor": "Luisa Moraes Lucas",
-      "quantidade": 4,
+      "quantidade": 10,
       "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Luiz Henrique",
+      "quantidade": 5,
+      "valor_descontado": 538.0
     },
     {
       "doutor": "Tamara Macanan",
@@ -64,8 +74,13 @@
       "valor_descontado": 667.0
     },
     {
+      "doutor": "TOP",
+      "quantidade": 1,
+      "valor_descontado": 0.0
+    },
+    {
       "doutor": "Valter Baldissera",
-      "quantidade": 11,
+      "quantidade": 19,
       "valor_descontado": 0.0
     }
   ]
