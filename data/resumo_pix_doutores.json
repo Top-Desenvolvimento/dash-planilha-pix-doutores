@@ -2189,46 +2189,46 @@
   },
   "2026-11": {
     "competencia": "2026-11",
-    "gerado_em": "2026-11-07T06:26:18.793693",
-    "quantidade_total": 107,
-    "valor_total": 14921.47,
-    "valor_total_descontado": 2337.0,
-    "valor_total_pendente": 12584.47,
+    "gerado_em": "2026-11-07T13:29:27.931657",
+    "quantidade_total": 128,
+    "valor_total": 17741.47,
+    "valor_total_descontado": 1298.0,
+    "valor_total_pendente": 16443.47,
     "por_unidade": [
       {
         "unidade": "Bento",
-        "quantidade": 12,
-        "valor": 2070.0
+        "quantidade": 13,
+        "valor": 2190.0
       },
       {
         "unidade": "Caxias",
-        "quantidade": 16,
-        "valor": 1992.0
+        "quantidade": 19,
+        "valor": 2407.0
       },
       {
         "unidade": "Encantado",
-        "quantidade": 3,
-        "valor": 345.0
+        "quantidade": 9,
+        "valor": 945.0
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 5,
-        "valor": 657.0
+        "quantidade": 8,
+        "valor": 1151.0
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 13,
-        "valor": 1900.0
+        "quantidade": 14,
+        "valor": 2368.0
       },
       {
         "unidade": "Soledade",
-        "quantidade": 36,
-        "valor": 3998.0
+        "quantidade": 41,
+        "valor": 4490.0
       },
       {
         "unidade": "Veranopolis",
-        "quantidade": 22,
-        "valor": 3959.47
+        "quantidade": 24,
+        "valor": 4190.47
       }
     ],
     "por_doutor": [
@@ -2239,13 +2239,13 @@
       },
       {
         "doutor": "Everlize Cipriani",
-        "quantidade": 5,
+        "quantidade": 8,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Franciele Pedrotti",
-        "quantidade": 16,
-        "valor_descontado": 1992.0
+        "quantidade": 19,
+        "valor_descontado": 353.0
       },
       {
         "doutor": "Gabrielle Marchezann",
@@ -2259,23 +2259,23 @@
       },
       {
         "doutor": "Luisa Moraes Lucas",
-        "quantidade": 12,
+        "quantidade": 15,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Luiz Henrique",
-        "quantidade": 8,
+        "quantidade": 9,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Tamara Macanan",
-        "quantidade": 13,
+        "quantidade": 14,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Thiany Cristofoli",
-        "quantidade": 3,
-        "valor_descontado": 345.0
+        "quantidade": 9,
+        "valor_descontado": 945.0
       },
       {
         "doutor": "TOP",
@@ -2284,7 +2284,12 @@
       },
       {
         "doutor": "Valter Baldissera",
-        "quantidade": 21,
+        "quantidade": 23,
+        "valor_descontado": 0.0
+      },
+      {
+        "doutor": "Vitor da Silva Teixeira",
+        "quantidade": 2,
         "valor_descontado": 0.0
       }
     ]
