@@ -1,25 +1,25 @@
 {
   "competencia": "2026-11",
-  "gerado_em": "2026-11-06T20:41:30.974923",
-  "quantidade_total": 95,
-  "valor_total": 13415.47,
-  "valor_total_descontado": 2178.0,
-  "valor_total_pendente": 11237.47,
+  "gerado_em": "2026-11-07T00:27:16.631295",
+  "quantidade_total": 107,
+  "valor_total": 14921.47,
+  "valor_total_descontado": 2445.0,
+  "valor_total_pendente": 12476.47,
   "por_unidade": [
     {
       "unidade": "Bento",
-      "quantidade": 9,
-      "valor": 1741.0
+      "quantidade": 12,
+      "valor": 2070.0
     },
     {
       "unidade": "Caxias",
-      "quantidade": 11,
-      "valor": 1295.0
+      "quantidade": 16,
+      "valor": 1992.0
     },
     {
       "unidade": "Encantado",
-      "quantidade": 2,
-      "valor": 225.0
+      "quantidade": 3,
+      "valor": 345.0
     },
     {
       "unidade": "Farroupilha",
@@ -28,8 +28,8 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 10,
-      "valor": 1540.0
+      "quantidade": 13,
+      "valor": 1900.0
     },
     {
       "unidade": "Soledade",
@@ -55,8 +55,8 @@
     },
     {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 11,
-      "valor_descontado": 1295.0
+      "quantidade": 16,
+      "valor_descontado": 1992.0
     },
     {
       "doutor": "Gabrielle Marchezann",
@@ -75,22 +75,22 @@
     },
     {
       "doutor": "Luiz Henrique",
-      "quantidade": 6,
-      "valor_descontado": 658.0
+      "quantidade": 8,
+      "valor_descontado": 108.0
     },
     {
       "doutor": "Tamara Macanan",
-      "quantidade": 10,
+      "quantidade": 13,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Thiany Cristofoli",
-      "quantidade": 2,
-      "valor_descontado": 225.0
+      "quantidade": 3,
+      "valor_descontado": 345.0
     },
     {
       "doutor": "TOP",
-      "quantidade": 2,
+      "quantidade": 3,
       "valor_descontado": 0.0
     },
     {
