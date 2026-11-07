@@ -3816,8 +3816,8 @@
       "doutor_id": "16",
       "doutor": "Franciele Pedrotti",
       "credito_inicial": 10000.0,
-      "utilizado": 7655.0,
-      "credito_disponivel": 2345.0,
+      "utilizado": 9647.0,
+      "credito_disponivel": 353.0,
       "pix_key": ""
     },
     {
@@ -4064,8 +4064,8 @@
       "doutor_id": "44",
       "doutor": "Thiany Cristofoli",
       "credito_inicial": 4000.0,
-      "utilizado": 570.0,
-      "credito_disponivel": 3430.0,
+      "utilizado": 915.0,
+      "credito_disponivel": 3085.0,
       "pix_key": ""
     }
   ]

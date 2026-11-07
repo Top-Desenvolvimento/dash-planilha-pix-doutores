@@ -2189,11 +2189,11 @@
   },
   "2026-11": {
     "competencia": "2026-11",
-    "gerado_em": "2026-11-07T00:27:16.631295",
+    "gerado_em": "2026-11-07T06:26:18.793693",
     "quantidade_total": 107,
     "valor_total": 14921.47,
-    "valor_total_descontado": 2445.0,
-    "valor_total_pendente": 12476.47,
+    "valor_total_descontado": 2337.0,
+    "valor_total_pendente": 12584.47,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -2265,7 +2265,7 @@
       {
         "doutor": "Luiz Henrique",
         "quantidade": 8,
-        "valor_descontado": 108.0
+        "valor_descontado": 0.0
       },
       {
         "doutor": "Tamara Macanan",
