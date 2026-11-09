@@ -122,19 +122,19 @@
   {
     "unidade": "Encantado",
     "competencia": "2026-11",
-    "erro": "Timeout ao acessar sistema",
-    "coletado_em": "2026-11-09T02:11:34.347434"
+    "erro": "Campo de usuário não encontrado.",
+    "coletado_em": "2026-11-09T09:52:26.892127"
   },
   {
     "unidade": "Garibaldi",
     "competencia": "2026-11",
     "erro": "Menu Finanças não encontrado.",
-    "coletado_em": "2026-11-09T02:12:36.537664"
+    "coletado_em": "2026-11-09T09:53:29.775659"
   },
   {
     "unidade": "Ssdocai",
     "competencia": "2026-11",
     "erro": "Timeout ao acessar sistema",
-    "coletado_em": "2026-11-09T02:14:20.765608"
+    "coletado_em": "2026-11-09T09:55:14.360726"
   }
 ]
