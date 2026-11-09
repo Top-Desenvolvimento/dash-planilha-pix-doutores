@@ -2189,11 +2189,11 @@
   },
   "2026-11": {
     "competencia": "2026-11",
-    "gerado_em": "2026-11-09T13:08:34.385079",
+    "gerado_em": "2026-11-09T13:43:32.641698",
     "quantidade_total": 147,
     "valor_total": 20312.47,
-    "valor_total_descontado": 1234.0,
-    "valor_total_pendente": 19078.47,
+    "valor_total_descontado": 906.0,
+    "valor_total_pendente": 19406.47,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -2275,7 +2275,7 @@
       {
         "doutor": "Thiany Cristofoli",
         "quantidade": 12,
-        "valor_descontado": 1234.0
+        "valor_descontado": 906.0
       },
       {
         "doutor": "TOP",
