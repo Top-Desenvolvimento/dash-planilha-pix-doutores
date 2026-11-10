@@ -1,25 +1,25 @@
 {
   "competencia": "2026-11",
-  "gerado_em": "2026-11-09T20:21:03.990099",
-  "quantidade_total": 180,
-  "valor_total": 25230.47,
+  "gerado_em": "2026-11-10T02:55:30.955692",
+  "quantidade_total": 196,
+  "valor_total": 28942.47,
   "valor_total_descontado": 330.0,
-  "valor_total_pendente": 24900.47,
+  "valor_total_pendente": 28612.47,
   "por_unidade": [
     {
       "unidade": "Bento",
-      "quantidade": 16,
-      "valor": 2550.0
+      "quantidade": 21,
+      "valor": 3892.0
     },
     {
       "unidade": "Caxias",
-      "quantidade": 40,
-      "valor": 5514.0
+      "quantidade": 43,
+      "valor": 5849.0
     },
     {
       "unidade": "Encantado",
-      "quantidade": 15,
-      "valor": 1594.0
+      "quantidade": 18,
+      "valor": 3059.0
     },
     {
       "unidade": "Farroupilha",
@@ -33,13 +33,13 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 46,
-      "valor": 5207.0
+      "quantidade": 47,
+      "valor": 5328.0
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 33,
-      "valor": 5452.47
+      "quantidade": 37,
+      "valor": 5901.47
     }
   ],
   "por_doutor": [
@@ -60,7 +60,7 @@
     },
     {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 39,
+      "quantidade": 42,
       "valor_descontado": 0.0
     },
     {
@@ -70,7 +70,7 @@
     },
     {
       "doutor": "Leticia Canabarro",
-      "quantidade": 24,
+      "quantidade": 25,
       "valor_descontado": 0.0
     },
     {
@@ -80,7 +80,7 @@
     },
     {
       "doutor": "Luiz Henrique",
-      "quantidade": 11,
+      "quantidade": 15,
       "valor_descontado": 0.0
     },
     {
@@ -95,17 +95,17 @@
     },
     {
       "doutor": "Thiany Cristofoli",
-      "quantidade": 14,
+      "quantidade": 17,
       "valor_descontado": 0.0
     },
     {
       "doutor": "TOP",
-      "quantidade": 4,
+      "quantidade": 5,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Valter Baldissera",
-      "quantidade": 32,
+      "quantidade": 36,
       "valor_descontado": 0.0
     },
     {
