@@ -2189,17 +2189,12 @@
   },
   "2026-11": {
     "competencia": "2026-11",
-    "gerado_em": "2026-11-10T02:55:30.955692",
-    "quantidade_total": 196,
-    "valor_total": 28942.47,
+    "gerado_em": "2026-11-10T10:40:20.046423",
+    "quantidade_total": 175,
+    "valor_total": 25050.47,
     "valor_total_descontado": 330.0,
-    "valor_total_pendente": 28612.47,
+    "valor_total_pendente": 24720.47,
     "por_unidade": [
-      {
-        "unidade": "Bento",
-        "quantidade": 21,
-        "valor": 3892.0
-      },
       {
         "unidade": "Caxias",
         "quantidade": 43,
@@ -2238,11 +2233,6 @@
         "valor_descontado": 210.0
       },
       {
-        "doutor": "Elisa Ludmila Moraes de Lima",
-        "quantidade": 2,
-        "valor_descontado": 0.0
-      },
-      {
         "doutor": "Everlize Cipriani",
         "quantidade": 11,
         "valor_descontado": 0.0
@@ -2268,11 +2258,6 @@
         "valor_descontado": 0.0
       },
       {
-        "doutor": "Luiz Henrique",
-        "quantidade": 15,
-        "valor_descontado": 0.0
-      },
-      {
         "doutor": "Sara Trevisol",
         "quantidade": 1,
         "valor_descontado": 120.0
@@ -2289,7 +2274,7 @@
       },
       {
         "doutor": "TOP",
-        "quantidade": 5,
+        "quantidade": 1,
         "valor_descontado": 0.0
       },
       {
