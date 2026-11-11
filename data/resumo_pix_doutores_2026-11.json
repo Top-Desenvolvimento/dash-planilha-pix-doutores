@@ -1,15 +1,15 @@
 {
   "competencia": "2026-11",
-  "gerado_em": "2026-11-11T10:51:40.840808",
-  "quantidade_total": 225,
-  "valor_total": 33198.47,
-  "valor_total_descontado": 330.0,
-  "valor_total_pendente": 32868.47,
+  "gerado_em": "2026-11-11T18:16:41.660806",
+  "quantidade_total": 244,
+  "valor_total": 35400.47,
+  "valor_total_descontado": 595.0,
+  "valor_total_pendente": 34805.47,
   "por_unidade": [
     {
       "unidade": "Bento",
-      "quantidade": 21,
-      "valor": 3892.0
+      "quantidade": 24,
+      "valor": 4387.0
     },
     {
       "unidade": "Caxias",
@@ -18,13 +18,13 @@
     },
     {
       "unidade": "Encantado",
-      "quantidade": 19,
-      "valor": 3154.0
+      "quantidade": 22,
+      "valor": 3474.0
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 16,
-      "valor": 2001.0
+      "quantidade": 17,
+      "valor": 2039.0
     },
     {
       "unidade": "FloresDaCunha",
@@ -33,13 +33,13 @@
     },
     {
       "unidade": "Soledade",
-      "quantidade": 49,
-      "valor": 5849.0
+      "quantidade": 57,
+      "valor": 6556.0
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 37,
-      "valor": 5901.47
+      "quantidade": 41,
+      "valor": 6543.47
     }
   ],
   "por_doutor": [
@@ -55,7 +55,7 @@
     },
     {
       "doutor": "Everlize Cipriani",
-      "quantidade": 15,
+      "quantidade": 16,
       "valor_descontado": 0.0
     },
     {
@@ -65,12 +65,17 @@
     },
     {
       "doutor": "Gabrielle Marchezann",
-      "quantidade": 1,
+      "quantidade": 5,
       "valor_descontado": 0.0
     },
     {
+      "doutor": "João Augusto Keler",
+      "quantidade": 1,
+      "valor_descontado": 170.0
+    },
+    {
       "doutor": "Leticia Canabarro",
-      "quantidade": 27,
+      "quantidade": 29,
       "valor_descontado": 0.0
     },
     {
@@ -80,8 +85,13 @@
     },
     {
       "doutor": "Luiz Henrique",
-      "quantidade": 15,
+      "quantidade": 18,
       "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Nicoli Weber",
+      "quantidade": 1,
+      "valor_descontado": 95.0
     },
     {
       "doutor": "Sara Trevisol",
@@ -100,17 +110,17 @@
     },
     {
       "doutor": "TOP",
-      "quantidade": 4,
+      "quantidade": 6,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Valter Baldissera",
-      "quantidade": 37,
+      "quantidade": 41,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Vitor da Silva Teixeira",
-      "quantidade": 3,
+      "quantidade": 4,
       "valor_descontado": 0.0
     }
   ]
