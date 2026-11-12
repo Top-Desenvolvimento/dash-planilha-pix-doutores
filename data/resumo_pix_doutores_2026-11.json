@@ -1,10 +1,10 @@
 {
   "competencia": "2026-11",
-  "gerado_em": "2026-11-12T16:30:51.041581",
-  "quantidade_total": 270,
-  "valor_total": 38446.47,
-  "valor_total_descontado": 847.0,
-  "valor_total_pendente": 37599.47,
+  "gerado_em": "2026-11-12T22:31:22.822654",
+  "quantidade_total": 304,
+  "valor_total": 42640.47,
+  "valor_total_descontado": 809.0,
+  "valor_total_pendente": 41831.47,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,33 +13,33 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 53,
-      "valor": 7048.0
+      "quantidade": 59,
+      "valor": 7753.0
     },
     {
       "unidade": "Encantado",
       "quantidade": 25,
-      "valor": 3933.0
+      "valor": 4032.0
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 17,
-      "valor": 2039.0
+      "quantidade": 18,
+      "valor": 2159.0
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 40,
-      "valor": 6512.0
+      "quantidade": 50,
+      "valor": 7642.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 66,
-      "valor": 7462.0
+      "quantidade": 82,
+      "valor": 9392.0
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 45,
-      "valor": 7065.47
+      "quantidade": 46,
+      "valor": 7275.47
     }
   ],
   "por_doutor": [
@@ -55,27 +55,27 @@
     },
     {
       "doutor": "Everlize Cipriani",
-      "quantidade": 16,
+      "quantidade": 17,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 52,
+      "quantidade": 58,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Gabrielle Marchezann",
-      "quantidade": 5,
+      "quantidade": 6,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Indiamara Rech",
-      "quantidade": 1,
+      "quantidade": 11,
       "valor_descontado": 0.0
     },
     {
       "doutor": "João Augusto Keler",
-      "quantidade": 9,
+      "quantidade": 16,
       "valor_descontado": 0.0
     },
     {
@@ -94,23 +94,33 @@
       "valor_descontado": 0.0
     },
     {
-      "doutor": "MEI",
+      "doutor": "Marina Alievi",
+      "quantidade": 5,
+      "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Micael Carenhato",
       "quantidade": 1,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Morgana Zambiasi",
       "quantidade": 3,
-      "valor_descontado": 402.0
+      "valor_descontado": 294.0
+    },
+    {
+      "doutor": "Murilo Debortoli",
+      "quantidade": 2,
+      "valor_descontado": 305.0
     },
     {
       "doutor": "Nicoli Weber",
       "quantidade": 3,
-      "valor_descontado": 235.0
+      "valor_descontado": 0.0
     },
     {
       "doutor": "Sara Trevisol",
-      "quantidade": 1,
+      "quantidade": 2,
       "valor_descontado": 0.0
     },
     {
@@ -125,7 +135,7 @@
     },
     {
       "doutor": "TOP",
-      "quantidade": 3,
+      "quantidade": 4,
       "valor_descontado": 0.0
     },
     {
