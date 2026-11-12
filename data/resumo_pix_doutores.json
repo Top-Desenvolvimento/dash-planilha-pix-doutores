@@ -2189,11 +2189,11 @@
   },
   "2026-11": {
     "competencia": "2026-11",
-    "gerado_em": "2026-11-12T07:55:55.781276",
-    "quantidade_total": 267,
-    "valor_total": 38129.47,
-    "valor_total_descontado": 1003.0,
-    "valor_total_pendente": 37126.47,
+    "gerado_em": "2026-11-12T16:30:51.041581",
+    "quantidade_total": 270,
+    "valor_total": 38446.47,
+    "valor_total_descontado": 847.0,
+    "valor_total_pendente": 37599.47,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -2202,8 +2202,8 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 52,
-        "valor": 6928.0
+        "quantidade": 53,
+        "valor": 7048.0
       },
       {
         "unidade": "Encantado",
@@ -2222,8 +2222,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 64,
-        "valor": 7265.0
+        "quantidade": 66,
+        "valor": 7462.0
       },
       {
         "unidade": "Veranopolis",
@@ -2249,7 +2249,7 @@
       },
       {
         "doutor": "Franciele Pedrotti",
-        "quantidade": 51,
+        "quantidade": 52,
         "valor_descontado": 0.0
       },
       {
@@ -2264,8 +2264,8 @@
       },
       {
         "doutor": "João Augusto Keler",
-        "quantidade": 7,
-        "valor_descontado": 56.0
+        "quantidade": 9,
+        "valor_descontado": 0.0
       },
       {
         "doutor": "Leticia Canabarro",
@@ -2295,7 +2295,7 @@
       {
         "doutor": "Nicoli Weber",
         "quantidade": 3,
-        "valor_descontado": 335.0
+        "valor_descontado": 235.0
       },
       {
         "doutor": "Sara Trevisol",
