@@ -2189,11 +2189,11 @@
   },
   "2026-11": {
     "competencia": "2026-11",
-    "gerado_em": "2026-11-12T00:52:14.614803",
+    "gerado_em": "2026-11-12T07:55:55.781276",
     "quantidade_total": 267,
     "valor_total": 38129.47,
-    "valor_total_descontado": 1761.0,
-    "valor_total_pendente": 36368.47,
+    "valor_total_descontado": 1003.0,
+    "valor_total_pendente": 37126.47,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -2265,7 +2265,7 @@
       {
         "doutor": "João Augusto Keler",
         "quantidade": 7,
-        "valor_descontado": 774.0
+        "valor_descontado": 56.0
       },
       {
         "doutor": "Leticia Canabarro",
@@ -2300,7 +2300,7 @@
       {
         "doutor": "Sara Trevisol",
         "quantidade": 1,
-        "valor_descontado": 40.0
+        "valor_descontado": 0.0
       },
       {
         "doutor": "Tamara Macanan",

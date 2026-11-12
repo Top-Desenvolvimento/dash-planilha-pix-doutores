@@ -3784,8 +3784,8 @@
       "doutor_id": "12",
       "doutor": "Dionathan Pohlmann",
       "credito_inicial": 6000.0,
-      "utilizado": 1890.0,
-      "credito_disponivel": 4110.0,
+      "utilizado": 2100.0,
+      "credito_disponivel": 3900.0,
       "pix_key": ""
     },
     {
@@ -3880,8 +3880,8 @@
       "doutor_id": "25",
       "doutor": "João Augusto Keler",
       "credito_inicial": 1000.0,
-      "utilizado": 944.0,
-      "credito_disponivel": 56.0,
+      "utilizado": 1000.0,
+      "credito_disponivel": 0.0,
       "pix_key": ""
     },
     {
@@ -3968,8 +3968,8 @@
       "doutor_id": "34",
       "doutor": "Morgana Zambiasi",
       "credito_inicial": 1500.0,
-      "utilizado": 402.0,
-      "credito_disponivel": 1098.0,
+      "utilizado": 804.0,
+      "credito_disponivel": 696.0,
       "pix_key": ""
     },
     {
@@ -4000,8 +4000,8 @@
       "doutor_id": "37",
       "doutor": "Nicoli Weber",
       "credito_inicial": 1000.0,
-      "utilizado": 430.0,
-      "credito_disponivel": 570.0,
+      "utilizado": 765.0,
+      "credito_disponivel": 235.0,
       "pix_key": ""
     },
     {
