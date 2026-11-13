@@ -122,13 +122,13 @@
   {
     "unidade": "Garibaldi",
     "competencia": "2026-11",
-    "erro": "Menu Finanças não encontrado.",
-    "coletado_em": "2026-11-13T02:53:26.891828"
+    "erro": "Timeout ao acessar sistema",
+    "coletado_em": "2026-11-13T10:13:47.034621"
   },
   {
     "unidade": "Ssdocai",
     "competencia": "2026-11",
     "erro": "Timeout ao acessar sistema",
-    "coletado_em": "2026-11-13T02:55:11.623297"
+    "coletado_em": "2026-11-13T10:15:31.766883"
   }
 ]

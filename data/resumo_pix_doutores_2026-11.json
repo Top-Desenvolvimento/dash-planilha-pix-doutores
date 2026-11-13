@@ -1,10 +1,10 @@
 {
   "competencia": "2026-11",
-  "gerado_em": "2026-11-13T02:56:11.245460",
+  "gerado_em": "2026-11-13T10:16:31.412461",
   "quantidade_total": 304,
   "valor_total": 42640.47,
-  "valor_total_descontado": 405.0,
-  "valor_total_pendente": 42235.47,
+  "valor_total_descontado": 210.0,
+  "valor_total_pendente": 42430.47,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -111,7 +111,7 @@
     {
       "doutor": "Murilo Debortoli",
       "quantidade": 2,
-      "valor_descontado": 195.0
+      "valor_descontado": 0.0
     },
     {
       "doutor": "Nicoli Weber",
