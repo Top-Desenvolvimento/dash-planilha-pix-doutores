@@ -2189,11 +2189,11 @@
   },
   "2026-11": {
     "competencia": "2026-11",
-    "gerado_em": "2026-11-13T10:16:31.412461",
-    "quantidade_total": 304,
-    "valor_total": 42640.47,
+    "gerado_em": "2026-11-13T17:52:41.756904",
+    "quantidade_total": 320,
+    "valor_total": 44902.47,
     "valor_total_descontado": 210.0,
-    "valor_total_pendente": 42430.47,
+    "valor_total_pendente": 44692.47,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -2202,28 +2202,28 @@
       },
       {
         "unidade": "Caxias",
-        "quantidade": 59,
-        "valor": 7753.0
+        "quantidade": 62,
+        "valor": 8102.0
       },
       {
         "unidade": "Encantado",
-        "quantidade": 25,
-        "valor": 4032.0
+        "quantidade": 29,
+        "valor": 4467.0
       },
       {
         "unidade": "Farroupilha",
-        "quantidade": 18,
-        "valor": 2159.0
+        "quantidade": 21,
+        "valor": 2613.0
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 50,
-        "valor": 7642.0
+        "quantidade": 54,
+        "valor": 8451.0
       },
       {
         "unidade": "Soledade",
-        "quantidade": 82,
-        "valor": 9392.0
+        "quantidade": 84,
+        "valor": 9607.0
       },
       {
         "unidade": "Veranopolis",
@@ -2249,7 +2249,7 @@
       },
       {
         "doutor": "Franciele Pedrotti",
-        "quantidade": 58,
+        "quantidade": 61,
         "valor_descontado": 0.0
       },
       {
@@ -2259,7 +2259,7 @@
       },
       {
         "doutor": "Indiamara Rech",
-        "quantidade": 11,
+        "quantidade": 15,
         "valor_descontado": 0.0
       },
       {
@@ -2269,7 +2269,7 @@
       },
       {
         "doutor": "Leticia Canabarro",
-        "quantidade": 29,
+        "quantidade": 30,
         "valor_descontado": 0.0
       },
       {
@@ -2299,12 +2299,22 @@
       },
       {
         "doutor": "Murilo Debortoli",
-        "quantidade": 2,
+        "quantidade": 3,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Nicoli Weber",
         "quantidade": 3,
+        "valor_descontado": 0.0
+      },
+      {
+        "doutor": "Notuen Boniati",
+        "quantidade": 3,
+        "valor_descontado": 0.0
+      },
+      {
+        "doutor": "Renata Protto",
+        "quantidade": 4,
         "valor_descontado": 0.0
       },
       {
