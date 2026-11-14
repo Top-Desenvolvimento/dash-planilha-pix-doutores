@@ -1,10 +1,10 @@
 {
   "competencia": "2026-11",
-  "gerado_em": "2026-11-14T16:47:08.518312",
-  "quantidade_total": 364,
-  "valor_total": 51492.47,
-  "valor_total_descontado": 868.0,
-  "valor_total_pendente": 50624.47,
+  "gerado_em": "2026-11-14T21:05:41.947943",
+  "quantidade_total": 365,
+  "valor_total": 51711.47,
+  "valor_total_descontado": 570.0,
+  "valor_total_pendente": 51141.47,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,8 +13,8 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 76,
-      "valor": 10239.0
+      "quantidade": 77,
+      "valor": 10458.0
     },
     {
       "unidade": "Encantado",
@@ -51,7 +51,7 @@
     {
       "doutor": "Alexandre Favero",
       "quantidade": 4,
-      "valor_descontado": 419.0
+      "valor_descontado": 121.0
     },
     {
       "doutor": "Ana Cristina Corso",
@@ -75,7 +75,7 @@
     },
     {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 75,
+      "quantidade": 76,
       "valor_descontado": 0.0
     },
     {
