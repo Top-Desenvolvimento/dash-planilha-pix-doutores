@@ -4200,8 +4200,8 @@
       "competencia": "2026-11",
       "doutor_id": "5",
       "credito_inicial": 1500.0,
-      "utilizado": 956.0,
-      "credito_final": 544.0,
+      "utilizado": 1195.0,
+      "credito_final": 305.0,
       "updated_by_email": null,
       "updated_by_nome": null
     },
@@ -4263,8 +4263,8 @@
       "competencia": "2026-11",
       "doutor_id": "12",
       "credito_inicial": 6000.0,
-      "utilizado": 4620.0,
-      "credito_final": 1380.0,
+      "utilizado": 4830.0,
+      "credito_final": 1170.0,
       "updated_by_email": null,
       "updated_by_nome": null
     },
