@@ -2189,11 +2189,11 @@
   },
   "2026-11": {
     "competencia": "2026-11",
-    "gerado_em": "2026-11-14T21:05:41.947943",
+    "gerado_em": "2026-11-15T01:06:39.930517",
     "quantidade_total": 365,
     "valor_total": 51711.47,
-    "valor_total_descontado": 570.0,
-    "valor_total_pendente": 51141.47,
+    "valor_total_descontado": 449.0,
+    "valor_total_pendente": 51262.47,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -2240,7 +2240,7 @@
       {
         "doutor": "Alexandre Favero",
         "quantidade": 4,
-        "valor_descontado": 121.0
+        "valor_descontado": 0.0
       },
       {
         "doutor": "Ana Cristina Corso",
