@@ -1,10 +1,10 @@
 {
   "competencia": "2026-11",
-  "gerado_em": "2026-11-16T06:39:43.201483",
-  "quantidade_total": 365,
-  "valor_total": 51711.47,
+  "gerado_em": "2026-11-16T16:30:12.683783",
+  "quantidade_total": 369,
+  "valor_total": 52564.47,
   "valor_total_descontado": 210.0,
-  "valor_total_pendente": 51501.47,
+  "valor_total_pendente": 52354.47,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,8 +13,8 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 77,
-      "valor": 10458.0
+      "quantidade": 78,
+      "valor": 10543.0
     },
     {
       "unidade": "Encantado",
@@ -23,13 +23,13 @@
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 25,
-      "valor": 3370.0
+      "quantidade": 27,
+      "valor": 4018.0
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 63,
-      "valor": 9988.0
+      "quantidade": 64,
+      "valor": 10108.0
     },
     {
       "unidade": "Soledade",
@@ -55,7 +55,7 @@
     },
     {
       "doutor": "Ana Cristina Corso",
-      "quantidade": 1,
+      "quantidade": 2,
       "valor_descontado": 0.0
     },
     {
@@ -75,7 +75,7 @@
     },
     {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 76,
+      "quantidade": 77,
       "valor_descontado": 0.0
     },
     {
@@ -140,7 +140,7 @@
     },
     {
       "doutor": "Notuen Boniati",
-      "quantidade": 7,
+      "quantidade": 9,
       "valor_descontado": 0.0
     },
     {
