@@ -1,10 +1,10 @@
 {
   "competencia": "2026-11",
-  "gerado_em": "2026-11-16T16:30:12.683783",
-  "quantidade_total": 369,
-  "valor_total": 52564.47,
-  "valor_total_descontado": 210.0,
-  "valor_total_pendente": 52354.47,
+  "gerado_em": "2026-11-17T00:30:37.106592",
+  "quantidade_total": 385,
+  "valor_total": 54681.47,
+  "valor_total_descontado": 330.0,
+  "valor_total_pendente": 54351.47,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,13 +13,13 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 78,
-      "valor": 10543.0
+      "quantidade": 83,
+      "valor": 11072.0
     },
     {
       "unidade": "Encantado",
-      "quantidade": 37,
-      "valor": 5431.0
+      "quantidade": 44,
+      "valor": 6419.0
     },
     {
       "unidade": "Farroupilha",
@@ -28,18 +28,18 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 64,
-      "valor": 10108.0
+      "quantidade": 65,
+      "valor": 10363.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 85,
-      "valor": 9716.0
+      "quantidade": 86,
+      "valor": 9821.0
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 50,
-      "valor": 7747.47
+      "quantidade": 52,
+      "valor": 7987.47
     }
   ],
   "por_doutor": [
@@ -50,18 +50,18 @@
     },
     {
       "doutor": "Alexandre Favero",
-      "quantidade": 4,
+      "quantidade": 11,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Ana Cristina Corso",
-      "quantidade": 2,
+      "quantidade": 3,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Dionathan Pohlmann",
-      "quantidade": 2,
-      "valor_descontado": 210.0
+      "quantidade": 5,
+      "valor_descontado": 330.0
     },
     {
       "doutor": "Elisa Ludmila Moraes de Lima",
@@ -75,7 +75,7 @@
     },
     {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 77,
+      "quantidade": 79,
       "valor_descontado": 0.0
     },
     {
@@ -120,17 +120,17 @@
     },
     {
       "doutor": "Micael Carenhato",
-      "quantidade": 1,
+      "quantidade": 2,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Morgana Zambiasi",
-      "quantidade": 7,
+      "quantidade": 9,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Murilo Debortoli",
-      "quantidade": 3,
+      "quantidade": 4,
       "valor_descontado": 0.0
     },
     {
@@ -165,7 +165,7 @@
     },
     {
       "doutor": "TOP",
-      "quantidade": 4,
+      "quantidade": 3,
       "valor_descontado": 0.0
     },
     {
