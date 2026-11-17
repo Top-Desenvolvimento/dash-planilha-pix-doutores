@@ -1,10 +1,10 @@
 {
   "competencia": "2026-11",
-  "gerado_em": "2026-11-17T08:25:02.200784",
-  "quantidade_total": 385,
-  "valor_total": 54681.47,
-  "valor_total_descontado": 0.0,
-  "valor_total_pendente": 54681.47,
+  "gerado_em": "2026-11-17T17:51:11.699705",
+  "quantidade_total": 396,
+  "valor_total": 55811.47,
+  "valor_total_descontado": 642.0,
+  "valor_total_pendente": 55169.47,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,8 +13,8 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 83,
-      "valor": 11072.0
+      "quantidade": 84,
+      "valor": 11171.0
     },
     {
       "unidade": "Encantado",
@@ -23,18 +23,18 @@
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 27,
-      "valor": 4018.0
+      "quantidade": 34,
+      "valor": 4660.0
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 65,
-      "valor": 10363.0
+      "quantidade": 67,
+      "valor": 10613.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 86,
-      "valor": 9821.0
+      "quantidade": 87,
+      "valor": 9960.0
     },
     {
       "unidade": "Veranopolis",
@@ -55,12 +55,12 @@
     },
     {
       "doutor": "Ana Cristina Corso",
-      "quantidade": 3,
+      "quantidade": 5,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Dionathan Pohlmann",
-      "quantidade": 5,
+      "quantidade": 8,
       "valor_descontado": 0.0
     },
     {
@@ -75,7 +75,7 @@
     },
     {
       "doutor": "Franciele Pedrotti",
-      "quantidade": 79,
+      "quantidade": 77,
       "valor_descontado": 0.0
     },
     {
@@ -115,7 +115,7 @@
     },
     {
       "doutor": "Marina Alievi",
-      "quantidade": 5,
+      "quantidade": 6,
       "valor_descontado": 0.0
     },
     {
@@ -157,6 +157,16 @@
       "doutor": "Tamara Macanan",
       "quantidade": 39,
       "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Thalia Tessaro",
+      "quantidade": 2,
+      "valor_descontado": 226.0
+    },
+    {
+      "doutor": "Thalia Vezzosi",
+      "quantidade": 5,
+      "valor_descontado": 416.0
     },
     {
       "doutor": "Thiany Cristofoli",
