@@ -1,10 +1,10 @@
 {
   "competencia": "2026-11",
-  "gerado_em": "2026-11-17T00:30:37.106592",
+  "gerado_em": "2026-11-17T08:25:02.200784",
   "quantidade_total": 385,
   "valor_total": 54681.47,
-  "valor_total_descontado": 330.0,
-  "valor_total_pendente": 54351.47,
+  "valor_total_descontado": 0.0,
+  "valor_total_pendente": 54681.47,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -61,7 +61,7 @@
     {
       "doutor": "Dionathan Pohlmann",
       "quantidade": 5,
-      "valor_descontado": 330.0
+      "valor_descontado": 0.0
     },
     {
       "doutor": "Elisa Ludmila Moraes de Lima",
