@@ -2189,16 +2189,16 @@
   },
   "2026-11": {
     "competencia": "2026-11",
-    "gerado_em": "2026-11-18T16:41:10.401160",
-    "quantidade_total": 430,
-    "valor_total": 61031.97,
+    "gerado_em": "2026-11-18T23:14:28.313480",
+    "quantidade_total": 451,
+    "valor_total": 63671.97,
     "valor_total_descontado": 226.0,
-    "valor_total_pendente": 60805.97,
+    "valor_total_pendente": 63445.97,
     "por_unidade": [
       {
         "unidade": "Bento",
-        "quantidade": 31,
-        "valor": 5361.0
+        "quantidade": 32,
+        "valor": 5496.0
       },
       {
         "unidade": "Caxias",
@@ -2207,8 +2207,8 @@
       },
       {
         "unidade": "Encantado",
-        "quantidade": 45,
-        "valor": 6539.0
+        "quantidade": 50,
+        "valor": 7146.0
       },
       {
         "unidade": "Farroupilha",
@@ -2217,18 +2217,18 @@
       },
       {
         "unidade": "FloresDaCunha",
-        "quantidade": 73,
-        "valor": 11546.0
+        "quantidade": 77,
+        "valor": 12079.0
       },
       {
         "unidade": "Soledade",
-        "quantidade": 92,
-        "valor": 10759.0
+        "quantidade": 104,
+        "valor": 12213.0
       },
       {
         "unidade": "Veranopolis",
-        "quantidade": 53,
-        "valor": 8076.47
+        "quantidade": 52,
+        "valor": 7987.47
       }
     ],
     "por_doutor": [
@@ -2239,7 +2239,7 @@
       },
       {
         "doutor": ".Nelson Agostino Vaccari Junior",
-        "quantidade": 3,
+        "quantidade": 4,
         "valor_descontado": 0.0
       },
       {
@@ -2249,17 +2249,12 @@
       },
       {
         "doutor": "Ana Cristina Corso",
-        "quantidade": 11,
+        "quantidade": 15,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Dionathan Pohlmann",
         "quantidade": 13,
-        "valor_descontado": 0.0
-      },
-      {
-        "doutor": "Dra.Jessica Bertozzo",
-        "quantidade": 1,
         "valor_descontado": 0.0
       },
       {
@@ -2304,7 +2299,7 @@
       },
       {
         "doutor": "Leticia Canabarro",
-        "quantidade": 30,
+        "quantidade": 31,
         "valor_descontado": 0.0
       },
       {
@@ -2319,12 +2314,12 @@
       },
       {
         "doutor": "Marina Alievi",
-        "quantidade": 6,
+        "quantidade": 12,
         "valor_descontado": 0.0
       },
       {
         "doutor": "Micael Carenhato",
-        "quantidade": 7,
+        "quantidade": 12,
         "valor_descontado": 0.0
       },
       {
@@ -2354,7 +2349,7 @@
       },
       {
         "doutor": "Sara Trevisol",
-        "quantidade": 1,
+        "quantidade": 6,
         "valor_descontado": 0.0
       },
       {
