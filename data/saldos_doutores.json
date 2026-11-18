@@ -3832,8 +3832,8 @@
       "doutor_id": "19",
       "doutor": "Giovana Gasparini",
       "credito_inicial": 1000.0,
-      "utilizado": 0.0,
-      "credito_disponivel": 1000.0,
+      "utilizado": 879.0,
+      "credito_disponivel": 121.0,
       "pix_key": ""
     },
     {
@@ -4048,16 +4048,16 @@
       "doutor_id": "45",
       "doutor": "Thalia Tessaro",
       "credito_inicial": 2700.0,
-      "utilizado": 226.0,
-      "credito_disponivel": 2474.0,
+      "utilizado": 452.0,
+      "credito_disponivel": 2248.0,
       "pix_key": ""
     },
     {
       "doutor_id": "46",
       "doutor": "Thalia Vezzosi",
       "credito_inicial": 2500.0,
-      "utilizado": 416.0,
-      "credito_disponivel": 2084.0,
+      "utilizado": 2174.0,
+      "credito_disponivel": 326.0,
       "pix_key": ""
     },
     {
