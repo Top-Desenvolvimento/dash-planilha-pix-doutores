@@ -1,10 +1,10 @@
 {
   "competencia": "2026-11",
-  "gerado_em": "2026-11-18T00:08:54.834088",
+  "gerado_em": "2026-11-18T07:21:38.725359",
   "quantidade_total": 417,
   "valor_total": 59068.97,
-  "valor_total_descontado": 2863.0,
-  "valor_total_pendente": 56205.97,
+  "valor_total_descontado": 673.0,
+  "valor_total_pendente": 58395.97,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -86,7 +86,7 @@
     {
       "doutor": "Giovana Gasparini",
       "quantidade": 3,
-      "valor_descontado": 879.0
+      "valor_descontado": 121.0
     },
     {
       "doutor": "Indiamara Rech",
@@ -171,7 +171,7 @@
     {
       "doutor": "Thalia Vezzosi",
       "quantidade": 14,
-      "valor_descontado": 1758.0
+      "valor_descontado": 326.0
     },
     {
       "doutor": "Thiany Cristofoli",
