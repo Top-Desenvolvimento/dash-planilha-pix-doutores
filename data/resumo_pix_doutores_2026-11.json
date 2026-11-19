@@ -1,10 +1,10 @@
 {
   "competencia": "2026-11",
-  "gerado_em": "2026-11-19T04:19:42.272437",
-  "quantidade_total": 451,
-  "valor_total": 63671.97,
-  "valor_total_descontado": 226.0,
-  "valor_total_pendente": 63445.97,
+  "gerado_em": "2026-11-19T13:25:18.704656",
+  "quantidade_total": 464,
+  "valor_total": 65106.97,
+  "valor_total_descontado": 346.0,
+  "valor_total_pendente": 64760.97,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -28,13 +28,13 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 77,
-      "valor": 12079.0
+      "quantidade": 85,
+      "valor": 12999.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 104,
-      "valor": 12213.0
+      "quantidade": 109,
+      "valor": 12728.0
     },
     {
       "unidade": "Veranopolis",
@@ -85,13 +85,18 @@
     },
     {
       "doutor": "Gabrielle Marchezann",
-      "quantidade": 6,
+      "quantidade": 9,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Giovana Gasparini",
       "quantidade": 4,
       "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Gustavo Lourenço Ongaratto",
+      "quantidade": 1,
+      "valor_descontado": 120.0
     },
     {
       "doutor": "Indiamara Rech",
@@ -110,7 +115,7 @@
     },
     {
       "doutor": "Leticia Canabarro",
-      "quantidade": 31,
+      "quantidade": 32,
       "valor_descontado": 0.0
     },
     {
@@ -151,6 +156,11 @@
     {
       "doutor": "Notuen Boniati",
       "quantidade": 9,
+      "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Raul Oliveira",
+      "quantidade": 8,
       "valor_descontado": 0.0
     },
     {
