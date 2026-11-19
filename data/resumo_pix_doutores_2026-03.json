@@ -1,16 +1,11 @@
 {
   "competencia": "2026-03",
-  "gerado_em": "2026-11-05T20:13:25.761731",
-  "quantidade_total": 586,
-  "valor_total": 80692.51,
+  "gerado_em": "2026-11-19T15:20:52.716624",
+  "quantidade_total": 538,
+  "valor_total": 73849.52,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 80692.51,
+  "valor_total_pendente": 73849.52,
   "por_unidade": [
-    {
-      "unidade": "Bento",
-      "quantidade": 48,
-      "valor": 6842.99
-    },
     {
       "unidade": "Caxias",
       "quantidade": 123,
@@ -64,26 +59,6 @@
       "valor_descontado": 0.0
     },
     {
-      "doutor": ".Jéssica Barreto",
-      "quantidade": 6,
-      "valor_descontado": 0.0
-    },
-    {
-      "doutor": ".Laura Luiza Cimolin",
-      "quantidade": 3,
-      "valor_descontado": 0.0
-    },
-    {
-      "doutor": ".Naiane Pieta",
-      "quantidade": 8,
-      "valor_descontado": 0.0
-    },
-    {
-      "doutor": ".Nelson Agostino Vaccari Junior",
-      "quantidade": 15,
-      "valor_descontado": 0.0
-    },
-    {
       "doutor": ".Nelson Junior",
       "quantidade": 2,
       "valor_descontado": 0.0
@@ -130,7 +105,7 @@
     },
     {
       "doutor": "Dra.Everlize Cipriani",
-      "quantidade": 17,
+      "quantidade": 12,
       "valor_descontado": 0.0
     },
     {
@@ -194,18 +169,13 @@
       "valor_descontado": 0.0
     },
     {
-      "doutor": "Nelson Vaccari",
-      "quantidade": 2,
-      "valor_descontado": 0.0
-    },
-    {
       "doutor": "PEDI.Giovana Gasparini",
       "quantidade": 1,
       "valor_descontado": 0.0
     },
     {
       "doutor": "TOP",
-      "quantidade": 56,
+      "quantidade": 47,
       "valor_descontado": 0.0
     }
   ]
