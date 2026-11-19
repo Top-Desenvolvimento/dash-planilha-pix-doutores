@@ -1,10 +1,10 @@
 {
   "competencia": "2026-11",
-  "gerado_em": "2026-11-19T13:38:38.924552",
-  "quantidade_total": 464,
-  "valor_total": 65106.97,
-  "valor_total_descontado": 346.0,
-  "valor_total_pendente": 64760.97,
+  "gerado_em": "2026-11-19T19:04:46.827926",
+  "quantidade_total": 474,
+  "valor_total": 66434.97,
+  "valor_total_descontado": 1341.0,
+  "valor_total_pendente": 65093.97,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -18,8 +18,8 @@
     },
     {
       "unidade": "Encantado",
-      "quantidade": 50,
-      "valor": 7146.0
+      "quantidade": 51,
+      "valor": 7244.0
     },
     {
       "unidade": "Farroupilha",
@@ -28,31 +28,21 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 85,
-      "valor": 12999.0
+      "quantidade": 86,
+      "valor": 13340.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 109,
-      "valor": 12728.0
+      "quantidade": 112,
+      "valor": 13016.0
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 52,
-      "valor": 7987.47
+      "quantidade": 57,
+      "valor": 8588.47
     }
   ],
   "por_doutor": [
-    {
-      "doutor": ".Greici Matiello",
-      "quantidade": 4,
-      "valor_descontado": 0.0
-    },
-    {
-      "doutor": ".Nelson Agostino Vaccari Junior",
-      "quantidade": 4,
-      "valor_descontado": 0.0
-    },
     {
       "doutor": "Alexandre Favero",
       "quantidade": 11,
@@ -85,13 +75,18 @@
     },
     {
       "doutor": "Gabrielle Marchezann",
-      "quantidade": 9,
+      "quantidade": 12,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Giovana Gasparini",
       "quantidade": 4,
       "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Greici Matiello",
+      "quantidade": 4,
+      "valor_descontado": 500.0
     },
     {
       "doutor": "Gustavo Lourenço Ongaratto",
@@ -106,6 +101,11 @@
     {
       "doutor": "João Augusto Keler",
       "quantidade": 16,
+      "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Jéssica Bertozzo",
+      "quantidade": 5,
       "valor_descontado": 0.0
     },
     {
@@ -149,6 +149,11 @@
       "valor_descontado": 0.0
     },
     {
+      "doutor": "Nelson Vaccari",
+      "quantidade": 4,
+      "valor_descontado": 495.0
+    },
+    {
       "doutor": "Nicoli Weber",
       "quantidade": 6,
       "valor_descontado": 0.0
@@ -160,7 +165,7 @@
     },
     {
       "doutor": "Raul Oliveira",
-      "quantidade": 8,
+      "quantidade": 9,
       "valor_descontado": 0.0
     },
     {
@@ -170,7 +175,7 @@
     },
     {
       "doutor": "Sara Trevisol",
-      "quantidade": 6,
+      "quantidade": 7,
       "valor_descontado": 0.0
     },
     {
