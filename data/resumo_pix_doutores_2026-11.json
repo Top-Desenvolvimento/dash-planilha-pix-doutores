@@ -1,10 +1,10 @@
 {
   "competencia": "2026-11",
-  "gerado_em": "2026-11-20T02:49:02.978395",
+  "gerado_em": "2026-11-20T10:42:01.151659",
   "quantidade_total": 500,
   "valor_total": 69453.97,
-  "valor_total_descontado": 2327.0,
-  "valor_total_pendente": 67126.97,
+  "valor_total_descontado": 954.0,
+  "valor_total_pendente": 68499.97,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -151,7 +151,7 @@
     {
       "doutor": "Nelson Vaccari",
       "quantidade": 14,
-      "valor_descontado": 1622.0
+      "valor_descontado": 261.0
     },
     {
       "doutor": "Nicoli Weber",
@@ -186,7 +186,7 @@
     {
       "doutor": "Thalia Tessaro",
       "quantidade": 2,
-      "valor_descontado": 226.0
+      "valor_descontado": 214.0
     },
     {
       "doutor": "Thalia Vezzosi",
