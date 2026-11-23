@@ -1,20 +1,20 @@
 {
   "competencia": "2026-11",
-  "gerado_em": "2026-11-23T11:30:31.138673",
-  "quantidade_total": 522,
-  "valor_total": 72510.97,
-  "valor_total_descontado": 0.0,
-  "valor_total_pendente": 72510.97,
+  "gerado_em": "2026-11-23T22:58:47.577006",
+  "quantidade_total": 542,
+  "valor_total": 75467.96,
+  "valor_total_descontado": 110.0,
+  "valor_total_pendente": 75357.96,
   "por_unidade": [
     {
       "unidade": "Bento",
-      "quantidade": 44,
-      "valor": 6806.0
+      "quantidade": 47,
+      "valor": 7155.99
     },
     {
       "unidade": "Caxias",
-      "quantidade": 94,
-      "valor": 12568.5
+      "quantidade": 107,
+      "valor": 14302.5
     },
     {
       "unidade": "Encantado",
@@ -28,18 +28,18 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 94,
-      "valor": 14622.0
+      "quantidade": 96,
+      "valor": 14862.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 130,
-      "valor": 15048.0
+      "quantidade": 131,
+      "valor": 15158.0
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 60,
-      "valor": 8977.47
+      "quantidade": 61,
+      "valor": 9500.47
     }
   ],
   "por_doutor": [
@@ -55,7 +55,7 @@
     },
     {
       "doutor": "Dionathan Pohlmann",
-      "quantidade": 25,
+      "quantidade": 40,
       "valor_descontado": 0.0
     },
     {
@@ -150,13 +150,18 @@
     },
     {
       "doutor": "Nelson Vaccari",
-      "quantidade": 18,
+      "quantidade": 22,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Nicoli Weber",
       "quantidade": 6,
       "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Norberto Filipe",
+      "quantidade": 1,
+      "valor_descontado": 110.0
     },
     {
       "doutor": "Notuen Boniati",

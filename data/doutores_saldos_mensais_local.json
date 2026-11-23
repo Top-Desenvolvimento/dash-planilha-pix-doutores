@@ -4308,8 +4308,8 @@
       "competencia": "2026-11",
       "doutor_id": "17",
       "credito_inicial": 500.0,
-      "utilizado": 0.0,
-      "credito_final": 500.0,
+      "utilizado": 110.0,
+      "credito_final": 390.0,
       "updated_by_email": null,
       "updated_by_nome": null
     },
