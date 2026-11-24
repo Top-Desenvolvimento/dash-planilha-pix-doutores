@@ -1,10 +1,10 @@
 {
   "competencia": "2026-11",
-  "gerado_em": "2026-11-24T06:45:26.010349",
-  "quantidade_total": 542,
-  "valor_total": 75467.96,
+  "gerado_em": "2026-11-24T18:29:01.092902",
+  "quantidade_total": 559,
+  "valor_total": 77559.96,
   "valor_total_descontado": 110.0,
-  "valor_total_pendente": 75357.96,
+  "valor_total_pendente": 77449.96,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,8 +13,8 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 107,
-      "valor": 14302.5
+      "quantidade": 112,
+      "valor": 15100.5
     },
     {
       "unidade": "Encantado",
@@ -23,18 +23,18 @@
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 48,
-      "valor": 7150.0
+      "quantidade": 54,
+      "valor": 7871.0
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 96,
-      "valor": 14862.0
+      "quantidade": 97,
+      "valor": 14961.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 131,
-      "valor": 15158.0
+      "quantidade": 136,
+      "valor": 15632.0
     },
     {
       "unidade": "Veranopolis",
@@ -50,12 +50,12 @@
     },
     {
       "doutor": "Ana Cristina Corso",
-      "quantidade": 16,
+      "quantidade": 17,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Dionathan Pohlmann",
-      "quantidade": 40,
+      "quantidade": 42,
       "valor_descontado": 0.0
     },
     {
@@ -80,7 +80,7 @@
     },
     {
       "doutor": "Giovana Gasparini",
-      "quantidade": 4,
+      "quantidade": 10,
       "valor_descontado": 0.0
     },
     {
@@ -96,6 +96,11 @@
     {
       "doutor": "Indiamara Rech",
       "quantidade": 16,
+      "valor_descontado": 0.0
+    },
+    {
+      "doutor": "Jaciel de Miranda",
+      "quantidade": 2,
       "valor_descontado": 0.0
     },
     {
@@ -115,7 +120,7 @@
     },
     {
       "doutor": "Leticia Canabarro",
-      "quantidade": 32,
+      "quantidade": 35,
       "valor_descontado": 0.0
     },
     {
@@ -150,7 +155,7 @@
     },
     {
       "doutor": "Nelson Vaccari",
-      "quantidade": 22,
+      "quantidade": 23,
       "valor_descontado": 0.0
     },
     {
@@ -190,7 +195,7 @@
     },
     {
       "doutor": "Thalia Tessaro",
-      "quantidade": 2,
+      "quantidade": 5,
       "valor_descontado": 0.0
     },
     {
@@ -205,7 +210,7 @@
     },
     {
       "doutor": "TOP",
-      "quantidade": 3,
+      "quantidade": 2,
       "valor_descontado": 0.0
     },
     {
