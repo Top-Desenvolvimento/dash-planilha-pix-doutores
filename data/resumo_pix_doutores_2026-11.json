@@ -1,10 +1,10 @@
 {
   "competencia": "2026-11",
-  "gerado_em": "2026-11-25T11:55:07.720264",
-  "quantidade_total": 571,
-  "valor_total": 78892.96,
-  "valor_total_descontado": 440.0,
-  "valor_total_pendente": 78452.96,
+  "gerado_em": "2026-11-25T20:52:03.852203",
+  "quantidade_total": 590,
+  "valor_total": 82516.96,
+  "valor_total_descontado": 950.0,
+  "valor_total_pendente": 81566.96,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,8 +13,8 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 114,
-      "valor": 15330.5
+      "quantidade": 115,
+      "valor": 15599.5
     },
     {
       "unidade": "Encantado",
@@ -23,23 +23,23 @@
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 58,
-      "valor": 8311.0
+      "quantidade": 62,
+      "valor": 8821.0
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 97,
-      "valor": 14961.0
+      "quantidade": 101,
+      "valor": 16606.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 142,
-      "valor": 16295.0
+      "quantidade": 149,
+      "valor": 17094.0
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 61,
-      "valor": 9500.47
+      "quantidade": 64,
+      "valor": 9901.47
     }
   ],
   "por_doutor": [
@@ -74,13 +74,18 @@
       "valor_descontado": 0.0
     },
     {
+      "doutor": "Fernanda Sozo",
+      "quantidade": 4,
+      "valor_descontado": 0.0
+    },
+    {
       "doutor": "Franciele Pedrotti",
       "quantidade": 77,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Gabrielle Marchezann",
-      "quantidade": 16,
+      "quantidade": 19,
       "valor_descontado": 0.0
     },
     {
@@ -125,13 +130,13 @@
     },
     {
       "doutor": "Leticia Canabarro",
-      "quantidade": 37,
+      "quantidade": 41,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Letícia Cauzzi",
-      "quantidade": 1,
-      "valor_descontado": 147.0
+      "quantidade": 5,
+      "valor_descontado": 657.0
     },
     {
       "doutor": "Luisa Moraes Lucas",
@@ -155,7 +160,7 @@
     },
     {
       "doutor": "Morgana Zambiasi",
-      "quantidade": 9,
+      "quantidade": 12,
       "valor_descontado": 0.0
     },
     {
@@ -200,7 +205,7 @@
     },
     {
       "doutor": "Thalia Tessaro",
-      "quantidade": 6,
+      "quantidade": 7,
       "valor_descontado": 0.0
     },
     {
