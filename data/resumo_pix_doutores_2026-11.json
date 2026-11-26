@@ -1,10 +1,10 @@
 {
   "competencia": "2026-11",
-  "gerado_em": "2026-11-25T20:52:03.852203",
-  "quantidade_total": 590,
-  "valor_total": 82516.96,
+  "gerado_em": "2026-11-26T03:22:05.182080",
+  "quantidade_total": 602,
+  "valor_total": 84122.96,
   "valor_total_descontado": 950.0,
-  "valor_total_pendente": 81566.96,
+  "valor_total_pendente": 83172.96,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -28,18 +28,18 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 101,
-      "valor": 16606.0
+      "quantidade": 106,
+      "valor": 17205.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 149,
-      "valor": 17094.0
+      "quantidade": 155,
+      "valor": 17832.0
     },
     {
       "unidade": "Veranopolis",
-      "quantidade": 64,
-      "valor": 9901.47
+      "quantidade": 65,
+      "valor": 10170.47
     }
   ],
   "por_doutor": [
@@ -75,7 +75,7 @@
     },
     {
       "doutor": "Fernanda Sozo",
-      "quantidade": 4,
+      "quantidade": 9,
       "valor_descontado": 0.0
     },
     {
@@ -85,7 +85,7 @@
     },
     {
       "doutor": "Gabrielle Marchezann",
-      "quantidade": 19,
+      "quantidade": 20,
       "valor_descontado": 0.0
     },
     {
@@ -130,7 +130,7 @@
     },
     {
       "doutor": "Leticia Canabarro",
-      "quantidade": 41,
+      "quantidade": 46,
       "valor_descontado": 0.0
     },
     {
@@ -231,6 +231,11 @@
     {
       "doutor": "Vitor da Silva Teixeira",
       "quantidade": 4,
+      "valor_descontado": 0.0
+    },
+    {
+      "doutor": "William Luiz de Oliveira",
+      "quantidade": 1,
       "valor_descontado": 0.0
     }
   ]
