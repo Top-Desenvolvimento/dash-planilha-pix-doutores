@@ -3,8 +3,8 @@
     "doutor_id": "1",
     "doutor": "Adriele da Silva",
     "credito_inicial": 3000.0,
-    "utilizado": 1465.0,
-    "credito_disponivel": 1535.0,
+    "utilizado": 1758.0,
+    "credito_disponivel": 1242.0,
     "pix_key": ""
   },
   {
@@ -235,8 +235,8 @@
     "doutor_id": "29",
     "doutor": "Letícia Cauzzi",
     "credito_inicial": 4000.0,
-    "utilizado": 2367.0,
-    "credito_disponivel": 1633.0,
+    "utilizado": 3246.0,
+    "credito_disponivel": 754.0,
     "pix_key": ""
   },
   {

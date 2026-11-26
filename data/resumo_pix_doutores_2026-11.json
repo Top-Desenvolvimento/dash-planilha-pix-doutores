@@ -1,10 +1,10 @@
 {
   "competencia": "2026-11",
-  "gerado_em": "2026-11-26T13:00:18.264057",
-  "quantidade_total": 605,
-  "valor_total": 84567.96,
-  "valor_total_descontado": 1222.0,
-  "valor_total_pendente": 83345.96,
+  "gerado_em": "2026-11-26T14:44:57.219181",
+  "quantidade_total": 610,
+  "valor_total": 85744.46,
+  "valor_total_descontado": 1172.0,
+  "valor_total_pendente": 84572.46,
   "por_unidade": [
     {
       "unidade": "Bento",
@@ -13,8 +13,8 @@
     },
     {
       "unidade": "Caxias",
-      "quantidade": 116,
-      "valor": 15684.5
+      "quantidade": 118,
+      "valor": 16526.0
     },
     {
       "unidade": "Encantado",
@@ -23,13 +23,13 @@
     },
     {
       "unidade": "Farroupilha",
-      "quantidade": 63,
-      "valor": 8923.0
+      "quantidade": 64,
+      "valor": 9043.0
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 106,
-      "valor": 17205.0
+      "quantidade": 108,
+      "valor": 17420.0
     },
     {
       "unidade": "Soledade",
@@ -75,7 +75,7 @@
     },
     {
       "doutor": "Fernanda Sozo",
-      "quantidade": 9,
+      "quantidade": 11,
       "valor_descontado": 0.0
     },
     {
@@ -135,8 +135,8 @@
     },
     {
       "doutor": "Letícia Cauzzi",
-      "quantidade": 6,
-      "valor_descontado": 759.0
+      "quantidade": 7,
+      "valor_descontado": 879.0
     },
     {
       "doutor": "Luisa Moraes Lucas",
@@ -181,7 +181,7 @@
     {
       "doutor": "Norberto Filipe",
       "quantidade": 1,
-      "valor_descontado": 170.0
+      "valor_descontado": 0.0
     },
     {
       "doutor": "Notuen Boniati",
@@ -210,7 +210,7 @@
     },
     {
       "doutor": "Thalia Tessaro",
-      "quantidade": 8,
+      "quantidade": 10,
       "valor_descontado": 0.0
     },
     {
