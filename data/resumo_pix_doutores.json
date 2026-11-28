@@ -2159,11 +2159,11 @@
   },
   "2026-11": {
     "competencia": "2026-11",
-    "gerado_em": "2026-11-28T04:24:55.360865",
-    "quantidade_total": 650,
-    "valor_total": 91004.46,
-    "valor_total_descontado": 70.0,
-    "valor_total_pendente": 90934.46,
+    "gerado_em": "2026-11-28T11:27:46.889541",
+    "quantidade_total": 652,
+    "valor_total": 91139.46,
+    "valor_total_descontado": 0.0,
+    "valor_total_pendente": 91139.46,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -2192,8 +2192,8 @@
       },
       {
         "unidade": "Soledade",
-        "quantidade": 164,
-        "valor": 19069.0
+        "quantidade": 166,
+        "valor": 19204.0
       },
       {
         "unidade": "Veranopolis",
@@ -2205,7 +2205,7 @@
       {
         "doutor": "Adriele da Silva",
         "quantidade": 3,
-        "valor_descontado": 70.0
+        "valor_descontado": 0.0
       },
       {
         "doutor": "Alexandre Favero",
@@ -2299,7 +2299,7 @@
       },
       {
         "doutor": "Leticia Canabarro",
-        "quantidade": 49,
+        "quantidade": 51,
         "valor_descontado": 0.0
       },
       {
