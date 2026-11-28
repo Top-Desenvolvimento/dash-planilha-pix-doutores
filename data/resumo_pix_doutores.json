@@ -2159,11 +2159,11 @@
   },
   "2026-11": {
     "competencia": "2026-11",
-    "gerado_em": "2026-11-27T22:47:47.020896",
+    "gerado_em": "2026-11-28T04:24:55.360865",
     "quantidade_total": 650,
     "valor_total": 91004.46,
-    "valor_total_descontado": 293.0,
-    "valor_total_pendente": 90711.46,
+    "valor_total_descontado": 70.0,
+    "valor_total_pendente": 90934.46,
     "por_unidade": [
       {
         "unidade": "Bento",
@@ -2205,7 +2205,7 @@
       {
         "doutor": "Adriele da Silva",
         "quantidade": 3,
-        "valor_descontado": 293.0
+        "valor_descontado": 70.0
       },
       {
         "doutor": "Alexandre Favero",
