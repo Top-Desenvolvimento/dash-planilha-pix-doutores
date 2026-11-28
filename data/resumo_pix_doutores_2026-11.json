@@ -1,20 +1,20 @@
 {
   "competencia": "2026-11",
-  "gerado_em": "2026-11-28T11:27:46.889541",
-  "quantidade_total": 652,
-  "valor_total": 91139.46,
+  "gerado_em": "2026-11-28T13:26:03.849321",
+  "quantidade_total": 667,
+  "valor_total": 93245.46,
   "valor_total_descontado": 0.0,
-  "valor_total_pendente": 91139.46,
+  "valor_total_pendente": 93245.46,
   "por_unidade": [
     {
       "unidade": "Bento",
-      "quantidade": 58,
-      "valor": 8998.99
+      "quantidade": 61,
+      "valor": 9243.99
     },
     {
       "unidade": "Caxias",
-      "quantidade": 129,
-      "valor": 17778.0
+      "quantidade": 133,
+      "valor": 18172.0
     },
     {
       "unidade": "Encantado",
@@ -28,13 +28,13 @@
     },
     {
       "unidade": "FloresDaCunha",
-      "quantidade": 108,
-      "valor": 17420.0
+      "quantidade": 112,
+      "valor": 18533.0
     },
     {
       "unidade": "Soledade",
-      "quantidade": 166,
-      "valor": 19204.0
+      "quantidade": 170,
+      "valor": 19558.0
     },
     {
       "unidade": "Veranopolis",
@@ -60,7 +60,7 @@
     },
     {
       "doutor": "Dionathan Pohlmann",
-      "quantidade": 42,
+      "quantidade": 46,
       "valor_descontado": 0.0
     },
     {
@@ -90,12 +90,12 @@
     },
     {
       "doutor": "Gabriel Coan",
-      "quantidade": 5,
+      "quantidade": 7,
       "valor_descontado": 0.0
     },
     {
       "doutor": "Gabrielle Marchezann",
-      "quantidade": 21,
+      "quantidade": 22,
       "valor_descontado": 0.0
     },
     {
@@ -140,7 +140,7 @@
     },
     {
       "doutor": "Leticia Canabarro",
-      "quantidade": 51,
+      "quantidade": 54,
       "valor_descontado": 0.0
     },
     {
@@ -200,7 +200,7 @@
     },
     {
       "doutor": "Raul Oliveira",
-      "quantidade": 9,
+      "quantidade": 13,
       "valor_descontado": 0.0
     },
     {
@@ -240,7 +240,7 @@
     },
     {
       "doutor": "TOP",
-      "quantidade": 2,
+      "quantidade": 3,
       "valor_descontado": 0.0
     },
     {
